@@ -23,7 +23,7 @@ fun WardoveNavHost(
     ) {
         composable(WardoveDestinations.WARDROBE) {
             WardrobeScreen(
-                onAddItem = { navController.navigate(WardoveDestinations.ADD_ITEM) },
+                onAddItem = { navController.navigate(WardoveDestinations.addItem()) },
                 onOpenItem = { id ->
                     navController.navigate(WardoveDestinations.itemDetail(id))
                 },
@@ -31,7 +31,15 @@ fun WardoveNavHost(
             )
         }
 
-        composable(WardoveDestinations.ADD_ITEM) {
+        composable(
+            route = WardoveDestinations.ADD_ITEM_ROUTE,
+            arguments = listOf(
+                navArgument(WardoveDestinations.ADD_ITEM_ARG) {
+                    type = NavType.LongType
+                    defaultValue = WardoveDestinations.ADD_ITEM_NEW_ID
+                }
+            )
+        ) {
             AddItemScreen(onDone = { navController.popBackStack() })
         }
 
@@ -44,7 +52,11 @@ fun WardoveNavHost(
             val itemId = backStackEntry.arguments?.getLong(WardoveDestinations.ITEM_DETAIL_ARG) ?: 0L
             ItemDetailScreen(
                 itemId = itemId,
-                onBack = { navController.popBackStack() }
+                onBack = { navController.popBackStack() },
+                onEdit = { id ->
+                    navController.navigate(WardoveDestinations.addItem(id))
+                },
+                onDeleted = { navController.popBackStack() }
             )
         }
 
