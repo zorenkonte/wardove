@@ -47,6 +47,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
+import com.app.wardove.data.local.entity.WearLog
 import com.app.wardove.ui.util.ClothingOptions
 import com.app.wardove.ui.util.parseHexColor
 import com.app.wardove.ui.util.statusColor
@@ -67,6 +68,7 @@ fun ItemDetailScreen(
 ) {
     val item by viewModel.item.collectAsState()
     val logs by viewModel.wearLogs.collectAsState()
+    val wornToday by viewModel.wornToday.collectAsState()
     var showDeleteDialog by remember { mutableStateOf(false) }
 
     Scaffold(
@@ -106,6 +108,8 @@ fun ItemDetailScreen(
             ItemDetailBody(
                 item = current,
                 wearCount = logs.size.coerceAtLeast(current.totalWearCount),
+                wearLogs = logs,
+                wornToday = wornToday,
                 onWearToday = viewModel::wearToday,
                 modifier = Modifier
                     .fillMaxSize()
@@ -138,6 +142,8 @@ fun ItemDetailScreen(
 private fun ItemDetailBody(
     item: com.app.wardove.data.local.entity.ClothingItem,
     wearCount: Int,
+    wearLogs: List<WearLog>,
+    wornToday: Boolean,
     onWearToday: () -> Unit,
     modifier: Modifier = Modifier
 ) {
@@ -206,11 +212,63 @@ private fun ItemDetailBody(
 
         Button(
             onClick = onWearToday,
+            enabled = !wornToday,
             modifier = Modifier
                 .fillMaxWidth()
                 .height(52.dp)
         ) {
-            Text("Wear Today")
+            Text(if (wornToday) "Already worn today" else "Wear Today")
+        }
+
+        WearHistorySection(logs = wearLogs)
+    }
+}
+
+@Composable
+private fun WearHistorySection(logs: List<WearLog>) {
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        Text(
+            "Wear History",
+            style = MaterialTheme.typography.titleSmall,
+            fontWeight = FontWeight.SemiBold
+        )
+        if (logs.isEmpty()) {
+            Text(
+                "No wears recorded yet.",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        } else {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(MaterialTheme.colorScheme.surfaceVariant)
+            ) {
+                logs.forEachIndexed { index, log ->
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 12.dp, vertical = 10.dp),
+                        horizontalArrangement = Arrangement.SpaceBetween
+                    ) {
+                        Text(
+                            formatDate(log.wornDate),
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                        Text(
+                            formatTime(log.wornDate),
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    }
+                    if (index < logs.lastIndex) {
+                        androidx.compose.material3.HorizontalDivider(
+                            color = MaterialTheme.colorScheme.outlineVariant
+                        )
+                    }
+                }
+            }
         }
     }
 }
@@ -265,3 +323,6 @@ private fun Stat(label: String, value: String, modifier: Modifier = Modifier) {
 
 private fun formatDate(epochMillis: Long): String =
     SimpleDateFormat("MMM d, yyyy", Locale.getDefault()).format(Date(epochMillis))
+
+private fun formatTime(epochMillis: Long): String =
+    SimpleDateFormat("h:mm a", Locale.getDefault()).format(Date(epochMillis))

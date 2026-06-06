@@ -11,8 +11,10 @@ import com.app.wardove.ui.navigation.WardoveDestinations
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
+import java.util.Calendar
 import javax.inject.Inject
 
 @HiltViewModel
@@ -39,6 +41,14 @@ class ItemDetailViewModel @Inject constructor(
             initialValue = emptyList()
         )
 
+    val wornToday: StateFlow<Boolean> = wearLogs
+        .map { logs -> logs.any { isSameDay(it.wornDate, System.currentTimeMillis()) } }
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5_000),
+            initialValue = false
+        )
+
     fun wearToday() {
         viewModelScope.launch { repository.markWornToday(itemId) }
     }
@@ -52,5 +62,12 @@ class ItemDetailViewModel @Inject constructor(
             }
             onDone()
         }
+    }
+
+    private fun isSameDay(a: Long, b: Long): Boolean {
+        val ca = Calendar.getInstance().apply { timeInMillis = a }
+        val cb = Calendar.getInstance().apply { timeInMillis = b }
+        return ca.get(Calendar.YEAR) == cb.get(Calendar.YEAR) &&
+            ca.get(Calendar.DAY_OF_YEAR) == cb.get(Calendar.DAY_OF_YEAR)
     }
 }
