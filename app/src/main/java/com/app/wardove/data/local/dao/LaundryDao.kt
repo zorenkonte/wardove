@@ -27,6 +27,12 @@ interface LaundryDao {
     @Query("SELECT * FROM laundry_cycles WHERE completedAt IS NULL ORDER BY startedAt DESC LIMIT 1")
     fun observeActiveCycle(): Flow<LaundryCycle?>
 
+    @Query("SELECT * FROM laundry_cycles WHERE completedAt IS NULL ORDER BY startedAt DESC")
+    fun observeActiveCycles(): Flow<List<LaundryCycle>>
+
+    @Query("SELECT * FROM laundry_cycles WHERE completedAt IS NOT NULL ORDER BY completedAt DESC")
+    fun observeCompletedCycles(): Flow<List<LaundryCycle>>
+
     @Query("SELECT * FROM laundry_cycles WHERE completedAt IS NULL ORDER BY startedAt DESC LIMIT 1")
     suspend fun getActiveCycle(): LaundryCycle?
 

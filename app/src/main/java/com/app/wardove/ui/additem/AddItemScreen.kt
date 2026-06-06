@@ -65,7 +65,8 @@ import java.io.File
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AddItemScreen(
-    onDone: () -> Unit,
+    onSaved: () -> Unit,
+    onCancel: () -> Unit,
     viewModel: AddItemViewModel = hiltViewModel()
 ) {
     val state by viewModel.state.collectAsState()
@@ -83,13 +84,13 @@ fun AddItemScreen(
             TopAppBar(
                 title = { Text(if (state.isEditing) "Edit Item" else "Add Item") },
                 navigationIcon = {
-                    IconButton(onClick = onDone) {
+                    IconButton(onClick = onCancel) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                     }
                 },
                 actions = {
                     IconButton(
-                        onClick = { viewModel.save(onDone) },
+                        onClick = { viewModel.save(onSaved) },
                         enabled = state.canSave
                     ) {
                         Icon(Icons.Default.Check, contentDescription = "Save")
@@ -150,7 +151,7 @@ fun AddItemScreen(
             )
 
             Button(
-                onClick = { viewModel.save(onDone) },
+                onClick = { viewModel.save(onSaved) },
                 enabled = state.canSave,
                 modifier = Modifier.fillMaxWidth()
             ) {

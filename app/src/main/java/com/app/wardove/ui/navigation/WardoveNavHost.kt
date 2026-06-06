@@ -1,6 +1,8 @@
 package com.app.wardove.ui.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -13,6 +15,8 @@ import com.app.wardove.ui.itemdetail.ItemDetailScreen
 import com.app.wardove.ui.laundry.LaundryScreen
 import com.app.wardove.ui.wardrobe.WardrobeScreen
 
+private const val SNACKBAR_KEY = "snackbar_message"
+
 @Composable
 fun WardoveNavHost(
     navController: NavHostController = rememberNavController()
@@ -21,13 +25,20 @@ fun WardoveNavHost(
         navController = navController,
         startDestination = WardoveDestinations.WARDROBE
     ) {
-        composable(WardoveDestinations.WARDROBE) {
+        composable(WardoveDestinations.WARDROBE) { entry ->
+            val savedHandle = entry.savedStateHandle
+            val message by savedHandle
+                .getStateFlow<String?>(SNACKBAR_KEY, null)
+                .collectAsState()
+
             WardrobeScreen(
                 onAddItem = { navController.navigate(WardoveDestinations.addItem()) },
                 onOpenItem = { id ->
                     navController.navigate(WardoveDestinations.itemDetail(id))
                 },
-                onOpenLaundry = { navController.navigate(WardoveDestinations.LAUNDRY) }
+                onOpenLaundry = { navController.navigate(WardoveDestinations.LAUNDRY) },
+                snackbarMessage = message,
+                onSnackbarShown = { savedHandle[SNACKBAR_KEY] = null }
             )
         }
 
@@ -40,7 +51,15 @@ fun WardoveNavHost(
                 }
             )
         ) {
-            AddItemScreen(onDone = { navController.popBackStack() })
+            AddItemScreen(
+                onSaved = {
+                    navController.previousBackStackEntry
+                        ?.savedStateHandle
+                        ?.set(SNACKBAR_KEY, "Item saved")
+                    navController.popBackStack()
+                },
+                onCancel = { navController.popBackStack() }
+            )
         }
 
         composable(
@@ -56,7 +75,12 @@ fun WardoveNavHost(
                 onEdit = { id ->
                     navController.navigate(WardoveDestinations.addItem(id))
                 },
-                onDeleted = { navController.popBackStack() }
+                onDeleted = {
+                    navController.previousBackStackEntry
+                        ?.savedStateHandle
+                        ?.set(SNACKBAR_KEY, "Item deleted")
+                    navController.popBackStack()
+                }
             )
         }
 

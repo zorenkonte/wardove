@@ -25,6 +25,13 @@ class LaundryRepository @Inject constructor(
 
     fun observeActiveCycle(): Flow<LaundryCycle?> = laundryDao.observeActiveCycle()
 
+    fun observeActiveCycles(): Flow<List<LaundryCycle>> = laundryDao.observeActiveCycles()
+
+    fun observeCompletedCycles(): Flow<List<LaundryCycle>> = laundryDao.observeCompletedCycles()
+
+    fun observeItemsInCycle(cycleId: Long): Flow<List<ClothingItem>> =
+        laundryDao.observeItemsInCycle(cycleId)
+
     suspend fun startCycle(itemIds: List<Long>, now: Long = System.currentTimeMillis()): Long {
         val cycleId = laundryDao.insertCycle(
             LaundryCycle(startedAt = now, itemCount = itemIds.size)

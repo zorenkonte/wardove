@@ -31,7 +31,7 @@ class WardrobeViewModel @Inject constructor(
     private val _filter = MutableStateFlow(WardrobeFilter.ALL)
     val filter: StateFlow<WardrobeFilter> = _filter.asStateFlow()
 
-    val items: StateFlow<List<ClothingItem>> = _filter
+    val items: StateFlow<List<ClothingItem>?> = _filter
         .flatMapLatest { f ->
             val status = f.status
             if (status == null) repository.observeAll()
@@ -40,7 +40,7 @@ class WardrobeViewModel @Inject constructor(
         .stateIn(
             scope = viewModelScope,
             started = SharingStarted.WhileSubscribed(5_000),
-            initialValue = emptyList()
+            initialValue = null
         )
 
     fun setFilter(filter: WardrobeFilter) {
