@@ -44,6 +44,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -80,6 +81,7 @@ fun AddItemScreen(
     ) { uri -> uri?.let(viewModel::onGalleryUri) }
 
     Scaffold(
+        containerColor = Color(0xFFF7F5F2),
         topBar = {
             TopAppBar(
                 title = { Text(if (state.isEditing) "Edit Item" else "Add Item") },
@@ -95,7 +97,10 @@ fun AddItemScreen(
                     ) {
                         Icon(Icons.Default.Check, contentDescription = "Save")
                     }
-                }
+                },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = Color(0xFFF7F5F2)
+                )
             )
         }
     ) { padding ->

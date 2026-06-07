@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -21,10 +22,11 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.AssistChip
-import androidx.compose.material3.AssistChipDefaults
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -32,6 +34,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -47,17 +50,14 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
+import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.data.local.entity.WearLog
 import com.app.wardove.ui.util.ClothingOptions
-import com.app.wardove.ui.util.parseHexColor
-import com.app.wardove.ui.util.statusColor
-import com.app.wardove.ui.util.statusDisplayName
+import com.app.wardove.ui.util.formatDateOnly
 import java.io.File
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -74,9 +74,10 @@ fun ItemDetailScreen(
     var showDeleteDialog by remember { mutableStateOf(false) }
 
     Scaffold(
+        containerColor = Color(0xFFF7F5F2),
         topBar = {
             TopAppBar(
-                title = { Text(item?.name ?: "Item") },
+                title = {},
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
@@ -92,24 +93,25 @@ fun ItemDetailScreen(
                     ) {
                         Icon(Icons.Default.Delete, contentDescription = "Delete")
                     }
-                }
+                },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = Color(0xFFF7F5F2)
+                )
             )
         }
     ) { padding ->
         val current = item
-        if (current == null) {
-            Box(
+        when {
+            current == null -> Box(
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(padding),
                 contentAlignment = Alignment.Center
             ) {
-                Text("Loading…")
+                CircularProgressIndicator()
             }
-        } else {
-            ItemDetailBody(
+            else -> ItemDetailBody(
                 item = current,
-                wearCount = logs.size.coerceAtLeast(current.totalWearCount),
                 wearLogs = logs,
                 wornToday = wornToday,
                 onWearToday = viewModel::wearToday,
@@ -123,8 +125,8 @@ fun ItemDetailScreen(
     if (showDeleteDialog) {
         AlertDialog(
             onDismissRequest = { showDeleteDialog = false },
-            title = { Text("Delete item?") },
-            text = { Text("This will remove the item and its photo. This cannot be undone.") },
+            title = { Text("Delete this item?") },
+            text = { Text("This cannot be undone.") },
             confirmButton = {
                 TextButton(
                     onClick = {
@@ -142,8 +144,7 @@ fun ItemDetailScreen(
 
 @Composable
 private fun ItemDetailBody(
-    item: com.app.wardove.data.local.entity.ClothingItem,
-    wearCount: Int,
+    item: ClothingItem,
     wearLogs: List<WearLog>,
     wornToday: Boolean,
     onWearToday: () -> Unit,
@@ -152,15 +153,15 @@ private fun ItemDetailBody(
     Column(
         modifier = modifier
             .verticalScroll(rememberScrollState())
-            .padding(16.dp),
+            .padding(horizontal = 20.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
                 .aspectRatio(1f)
-                .clip(RoundedCornerShape(12.dp))
-                .background(MaterialTheme.colorScheme.surfaceVariant)
+                .clip(RoundedCornerShape(16.dp))
+                .background(Color(0xFFEBE8E3))
         ) {
             AsyncImage(
                 model = File(item.imagePath),
@@ -171,43 +172,40 @@ private fun ItemDetailBody(
         }
 
         Text(
-            item.name,
-            style = MaterialTheme.typography.headlineSmall,
-            fontWeight = FontWeight.SemiBold
+            text = item.name,
+            style = MaterialTheme.typography.headlineLarge,
+            color = Color(0xFF1A1A1A),
+            modifier = Modifier.padding(top = 8.dp)
         )
 
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            AssistChip(
-                onClick = {},
-                label = { Text(item.category) }
+        TagsRow(item = item)
+
+        Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+            StatBox(
+                label = "Times worn",
+                value = "${item.totalWearCount}",
+                modifier = Modifier.weight(1f)
             )
-            AssistChip(
-                onClick = {},
-                label = { Text(ClothingOptions.colorNameFor(item.color)) },
-                leadingIcon = {
-                    Box(
-                        modifier = Modifier
-                            .size(16.dp)
-                            .clip(CircleShape)
-                            .background(parseHexColor(item.color))
-                    )
-                }
+            StatBox(
+                label = "Last worn",
+                value = item.lastWornDate?.formatDateOnly() ?: "Never",
+                modifier = Modifier.weight(1f)
             )
-            StatusChip(item.status)
         }
-
-        StatRow(
-            lastWorn = item.lastWornDate,
-            totalWearCount = wearCount
-        )
 
         if (!item.notes.isNullOrBlank()) {
             Column {
-                Text("Notes", style = MaterialTheme.typography.labelLarge)
+                Text(
+                    "Notes",
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.Medium,
+                    color = Color(0xFF888888)
+                )
                 Spacer(Modifier.height(4.dp))
                 Text(
                     item.notes,
-                    style = MaterialTheme.typography.bodyMedium
+                    style = MaterialTheme.typography.bodyLarge,
+                    color = Color(0xFF1A1A1A)
                 )
             }
         }
@@ -221,114 +219,120 @@ private fun ItemDetailBody(
             enabled = !wornToday,
             modifier = Modifier
                 .fillMaxWidth()
-                .height(52.dp)
+                .height(52.dp),
+            shape = RoundedCornerShape(14.dp),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = Color(0xFF1A1A1A),
+                contentColor = Color.White,
+                disabledContainerColor = Color(0xFFEBE8E3),
+                disabledContentColor = Color(0xFFAAAAAA)
+            )
         ) {
-            Text(if (wornToday) "Already worn today" else "Wear Today")
+            Text(
+                if (wornToday) "Already worn today" else "Wear Today",
+                fontSize = 15.sp,
+                fontWeight = FontWeight.Medium
+            )
         }
 
         WearHistorySection(logs = wearLogs)
+
+        Spacer(Modifier.height(16.dp))
+    }
+}
+
+@Composable
+private fun TagsRow(item: ClothingItem) {
+    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+        TagPill(
+            label = item.category,
+            backgroundColor = Color(0xFFEBE8E3),
+            textColor = Color(0xFF555555)
+        )
+        TagPill(
+            label = ClothingOptions.colorNameFor(item.color),
+            backgroundColor = Color(0xFF1A1A1A),
+            textColor = Color.White
+        )
+    }
+}
+
+@Composable
+private fun TagPill(label: String, backgroundColor: Color, textColor: Color) {
+    Box(
+        modifier = Modifier
+            .background(backgroundColor, RoundedCornerShape(20.dp))
+            .padding(horizontal = 12.dp, vertical = 4.dp)
+    ) {
+        Text(
+            label,
+            fontSize = 12.sp,
+            fontWeight = FontWeight.Medium,
+            color = textColor
+        )
+    }
+}
+
+@Composable
+fun StatBox(label: String, value: String, modifier: Modifier = Modifier) {
+    Column(
+        modifier = modifier
+            .background(Color(0xFFEBE8E3), RoundedCornerShape(12.dp))
+            .padding(12.dp)
+    ) {
+        Text(
+            label,
+            fontSize = 11.sp,
+            color = Color(0xFF888888)
+        )
+        Text(
+            value,
+            fontSize = 18.sp,
+            fontWeight = FontWeight.Medium,
+            color = Color(0xFF1A1A1A),
+            modifier = Modifier.padding(top = 2.dp)
+        )
     }
 }
 
 @Composable
 private fun WearHistorySection(logs: List<WearLog>) {
-    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+    Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
         Text(
-            "Wear History",
-            style = MaterialTheme.typography.titleSmall,
-            fontWeight = FontWeight.SemiBold
+            "Wear history",
+            fontSize = 12.sp,
+            fontWeight = FontWeight.Medium,
+            color = Color(0xFF888888),
+            modifier = Modifier.padding(bottom = 4.dp)
         )
         if (logs.isEmpty()) {
             Text(
                 "No wears recorded yet.",
                 style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
+                color = Color(0xFF888888)
             )
         } else {
-            Column(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clip(RoundedCornerShape(12.dp))
-                    .background(MaterialTheme.colorScheme.surfaceVariant)
-            ) {
-                logs.forEachIndexed { index, log ->
-                    Row(
+            logs.forEach { log ->
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Box(
                         modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 12.dp, vertical = 10.dp),
-                        horizontalArrangement = Arrangement.SpaceBetween
-                    ) {
-                        Text(
-                            formatDate(log.wornDate),
-                            style = MaterialTheme.typography.bodyMedium
-                        )
-                        Text(
-                            formatTime(log.wornDate),
-                            style = MaterialTheme.typography.bodySmall,
-                            color = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    }
-                    if (index < logs.lastIndex) {
-                        androidx.compose.material3.HorizontalDivider(
-                            color = MaterialTheme.colorScheme.outlineVariant
-                        )
-                    }
+                            .size(8.dp)
+                            .background(Color(0xFF5DCAA5), CircleShape)
+                    )
+                    Spacer(Modifier.width(10.dp))
+                    Text(
+                        text = log.wornDate.formatDateOnly(),
+                        fontSize = 13.sp,
+                        color = Color(0xFF555555)
+                    )
                 }
+                HorizontalDivider(color = Color(0xFFE0DDD8), thickness = 0.5.dp)
             }
         }
     }
 }
-
-@Composable
-private fun StatusChip(status: String) {
-    val bg = statusColor(status)
-    AssistChip(
-        onClick = {},
-        label = {
-            Text(
-                statusDisplayName(status),
-                color = Color.White
-            )
-        },
-        colors = AssistChipDefaults.assistChipColors(containerColor = bg)
-    )
-}
-
-@Composable
-private fun StatRow(lastWorn: Long?, totalWearCount: Int) {
-    Row(
-        horizontalArrangement = Arrangement.spacedBy(12.dp),
-        modifier = Modifier.fillMaxWidth()
-    ) {
-        Stat(
-            label = "Last worn",
-            value = lastWorn?.let { formatDate(it) } ?: "Never",
-            modifier = Modifier.weight(1f)
-        )
-        Stat(
-            label = "Total wears",
-            value = totalWearCount.toString(),
-            modifier = Modifier.weight(1f)
-        )
-    }
-}
-
-@Composable
-private fun Stat(label: String, value: String, modifier: Modifier = Modifier) {
-    Column(
-        modifier = modifier
-            .clip(RoundedCornerShape(12.dp))
-            .background(MaterialTheme.colorScheme.surfaceVariant)
-            .padding(12.dp)
-    ) {
-        Text(label, style = MaterialTheme.typography.labelMedium)
-        Spacer(Modifier.height(2.dp))
-        Text(value, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
-    }
-}
-
-private fun formatDate(epochMillis: Long): String =
-    SimpleDateFormat("MMM d, yyyy", Locale.getDefault()).format(Date(epochMillis))
-
-private fun formatTime(epochMillis: Long): String =
-    SimpleDateFormat("h:mm a", Locale.getDefault()).format(Date(epochMillis))

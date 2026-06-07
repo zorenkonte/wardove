@@ -10,18 +10,22 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.History
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
+import androidx.compose.material3.CheckboxDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -31,11 +35,10 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
-import androidx.compose.material3.Tab
-import androidx.compose.material3.TabRow
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -46,16 +49,18 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
 import com.app.wardove.data.local.entity.ClothingItem
+import com.app.wardove.ui.util.formatDateShort
+import com.app.wardove.ui.wardrobe.WardoveBottomBar
+import com.app.wardove.ui.wardrobe.WardroveBottomRoute
 import java.io.File
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -78,19 +83,31 @@ fun LaundryScreen(
     }
 
     Scaffold(
+        containerColor = Color(0xFFF7F5F2),
         topBar = {
             TopAppBar(
-                title = { Text("Laundry") },
-                navigationIcon = {
-                    IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
-                    }
+                title = {
+                    Text(
+                        "Laundry",
+                        style = MaterialTheme.typography.displayLarge,
+                        color = Color(0xFF1A1A1A)
+                    )
                 },
                 actions = {
                     IconButton(onClick = onOpenHistory) {
                         Icon(Icons.Default.History, contentDescription = "History")
                     }
-                }
+                },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = Color(0xFFF7F5F2)
+                )
+            )
+        },
+        bottomBar = {
+            WardoveBottomBar(
+                currentRoute = WardroveBottomRoute.LAUNDRY,
+                onSelectWardrobe = onBack,
+                onSelectLaundry = {}
             )
         },
         snackbarHost = { SnackbarHost(snackbarHostState) }
@@ -100,15 +117,12 @@ fun LaundryScreen(
                 .fillMaxSize()
                 .padding(padding)
         ) {
-            TabRow(selectedTabIndex = tab.ordinal) {
-                LaundryTab.entries.forEach { entry ->
-                    Tab(
-                        selected = entry == tab,
-                        onClick = { viewModel.setTab(entry) },
-                        text = { Text(entry.label) }
-                    )
-                }
-            }
+            PillTabRow(
+                selected = tab,
+                onSelect = viewModel::setTab
+            )
+
+            Spacer(Modifier.height(12.dp))
 
             when (tab) {
                 LaundryTab.PILE -> PileTab(
@@ -154,6 +168,42 @@ fun LaundryScreen(
 }
 
 @Composable
+private fun PillTabRow(
+    selected: LaundryTab,
+    onSelect: (LaundryTab) -> Unit
+) {
+    Box(
+        modifier = Modifier
+            .padding(horizontal = 20.dp)
+            .fillMaxWidth()
+            .background(Color(0xFFEBE8E3), RoundedCornerShape(10.dp))
+            .padding(3.dp)
+    ) {
+        Row(modifier = Modifier.fillMaxWidth()) {
+            LaundryTab.entries.forEach { entry ->
+                val isSelected = entry == selected
+                Box(
+                    modifier = Modifier
+                        .weight(1f)
+                        .clip(RoundedCornerShape(8.dp))
+                        .background(if (isSelected) Color.White else Color.Transparent)
+                        .clickable { onSelect(entry) }
+                        .padding(vertical = 7.dp),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        entry.label,
+                        fontSize = 13.sp,
+                        fontWeight = FontWeight.Medium,
+                        color = if (isSelected) Color(0xFF1A1A1A) else Color(0xFF888888)
+                    )
+                }
+            }
+        }
+    }
+}
+
+@Composable
 private fun PileTab(
     items: List<ClothingItem>?,
     selectedIds: Set<Long>,
@@ -165,17 +215,23 @@ private fun PileTab(
     Column(modifier = modifier) {
         when {
             items == null -> LoadingBox(modifier = Modifier.fillMaxSize())
-            items.isEmpty() -> EmptyMessage("No dirty clothes. Nice!", modifier = Modifier.fillMaxSize())
+            items.isEmpty() -> EmptyMessage(
+                "No dirty clothes. Nice!",
+                modifier = Modifier.fillMaxSize()
+            )
             else -> {
                 LazyColumn(
                     modifier = Modifier
                         .weight(1f)
                         .fillMaxWidth(),
-                    contentPadding = PaddingValues(horizontal = 16.dp, vertical = 12.dp),
-                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                    contentPadding = PaddingValues(
+                        horizontal = 20.dp,
+                        vertical = 8.dp
+                    ),
+                    verticalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
                     items(items, key = { it.id }) { item ->
-                        PileRow(
+                        LaundryItemRow(
                             item = item,
                             selected = item.id in selectedIds,
                             onToggle = { onToggle(item.id) }
@@ -187,18 +243,29 @@ private fun PileTab(
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(16.dp),
-                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            .padding(horizontal = 20.dp, vertical = 12.dp),
+                        horizontalArrangement = Arrangement.spacedBy(10.dp)
                     ) {
                         OutlinedButton(
                             onClick = onClearSelection,
-                            modifier = Modifier.weight(1f)
+                            modifier = Modifier.height(52.dp)
                         ) { Text("Clear") }
                         Button(
                             onClick = onSendToLaundry,
-                            modifier = Modifier.weight(2f)
+                            modifier = Modifier
+                                .weight(1f)
+                                .height(52.dp),
+                            shape = RoundedCornerShape(14.dp),
+                            colors = ButtonDefaults.buttonColors(
+                                containerColor = Color(0xFF7F77DD),
+                                contentColor = Color.White
+                            )
                         ) {
-                            Text("Send to Laundry (${selectedIds.size})")
+                            Text(
+                                "Send to Laundry",
+                                fontSize = 15.sp,
+                                fontWeight = FontWeight.Medium
+                            )
                         }
                     }
                 }
@@ -208,38 +275,55 @@ private fun PileTab(
 }
 
 @Composable
-private fun PileRow(
+private fun LaundryItemRow(
     item: ClothingItem,
     selected: Boolean,
     onToggle: () -> Unit
 ) {
     Card(
+        shape = RoundedCornerShape(14.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.White),
+        elevation = CardDefaults.cardElevation(0.dp),
         modifier = Modifier
             .fillMaxWidth()
             .clickable(onClick = onToggle)
     ) {
         Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(8.dp),
+            modifier = Modifier.padding(12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Checkbox(checked = selected, onCheckedChange = { onToggle() })
-            Spacer(Modifier.size(8.dp))
-            ThumbImage(path = item.imagePath, contentDescription = item.name)
-            Spacer(Modifier.size(12.dp))
+            AsyncImage(
+                model = File(item.imagePath),
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .size(44.dp)
+                    .clip(RoundedCornerShape(10.dp))
+            )
+            Spacer(Modifier.width(12.dp))
             Column(modifier = Modifier.weight(1f)) {
                 Text(
                     item.name,
-                    style = MaterialTheme.typography.bodyLarge,
-                    fontWeight = FontWeight.SemiBold
+                    fontSize = 14.sp,
+                    fontWeight = FontWeight.Medium,
+                    color = Color(0xFF1A1A1A)
                 )
                 Text(
-                    "Last worn: " + (item.lastWornDate?.let { formatDate(it) } ?: "Never"),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                    "Worn ${item.lastWornDate?.formatDateShort() ?: "—"}",
+                    fontSize = 12.sp,
+                    color = Color(0xFF888888),
+                    modifier = Modifier.padding(top = 2.dp)
                 )
             }
+            Checkbox(
+                checked = selected,
+                onCheckedChange = { onToggle() },
+                colors = CheckboxDefaults.colors(
+                    checkedColor = Color(0xFF5DCAA5),
+                    checkmarkColor = Color.White,
+                    uncheckedColor = Color(0xFFDDDDDD)
+                )
+            )
         }
     }
 }
@@ -252,10 +336,13 @@ private fun WashingTab(
 ) {
     when {
         cycles == null -> LoadingBox(modifier = modifier)
-        cycles.isEmpty() -> EmptyMessage("Nothing in the wash right now.", modifier = modifier)
+        cycles.isEmpty() -> EmptyMessage(
+            "Nothing in the wash right now.",
+            modifier = modifier
+        )
         else -> LazyColumn(
             modifier = modifier,
-            contentPadding = PaddingValues(16.dp),
+            contentPadding = PaddingValues(horizontal = 20.dp, vertical = 8.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             items(cycles, key = { it.cycle.id }) { cwi ->
@@ -273,7 +360,12 @@ private fun CycleCard(
     cwi: CycleWithItems,
     onComplete: () -> Unit
 ) {
-    Card(modifier = Modifier.fillMaxWidth()) {
+    Card(
+        shape = RoundedCornerShape(14.dp),
+        colors = CardDefaults.cardColors(containerColor = Color.White),
+        elevation = CardDefaults.cardElevation(0.dp),
+        modifier = Modifier.fillMaxWidth()
+    ) {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
@@ -287,59 +379,62 @@ private fun CycleCard(
             ) {
                 Column {
                     Text(
-                        "Started ${formatDate(cwi.cycle.startedAt)}",
-                        style = MaterialTheme.typography.titleSmall,
-                        fontWeight = FontWeight.SemiBold
+                        "Started ${cwi.cycle.startedAt.formatDateShort()}",
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.Medium,
+                        color = Color(0xFF1A1A1A)
                     )
                     Text(
                         "${cwi.items.size} item${if (cwi.items.size == 1) "" else "s"}",
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                        fontSize = 12.sp,
+                        color = Color(0xFF888888)
                     )
                 }
             }
             cwi.items.forEach { item ->
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    ThumbImage(path = item.imagePath, contentDescription = item.name)
-                    Spacer(Modifier.size(12.dp))
+                    AsyncImage(
+                        model = File(item.imagePath),
+                        contentDescription = null,
+                        contentScale = ContentScale.Crop,
+                        modifier = Modifier
+                            .size(44.dp)
+                            .clip(RoundedCornerShape(10.dp))
+                    )
+                    Spacer(Modifier.width(12.dp))
                     Text(
                         item.name,
-                        style = MaterialTheme.typography.bodyMedium,
+                        fontSize = 14.sp,
+                        color = Color(0xFF1A1A1A),
                         modifier = Modifier.weight(1f)
                     )
                 }
             }
             Button(
                 onClick = onComplete,
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(52.dp),
+                shape = RoundedCornerShape(14.dp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFF1A1A1A),
+                    contentColor = Color.White
+                )
             ) {
-                Text("Mark as Clean")
+                Text(
+                    "Mark as Clean",
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Medium
+                )
             }
         }
     }
 }
 
 @Composable
-private fun ThumbImage(path: String, contentDescription: String?) {
-    Box(
-        modifier = Modifier
-            .size(56.dp)
-            .clip(RoundedCornerShape(8.dp))
-            .background(MaterialTheme.colorScheme.surfaceVariant)
-    ) {
-        AsyncImage(
-            model = File(path),
-            contentDescription = contentDescription,
-            contentScale = ContentScale.Crop,
-            modifier = Modifier.fillMaxSize()
-        )
-    }
-}
-
-@Composable
 private fun EmptyMessage(text: String, modifier: Modifier = Modifier) {
     Box(modifier = modifier, contentAlignment = Alignment.Center) {
-        Text(text, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        Text(text, color = Color(0xFF888888), style = MaterialTheme.typography.bodyMedium)
     }
 }
 
@@ -349,6 +444,3 @@ private fun LoadingBox(modifier: Modifier = Modifier) {
         CircularProgressIndicator()
     }
 }
-
-private fun formatDate(epochMillis: Long): String =
-    SimpleDateFormat("MMM d, yyyy", Locale.getDefault()).format(Date(epochMillis))
