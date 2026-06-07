@@ -21,4 +21,14 @@ interface WearLogDao {
 
     @Query("DELETE FROM wear_logs WHERE clothingItemId = :itemId")
     suspend fun deleteForItem(itemId: Long)
+
+    @Query(
+        """
+        SELECT clothing_items.*, wear_logs.wornDate AS wornDate
+        FROM wear_logs
+        JOIN clothing_items ON wear_logs.clothingItemId = clothing_items.id
+        ORDER BY wear_logs.wornDate DESC
+        """
+    )
+    fun observeAllWithItems(): Flow<List<WearLogWithItem>>
 }

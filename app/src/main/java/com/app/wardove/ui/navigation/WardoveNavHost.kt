@@ -10,6 +10,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.app.wardove.ui.additem.AddItemScreen
+import com.app.wardove.ui.calendar.CalendarScreen
 import com.app.wardove.ui.history.HistoryScreen
 import com.app.wardove.ui.itemdetail.ItemDetailScreen
 import com.app.wardove.ui.laundry.LaundryScreen
@@ -37,6 +38,7 @@ fun WardoveNavHost(
                     navController.navigate(WardoveDestinations.itemDetail(id))
                 },
                 onOpenLaundry = { navController.navigate(WardoveDestinations.LAUNDRY) },
+                onOpenCalendar = { navController.navigate(WardoveDestinations.CALENDAR) },
                 snackbarMessage = message,
                 onSnackbarShown = { savedHandle[SNACKBAR_KEY] = null }
             )
@@ -87,12 +89,30 @@ fun WardoveNavHost(
         composable(WardoveDestinations.LAUNDRY) {
             LaundryScreen(
                 onBack = { navController.popBackStack() },
-                onOpenHistory = { navController.navigate(WardoveDestinations.HISTORY) }
+                onOpenHistory = { navController.navigate(WardoveDestinations.HISTORY) },
+                onOpenCalendar = {
+                    navController.navigate(WardoveDestinations.CALENDAR) {
+                        popUpTo(WardoveDestinations.WARDROBE)
+                    }
+                }
             )
         }
 
         composable(WardoveDestinations.HISTORY) {
             HistoryScreen(onBack = { navController.popBackStack() })
+        }
+
+        composable(WardoveDestinations.CALENDAR) {
+            CalendarScreen(
+                onSelectWardrobe = {
+                    navController.popBackStack(WardoveDestinations.WARDROBE, inclusive = false)
+                },
+                onSelectLaundry = {
+                    navController.navigate(WardoveDestinations.LAUNDRY) {
+                        popUpTo(WardoveDestinations.WARDROBE)
+                    }
+                }
+            )
         }
     }
 }

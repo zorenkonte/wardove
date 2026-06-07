@@ -20,6 +20,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.CalendarMonth
 import androidx.compose.material.icons.filled.Checkroom
 import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.LocalLaundryService
@@ -75,6 +76,7 @@ fun WardrobeScreen(
     onAddItem: () -> Unit,
     onOpenItem: (Long) -> Unit,
     onOpenLaundry: () -> Unit,
+    onOpenCalendar: () -> Unit,
     snackbarMessage: String? = null,
     onSnackbarShown: () -> Unit = {},
     viewModel: WardrobeViewModel = hiltViewModel()
@@ -109,7 +111,8 @@ fun WardrobeScreen(
             WardoveBottomBar(
                 currentRoute = WardroveBottomRoute.WARDROBE,
                 onSelectWardrobe = {},
-                onSelectLaundry = onOpenLaundry
+                onSelectLaundry = onOpenLaundry,
+                onSelectCalendar = onOpenCalendar
             )
         },
         snackbarHost = { SnackbarHost(snackbarHostState) }
@@ -465,40 +468,43 @@ private fun EmptyState(hasQuery: Boolean, modifier: Modifier = Modifier) {
     }
 }
 
-enum class WardroveBottomRoute { WARDROBE, LAUNDRY }
+enum class WardroveBottomRoute { WARDROBE, LAUNDRY, CALENDAR }
 
 @Composable
 fun WardoveBottomBar(
     currentRoute: WardroveBottomRoute,
     onSelectWardrobe: () -> Unit,
-    onSelectLaundry: () -> Unit
+    onSelectLaundry: () -> Unit,
+    onSelectCalendar: () -> Unit
 ) {
+    val itemColors = NavigationBarItemDefaults.colors(
+        selectedIconColor = Color(0xFF1A1A1A),
+        selectedTextColor = Color(0xFF1A1A1A),
+        unselectedIconColor = Color(0xFFAAAAAA),
+        unselectedTextColor = Color(0xFFAAAAAA),
+        indicatorColor = Color.Transparent
+    )
     NavigationBar(containerColor = Color.White, tonalElevation = 0.dp) {
         NavigationBarItem(
             selected = currentRoute == WardroveBottomRoute.WARDROBE,
             onClick = onSelectWardrobe,
             icon = { Icon(Icons.Default.Checkroom, contentDescription = "Wardrobe") },
             label = { Text("Wardrobe", fontSize = 10.sp) },
-            colors = NavigationBarItemDefaults.colors(
-                selectedIconColor = Color(0xFF1A1A1A),
-                selectedTextColor = Color(0xFF1A1A1A),
-                unselectedIconColor = Color(0xFFAAAAAA),
-                unselectedTextColor = Color(0xFFAAAAAA),
-                indicatorColor = Color.Transparent
-            )
+            colors = itemColors
         )
         NavigationBarItem(
             selected = currentRoute == WardroveBottomRoute.LAUNDRY,
             onClick = onSelectLaundry,
             icon = { Icon(Icons.Default.LocalLaundryService, contentDescription = "Laundry") },
             label = { Text("Laundry", fontSize = 10.sp) },
-            colors = NavigationBarItemDefaults.colors(
-                selectedIconColor = Color(0xFF1A1A1A),
-                selectedTextColor = Color(0xFF1A1A1A),
-                unselectedIconColor = Color(0xFFAAAAAA),
-                unselectedTextColor = Color(0xFFAAAAAA),
-                indicatorColor = Color.Transparent
-            )
+            colors = itemColors
+        )
+        NavigationBarItem(
+            selected = currentRoute == WardroveBottomRoute.CALENDAR,
+            onClick = onSelectCalendar,
+            icon = { Icon(Icons.Default.CalendarMonth, contentDescription = "Calendar") },
+            label = { Text("Calendar", fontSize = 10.sp) },
+            colors = itemColors
         )
     }
 }

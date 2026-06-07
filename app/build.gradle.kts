@@ -33,6 +33,7 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+        isCoreLibraryDesugaringEnabled = true
     }
     buildFeatures {
         compose = true
@@ -67,6 +68,8 @@ dependencies {
 
     // Coil (image loading)
     implementation(libs.coil.compose)
+
+    coreLibraryDesugaring(libs.desugar.jdk.libs)
 
     // CameraX
     implementation(libs.androidx.camera.core)

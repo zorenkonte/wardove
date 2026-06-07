@@ -67,6 +67,7 @@ import java.io.File
 fun LaundryScreen(
     onBack: () -> Unit,
     onOpenHistory: () -> Unit,
+    onOpenCalendar: () -> Unit,
     viewModel: LaundryViewModel = hiltViewModel()
 ) {
     val tab by viewModel.selectedTab.collectAsState()
@@ -107,7 +108,8 @@ fun LaundryScreen(
             WardoveBottomBar(
                 currentRoute = WardroveBottomRoute.LAUNDRY,
                 onSelectWardrobe = onBack,
-                onSelectLaundry = {}
+                onSelectLaundry = {},
+                onSelectCalendar = onOpenCalendar
             )
         },
         snackbarHost = { SnackbarHost(snackbarHostState) }
