@@ -20,5 +20,6 @@ data class ClothingItem(
     val lastWornDate: Long? = null,
     val totalWearCount: Int = 0,
     val createdAt: Long = System.currentTimeMillis(),
-    val notes: String? = null
+    val notes: String? = null,
+    val price: Double? = null
 )

@@ -5,6 +5,7 @@ object WardoveDestinations {
     const val LAUNDRY = "laundry"
     const val HISTORY = "history"
     const val CALENDAR = "calendar"
+    const val STATS = "stats"
 
     const val ADD_ITEM_ROUTE = "add_item?itemId={itemId}"
     const val ADD_ITEM_ARG = "itemId"

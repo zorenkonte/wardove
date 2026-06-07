@@ -14,6 +14,7 @@ import com.app.wardove.ui.calendar.CalendarScreen
 import com.app.wardove.ui.history.HistoryScreen
 import com.app.wardove.ui.itemdetail.ItemDetailScreen
 import com.app.wardove.ui.laundry.LaundryScreen
+import com.app.wardove.ui.stats.StatsScreen
 import com.app.wardove.ui.wardrobe.WardrobeScreen
 
 private const val SNACKBAR_KEY = "snackbar_message"
@@ -39,6 +40,7 @@ fun WardoveNavHost(
                 },
                 onOpenLaundry = { navController.navigate(WardoveDestinations.LAUNDRY) },
                 onOpenCalendar = { navController.navigate(WardoveDestinations.CALENDAR) },
+                onOpenStats = { navController.navigate(WardoveDestinations.STATS) },
                 snackbarMessage = message,
                 onSnackbarShown = { savedHandle[SNACKBAR_KEY] = null }
             )
@@ -94,6 +96,11 @@ fun WardoveNavHost(
                     navController.navigate(WardoveDestinations.CALENDAR) {
                         popUpTo(WardoveDestinations.WARDROBE)
                     }
+                },
+                onOpenStats = {
+                    navController.navigate(WardoveDestinations.STATS) {
+                        popUpTo(WardoveDestinations.WARDROBE)
+                    }
                 }
             )
         }
@@ -109,6 +116,29 @@ fun WardoveNavHost(
                 },
                 onSelectLaundry = {
                     navController.navigate(WardoveDestinations.LAUNDRY) {
+                        popUpTo(WardoveDestinations.WARDROBE)
+                    }
+                },
+                onSelectStats = {
+                    navController.navigate(WardoveDestinations.STATS) {
+                        popUpTo(WardoveDestinations.WARDROBE)
+                    }
+                }
+            )
+        }
+
+        composable(WardoveDestinations.STATS) {
+            StatsScreen(
+                onSelectWardrobe = {
+                    navController.popBackStack(WardoveDestinations.WARDROBE, inclusive = false)
+                },
+                onSelectLaundry = {
+                    navController.navigate(WardoveDestinations.LAUNDRY) {
+                        popUpTo(WardoveDestinations.WARDROBE)
+                    }
+                },
+                onSelectCalendar = {
+                    navController.navigate(WardoveDestinations.CALENDAR) {
                         popUpTo(WardoveDestinations.WARDROBE)
                     }
                 }

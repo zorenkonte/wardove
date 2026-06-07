@@ -25,7 +25,10 @@ object DatabaseModule {
         context,
         WardoveDatabase::class.java,
         WardoveDatabase.DATABASE_NAME
-    ).fallbackToDestructiveMigration(dropAllTables = true).build()
+    )
+        .addMigrations(WardoveDatabase.MIGRATION_1_2)
+        .fallbackToDestructiveMigration(dropAllTables = true)
+        .build()
 
     @Provides
     fun provideClothingDao(db: WardoveDatabase): ClothingDao = db.clothingDao()

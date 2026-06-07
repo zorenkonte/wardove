@@ -56,6 +56,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
@@ -145,6 +147,18 @@ fun AddItemScreen(
                     onSelect = viewModel::setColor
                 )
             }
+
+            OutlinedTextField(
+                value = state.price,
+                onValueChange = viewModel::setPrice,
+                label = {
+                    Text("Price (optional)", color = Color(0xFF888888))
+                },
+                prefix = { Text("₱ ") },
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
+                singleLine = true,
+                modifier = Modifier.fillMaxWidth()
+            )
 
             OutlinedTextField(
                 value = state.notes,

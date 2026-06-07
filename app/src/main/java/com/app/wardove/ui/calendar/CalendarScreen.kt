@@ -59,6 +59,7 @@ import java.util.Locale
 fun CalendarScreen(
     onSelectWardrobe: () -> Unit,
     onSelectLaundry: () -> Unit,
+    onSelectStats: () -> Unit,
     viewModel: CalendarViewModel = hiltViewModel()
 ) {
     val selectedDate by viewModel.selectedDate.collectAsState()
@@ -74,7 +75,8 @@ fun CalendarScreen(
                 currentRoute = WardroveBottomRoute.CALENDAR,
                 onSelectWardrobe = onSelectWardrobe,
                 onSelectLaundry = onSelectLaundry,
-                onSelectCalendar = {}
+                onSelectCalendar = {},
+                onSelectStats = onSelectStats
             )
         }
     ) { padding ->

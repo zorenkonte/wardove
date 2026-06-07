@@ -20,6 +20,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.BarChart
 import androidx.compose.material.icons.filled.CalendarMonth
 import androidx.compose.material.icons.filled.Checkroom
 import androidx.compose.material.icons.filled.Clear
@@ -77,6 +78,7 @@ fun WardrobeScreen(
     onOpenItem: (Long) -> Unit,
     onOpenLaundry: () -> Unit,
     onOpenCalendar: () -> Unit,
+    onOpenStats: () -> Unit,
     snackbarMessage: String? = null,
     onSnackbarShown: () -> Unit = {},
     viewModel: WardrobeViewModel = hiltViewModel()
@@ -112,7 +114,8 @@ fun WardrobeScreen(
                 currentRoute = WardroveBottomRoute.WARDROBE,
                 onSelectWardrobe = {},
                 onSelectLaundry = onOpenLaundry,
-                onSelectCalendar = onOpenCalendar
+                onSelectCalendar = onOpenCalendar,
+                onSelectStats = onOpenStats
             )
         },
         snackbarHost = { SnackbarHost(snackbarHostState) }
@@ -468,14 +471,15 @@ private fun EmptyState(hasQuery: Boolean, modifier: Modifier = Modifier) {
     }
 }
 
-enum class WardroveBottomRoute { WARDROBE, LAUNDRY, CALENDAR }
+enum class WardroveBottomRoute { WARDROBE, LAUNDRY, CALENDAR, STATS }
 
 @Composable
 fun WardoveBottomBar(
     currentRoute: WardroveBottomRoute,
     onSelectWardrobe: () -> Unit,
     onSelectLaundry: () -> Unit,
-    onSelectCalendar: () -> Unit
+    onSelectCalendar: () -> Unit,
+    onSelectStats: () -> Unit
 ) {
     val itemColors = NavigationBarItemDefaults.colors(
         selectedIconColor = Color(0xFF1A1A1A),
@@ -504,6 +508,13 @@ fun WardoveBottomBar(
             onClick = onSelectCalendar,
             icon = { Icon(Icons.Default.CalendarMonth, contentDescription = "Calendar") },
             label = { Text("Calendar", fontSize = 10.sp) },
+            colors = itemColors
+        )
+        NavigationBarItem(
+            selected = currentRoute == WardroveBottomRoute.STATS,
+            onClick = onSelectStats,
+            icon = { Icon(Icons.Default.BarChart, contentDescription = "Stats") },
+            label = { Text("Stats", fontSize = 10.sp) },
             colors = itemColors
         )
     }
