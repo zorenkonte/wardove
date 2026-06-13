@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -83,7 +84,7 @@ fun AddItemScreen(
     ) { uri -> uri?.let(viewModel::onGalleryUri) }
 
     Scaffold(
-        containerColor = Color(0xFFF7F5F2),
+        containerColor = MaterialTheme.colorScheme.background,
         topBar = {
             TopAppBar(
                 title = { Text(if (state.isEditing) "Edit Item" else "Add Item") },
@@ -101,7 +102,7 @@ fun AddItemScreen(
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(0xFFF7F5F2)
+                    containerColor = MaterialTheme.colorScheme.background
                 )
             )
         }
@@ -110,6 +111,7 @@ fun AddItemScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
+                .imePadding()
                 .verticalScroll(rememberScrollState())
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
@@ -152,7 +154,7 @@ fun AddItemScreen(
                 value = state.price,
                 onValueChange = viewModel::setPrice,
                 label = {
-                    Text("Price (optional)", color = Color(0xFF888888))
+                    Text("Price (optional)", color = MaterialTheme.colorScheme.onSurfaceVariant)
                 },
                 prefix = { Text("₱ ") },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
