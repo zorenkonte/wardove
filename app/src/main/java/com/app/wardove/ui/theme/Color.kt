@@ -1,6 +1,14 @@
 package com.app.wardove.ui.theme
 
+import androidx.compose.material3.ColorScheme
 import androidx.compose.ui.graphics.Color
+
+/**
+ * Hint / disabled text color derived from the active scheme so it adapts to light & dark.
+ * Used where the design previously hardcoded 0xFFAAAAAA.
+ */
+val ColorScheme.textHint: Color
+    get() = onSurfaceVariant.copy(alpha = 0.6f)
 
 val Background = Color(0xFFF7F5F2)
 val Surface = Color(0xFFFFFFFF)

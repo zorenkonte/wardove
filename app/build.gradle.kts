@@ -37,6 +37,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
 }
 
@@ -68,6 +69,9 @@ dependencies {
 
     // Coil (image loading)
     implementation(libs.coil.compose)
+
+    // DataStore (preferences)
+    implementation(libs.androidx.datastore.preferences)
 
     coreLibraryDesugaring(libs.desugar.jdk.libs)
 
