@@ -1,5 +1,6 @@
 package com.app.wardove.ui.itemdetail
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -30,6 +31,7 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -115,6 +117,7 @@ fun ItemDetailScreen(
                 wearLogs = logs,
                 wornToday = wornToday,
                 onWearToday = viewModel::wearToday,
+                onUnwearToday = viewModel::unwearToday,
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(padding)
@@ -148,6 +151,7 @@ private fun ItemDetailBody(
     wearLogs: List<WearLog>,
     wornToday: Boolean,
     onWearToday: () -> Unit,
+    onUnwearToday: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Column(
@@ -211,28 +215,48 @@ private fun ItemDetailBody(
         }
 
         val haptic = LocalHapticFeedback.current
-        Button(
-            onClick = {
-                haptic.performHapticFeedback(HapticFeedbackType.LongPress)
-                onWearToday()
-            },
-            enabled = !wornToday,
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(52.dp),
-            shape = RoundedCornerShape(14.dp),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = Color(0xFF1A1A1A),
-                contentColor = Color.White,
-                disabledContainerColor = Color(0xFFEBE8E3),
-                disabledContentColor = Color(0xFFAAAAAA)
-            )
-        ) {
-            Text(
-                if (wornToday) "Already worn today" else "Wear Today",
-                fontSize = 15.sp,
-                fontWeight = FontWeight.Medium
-            )
+        if (wornToday) {
+            OutlinedButton(
+                onClick = {
+                    haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                    onUnwearToday()
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(52.dp),
+                shape = RoundedCornerShape(14.dp),
+                border = BorderStroke(1.dp, Color(0xFF1A1A1A)),
+                colors = ButtonDefaults.outlinedButtonColors(
+                    contentColor = Color(0xFF1A1A1A)
+                )
+            ) {
+                Text(
+                    "Worn today • Undo",
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Medium
+                )
+            }
+        } else {
+            Button(
+                onClick = {
+                    haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+                    onWearToday()
+                },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(52.dp),
+                shape = RoundedCornerShape(14.dp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFF1A1A1A),
+                    contentColor = Color.White
+                )
+            ) {
+                Text(
+                    "Wear Today",
+                    fontSize = 15.sp,
+                    fontWeight = FontWeight.Medium
+                )
+            }
         }
 
         WearHistorySection(logs = wearLogs)

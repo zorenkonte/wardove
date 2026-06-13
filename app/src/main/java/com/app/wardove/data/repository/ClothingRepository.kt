@@ -6,6 +6,7 @@ import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.data.local.entity.ClothingStatus
 import com.app.wardove.data.local.entity.WearLog
 import kotlinx.coroutines.flow.Flow
+import java.util.Calendar
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -32,6 +33,32 @@ class ClothingRepository @Inject constructor(
     suspend fun markWornToday(id: Long, now: Long = System.currentTimeMillis()) {
         clothingDao.markWorn(id, now, ClothingStatus.WORN)
         wearLogDao.insert(WearLog(clothingItemId = id, wornDate = now))
+    }
+
+    suspend fun unwearToday(id: Long, now: Long = System.currentTimeMillis()) {
+        val (start, end) = dayBounds(now)
+        val deleted = wearLogDao.deleteForItemInRange(id, start, end)
+        if (deleted <= 0) return
+        val latest = wearLogDao.latestForItem(id)
+        clothingDao.markUnworn(
+            id = id,
+            date = latest?.wornDate,
+            decrement = deleted,
+            status = if (latest != null) ClothingStatus.WORN else ClothingStatus.CLEAN
+        )
+    }
+
+    private fun dayBounds(time: Long): Pair<Long, Long> {
+        val cal = Calendar.getInstance().apply {
+            timeInMillis = time
+            set(Calendar.HOUR_OF_DAY, 0)
+            set(Calendar.MINUTE, 0)
+            set(Calendar.SECOND, 0)
+            set(Calendar.MILLISECOND, 0)
+        }
+        val start = cal.timeInMillis
+        val end = start + 24L * 60L * 60L * 1000L
+        return start to end
     }
 
     fun observeWearLogs(itemId: Long): Flow<List<WearLog>> =

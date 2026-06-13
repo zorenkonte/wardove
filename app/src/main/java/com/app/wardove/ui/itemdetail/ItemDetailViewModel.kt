@@ -53,6 +53,10 @@ class ItemDetailViewModel @Inject constructor(
         viewModelScope.launch { repository.markWornToday(itemId) }
     }
 
+    fun unwearToday() {
+        viewModelScope.launch { repository.unwearToday(itemId) }
+    }
+
     fun delete(onDone: () -> Unit) {
         viewModelScope.launch {
             val current = repository.getById(itemId)

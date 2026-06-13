@@ -45,6 +45,9 @@ interface ClothingDao {
     @Query("UPDATE clothing_items SET lastWornDate = :date, totalWearCount = totalWearCount + 1, status = :status WHERE id = :id")
     suspend fun markWorn(id: Long, date: Long, status: String)
 
+    @Query("UPDATE clothing_items SET lastWornDate = :date, totalWearCount = MAX(totalWearCount - :decrement, 0), status = :status WHERE id = :id")
+    suspend fun markUnworn(id: Long, date: Long?, decrement: Int, status: String)
+
     @Query("UPDATE clothing_items SET totalWearCount = 0, status = :status WHERE id IN (:ids)")
     suspend fun markCleanAndReset(ids: List<Long>, status: String)
 }
