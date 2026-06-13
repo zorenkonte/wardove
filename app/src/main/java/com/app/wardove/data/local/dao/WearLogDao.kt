@@ -22,6 +22,12 @@ interface WearLogDao {
     @Query("DELETE FROM wear_logs WHERE clothingItemId = :itemId")
     suspend fun deleteForItem(itemId: Long)
 
+    @Query("DELETE FROM wear_logs WHERE clothingItemId = :itemId AND wornDate >= :start AND wornDate < :end")
+    suspend fun deleteForItemInRange(itemId: Long, start: Long, end: Long): Int
+
+    @Query("SELECT * FROM wear_logs WHERE clothingItemId = :itemId ORDER BY wornDate DESC LIMIT 1")
+    suspend fun latestForItem(itemId: Long): WearLog?
+
     @Query(
         """
         SELECT clothing_items.*, wear_logs.wornDate AS wornDate
