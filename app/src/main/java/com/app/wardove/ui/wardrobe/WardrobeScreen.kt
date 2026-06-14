@@ -81,9 +81,6 @@ import java.io.File
 fun WardrobeScreen(
     onAddItem: () -> Unit,
     onOpenItem: (Long) -> Unit,
-    onOpenLaundry: () -> Unit,
-    onOpenCalendar: () -> Unit,
-    onOpenStats: () -> Unit,
     onOpenDrawer: () -> Unit = {},
     snackbarMessage: String? = null,
     onSnackbarShown: () -> Unit = {},
@@ -114,15 +111,6 @@ fun WardrobeScreen(
             ) {
                 Icon(Icons.Default.Add, contentDescription = "Add Item")
             }
-        },
-        bottomBar = {
-            WardoveBottomBar(
-                currentRoute = WardroveBottomRoute.WARDROBE,
-                onSelectWardrobe = {},
-                onSelectLaundry = onOpenLaundry,
-                onSelectCalendar = onOpenCalendar,
-                onSelectStats = onOpenStats
-            )
         },
         snackbarHost = { SnackbarHost(snackbarHostState) }
     ) { padding ->
@@ -165,7 +153,7 @@ fun WardrobeScreen(
                         start = 20.dp,
                         end = 20.dp,
                         top = 4.dp,
-                        bottom = 100.dp
+                        bottom = 24.dp
                     ),
                     horizontalArrangement = Arrangement.spacedBy(10.dp),
                     verticalArrangement = Arrangement.spacedBy(10.dp),
@@ -485,51 +473,3 @@ private fun EmptyState(hasQuery: Boolean, modifier: Modifier = Modifier) {
     }
 }
 
-enum class WardroveBottomRoute { WARDROBE, LAUNDRY, CALENDAR, STATS }
-
-@Composable
-fun WardoveBottomBar(
-    currentRoute: WardroveBottomRoute,
-    onSelectWardrobe: () -> Unit,
-    onSelectLaundry: () -> Unit,
-    onSelectCalendar: () -> Unit,
-    onSelectStats: () -> Unit
-) {
-    val itemColors = NavigationBarItemDefaults.colors(
-        selectedIconColor = MaterialTheme.colorScheme.onBackground,
-        selectedTextColor = MaterialTheme.colorScheme.onBackground,
-        unselectedIconColor = MaterialTheme.colorScheme.textHint,
-        unselectedTextColor = MaterialTheme.colorScheme.textHint,
-        indicatorColor = Color.Transparent
-    )
-    NavigationBar(containerColor = MaterialTheme.colorScheme.surface, tonalElevation = 0.dp) {
-        NavigationBarItem(
-            selected = currentRoute == WardroveBottomRoute.WARDROBE,
-            onClick = onSelectWardrobe,
-            icon = { Icon(Icons.Default.Checkroom, contentDescription = "Wardrobe") },
-            label = { Text("Wardrobe", fontSize = 10.sp) },
-            colors = itemColors
-        )
-        NavigationBarItem(
-            selected = currentRoute == WardroveBottomRoute.LAUNDRY,
-            onClick = onSelectLaundry,
-            icon = { Icon(Icons.Default.LocalLaundryService, contentDescription = "Laundry") },
-            label = { Text("Laundry", fontSize = 10.sp) },
-            colors = itemColors
-        )
-        NavigationBarItem(
-            selected = currentRoute == WardroveBottomRoute.CALENDAR,
-            onClick = onSelectCalendar,
-            icon = { Icon(Icons.Default.CalendarMonth, contentDescription = "Calendar") },
-            label = { Text("Calendar", fontSize = 10.sp) },
-            colors = itemColors
-        )
-        NavigationBarItem(
-            selected = currentRoute == WardroveBottomRoute.STATS,
-            onClick = onSelectStats,
-            icon = { Icon(Icons.Default.BarChart, contentDescription = "Stats") },
-            label = { Text("Stats", fontSize = 10.sp) },
-            colors = itemColors
-        )
-    }
-}

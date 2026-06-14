@@ -7,6 +7,8 @@ object WardoveDestinations {
     const val CALENDAR = "calendar"
     const val STATS = "stats"
     const val SETTINGS = "settings"
+    const val SETTINGS_APPEARANCE = "settings_appearance"
+    const val SETTINGS_ABOUT = "settings_about"
 
     const val ADD_ITEM_ROUTE = "add_item?itemId={itemId}"
     const val ADD_ITEM_ARG = "itemId"

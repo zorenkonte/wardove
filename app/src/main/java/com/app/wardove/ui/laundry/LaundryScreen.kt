@@ -61,17 +61,12 @@ import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.ui.theme.LaundryPurple
 import com.app.wardove.ui.theme.StatusClean
 import com.app.wardove.ui.util.formatDateShort
-import com.app.wardove.ui.wardrobe.WardoveBottomBar
-import com.app.wardove.ui.wardrobe.WardroveBottomRoute
 import java.io.File
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LaundryScreen(
-    onBack: () -> Unit,
     onOpenHistory: () -> Unit,
-    onOpenCalendar: () -> Unit,
-    onOpenStats: () -> Unit,
     onOpenDrawer: () -> Unit = {},
     viewModel: LaundryViewModel = hiltViewModel()
 ) {
@@ -113,15 +108,6 @@ fun LaundryScreen(
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.background
                 )
-            )
-        },
-        bottomBar = {
-            WardoveBottomBar(
-                currentRoute = WardroveBottomRoute.LAUNDRY,
-                onSelectWardrobe = onBack,
-                onSelectLaundry = {},
-                onSelectCalendar = onOpenCalendar,
-                onSelectStats = onOpenStats
             )
         },
         snackbarHost = { SnackbarHost(snackbarHostState) }

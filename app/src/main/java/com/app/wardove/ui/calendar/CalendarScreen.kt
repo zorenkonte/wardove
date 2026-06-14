@@ -49,8 +49,6 @@ import coil3.compose.AsyncImage
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.ui.theme.StatusClean
 import com.app.wardove.ui.theme.textHint
-import com.app.wardove.ui.wardrobe.WardoveBottomBar
-import com.app.wardove.ui.wardrobe.WardroveBottomRoute
 import java.io.File
 import java.time.DayOfWeek
 import java.time.LocalDate
@@ -60,9 +58,6 @@ import java.util.Locale
 
 @Composable
 fun CalendarScreen(
-    onSelectWardrobe: () -> Unit,
-    onSelectLaundry: () -> Unit,
-    onSelectStats: () -> Unit,
     onOpenDrawer: () -> Unit = {},
     viewModel: CalendarViewModel = hiltViewModel()
 ) {
@@ -74,15 +69,6 @@ fun CalendarScreen(
 
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
-        bottomBar = {
-            WardoveBottomBar(
-                currentRoute = WardroveBottomRoute.CALENDAR,
-                onSelectWardrobe = onSelectWardrobe,
-                onSelectLaundry = onSelectLaundry,
-                onSelectCalendar = {},
-                onSelectStats = onSelectStats
-            )
-        }
     ) { padding ->
         Column(
             modifier = Modifier

@@ -36,3 +36,14 @@ val popExitSlide: AnimatedContentTransitionScope<*>.() -> ExitTransition = {
         animationSpec = tween(ANIM_DURATION)
     ) + fadeOut(tween(ANIM_DURATION))
 }
+
+val enterFade: AnimatedContentTransitionScope<*>.() -> EnterTransition = {
+    fadeIn(tween(ANIM_DURATION))
+}
+
+val exitFade: AnimatedContentTransitionScope<*>.() -> ExitTransition = {
+    fadeOut(tween(ANIM_DURATION))
+}
+
+val popEnterFade = enterFade
+val popExitFade = exitFade

@@ -41,8 +41,6 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.ui.theme.textHint
-import com.app.wardove.ui.wardrobe.WardoveBottomBar
-import com.app.wardove.ui.wardrobe.WardroveBottomRoute
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -51,9 +49,6 @@ import java.util.concurrent.TimeUnit
 
 @Composable
 fun StatsScreen(
-    onSelectWardrobe: () -> Unit,
-    onSelectLaundry: () -> Unit,
-    onSelectCalendar: () -> Unit,
     onOpenDrawer: () -> Unit = {},
     viewModel: StatsViewModel = hiltViewModel()
 ) {
@@ -62,15 +57,6 @@ fun StatsScreen(
 
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
-        bottomBar = {
-            WardoveBottomBar(
-                currentRoute = WardroveBottomRoute.STATS,
-                onSelectWardrobe = onSelectWardrobe,
-                onSelectLaundry = onSelectLaundry,
-                onSelectCalendar = onSelectCalendar,
-                onSelectStats = {}
-            )
-        }
     ) { padding ->
         LazyColumn(
             modifier = Modifier

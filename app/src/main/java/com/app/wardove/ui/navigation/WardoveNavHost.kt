@@ -11,6 +11,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.app.wardove.ui.additem.AddItemScreen
@@ -18,6 +19,8 @@ import com.app.wardove.ui.calendar.CalendarScreen
 import com.app.wardove.ui.history.HistoryScreen
 import com.app.wardove.ui.itemdetail.ItemDetailScreen
 import com.app.wardove.ui.laundry.LaundryScreen
+import com.app.wardove.ui.settings.AboutSettingsScreen
+import com.app.wardove.ui.settings.AppearanceSettingsScreen
 import com.app.wardove.ui.settings.SettingsScreen
 import com.app.wardove.ui.stats.StatsScreen
 import com.app.wardove.ui.wardrobe.WardrobeScreen
@@ -33,13 +36,21 @@ fun WardoveNavHost(
     val scope = rememberCoroutineScope()
     val openDrawer: () -> Unit = { scope.launch { drawerState.open() } }
 
+    val navBackStackEntry by navController.currentBackStackEntryAsState()
+    val currentRoute = navBackStackEntry?.destination?.route
+
     ModalNavigationDrawer(
         drawerState = drawerState,
         gesturesEnabled = drawerState.isOpen,
         drawerContent = {
             WardoveDrawerContent(
-                onOpenSettings = { navController.navigate(WardoveDestinations.SETTINGS) },
-                onOpenHistory = { navController.navigate(WardoveDestinations.HISTORY) },
+                currentRoute = currentRoute,
+                onNavigate = { route ->
+                    navController.navigate(route) {
+                        popUpTo(navController.graph.id) { inclusive = true }
+                        launchSingleTop = true
+                    }
+                },
                 onClose = { scope.launch { drawerState.close() } }
             )
         }
@@ -47,10 +58,10 @@ fun WardoveNavHost(
         NavHost(
             navController = navController,
             startDestination = WardoveDestinations.WARDROBE,
-            enterTransition = enterSlide,
-            exitTransition = exitSlide,
-            popEnterTransition = popEnterSlide,
-            popExitTransition = popExitSlide
+            enterTransition = enterFade,
+            exitTransition = exitFade,
+            popEnterTransition = popEnterFade,
+            popExitTransition = popExitFade
         ) {
             composable(WardoveDestinations.WARDROBE) { entry ->
                 val savedHandle = entry.savedStateHandle
@@ -63,9 +74,6 @@ fun WardoveNavHost(
                     onOpenItem = { id ->
                         navController.navigate(WardoveDestinations.itemDetail(id))
                     },
-                    onOpenLaundry = { navController.navigate(WardoveDestinations.LAUNDRY) },
-                    onOpenCalendar = { navController.navigate(WardoveDestinations.CALENDAR) },
-                    onOpenStats = { navController.navigate(WardoveDestinations.STATS) },
                     onOpenDrawer = openDrawer,
                     snackbarMessage = message,
                     onSnackbarShown = { savedHandle[SNACKBAR_KEY] = null }
@@ -79,7 +87,11 @@ fun WardoveNavHost(
                         type = NavType.LongType
                         defaultValue = WardoveDestinations.ADD_ITEM_NEW_ID
                     }
-                )
+                ),
+                enterTransition = enterSlide,
+                exitTransition = exitSlide,
+                popEnterTransition = popEnterSlide,
+                popExitTransition = popExitSlide
             ) {
                 AddItemScreen(
                     onSaved = {
@@ -96,7 +108,11 @@ fun WardoveNavHost(
                 route = WardoveDestinations.ITEM_DETAIL_ROUTE,
                 arguments = listOf(
                     navArgument(WardoveDestinations.ITEM_DETAIL_ARG) { type = NavType.LongType }
-                )
+                ),
+                enterTransition = enterSlide,
+                exitTransition = exitSlide,
+                popEnterTransition = popEnterSlide,
+                popExitTransition = popExitSlide
             ) { backStackEntry ->
                 val itemId = backStackEntry.arguments?.getLong(WardoveDestinations.ITEM_DETAIL_ARG) ?: 0L
                 ItemDetailScreen(
@@ -116,18 +132,7 @@ fun WardoveNavHost(
 
             composable(WardoveDestinations.LAUNDRY) {
                 LaundryScreen(
-                    onBack = { navController.popBackStack() },
                     onOpenHistory = { navController.navigate(WardoveDestinations.HISTORY) },
-                    onOpenCalendar = {
-                        navController.navigate(WardoveDestinations.CALENDAR) {
-                            popUpTo(WardoveDestinations.WARDROBE)
-                        }
-                    },
-                    onOpenStats = {
-                        navController.navigate(WardoveDestinations.STATS) {
-                            popUpTo(WardoveDestinations.WARDROBE)
-                        }
-                    },
                     onOpenDrawer = openDrawer
                 )
             }
@@ -138,44 +143,42 @@ fun WardoveNavHost(
 
             composable(WardoveDestinations.CALENDAR) {
                 CalendarScreen(
-                    onSelectWardrobe = {
-                        navController.popBackStack(WardoveDestinations.WARDROBE, inclusive = false)
-                    },
-                    onSelectLaundry = {
-                        navController.navigate(WardoveDestinations.LAUNDRY) {
-                            popUpTo(WardoveDestinations.WARDROBE)
-                        }
-                    },
-                    onSelectStats = {
-                        navController.navigate(WardoveDestinations.STATS) {
-                            popUpTo(WardoveDestinations.WARDROBE)
-                        }
-                    },
                     onOpenDrawer = openDrawer
                 )
             }
 
             composable(WardoveDestinations.STATS) {
                 StatsScreen(
-                    onSelectWardrobe = {
-                        navController.popBackStack(WardoveDestinations.WARDROBE, inclusive = false)
-                    },
-                    onSelectLaundry = {
-                        navController.navigate(WardoveDestinations.LAUNDRY) {
-                            popUpTo(WardoveDestinations.WARDROBE)
-                        }
-                    },
-                    onSelectCalendar = {
-                        navController.navigate(WardoveDestinations.CALENDAR) {
-                            popUpTo(WardoveDestinations.WARDROBE)
-                        }
-                    },
                     onOpenDrawer = openDrawer
                 )
             }
 
             composable(WardoveDestinations.SETTINGS) {
-                SettingsScreen(onBack = { navController.popBackStack() })
+                SettingsScreen(
+                    onOpenDrawer = openDrawer,
+                    onOpenAppearance = { navController.navigate(WardoveDestinations.SETTINGS_APPEARANCE) },
+                    onOpenAbout = { navController.navigate(WardoveDestinations.SETTINGS_ABOUT) }
+                )
+            }
+
+            composable(
+                route = WardoveDestinations.SETTINGS_APPEARANCE,
+                enterTransition = enterSlide,
+                exitTransition = exitSlide,
+                popEnterTransition = popEnterSlide,
+                popExitTransition = popExitSlide
+            ) {
+                AppearanceSettingsScreen(onBack = { navController.popBackStack() })
+            }
+
+            composable(
+                route = WardoveDestinations.SETTINGS_ABOUT,
+                enterTransition = enterSlide,
+                exitTransition = exitSlide,
+                popEnterTransition = popEnterSlide,
+                popExitTransition = popExitSlide
+            ) {
+                AboutSettingsScreen(onBack = { navController.popBackStack() })
             }
         }
     }
