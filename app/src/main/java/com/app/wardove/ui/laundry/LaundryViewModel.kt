@@ -6,6 +6,8 @@ import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.data.local.entity.LaundryCycle
 import com.app.wardove.data.repository.ClothingRepository
 import com.app.wardove.data.repository.LaundryRepository
+import com.app.wardove.data.settings.AppSettings
+import com.app.wardove.data.settings.SettingsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.channels.BufferOverflow
@@ -35,11 +37,17 @@ data class CycleWithItems(
     val items: List<ClothingItem>
 )
 
+data class PileEntry(
+    val item: ClothingItem,
+    val readyToWash: Boolean
+)
+
 @OptIn(ExperimentalCoroutinesApi::class)
 @HiltViewModel
 class LaundryViewModel @Inject constructor(
     clothingRepository: ClothingRepository,
-    private val laundryRepository: LaundryRepository
+    private val laundryRepository: LaundryRepository,
+    private val settingsRepository: SettingsRepository
 ) : ViewModel() {
 
     private val _selectedTab = MutableStateFlow(LaundryTab.PILE)
@@ -48,12 +56,30 @@ class LaundryViewModel @Inject constructor(
     private val _selectedPileIds = MutableStateFlow<Set<Long>>(emptySet())
     val selectedPileIds: StateFlow<Set<Long>> = _selectedPileIds.asStateFlow()
 
-    val pile: StateFlow<List<ClothingItem>?> = laundryRepository.observePile()
+    val threshold: StateFlow<Int> = settingsRepository.settings
+        .map { it.laundryThreshold }
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5_000),
+            initialValue = AppSettings.DEFAULT_LAUNDRY_THRESHOLD
+        )
+
+    private val rawPile = laundryRepository.observePile()
+
+    val pile: StateFlow<List<ClothingItem>?> = rawPile
         .stateIn(
             scope = viewModelScope,
             started = SharingStarted.WhileSubscribed(5_000),
             initialValue = null
         )
+
+    val pileEntries: StateFlow<List<PileEntry>?> = combine(rawPile, threshold) { items, t ->
+        items.map { PileEntry(it, it.totalWearCount >= t) }
+    }.stateIn(
+        scope = viewModelScope,
+        started = SharingStarted.WhileSubscribed(5_000),
+        initialValue = null
+    )
 
     val activeCycles: StateFlow<List<CycleWithItems>?> =
         laundryRepository.observeActiveCycles()
@@ -113,6 +139,18 @@ class LaundryViewModel @Inject constructor(
             val count = items?.size ?: 0
             laundryRepository.completeCycle(cycleId)
             _messages.tryEmit("Marked $count item${if (count == 1) "" else "s"} as clean")
+        }
+    }
+
+    fun incrementThreshold() {
+        viewModelScope.launch {
+            settingsRepository.setLaundryThreshold(threshold.value + 1)
+        }
+    }
+
+    fun decrementThreshold() {
+        viewModelScope.launch {
+            settingsRepository.setLaundryThreshold(threshold.value - 1)
         }
     }
 }

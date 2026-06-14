@@ -16,7 +16,11 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.Card
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
@@ -29,7 +33,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -37,6 +40,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
 import com.app.wardove.data.local.entity.ClothingItem
+import com.app.wardove.ui.theme.textHint
 import com.app.wardove.ui.wardrobe.WardoveBottomBar
 import com.app.wardove.ui.wardrobe.WardroveBottomRoute
 import java.io.File
@@ -50,13 +54,14 @@ fun StatsScreen(
     onSelectWardrobe: () -> Unit,
     onSelectLaundry: () -> Unit,
     onSelectCalendar: () -> Unit,
+    onOpenDrawer: () -> Unit = {},
     viewModel: StatsViewModel = hiltViewModel()
 ) {
     val state by viewModel.state.collectAsState()
     val now = remember { System.currentTimeMillis() }
 
     Scaffold(
-        containerColor = Color(0xFFF7F5F2),
+        containerColor = MaterialTheme.colorScheme.background,
         bottomBar = {
             WardoveBottomBar(
                 currentRoute = WardroveBottomRoute.STATS,
@@ -73,7 +78,7 @@ fun StatsScreen(
                 .padding(padding),
             contentPadding = PaddingValues(bottom = 24.dp)
         ) {
-            item { Header() }
+            item { Header(onOpenDrawer = onOpenDrawer) }
             item {
                 SummaryGrid(
                     totalItems = state.totalItems,
@@ -104,7 +109,7 @@ fun StatsScreen(
                     ) {
                         Text(
                             "Add prices to your clothes to track cost per wear",
-                            color = Color(0xFFAAAAAA),
+                            color = MaterialTheme.colorScheme.textHint,
                             style = MaterialTheme.typography.bodyMedium
                         )
                     }
@@ -113,7 +118,7 @@ fun StatsScreen(
             items(state.costPerWearItems, key = { it.item.id }) { entry ->
                 CostPerWearRow(entry)
                 HorizontalDivider(
-                    color = Color(0xFFE0DDD8),
+                    color = MaterialTheme.colorScheme.outline,
                     thickness = 0.5.dp,
                     modifier = Modifier.padding(horizontal = 20.dp)
                 )
@@ -123,18 +128,32 @@ fun StatsScreen(
 }
 
 @Composable
-private fun Header() {
-    Column(modifier = Modifier.padding(horizontal = 20.dp, vertical = 16.dp)) {
-        Text(
-            "Stats",
-            style = MaterialTheme.typography.headlineLarge,
-            color = Color(0xFF1A1A1A)
-        )
-        Text(
-            "Your wardrobe at a glance",
-            style = MaterialTheme.typography.bodyMedium,
-            color = Color(0xFF888888)
-        )
+private fun Header(onOpenDrawer: () -> Unit) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 20.dp, vertical = 16.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        IconButton(onClick = onOpenDrawer) {
+            Icon(
+                Icons.Default.Menu,
+                contentDescription = "Menu",
+                tint = MaterialTheme.colorScheme.onBackground
+            )
+        }
+        Column(modifier = Modifier.weight(1f)) {
+            Text(
+                "Stats",
+                style = MaterialTheme.typography.headlineLarge,
+                color = MaterialTheme.colorScheme.onBackground
+            )
+            Text(
+                "Your wardrobe at a glance",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
     }
 }
 
@@ -166,15 +185,15 @@ private fun SummaryGrid(
 private fun StatBox(label: String, value: String, modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
-            .background(Color(0xFFEBE8E3), RoundedCornerShape(12.dp))
+            .background(MaterialTheme.colorScheme.surfaceVariant, RoundedCornerShape(12.dp))
             .padding(12.dp)
     ) {
-        Text(label, fontSize = 11.sp, color = Color(0xFF888888))
+        Text(label, fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
         Text(
             value,
             fontSize = 22.sp,
             fontWeight = FontWeight.Medium,
-            color = Color(0xFF1A1A1A),
+            color = MaterialTheme.colorScheme.onBackground,
             modifier = Modifier.padding(top = 4.dp)
         )
     }
@@ -186,7 +205,7 @@ private fun SectionHeader(label: String) {
         label.uppercase(Locale.getDefault()),
         fontSize = 12.sp,
         fontWeight = FontWeight.Medium,
-        color = Color(0xFF888888),
+        color = MaterialTheme.colorScheme.onSurfaceVariant,
         modifier = Modifier.padding(horizontal = 20.dp, vertical = 16.dp)
     )
 }
@@ -235,7 +254,7 @@ private fun HighlightCard(
     Card(
         modifier = Modifier.fillMaxWidth(),
         shape = RoundedCornerShape(14.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
     ) {
         Row(
@@ -249,7 +268,7 @@ private fun HighlightCard(
                     modifier = Modifier
                         .size(40.dp)
                         .clip(RoundedCornerShape(10.dp))
-                        .background(Color(0xFFEBE8E3))
+                        .background(MaterialTheme.colorScheme.surfaceVariant)
                 ) {
                     AsyncImage(
                         model = File(item.imagePath),
@@ -263,13 +282,13 @@ private fun HighlightCard(
                     Text(
                         label,
                         fontSize = 11.sp,
-                        color = Color(0xFF888888)
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                     Text(
                         item.name,
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Medium,
-                        color = Color(0xFF1A1A1A),
+                        color = MaterialTheme.colorScheme.onBackground,
                         maxLines = 1
                     )
                 }
@@ -278,16 +297,16 @@ private fun HighlightCard(
                         it,
                         fontSize = 13.sp,
                         fontWeight = FontWeight.Medium,
-                        color = Color(0xFF1A1A1A)
+                        color = MaterialTheme.colorScheme.onBackground
                     )
                 }
             } else {
                 Column(modifier = Modifier.weight(1f)) {
-                    Text(label, fontSize = 11.sp, color = Color(0xFF888888))
+                    Text(label, fontSize = 11.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
                     Text(
                         "—",
                         fontSize = 14.sp,
-                        color = Color(0xFFAAAAAA)
+                        color = MaterialTheme.colorScheme.textHint
                     )
                 }
             }
@@ -306,7 +325,7 @@ private fun CategoryBreakdown(breakdown: Map<String, Int>) {
         ) {
             Text(
                 "No items yet.",
-                color = Color(0xFFAAAAAA),
+                color = MaterialTheme.colorScheme.textHint,
                 style = MaterialTheme.typography.bodyMedium
             )
         }
@@ -331,7 +350,7 @@ private fun CategoryBar(category: String, count: Int, max: Int) {
         Text(
             category,
             fontSize = 13.sp,
-            color = Color(0xFF1A1A1A),
+            color = MaterialTheme.colorScheme.onBackground,
             modifier = Modifier.width(90.dp)
         )
         Box(modifier = Modifier.weight(1f)) {
@@ -340,7 +359,7 @@ private fun CategoryBar(category: String, count: Int, max: Int) {
                     .fillMaxWidth()
                     .height(8.dp)
                     .clip(RoundedCornerShape(4.dp))
-                    .background(Color(0xFFEBE8E3))
+                    .background(MaterialTheme.colorScheme.surfaceVariant)
             )
             val fraction = if (max == 0) 0f else count.toFloat() / max
             Box(
@@ -348,7 +367,7 @@ private fun CategoryBar(category: String, count: Int, max: Int) {
                     .fillMaxWidth(fraction)
                     .height(8.dp)
                     .clip(RoundedCornerShape(4.dp))
-                    .background(Color(0xFF1A1A1A))
+                    .background(MaterialTheme.colorScheme.primary)
             )
         }
         Spacer(Modifier.width(12.dp))
@@ -356,7 +375,7 @@ private fun CategoryBar(category: String, count: Int, max: Int) {
             count.toString(),
             fontSize = 13.sp,
             fontWeight = FontWeight.Medium,
-            color = Color(0xFF1A1A1A)
+            color = MaterialTheme.colorScheme.onBackground
         )
     }
 }
@@ -373,7 +392,7 @@ private fun CostPerWearRow(entry: CostPerWearItem) {
             modifier = Modifier
                 .size(40.dp)
                 .clip(RoundedCornerShape(10.dp))
-                .background(Color(0xFFEBE8E3))
+                .background(MaterialTheme.colorScheme.surfaceVariant)
         ) {
             AsyncImage(
                 model = File(entry.item.imagePath),
@@ -388,20 +407,20 @@ private fun CostPerWearRow(entry: CostPerWearItem) {
                 entry.item.name,
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Medium,
-                color = Color(0xFF1A1A1A),
+                color = MaterialTheme.colorScheme.onBackground,
                 maxLines = 1
             )
             Text(
                 entry.item.category,
                 fontSize = 12.sp,
-                color = Color(0xFF888888)
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
         Text(
             "₱${"%.2f".format(entry.costPerWear)} per wear",
             fontSize = 13.sp,
             fontWeight = FontWeight.Medium,
-            color = Color(0xFF1A1A1A)
+            color = MaterialTheme.colorScheme.onBackground
         )
     }
 }

@@ -21,6 +21,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
@@ -46,6 +47,8 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
 import com.app.wardove.data.local.entity.ClothingItem
+import com.app.wardove.ui.theme.StatusClean
+import com.app.wardove.ui.theme.textHint
 import com.app.wardove.ui.wardrobe.WardoveBottomBar
 import com.app.wardove.ui.wardrobe.WardroveBottomRoute
 import java.io.File
@@ -60,6 +63,7 @@ fun CalendarScreen(
     onSelectWardrobe: () -> Unit,
     onSelectLaundry: () -> Unit,
     onSelectStats: () -> Unit,
+    onOpenDrawer: () -> Unit = {},
     viewModel: CalendarViewModel = hiltViewModel()
 ) {
     val selectedDate by viewModel.selectedDate.collectAsState()
@@ -69,7 +73,7 @@ fun CalendarScreen(
     var visibleMonth by remember { mutableStateOf(YearMonth.from(selectedDate)) }
 
     Scaffold(
-        containerColor = Color(0xFFF7F5F2),
+        containerColor = MaterialTheme.colorScheme.background,
         bottomBar = {
             WardoveBottomBar(
                 currentRoute = WardroveBottomRoute.CALENDAR,
@@ -99,7 +103,8 @@ fun CalendarScreen(
                         viewModel.selectDate(adjustSelection(selectedDate, target))
                     }
                 },
-                canGoNext = visibleMonth.isBefore(YearMonth.from(today))
+                canGoNext = visibleMonth.isBefore(YearMonth.from(today)),
+                onOpenDrawer = onOpenDrawer
             )
 
             WeekdayHeader()
@@ -113,7 +118,7 @@ fun CalendarScreen(
             )
 
             HorizontalDivider(
-                color = Color(0xFFE0DDD8),
+                color = MaterialTheme.colorScheme.outline,
                 thickness = 0.5.dp,
                 modifier = Modifier.padding(horizontal = 20.dp, vertical = 16.dp)
             )
@@ -131,7 +136,7 @@ fun CalendarScreen(
                 ) {
                     Text(
                         "Nothing worn on this day",
-                        color = Color(0xFFAAAAAA),
+                        color = MaterialTheme.colorScheme.textHint,
                         style = MaterialTheme.typography.bodyMedium
                     )
                 }
@@ -154,7 +159,8 @@ private fun CalendarTopBar(
     month: YearMonth,
     onPrev: () -> Unit,
     onNext: () -> Unit,
-    canGoNext: Boolean
+    canGoNext: Boolean,
+    onOpenDrawer: () -> Unit
 ) {
     Row(
         modifier = Modifier
@@ -162,30 +168,37 @@ private fun CalendarTopBar(
             .padding(horizontal = 20.dp, vertical = 16.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
+        IconButton(onClick = onOpenDrawer) {
+            Icon(
+                Icons.Default.Menu,
+                contentDescription = "Menu",
+                tint = MaterialTheme.colorScheme.onBackground
+            )
+        }
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 "Calendar",
                 style = MaterialTheme.typography.headlineLarge,
-                color = Color(0xFF1A1A1A)
+                color = MaterialTheme.colorScheme.onBackground
             )
             Text(
                 "${month.month.getDisplayName(TextStyle.FULL, Locale.getDefault())} ${month.year}",
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color(0xFF888888)
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
         IconButton(onClick = onPrev) {
             Icon(
                 Icons.AutoMirrored.Filled.KeyboardArrowLeft,
                 contentDescription = "Previous month",
-                tint = Color(0xFF1A1A1A)
+                tint = MaterialTheme.colorScheme.onBackground
             )
         }
         IconButton(onClick = onNext, enabled = canGoNext) {
             Icon(
                 Icons.AutoMirrored.Filled.KeyboardArrowRight,
                 contentDescription = "Next month",
-                tint = if (canGoNext) Color(0xFF1A1A1A) else Color(0xFFCCCCCC)
+                tint = if (canGoNext) MaterialTheme.colorScheme.onBackground else MaterialTheme.colorScheme.textHint
             )
         }
     }
@@ -208,7 +221,7 @@ private fun WeekdayHeader() {
                 Text(
                     label,
                     fontSize = 11.sp,
-                    color = Color(0xFF888888)
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
         }
@@ -270,17 +283,17 @@ private fun DayCell(
     val isToday = date == today
     val inMonth = YearMonth.from(date) == month
     val textColor = when {
-        isSelected -> Color.White
-        !inMonth -> Color(0xFFCCCCCC)
-        isToday -> Color(0xFF1A1A1A)
-        else -> Color(0xFF888888)
+        isSelected -> MaterialTheme.colorScheme.onPrimary
+        !inMonth -> MaterialTheme.colorScheme.textHint
+        isToday -> MaterialTheme.colorScheme.onBackground
+        else -> MaterialTheme.colorScheme.onSurfaceVariant
     }
 
     Box(
         modifier = Modifier
             .size(40.dp)
             .clip(CircleShape)
-            .background(if (isSelected) Color(0xFF1A1A1A) else Color.Transparent)
+            .background(if (isSelected) MaterialTheme.colorScheme.primary else Color.Transparent)
             .clickable(onClick = onClick),
         contentAlignment = Alignment.Center
     ) {
@@ -296,7 +309,7 @@ private fun DayCell(
                 Box(
                     modifier = Modifier
                         .size(6.dp)
-                        .background(Color(0xFF5DCAA5), CircleShape)
+                        .background(StatusClean, CircleShape)
                 )
             }
         }
@@ -310,7 +323,7 @@ private fun SelectedDayLabel(date: LocalDate) {
     Text(
         text = "$day, $month ${date.dayOfMonth}",
         style = MaterialTheme.typography.titleLarge,
-        color = Color(0xFF1A1A1A),
+        color = MaterialTheme.colorScheme.onBackground,
         modifier = Modifier.padding(horizontal = 20.dp)
     )
 }
@@ -320,7 +333,7 @@ private fun WornItemCard(item: ClothingItem) {
     Card(
         modifier = Modifier.width(100.dp),
         shape = RoundedCornerShape(14.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
     ) {
         Column(modifier = Modifier.padding(8.dp)) {
@@ -338,13 +351,13 @@ private fun WornItemCard(item: ClothingItem) {
                 item.name,
                 fontSize = 12.sp,
                 fontWeight = FontWeight.Medium,
-                color = Color(0xFF1A1A1A),
+                color = MaterialTheme.colorScheme.onSurface,
                 maxLines = 1
             )
             Text(
                 item.category,
                 fontSize = 11.sp,
-                color = Color(0xFF888888),
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1
             )
         }

@@ -36,7 +36,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -60,7 +59,7 @@ fun HistoryScreen(
     val expandedItems by viewModel.expandedItems.collectAsState()
 
     Scaffold(
-        containerColor = Color(0xFFF7F5F2),
+        containerColor = MaterialTheme.colorScheme.background,
         topBar = {
             TopAppBar(
                 title = { Text("Laundry History") },
@@ -70,7 +69,7 @@ fun HistoryScreen(
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(0xFFF7F5F2)
+                    containerColor = MaterialTheme.colorScheme.background
                 )
             )
         }

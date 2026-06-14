@@ -19,6 +19,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.History
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -57,6 +58,8 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
 import com.app.wardove.data.local.entity.ClothingItem
+import com.app.wardove.ui.theme.LaundryPurple
+import com.app.wardove.ui.theme.StatusClean
 import com.app.wardove.ui.util.formatDateShort
 import com.app.wardove.ui.wardrobe.WardoveBottomBar
 import com.app.wardove.ui.wardrobe.WardroveBottomRoute
@@ -69,12 +72,14 @@ fun LaundryScreen(
     onOpenHistory: () -> Unit,
     onOpenCalendar: () -> Unit,
     onOpenStats: () -> Unit,
+    onOpenDrawer: () -> Unit = {},
     viewModel: LaundryViewModel = hiltViewModel()
 ) {
     val tab by viewModel.selectedTab.collectAsState()
-    val pile by viewModel.pile.collectAsState()
+    val pileEntries by viewModel.pileEntries.collectAsState()
     val selected by viewModel.selectedPileIds.collectAsState()
     val cycles by viewModel.activeCycles.collectAsState()
+    val threshold by viewModel.threshold.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
     var pendingCompleteCycle by remember { mutableStateOf<CycleWithItems?>(null) }
 
@@ -85,15 +90,20 @@ fun LaundryScreen(
     }
 
     Scaffold(
-        containerColor = Color(0xFFF7F5F2),
+        containerColor = MaterialTheme.colorScheme.background,
         topBar = {
             TopAppBar(
                 title = {
                     Text(
                         "Laundry",
                         style = MaterialTheme.typography.displayLarge,
-                        color = Color(0xFF1A1A1A)
+                        color = MaterialTheme.colorScheme.onBackground
                     )
+                },
+                navigationIcon = {
+                    IconButton(onClick = onOpenDrawer) {
+                        Icon(Icons.Default.Menu, contentDescription = "Menu")
+                    }
                 },
                 actions = {
                     IconButton(onClick = onOpenHistory) {
@@ -101,7 +111,7 @@ fun LaundryScreen(
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(0xFFF7F5F2)
+                    containerColor = MaterialTheme.colorScheme.background
                 )
             )
         },
@@ -130,11 +140,14 @@ fun LaundryScreen(
 
             when (tab) {
                 LaundryTab.PILE -> PileTab(
-                    items = pile,
+                    entries = pileEntries,
                     selectedIds = selected,
+                    threshold = threshold,
                     onToggle = viewModel::togglePileSelection,
                     onClearSelection = viewModel::clearPileSelection,
                     onSendToLaundry = viewModel::sendToLaundry,
+                    onIncrementThreshold = viewModel::incrementThreshold,
+                    onDecrementThreshold = viewModel::decrementThreshold,
                     modifier = Modifier
                         .weight(1f)
                         .fillMaxWidth()
@@ -180,7 +193,7 @@ private fun PillTabRow(
         modifier = Modifier
             .padding(horizontal = 20.dp)
             .fillMaxWidth()
-            .background(Color(0xFFEBE8E3), RoundedCornerShape(10.dp))
+            .background(MaterialTheme.colorScheme.surfaceVariant, RoundedCornerShape(10.dp))
             .padding(3.dp)
     ) {
         Row(modifier = Modifier.fillMaxWidth()) {
@@ -190,7 +203,7 @@ private fun PillTabRow(
                     modifier = Modifier
                         .weight(1f)
                         .clip(RoundedCornerShape(8.dp))
-                        .background(if (isSelected) Color.White else Color.Transparent)
+                        .background(if (isSelected) MaterialTheme.colorScheme.surface else Color.Transparent)
                         .clickable { onSelect(entry) }
                         .padding(vertical = 7.dp),
                     contentAlignment = Alignment.Center
@@ -199,7 +212,7 @@ private fun PillTabRow(
                         entry.label,
                         fontSize = 13.sp,
                         fontWeight = FontWeight.Medium,
-                        color = if (isSelected) Color(0xFF1A1A1A) else Color(0xFF888888)
+                        color = if (isSelected) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }
@@ -209,17 +222,25 @@ private fun PillTabRow(
 
 @Composable
 private fun PileTab(
-    items: List<ClothingItem>?,
+    entries: List<PileEntry>?,
     selectedIds: Set<Long>,
+    threshold: Int,
     onToggle: (Long) -> Unit,
     onClearSelection: () -> Unit,
     onSendToLaundry: () -> Unit,
+    onIncrementThreshold: () -> Unit,
+    onDecrementThreshold: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Column(modifier = modifier) {
+        ThresholdControl(
+            threshold = threshold,
+            onIncrement = onIncrementThreshold,
+            onDecrement = onDecrementThreshold
+        )
         when {
-            items == null -> LoadingBox(modifier = Modifier.fillMaxSize())
-            items.isEmpty() -> EmptyMessage(
+            entries == null -> LoadingBox(modifier = Modifier.fillMaxSize())
+            entries.isEmpty() -> EmptyMessage(
                 "No dirty clothes. Nice!",
                 modifier = Modifier.fillMaxSize()
             )
@@ -234,11 +255,11 @@ private fun PileTab(
                     ),
                     verticalArrangement = Arrangement.spacedBy(10.dp)
                 ) {
-                    items(items, key = { it.id }) { item ->
+                    items(entries, key = { it.item.id }) { entry ->
                         LaundryItemRow(
-                            item = item,
-                            selected = item.id in selectedIds,
-                            onToggle = { onToggle(item.id) }
+                            entry = entry,
+                            selected = entry.item.id in selectedIds,
+                            onToggle = { onToggle(entry.item.id) }
                         )
                     }
                 }
@@ -261,7 +282,7 @@ private fun PileTab(
                                 .height(52.dp),
                             shape = RoundedCornerShape(14.dp),
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color(0xFF7F77DD),
+                                containerColor = LaundryPurple,
                                 contentColor = Color.White
                             )
                         ) {
@@ -279,14 +300,49 @@ private fun PileTab(
 }
 
 @Composable
+private fun ThresholdControl(
+    threshold: Int,
+    onIncrement: () -> Unit,
+    onDecrement: () -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 20.dp, vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(
+            "Wash after",
+            fontSize = 13.sp,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+            modifier = Modifier.weight(1f)
+        )
+        IconButton(onClick = onDecrement, modifier = Modifier.size(32.dp)) {
+            Text("−", fontSize = 18.sp, color = MaterialTheme.colorScheme.onBackground)
+        }
+        Text(
+            "$threshold wear${if (threshold == 1) "" else "s"}",
+            fontSize = 13.sp,
+            fontWeight = FontWeight.Medium,
+            color = MaterialTheme.colorScheme.onBackground,
+            modifier = Modifier.padding(horizontal = 8.dp)
+        )
+        IconButton(onClick = onIncrement, modifier = Modifier.size(32.dp)) {
+            Text("+", fontSize = 18.sp, color = MaterialTheme.colorScheme.onBackground)
+        }
+    }
+}
+
+@Composable
 private fun LaundryItemRow(
-    item: ClothingItem,
+    entry: PileEntry,
     selected: Boolean,
     onToggle: () -> Unit
 ) {
+    val item = entry.item
     Card(
         shape = RoundedCornerShape(14.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         elevation = CardDefaults.cardElevation(0.dp),
         modifier = Modifier
             .fillMaxWidth()
@@ -310,22 +366,31 @@ private fun LaundryItemRow(
                     item.name,
                     fontSize = 14.sp,
                     fontWeight = FontWeight.Medium,
-                    color = Color(0xFF1A1A1A)
+                    color = MaterialTheme.colorScheme.onSurface
                 )
                 Text(
-                    "Worn ${item.lastWornDate?.formatDateShort() ?: "—"}",
+                    "Worn ${item.lastWornDate?.formatDateShort() ?: "—"} · ${item.totalWearCount}× since last wash",
                     fontSize = 12.sp,
-                    color = Color(0xFF888888),
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.padding(top = 2.dp)
                 )
+                if (entry.readyToWash) {
+                    Text(
+                        "Ready to wash",
+                        fontSize = 11.sp,
+                        fontWeight = FontWeight.Medium,
+                        color = LaundryPurple,
+                        modifier = Modifier.padding(top = 2.dp)
+                    )
+                }
             }
             Checkbox(
                 checked = selected,
                 onCheckedChange = { onToggle() },
                 colors = CheckboxDefaults.colors(
-                    checkedColor = Color(0xFF5DCAA5),
+                    checkedColor = StatusClean,
                     checkmarkColor = Color.White,
-                    uncheckedColor = Color(0xFFDDDDDD)
+                    uncheckedColor = MaterialTheme.colorScheme.outline
                 )
             )
         }
@@ -366,7 +431,7 @@ private fun CycleCard(
 ) {
     Card(
         shape = RoundedCornerShape(14.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         elevation = CardDefaults.cardElevation(0.dp),
         modifier = Modifier.fillMaxWidth()
     ) {
@@ -386,12 +451,12 @@ private fun CycleCard(
                         "Started ${cwi.cycle.startedAt.formatDateShort()}",
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Medium,
-                        color = Color(0xFF1A1A1A)
+                        color = MaterialTheme.colorScheme.onSurface
                     )
                     Text(
                         "${cwi.items.size} item${if (cwi.items.size == 1) "" else "s"}",
                         fontSize = 12.sp,
-                        color = Color(0xFF888888)
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }
@@ -409,7 +474,7 @@ private fun CycleCard(
                     Text(
                         item.name,
                         fontSize = 14.sp,
-                        color = Color(0xFF1A1A1A),
+                        color = MaterialTheme.colorScheme.onSurface,
                         modifier = Modifier.weight(1f)
                     )
                 }
@@ -421,8 +486,8 @@ private fun CycleCard(
                     .height(52.dp),
                 shape = RoundedCornerShape(14.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(0xFF1A1A1A),
-                    contentColor = Color.White
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    contentColor = MaterialTheme.colorScheme.onPrimary
                 )
             ) {
                 Text(
@@ -438,7 +503,7 @@ private fun CycleCard(
 @Composable
 private fun EmptyMessage(text: String, modifier: Modifier = Modifier) {
     Box(modifier = modifier, contentAlignment = Alignment.Center) {
-        Text(text, color = Color(0xFF888888), style = MaterialTheme.typography.bodyMedium)
+        Text(text, color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.bodyMedium)
     }
 }
 

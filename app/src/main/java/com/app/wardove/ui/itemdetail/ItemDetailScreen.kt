@@ -57,6 +57,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.data.local.entity.WearLog
+import com.app.wardove.ui.theme.StatusClean
 import com.app.wardove.ui.util.ClothingOptions
 import com.app.wardove.ui.util.formatDateOnly
 import java.io.File
@@ -76,7 +77,7 @@ fun ItemDetailScreen(
     var showDeleteDialog by remember { mutableStateOf(false) }
 
     Scaffold(
-        containerColor = Color(0xFFF7F5F2),
+        containerColor = MaterialTheme.colorScheme.background,
         topBar = {
             TopAppBar(
                 title = {},
@@ -97,7 +98,7 @@ fun ItemDetailScreen(
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color(0xFFF7F5F2)
+                    containerColor = MaterialTheme.colorScheme.background
                 )
             )
         }
@@ -165,7 +166,7 @@ private fun ItemDetailBody(
                 .fillMaxWidth()
                 .aspectRatio(1f)
                 .clip(RoundedCornerShape(16.dp))
-                .background(Color(0xFFEBE8E3))
+                .background(MaterialTheme.colorScheme.surfaceVariant)
         ) {
             AsyncImage(
                 model = File(item.imagePath),
@@ -178,7 +179,7 @@ private fun ItemDetailBody(
         Text(
             text = item.name,
             style = MaterialTheme.typography.headlineLarge,
-            color = Color(0xFF1A1A1A),
+            color = MaterialTheme.colorScheme.onBackground,
             modifier = Modifier.padding(top = 8.dp)
         )
 
@@ -203,13 +204,13 @@ private fun ItemDetailBody(
                     "Notes",
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Medium,
-                    color = Color(0xFF888888)
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 Spacer(Modifier.height(4.dp))
                 Text(
                     item.notes,
                     style = MaterialTheme.typography.bodyLarge,
-                    color = Color(0xFF1A1A1A)
+                    color = MaterialTheme.colorScheme.onBackground
                 )
             }
         }
@@ -225,9 +226,9 @@ private fun ItemDetailBody(
                     .fillMaxWidth()
                     .height(52.dp),
                 shape = RoundedCornerShape(14.dp),
-                border = BorderStroke(1.dp, Color(0xFF1A1A1A)),
+                border = BorderStroke(1.dp, MaterialTheme.colorScheme.primary),
                 colors = ButtonDefaults.outlinedButtonColors(
-                    contentColor = Color(0xFF1A1A1A)
+                    contentColor = MaterialTheme.colorScheme.primary
                 )
             ) {
                 Text(
@@ -247,8 +248,8 @@ private fun ItemDetailBody(
                     .height(52.dp),
                 shape = RoundedCornerShape(14.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(0xFF1A1A1A),
-                    contentColor = Color.White
+                    containerColor = MaterialTheme.colorScheme.primary,
+                    contentColor = MaterialTheme.colorScheme.onPrimary
                 )
             ) {
                 Text(
@@ -270,13 +271,13 @@ private fun TagsRow(item: ClothingItem) {
     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
         TagPill(
             label = item.category,
-            backgroundColor = Color(0xFFEBE8E3),
-            textColor = Color(0xFF555555)
+            backgroundColor = MaterialTheme.colorScheme.surfaceVariant,
+            textColor = MaterialTheme.colorScheme.onSurfaceVariant
         )
         TagPill(
             label = ClothingOptions.colorNameFor(item.color),
-            backgroundColor = Color(0xFF1A1A1A),
-            textColor = Color.White
+            backgroundColor = MaterialTheme.colorScheme.primary,
+            textColor = MaterialTheme.colorScheme.onPrimary
         )
     }
 }
@@ -301,19 +302,19 @@ private fun TagPill(label: String, backgroundColor: Color, textColor: Color) {
 fun StatBox(label: String, value: String, modifier: Modifier = Modifier) {
     Column(
         modifier = modifier
-            .background(Color(0xFFEBE8E3), RoundedCornerShape(12.dp))
+            .background(MaterialTheme.colorScheme.surfaceVariant, RoundedCornerShape(12.dp))
             .padding(12.dp)
     ) {
         Text(
             label,
             fontSize = 11.sp,
-            color = Color(0xFF888888)
+            color = MaterialTheme.colorScheme.onSurfaceVariant
         )
         Text(
             value,
             fontSize = 18.sp,
             fontWeight = FontWeight.Medium,
-            color = Color(0xFF1A1A1A),
+            color = MaterialTheme.colorScheme.onBackground,
             modifier = Modifier.padding(top = 2.dp)
         )
     }
@@ -326,14 +327,14 @@ private fun WearHistorySection(logs: List<WearLog>) {
             "Wear history",
             fontSize = 12.sp,
             fontWeight = FontWeight.Medium,
-            color = Color(0xFF888888),
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.padding(bottom = 4.dp)
         )
         if (logs.isEmpty()) {
             Text(
                 "No wears recorded yet.",
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color(0xFF888888)
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         } else {
             logs.forEach { log ->
@@ -346,16 +347,16 @@ private fun WearHistorySection(logs: List<WearLog>) {
                     Box(
                         modifier = Modifier
                             .size(8.dp)
-                            .background(Color(0xFF5DCAA5), CircleShape)
+                            .background(StatusClean, CircleShape)
                     )
                     Spacer(Modifier.width(10.dp))
                     Text(
                         text = log.wornDate.formatDateOnly(),
                         fontSize = 13.sp,
-                        color = Color(0xFF555555)
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
-                HorizontalDivider(color = Color(0xFFE0DDD8), thickness = 0.5.dp)
+                HorizontalDivider(color = MaterialTheme.colorScheme.outline, thickness = 0.5.dp)
             }
         }
     }

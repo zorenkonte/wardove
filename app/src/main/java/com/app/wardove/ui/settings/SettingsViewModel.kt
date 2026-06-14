@@ -1,0 +1,33 @@
+package com.app.wardove.ui.settings
+
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.app.wardove.data.settings.AppSettings
+import com.app.wardove.data.settings.SettingsRepository
+import com.app.wardove.data.settings.ThemeMode
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
+import javax.inject.Inject
+
+@HiltViewModel
+class SettingsViewModel @Inject constructor(
+    private val repo: SettingsRepository
+) : ViewModel() {
+
+    val settings: StateFlow<AppSettings> = repo.settings.stateIn(
+        scope = viewModelScope,
+        started = SharingStarted.WhileSubscribed(5_000),
+        initialValue = AppSettings.DEFAULT
+    )
+
+    fun setThemeMode(mode: ThemeMode) {
+        viewModelScope.launch { repo.setThemeMode(mode) }
+    }
+
+    fun setDynamicColor(enabled: Boolean) {
+        viewModelScope.launch { repo.setDynamicColor(enabled) }
+    }
+}

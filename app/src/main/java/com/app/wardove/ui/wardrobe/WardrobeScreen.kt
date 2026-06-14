@@ -25,6 +25,7 @@ import androidx.compose.material.icons.filled.CalendarMonth
 import androidx.compose.material.icons.filled.Checkroom
 import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.filled.LocalLaundryService
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Sort
 import androidx.compose.material3.Card
@@ -68,6 +69,10 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.data.local.entity.ClothingStatus
+import com.app.wardove.ui.theme.StatusClean
+import com.app.wardove.ui.theme.StatusLaundry
+import com.app.wardove.ui.theme.StatusWorn
+import com.app.wardove.ui.theme.textHint
 import kotlinx.coroutines.launch
 import java.io.File
 
@@ -79,6 +84,7 @@ fun WardrobeScreen(
     onOpenLaundry: () -> Unit,
     onOpenCalendar: () -> Unit,
     onOpenStats: () -> Unit,
+    onOpenDrawer: () -> Unit = {},
     snackbarMessage: String? = null,
     onSnackbarShown: () -> Unit = {},
     viewModel: WardrobeViewModel = hiltViewModel()
@@ -98,12 +104,12 @@ fun WardrobeScreen(
     }
 
     Scaffold(
-        containerColor = Color(0xFFF7F5F2),
+        containerColor = MaterialTheme.colorScheme.background,
         floatingActionButton = {
             FloatingActionButton(
                 onClick = onAddItem,
-                containerColor = Color(0xFF1A1A1A),
-                contentColor = Color.White,
+                containerColor = MaterialTheme.colorScheme.primary,
+                contentColor = MaterialTheme.colorScheme.onPrimary,
                 shape = CircleShape
             ) {
                 Icon(Icons.Default.Add, contentDescription = "Add Item")
@@ -127,7 +133,8 @@ fun WardrobeScreen(
         ) {
             WardrobeHeader(
                 itemCount = items.size,
-                onSortClick = { showSortSheet = true }
+                onSortClick = { showSortSheet = true },
+                onOpenDrawer = onOpenDrawer
             )
 
             SearchBar(
@@ -188,30 +195,37 @@ fun WardrobeScreen(
 }
 
 @Composable
-private fun WardrobeHeader(itemCount: Int, onSortClick: () -> Unit) {
+private fun WardrobeHeader(itemCount: Int, onSortClick: () -> Unit, onOpenDrawer: () -> Unit) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 20.dp, vertical = 16.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
+        IconButton(onClick = onOpenDrawer) {
+            Icon(
+                Icons.Default.Menu,
+                contentDescription = "Menu",
+                tint = MaterialTheme.colorScheme.onBackground
+            )
+        }
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 text = "Wardove",
                 style = MaterialTheme.typography.displayLarge,
-                color = Color(0xFF1A1A1A)
+                color = MaterialTheme.colorScheme.onBackground
             )
             Text(
                 text = "$itemCount items",
                 style = MaterialTheme.typography.bodyMedium,
-                color = Color(0xFF888888)
+                color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
         IconButton(onClick = onSortClick) {
             Icon(
                 Icons.Default.Sort,
                 contentDescription = "Sort",
-                tint = Color(0xFF1A1A1A)
+                tint = MaterialTheme.colorScheme.onBackground
             )
         }
     }
@@ -231,7 +245,7 @@ private fun SearchBar(
         placeholder = {
             Text(
                 "Search clothes...",
-                color = Color(0xFFAAAAAA),
+                color = MaterialTheme.colorScheme.textHint,
                 fontSize = 14.sp
             )
         },
@@ -239,7 +253,7 @@ private fun SearchBar(
             Icon(
                 Icons.Default.Search,
                 contentDescription = null,
-                tint = Color(0xFF888888)
+                tint = MaterialTheme.colorScheme.onSurfaceVariant
             )
         },
         trailingIcon = {
@@ -248,7 +262,7 @@ private fun SearchBar(
                     Icon(
                         Icons.Default.Clear,
                         contentDescription = "Clear",
-                        tint = Color(0xFF888888)
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
             }
@@ -256,15 +270,15 @@ private fun SearchBar(
         singleLine = true,
         shape = RoundedCornerShape(50.dp),
         colors = TextFieldDefaults.colors(
-            focusedContainerColor = Color(0xFFEBE8E3),
-            unfocusedContainerColor = Color(0xFFEBE8E3),
-            disabledContainerColor = Color(0xFFEBE8E3),
+            focusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+            unfocusedContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+            disabledContainerColor = MaterialTheme.colorScheme.surfaceVariant,
             focusedIndicatorColor = Color.Transparent,
             unfocusedIndicatorColor = Color.Transparent,
             disabledIndicatorColor = Color.Transparent,
-            cursorColor = Color(0xFF1A1A1A),
-            focusedTextColor = Color(0xFF1A1A1A),
-            unfocusedTextColor = Color(0xFF1A1A1A)
+            cursorColor = MaterialTheme.colorScheme.primary,
+            focusedTextColor = MaterialTheme.colorScheme.onBackground,
+            unfocusedTextColor = MaterialTheme.colorScheme.onBackground
         )
     )
 }
@@ -289,10 +303,10 @@ private fun FilterRow(
                 },
                 shape = CircleShape,
                 colors = FilterChipDefaults.filterChipColors(
-                    selectedContainerColor = Color(0xFF1A1A1A),
-                    selectedLabelColor = Color.White,
-                    containerColor = Color(0xFFEBE8E3),
-                    labelColor = Color(0xFF555555)
+                    selectedContainerColor = MaterialTheme.colorScheme.primary,
+                    selectedLabelColor = MaterialTheme.colorScheme.onPrimary,
+                    containerColor = MaterialTheme.colorScheme.surfaceVariant,
+                    labelColor = MaterialTheme.colorScheme.onSurfaceVariant
                 ),
                 border = FilterChipDefaults.filterChipBorder(
                     enabled = true,
@@ -318,7 +332,7 @@ private fun SortSheet(
     ModalBottomSheet(
         onDismissRequest = onDismiss,
         sheetState = sheetState,
-        containerColor = Color.White,
+        containerColor = MaterialTheme.colorScheme.surface,
         shape = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp)
     ) {
         Column(
@@ -329,7 +343,7 @@ private fun SortSheet(
             Text(
                 "Sort by",
                 style = MaterialTheme.typography.headlineMedium,
-                color = Color(0xFF1A1A1A),
+                color = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier.padding(bottom = 12.dp)
             )
             WardrobeSort.entries.forEach { sort ->
@@ -354,15 +368,15 @@ private fun SortSheet(
                                 .invokeOnCompletion { onSelect(sort) }
                         },
                         colors = RadioButtonDefaults.colors(
-                            selectedColor = Color(0xFF1A1A1A),
-                            unselectedColor = Color(0xFF888888)
+                            selectedColor = MaterialTheme.colorScheme.primary,
+                            unselectedColor = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     )
                     Text(
                         sort.label,
                         fontSize = 15.sp,
                         fontWeight = if (isSelected) FontWeight.Medium else FontWeight.Normal,
-                        color = if (isSelected) Color(0xFF1A1A1A) else Color(0xFF888888),
+                        color = if (isSelected) MaterialTheme.colorScheme.onBackground else MaterialTheme.colorScheme.onSurfaceVariant,
                         modifier = Modifier.padding(start = 8.dp)
                     )
                 }
@@ -381,7 +395,7 @@ private fun ClothingCard(
             .fillMaxWidth()
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(14.dp),
-        colors = CardDefaults.cardColors(containerColor = Color.White),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
         elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
     ) {
         Column {
@@ -409,17 +423,17 @@ private fun ClothingCard(
                     Text(
                         item.category,
                         style = MaterialTheme.typography.bodyMedium,
-                        color = Color(0xFF888888)
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                     Box(
                         modifier = Modifier
                             .size(8.dp)
                             .background(
                                 color = when (item.status) {
-                                    ClothingStatus.CLEAN -> Color(0xFF5DCAA5)
-                                    ClothingStatus.WORN -> Color(0xFFEF9F27)
-                                    ClothingStatus.IN_LAUNDRY -> Color(0xFF7F77DD)
-                                    else -> Color(0xFFAAAAAA)
+                                    ClothingStatus.CLEAN -> StatusClean
+                                    ClothingStatus.WORN -> StatusWorn
+                                    ClothingStatus.IN_LAUNDRY -> StatusLaundry
+                                    else -> MaterialTheme.colorScheme.textHint
                                 },
                                 shape = CircleShape
                             )
@@ -442,29 +456,29 @@ private fun EmptyState(hasQuery: Boolean, modifier: Modifier = Modifier) {
                 Icons.Default.Checkroom,
                 contentDescription = null,
                 modifier = Modifier.size(72.dp),
-                tint = Color(0xFFAAAAAA)
+                tint = MaterialTheme.colorScheme.textHint
             )
             if (hasQuery) {
                 Text(
                     "No matches.",
                     style = MaterialTheme.typography.titleMedium,
-                    color = Color(0xFF1A1A1A)
+                    color = MaterialTheme.colorScheme.onBackground
                 )
                 Text(
                     "Try a different search.",
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(0xFF888888)
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             } else {
                 Text(
                     "Your wardrobe is empty.",
                     style = MaterialTheme.typography.titleMedium,
-                    color = Color(0xFF1A1A1A)
+                    color = MaterialTheme.colorScheme.onBackground
                 )
                 Text(
                     "Tap + to add your first item.",
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color(0xFF888888)
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             }
         }
@@ -482,13 +496,13 @@ fun WardoveBottomBar(
     onSelectStats: () -> Unit
 ) {
     val itemColors = NavigationBarItemDefaults.colors(
-        selectedIconColor = Color(0xFF1A1A1A),
-        selectedTextColor = Color(0xFF1A1A1A),
-        unselectedIconColor = Color(0xFFAAAAAA),
-        unselectedTextColor = Color(0xFFAAAAAA),
+        selectedIconColor = MaterialTheme.colorScheme.onBackground,
+        selectedTextColor = MaterialTheme.colorScheme.onBackground,
+        unselectedIconColor = MaterialTheme.colorScheme.textHint,
+        unselectedTextColor = MaterialTheme.colorScheme.textHint,
         indicatorColor = Color.Transparent
     )
-    NavigationBar(containerColor = Color.White, tonalElevation = 0.dp) {
+    NavigationBar(containerColor = MaterialTheme.colorScheme.surface, tonalElevation = 0.dp) {
         NavigationBarItem(
             selected = currentRoute == WardroveBottomRoute.WARDROBE,
             onClick = onSelectWardrobe,
