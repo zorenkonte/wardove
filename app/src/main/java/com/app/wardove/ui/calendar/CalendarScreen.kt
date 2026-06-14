@@ -21,6 +21,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
@@ -62,6 +63,7 @@ fun CalendarScreen(
     onSelectWardrobe: () -> Unit,
     onSelectLaundry: () -> Unit,
     onSelectStats: () -> Unit,
+    onOpenDrawer: () -> Unit = {},
     viewModel: CalendarViewModel = hiltViewModel()
 ) {
     val selectedDate by viewModel.selectedDate.collectAsState()
@@ -101,7 +103,8 @@ fun CalendarScreen(
                         viewModel.selectDate(adjustSelection(selectedDate, target))
                     }
                 },
-                canGoNext = visibleMonth.isBefore(YearMonth.from(today))
+                canGoNext = visibleMonth.isBefore(YearMonth.from(today)),
+                onOpenDrawer = onOpenDrawer
             )
 
             WeekdayHeader()
@@ -156,7 +159,8 @@ private fun CalendarTopBar(
     month: YearMonth,
     onPrev: () -> Unit,
     onNext: () -> Unit,
-    canGoNext: Boolean
+    canGoNext: Boolean,
+    onOpenDrawer: () -> Unit
 ) {
     Row(
         modifier = Modifier
@@ -164,6 +168,13 @@ private fun CalendarTopBar(
             .padding(horizontal = 20.dp, vertical = 16.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
+        IconButton(onClick = onOpenDrawer) {
+            Icon(
+                Icons.Default.Menu,
+                contentDescription = "Menu",
+                tint = MaterialTheme.colorScheme.onBackground
+            )
+        }
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 "Calendar",
