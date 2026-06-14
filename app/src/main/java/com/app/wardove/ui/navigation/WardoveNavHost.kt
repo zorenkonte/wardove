@@ -21,6 +21,7 @@ import com.app.wardove.ui.itemdetail.ItemDetailScreen
 import com.app.wardove.ui.laundry.LaundryScreen
 import com.app.wardove.ui.settings.AboutSettingsScreen
 import com.app.wardove.ui.settings.AppearanceSettingsScreen
+import com.app.wardove.ui.update.UpdateScreen
 import com.app.wardove.ui.settings.SettingsScreen
 import com.app.wardove.ui.stats.StatsScreen
 import com.app.wardove.ui.wardrobe.WardrobeScreen
@@ -178,7 +179,20 @@ fun WardoveNavHost(
                 popEnterTransition = popEnterSlide,
                 popExitTransition = popExitSlide
             ) {
-                AboutSettingsScreen(onBack = { navController.popBackStack() })
+                AboutSettingsScreen(
+                    onBack = { navController.popBackStack() },
+                    onOpenUpdates = { navController.navigate(WardoveDestinations.UPDATE) }
+                )
+            }
+
+            composable(
+                route = WardoveDestinations.UPDATE,
+                enterTransition = enterSlide,
+                exitTransition = exitSlide,
+                popEnterTransition = popEnterSlide,
+                popExitTransition = popExitSlide
+            ) {
+                UpdateScreen(onBack = { navController.popBackStack() })
             }
         }
     }
