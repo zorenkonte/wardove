@@ -5,12 +5,17 @@ import android.net.Uri
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.automirrored.filled.OpenInNew
+import androidx.compose.material.icons.filled.Feedback
+import androidx.compose.material.icons.filled.SystemUpdate
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -23,6 +28,7 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -31,7 +37,8 @@ import com.app.wardove.BuildConfig
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AboutSettingsScreen(
-    onBack: () -> Unit
+    onBack: () -> Unit,
+    onOpenUpdates: () -> Unit
 ) {
     val context = LocalContext.current
 
@@ -71,6 +78,32 @@ fun AboutSettingsScreen(
             ) { url ->
                 context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
             }
+            HorizontalDivider(
+                color = MaterialTheme.colorScheme.outline,
+                thickness = 0.5.dp,
+                modifier = Modifier.padding(horizontal = 20.dp)
+            )
+            ChevronRow(
+                icon = Icons.Default.SystemUpdate,
+                label = "Updates",
+                subtitle = "Check for new versions",
+                onClick = onOpenUpdates
+            )
+            HorizontalDivider(
+                color = MaterialTheme.colorScheme.outline,
+                thickness = 0.5.dp,
+                modifier = Modifier.padding(horizontal = 20.dp)
+            )
+            ExternalRow(
+                icon = Icons.Default.Feedback,
+                label = "Send Feedback",
+                subtitle = "Report bugs or request features",
+                onClick = {
+                    context.startActivity(
+                        Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/zorenkonte/wardove/issues"))
+                    )
+                }
+            )
         }
     }
 }
@@ -112,6 +145,66 @@ private fun LinkRow(label: String, url: String, onOpen: (String) -> Unit) {
             color = MaterialTheme.colorScheme.onBackground,
             modifier = Modifier.weight(1f)
         )
+        Icon(
+            Icons.AutoMirrored.Filled.OpenInNew,
+            contentDescription = null,
+            tint = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+    }
+}
+
+@Composable
+private fun ChevronRow(
+    icon: ImageVector,
+    label: String,
+    subtitle: String? = null,
+    onClick: () -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick)
+            .padding(horizontal = 20.dp, vertical = 14.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Icon(icon, contentDescription = null, tint = MaterialTheme.colorScheme.onBackground)
+        Spacer(Modifier.width(16.dp))
+        Column(modifier = Modifier.weight(1f)) {
+            Text(label, fontSize = 15.sp, color = MaterialTheme.colorScheme.onBackground)
+            if (subtitle != null) {
+                Text(subtitle, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+        }
+        Icon(
+            Icons.AutoMirrored.Filled.KeyboardArrowRight,
+            contentDescription = null,
+            tint = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+    }
+}
+
+@Composable
+private fun ExternalRow(
+    icon: ImageVector,
+    label: String,
+    subtitle: String? = null,
+    onClick: () -> Unit
+) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick)
+            .padding(horizontal = 20.dp, vertical = 14.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Icon(icon, contentDescription = null, tint = MaterialTheme.colorScheme.onBackground)
+        Spacer(Modifier.width(16.dp))
+        Column(modifier = Modifier.weight(1f)) {
+            Text(label, fontSize = 15.sp, color = MaterialTheme.colorScheme.onBackground)
+            if (subtitle != null) {
+                Text(subtitle, fontSize = 12.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+        }
         Icon(
             Icons.AutoMirrored.Filled.OpenInNew,
             contentDescription = null,
