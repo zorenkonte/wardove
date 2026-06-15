@@ -20,6 +20,7 @@ import com.app.wardove.ui.history.HistoryScreen
 import com.app.wardove.ui.itemdetail.ItemDetailScreen
 import com.app.wardove.ui.laundry.LaundryScreen
 import com.app.wardove.ui.settings.AboutSettingsScreen
+import com.app.wardove.ui.settings.AppLockSettingsScreen
 import com.app.wardove.ui.settings.AppearanceSettingsScreen
 import com.app.wardove.ui.update.UpdateScreen
 import com.app.wardove.ui.settings.SettingsScreen
@@ -158,8 +159,19 @@ fun WardoveNavHost(
                 SettingsScreen(
                     onOpenDrawer = openDrawer,
                     onOpenAppearance = { navController.navigate(WardoveDestinations.SETTINGS_APPEARANCE) },
+                    onOpenAppLock = { navController.navigate(WardoveDestinations.SETTINGS_APP_LOCK) },
                     onOpenAbout = { navController.navigate(WardoveDestinations.SETTINGS_ABOUT) }
                 )
+            }
+
+            composable(
+                route = WardoveDestinations.SETTINGS_APP_LOCK,
+                enterTransition = enterSlide,
+                exitTransition = exitSlide,
+                popEnterTransition = popEnterSlide,
+                popExitTransition = popExitSlide
+            ) {
+                AppLockSettingsScreen(onBack = { navController.popBackStack() })
             }
 
             composable(

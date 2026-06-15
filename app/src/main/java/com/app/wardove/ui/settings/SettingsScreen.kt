@@ -12,6 +12,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.ColorLens
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
@@ -34,6 +35,7 @@ import androidx.compose.ui.unit.sp
 fun SettingsScreen(
     onOpenDrawer: () -> Unit = {},
     onOpenAppearance: () -> Unit,
+    onOpenAppLock: () -> Unit,
     onOpenAbout: () -> Unit
 ) {
     Scaffold(
@@ -68,6 +70,17 @@ fun SettingsScreen(
                 label = "Appearance",
                 subtitle = "Theme, colors",
                 onClick = onOpenAppearance
+            )
+            HorizontalDivider(
+                color = MaterialTheme.colorScheme.outline,
+                thickness = 0.5.dp,
+                modifier = Modifier.padding(horizontal = 20.dp)
+            )
+            ChevronRow(
+                icon = Icons.Default.Lock,
+                label = "App Lock",
+                subtitle = "Biometric protection",
+                onClick = onOpenAppLock
             )
             HorizontalDivider(
                 color = MaterialTheme.colorScheme.outline,
