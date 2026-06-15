@@ -211,6 +211,7 @@ private fun LatestReleaseCard(
     onInstall: () -> Unit,
     onResetInstall: () -> Unit
 ) {
+    val apkSize = release.assets.firstOrNull()?.size ?: 0L
     Card(
         modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
         colors = CardDefaults.cardColors(
@@ -267,6 +268,15 @@ private fun LatestReleaseCard(
                 Spacer(Modifier.height(12.dp))
                 when (installState) {
                     InstallState.Idle -> {
+                        if (apkSize > 0L) {
+                            Text(
+                                "APK · ${formatBytes(apkSize)}",
+                                fontSize = 12.sp,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                modifier = Modifier.align(Alignment.CenterHorizontally)
+                            )
+                            Spacer(Modifier.height(4.dp))
+                        }
                         Button(
                             onClick = onDownload,
                             modifier = Modifier.fillMaxWidth()
@@ -277,9 +287,16 @@ private fun LatestReleaseCard(
                         }
                     }
                     is InstallState.Downloading -> {
+                        val downloadLabel = if (apkSize > 0L) {
+                            val downloaded = formatBytes((installState.progress * apkSize).toLong())
+                            val total = formatBytes(apkSize)
+                            "Downloading… $downloaded / $total (${(installState.progress * 100).toInt()}%)"
+                        } else {
+                            "Downloading… ${(installState.progress * 100).toInt()}%"
+                        }
                         Column {
                             Text(
-                                "Downloading… ${(installState.progress * 100).toInt()}%",
+                                downloadLabel,
                                 fontSize = 13.sp,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
@@ -393,6 +410,11 @@ private fun ReleaseHistoryItem(release: GithubRelease) {
             )
         }
     }
+}
+
+private fun formatBytes(bytes: Long): String {
+    val mb = bytes / (1024.0 * 1024.0)
+    return if (mb >= 1.0) "%.1f MB".format(mb) else "%d KB".format(bytes / 1024)
 }
 
 private fun formatDate(iso: String): String = try {
