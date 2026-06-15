@@ -73,6 +73,9 @@ dependencies {
     // DataStore (preferences)
     implementation(libs.androidx.datastore.preferences)
 
+    // Biometric
+    implementation(libs.androidx.biometric)
+
     coreLibraryDesugaring(libs.desugar.jdk.libs)
 
     // CameraX

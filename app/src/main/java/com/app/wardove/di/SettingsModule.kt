@@ -9,10 +9,15 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Named
 import javax.inject.Singleton
 
 private val Context.settingsDataStore: DataStore<Preferences> by preferencesDataStore(
     name = "wardove_settings"
+)
+
+private val Context.appLockDataStore: DataStore<Preferences> by preferencesDataStore(
+    name = "wardove_app_lock"
 )
 
 @Module
@@ -24,4 +29,11 @@ object SettingsModule {
     fun provideSettingsDataStore(
         @ApplicationContext context: Context
     ): DataStore<Preferences> = context.settingsDataStore
+
+    @Provides
+    @Singleton
+    @Named("appLockDataStore")
+    fun provideAppLockDataStore(
+        @ApplicationContext context: Context
+    ): DataStore<Preferences> = context.appLockDataStore
 }
