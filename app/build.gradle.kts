@@ -76,6 +76,9 @@ dependencies {
     // Biometric
     implementation(libs.androidx.biometric)
 
+    // Splash Screen
+    implementation(libs.androidx.core.splashscreen)
+
     coreLibraryDesugaring(libs.desugar.jdk.libs)
 
     // CameraX

@@ -18,6 +18,7 @@ cameraX = "1.6.1"
 desugarJdk = "2.1.5"
 datastore = "1.1.7"
 biometric = "1.1.0"
+splashscreen = "1.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -59,6 +60,9 @@ androidx-datastore-preferences = { group = "androidx.datastore", name = "datasto
 
 # Biometric
 androidx-biometric = { group = "androidx.biometric", name = "biometric", version.ref = "biometric" }
+
+# Splash Screen
+androidx-core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "splashscreen" }
 
 # CameraX
 androidx-camera-core = { group = "androidx.camera", name = "camera-core", version.ref = "cameraX" }
