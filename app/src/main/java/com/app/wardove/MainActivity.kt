@@ -19,8 +19,10 @@ import com.app.wardove.ui.lock.LockScreen
 import com.app.wardove.ui.lock.LockViewModel
 import com.app.wardove.ui.navigation.WardoveNavHost
 import com.app.wardove.ui.theme.WardoveTheme
+import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
 
@@ -90,7 +92,7 @@ class MainActivity : FragmentActivity() {
     override fun onStart() {
         super.onStart()
         if (System.currentTimeMillis() - stopTimestamp > LOCK_GRACE_MS) {
-            lockViewModel.lock()
+            lifecycleScope.launch { lockViewModel.lockIfEnabled() }
         }
     }
 

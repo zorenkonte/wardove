@@ -1,6 +1,7 @@
 package com.app.wardove.ui.settings
 
 import androidx.biometric.BiometricManager
+import androidx.biometric.BiometricPrompt
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -25,6 +26,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.core.content.ContextCompat
+import androidx.fragment.app.FragmentActivity
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -69,6 +72,27 @@ fun AppLockSettingsScreen(
                 BiometricManager.BIOMETRIC_SUCCESS
     }
 
+    val activity = context as FragmentActivity
+    val biometricPrompt = remember {
+        BiometricPrompt(
+            activity,
+            ContextCompat.getMainExecutor(activity),
+            object : BiometricPrompt.AuthenticationCallback() {
+                override fun onAuthenticationSucceeded(result: BiometricPrompt.AuthenticationResult) {
+                    viewModel.setAppLockEnabled(true)
+                }
+            }
+        )
+    }
+    val enablePromptInfo = remember {
+        BiometricPrompt.PromptInfo.Builder()
+            .setTitle("Enable App Lock")
+            .setSubtitle("Confirm your biometric credential")
+            .setNegativeButtonText("Cancel")
+            .setAllowedAuthenticators(BiometricManager.Authenticators.BIOMETRIC_WEAK)
+            .build()
+    }
+
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
         topBar = {
@@ -98,7 +122,13 @@ fun AppLockSettingsScreen(
                     "No biometric hardware available",
                 checked = isEnabled,
                 enabled = biometricAvailable,
-                onCheckedChange = viewModel::setAppLockEnabled
+                onCheckedChange = { enabled ->
+                    if (enabled) {
+                        biometricPrompt.authenticate(enablePromptInfo)
+                    } else {
+                        viewModel.setAppLockEnabled(false)
+                    }
+                }
             )
         }
     }

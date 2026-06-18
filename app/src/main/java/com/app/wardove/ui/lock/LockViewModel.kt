@@ -8,6 +8,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.stateIn
 import javax.inject.Inject
 
@@ -24,12 +25,19 @@ class LockViewModel @Inject constructor(
 
     val isAppLockEnabled: StateFlow<Boolean> = repo.isAppLockEnabled.stateIn(
         scope = viewModelScope,
-        started = SharingStarted.WhileSubscribed(5_000),
+        started = SharingStarted.Eagerly,
         initialValue = false
     )
 
     fun lock() {
         if (isAppLockEnabled.value) {
+            _isLocked.value = true
+            _biometricRequest.value = true
+        }
+    }
+
+    suspend fun lockIfEnabled() {
+        if (repo.isAppLockEnabled.first()) {
             _isLocked.value = true
             _biometricRequest.value = true
         }

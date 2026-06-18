@@ -48,6 +48,7 @@ class UpdateViewModel @Inject constructor(
     private var activeDownloadId: Long = -1L
 
     init {
+        repository.deleteApkFile()
         load()
     }
 
@@ -91,15 +92,18 @@ class UpdateViewModel @Inject constructor(
         }
     }
 
-    fun install() {
+    fun buildInstallIntent(): Intent {
         val uri = repository.getInstallUri()
-        val intent = Intent(Intent.ACTION_INSTALL_PACKAGE).apply {
+        return Intent(Intent.ACTION_INSTALL_PACKAGE).apply {
             data = uri
-            flags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_ACTIVITY_NEW_TASK
+            flags = Intent.FLAG_GRANT_READ_URI_PERMISSION
             putExtra(Intent.EXTRA_NOT_UNKNOWN_SOURCE, true)
             putExtra(Intent.EXTRA_INSTALLER_PACKAGE_NAME, context.packageName)
         }
-        context.startActivity(intent)
+    }
+
+    fun deleteApk() {
+        repository.deleteApkFile()
     }
 
     fun resetInstall() {

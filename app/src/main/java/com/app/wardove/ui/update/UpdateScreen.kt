@@ -37,6 +37,9 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
+import android.app.Activity
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -60,6 +63,14 @@ fun UpdateScreen(
 ) {
     val releasesState by viewModel.releasesState.collectAsState()
     val installState by viewModel.installState.collectAsState()
+
+    val installLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        viewModel.deleteApk()
+        viewModel.resetInstall()
+        if (result.resultCode == Activity.RESULT_OK) viewModel.load()
+    }
 
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
@@ -135,7 +146,7 @@ fun UpdateScreen(
                                     val apk = latest.assets.firstOrNull()
                                     if (apk != null) viewModel.startDownload(apk)
                                 },
-                                onInstall = viewModel::install,
+                                onInstall = { installLauncher.launch(viewModel.buildInstallIntent()) },
                                 onResetInstall = viewModel::resetInstall
                             )
                             Spacer(Modifier.height(12.dp))

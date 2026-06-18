@@ -65,6 +65,10 @@ class UpdateRepository @Inject constructor(
         return FileProvider.getUriForFile(context, "${context.packageName}.fileprovider", file)
     }
 
+    fun deleteApkFile() {
+        File(context.getExternalFilesDir(null), APK_FILENAME).delete()
+    }
+
     private fun downloadManager() = context.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
 
     private fun parseReleases(json: String): List<GithubRelease> {
