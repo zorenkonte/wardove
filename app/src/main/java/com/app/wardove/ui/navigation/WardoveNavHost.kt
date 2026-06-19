@@ -139,7 +139,13 @@ fun WardoveNavHost(
                 )
             }
 
-            composable(WardoveDestinations.HISTORY) {
+            composable(
+                route = WardoveDestinations.HISTORY,
+                enterTransition = enterSlide,
+                exitTransition = exitSlide,
+                popEnterTransition = popEnterSlide,
+                popExitTransition = popExitSlide
+            ) {
                 HistoryScreen(onBack = { navController.popBackStack() })
             }
 
