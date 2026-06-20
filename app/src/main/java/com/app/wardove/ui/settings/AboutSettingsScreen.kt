@@ -144,7 +144,7 @@ fun AboutSettingsScreen(
                 )
                 ChevronRow(
                     icon = Lucide.ScrollText,
-                    label = "Open Source Licenses",
+                    label = "Licenses",
                     subtitle = "Libraries used in this app",
                     onClick = onOpenLicenses
                 )

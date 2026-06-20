@@ -11,19 +11,27 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import com.app.wardove.R
 import com.composables.icons.lucide.ArrowLeft
 import com.composables.icons.lucide.Lucide
 import com.mikepenz.aboutlibraries.ui.compose.m3.LibrariesContainer
+import com.mikepenz.aboutlibraries.ui.compose.produceLibraries
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LicensesSettingsScreen(onBack: () -> Unit) {
+    val context = LocalContext.current
+    val libraries by produceLibraries {
+        context.resources.openRawResource(R.raw.aboutlibraries).bufferedReader().readText()
+    }
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
         topBar = {
             TopAppBar(
-                title = { Text("Open Source Licenses") },
+                title = { Text("Licenses") },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(Lucide.ArrowLeft, contentDescription = "Back")
@@ -36,6 +44,7 @@ fun LicensesSettingsScreen(onBack: () -> Unit) {
         }
     ) { padding ->
         LibrariesContainer(
+            libraries,
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
