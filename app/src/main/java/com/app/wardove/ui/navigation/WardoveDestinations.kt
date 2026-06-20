@@ -10,6 +10,7 @@ object WardoveDestinations {
     const val SETTINGS_APPEARANCE = "settings_appearance"
     const val SETTINGS_APP_LOCK = "settings_app_lock"
     const val SETTINGS_ABOUT = "settings_about"
+    const val SETTINGS_LICENSES = "settings_licenses"
     const val UPDATE = "update"
 
     const val ADD_ITEM_ROUTE = "add_item?itemId={itemId}"

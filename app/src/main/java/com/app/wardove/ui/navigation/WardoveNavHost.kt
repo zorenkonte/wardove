@@ -24,6 +24,7 @@ import com.app.wardove.ui.laundry.LaundryScreen
 import com.app.wardove.ui.settings.AboutSettingsScreen
 import com.app.wardove.ui.settings.AppLockSettingsScreen
 import com.app.wardove.ui.settings.AppearanceSettingsScreen
+import com.app.wardove.ui.settings.LicensesSettingsScreen
 import com.app.wardove.ui.update.UpdateScreen
 import com.app.wardove.ui.settings.SettingsScreen
 import com.app.wardove.ui.stats.StatsScreen
@@ -213,8 +214,19 @@ fun WardoveNavHost(
             ) {
                 AboutSettingsScreen(
                     onBack = { navController.popBackStack() },
-                    onOpenUpdates = { navController.navigate(WardoveDestinations.UPDATE) }
+                    onOpenUpdates = { navController.navigate(WardoveDestinations.UPDATE) },
+                    onOpenLicenses = { navController.navigate(WardoveDestinations.SETTINGS_LICENSES) }
                 )
+            }
+
+            composable(
+                route = WardoveDestinations.SETTINGS_LICENSES,
+                enterTransition = enterSlide,
+                exitTransition = exitSlide,
+                popEnterTransition = popEnterSlide,
+                popExitTransition = popExitSlide
+            ) {
+                LicensesSettingsScreen(onBack = { navController.popBackStack() })
             }
 
             composable(

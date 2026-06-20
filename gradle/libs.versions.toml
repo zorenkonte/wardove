@@ -20,6 +20,8 @@ datastore = "1.1.7"
 biometric = "1.1.0"
 splashscreen = "1.0.1"
 lucide = "1.1.0"
+browser = "1.10.0"
+aboutlibraries = "11.2.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -77,8 +79,15 @@ desugar-jdk-libs = { group = "com.android.tools", name = "desugar_jdk_libs", ver
 # Lucide icons (Compose)
 icons-lucide = { group = "com.composables", name = "icons-lucide", version.ref = "lucide" }
 
+# Custom Tabs (in-app browser)
+androidx-browser = { group = "androidx.browser", name = "browser", version.ref = "browser" }
+
+# AboutLibraries (OSS license screen)
+aboutlibraries-compose-m3 = { group = "com.mikepenz", name = "aboutlibraries-compose-m3", version.ref = "aboutlibraries" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+aboutlibraries = { id = "com.mikepenz.aboutlibraries.plugin", version.ref = "aboutlibraries" }

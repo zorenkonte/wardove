@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt.android)
+    alias(libs.plugins.aboutlibraries)
 }
 
 android {
@@ -110,6 +111,12 @@ dependencies {
     implementation(libs.androidx.core.splashscreen)
 
     coreLibraryDesugaring(libs.desugar.jdk.libs)
+
+    // Custom Tabs (in-app browser)
+    implementation(libs.androidx.browser)
+
+    // AboutLibraries (OSS license screen)
+    implementation(libs.aboutlibraries.compose.m3)
 
     // CameraX
     implementation(libs.androidx.camera.core)

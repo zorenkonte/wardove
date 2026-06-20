@@ -1,7 +1,5 @@
 package com.app.wardove.ui.settings
 
-import android.content.Intent
-import android.net.Uri
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -29,19 +27,24 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.app.wardove.BuildConfig
+import com.app.wardove.ui.util.openCustomTab
 import com.composables.icons.lucide.ArrowLeft
 import com.composables.icons.lucide.ChevronRight
 import com.composables.icons.lucide.Download
 import com.composables.icons.lucide.ExternalLink
+import com.composables.icons.lucide.FileText
 import com.composables.icons.lucide.Lucide
 import com.composables.icons.lucide.MessageSquare
 import com.composables.icons.lucide.RefreshCw
+import com.composables.icons.lucide.ScrollText
+import com.composables.icons.lucide.Shield
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AboutSettingsScreen(
     onBack: () -> Unit,
-    onOpenUpdates: () -> Unit
+    onOpenUpdates: () -> Unit,
+    onOpenLicenses: () -> Unit
 ) {
     val context = LocalContext.current
 
@@ -82,7 +85,7 @@ fun AboutSettingsScreen(
                     label = "Source code",
                     url = "https://github.com/zorenkonte/wardove"
                 ) { url ->
-                    context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+                    openCustomTab(context, url)
                 }
                 HorizontalDivider(
                     color = MaterialTheme.colorScheme.outline,
@@ -105,10 +108,45 @@ fun AboutSettingsScreen(
                     label = "Send Feedback",
                     subtitle = "Report bugs or request features",
                     onClick = {
-                        context.startActivity(
-                            Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/zorenkonte/wardove/issues"))
-                        )
+                        openCustomTab(context, "https://github.com/zorenkonte/wardove/issues")
                     }
+                )
+                HorizontalDivider(
+                    color = MaterialTheme.colorScheme.outline,
+                    thickness = 0.5.dp,
+                    modifier = Modifier.padding(horizontal = 16.dp)
+                )
+                ExternalRow(
+                    icon = Lucide.Shield,
+                    label = "Privacy Policy",
+                    subtitle = "How your data is handled",
+                    onClick = {
+                        openCustomTab(context, "https://zorenkonte.github.io/wardove/privacy")
+                    }
+                )
+                HorizontalDivider(
+                    color = MaterialTheme.colorScheme.outline,
+                    thickness = 0.5.dp,
+                    modifier = Modifier.padding(horizontal = 16.dp)
+                )
+                ExternalRow(
+                    icon = Lucide.FileText,
+                    label = "Terms of Service",
+                    subtitle = "Terms for using this app",
+                    onClick = {
+                        openCustomTab(context, "https://zorenkonte.github.io/wardove/terms")
+                    }
+                )
+                HorizontalDivider(
+                    color = MaterialTheme.colorScheme.outline,
+                    thickness = 0.5.dp,
+                    modifier = Modifier.padding(horizontal = 16.dp)
+                )
+                ChevronRow(
+                    icon = Lucide.ScrollText,
+                    label = "Open Source Licenses",
+                    subtitle = "Libraries used in this app",
+                    onClick = onOpenLicenses
                 )
             }
         }
