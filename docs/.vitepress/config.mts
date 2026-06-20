@@ -7,7 +7,7 @@ export default defineConfig({
   lastUpdated: true,
 
   themeConfig: {
-    logo: { light: '/logo.svg', dark: '/logo.svg', alt: 'Wardove' },
+    logo: '/logo.png',
 
     nav: [
       { text: 'Guide', link: '/guide/getting-started', activeMatch: '/guide/' },
