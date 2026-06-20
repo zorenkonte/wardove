@@ -28,6 +28,7 @@ import com.app.wardove.ui.settings.AppLockSettingsScreen
 import com.app.wardove.ui.settings.AppearanceSettingsScreen
 import com.app.wardove.ui.settings.DiagnosticsSettingsScreen
 import com.app.wardove.ui.settings.LicensesSettingsScreen
+import com.app.wardove.ui.settings.NotificationSettingsScreen
 import com.app.wardove.ui.update.UpdateScreen
 import com.app.wardove.ui.settings.SettingsScreen
 import com.app.wardove.ui.stats.StatsScreen
@@ -195,6 +196,7 @@ fun WardoveNavHost(
                     onOpenDrawer = openDrawer,
                     onOpenAppearance = { navController.navigate(WardoveDestinations.SETTINGS_APPEARANCE) },
                     onOpenAppLock = { navController.navigate(WardoveDestinations.SETTINGS_APP_LOCK) },
+                    onOpenNotifications = { navController.navigate(WardoveDestinations.SETTINGS_NOTIFICATIONS) },
                     onOpenAbout = { navController.navigate(WardoveDestinations.SETTINGS_ABOUT) },
                     onOpenDiagnostics = { navController.navigate(WardoveDestinations.SETTINGS_DIAGNOSTICS) }
                 )
@@ -242,6 +244,16 @@ fun WardoveNavHost(
                 popExitTransition = popExitSlide
             ) {
                 LicensesSettingsScreen(onBack = { navController.popBackStack() })
+            }
+
+            composable(
+                route = WardoveDestinations.SETTINGS_NOTIFICATIONS,
+                enterTransition = enterSlide,
+                exitTransition = exitSlide,
+                popEnterTransition = popEnterSlide,
+                popExitTransition = popExitSlide
+            ) {
+                NotificationSettingsScreen(onBack = { navController.popBackStack() })
             }
 
             composable(

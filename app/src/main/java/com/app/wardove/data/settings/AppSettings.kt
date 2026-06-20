@@ -3,7 +3,8 @@ package com.app.wardove.data.settings
 data class AppSettings(
     val themeMode: ThemeMode = ThemeMode.SYSTEM,
     val dynamicColor: Boolean = false,
-    val laundryThreshold: Int = DEFAULT_LAUNDRY_THRESHOLD
+    val laundryThreshold: Int = DEFAULT_LAUNDRY_THRESHOLD,
+    val updateNotificationsEnabled: Boolean = true
 ) {
     companion object {
         const val DEFAULT_LAUNDRY_THRESHOLD = 3

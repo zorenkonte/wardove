@@ -30,4 +30,8 @@ class SettingsViewModel @Inject constructor(
     fun setDynamicColor(enabled: Boolean) {
         viewModelScope.launch { repo.setDynamicColor(enabled) }
     }
+
+    fun setUpdateNotificationsEnabled(enabled: Boolean) {
+        viewModelScope.launch { repo.setUpdateNotificationsEnabled(enabled) }
+    }
 }

@@ -33,6 +33,11 @@ class UpdateCheckWorker @AssistedInject constructor(
 
     override suspend fun doWork(): Result {
         return try {
+            // Respect user's notification preference — skip silently if disabled
+            if (!settingsRepository.settings.first().updateNotificationsEnabled) {
+                return Result.success()
+            }
+
             val releases = updateRepository.fetchReleases()
             val latest = latestStableRelease(releases) ?: return Result.success()
 

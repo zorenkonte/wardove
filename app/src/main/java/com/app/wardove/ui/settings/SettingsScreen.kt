@@ -24,6 +24,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.composables.icons.lucide.Bell
 import com.composables.icons.lucide.ChevronRight
 import com.composables.icons.lucide.Info
 import com.composables.icons.lucide.Lock
@@ -38,6 +39,7 @@ fun SettingsScreen(
     onOpenDrawer: () -> Unit = {},
     onOpenAppearance: () -> Unit,
     onOpenAppLock: () -> Unit,
+    onOpenNotifications: () -> Unit,
     onOpenAbout: () -> Unit,
     onOpenDiagnostics: () -> Unit
 ) {
@@ -100,6 +102,17 @@ fun SettingsScreen(
                     label = "App Lock",
                     subtitle = "Biometric protection",
                     onClick = onOpenAppLock
+                )
+                HorizontalDivider(
+                    color = MaterialTheme.colorScheme.outline,
+                    thickness = 0.5.dp,
+                    modifier = Modifier.padding(start = 56.dp)
+                )
+                ChevronRow(
+                    icon = Lucide.Bell,
+                    label = "Notifications",
+                    subtitle = "App updates",
+                    onClick = onOpenNotifications
                 )
                 HorizontalDivider(
                     color = MaterialTheme.colorScheme.outline,
