@@ -41,7 +41,23 @@ jobs:
       - name: Decode keystore
         # Only available for pushes (secrets are not exposed to fork PRs).
         if: github.event_name == 'push'
-        run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > "$RUNNER_TEMP/release.jks"
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+        run: |
+          if [ -z "$KEYSTORE_BASE64" ]; then
+            echo "::error::KEYSTORE_BASE64 secret is empty. Add the four signing secrets (see CLAUDE.md → Versioning & Release Signing)."
+            exit 1
+          fi
+          echo "$KEYSTORE_BASE64" | base64 --decode > "$RUNNER_TEMP/release.jks"
+          # Fail fast with a clear message if the keystore is corrupt (e.g. the
+          # base64 secret was truncated on paste) instead of dying later at
+          # packageRelease with an opaque ASN.1/keytool error.
+          if ! keytool -list -keystore "$RUNNER_TEMP/release.jks" \
+              -storepass "$KEYSTORE_PASSWORD" >/dev/null 2>&1; then
+            echo "::error::Decoded keystore is invalid or the password is wrong. Re-set KEYSTORE_BASE64 from the exact base64 (no truncation) and verify KEYSTORE_PASSWORD."
+            exit 1
+          fi
 
       - name: Build release APK
         run: ./gradlew assembleRelease -PbuildNumber=${{ github.run_number }}
