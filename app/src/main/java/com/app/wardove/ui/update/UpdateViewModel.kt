@@ -63,11 +63,8 @@ class UpdateViewModel @Inject constructor(
         }
     }
 
-    fun isUpdateAvailable(latestTag: String): Boolean {
-        val current = BuildConfig.VERSION_NAME.trimStart('v')
-        val latest = latestTag.trimStart('v')
-        return latest != current
-    }
+    fun isUpdateAvailable(latestTag: String): Boolean =
+        compareVersions(latestTag, BuildConfig.VERSION_NAME) > 0
 
     fun startDownload(asset: GithubAsset) {
         if (_installState.value is InstallState.Downloading) return
@@ -117,4 +114,22 @@ class UpdateViewModel @Inject constructor(
         }
         context.startActivity(intent)
     }
+}
+
+/**
+ * Compares two dotted version strings (e.g. "2.0.24" vs "v1.0.23") numerically,
+ * tolerating a leading 'v' and differing segment counts. Non-numeric segments are
+ * treated as 0. Returns >0 if [a] is newer than [b], <0 if older, 0 if equal.
+ */
+fun compareVersions(a: String, b: String): Int {
+    fun parts(v: String) = v.trim().trimStart('v', 'V')
+        .split('.')
+        .map { segment -> segment.takeWhile { it.isDigit() }.toIntOrNull() ?: 0 }
+    val pa = parts(a)
+    val pb = parts(b)
+    for (i in 0 until maxOf(pa.size, pb.size)) {
+        val diff = (pa.getOrElse(i) { 0 }) - (pb.getOrElse(i) { 0 })
+        if (diff != 0) return diff
+    }
+    return 0
 }

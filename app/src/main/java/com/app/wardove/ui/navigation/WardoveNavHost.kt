@@ -1,5 +1,6 @@
 package com.app.wardove.ui.navigation
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.rememberDrawerState
@@ -7,6 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -41,6 +43,12 @@ fun WardoveNavHost(
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
 
+    // When the drawer is open, the back button should close it instead of
+    // falling through to the NavHost (which would pop the back stack).
+    BackHandler(enabled = drawerState.isOpen) {
+        scope.launch { drawerState.close() }
+    }
+
     ModalNavigationDrawer(
         drawerState = drawerState,
         gesturesEnabled = drawerState.isOpen,
@@ -49,8 +57,14 @@ fun WardoveNavHost(
                 currentRoute = currentRoute,
                 onNavigate = { route ->
                     navController.navigate(route) {
-                        popUpTo(navController.graph.id) { inclusive = true }
+                        // Pop up to the start destination (not the whole graph) so the
+                        // back button returns to Wardrobe instead of exiting the app,
+                        // and preserve each top-level screen's state across switches.
+                        popUpTo(navController.graph.findStartDestination().id) {
+                            saveState = true
+                        }
                         launchSingleTop = true
+                        restoreState = true
                     }
                 },
                 onClose = { scope.launch { drawerState.close() } }

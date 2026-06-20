@@ -17,16 +17,45 @@ android {
         applicationId = "com.app.wardove"
         minSdk = 24
         targetSdk = 36
-        versionCode = 3
-        versionName = "2.0.0"
+
+        // Version is derived from a single source of truth: `appVersionBase` in
+        // gradle.properties plus the CI build number (passed as -PbuildNumber).
+        // This guarantees the APK's embedded version matches the published tag.
+        val buildNumber = (project.findProperty("buildNumber") as String?)?.toIntOrNull() ?: 0
+        val versionBase = project.property("appVersionBase") as String
+        versionCode = 100 + buildNumber
+        versionName = "$versionBase.$buildNumber"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    // Path to the stable release keystore, exported by CI. Blank/unset (local
+    // builds and fork PRs) means "not available" → fall back to debug signing.
+    val releaseKeystorePath = System.getenv("KEYSTORE_PATH")?.takeUnless { it.isBlank() }
+
+    signingConfigs {
+        create("release") {
+            if (releaseKeystorePath != null) {
+                storeFile = file(releaseKeystorePath)
+                storePassword = System.getenv("KEYSTORE_PASSWORD")
+                keyAlias = System.getenv("KEY_ALIAS")
+                keyPassword = System.getenv("KEY_PASSWORD")
+            }
+        }
     }
 
     buildTypes {
         release {
             optimization {
                 enable = false
+            }
+            // Sign release builds with the stable keystore when available so
+            // in-app updates can install over a previous release; otherwise use
+            // the debug key so local release builds still work.
+            signingConfig = if (releaseKeystorePath != null) {
+                signingConfigs.getByName("release")
+            } else {
+                signingConfigs.getByName("debug")
             }
         }
     }

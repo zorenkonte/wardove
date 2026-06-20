@@ -123,7 +123,12 @@ fun UpdateScreen(
 
             is ReleasesState.Success -> {
                 val releases = state.releases
-                val latest = releases.firstOrNull { !it.prerelease }
+                // Pick the highest-version stable release rather than the most
+                // recently published one, so an older-dated-but-higher tag wins.
+                val latest = releases
+                    .filter { !it.prerelease }
+                    .maxWithOrNull { a, b -> compareVersions(a.tagName, b.tagName) }
+                val history = releases.filter { it != latest }
 
                 LazyColumn(
                     modifier = Modifier.fillMaxSize().padding(padding),
@@ -160,7 +165,7 @@ fun UpdateScreen(
                     }
 
                     // Release history
-                    if (releases.size > 1) {
+                    if (history.isNotEmpty()) {
                         item {
                             Text(
                                 "Release History",
@@ -170,7 +175,7 @@ fun UpdateScreen(
                                 modifier = Modifier.padding(horizontal = 20.dp, vertical = 4.dp)
                             )
                         }
-                        items(releases.drop(1)) { release ->
+                        items(history) { release ->
                             ReleaseHistoryItem(release = release)
                             HorizontalDivider(
                                 color = MaterialTheme.colorScheme.outline,
