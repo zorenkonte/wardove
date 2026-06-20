@@ -1,7 +1,9 @@
 package com.app.wardove.ui.wardrobe
 
+import androidx.annotation.StringRes
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.data.local.entity.ClothingStatus
 import com.app.wardove.data.repository.ClothingRepository
@@ -14,18 +16,18 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 import javax.inject.Inject
 
-enum class WardrobeFilter(val label: String, val status: String?) {
-    ALL("All", null),
-    CLEAN("Clean", ClothingStatus.CLEAN),
-    WORN("Worn", ClothingStatus.WORN),
-    IN_LAUNDRY("In Laundry", ClothingStatus.IN_LAUNDRY)
+enum class WardrobeFilter(@StringRes val labelResId: Int, val status: String?) {
+    ALL(R.string.filter_all, null),
+    CLEAN(R.string.filter_clean, ClothingStatus.CLEAN),
+    WORN(R.string.filter_worn, ClothingStatus.WORN),
+    IN_LAUNDRY(R.string.filter_in_laundry, ClothingStatus.IN_LAUNDRY)
 }
 
-enum class WardrobeSort(val label: String) {
-    RECENTLY_WORN("Recently worn"),
-    ALPHABETICAL("Alphabetical"),
-    MOST_WORN("Most worn"),
-    RECENTLY_ADDED("Recently added")
+enum class WardrobeSort(@StringRes val labelResId: Int) {
+    RECENTLY_WORN(R.string.sort_recently_worn),
+    ALPHABETICAL(R.string.sort_alphabetical),
+    MOST_WORN(R.string.sort_most_worn),
+    RECENTLY_ADDED(R.string.sort_recently_added)
 }
 
 @HiltViewModel

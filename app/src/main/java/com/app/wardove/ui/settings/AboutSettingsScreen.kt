@@ -24,9 +24,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.app.wardove.BuildConfig
+import com.app.wardove.R
 import com.app.wardove.ui.util.openCustomTab
 import com.composables.icons.lucide.ArrowLeft
 import com.composables.icons.lucide.ChevronRight
@@ -52,10 +54,10 @@ fun AboutSettingsScreen(
         containerColor = MaterialTheme.colorScheme.background,
         topBar = {
             TopAppBar(
-                title = { Text("About") },
+                title = { Text(stringResource(R.string.about_title)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Lucide.ArrowLeft, contentDescription = "Back")
+                        Icon(Lucide.ArrowLeft, contentDescription = stringResource(R.string.action_back))
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -73,7 +75,7 @@ fun AboutSettingsScreen(
         ) {
             SettingsCard {
                 InfoRow(
-                    label = "Version",
+                    label = stringResource(R.string.about_version_label),
                     value = "${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})"
                 )
                 HorizontalDivider(
@@ -82,7 +84,7 @@ fun AboutSettingsScreen(
                     modifier = Modifier.padding(horizontal = 16.dp)
                 )
                 LinkRow(
-                    label = "Source code",
+                    label = stringResource(R.string.about_source_code),
                     url = "https://github.com/zorenkonte/wardove"
                 ) { url ->
                     openCustomTab(context, url)
@@ -94,8 +96,8 @@ fun AboutSettingsScreen(
                 )
                 ChevronRow(
                     icon = Lucide.Download,
-                    label = "Updates",
-                    subtitle = "Check for new versions",
+                    label = stringResource(R.string.about_updates_label),
+                    subtitle = stringResource(R.string.about_updates_subtitle),
                     onClick = onOpenUpdates
                 )
                 HorizontalDivider(
@@ -105,8 +107,8 @@ fun AboutSettingsScreen(
                 )
                 ExternalRow(
                     icon = Lucide.MessageSquare,
-                    label = "Send Feedback",
-                    subtitle = "Report bugs or request features",
+                    label = stringResource(R.string.about_feedback_label),
+                    subtitle = stringResource(R.string.about_feedback_subtitle),
                     onClick = {
                         openCustomTab(context, "https://github.com/zorenkonte/wardove/issues")
                     }
@@ -118,8 +120,8 @@ fun AboutSettingsScreen(
                 )
                 ExternalRow(
                     icon = Lucide.Shield,
-                    label = "Privacy Policy",
-                    subtitle = "How your data is handled",
+                    label = stringResource(R.string.about_privacy_label),
+                    subtitle = stringResource(R.string.about_privacy_subtitle),
                     onClick = {
                         openCustomTab(context, "https://zorenkonte.github.io/wardove/privacy")
                     }
@@ -131,8 +133,8 @@ fun AboutSettingsScreen(
                 )
                 ExternalRow(
                     icon = Lucide.FileText,
-                    label = "Terms of Service",
-                    subtitle = "Terms for using this app",
+                    label = stringResource(R.string.about_terms_label),
+                    subtitle = stringResource(R.string.about_terms_subtitle),
                     onClick = {
                         openCustomTab(context, "https://zorenkonte.github.io/wardove/terms")
                     }
@@ -144,8 +146,8 @@ fun AboutSettingsScreen(
                 )
                 ChevronRow(
                     icon = Lucide.ScrollText,
-                    label = "Licenses",
-                    subtitle = "Libraries used in this app",
+                    label = stringResource(R.string.about_licenses_label),
+                    subtitle = stringResource(R.string.about_licenses_subtitle),
                     onClick = onOpenLicenses
                 )
             }

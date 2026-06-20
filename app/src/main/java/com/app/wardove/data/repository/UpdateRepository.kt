@@ -4,6 +4,7 @@ import android.app.DownloadManager
 import android.content.Context
 import android.net.Uri
 import androidx.core.content.FileProvider
+import com.app.wardove.R
 import com.app.wardove.data.model.GithubAsset
 import com.app.wardove.data.model.GithubRelease
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -38,8 +39,8 @@ class UpdateRepository @Inject constructor(
 
     fun enqueueDownload(asset: GithubAsset): Long {
         val request = DownloadManager.Request(Uri.parse(asset.browserDownloadUrl))
-            .setTitle("Wardove Update")
-            .setDescription("Downloading ${asset.name}")
+            .setTitle(context.getString(R.string.download_manager_title))
+            .setDescription(context.getString(R.string.download_manager_description, asset.name))
             .setDestinationInExternalFilesDir(context, null, APK_FILENAME)
             .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
         return downloadManager().enqueue(request)

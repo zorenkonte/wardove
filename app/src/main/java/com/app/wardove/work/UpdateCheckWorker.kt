@@ -79,8 +79,8 @@ class UpdateCheckWorker @AssistedInject constructor(
 
         val notification = NotificationCompat.Builder(appContext, WardoveApplication.CHANNEL_ID)
             .setSmallIcon(R.drawable.ic_notification)
-            .setContentTitle("Update available")
-            .setContentText("Wardove $tagName is ready to install")
+            .setContentTitle(appContext.getString(R.string.notification_update_title))
+            .setContentText(appContext.getString(R.string.notification_update_text, tagName))
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
             .setAutoCancel(true)
             .setContentIntent(pendingIntent)

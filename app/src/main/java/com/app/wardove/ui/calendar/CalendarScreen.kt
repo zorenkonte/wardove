@@ -41,11 +41,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
+import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.ui.theme.StatusClean
 import com.app.wardove.ui.theme.textHint
@@ -76,7 +78,7 @@ fun CalendarScreen(
                 .padding(padding)
         ) {
             LargeTitleHeader(
-                title = "Calendar",
+                title = stringResource(R.string.nav_calendar),
                 onOpenDrawer = onOpenDrawer,
                 subtitle = "${visibleMonth.month.getDisplayName(TextStyle.FULL, Locale.getDefault())} ${visibleMonth.year}",
                 actions = {
@@ -88,7 +90,7 @@ fun CalendarScreen(
                     }) {
                         Icon(
                             Lucide.ChevronLeft,
-                            contentDescription = "Previous month",
+                            contentDescription = stringResource(R.string.calendar_prev_month),
                             tint = MaterialTheme.colorScheme.onBackground
                         )
                     }
@@ -104,7 +106,7 @@ fun CalendarScreen(
                     ) {
                         Icon(
                             Lucide.ChevronRight,
-                            contentDescription = "Next month",
+                            contentDescription = stringResource(R.string.calendar_next_month),
                             tint = if (canGoNext) MaterialTheme.colorScheme.onBackground
                                    else MaterialTheme.colorScheme.textHint
                         )
@@ -140,7 +142,7 @@ fun CalendarScreen(
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
-                        "Nothing worn on this day",
+                        stringResource(R.string.calendar_nothing_worn),
                         color = MaterialTheme.colorScheme.textHint,
                         style = MaterialTheme.typography.bodyMedium
                     )
@@ -159,11 +161,17 @@ fun CalendarScreen(
     }
 }
 
-
-private val weekdayLabels = listOf("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat")
-
 @Composable
 private fun WeekdayHeader() {
+    val weekdayLabels = listOf(
+        stringResource(R.string.weekday_sun),
+        stringResource(R.string.weekday_mon),
+        stringResource(R.string.weekday_tue),
+        stringResource(R.string.weekday_wed),
+        stringResource(R.string.weekday_thu),
+        stringResource(R.string.weekday_fri),
+        stringResource(R.string.weekday_sat)
+    )
     Row(
         modifier = Modifier
             .fillMaxWidth()

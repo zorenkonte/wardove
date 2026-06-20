@@ -25,10 +25,12 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.app.wardove.R
 import com.composables.icons.lucide.ArrowLeft
 import com.composables.icons.lucide.Lucide
 
@@ -44,10 +46,10 @@ fun NotificationSettingsScreen(
         containerColor = MaterialTheme.colorScheme.background,
         topBar = {
             TopAppBar(
-                title = { Text("Notifications") },
+                title = { Text(stringResource(R.string.settings_notifications_title)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Lucide.ArrowLeft, contentDescription = "Back")
+                        Icon(Lucide.ArrowLeft, contentDescription = stringResource(R.string.action_back))
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -67,10 +69,10 @@ fun NotificationSettingsScreen(
             Spacer(Modifier.height(4.dp))
 
             SettingsCard {
-                NotificationSectionLabel("Notifications")
+                NotificationSectionLabel(stringResource(R.string.notification_section_header))
                 NotificationSwitchRow(
-                    label = "App updates",
-                    subtitle = "Notify when a new version is available",
+                    label = stringResource(R.string.notification_updates_label),
+                    subtitle = stringResource(R.string.notification_updates_subtitle),
                     checked = settings.updateNotificationsEnabled,
                     onCheckedChange = viewModel::setUpdateNotificationsEnabled
                 )

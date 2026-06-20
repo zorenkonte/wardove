@@ -1,7 +1,10 @@
 package com.app.wardove.ui.laundry
 
+import android.content.Context
+import androidx.annotation.StringRes
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.data.local.entity.LaundryCycle
 import com.app.wardove.data.repository.ClothingRepository
@@ -9,6 +12,7 @@ import com.app.wardove.data.repository.LaundryRepository
 import com.app.wardove.data.settings.AppSettings
 import com.app.wardove.data.settings.SettingsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -27,9 +31,9 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-enum class LaundryTab(val label: String) {
-    PILE("Pile"),
-    WASHING("Washing")
+enum class LaundryTab(@StringRes val labelResId: Int) {
+    PILE(R.string.laundry_tab_pile),
+    WASHING(R.string.laundry_tab_washing)
 }
 
 data class CycleWithItems(
@@ -47,7 +51,8 @@ data class PileEntry(
 class LaundryViewModel @Inject constructor(
     clothingRepository: ClothingRepository,
     private val laundryRepository: LaundryRepository,
-    private val settingsRepository: SettingsRepository
+    private val settingsRepository: SettingsRepository,
+    @ApplicationContext private val context: Context
 ) : ViewModel() {
 
     private val _selectedTab = MutableStateFlow(LaundryTab.PILE)
@@ -129,7 +134,7 @@ class LaundryViewModel @Inject constructor(
             val count = ids.size
             _selectedPileIds.value = emptySet()
             _selectedTab.value = LaundryTab.WASHING
-            _messages.tryEmit("Sent $count item${if (count == 1) "" else "s"} to laundry")
+            _messages.tryEmit(context.resources.getQuantityString(R.plurals.laundry_sent_message, count, count))
         }
     }
 
@@ -138,7 +143,7 @@ class LaundryViewModel @Inject constructor(
             val items = activeCycles.value?.firstOrNull { it.cycle.id == cycleId }?.items
             val count = items?.size ?: 0
             laundryRepository.completeCycle(cycleId)
-            _messages.tryEmit("Marked $count item${if (count == 1) "" else "s"} as clean")
+            _messages.tryEmit(context.resources.getQuantityString(R.plurals.laundry_marked_clean_message, count, count))
         }
     }
 

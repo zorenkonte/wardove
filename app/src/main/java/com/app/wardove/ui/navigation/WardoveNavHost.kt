@@ -17,6 +17,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import androidx.compose.ui.res.stringResource
+import com.app.wardove.R
 import com.app.wardove.work.UpdateCheckWorker
 import com.app.wardove.ui.additem.AddItemScreen
 import com.app.wardove.ui.calendar.CalendarScreen
@@ -125,11 +127,12 @@ fun WardoveNavHost(
                 popEnterTransition = popEnterSlide,
                 popExitTransition = popExitSlide
             ) {
+                val itemSavedMsg = stringResource(R.string.item_saved)
                 AddItemScreen(
                     onSaved = {
                         navController.previousBackStackEntry
                             ?.savedStateHandle
-                            ?.set(SNACKBAR_KEY, "Item saved")
+                            ?.set(SNACKBAR_KEY, itemSavedMsg)
                         navController.popBackStack()
                     },
                     onCancel = { navController.popBackStack() }
@@ -147,6 +150,7 @@ fun WardoveNavHost(
                 popExitTransition = popExitSlide
             ) { backStackEntry ->
                 val itemId = backStackEntry.arguments?.getLong(WardoveDestinations.ITEM_DETAIL_ARG) ?: 0L
+                val itemDeletedMsg = stringResource(R.string.item_deleted)
                 ItemDetailScreen(
                     itemId = itemId,
                     onBack = { navController.popBackStack() },
@@ -156,7 +160,7 @@ fun WardoveNavHost(
                     onDeleted = {
                         navController.previousBackStackEntry
                             ?.savedStateHandle
-                            ?.set(SNACKBAR_KEY, "Item deleted")
+                            ?.set(SNACKBAR_KEY, itemDeletedMsg)
                         navController.popBackStack()
                     }
                 )

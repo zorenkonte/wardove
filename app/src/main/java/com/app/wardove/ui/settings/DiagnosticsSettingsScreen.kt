@@ -40,10 +40,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.app.wardove.R
 import com.composables.icons.lucide.ArrowLeft
 import com.composables.icons.lucide.Download
 import com.composables.icons.lucide.Lucide
@@ -81,15 +83,15 @@ fun DiagnosticsSettingsScreen(
         snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             TopAppBar(
-                title = { Text("Diagnostics") },
+                title = { Text(stringResource(R.string.settings_diagnostics_title)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Lucide.ArrowLeft, contentDescription = "Back")
+                        Icon(Lucide.ArrowLeft, contentDescription = stringResource(R.string.action_back))
                     }
                 },
                 actions = {
                     IconButton(onClick = { viewModel.refresh() }) {
-                        Icon(Lucide.RefreshCw, contentDescription = "Refresh logs")
+                        Icon(Lucide.RefreshCw, contentDescription = stringResource(R.string.diagnostics_action_refresh))
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -115,13 +117,13 @@ fun DiagnosticsSettingsScreen(
                         verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(
-                            "Log Preview",
+                            stringResource(R.string.diagnostics_log_preview_header),
                             fontSize = 13.sp,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                             modifier = Modifier.weight(1f)
                         )
                         Text(
-                            "${logText.lines().size} lines",
+                            stringResource(R.string.diagnostics_log_lines, logText.lines().size),
                             fontSize = 12.sp,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
@@ -140,7 +142,7 @@ fun DiagnosticsSettingsScreen(
                     ) {
                         if (logText.isEmpty()) {
                             Text(
-                                "No log entries yet.",
+                                stringResource(R.string.diagnostics_log_empty),
                                 fontSize = 13.sp,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 fontFamily = FontFamily.Monospace
@@ -175,7 +177,7 @@ fun DiagnosticsSettingsScreen(
                     ) {
                         Icon(Lucide.Trash2, contentDescription = null)
                         Spacer(Modifier.width(6.dp))
-                        Text("Clear")
+                        Text(stringResource(R.string.diagnostics_action_clear))
                     }
                     Button(
                         onClick = {
@@ -187,15 +189,14 @@ fun DiagnosticsSettingsScreen(
                     ) {
                         Icon(Lucide.Download, contentDescription = null)
                         Spacer(Modifier.width(6.dp))
-                        Text("Export")
+                        Text(stringResource(R.string.diagnostics_action_export))
                     }
                 }
             }
 
             // Help text
             Text(
-                "Export saves the log file to a location you choose. " +
-                "Share it with the developer to help diagnose issues.",
+                stringResource(R.string.diagnostics_help_text),
                 fontSize = 12.sp,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.padding(horizontal = 4.dp)
@@ -206,8 +207,8 @@ fun DiagnosticsSettingsScreen(
     if (showClearDialog) {
         AlertDialog(
             onDismissRequest = { showClearDialog = false },
-            title = { Text("Clear logs?") },
-            text = { Text("All stored diagnostic log entries will be permanently deleted.") },
+            title = { Text(stringResource(R.string.diagnostics_clear_dialog_title)) },
+            text = { Text(stringResource(R.string.diagnostics_clear_dialog_body)) },
             confirmButton = {
                 TextButton(
                     onClick = {
@@ -217,10 +218,12 @@ fun DiagnosticsSettingsScreen(
                     colors = ButtonDefaults.textButtonColors(
                         contentColor = MaterialTheme.colorScheme.error
                     )
-                ) { Text("Clear") }
+                ) { Text(stringResource(R.string.diagnostics_action_clear)) }
             },
             dismissButton = {
-                TextButton(onClick = { showClearDialog = false }) { Text("Cancel") }
+                TextButton(onClick = { showClearDialog = false }) {
+                    Text(stringResource(R.string.action_cancel))
+                }
             }
         )
     }

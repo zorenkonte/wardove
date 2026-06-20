@@ -22,8 +22,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.app.wardove.R
 import com.composables.icons.lucide.Bell
 import com.composables.icons.lucide.ChevronRight
 import com.composables.icons.lucide.Info
@@ -49,7 +51,7 @@ fun SettingsScreen(
             CenterAlignedTopAppBar(
                 title = {
                     Text(
-                        "Settings",
+                        stringResource(R.string.settings_title),
                         style = MaterialTheme.typography.titleLarge,
                         color = MaterialTheme.colorScheme.onBackground
                     )
@@ -58,7 +60,7 @@ fun SettingsScreen(
                     IconButton(onClick = onOpenDrawer) {
                         Icon(
                             Lucide.Menu,
-                            contentDescription = "Menu",
+                            contentDescription = stringResource(R.string.action_menu),
                             tint = MaterialTheme.colorScheme.onBackground
                         )
                     }
@@ -67,7 +69,7 @@ fun SettingsScreen(
                     IconButton(onClick = onOpenAbout) {
                         Icon(
                             Lucide.Info,
-                            contentDescription = "About",
+                            contentDescription = stringResource(R.string.action_about),
                             tint = MaterialTheme.colorScheme.onBackground
                         )
                     }
@@ -88,8 +90,8 @@ fun SettingsScreen(
             SettingsCard {
                 ChevronRow(
                     icon = Lucide.Palette,
-                    label = "Appearance",
-                    subtitle = "Theme, colors",
+                    label = stringResource(R.string.settings_appearance_title),
+                    subtitle = stringResource(R.string.settings_appearance_subtitle),
                     onClick = onOpenAppearance
                 )
                 HorizontalDivider(
@@ -99,8 +101,8 @@ fun SettingsScreen(
                 )
                 ChevronRow(
                     icon = Lucide.Lock,
-                    label = "App Lock",
-                    subtitle = "Biometric protection",
+                    label = stringResource(R.string.settings_applock_title),
+                    subtitle = stringResource(R.string.settings_applock_subtitle),
                     onClick = onOpenAppLock
                 )
                 HorizontalDivider(
@@ -110,8 +112,8 @@ fun SettingsScreen(
                 )
                 ChevronRow(
                     icon = Lucide.Bell,
-                    label = "Notifications",
-                    subtitle = "App updates",
+                    label = stringResource(R.string.settings_notifications_title),
+                    subtitle = stringResource(R.string.settings_notifications_subtitle),
                     onClick = onOpenNotifications
                 )
                 HorizontalDivider(
@@ -121,8 +123,8 @@ fun SettingsScreen(
                 )
                 ChevronRow(
                     icon = Lucide.ScrollText,
-                    label = "Diagnostics",
-                    subtitle = "Share app logs with developers",
+                    label = stringResource(R.string.settings_diagnostics_title),
+                    subtitle = stringResource(R.string.settings_diagnostics_subtitle),
                     onClick = onOpenDiagnostics
                 )
             }

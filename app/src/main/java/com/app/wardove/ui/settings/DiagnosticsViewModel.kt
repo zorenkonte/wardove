@@ -1,10 +1,13 @@
 package com.app.wardove.ui.settings
 
+import android.content.Context
 import android.net.Uri
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.app.wardove.R
 import com.app.wardove.data.log.DiagnosticsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -13,7 +16,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class DiagnosticsViewModel @Inject constructor(
-    private val repository: DiagnosticsRepository
+    private val repository: DiagnosticsRepository,
+    @ApplicationContext private val context: Context
 ) : ViewModel() {
 
     private val _logText = MutableStateFlow("")
@@ -35,8 +39,8 @@ class DiagnosticsViewModel @Inject constructor(
     fun export(uri: Uri) {
         viewModelScope.launch {
             runCatching { repository.exportTo(uri) }
-                .onSuccess { _message.value = "Log exported successfully" }
-                .onFailure { _message.value = "Export failed: ${it.message}" }
+                .onSuccess { _message.value = context.getString(R.string.diagnostics_message_exported) }
+                .onFailure { _message.value = context.getString(R.string.diagnostics_message_export_failed, it.message) }
         }
     }
 
@@ -44,7 +48,7 @@ class DiagnosticsViewModel @Inject constructor(
         viewModelScope.launch {
             repository.clear()
             _logText.value = ""
-            _message.value = "Logs cleared"
+            _message.value = context.getString(R.string.diagnostics_message_cleared)
         }
     }
 

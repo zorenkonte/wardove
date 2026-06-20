@@ -57,11 +57,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
+import com.app.wardove.R
 import com.app.wardove.ui.util.ClothingOptions
 import com.app.wardove.ui.util.parseHexColor
 import java.io.File
@@ -87,10 +89,15 @@ fun AddItemScreen(
         containerColor = MaterialTheme.colorScheme.background,
         topBar = {
             TopAppBar(
-                title = { Text(if (state.isEditing) "Edit Item" else "Add Item") },
+                title = {
+                    Text(
+                        if (state.isEditing) stringResource(R.string.edit_item_title)
+                        else stringResource(R.string.add_item_title)
+                    )
+                },
                 navigationIcon = {
                     IconButton(onClick = onCancel) {
-                        Icon(Lucide.ArrowLeft, contentDescription = "Back")
+                        Icon(Lucide.ArrowLeft, contentDescription = stringResource(R.string.action_back))
                     }
                 },
                 actions = {
@@ -98,7 +105,7 @@ fun AddItemScreen(
                         onClick = { viewModel.save(onSaved) },
                         enabled = state.canSave
                     ) {
-                        Icon(Lucide.Check, contentDescription = "Save")
+                        Icon(Lucide.Check, contentDescription = stringResource(R.string.action_save))
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -132,7 +139,7 @@ fun AddItemScreen(
             OutlinedTextField(
                 value = state.name,
                 onValueChange = viewModel::setName,
-                label = { Text("Name") },
+                label = { Text(stringResource(R.string.add_item_field_name)) },
                 singleLine = true,
                 modifier = Modifier.fillMaxWidth()
             )
@@ -143,7 +150,7 @@ fun AddItemScreen(
             )
 
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                Text("Color", style = MaterialTheme.typography.labelLarge)
+                Text(stringResource(R.string.add_item_field_color), style = MaterialTheme.typography.labelLarge)
                 ColorGrid(
                     selected = state.color,
                     onSelect = viewModel::setColor
@@ -154,7 +161,10 @@ fun AddItemScreen(
                 value = state.price,
                 onValueChange = viewModel::setPrice,
                 label = {
-                    Text("Price (optional)", color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    Text(
+                        stringResource(R.string.add_item_field_price),
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
                 },
                 prefix = { Text("₱ ") },
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
@@ -165,7 +175,7 @@ fun AddItemScreen(
             OutlinedTextField(
                 value = state.notes,
                 onValueChange = viewModel::setNotes,
-                label = { Text("Notes (optional)") },
+                label = { Text(stringResource(R.string.add_item_field_notes)) },
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(120.dp)
@@ -179,19 +189,26 @@ fun AddItemScreen(
                 if (state.isSaving) {
                     CircularProgressIndicator(modifier = Modifier.size(20.dp))
                 } else {
-                    Text(if (state.isEditing) "Update" else "Save")
+                    Text(
+                        if (state.isEditing) stringResource(R.string.add_item_action_update)
+                        else stringResource(R.string.add_item_action_save)
+                    )
                 }
             }
 
+            val photoLabel    = stringResource(R.string.add_item_required_photo)
+            val nameLabel     = stringResource(R.string.add_item_required_name)
+            val categoryLabel = stringResource(R.string.add_item_required_category)
+            val colorLabel    = stringResource(R.string.add_item_required_color)
             val missing = buildList {
-                if (state.imagePath.isNullOrBlank()) add("photo")
-                if (state.name.isBlank()) add("name")
-                if (state.category.isBlank()) add("category")
-                if (state.color.isBlank()) add("color")
+                if (state.imagePath.isNullOrBlank()) add(photoLabel)
+                if (state.name.isBlank()) add(nameLabel)
+                if (state.category.isBlank()) add(categoryLabel)
+                if (state.color.isBlank()) add(colorLabel)
             }
             if (missing.isNotEmpty()) {
                 Text(
-                    text = "Required: ${missing.joinToString(", ")}",
+                    text = stringResource(R.string.add_item_required_prefix, missing.joinToString(", ")),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.error
                 )
@@ -225,7 +242,7 @@ private fun ImagePicker(
             )
         } else {
             Text(
-                "No photo selected",
+                stringResource(R.string.add_item_no_photo),
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
@@ -240,7 +257,7 @@ private fun ImagePicker(
         ) {
             Icon(Lucide.Camera, contentDescription = null)
             Spacer(Modifier.size(8.dp))
-            Text("Camera")
+            Text(stringResource(R.string.add_item_action_camera))
         }
         OutlinedButton(
             onClick = onGallery,
@@ -248,7 +265,7 @@ private fun ImagePicker(
         ) {
             Icon(Lucide.Images, contentDescription = null)
             Spacer(Modifier.size(8.dp))
-            Text("Gallery")
+            Text(stringResource(R.string.add_item_action_gallery))
         }
     }
 }
@@ -272,12 +289,15 @@ private fun CategoryDropdown(
             ) {
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
-                        "Category",
+                        stringResource(R.string.add_item_field_category),
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
+                    val displaySelected = ClothingOptions.categoryResId(selected)
+                        ?.let { stringResource(it) }
+                        ?: selected
                     Text(
-                        selected.ifBlank { "Select category" },
+                        displaySelected.ifBlank { stringResource(R.string.add_item_select_category) },
                         style = MaterialTheme.typography.bodyLarge,
                         color = if (selected.isBlank())
                             MaterialTheme.colorScheme.onSurfaceVariant
@@ -293,10 +313,13 @@ private fun CategoryDropdown(
             modifier = Modifier.fillMaxWidth(0.9f)
         ) {
             ClothingOptions.categories.forEach { cat ->
+                val displayName = ClothingOptions.categoryResId(cat)
+                    ?.let { stringResource(it) }
+                    ?: cat
                 DropdownMenuItem(
-                    text = { Text(cat) },
+                    text = { Text(displayName) },
                     onClick = {
-                        onSelect(cat)
+                        onSelect(cat)  // store the DB key (EN string)
                         expanded = false
                     }
                 )

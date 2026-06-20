@@ -59,17 +59,21 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.pluralStringResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
+import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.data.local.entity.ClothingStatus
 import com.app.wardove.ui.theme.StatusClean
 import com.app.wardove.ui.theme.StatusLaundry
 import com.app.wardove.ui.theme.StatusWorn
 import com.app.wardove.ui.theme.textHint
+import com.app.wardove.ui.util.ClothingOptions
 import kotlinx.coroutines.launch
 import java.io.File
 
@@ -106,7 +110,7 @@ fun WardrobeScreen(
                 contentColor = MaterialTheme.colorScheme.onPrimary,
                 shape = CircleShape
             ) {
-                Icon(Lucide.Plus, contentDescription = "Add Item")
+                Icon(Lucide.Plus, contentDescription = stringResource(R.string.action_add_item))
             }
         },
         snackbarHost = { SnackbarHost(snackbarHostState) }
@@ -117,14 +121,14 @@ fun WardrobeScreen(
                 .padding(padding)
         ) {
             LargeTitleHeader(
-                title = "Wardove",
+                title = stringResource(R.string.nav_wardrobe),
                 onOpenDrawer = onOpenDrawer,
-                subtitle = "${items.size} items",
+                subtitle = pluralStringResource(R.plurals.wardrobe_item_count, items.size, items.size),
                 actions = {
                     IconButton(onClick = { showSortSheet = true }) {
                         Icon(
                             Lucide.ArrowUpDown,
-                            contentDescription = "Sort",
+                            contentDescription = stringResource(R.string.action_sort),
                             tint = MaterialTheme.colorScheme.onBackground
                         )
                     }
@@ -202,7 +206,7 @@ private fun SearchBar(
         modifier = modifier,
         placeholder = {
             Text(
-                "Search clothes...",
+                stringResource(R.string.wardrobe_search_hint),
                 color = MaterialTheme.colorScheme.textHint,
                 fontSize = 14.sp
             )
@@ -219,7 +223,7 @@ private fun SearchBar(
                 IconButton(onClick = { onQueryChange("") }) {
                     Icon(
                         Lucide.X,
-                        contentDescription = "Clear",
+                        contentDescription = stringResource(R.string.wardrobe_search_clear),
                         tint = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
@@ -257,7 +261,7 @@ private fun FilterRow(
                 selected = isSelected,
                 onClick = { onSelect(f) },
                 label = {
-                    Text(f.label, fontSize = 12.sp, fontWeight = FontWeight.Medium)
+                    Text(stringResource(f.labelResId), fontSize = 12.sp, fontWeight = FontWeight.Medium)
                 },
                 shape = CircleShape,
                 colors = FilterChipDefaults.filterChipColors(
@@ -299,7 +303,7 @@ private fun SortSheet(
                 .padding(horizontal = 20.dp, vertical = 8.dp)
         ) {
             Text(
-                "Sort by",
+                stringResource(R.string.wardrobe_sort_title),
                 style = MaterialTheme.typography.headlineMedium,
                 color = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier.padding(bottom = 12.dp)
@@ -331,7 +335,7 @@ private fun SortSheet(
                         )
                     )
                     Text(
-                        sort.label,
+                        stringResource(sort.labelResId),
                         fontSize = 15.sp,
                         fontWeight = if (isSelected) FontWeight.Medium else FontWeight.Normal,
                         color = if (isSelected) MaterialTheme.colorScheme.onBackground else MaterialTheme.colorScheme.onSurfaceVariant,
@@ -379,7 +383,9 @@ private fun ClothingCard(
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(
-                        item.category,
+                        ClothingOptions.categoryResId(item.category)
+                            ?.let { stringResource(it) }
+                            ?: item.category,
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -418,23 +424,23 @@ private fun EmptyState(hasQuery: Boolean, modifier: Modifier = Modifier) {
             )
             if (hasQuery) {
                 Text(
-                    "No matches.",
+                    stringResource(R.string.wardrobe_no_matches_title),
                     style = MaterialTheme.typography.titleMedium,
                     color = MaterialTheme.colorScheme.onBackground
                 )
                 Text(
-                    "Try a different search.",
+                    stringResource(R.string.wardrobe_no_matches_body),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
             } else {
                 Text(
-                    "Your wardrobe is empty.",
+                    stringResource(R.string.wardrobe_empty_title),
                     style = MaterialTheme.typography.titleMedium,
                     color = MaterialTheme.colorScheme.onBackground
                 )
                 Text(
-                    "Tap + to add your first item.",
+                    stringResource(R.string.wardrobe_empty_body),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -442,4 +448,3 @@ private fun EmptyState(hasQuery: Boolean, modifier: Modifier = Modifier) {
         }
     }
 }
-

@@ -14,6 +14,7 @@ import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import com.app.wardove.work.UpdateCheckWorker
 import com.app.wardove.BuildConfig
+import com.app.wardove.R
 import com.app.wardove.data.log.DiagnosticsRepository
 import com.app.wardove.data.log.FileLoggingTree
 import com.app.wardove.data.log.installCrashHandler
@@ -49,10 +50,10 @@ class WardoveApplication : Application(), Configuration.Provider {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
                 CHANNEL_ID,
-                "App updates",
+                getString(R.string.notification_channel_updates_name),
                 NotificationManager.IMPORTANCE_DEFAULT
             ).apply {
-                description = "Notifies when a new version of Wardove is available"
+                description = getString(R.string.notification_channel_updates_description)
             }
             val nm = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             nm.createNotificationChannel(channel)

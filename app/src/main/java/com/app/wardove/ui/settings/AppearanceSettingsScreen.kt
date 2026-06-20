@@ -30,10 +30,12 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.app.wardove.R
 import com.app.wardove.data.settings.ThemeMode
 import com.composables.icons.lucide.ArrowLeft
 import com.composables.icons.lucide.Lucide
@@ -50,10 +52,10 @@ fun AppearanceSettingsScreen(
         containerColor = MaterialTheme.colorScheme.background,
         topBar = {
             TopAppBar(
-                title = { Text("Appearance") },
+                title = { Text(stringResource(R.string.settings_appearance_title)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Lucide.ArrowLeft, contentDescription = "Back")
+                        Icon(Lucide.ArrowLeft, contentDescription = stringResource(R.string.action_back))
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -73,13 +75,13 @@ fun AppearanceSettingsScreen(
             Spacer(Modifier.height(4.dp))
 
             SettingsCard {
-                SectionLabel("Theme")
+                SectionLabel(stringResource(R.string.appearance_theme_label))
                 ThemeMode.entries.forEachIndexed { index, mode ->
                     RadioRow(
                         label = when (mode) {
-                            ThemeMode.SYSTEM -> "System default"
-                            ThemeMode.LIGHT -> "Light"
-                            ThemeMode.DARK -> "Dark"
+                            ThemeMode.SYSTEM -> stringResource(R.string.appearance_theme_system)
+                            ThemeMode.LIGHT  -> stringResource(R.string.appearance_theme_light)
+                            ThemeMode.DARK   -> stringResource(R.string.appearance_theme_dark)
                         },
                         selected = settings.themeMode == mode,
                         onClick = { viewModel.setThemeMode(mode) }
@@ -97,8 +99,8 @@ fun AppearanceSettingsScreen(
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 SettingsCard {
                     SwitchRow(
-                        label = "Dynamic color (Material You)",
-                        subtitle = "Uses your wallpaper colors",
+                        label = stringResource(R.string.appearance_dynamic_color_label),
+                        subtitle = stringResource(R.string.appearance_dynamic_color_subtitle),
                         checked = settings.dynamicColor,
                         onCheckedChange = viewModel::setDynamicColor
                     )

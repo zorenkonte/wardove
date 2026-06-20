@@ -39,11 +39,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.pluralStringResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
+import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.data.local.entity.LaundryCycle
 import java.io.File
@@ -65,10 +68,10 @@ fun HistoryScreen(
         containerColor = MaterialTheme.colorScheme.background,
         topBar = {
             TopAppBar(
-                title = { Text("Laundry History") },
+                title = { Text(stringResource(R.string.history_title)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Lucide.ArrowLeft, contentDescription = "Back")
+                        Icon(Lucide.ArrowLeft, contentDescription = stringResource(R.string.action_back))
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -103,13 +106,13 @@ fun HistoryScreen(
                 )
                 Spacer(Modifier.height(16.dp))
                 Text(
-                    "No laundry cycles yet",
+                    stringResource(R.string.history_empty_title),
                     style = MaterialTheme.typography.titleMedium,
                     color = MaterialTheme.colorScheme.onSurface
                 )
                 Spacer(Modifier.height(8.dp))
                 Text(
-                    "Completed wash cycles will appear here.",
+                    stringResource(R.string.history_empty_body),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     textAlign = TextAlign.Center
@@ -163,7 +166,7 @@ private fun CycleRow(
                         fontWeight = FontWeight.SemiBold
                     )
                     Text(
-                        "${cycle.itemCount} item${if (cycle.itemCount == 1) "" else "s"}",
+                        pluralStringResource(R.plurals.history_item_count, cycle.itemCount, cycle.itemCount),
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -180,7 +183,7 @@ private fun CycleRow(
                 ) {
                     if (items.isEmpty()) {
                         Text(
-                            "No items found for this cycle.",
+                            stringResource(R.string.history_no_items),
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )

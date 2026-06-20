@@ -1,5 +1,6 @@
 package com.app.wardove.ui.navigation
 
+import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -14,8 +15,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.app.wardove.R
 import com.composables.icons.lucide.ChartBar
 import com.composables.icons.lucide.Calendar
 import com.composables.icons.lucide.History
@@ -24,18 +27,18 @@ import com.composables.icons.lucide.Settings
 import com.composables.icons.lucide.Shirt
 import com.composables.icons.lucide.WashingMachine
 
-private data class DrawerItem(val route: String, val label: String, val icon: ImageVector)
+private data class DrawerItem(val route: String, @StringRes val labelResId: Int, val icon: ImageVector)
 
 private val mainItems = listOf(
-    DrawerItem(WardoveDestinations.WARDROBE, "Wardrobe", Lucide.Shirt),
-    DrawerItem(WardoveDestinations.LAUNDRY, "Laundry", Lucide.WashingMachine),
-    DrawerItem(WardoveDestinations.CALENDAR, "Calendar", Lucide.Calendar),
-    DrawerItem(WardoveDestinations.STATS, "Stats", Lucide.ChartBar),
+    DrawerItem(WardoveDestinations.WARDROBE, R.string.nav_wardrobe, Lucide.Shirt),
+    DrawerItem(WardoveDestinations.LAUNDRY,  R.string.nav_laundry,  Lucide.WashingMachine),
+    DrawerItem(WardoveDestinations.CALENDAR, R.string.nav_calendar, Lucide.Calendar),
+    DrawerItem(WardoveDestinations.STATS,    R.string.nav_stats,    Lucide.ChartBar),
 )
 
 private val utilityItems = listOf(
-    DrawerItem(WardoveDestinations.HISTORY, "History", Lucide.History),
-    DrawerItem(WardoveDestinations.SETTINGS, "Settings", Lucide.Settings),
+    DrawerItem(WardoveDestinations.HISTORY,  R.string.nav_history,  Lucide.History),
+    DrawerItem(WardoveDestinations.SETTINGS, R.string.nav_settings, Lucide.Settings),
 )
 
 @Composable
@@ -59,7 +62,7 @@ fun WardoveDrawerContent(
         Spacer(Modifier.height(16.dp))
 
         Text(
-            "Wardove",
+            stringResource(R.string.app_name),
             style = MaterialTheme.typography.headlineMedium,
             fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.onBackground,
@@ -71,7 +74,7 @@ fun WardoveDrawerContent(
         mainItems.forEach { item ->
             NavigationDrawerItem(
                 icon = { Icon(item.icon, contentDescription = null) },
-                label = { Text(item.label) },
+                label = { Text(stringResource(item.labelResId)) },
                 selected = currentRoute == item.route,
                 onClick = {
                     onClose()
@@ -91,7 +94,7 @@ fun WardoveDrawerContent(
         utilityItems.forEach { item ->
             NavigationDrawerItem(
                 icon = { Icon(item.icon, contentDescription = null) },
-                label = { Text(item.label) },
+                label = { Text(stringResource(item.labelResId)) },
                 selected = currentRoute == item.route,
                 onClick = {
                     onClose()

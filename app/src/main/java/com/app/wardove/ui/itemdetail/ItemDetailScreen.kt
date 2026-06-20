@@ -50,11 +50,13 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
+import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.data.local.entity.WearLog
 import com.app.wardove.ui.theme.StatusClean
@@ -83,18 +85,18 @@ fun ItemDetailScreen(
                 title = {},
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Lucide.ArrowLeft, contentDescription = "Back")
+                        Icon(Lucide.ArrowLeft, contentDescription = stringResource(R.string.action_back))
                     }
                 },
                 actions = {
                     IconButton(onClick = { onEdit(itemId) }, enabled = item != null) {
-                        Icon(Lucide.Pencil, contentDescription = "Edit")
+                        Icon(Lucide.Pencil, contentDescription = stringResource(R.string.action_edit))
                     }
                     IconButton(
                         onClick = { showDeleteDialog = true },
                         enabled = item != null
                     ) {
-                        Icon(Lucide.Trash2, contentDescription = "Delete")
+                        Icon(Lucide.Trash2, contentDescription = stringResource(R.string.action_delete))
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -129,18 +131,20 @@ fun ItemDetailScreen(
     if (showDeleteDialog) {
         AlertDialog(
             onDismissRequest = { showDeleteDialog = false },
-            title = { Text("Delete this item?") },
-            text = { Text("This cannot be undone.") },
+            title = { Text(stringResource(R.string.item_detail_delete_title)) },
+            text = { Text(stringResource(R.string.item_detail_delete_body)) },
             confirmButton = {
                 TextButton(
                     onClick = {
                         showDeleteDialog = false
                         viewModel.delete(onDeleted)
                     }
-                ) { Text("Delete") }
+                ) { Text(stringResource(R.string.action_delete)) }
             },
             dismissButton = {
-                TextButton(onClick = { showDeleteDialog = false }) { Text("Cancel") }
+                TextButton(onClick = { showDeleteDialog = false }) {
+                    Text(stringResource(R.string.action_cancel))
+                }
             }
         )
     }
@@ -187,13 +191,14 @@ private fun ItemDetailBody(
 
         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
             StatBox(
-                label = "Times worn",
+                label = stringResource(R.string.item_detail_stat_times_worn),
                 value = "${item.totalWearCount}",
                 modifier = Modifier.weight(1f)
             )
             StatBox(
-                label = "Last worn",
-                value = item.lastWornDate?.formatDateOnly() ?: "Never",
+                label = stringResource(R.string.item_detail_stat_last_worn),
+                value = item.lastWornDate?.formatDateOnly()
+                    ?: stringResource(R.string.item_detail_last_worn_never),
                 modifier = Modifier.weight(1f)
             )
         }
@@ -201,7 +206,7 @@ private fun ItemDetailBody(
         if (!item.notes.isNullOrBlank()) {
             Column {
                 Text(
-                    "Notes",
+                    stringResource(R.string.item_detail_notes_label),
                     fontSize = 12.sp,
                     fontWeight = FontWeight.Medium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
@@ -232,7 +237,7 @@ private fun ItemDetailBody(
                 )
             ) {
                 Text(
-                    "Worn today • Undo",
+                    stringResource(R.string.item_detail_action_worn_undo),
                     fontSize = 15.sp,
                     fontWeight = FontWeight.Medium
                 )
@@ -253,7 +258,7 @@ private fun ItemDetailBody(
                 )
             ) {
                 Text(
-                    "Wear Today",
+                    stringResource(R.string.item_detail_action_wear_today),
                     fontSize = 15.sp,
                     fontWeight = FontWeight.Medium
                 )
@@ -270,12 +275,16 @@ private fun ItemDetailBody(
 private fun TagsRow(item: ClothingItem) {
     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
         TagPill(
-            label = item.category,
+            label = ClothingOptions.categoryResId(item.category)
+                ?.let { stringResource(it) }
+                ?: item.category,
             backgroundColor = MaterialTheme.colorScheme.surfaceVariant,
             textColor = MaterialTheme.colorScheme.onSurfaceVariant
         )
         TagPill(
-            label = ClothingOptions.colorNameFor(item.color),
+            label = ClothingOptions.colorNameResId(item.color)
+                ?.let { stringResource(it) }
+                ?: ClothingOptions.colorNameFor(item.color),
             backgroundColor = MaterialTheme.colorScheme.primary,
             textColor = MaterialTheme.colorScheme.onPrimary
         )
@@ -324,7 +333,7 @@ fun StatBox(label: String, value: String, modifier: Modifier = Modifier) {
 private fun WearHistorySection(logs: List<WearLog>) {
     Column(verticalArrangement = Arrangement.spacedBy(2.dp)) {
         Text(
-            "Wear history",
+            stringResource(R.string.item_detail_wear_history),
             fontSize = 12.sp,
             fontWeight = FontWeight.Medium,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -332,7 +341,7 @@ private fun WearHistorySection(logs: List<WearLog>) {
         )
         if (logs.isEmpty()) {
             Text(
-                "No wears recorded yet.",
+                stringResource(R.string.item_detail_no_wears),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )

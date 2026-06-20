@@ -1,3 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Wardove</string>
+
+    <!-- ── Navigation drawer ── -->
+    <string name="nav_wardrobe">Wardrobe</string>
+    <string name="nav_laundry">Laundry</string>
+    <string name="nav_calendar">Calendar</string>
+    <string name="nav_stats">Stats</string>
+    <string name="nav_history">History</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- ── Common actions ── -->
+    <string name="action_back">Back</string>
+    <string name="action_save">Save</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_confirm">Confirm</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_clear">Clear</string>
+    <string name="action_export">Export</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_add_item">Add Item</string>
+    <string name="action_menu">Menu</string>
+    <string name="action_about">About</string>
+    <string name="action_sort">Sort</string>
+
+    <!-- ── Wardrobe screen ── -->
+    <string name="wardrobe_search_hint">Search clothes…</string>
+    <string name="wardrobe_search_clear">Clear</string>
+    <string name="wardrobe_sort_title">Sort by</string>
+    <string name="wardrobe_empty_title">Your wardrobe is empty.</string>
+    <string name="wardrobe_empty_body">Tap + to add your first item.</string>
+    <string name="wardrobe_no_matches_title">No matches.</string>
+    <string name="wardrobe_no_matches_body">Try a different search.</string>
+    <plurals name="wardrobe_item_count">
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
+    </plurals>
+    <!-- Filter chips -->
+    <string name="filter_all">All</string>
+    <string name="filter_clean">Clean</string>
+    <string name="filter_worn">Worn</string>
+    <string name="filter_in_laundry">In Laundry</string>
+    <!-- Sort options -->
+    <string name="sort_recently_worn">Recently worn</string>
+    <string name="sort_alphabetical">Alphabetical</string>
+    <string name="sort_most_worn">Most worn</string>
+    <string name="sort_recently_added">Recently added</string>
+
+    <!-- ── Laundry screen ── -->
+    <string name="laundry_tab_pile">Pile</string>
+    <string name="laundry_tab_washing">Washing</string>
+    <string name="laundry_history_action">History</string>
+    <string name="laundry_empty_pile">No dirty clothes. Nice!</string>
+    <string name="laundry_empty_washing">Nothing in the wash right now.</string>
+    <string name="laundry_wash_after">Wash after</string>
+    <string name="laundry_ready_to_wash">Ready to wash</string>
+    <string name="laundry_action_send">Send to Laundry</string>
+    <string name="laundry_action_mark_clean">Mark as Clean</string>
+    <string name="laundry_dialog_mark_clean_title">Mark as clean?</string>
+    <!-- %1$s = formatted date, %2$d = wear count -->
+    <string name="laundry_worn_on">Worn %1$s · %2$d× since last wash</string>
+    <!-- %s = formatted date -->
+    <string name="laundry_started_on">Started %s</string>
+    <plurals name="laundry_wear_threshold">
+        <item quantity="one">%d wear</item>
+        <item quantity="other">%d wears</item>
+    </plurals>
+    <plurals name="laundry_mark_count">
+        <item quantity="one">Mark %d item as clean?</item>
+        <item quantity="other">Mark %d items as clean?</item>
+    </plurals>
+    <plurals name="laundry_cycle_item_count">
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
+    </plurals>
+    <plurals name="laundry_sent_message">
+        <item quantity="one">Sent %d item to laundry</item>
+        <item quantity="other">Sent %d items to laundry</item>
+    </plurals>
+    <plurals name="laundry_marked_clean_message">
+        <item quantity="one">Marked %d item as clean</item>
+        <item quantity="other">Marked %d items as clean</item>
+    </plurals>
+
+    <!-- ── History screen ── -->
+    <string name="history_title">Laundry History</string>
+    <string name="history_empty_title">No laundry cycles yet</string>
+    <string name="history_empty_body">Completed wash cycles will appear here.</string>
+    <string name="history_no_items">No items found for this cycle.</string>
+    <plurals name="history_item_count">
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
+    </plurals>
+
+    <!-- ── Calendar screen ── -->
+    <string name="calendar_nothing_worn">Nothing worn on this day</string>
+    <string name="calendar_prev_month">Previous month</string>
+    <string name="calendar_next_month">Next month</string>
+    <!-- Abbreviated weekday headers -->
+    <string name="weekday_sun">Sun</string>
+    <string name="weekday_mon">Mon</string>
+    <string name="weekday_tue">Tue</string>
+    <string name="weekday_wed">Wed</string>
+    <string name="weekday_thu">Thu</string>
+    <string name="weekday_fri">Fri</string>
+    <string name="weekday_sat">Sat</string>
+
+    <!-- ── Stats screen ── -->
+    <string name="stats_subtitle">Your wardrobe at a glance</string>
+    <string name="stats_stat_total_items">Total items</string>
+    <string name="stats_stat_total_wears">Total wears</string>
+    <string name="stats_stat_avg_wears">Avg wears/item</string>
+    <string name="stats_stat_tracked_prices">Tracked prices</string>
+    <string name="stats_section_highlights">Highlights</string>
+    <string name="stats_section_category_breakdown">Category breakdown</string>
+    <string name="stats_section_cost_per_wear">Cost per wear</string>
+    <string name="stats_highlight_most_worn">Most worn</string>
+    <string name="stats_highlight_least_worn">Least worn</string>
+    <string name="stats_highlight_longest_unworn">Longest unworn</string>
+    <string name="stats_never_worn">Never worn</string>
+    <string name="stats_no_items">No items yet.</string>
+    <string name="stats_no_tracked_prices">Add prices to your clothes to track cost per wear</string>
+    <!-- ₱ = ₱ (Philippine Peso, app\'s fixed currency); %1$.2f = cost value -->
+    <string name="stats_cost_per_wear">₱%1$.2f per wear</string>
+    <plurals name="stats_worn_times">
+        <item quantity="one">%d time</item>
+        <item quantity="other">%d times</item>
+    </plurals>
+    <plurals name="stats_last_worn_days">
+        <item quantity="one">Last worn %d day ago</item>
+        <item quantity="other">Last worn %d days ago</item>
+    </plurals>
+
+    <!-- ── Add / Edit item screen ── -->
+    <string name="add_item_title">Add Item</string>
+    <string name="edit_item_title">Edit Item</string>
+    <string name="add_item_field_name">Name</string>
+    <string name="add_item_field_category">Category</string>
+    <string name="add_item_field_color">Color</string>
+    <string name="add_item_field_price">Price (optional)</string>
+    <string name="add_item_field_notes">Notes (optional)</string>
+    <string name="add_item_select_category">Select category</string>
+    <string name="add_item_no_photo">No photo selected</string>
+    <string name="add_item_action_camera">Camera</string>
+    <string name="add_item_action_gallery">Gallery</string>
+    <string name="add_item_action_save">Save</string>
+    <string name="add_item_action_update">Update</string>
+    <!-- %s = comma-joined list of missing field names -->
+    <string name="add_item_required_prefix">Required: %s</string>
+    <!-- Individual missing-field names used in the Required list -->
+    <string name="add_item_required_photo">photo</string>
+    <string name="add_item_required_name">name</string>
+    <string name="add_item_required_category">category</string>
+    <string name="add_item_required_color">color</string>
+    <!-- Clothing categories (DB key = EN value; translate display only) -->
+    <string name="category_top">Top</string>
+    <string name="category_bottom">Bottom</string>
+    <string name="category_shoes">Shoes</string>
+    <string name="category_outerwear">Outerwear</string>
+    <string name="category_accessory">Accessory</string>
+    <!-- Clothing color names -->
+    <string name="color_black">Black</string>
+    <string name="color_white">White</string>
+    <string name="color_gray">Gray</string>
+    <string name="color_red">Red</string>
+    <string name="color_orange">Orange</string>
+    <string name="color_yellow">Yellow</string>
+    <string name="color_green">Green</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_navy">Navy</string>
+    <string name="color_purple">Purple</string>
+    <string name="color_pink">Pink</string>
+    <string name="color_brown">Brown</string>
+
+    <!-- ── Add/Edit item (NavHost snackbars) ── -->
+    <string name="item_saved">Item saved</string>
+    <string name="item_deleted">Item deleted</string>
+
+    <!-- ── Item detail screen ── -->
+    <string name="item_detail_action_wear_today">Wear Today</string>
+    <string name="item_detail_action_worn_undo">Worn today • Undo</string>
+    <string name="item_detail_stat_times_worn">Times worn</string>
+    <string name="item_detail_stat_last_worn">Last worn</string>
+    <string name="item_detail_last_worn_never">Never</string>
+    <string name="item_detail_notes_label">Notes</string>
+    <string name="item_detail_wear_history">Wear history</string>
+    <string name="item_detail_no_wears">No wears recorded yet.</string>
+    <string name="item_detail_delete_title">Delete this item?</string>
+    <string name="item_detail_delete_body">This cannot be undone.</string>
+
+    <!-- ── Lock screen ── -->
+    <string name="lock_unlock_button">Unlock with Biometrics</string>
+
+    <!-- ── Settings screen ── -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_appearance_title">Appearance</string>
+    <string name="settings_appearance_subtitle">Theme, colors</string>
+    <string name="settings_applock_title">App Lock</string>
+    <string name="settings_applock_subtitle">Biometric protection</string>
+    <string name="settings_notifications_title">Notifications</string>
+    <string name="settings_notifications_subtitle">App updates</string>
+    <string name="settings_diagnostics_title">Diagnostics</string>
+    <string name="settings_diagnostics_subtitle">Share app logs with developers</string>
+
+    <!-- ── Appearance settings ── -->
+    <string name="appearance_theme_label">Theme</string>
+    <string name="appearance_theme_system">System default</string>
+    <string name="appearance_theme_light">Light</string>
+    <string name="appearance_theme_dark">Dark</string>
+    <string name="appearance_dynamic_color_label">Dynamic color (Material You)</string>
+    <string name="appearance_dynamic_color_subtitle">Uses your wallpaper colors</string>
+
+    <!-- ── App lock settings ── -->
+    <string name="applock_enable_label">Enable App Lock</string>
+    <string name="applock_enable_subtitle_available">Require biometrics to open the app</string>
+    <string name="applock_enable_subtitle_unavailable">No biometric hardware available</string>
+    <string name="applock_biometric_prompt_title">Enable App Lock</string>
+    <string name="applock_biometric_prompt_subtitle">Confirm your biometric credential</string>
+    <string name="applock_biometric_prompt_cancel">Cancel</string>
+
+    <!-- ── Notification settings ── -->
+    <string name="notification_section_header">Notifications</string>
+    <string name="notification_updates_label">App updates</string>
+    <string name="notification_updates_subtitle">Notify when a new version is available</string>
+
+    <!-- ── Diagnostics settings ── -->
+    <string name="diagnostics_log_preview_header">Log Preview</string>
+    <!-- %d = number of lines -->
+    <string name="diagnostics_log_lines">%d lines</string>
+    <string name="diagnostics_log_empty">No log entries yet.</string>
+    <string name="diagnostics_action_clear">Clear</string>
+    <string name="diagnostics_action_export">Export</string>
+    <string name="diagnostics_action_refresh">Refresh logs</string>
+    <string name="diagnostics_help_text">Export saves the log file to a location you choose. Share it with the developer to help diagnose issues.</string>
+    <string name="diagnostics_clear_dialog_title">Clear logs?</string>
+    <string name="diagnostics_clear_dialog_body">All stored diagnostic log entries will be permanently deleted.</string>
+    <string name="diagnostics_message_exported">Log exported successfully</string>
+    <!-- %s = exception message -->
+    <string name="diagnostics_message_export_failed">Export failed: %s</string>
+    <string name="diagnostics_message_cleared">Logs cleared</string>
+
+    <!-- ── About settings ── -->
+    <string name="about_title">About</string>
+    <string name="about_version_label">Version</string>
+    <string name="about_source_code">Source code</string>
+    <string name="about_updates_label">Updates</string>
+    <string name="about_updates_subtitle">Check for new versions</string>
+    <string name="about_feedback_label">Send Feedback</string>
+    <string name="about_feedback_subtitle">Report bugs or request features</string>
+    <string name="about_privacy_label">Privacy Policy</string>
+    <string name="about_privacy_subtitle">How your data is handled</string>
+    <string name="about_terms_label">Terms of Service</string>
+    <string name="about_terms_subtitle">Terms for using this app</string>
+    <string name="about_licenses_label">Licenses</string>
+    <string name="about_licenses_subtitle">Libraries used in this app</string>
+
+    <!-- ── Update screen ── -->
+    <string name="update_title">Updates &amp; Feedback</string>
+    <string name="update_action_refresh">Refresh</string>
+    <string name="update_installed_version">Installed version</string>
+    <string name="update_available">Update available</string>
+    <string name="update_up_to_date">Up to date</string>
+    <string name="update_failed_to_load">Failed to load releases</string>
+    <string name="update_download_install">Download &amp; Install</string>
+    <string name="update_install_now">Install Now</string>
+    <string name="update_download_failed">Download failed</string>
+    <!-- %s = formatted file size, e.g. "5.2 MB" -->
+    <string name="update_apk_size">APK · %s</string>
+    <string name="update_release_history">Release History</string>
+    <string name="update_feedback_label">Send Feedback</string>
+    <string name="update_feedback_subtitle">Report bugs or request features on GitHub</string>
+    <!-- %1$s = downloaded, %2$s = total, %3$d = percent -->
+    <string name="update_downloading_progress">Downloading… %1$s / %2$s (%3$d%%)</string>
+    <!-- %d = percent (when total size is unknown) -->
+    <string name="update_downloading_percent">Downloading… %d%%</string>
+
+    <!-- ── Notification strings (UpdateCheckWorker) ── -->
+    <string name="notification_update_title">Update available</string>
+    <!-- %s = version tag, e.g. "v2.0.5" -->
+    <string name="notification_update_text">Wardove %s is ready to install</string>
+
+    <!-- ── Notification channel (WardoveApplication) ── -->
+    <string name="notification_channel_updates_name">App updates</string>
+    <string name="notification_channel_updates_description">Notifies when a new version of Wardove is available</string>
+
+    <!-- ── DownloadManager notification (UpdateRepository) ── -->
+    <string name="download_manager_title">Wardove Update</string>
+    <!-- %s = APK filename -->
+    <string name="download_manager_description">Downloading %s</string>
 </resources>

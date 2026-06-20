@@ -31,11 +31,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.pluralStringResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
+import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.ui.theme.textHint
 import java.io.File
@@ -63,9 +66,9 @@ fun StatsScreen(
         ) {
             item {
                 LargeTitleHeader(
-                    title = "Stats",
+                    title = stringResource(R.string.nav_stats),
                     onOpenDrawer = onOpenDrawer,
-                    subtitle = "Your wardrobe at a glance"
+                    subtitle = stringResource(R.string.stats_subtitle)
                 )
             }
             item {
@@ -76,7 +79,7 @@ fun StatsScreen(
                     trackedPrices = state.costPerWearItems.size
                 )
             }
-            item { SectionHeader("Highlights") }
+            item { SectionHeader(stringResource(R.string.stats_section_highlights)) }
             item {
                 HighlightsBlock(
                     mostWorn = state.mostWornItem,
@@ -85,9 +88,9 @@ fun StatsScreen(
                     now = now
                 )
             }
-            item { SectionHeader("Category breakdown") }
+            item { SectionHeader(stringResource(R.string.stats_section_category_breakdown)) }
             item { CategoryBreakdown(breakdown = state.categoryBreakdown) }
-            item { SectionHeader("Cost per wear") }
+            item { SectionHeader(stringResource(R.string.stats_section_cost_per_wear)) }
             item {
                 if (state.costPerWearItems.isEmpty()) {
                     Box(
@@ -97,7 +100,7 @@ fun StatsScreen(
                         contentAlignment = Alignment.Center
                     ) {
                         Text(
-                            "Add prices to your clothes to track cost per wear",
+                            stringResource(R.string.stats_no_tracked_prices),
                             color = MaterialTheme.colorScheme.textHint,
                             style = MaterialTheme.typography.bodyMedium
                         )
@@ -131,12 +134,12 @@ private fun SummaryGrid(
         verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-            StatBox("Total items", totalItems.toString(), Modifier.weight(1f))
-            StatBox("Total wears", totalWears.toString(), Modifier.weight(1f))
+            StatBox(stringResource(R.string.stats_stat_total_items), totalItems.toString(), Modifier.weight(1f))
+            StatBox(stringResource(R.string.stats_stat_total_wears), totalWears.toString(), Modifier.weight(1f))
         }
         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-            StatBox("Avg wears/item", formatAverage(averageWearsPerItem), Modifier.weight(1f))
-            StatBox("Tracked prices", trackedPrices.toString(), Modifier.weight(1f))
+            StatBox(stringResource(R.string.stats_stat_avg_wears), formatAverage(averageWearsPerItem), Modifier.weight(1f))
+            StatBox(stringResource(R.string.stats_stat_tracked_prices), trackedPrices.toString(), Modifier.weight(1f))
         }
     }
 }
@@ -184,22 +187,30 @@ private fun HighlightsBlock(
         verticalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         HighlightCard(
-            label = "Most worn",
+            label = stringResource(R.string.stats_highlight_most_worn),
             item = mostWorn,
-            trailing = mostWorn?.let { "${it.totalWearCount} times" }
+            trailing = mostWorn?.let {
+                pluralStringResource(R.plurals.stats_worn_times, it.totalWearCount, it.totalWearCount)
+            }
         )
         HighlightCard(
-            label = "Least worn",
+            label = stringResource(R.string.stats_highlight_least_worn),
             item = leastWorn,
-            trailing = leastWorn?.let { "${it.totalWearCount} times" }
+            trailing = leastWorn?.let {
+                pluralStringResource(R.plurals.stats_worn_times, it.totalWearCount, it.totalWearCount)
+            }
         )
+        val neverWorn = stringResource(R.string.stats_never_worn)
         HighlightCard(
-            label = "Longest unworn",
+            label = stringResource(R.string.stats_highlight_longest_unworn),
             item = longestUnworn,
             trailing = longestUnworn?.let { item ->
                 val last = item.lastWornDate
-                if (last == null) "Never worn"
-                else "Last worn ${daysSince(last, now)} days ago"
+                if (last == null) neverWorn
+                else {
+                    val days = daysSince(last, now).toInt()
+                    pluralStringResource(R.plurals.stats_last_worn_days, days, days)
+                }
             }
         )
     }
@@ -284,7 +295,7 @@ private fun CategoryBreakdown(breakdown: Map<String, Int>) {
             contentAlignment = Alignment.Center
         ) {
             Text(
-                "No items yet.",
+                stringResource(R.string.stats_no_items),
                 color = MaterialTheme.colorScheme.textHint,
                 style = MaterialTheme.typography.bodyMedium
             )
@@ -377,7 +388,7 @@ private fun CostPerWearRow(entry: CostPerWearItem) {
             )
         }
         Text(
-            "₱${"%.2f".format(entry.costPerWear)} per wear",
+            stringResource(R.string.stats_cost_per_wear, entry.costPerWear),
             fontSize = 13.sp,
             fontWeight = FontWeight.Medium,
             color = MaterialTheme.colorScheme.onBackground

@@ -28,11 +28,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.app.wardove.R
 import com.app.wardove.data.settings.AppLockRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
@@ -84,11 +86,16 @@ fun AppLockSettingsScreen(
             }
         )
     }
-    val enablePromptInfo = remember {
+
+    // Resolve strings in composable scope before capturing in remember
+    val promptTitle    = stringResource(R.string.applock_biometric_prompt_title)
+    val promptSubtitle = stringResource(R.string.applock_biometric_prompt_subtitle)
+    val promptCancel   = stringResource(R.string.applock_biometric_prompt_cancel)
+    val enablePromptInfo = remember(promptTitle, promptSubtitle, promptCancel) {
         BiometricPrompt.PromptInfo.Builder()
-            .setTitle("Enable App Lock")
-            .setSubtitle("Confirm your biometric credential")
-            .setNegativeButtonText("Cancel")
+            .setTitle(promptTitle)
+            .setSubtitle(promptSubtitle)
+            .setNegativeButtonText(promptCancel)
             .setAllowedAuthenticators(BiometricManager.Authenticators.BIOMETRIC_WEAK)
             .build()
     }
@@ -97,10 +104,10 @@ fun AppLockSettingsScreen(
         containerColor = MaterialTheme.colorScheme.background,
         topBar = {
             TopAppBar(
-                title = { Text("App Lock") },
+                title = { Text(stringResource(R.string.settings_applock_title)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Lucide.ArrowLeft, contentDescription = "Back")
+                        Icon(Lucide.ArrowLeft, contentDescription = stringResource(R.string.action_back))
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -117,11 +124,11 @@ fun AppLockSettingsScreen(
         ) {
             SettingsCard {
                 AppLockSwitchRow(
-                    label = "Enable App Lock",
+                    label = stringResource(R.string.applock_enable_label),
                     subtitle = if (biometricAvailable)
-                        "Require biometrics to open the app"
+                        stringResource(R.string.applock_enable_subtitle_available)
                     else
-                        "No biometric hardware available",
+                        stringResource(R.string.applock_enable_subtitle_unavailable),
                     checked = isEnabled,
                     enabled = biometricAvailable,
                     onCheckedChange = { enabled ->

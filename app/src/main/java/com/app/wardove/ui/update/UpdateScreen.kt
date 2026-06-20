@@ -45,11 +45,13 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.app.wardove.BuildConfig
+import com.app.wardove.R
 import com.app.wardove.data.model.GithubRelease
 import java.time.Instant
 import java.time.ZoneId
@@ -76,15 +78,15 @@ fun UpdateScreen(
         containerColor = MaterialTheme.colorScheme.background,
         topBar = {
             TopAppBar(
-                title = { Text("Updates & Feedback") },
+                title = { Text(stringResource(R.string.update_title)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Lucide.ArrowLeft, contentDescription = "Back")
+                        Icon(Lucide.ArrowLeft, contentDescription = stringResource(R.string.action_back))
                     }
                 },
                 actions = {
                     IconButton(onClick = viewModel::load) {
-                        Icon(Lucide.RefreshCw, contentDescription = "Refresh")
+                        Icon(Lucide.RefreshCw, contentDescription = stringResource(R.string.update_action_refresh))
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -110,12 +112,12 @@ fun UpdateScreen(
                 ) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         Text(
-                            "Failed to load releases",
+                            stringResource(R.string.update_failed_to_load),
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                         Spacer(Modifier.height(12.dp))
                         OutlinedButton(onClick = viewModel::load) {
-                            Text("Retry")
+                            Text(stringResource(R.string.action_retry))
                         }
                     }
                 }
@@ -166,7 +168,7 @@ fun UpdateScreen(
                     if (history.isNotEmpty()) {
                         item {
                             Text(
-                                "Release History",
+                                stringResource(R.string.update_release_history),
                                 fontSize = 11.sp,
                                 fontWeight = FontWeight.Medium,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -201,7 +203,7 @@ private fun CurrentVersionCard() {
         ) {
             Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    "Installed version",
+                    stringResource(R.string.update_installed_version),
                     fontSize = 12.sp,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
@@ -240,7 +242,8 @@ private fun LatestReleaseCard(
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
-                        if (isUpdateAvailable) "Update available" else "Up to date",
+                        if (isUpdateAvailable) stringResource(R.string.update_available)
+                        else stringResource(R.string.update_up_to_date),
                         fontSize = 12.sp,
                         color = if (isUpdateAvailable)
                             MaterialTheme.colorScheme.onPrimaryContainer
@@ -284,7 +287,7 @@ private fun LatestReleaseCard(
                     InstallState.Idle -> {
                         if (apkSize > 0L) {
                             Text(
-                                "APK · ${formatBytes(apkSize)}",
+                                stringResource(R.string.update_apk_size, formatBytes(apkSize)),
                                 fontSize = 12.sp,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 modifier = Modifier.align(Alignment.CenterHorizontally)
@@ -297,16 +300,24 @@ private fun LatestReleaseCard(
                         ) {
                             Icon(Lucide.Download, contentDescription = null, modifier = Modifier.size(18.dp))
                             Spacer(Modifier.width(8.dp))
-                            Text("Download & Install")
+                            Text(stringResource(R.string.update_download_install))
                         }
                     }
                     is InstallState.Downloading -> {
                         val downloadLabel = if (apkSize > 0L) {
                             val downloaded = formatBytes((installState.progress * apkSize).toLong())
                             val total = formatBytes(apkSize)
-                            "Downloading… $downloaded / $total (${(installState.progress * 100).toInt()}%)"
+                            stringResource(
+                                R.string.update_downloading_progress,
+                                downloaded,
+                                total,
+                                (installState.progress * 100).toInt()
+                            )
                         } else {
-                            "Downloading… ${(installState.progress * 100).toInt()}%"
+                            stringResource(
+                                R.string.update_downloading_percent,
+                                (installState.progress * 100).toInt()
+                            )
                         }
                         Column {
                             Text(
@@ -326,19 +337,19 @@ private fun LatestReleaseCard(
                             onClick = onInstall,
                             modifier = Modifier.fillMaxWidth()
                         ) {
-                            Text("Install Now")
+                            Text(stringResource(R.string.update_install_now))
                         }
                     }
                     InstallState.Failed -> {
                         Column {
                             Text(
-                                "Download failed",
+                                stringResource(R.string.update_download_failed),
                                 fontSize = 13.sp,
                                 color = MaterialTheme.colorScheme.error
                             )
                             Spacer(Modifier.height(4.dp))
                             OutlinedButton(onClick = onResetInstall, modifier = Modifier.fillMaxWidth()) {
-                                Text("Retry")
+                                Text(stringResource(R.string.action_retry))
                             }
                         }
                     }
@@ -370,13 +381,13 @@ private fun FeedbackCard(onFeedback: () -> Unit) {
             )
             Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    "Send Feedback",
+                    stringResource(R.string.update_feedback_label),
                     fontSize = 15.sp,
                     fontWeight = FontWeight.Medium,
                     color = MaterialTheme.colorScheme.onSurface
                 )
                 Text(
-                    "Report bugs or request features on GitHub",
+                    stringResource(R.string.update_feedback_subtitle),
                     fontSize = 12.sp,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )

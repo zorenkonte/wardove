@@ -50,11 +50,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.pluralStringResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
+import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.ui.theme.LaundryPurple
 import com.app.wardove.ui.theme.StatusClean
@@ -92,13 +95,13 @@ fun LaundryScreen(
                 .padding(padding)
         ) {
             LargeTitleHeader(
-                title = "Laundry",
+                title = stringResource(R.string.nav_laundry),
                 onOpenDrawer = onOpenDrawer,
                 actions = {
                     IconButton(onClick = onOpenHistory) {
                         Icon(
                             Lucide.History,
-                            contentDescription = "History",
+                            contentDescription = stringResource(R.string.laundry_history_action),
                             tint = MaterialTheme.colorScheme.onBackground
                         )
                     }
@@ -141,18 +144,20 @@ fun LaundryScreen(
         val count = cwi.items.size
         AlertDialog(
             onDismissRequest = { pendingCompleteCycle = null },
-            title = { Text("Mark as clean?") },
-            text = { Text("Mark $count item${if (count == 1) "" else "s"} as clean?") },
+            title = { Text(stringResource(R.string.laundry_dialog_mark_clean_title)) },
+            text = { Text(pluralStringResource(R.plurals.laundry_mark_count, count, count)) },
             confirmButton = {
                 TextButton(
                     onClick = {
                         viewModel.completeCycle(cwi.cycle.id)
                         pendingCompleteCycle = null
                     }
-                ) { Text("Confirm") }
+                ) { Text(stringResource(R.string.action_confirm)) }
             },
             dismissButton = {
-                TextButton(onClick = { pendingCompleteCycle = null }) { Text("Cancel") }
+                TextButton(onClick = { pendingCompleteCycle = null }) {
+                    Text(stringResource(R.string.action_cancel))
+                }
             }
         )
     }
@@ -183,7 +188,7 @@ private fun PillTabRow(
                     contentAlignment = Alignment.Center
                 ) {
                     Text(
-                        entry.label,
+                        stringResource(entry.labelResId),
                         fontSize = 13.sp,
                         fontWeight = FontWeight.Medium,
                         color = if (isSelected) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurfaceVariant
@@ -215,7 +220,7 @@ private fun PileTab(
         when {
             entries == null -> LoadingBox(modifier = Modifier.fillMaxSize())
             entries.isEmpty() -> EmptyMessage(
-                "No dirty clothes. Nice!",
+                stringResource(R.string.laundry_empty_pile),
                 modifier = Modifier.fillMaxSize()
             )
             else -> {
@@ -248,7 +253,7 @@ private fun PileTab(
                         OutlinedButton(
                             onClick = onClearSelection,
                             modifier = Modifier.height(52.dp)
-                        ) { Text("Clear") }
+                        ) { Text(stringResource(R.string.action_clear)) }
                         Button(
                             onClick = onSendToLaundry,
                             modifier = Modifier
@@ -261,7 +266,7 @@ private fun PileTab(
                             )
                         ) {
                             Text(
-                                "Send to Laundry",
+                                stringResource(R.string.laundry_action_send),
                                 fontSize = 15.sp,
                                 fontWeight = FontWeight.Medium
                             )
@@ -286,7 +291,7 @@ private fun ThresholdControl(
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
-            "Wash after",
+            stringResource(R.string.laundry_wash_after),
             fontSize = 13.sp,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.weight(1f)
@@ -295,7 +300,7 @@ private fun ThresholdControl(
             Text("−", fontSize = 18.sp, color = MaterialTheme.colorScheme.onBackground)
         }
         Text(
-            "$threshold wear${if (threshold == 1) "" else "s"}",
+            pluralStringResource(R.plurals.laundry_wear_threshold, threshold, threshold),
             fontSize = 13.sp,
             fontWeight = FontWeight.Medium,
             color = MaterialTheme.colorScheme.onBackground,
@@ -343,14 +348,18 @@ private fun LaundryItemRow(
                     color = MaterialTheme.colorScheme.onSurface
                 )
                 Text(
-                    "Worn ${item.lastWornDate?.formatDateShort() ?: "—"} · ${item.totalWearCount}× since last wash",
+                    stringResource(
+                        R.string.laundry_worn_on,
+                        item.lastWornDate?.formatDateShort() ?: "—",
+                        item.totalWearCount
+                    ),
                     fontSize = 12.sp,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.padding(top = 2.dp)
                 )
                 if (entry.readyToWash) {
                     Text(
-                        "Ready to wash",
+                        stringResource(R.string.laundry_ready_to_wash),
                         fontSize = 11.sp,
                         fontWeight = FontWeight.Medium,
                         color = LaundryPurple,
@@ -380,7 +389,7 @@ private fun WashingTab(
     when {
         cycles == null -> LoadingBox(modifier = modifier)
         cycles.isEmpty() -> EmptyMessage(
-            "Nothing in the wash right now.",
+            stringResource(R.string.laundry_empty_washing),
             modifier = modifier
         )
         else -> LazyColumn(
@@ -422,13 +431,13 @@ private fun CycleCard(
             ) {
                 Column {
                     Text(
-                        "Started ${cwi.cycle.startedAt.formatDateShort()}",
+                        stringResource(R.string.laundry_started_on, cwi.cycle.startedAt.formatDateShort()),
                         fontSize = 14.sp,
                         fontWeight = FontWeight.Medium,
                         color = MaterialTheme.colorScheme.onSurface
                     )
                     Text(
-                        "${cwi.items.size} item${if (cwi.items.size == 1) "" else "s"}",
+                        pluralStringResource(R.plurals.laundry_cycle_item_count, cwi.items.size, cwi.items.size),
                         fontSize = 12.sp,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -465,7 +474,7 @@ private fun CycleCard(
                 )
             ) {
                 Text(
-                    "Mark as Clean",
+                    stringResource(R.string.laundry_action_mark_clean),
                     fontSize = 15.sp,
                     fontWeight = FontWeight.Medium
                 )
