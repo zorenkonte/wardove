@@ -125,6 +125,9 @@ dependencies {
     implementation(libs.androidx.hilt.work)
     ksp(libs.androidx.hilt.compiler)
 
+    // Timber logging
+    implementation(libs.timber)
+
     // CameraX
     implementation(libs.androidx.camera.core)
     implementation(libs.androidx.camera.camera2)

@@ -30,6 +30,7 @@ import com.composables.icons.lucide.Lock
 import com.composables.icons.lucide.Lucide
 import com.composables.icons.lucide.Menu
 import com.composables.icons.lucide.Palette
+import com.composables.icons.lucide.ScrollText
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -37,7 +38,8 @@ fun SettingsScreen(
     onOpenDrawer: () -> Unit = {},
     onOpenAppearance: () -> Unit,
     onOpenAppLock: () -> Unit,
-    onOpenAbout: () -> Unit
+    onOpenAbout: () -> Unit,
+    onOpenDiagnostics: () -> Unit
 ) {
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
@@ -98,6 +100,17 @@ fun SettingsScreen(
                     label = "App Lock",
                     subtitle = "Biometric protection",
                     onClick = onOpenAppLock
+                )
+                HorizontalDivider(
+                    color = MaterialTheme.colorScheme.outline,
+                    thickness = 0.5.dp,
+                    modifier = Modifier.padding(start = 56.dp)
+                )
+                ChevronRow(
+                    icon = Lucide.ScrollText,
+                    label = "Diagnostics",
+                    subtitle = "Share app logs with developers",
+                    onClick = onOpenDiagnostics
                 )
             }
         }

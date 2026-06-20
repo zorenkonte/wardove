@@ -24,6 +24,7 @@ browser = "1.10.0"
 aboutlibraries = "11.2.3"
 work = "2.10.1"
 hiltWork = "1.2.0"
+timber = "5.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -93,6 +94,9 @@ androidx-work-runtime-ktx = { group = "androidx.work", name = "work-runtime-ktx"
 # Hilt WorkManager integration
 androidx-hilt-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltWork" }
 androidx-hilt-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltWork" }
+
+# Timber logging
+timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

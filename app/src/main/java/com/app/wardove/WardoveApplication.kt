@@ -13,15 +13,21 @@ import androidx.work.NetworkType
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import com.app.wardove.work.UpdateCheckWorker
+import com.app.wardove.BuildConfig
+import com.app.wardove.data.log.DiagnosticsRepository
+import com.app.wardove.data.log.FileLoggingTree
+import com.app.wardove.data.log.installCrashHandler
 import dagger.hilt.android.HiltAndroidApp
+import timber.log.Timber
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 @HiltAndroidApp
 class WardoveApplication : Application(), Configuration.Provider {
 
-    @Inject
-    lateinit var workerFactory: HiltWorkerFactory
+    @Inject lateinit var workerFactory: HiltWorkerFactory
+    @Inject lateinit var fileLoggingTree: FileLoggingTree
+    @Inject lateinit var diagnosticsRepository: DiagnosticsRepository
 
     override val workManagerConfiguration: Configuration
         get() = Configuration.Builder()
@@ -30,6 +36,11 @@ class WardoveApplication : Application(), Configuration.Provider {
 
     override fun onCreate() {
         super.onCreate()
+        // Plant logging trees before anything else so startup events are captured.
+        Timber.plant(fileLoggingTree)
+        if (BuildConfig.DEBUG) Timber.plant(Timber.DebugTree())
+        installCrashHandler(fileLoggingTree, diagnosticsRepository.header())
+        Timber.i("App started — ${diagnosticsRepository.header()}")
         createNotificationChannel()
         scheduleUpdateCheck()
     }

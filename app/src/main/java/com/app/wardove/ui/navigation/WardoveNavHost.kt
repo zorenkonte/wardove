@@ -26,6 +26,7 @@ import com.app.wardove.ui.laundry.LaundryScreen
 import com.app.wardove.ui.settings.AboutSettingsScreen
 import com.app.wardove.ui.settings.AppLockSettingsScreen
 import com.app.wardove.ui.settings.AppearanceSettingsScreen
+import com.app.wardove.ui.settings.DiagnosticsSettingsScreen
 import com.app.wardove.ui.settings.LicensesSettingsScreen
 import com.app.wardove.ui.update.UpdateScreen
 import com.app.wardove.ui.settings.SettingsScreen
@@ -194,7 +195,8 @@ fun WardoveNavHost(
                     onOpenDrawer = openDrawer,
                     onOpenAppearance = { navController.navigate(WardoveDestinations.SETTINGS_APPEARANCE) },
                     onOpenAppLock = { navController.navigate(WardoveDestinations.SETTINGS_APP_LOCK) },
-                    onOpenAbout = { navController.navigate(WardoveDestinations.SETTINGS_ABOUT) }
+                    onOpenAbout = { navController.navigate(WardoveDestinations.SETTINGS_ABOUT) },
+                    onOpenDiagnostics = { navController.navigate(WardoveDestinations.SETTINGS_DIAGNOSTICS) }
                 )
             }
 
@@ -240,6 +242,16 @@ fun WardoveNavHost(
                 popExitTransition = popExitSlide
             ) {
                 LicensesSettingsScreen(onBack = { navController.popBackStack() })
+            }
+
+            composable(
+                route = WardoveDestinations.SETTINGS_DIAGNOSTICS,
+                enterTransition = enterSlide,
+                exitTransition = exitSlide,
+                popEnterTransition = popEnterSlide,
+                popExitTransition = popExitSlide
+            ) {
+                DiagnosticsSettingsScreen(onBack = { navController.popBackStack() })
             }
 
             composable(
