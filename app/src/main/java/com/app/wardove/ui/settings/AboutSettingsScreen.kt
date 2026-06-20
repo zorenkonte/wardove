@@ -3,19 +3,15 @@ package com.app.wardove.ui.settings
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
-import androidx.compose.material.icons.automirrored.filled.OpenInNew
-import androidx.compose.material.icons.filled.Feedback
-import androidx.compose.material.icons.filled.SystemUpdate
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -33,6 +29,13 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.app.wardove.BuildConfig
+import com.composables.icons.lucide.ArrowLeft
+import com.composables.icons.lucide.ChevronRight
+import com.composables.icons.lucide.Download
+import com.composables.icons.lucide.ExternalLink
+import com.composables.icons.lucide.Lucide
+import com.composables.icons.lucide.MessageSquare
+import com.composables.icons.lucide.RefreshCw
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -49,7 +52,7 @@ fun AboutSettingsScreen(
                 title = { Text("About") },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                        Icon(Lucide.ArrowLeft, contentDescription = "Back")
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -62,48 +65,52 @@ fun AboutSettingsScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
+                .padding(horizontal = 16.dp, vertical = 12.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            InfoRow(
-                label = "Version",
-                value = "${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})"
-            )
-            HorizontalDivider(
-                color = MaterialTheme.colorScheme.outline,
-                thickness = 0.5.dp,
-                modifier = Modifier.padding(horizontal = 20.dp)
-            )
-            LinkRow(
-                label = "Source code",
-                url = "https://github.com/zorenkonte/wardove"
-            ) { url ->
-                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
-            }
-            HorizontalDivider(
-                color = MaterialTheme.colorScheme.outline,
-                thickness = 0.5.dp,
-                modifier = Modifier.padding(horizontal = 20.dp)
-            )
-            ChevronRow(
-                icon = Icons.Default.SystemUpdate,
-                label = "Updates",
-                subtitle = "Check for new versions",
-                onClick = onOpenUpdates
-            )
-            HorizontalDivider(
-                color = MaterialTheme.colorScheme.outline,
-                thickness = 0.5.dp,
-                modifier = Modifier.padding(horizontal = 20.dp)
-            )
-            ExternalRow(
-                icon = Icons.Default.Feedback,
-                label = "Send Feedback",
-                subtitle = "Report bugs or request features",
-                onClick = {
-                    context.startActivity(
-                        Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/zorenkonte/wardove/issues"))
-                    )
+            SettingsCard {
+                InfoRow(
+                    label = "Version",
+                    value = "${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})"
+                )
+                HorizontalDivider(
+                    color = MaterialTheme.colorScheme.outline,
+                    thickness = 0.5.dp,
+                    modifier = Modifier.padding(horizontal = 16.dp)
+                )
+                LinkRow(
+                    label = "Source code",
+                    url = "https://github.com/zorenkonte/wardove"
+                ) { url ->
+                    context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
                 }
-            )
+                HorizontalDivider(
+                    color = MaterialTheme.colorScheme.outline,
+                    thickness = 0.5.dp,
+                    modifier = Modifier.padding(horizontal = 16.dp)
+                )
+                ChevronRow(
+                    icon = Lucide.Download,
+                    label = "Updates",
+                    subtitle = "Check for new versions",
+                    onClick = onOpenUpdates
+                )
+                HorizontalDivider(
+                    color = MaterialTheme.colorScheme.outline,
+                    thickness = 0.5.dp,
+                    modifier = Modifier.padding(horizontal = 16.dp)
+                )
+                ExternalRow(
+                    icon = Lucide.MessageSquare,
+                    label = "Send Feedback",
+                    subtitle = "Report bugs or request features",
+                    onClick = {
+                        context.startActivity(
+                            Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/zorenkonte/wardove/issues"))
+                        )
+                    }
+                )
+            }
         }
     }
 }
@@ -113,7 +120,7 @@ private fun InfoRow(label: String, value: String) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 20.dp, vertical = 14.dp),
+            .padding(horizontal = 16.dp, vertical = 14.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
@@ -136,7 +143,7 @@ private fun LinkRow(label: String, url: String, onOpen: (String) -> Unit) {
         modifier = Modifier
             .fillMaxWidth()
             .clickable { onOpen(url) }
-            .padding(horizontal = 20.dp, vertical = 14.dp),
+            .padding(horizontal = 16.dp, vertical = 14.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Text(
@@ -146,7 +153,7 @@ private fun LinkRow(label: String, url: String, onOpen: (String) -> Unit) {
             modifier = Modifier.weight(1f)
         )
         Icon(
-            Icons.AutoMirrored.Filled.OpenInNew,
+            Lucide.ExternalLink,
             contentDescription = null,
             tint = MaterialTheme.colorScheme.onSurfaceVariant
         )
@@ -164,7 +171,7 @@ private fun ChevronRow(
         modifier = Modifier
             .fillMaxWidth()
             .clickable(onClick = onClick)
-            .padding(horizontal = 20.dp, vertical = 14.dp),
+            .padding(horizontal = 16.dp, vertical = 14.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Icon(icon, contentDescription = null, tint = MaterialTheme.colorScheme.onBackground)
@@ -176,7 +183,7 @@ private fun ChevronRow(
             }
         }
         Icon(
-            Icons.AutoMirrored.Filled.KeyboardArrowRight,
+            Lucide.ChevronRight,
             contentDescription = null,
             tint = MaterialTheme.colorScheme.onSurfaceVariant
         )
@@ -194,7 +201,7 @@ private fun ExternalRow(
         modifier = Modifier
             .fillMaxWidth()
             .clickable(onClick = onClick)
-            .padding(horizontal = 20.dp, vertical = 14.dp),
+            .padding(horizontal = 16.dp, vertical = 14.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Icon(icon, contentDescription = null, tint = MaterialTheme.colorScheme.onBackground)
@@ -206,7 +213,7 @@ private fun ExternalRow(
             }
         }
         Icon(
-            Icons.AutoMirrored.Filled.OpenInNew,
+            Lucide.ExternalLink,
             contentDescription = null,
             tint = MaterialTheme.colorScheme.onSurfaceVariant
         )

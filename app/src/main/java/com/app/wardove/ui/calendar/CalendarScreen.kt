@@ -18,10 +18,10 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
-import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
-import androidx.compose.material.icons.filled.Menu
+import com.app.wardove.ui.components.LargeTitleHeader
+import com.composables.icons.lucide.ChevronLeft
+import com.composables.icons.lucide.ChevronRight
+import com.composables.icons.lucide.Lucide
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.HorizontalDivider
@@ -75,22 +75,41 @@ fun CalendarScreen(
                 .fillMaxSize()
                 .padding(padding)
         ) {
-            CalendarTopBar(
-                month = visibleMonth,
-                onPrev = {
-                    val target = visibleMonth.minusMonths(1)
-                    visibleMonth = target
-                    viewModel.selectDate(adjustSelection(selectedDate, target))
-                },
-                onNext = {
-                    val target = visibleMonth.plusMonths(1)
-                    if (!target.isAfter(YearMonth.from(today))) {
+            LargeTitleHeader(
+                title = "Calendar",
+                onOpenDrawer = onOpenDrawer,
+                subtitle = "${visibleMonth.month.getDisplayName(TextStyle.FULL, Locale.getDefault())} ${visibleMonth.year}",
+                actions = {
+                    val canGoNext = visibleMonth.isBefore(YearMonth.from(today))
+                    IconButton(onClick = {
+                        val target = visibleMonth.minusMonths(1)
                         visibleMonth = target
                         viewModel.selectDate(adjustSelection(selectedDate, target))
+                    }) {
+                        Icon(
+                            Lucide.ChevronLeft,
+                            contentDescription = "Previous month",
+                            tint = MaterialTheme.colorScheme.onBackground
+                        )
                     }
-                },
-                canGoNext = visibleMonth.isBefore(YearMonth.from(today)),
-                onOpenDrawer = onOpenDrawer
+                    IconButton(
+                        onClick = {
+                            val target = visibleMonth.plusMonths(1)
+                            if (!target.isAfter(YearMonth.from(today))) {
+                                visibleMonth = target
+                                viewModel.selectDate(adjustSelection(selectedDate, target))
+                            }
+                        },
+                        enabled = canGoNext
+                    ) {
+                        Icon(
+                            Lucide.ChevronRight,
+                            contentDescription = "Next month",
+                            tint = if (canGoNext) MaterialTheme.colorScheme.onBackground
+                                   else MaterialTheme.colorScheme.textHint
+                        )
+                    }
+                }
             )
 
             WeekdayHeader()
@@ -140,55 +159,6 @@ fun CalendarScreen(
     }
 }
 
-@Composable
-private fun CalendarTopBar(
-    month: YearMonth,
-    onPrev: () -> Unit,
-    onNext: () -> Unit,
-    canGoNext: Boolean,
-    onOpenDrawer: () -> Unit
-) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 20.dp, vertical = 16.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        IconButton(onClick = onOpenDrawer) {
-            Icon(
-                Icons.Default.Menu,
-                contentDescription = "Menu",
-                tint = MaterialTheme.colorScheme.onBackground
-            )
-        }
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                "Calendar",
-                style = MaterialTheme.typography.headlineLarge,
-                color = MaterialTheme.colorScheme.onBackground
-            )
-            Text(
-                "${month.month.getDisplayName(TextStyle.FULL, Locale.getDefault())} ${month.year}",
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-        }
-        IconButton(onClick = onPrev) {
-            Icon(
-                Icons.AutoMirrored.Filled.KeyboardArrowLeft,
-                contentDescription = "Previous month",
-                tint = MaterialTheme.colorScheme.onBackground
-            )
-        }
-        IconButton(onClick = onNext, enabled = canGoNext) {
-            Icon(
-                Icons.AutoMirrored.Filled.KeyboardArrowRight,
-                contentDescription = "Next month",
-                tint = if (canGoNext) MaterialTheme.colorScheme.onBackground else MaterialTheme.colorScheme.textHint
-            )
-        }
-    }
-}
 
 private val weekdayLabels = listOf("Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat")
 

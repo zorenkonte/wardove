@@ -8,8 +8,8 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import com.composables.icons.lucide.ArrowLeft
+import com.composables.icons.lucide.Lucide
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -100,7 +100,7 @@ fun AppLockSettingsScreen(
                 title = { Text("App Lock") },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                        Icon(Lucide.ArrowLeft, contentDescription = "Back")
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -113,23 +113,26 @@ fun AppLockSettingsScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(padding)
+                .padding(horizontal = 16.dp, vertical = 12.dp)
         ) {
-            AppLockSwitchRow(
-                label = "Enable App Lock",
-                subtitle = if (biometricAvailable)
-                    "Require biometrics to open the app"
-                else
-                    "No biometric hardware available",
-                checked = isEnabled,
-                enabled = biometricAvailable,
-                onCheckedChange = { enabled ->
-                    if (enabled) {
-                        biometricPrompt.authenticate(enablePromptInfo)
-                    } else {
-                        viewModel.setAppLockEnabled(false)
+            SettingsCard {
+                AppLockSwitchRow(
+                    label = "Enable App Lock",
+                    subtitle = if (biometricAvailable)
+                        "Require biometrics to open the app"
+                    else
+                        "No biometric hardware available",
+                    checked = isEnabled,
+                    enabled = biometricAvailable,
+                    onCheckedChange = { enabled ->
+                        if (enabled) {
+                            biometricPrompt.authenticate(enablePromptInfo)
+                        } else {
+                            viewModel.setAppLockEnabled(false)
+                        }
                     }
-                }
-            )
+                )
+            }
         }
     }
 }

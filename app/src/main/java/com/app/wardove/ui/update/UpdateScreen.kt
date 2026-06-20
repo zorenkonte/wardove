@@ -15,13 +15,13 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.automirrored.filled.OpenInNew
-import androidx.compose.material.icons.filled.CheckCircle
-import androidx.compose.material.icons.filled.Download
-import androidx.compose.material.icons.filled.Feedback
-import androidx.compose.material.icons.filled.Refresh
+import com.composables.icons.lucide.ArrowLeft
+import com.composables.icons.lucide.CircleCheck
+import com.composables.icons.lucide.Download
+import com.composables.icons.lucide.ExternalLink
+import com.composables.icons.lucide.Lucide
+import com.composables.icons.lucide.MessageSquare
+import com.composables.icons.lucide.RefreshCw
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -79,12 +79,12 @@ fun UpdateScreen(
                 title = { Text("Updates & Feedback") },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                        Icon(Lucide.ArrowLeft, contentDescription = "Back")
                     }
                 },
                 actions = {
                     IconButton(onClick = viewModel::load) {
-                        Icon(Icons.Default.Refresh, contentDescription = "Refresh")
+                        Icon(Lucide.RefreshCw, contentDescription = "Refresh")
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -263,7 +263,7 @@ private fun LatestReleaseCard(
                 }
                 if (!isUpdateAvailable) {
                     Icon(
-                        Icons.Default.CheckCircle,
+                        Lucide.CircleCheck,
                         contentDescription = null,
                         tint = MaterialTheme.colorScheme.primary,
                         modifier = Modifier.size(28.dp)
@@ -297,7 +297,7 @@ private fun LatestReleaseCard(
                             onClick = onDownload,
                             modifier = Modifier.fillMaxWidth()
                         ) {
-                            Icon(Icons.Default.Download, contentDescription = null, modifier = Modifier.size(18.dp))
+                            Icon(Lucide.Download, contentDescription = null, modifier = Modifier.size(18.dp))
                             Spacer(Modifier.width(8.dp))
                             Text("Download & Install")
                         }
@@ -366,7 +366,7 @@ private fun FeedbackCard(onFeedback: () -> Unit) {
             horizontalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             Icon(
-                Icons.Default.Feedback,
+                Lucide.MessageSquare,
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.primary
             )
@@ -384,7 +384,7 @@ private fun FeedbackCard(onFeedback: () -> Unit) {
                 )
             }
             Icon(
-                Icons.AutoMirrored.Filled.OpenInNew,
+                Lucide.ExternalLink,
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.onSurfaceVariant,
                 modifier = Modifier.size(18.dp)

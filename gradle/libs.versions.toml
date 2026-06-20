@@ -19,6 +19,7 @@ desugarJdk = "2.1.5"
 datastore = "1.1.7"
 biometric = "1.1.0"
 splashscreen = "1.0.1"
+lucide = "1.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -72,6 +73,9 @@ androidx-camera-view = { group = "androidx.camera", name = "camera-view", versio
 
 # Desugaring
 desugar-jdk-libs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "desugarJdk" }
+
+# Lucide icons (Compose)
+icons-lucide = { group = "com.composables", name = "icons-lucide", version.ref = "lucide" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

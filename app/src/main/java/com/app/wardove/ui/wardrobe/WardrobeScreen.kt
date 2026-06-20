@@ -18,16 +18,13 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.BarChart
-import androidx.compose.material.icons.filled.CalendarMonth
-import androidx.compose.material.icons.filled.Checkroom
-import androidx.compose.material.icons.filled.Clear
-import androidx.compose.material.icons.filled.LocalLaundryService
-import androidx.compose.material.icons.filled.Menu
-import androidx.compose.material.icons.filled.Search
-import androidx.compose.material.icons.filled.Sort
+import com.app.wardove.ui.components.LargeTitleHeader
+import com.composables.icons.lucide.ArrowUpDown
+import com.composables.icons.lucide.Lucide
+import com.composables.icons.lucide.Plus
+import com.composables.icons.lucide.Search
+import com.composables.icons.lucide.Shirt
+import com.composables.icons.lucide.X
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -109,7 +106,7 @@ fun WardrobeScreen(
                 contentColor = MaterialTheme.colorScheme.onPrimary,
                 shape = CircleShape
             ) {
-                Icon(Icons.Default.Add, contentDescription = "Add Item")
+                Icon(Lucide.Plus, contentDescription = "Add Item")
             }
         },
         snackbarHost = { SnackbarHost(snackbarHostState) }
@@ -119,10 +116,19 @@ fun WardrobeScreen(
                 .fillMaxSize()
                 .padding(padding)
         ) {
-            WardrobeHeader(
-                itemCount = items.size,
-                onSortClick = { showSortSheet = true },
-                onOpenDrawer = onOpenDrawer
+            LargeTitleHeader(
+                title = "Wardove",
+                onOpenDrawer = onOpenDrawer,
+                subtitle = "${items.size} items",
+                actions = {
+                    IconButton(onClick = { showSortSheet = true }) {
+                        Icon(
+                            Lucide.ArrowUpDown,
+                            contentDescription = "Sort",
+                            tint = MaterialTheme.colorScheme.onBackground
+                        )
+                    }
+                }
             )
 
             SearchBar(
@@ -182,42 +188,6 @@ fun WardrobeScreen(
     }
 }
 
-@Composable
-private fun WardrobeHeader(itemCount: Int, onSortClick: () -> Unit, onOpenDrawer: () -> Unit) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 20.dp, vertical = 16.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        IconButton(onClick = onOpenDrawer) {
-            Icon(
-                Icons.Default.Menu,
-                contentDescription = "Menu",
-                tint = MaterialTheme.colorScheme.onBackground
-            )
-        }
-        Column(modifier = Modifier.weight(1f)) {
-            Text(
-                text = "Wardove",
-                style = MaterialTheme.typography.displayLarge,
-                color = MaterialTheme.colorScheme.onBackground
-            )
-            Text(
-                text = "$itemCount items",
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-        }
-        IconButton(onClick = onSortClick) {
-            Icon(
-                Icons.Default.Sort,
-                contentDescription = "Sort",
-                tint = MaterialTheme.colorScheme.onBackground
-            )
-        }
-    }
-}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -239,7 +209,7 @@ private fun SearchBar(
         },
         leadingIcon = {
             Icon(
-                Icons.Default.Search,
+                Lucide.Search,
                 contentDescription = null,
                 tint = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -248,7 +218,7 @@ private fun SearchBar(
             if (query.isNotEmpty()) {
                 IconButton(onClick = { onQueryChange("") }) {
                     Icon(
-                        Icons.Default.Clear,
+                        Lucide.X,
                         contentDescription = "Clear",
                         tint = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -441,7 +411,7 @@ private fun EmptyState(hasQuery: Boolean, modifier: Modifier = Modifier) {
             modifier = Modifier.padding(32.dp)
         ) {
             Icon(
-                Icons.Default.Checkroom,
+                Lucide.Shirt,
                 contentDescription = null,
                 modifier = Modifier.size(72.dp),
                 tint = MaterialTheme.colorScheme.textHint

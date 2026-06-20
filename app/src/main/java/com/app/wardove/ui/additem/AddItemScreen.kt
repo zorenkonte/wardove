@@ -25,12 +25,12 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.ArrowDropDown
-import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.PhotoCamera
-import androidx.compose.material.icons.filled.PhotoLibrary
+import com.composables.icons.lucide.ArrowLeft
+import com.composables.icons.lucide.Camera
+import com.composables.icons.lucide.Check
+import com.composables.icons.lucide.ChevronDown
+import com.composables.icons.lucide.Images
+import com.composables.icons.lucide.Lucide
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DropdownMenu
@@ -90,7 +90,7 @@ fun AddItemScreen(
                 title = { Text(if (state.isEditing) "Edit Item" else "Add Item") },
                 navigationIcon = {
                     IconButton(onClick = onCancel) {
-                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                        Icon(Lucide.ArrowLeft, contentDescription = "Back")
                     }
                 },
                 actions = {
@@ -98,7 +98,7 @@ fun AddItemScreen(
                         onClick = { viewModel.save(onSaved) },
                         enabled = state.canSave
                     ) {
-                        Icon(Icons.Default.Check, contentDescription = "Save")
+                        Icon(Lucide.Check, contentDescription = "Save")
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -238,7 +238,7 @@ private fun ImagePicker(
             onClick = onCamera,
             modifier = Modifier.weight(1f)
         ) {
-            Icon(Icons.Default.PhotoCamera, contentDescription = null)
+            Icon(Lucide.Camera, contentDescription = null)
             Spacer(Modifier.size(8.dp))
             Text("Camera")
         }
@@ -246,7 +246,7 @@ private fun ImagePicker(
             onClick = onGallery,
             modifier = Modifier.weight(1f)
         ) {
-            Icon(Icons.Default.PhotoLibrary, contentDescription = null)
+            Icon(Lucide.Images, contentDescription = null)
             Spacer(Modifier.size(8.dp))
             Text("Gallery")
         }
@@ -284,7 +284,7 @@ private fun CategoryDropdown(
                         else MaterialTheme.colorScheme.onSurface
                     )
                 }
-                Icon(Icons.Default.ArrowDropDown, contentDescription = null)
+                Icon(Lucide.ChevronDown, contentDescription = null)
             }
         }
         DropdownMenu(
