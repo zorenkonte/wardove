@@ -23,7 +23,10 @@ import com.mikepenz.aboutlibraries.ui.compose.produceLibraries
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun LicensesSettingsScreen(onBack: () -> Unit) {
+fun LicensesSettingsScreen(
+    onBack: () -> Unit,
+    onLibraryClick: (String) -> Unit,
+) {
     val context = LocalContext.current
     val libraries by produceLibraries {
         context.resources.openRawResource(R.raw.aboutlibraries).bufferedReader().readText()
@@ -48,7 +51,8 @@ fun LicensesSettingsScreen(onBack: () -> Unit) {
             libraries,
             modifier = Modifier
                 .fillMaxSize()
-                .padding(padding)
+                .padding(padding),
+            onLibraryClick = { library -> onLibraryClick(library.uniqueId) },
         )
     }
 }

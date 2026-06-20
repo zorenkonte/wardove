@@ -1,5 +1,7 @@
 package com.app.wardove.ui.navigation
 
+import android.net.Uri
+
 object WardoveDestinations {
     const val WARDROBE = "wardrobe"
     const val LAUNDRY = "laundry"
@@ -24,4 +26,8 @@ object WardoveDestinations {
     const val ITEM_DETAIL_ROUTE = "item_detail/{itemId}"
     const val ITEM_DETAIL_ARG = "itemId"
     fun itemDetail(itemId: Long) = "item_detail/$itemId"
+
+    const val LICENSE_DETAIL_ROUTE = "license_detail/{libraryId}"
+    const val LICENSE_DETAIL_ARG = "libraryId"
+    fun licenseDetail(libraryId: String) = "license_detail/${Uri.encode(libraryId)}"
 }

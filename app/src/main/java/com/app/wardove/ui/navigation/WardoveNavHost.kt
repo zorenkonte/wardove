@@ -29,6 +29,7 @@ import com.app.wardove.ui.settings.AboutSettingsScreen
 import com.app.wardove.ui.settings.AppLockSettingsScreen
 import com.app.wardove.ui.settings.AppearanceSettingsScreen
 import com.app.wardove.ui.settings.DiagnosticsSettingsScreen
+import com.app.wardove.ui.settings.LicenseDetailScreen
 import com.app.wardove.ui.settings.LicensesSettingsScreen
 import com.app.wardove.ui.settings.NotificationSettingsScreen
 import com.app.wardove.ui.update.UpdateScreen
@@ -247,7 +248,31 @@ fun WardoveNavHost(
                 popEnterTransition = popEnterSlide,
                 popExitTransition = popExitSlide
             ) {
-                LicensesSettingsScreen(onBack = { navController.popBackStack() })
+                LicensesSettingsScreen(
+                    onBack = { navController.popBackStack() },
+                    onLibraryClick = { id ->
+                        navController.navigate(WardoveDestinations.licenseDetail(id))
+                    }
+                )
+            }
+
+            composable(
+                route = WardoveDestinations.LICENSE_DETAIL_ROUTE,
+                arguments = listOf(
+                    navArgument(WardoveDestinations.LICENSE_DETAIL_ARG) { type = NavType.StringType }
+                ),
+                enterTransition = enterSlide,
+                exitTransition = exitSlide,
+                popEnterTransition = popEnterSlide,
+                popExitTransition = popExitSlide
+            ) { entry ->
+                val id = android.net.Uri.decode(
+                    entry.arguments?.getString(WardoveDestinations.LICENSE_DETAIL_ARG).orEmpty()
+                )
+                LicenseDetailScreen(
+                    libraryId = id,
+                    onBack = { navController.popBackStack() }
+                )
             }
 
             composable(

@@ -21,6 +21,7 @@
     <string name="action_export">Export</string>
     <string name="action_refresh">Refresh</string>
     <string name="action_edit">Edit</string>
+    <string name="action_open">Open</string>
     <string name="action_add_item">Add Item</string>
     <string name="action_menu">Menu</string>
     <string name="action_about">About</string>
