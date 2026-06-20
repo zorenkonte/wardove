@@ -32,19 +32,35 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build debug APK
-        run: ./gradlew assembleDebug
+      - name: Compute version
+        id: ver
+        run: |
+          BASE=$(grep '^appVersionBase=' gradle.properties | cut -d= -f2)
+          echo "version=${BASE}.${{ github.run_number }}" >> "$GITHUB_OUTPUT"
+
+      - name: Decode keystore
+        # Only available for pushes (secrets are not exposed to fork PRs).
+        if: github.event_name == 'push'
+        run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > "$RUNNER_TEMP/release.jks"
+
+      - name: Build release APK
+        run: ./gradlew assembleRelease -PbuildNumber=${{ github.run_number }}
+        env:
+          KEYSTORE_PATH: ${{ github.event_name == 'push' && format('{0}/release.jks', runner.temp) || '' }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
 
       - name: Rename APK
         run: |
           mkdir -p artifacts
-          cp app/build/outputs/apk/debug/app-debug.apk \
-            "artifacts/wardove-v1.0.${{ github.run_number }}.apk"
+          cp app/build/outputs/apk/release/app-release.apk \
+            "artifacts/wardove-v${{ steps.ver.outputs.version }}.apk"
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: wardove-debug-${{ github.sha }}
+          name: wardove-v${{ steps.ver.outputs.version }}
           path: artifacts/*.apk
           retention-days: 30
 
@@ -53,8 +69,8 @@ jobs:
         if: github.event_name == 'push'
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v1.0.${{ github.run_number }}
-          name: Wardove v1.0.${{ github.run_number }}
+          tag_name: v${{ steps.ver.outputs.version }}
+          name: Wardove v${{ steps.ver.outputs.version }}
           # Auto-generate the "What's Changed" changelog from merged PRs/commits
           # since the previous release, the same way open-source repos do.
           generate_release_notes: true
