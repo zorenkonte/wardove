@@ -118,6 +118,13 @@ dependencies {
     // AboutLibraries (OSS license screen)
     implementation(libs.aboutlibraries.compose.m3)
 
+    // WorkManager
+    implementation(libs.androidx.work.runtime.ktx)
+
+    // Hilt WorkManager integration
+    implementation(libs.androidx.hilt.work)
+    ksp(libs.androidx.hilt.compiler)
+
     // CameraX
     implementation(libs.androidx.camera.core)
     implementation(libs.androidx.camera.camera2)

@@ -125,9 +125,7 @@ fun UpdateScreen(
                 val releases = state.releases
                 // Pick the highest-version stable release rather than the most
                 // recently published one, so an older-dated-but-higher tag wins.
-                val latest = releases
-                    .filter { !it.prerelease }
-                    .maxWithOrNull { a, b -> compareVersions(a.tagName, b.tagName) }
+                val latest = latestStableRelease(releases)
                 val history = releases.filter { it != latest }
 
                 LazyColumn(

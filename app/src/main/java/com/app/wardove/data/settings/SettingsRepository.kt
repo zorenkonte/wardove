@@ -22,6 +22,7 @@ class SettingsRepository @Inject constructor(
         val THEME_MODE = stringPreferencesKey("theme_mode")
         val DYNAMIC_COLOR = booleanPreferencesKey("dynamic_color")
         val LAUNDRY_THRESHOLD = intPreferencesKey("laundry_threshold")
+        val LAST_NOTIFIED_UPDATE_TAG = stringPreferencesKey("last_notified_update_tag")
     }
 
     val settings: Flow<AppSettings> = dataStore.data
@@ -53,5 +54,13 @@ class SettingsRepository @Inject constructor(
             AppSettings.MAX_LAUNDRY_THRESHOLD
         )
         dataStore.edit { it[Keys.LAUNDRY_THRESHOLD] = clamped }
+    }
+
+    val lastNotifiedUpdateTag: Flow<String?> = dataStore.data
+        .catch { e -> if (e is IOException) emit(emptyPreferences()) else throw e }
+        .map { prefs -> prefs[Keys.LAST_NOTIFIED_UPDATE_TAG] }
+
+    suspend fun setLastNotifiedUpdateTag(tag: String) {
+        dataStore.edit { it[Keys.LAST_NOTIFIED_UPDATE_TAG] = tag }
     }
 }

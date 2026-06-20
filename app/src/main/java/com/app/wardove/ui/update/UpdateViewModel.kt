@@ -117,6 +117,16 @@ class UpdateViewModel @Inject constructor(
 }
 
 /**
+ * Returns the highest-version non-prerelease release from [releases], or null if none.
+ * Uses [compareVersions] for numeric ordering so a higher semver tag always wins
+ * over a more-recently published one.
+ */
+fun latestStableRelease(releases: List<com.app.wardove.data.model.GithubRelease>): com.app.wardove.data.model.GithubRelease? =
+    releases
+        .filter { !it.prerelease }
+        .maxWithOrNull { a, b -> compareVersions(a.tagName, b.tagName) }
+
+/**
  * Compares two dotted version strings (e.g. "2.0.24" vs "v1.0.23") numerically,
  * tolerating a leading 'v' and differing segment counts. Non-numeric segments are
  * treated as 0. Returns >0 if [a] is newer than [b], <0 if older, 0 if equal.

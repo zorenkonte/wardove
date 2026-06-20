@@ -5,6 +5,7 @@ import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
@@ -16,6 +17,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.app.wardove.work.UpdateCheckWorker
 import com.app.wardove.ui.additem.AddItemScreen
 import com.app.wardove.ui.calendar.CalendarScreen
 import com.app.wardove.ui.history.HistoryScreen
@@ -35,7 +37,9 @@ private const val SNACKBAR_KEY = "snackbar_message"
 
 @Composable
 fun WardoveNavHost(
-    navController: NavHostController = rememberNavController()
+    navController: NavHostController = rememberNavController(),
+    deepLinkRoute: String? = null,
+    onDeepLinkConsumed: () -> Unit = {}
 ) {
     val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
     val scope = rememberCoroutineScope()
@@ -48,6 +52,15 @@ fun WardoveNavHost(
     // falling through to the NavHost (which would pop the back stack).
     BackHandler(enabled = drawerState.isOpen) {
         scope.launch { drawerState.close() }
+    }
+
+    // Deep-link from update notification: navigate to Update screen and clear the route
+    // so a subsequent notification tap (via onNewIntent → null → route) re-triggers.
+    LaunchedEffect(deepLinkRoute) {
+        if (deepLinkRoute == UpdateCheckWorker.NAVIGATE_TO_UPDATE) {
+            navController.navigate(WardoveDestinations.UPDATE)
+            onDeepLinkConsumed()
+        }
     }
 
     ModalNavigationDrawer(
