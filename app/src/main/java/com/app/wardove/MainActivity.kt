@@ -26,7 +26,9 @@ import com.app.wardove.ui.lock.LockScreen
 import com.app.wardove.ui.lock.LockViewModel
 import com.app.wardove.ui.navigation.WardoveNavHost
 import com.app.wardove.ui.theme.WardoveTheme
+import com.app.wardove.ui.navigation.ShortcutActions
 import com.app.wardove.work.UpdateCheckWorker
+import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.first
@@ -60,8 +62,8 @@ class MainActivity : FragmentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        // Capture deep-link route from the launching intent (cold start via notification).
-        notificationNavRoute = intent.getStringExtra(UpdateCheckWorker.EXTRA_NAVIGATE_TO)
+        // Capture deep-link route from the launching intent (cold start via notification or shortcut).
+        notificationNavRoute = resolveNavRoute(intent)
 
         // Request POST_NOTIFICATIONS on Android 13+ the first time the app launches.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
@@ -122,8 +124,8 @@ class MainActivity : FragmentActivity() {
 
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
-        // Warm start: app was already running when notification was tapped.
-        notificationNavRoute = intent.getStringExtra(UpdateCheckWorker.EXTRA_NAVIGATE_TO)
+        // Warm start: app was already running when notification or shortcut was tapped.
+        notificationNavRoute = resolveNavRoute(intent)
     }
 
     override fun onStart() {
@@ -138,6 +140,22 @@ class MainActivity : FragmentActivity() {
         if (!isChangingConfigurations) {
             stopTimestamp = System.currentTimeMillis()
         }
+    }
+
+    /**
+     * Resolves the Compose nav route to navigate to from an incoming intent.
+     * Checks for a shortcut custom action first, then falls back to the
+     * notification string extra so both paths share the same deepLinkRoute flow.
+     */
+    private fun resolveNavRoute(intent: Intent): String? {
+        val shortcutRoute = ShortcutActions.routeForAction(intent.action)
+        if (shortcutRoute != null) {
+            ShortcutActions.shortcutIdForAction(intent.action)?.let { id ->
+                ShortcutManagerCompat.reportShortcutUsed(this, id)
+            }
+            return shortcutRoute
+        }
+        return intent.getStringExtra(UpdateCheckWorker.EXTRA_NAVIGATE_TO)
     }
 
     private fun showBiometricPrompt() {

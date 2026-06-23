@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Static app shortcuts — long-press the launcher icon to reveal these.
+    Each <intent> uses a custom action that MainActivity maps to a Compose nav route
+    via ShortcutActions.routeForAction(intent.action).
+    Max 4 distinct shortcuts recommended by Google.
+-->
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 1. Quick add item -->
+    <shortcut
+        android:shortcutId="add_item"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_add"
+        android:shortcutShortLabel="@string/shortcut_add_short"
+        android:shortcutLongLabel="@string/shortcut_add_long">
+        <intent
+            android:action="com.app.wardove.action.ADD_ITEM"
+            android:targetPackage="com.app.wardove"
+            android:targetClass="com.app.wardove.MainActivity" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <!-- 2. Laundry -->
+    <shortcut
+        android:shortcutId="laundry"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_laundry"
+        android:shortcutShortLabel="@string/shortcut_laundry_short"
+        android:shortcutLongLabel="@string/shortcut_laundry_long">
+        <intent
+            android:action="com.app.wardove.action.LAUNDRY"
+            android:targetPackage="com.app.wardove"
+            android:targetClass="com.app.wardove.MainActivity" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <!-- 3. Check for updates -->
+    <shortcut
+        android:shortcutId="update"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_update"
+        android:shortcutShortLabel="@string/shortcut_update_short"
+        android:shortcutLongLabel="@string/shortcut_update_long">
+        <intent
+            android:action="com.app.wardove.action.UPDATE"
+            android:targetPackage="com.app.wardove"
+            android:targetClass="com.app.wardove.MainActivity" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <!-- 4. Stats -->
+    <shortcut
+        android:shortcutId="stats"
+        android:enabled="true"
+        android:icon="@drawable/ic_shortcut_stats"
+        android:shortcutShortLabel="@string/shortcut_stats_short"
+        android:shortcutLongLabel="@string/shortcut_stats_long">
+        <intent
+            android:action="com.app.wardove.action.STATS"
+            android:targetPackage="com.app.wardove"
+            android:targetClass="com.app.wardove.MainActivity" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+
+</shortcuts>

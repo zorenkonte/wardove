@@ -291,4 +291,15 @@
     <string name="download_manager_title">Wardove Update</string>
     <!-- %s = APK filename -->
     <string name="download_manager_description">Downloading %s</string>
+
+    <!-- ── App shortcuts (res/xml/shortcuts.xml) ── -->
+    <!-- Short labels: ≤10 chars; long labels: ≤25 chars (Google guideline) -->
+    <string name="shortcut_add_short">Add</string>
+    <string name="shortcut_add_long">Quick add item</string>
+    <string name="shortcut_laundry_short">Laundry</string>
+    <string name="shortcut_laundry_long">Open laundry</string>
+    <string name="shortcut_update_short">Updates</string>
+    <string name="shortcut_update_long">Check for updates</string>
+    <string name="shortcut_stats_short">Stats</string>
+    <string name="shortcut_stats_long">View statistics</string>
 </resources>

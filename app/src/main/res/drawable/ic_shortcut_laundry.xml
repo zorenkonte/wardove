@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shortcut icon: Laundry — water droplet on purple circle -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Purple circle background -->
+    <path
+        android:fillColor="#7F77DD"
+        android:pathData="M24,2 C36.15,2 46,11.85 46,24 C46,36.15 36.15,46 24,46 C11.85,46 2,36.15 2,24 C2,11.85 11.85,2 24,2 Z" />
+    <!-- Water droplet (white): teardrop pointing down, centered -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M24,9 C24,9 13,21 13,29 C13,35.07 17.93,40 24,40 C30.07,40 35,35.07 35,29 C35,21 24,9 Z" />
+</vector>

@@ -31,3 +31,29 @@ object WardoveDestinations {
     const val LICENSE_DETAIL_ARG = "libraryId"
     fun licenseDetail(libraryId: String) = "license_detail/${Uri.encode(libraryId)}"
 }
+
+/** Custom intent actions for static app shortcuts defined in res/xml/shortcuts.xml. */
+object ShortcutActions {
+    const val ADD_ITEM = "com.app.wardove.action.ADD_ITEM"
+    const val LAUNDRY  = "com.app.wardove.action.LAUNDRY"
+    const val UPDATE   = "com.app.wardove.action.UPDATE"
+    const val STATS    = "com.app.wardove.action.STATS"
+
+    /** Maps a shortcut intent action to the Compose nav route to navigate to. */
+    fun routeForAction(action: String?): String? = when (action) {
+        ADD_ITEM -> WardoveDestinations.addItem()
+        LAUNDRY  -> WardoveDestinations.LAUNDRY
+        UPDATE   -> WardoveDestinations.UPDATE
+        STATS    -> WardoveDestinations.STATS
+        else     -> null
+    }
+
+    /** Maps a shortcut intent action to the shortcutId used in shortcuts.xml (for reportShortcutUsed). */
+    fun shortcutIdForAction(action: String?): String? = when (action) {
+        ADD_ITEM -> "add_item"
+        LAUNDRY  -> "laundry"
+        UPDATE   -> "update"
+        STATS    -> "stats"
+        else     -> null
+    }
+}

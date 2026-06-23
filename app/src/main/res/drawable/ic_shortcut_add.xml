@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shortcut icon: Quick Add Item — plus sign on teal circle -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Teal circle background -->
+    <path
+        android:fillColor="#5DCAA5"
+        android:pathData="M24,2 C36.15,2 46,11.85 46,24 C46,36.15 36.15,46 24,46 C11.85,46 2,36.15 2,24 C2,11.85 11.85,2 24,2 Z" />
+    <!-- Plus icon (white) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,13 L26,13 L26,22 L35,22 L35,26 L26,26 L26,35 L22,35 L22,26 L13,26 L13,22 L22,22 Z" />
+</vector>

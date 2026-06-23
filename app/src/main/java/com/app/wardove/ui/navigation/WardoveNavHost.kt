@@ -19,7 +19,6 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import androidx.compose.ui.res.stringResource
 import com.app.wardove.R
-import com.app.wardove.work.UpdateCheckWorker
 import com.app.wardove.ui.additem.AddItemScreen
 import com.app.wardove.ui.calendar.CalendarScreen
 import com.app.wardove.ui.history.HistoryScreen
@@ -59,13 +58,27 @@ fun WardoveNavHost(
         scope.launch { drawerState.close() }
     }
 
-    // Deep-link from update notification: navigate to Update screen and clear the route
-    // so a subsequent notification tap (via onNewIntent → null → route) re-triggers.
+    // Deep-link from a notification or app shortcut: navigate to the target route and
+    // clear it so a subsequent tap (onNewIntent → null → new route) re-triggers.
+    // Top-level destinations use the drawer's nav options (popUpTo start, saveState)
+    // so back returns to Wardrobe and tab state is preserved.
     LaunchedEffect(deepLinkRoute) {
-        if (deepLinkRoute == UpdateCheckWorker.NAVIGATE_TO_UPDATE) {
-            navController.navigate(WardoveDestinations.UPDATE)
-            onDeepLinkConsumed()
+        val route = deepLinkRoute ?: return@LaunchedEffect
+        val isTopLevel = route in setOf(
+            WardoveDestinations.WARDROBE,
+            WardoveDestinations.LAUNDRY,
+            WardoveDestinations.CALENDAR,
+            WardoveDestinations.STATS,
+            WardoveDestinations.SETTINGS
+        )
+        navController.navigate(route) {
+            if (isTopLevel) {
+                popUpTo(navController.graph.findStartDestination().id) { saveState = true }
+                launchSingleTop = true
+                restoreState = true
+            }
         }
+        onDeepLinkConsumed()
     }
 
     ModalNavigationDrawer(

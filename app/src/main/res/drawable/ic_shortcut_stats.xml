@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shortcut icon: Stats — ascending bar chart on dark circle -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- Dark circle background -->
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M24,2 C36.15,2 46,11.85 46,24 C46,36.15 36.15,46 24,46 C11.85,46 2,36.15 2,24 C2,11.85 11.85,2 24,2 Z" />
+    <!-- Bar chart — 3 ascending bars (white) -->
+    <!-- Left bar (short) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M11,37 L17,37 L17,28 L11,28 Z" />
+    <!-- Middle bar (medium) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M21,37 L27,37 L27,19 L21,19 Z" />
+    <!-- Right bar (tall) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M31,37 L37,37 L37,12 L31,12 Z" />
+</vector>
