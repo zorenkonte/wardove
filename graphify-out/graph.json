@@ -61,7 +61,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "app_build_gradle",
-      "community": 51,
+      "community": 50,
       "norm_label": "build.gradle.kts"
     },
     {
@@ -71,7 +71,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "wardove_exampleinstrumentedtest",
-      "community": 40,
+      "community": 39,
       "norm_label": "exampleinstrumentedtest.kt"
     },
     {
@@ -81,7 +81,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "wardove_exampleinstrumentedtest_exampleinstrumentedtest",
-      "community": 40,
+      "community": 39,
       "norm_label": "exampleinstrumentedtest"
     },
     {
@@ -91,7 +91,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "wardove_exampleinstrumentedtest_exampleinstrumentedtest_useappcontext",
-      "community": 40,
+      "community": 39,
       "norm_label": ".useappcontext()"
     },
     {
@@ -101,17 +101,17 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "wardove_mainactivity",
-      "community": 13,
+      "community": 5,
       "norm_label": "mainactivity.kt"
     },
     {
       "label": "MainActivity",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L37",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "wardove_mainactivity_mainactivity",
-      "community": 13,
+      "community": 5,
       "norm_label": "mainactivity"
     },
     {
@@ -121,107 +121,127 @@
       "source_location": "",
       "_origin": "ast",
       "id": "fragmentactivity",
-      "community": 13,
+      "community": 5,
       "norm_label": "fragmentactivity"
     },
     {
       "label": "SettingsRepository",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L40",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "settingsrepository",
-      "community": 13,
+      "community": 5,
       "norm_label": "settingsrepository"
     },
     {
       "label": "LockViewModel",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L43",
+      "source_location": "L45",
       "_origin": "ast",
       "id": "lockviewmodel",
-      "community": 13,
+      "community": 5,
       "norm_label": "lockviewmodel"
     },
     {
       "label": "BiometricPrompt",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L48",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "biometricprompt",
-      "community": 13,
+      "community": 5,
       "norm_label": "biometricprompt"
     },
     {
       "label": ".onCreate()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L58",
+      "source_location": "L60",
       "_origin": "ast",
       "id": "wardove_mainactivity_mainactivity_oncreate",
-      "community": 13,
+      "community": 5,
       "norm_label": ".oncreate()"
     },
     {
       "label": "Bundle",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L58",
+      "source_location": "L60",
       "_origin": "ast",
       "id": "bundle",
-      "community": 13,
+      "community": 5,
       "norm_label": "bundle"
     },
     {
       "label": ".onNewIntent()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L123",
+      "source_location": "L125",
       "_origin": "ast",
       "id": "wardove_mainactivity_mainactivity_onnewintent",
-      "community": 13,
+      "community": 5,
       "norm_label": ".onnewintent()"
     },
     {
       "label": "Intent",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L123",
+      "source_location": "L125",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_mainactivity_kt_intent",
-      "community": 13,
+      "community": 5,
       "norm_label": "intent"
     },
     {
       "label": ".onStart()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L129",
+      "source_location": "L131",
       "_origin": "ast",
       "id": "wardove_mainactivity_mainactivity_onstart",
-      "community": 13,
+      "community": 5,
       "norm_label": ".onstart()"
     },
     {
       "label": ".onStop()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L136",
+      "source_location": "L138",
       "_origin": "ast",
       "id": "wardove_mainactivity_mainactivity_onstop",
-      "community": 13,
+      "community": 5,
       "norm_label": ".onstop()"
+    },
+    {
+      "label": ".resolveNavRoute()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L150",
+      "_origin": "ast",
+      "id": "wardove_mainactivity_mainactivity_resolvenavroute",
+      "community": 5,
+      "norm_label": ".resolvenavroute()"
+    },
+    {
+      "label": "String",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L150",
+      "_origin": "ast",
+      "id": "app_src_main_java_com_app_wardove_mainactivity_kt_string",
+      "community": 5,
+      "norm_label": "string"
     },
     {
       "label": ".showBiometricPrompt()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L143",
+      "source_location": "L161",
       "_origin": "ast",
       "id": "wardove_mainactivity_mainactivity_showbiometricprompt",
-      "community": 13,
+      "community": 5,
       "norm_label": ".showbiometricprompt()"
     },
     {
@@ -421,7 +441,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "local_wardovedatabase",
-      "community": 24,
+      "community": 23,
       "norm_label": "wardovedatabase.kt"
     },
     {
@@ -431,7 +451,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "local_wardovedatabase_wardovedatabase",
-      "community": 24,
+      "community": 23,
       "norm_label": "wardovedatabase"
     },
     {
@@ -441,7 +461,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "roomdatabase",
-      "community": 24,
+      "community": 23,
       "norm_label": "roomdatabase"
     },
     {
@@ -451,7 +471,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "local_wardovedatabase_wardovedatabase_clothingdao",
-      "community": 24,
+      "community": 23,
       "norm_label": ".clothingdao()"
     },
     {
@@ -461,7 +481,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_local_wardovedatabase_kt_clothingdao",
-      "community": 24,
+      "community": 23,
       "norm_label": "clothingdao"
     },
     {
@@ -471,7 +491,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "local_wardovedatabase_wardovedatabase_wearlogdao",
-      "community": 24,
+      "community": 23,
       "norm_label": ".wearlogdao()"
     },
     {
@@ -481,7 +501,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_local_wardovedatabase_kt_wearlogdao",
-      "community": 24,
+      "community": 23,
       "norm_label": "wearlogdao"
     },
     {
@@ -491,7 +511,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "local_wardovedatabase_wardovedatabase_laundrydao",
-      "community": 24,
+      "community": 23,
       "norm_label": ".laundrydao()"
     },
     {
@@ -501,7 +521,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_local_wardovedatabase_kt_laundrydao",
-      "community": 24,
+      "community": 23,
       "norm_label": "laundrydao"
     },
     {
@@ -511,7 +531,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "local_wardovedatabase_migrate",
-      "community": 24,
+      "community": 23,
       "norm_label": "migrate()"
     },
     {
@@ -521,7 +541,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "supportsqlitedatabase",
-      "community": 24,
+      "community": 23,
       "norm_label": "supportsqlitedatabase"
     },
     {
@@ -531,7 +551,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "dao_clothingdao",
-      "community": 6,
+      "community": 8,
       "norm_label": "clothingdao.kt"
     },
     {
@@ -541,7 +561,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "dao_clothingdao_clothingdao",
-      "community": 6,
+      "community": 8,
       "norm_label": "clothingdao"
     },
     {
@@ -551,7 +571,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "dao_clothingdao_clothingdao_observeall",
-      "community": 6,
+      "community": 8,
       "norm_label": ".observeall()"
     },
     {
@@ -561,7 +581,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_local_dao_clothingdao_kt_flow",
-      "community": 6,
+      "community": 8,
       "norm_label": "flow"
     },
     {
@@ -571,7 +591,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_local_dao_clothingdao_kt_list",
-      "community": 6,
+      "community": 8,
       "norm_label": "list"
     },
     {
@@ -581,7 +601,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_local_dao_clothingdao_kt_clothingitem",
-      "community": 6,
+      "community": 8,
       "norm_label": "clothingitem"
     },
     {
@@ -591,7 +611,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "dao_clothingdao_clothingdao_observebystatus",
-      "community": 6,
+      "community": 8,
       "norm_label": ".observebystatus()"
     },
     {
@@ -601,7 +621,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_local_dao_clothingdao_kt_string",
-      "community": 6,
+      "community": 8,
       "norm_label": "string"
     },
     {
@@ -611,7 +631,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "dao_clothingdao_clothingdao_observebyid",
-      "community": 6,
+      "community": 8,
       "norm_label": ".observebyid()"
     },
     {
@@ -621,7 +641,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_local_dao_clothingdao_kt_long",
-      "community": 6,
+      "community": 8,
       "norm_label": "long"
     },
     {
@@ -631,7 +651,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "dao_clothingdao_clothingdao_getbyid",
-      "community": 6,
+      "community": 8,
       "norm_label": ".getbyid()"
     },
     {
@@ -641,7 +661,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "dao_clothingdao_clothingdao_getbyids",
-      "community": 6,
+      "community": 8,
       "norm_label": ".getbyids()"
     },
     {
@@ -651,7 +671,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "dao_clothingdao_clothingdao_insert",
-      "community": 6,
+      "community": 8,
       "norm_label": ".insert()"
     },
     {
@@ -661,7 +681,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "dao_clothingdao_clothingdao_update",
-      "community": 6,
+      "community": 8,
       "norm_label": ".update()"
     },
     {
@@ -671,7 +691,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "dao_clothingdao_clothingdao_delete",
-      "community": 6,
+      "community": 8,
       "norm_label": ".delete()"
     },
     {
@@ -681,7 +701,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "dao_clothingdao_clothingdao_updatestatus",
-      "community": 6,
+      "community": 8,
       "norm_label": ".updatestatus()"
     },
     {
@@ -691,7 +711,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "dao_clothingdao_clothingdao_updatestatusforids",
-      "community": 6,
+      "community": 8,
       "norm_label": ".updatestatusforids()"
     },
     {
@@ -701,7 +721,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "dao_clothingdao_clothingdao_markworn",
-      "community": 6,
+      "community": 8,
       "norm_label": ".markworn()"
     },
     {
@@ -711,7 +731,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "dao_clothingdao_clothingdao_markunworn",
-      "community": 6,
+      "community": 8,
       "norm_label": ".markunworn()"
     },
     {
@@ -721,7 +741,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_local_dao_clothingdao_kt_int",
-      "community": 6,
+      "community": 8,
       "norm_label": "int"
     },
     {
@@ -731,7 +751,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "dao_clothingdao_clothingdao_markcleanandreset",
-      "community": 6,
+      "community": 8,
       "norm_label": ".markcleanandreset()"
     },
     {
@@ -741,7 +761,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "dao_laundrydao",
-      "community": 12,
+      "community": 14,
       "norm_label": "laundrydao.kt"
     },
     {
@@ -751,7 +771,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "dao_laundrydao_laundrydao",
-      "community": 12,
+      "community": 14,
       "norm_label": "laundrydao"
     },
     {
@@ -761,7 +781,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "dao_laundrydao_laundrydao_insertcycle",
-      "community": 12,
+      "community": 14,
       "norm_label": ".insertcycle()"
     },
     {
@@ -771,7 +791,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_local_dao_laundrydao_kt_laundrycycle",
-      "community": 12,
+      "community": 14,
       "norm_label": "laundrycycle"
     },
     {
@@ -781,7 +801,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_local_dao_laundrydao_kt_long",
-      "community": 12,
+      "community": 14,
       "norm_label": "long"
     },
     {
@@ -791,7 +811,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "dao_laundrydao_laundrydao_insertcycleitems",
-      "community": 12,
+      "community": 14,
       "norm_label": ".insertcycleitems()"
     },
     {
@@ -801,7 +821,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_local_dao_laundrydao_kt_list",
-      "community": 12,
+      "community": 14,
       "norm_label": "list"
     },
     {
@@ -811,7 +831,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "laundrycycleitem",
-      "community": 12,
+      "community": 14,
       "norm_label": "laundrycycleitem"
     },
     {
@@ -821,7 +841,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "dao_laundrydao_laundrydao_completecycle",
-      "community": 12,
+      "community": 14,
       "norm_label": ".completecycle()"
     },
     {
@@ -831,7 +851,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "dao_laundrydao_laundrydao_observeallcycles",
-      "community": 12,
+      "community": 14,
       "norm_label": ".observeallcycles()"
     },
     {
@@ -841,7 +861,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_local_dao_laundrydao_kt_flow",
-      "community": 12,
+      "community": 14,
       "norm_label": "flow"
     },
     {
@@ -851,7 +871,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "dao_laundrydao_laundrydao_observeactivecycle",
-      "community": 12,
+      "community": 14,
       "norm_label": ".observeactivecycle()"
     },
     {
@@ -861,7 +881,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "dao_laundrydao_laundrydao_observeactivecycles",
-      "community": 12,
+      "community": 14,
       "norm_label": ".observeactivecycles()"
     },
     {
@@ -871,7 +891,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "dao_laundrydao_laundrydao_observecompletedcycles",
-      "community": 12,
+      "community": 14,
       "norm_label": ".observecompletedcycles()"
     },
     {
@@ -881,7 +901,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "dao_laundrydao_laundrydao_getactivecycle",
-      "community": 12,
+      "community": 14,
       "norm_label": ".getactivecycle()"
     },
     {
@@ -891,7 +911,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "dao_laundrydao_laundrydao_getcycle",
-      "community": 12,
+      "community": 14,
       "norm_label": ".getcycle()"
     },
     {
@@ -901,7 +921,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "dao_laundrydao_laundrydao_observeitemsincycle",
-      "community": 12,
+      "community": 14,
       "norm_label": ".observeitemsincycle()"
     },
     {
@@ -911,7 +931,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_local_dao_laundrydao_kt_clothingitem",
-      "community": 12,
+      "community": 14,
       "norm_label": "clothingitem"
     },
     {
@@ -921,7 +941,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "dao_laundrydao_laundrydao_getitemsincycle",
-      "community": 12,
+      "community": 14,
       "norm_label": ".getitemsincycle()"
     },
     {
@@ -931,7 +951,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "dao_wearlogdao",
-      "community": 18,
+      "community": 19,
       "norm_label": "wearlogdao.kt"
     },
     {
@@ -941,7 +961,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "dao_wearlogdao_wearlogdao",
-      "community": 18,
+      "community": 19,
       "norm_label": "wearlogdao"
     },
     {
@@ -951,7 +971,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "dao_wearlogdao_wearlogdao_insert",
-      "community": 18,
+      "community": 19,
       "norm_label": ".insert()"
     },
     {
@@ -961,7 +981,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_local_dao_wearlogdao_kt_wearlog",
-      "community": 18,
+      "community": 19,
       "norm_label": "wearlog"
     },
     {
@@ -971,7 +991,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_local_dao_wearlogdao_kt_long",
-      "community": 18,
+      "community": 19,
       "norm_label": "long"
     },
     {
@@ -981,7 +1001,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "dao_wearlogdao_wearlogdao_observeforitem",
-      "community": 18,
+      "community": 19,
       "norm_label": ".observeforitem()"
     },
     {
@@ -991,7 +1011,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_local_dao_wearlogdao_kt_flow",
-      "community": 18,
+      "community": 19,
       "norm_label": "flow"
     },
     {
@@ -1001,7 +1021,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_local_dao_wearlogdao_kt_list",
-      "community": 18,
+      "community": 19,
       "norm_label": "list"
     },
     {
@@ -1011,7 +1031,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "dao_wearlogdao_wearlogdao_countforitem",
-      "community": 18,
+      "community": 19,
       "norm_label": ".countforitem()"
     },
     {
@@ -1021,7 +1041,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_local_dao_wearlogdao_kt_int",
-      "community": 18,
+      "community": 19,
       "norm_label": "int"
     },
     {
@@ -1031,7 +1051,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "dao_wearlogdao_wearlogdao_deleteforitem",
-      "community": 18,
+      "community": 19,
       "norm_label": ".deleteforitem()"
     },
     {
@@ -1041,7 +1061,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "dao_wearlogdao_wearlogdao_deleteforiteminrange",
-      "community": 18,
+      "community": 19,
       "norm_label": ".deleteforiteminrange()"
     },
     {
@@ -1051,7 +1071,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "dao_wearlogdao_wearlogdao_latestforitem",
-      "community": 18,
+      "community": 19,
       "norm_label": ".latestforitem()"
     },
     {
@@ -1061,7 +1081,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "dao_wearlogdao_wearlogdao_observeallwithitems",
-      "community": 18,
+      "community": 19,
       "norm_label": ".observeallwithitems()"
     },
     {
@@ -1071,7 +1091,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_local_dao_wearlogdao_kt_wearlogwithitem",
-      "community": 18,
+      "community": 19,
       "norm_label": "wearlogwithitem"
     },
     {
@@ -1081,7 +1101,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "dao_wearlogwithitem",
-      "community": 42,
+      "community": 41,
       "norm_label": "wearlogwithitem.kt"
     },
     {
@@ -1091,7 +1111,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "dao_wearlogwithitem_wearlogwithitem",
-      "community": 42,
+      "community": 41,
       "norm_label": "wearlogwithitem"
     },
     {
@@ -1101,7 +1121,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "entity_clothingitem",
-      "community": 38,
+      "community": 37,
       "norm_label": "clothingitem.kt"
     },
     {
@@ -1111,7 +1131,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "entity_clothingitem_clothingstatus",
-      "community": 38,
+      "community": 37,
       "norm_label": "clothingstatus"
     },
     {
@@ -1121,7 +1141,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "entity_clothingitem_clothingitem",
-      "community": 38,
+      "community": 37,
       "norm_label": "clothingitem"
     },
     {
@@ -1131,7 +1151,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "entity_laundrycycle",
-      "community": 46,
+      "community": 45,
       "norm_label": "laundrycycle.kt"
     },
     {
@@ -1141,7 +1161,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "entity_laundrycycle_laundrycycle",
-      "community": 46,
+      "community": 45,
       "norm_label": "laundrycycle"
     },
     {
@@ -1151,7 +1171,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "entity_laundrycycleitem",
-      "community": 47,
+      "community": 46,
       "norm_label": "laundrycycleitem.kt"
     },
     {
@@ -1161,7 +1181,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "entity_laundrycycleitem_laundrycycleitem",
-      "community": 47,
+      "community": 46,
       "norm_label": "laundrycycleitem"
     },
     {
@@ -1171,7 +1191,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "entity_wearlog",
-      "community": 48,
+      "community": 47,
       "norm_label": "wearlog.kt"
     },
     {
@@ -1181,7 +1201,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "entity_wearlog_wearlog",
-      "community": 48,
+      "community": 47,
       "norm_label": "wearlog"
     },
     {
@@ -1231,7 +1251,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "log_diagnosticsrepository",
-      "community": 1,
+      "community": 4,
       "norm_label": "diagnosticsrepository.kt"
     },
     {
@@ -1241,7 +1261,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "log_diagnosticsrepository_diagnosticsrepository",
-      "community": 1,
+      "community": 4,
       "norm_label": "diagnosticsrepository"
     },
     {
@@ -1251,7 +1271,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "log_diagnosticsrepository_diagnosticsrepository_header",
-      "community": 1,
+      "community": 4,
       "norm_label": ".header()"
     },
     {
@@ -1261,7 +1281,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_log_diagnosticsrepository_kt_string",
-      "community": 1,
+      "community": 4,
       "norm_label": "string"
     },
     {
@@ -1271,7 +1291,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "log_diagnosticsrepository_diagnosticsrepository_readlog",
-      "community": 1,
+      "community": 4,
       "norm_label": ".readlog()"
     },
     {
@@ -1281,7 +1301,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "log_diagnosticsrepository_diagnosticsrepository_exportto",
-      "community": 1,
+      "community": 4,
       "norm_label": ".exportto()"
     },
     {
@@ -1291,7 +1311,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_log_diagnosticsrepository_kt_uri",
-      "community": 1,
+      "community": 4,
       "norm_label": "uri"
     },
     {
@@ -1301,7 +1321,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "log_diagnosticsrepository_diagnosticsrepository_clear",
-      "community": 1,
+      "community": 4,
       "norm_label": ".clear()"
     },
     {
@@ -1311,7 +1331,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "log_fileloggingtree",
-      "community": 29,
+      "community": 28,
       "norm_label": "fileloggingtree.kt"
     },
     {
@@ -1321,7 +1341,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "log_fileloggingtree_fileloggingtree",
-      "community": 29,
+      "community": 28,
       "norm_label": "fileloggingtree"
     },
     {
@@ -1331,7 +1351,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "timber",
-      "community": 29,
+      "community": 28,
       "norm_label": "timber"
     },
     {
@@ -1341,7 +1361,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_log_fileloggingtree_kt_file",
-      "community": 29,
+      "community": 28,
       "norm_label": "file"
     },
     {
@@ -1351,7 +1371,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "log_fileloggingtree_fileloggingtree_log",
-      "community": 29,
+      "community": 28,
       "norm_label": ".log()"
     },
     {
@@ -1361,7 +1381,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_log_fileloggingtree_kt_int",
-      "community": 29,
+      "community": 28,
       "norm_label": "int"
     },
     {
@@ -1371,7 +1391,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_log_fileloggingtree_kt_string",
-      "community": 29,
+      "community": 28,
       "norm_label": "string"
     },
     {
@@ -1381,7 +1401,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "throwable",
-      "community": 29,
+      "community": 28,
       "norm_label": "throwable"
     },
     {
@@ -1391,7 +1411,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "log_fileloggingtree_fileloggingtree_appendraw",
-      "community": 29,
+      "community": 28,
       "norm_label": ".appendraw()"
     },
     {
@@ -1401,7 +1421,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "log_fileloggingtree_fileloggingtree_appendtofile",
-      "community": 29,
+      "community": 28,
       "norm_label": ".appendtofile()"
     },
     {
@@ -1411,7 +1431,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "model_githubrelease",
-      "community": 39,
+      "community": 38,
       "norm_label": "githubrelease.kt"
     },
     {
@@ -1421,7 +1441,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "model_githubrelease_githubrelease",
-      "community": 39,
+      "community": 38,
       "norm_label": "githubrelease"
     },
     {
@@ -1431,7 +1451,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "model_githubrelease_githubasset",
-      "community": 39,
+      "community": 38,
       "norm_label": "githubasset"
     },
     {
@@ -1441,7 +1461,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "repository_calendarrepository",
-      "community": 34,
+      "community": 33,
       "norm_label": "calendarrepository.kt"
     },
     {
@@ -1451,7 +1471,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "repository_calendarrepository_calendarrepository",
-      "community": 34,
+      "community": 33,
       "norm_label": "calendarrepository"
     },
     {
@@ -1461,7 +1481,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "repository_calendarrepository_calendarrepository_observeallwearlogswithitems",
-      "community": 34,
+      "community": 33,
       "norm_label": ".observeallwearlogswithitems()"
     },
     {
@@ -1471,7 +1491,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_repository_calendarrepository_kt_flow",
-      "community": 34,
+      "community": 33,
       "norm_label": "flow"
     },
     {
@@ -1481,7 +1501,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_repository_calendarrepository_kt_list",
-      "community": 34,
+      "community": 33,
       "norm_label": "list"
     },
     {
@@ -1491,7 +1511,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_repository_calendarrepository_kt_wearlogwithitem",
-      "community": 34,
+      "community": 33,
       "norm_label": "wearlogwithitem"
     },
     {
@@ -1501,7 +1521,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "repository_clothingrepository",
-      "community": 10,
+      "community": 12,
       "norm_label": "clothingrepository.kt"
     },
     {
@@ -1511,7 +1531,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "repository_clothingrepository_clothingrepository",
-      "community": 10,
+      "community": 12,
       "norm_label": "clothingrepository"
     },
     {
@@ -1521,7 +1541,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "repository_clothingrepository_clothingrepository_observeall",
-      "community": 10,
+      "community": 12,
       "norm_label": ".observeall()"
     },
     {
@@ -1531,7 +1551,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_repository_clothingrepository_kt_flow",
-      "community": 10,
+      "community": 12,
       "norm_label": "flow"
     },
     {
@@ -1541,7 +1561,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_repository_clothingrepository_kt_list",
-      "community": 10,
+      "community": 12,
       "norm_label": "list"
     },
     {
@@ -1551,7 +1571,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_repository_clothingrepository_kt_clothingitem",
-      "community": 10,
+      "community": 12,
       "norm_label": "clothingitem"
     },
     {
@@ -1561,7 +1581,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "repository_clothingrepository_clothingrepository_observebystatus",
-      "community": 10,
+      "community": 12,
       "norm_label": ".observebystatus()"
     },
     {
@@ -1571,7 +1591,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_repository_clothingrepository_kt_string",
-      "community": 10,
+      "community": 12,
       "norm_label": "string"
     },
     {
@@ -1581,7 +1601,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "repository_clothingrepository_clothingrepository_observebyid",
-      "community": 10,
+      "community": 12,
       "norm_label": ".observebyid()"
     },
     {
@@ -1591,7 +1611,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_repository_clothingrepository_kt_long",
-      "community": 10,
+      "community": 12,
       "norm_label": "long"
     },
     {
@@ -1601,7 +1621,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "repository_clothingrepository_clothingrepository_getbyid",
-      "community": 10,
+      "community": 12,
       "norm_label": ".getbyid()"
     },
     {
@@ -1611,7 +1631,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "repository_clothingrepository_clothingrepository_insert",
-      "community": 10,
+      "community": 12,
       "norm_label": ".insert()"
     },
     {
@@ -1621,7 +1641,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "repository_clothingrepository_clothingrepository_update",
-      "community": 10,
+      "community": 12,
       "norm_label": ".update()"
     },
     {
@@ -1631,7 +1651,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "repository_clothingrepository_clothingrepository_delete",
-      "community": 10,
+      "community": 12,
       "norm_label": ".delete()"
     },
     {
@@ -1641,7 +1661,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "repository_clothingrepository_clothingrepository_markworntoday",
-      "community": 10,
+      "community": 12,
       "norm_label": ".markworntoday()"
     },
     {
@@ -1651,7 +1671,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "repository_clothingrepository_clothingrepository_unweartoday",
-      "community": 10,
+      "community": 12,
       "norm_label": ".unweartoday()"
     },
     {
@@ -1661,7 +1681,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "repository_clothingrepository_clothingrepository_daybounds",
-      "community": 10,
+      "community": 12,
       "norm_label": ".daybounds()"
     },
     {
@@ -1671,7 +1691,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "pair",
-      "community": 10,
+      "community": 12,
       "norm_label": "pair"
     },
     {
@@ -1681,7 +1701,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "repository_clothingrepository_clothingrepository_observewearlogs",
-      "community": 10,
+      "community": 12,
       "norm_label": ".observewearlogs()"
     },
     {
@@ -1691,7 +1711,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_repository_clothingrepository_kt_wearlog",
-      "community": 10,
+      "community": 12,
       "norm_label": "wearlog"
     },
     {
@@ -1701,7 +1721,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "repository_laundryrepository",
-      "community": 15,
+      "community": 16,
       "norm_label": "laundryrepository.kt"
     },
     {
@@ -1711,7 +1731,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "repository_laundryrepository_laundryrepository",
-      "community": 15,
+      "community": 16,
       "norm_label": "laundryrepository"
     },
     {
@@ -1721,7 +1741,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "repository_laundryrepository_laundryrepository_observepile",
-      "community": 15,
+      "community": 16,
       "norm_label": ".observepile()"
     },
     {
@@ -1731,7 +1751,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_repository_laundryrepository_kt_flow",
-      "community": 15,
+      "community": 16,
       "norm_label": "flow"
     },
     {
@@ -1741,7 +1761,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_repository_laundryrepository_kt_list",
-      "community": 15,
+      "community": 16,
       "norm_label": "list"
     },
     {
@@ -1751,7 +1771,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_repository_laundryrepository_kt_clothingitem",
-      "community": 15,
+      "community": 16,
       "norm_label": "clothingitem"
     },
     {
@@ -1761,7 +1781,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "repository_laundryrepository_laundryrepository_observewashing",
-      "community": 15,
+      "community": 16,
       "norm_label": ".observewashing()"
     },
     {
@@ -1771,7 +1791,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "repository_laundryrepository_laundryrepository_observeallcycles",
-      "community": 15,
+      "community": 16,
       "norm_label": ".observeallcycles()"
     },
     {
@@ -1781,7 +1801,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_repository_laundryrepository_kt_laundrycycle",
-      "community": 15,
+      "community": 16,
       "norm_label": "laundrycycle"
     },
     {
@@ -1791,7 +1811,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "repository_laundryrepository_laundryrepository_observeactivecycle",
-      "community": 15,
+      "community": 16,
       "norm_label": ".observeactivecycle()"
     },
     {
@@ -1801,7 +1821,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "repository_laundryrepository_laundryrepository_observeactivecycles",
-      "community": 15,
+      "community": 16,
       "norm_label": ".observeactivecycles()"
     },
     {
@@ -1811,7 +1831,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "repository_laundryrepository_laundryrepository_observecompletedcycles",
-      "community": 15,
+      "community": 16,
       "norm_label": ".observecompletedcycles()"
     },
     {
@@ -1821,7 +1841,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "repository_laundryrepository_laundryrepository_observeitemsincycle",
-      "community": 15,
+      "community": 16,
       "norm_label": ".observeitemsincycle()"
     },
     {
@@ -1831,7 +1851,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_repository_laundryrepository_kt_long",
-      "community": 15,
+      "community": 16,
       "norm_label": "long"
     },
     {
@@ -1841,7 +1861,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "repository_laundryrepository_laundryrepository_startcycle",
-      "community": 15,
+      "community": 16,
       "norm_label": ".startcycle()"
     },
     {
@@ -1851,7 +1871,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "repository_laundryrepository_laundryrepository_completecycle",
-      "community": 15,
+      "community": 16,
       "norm_label": ".completecycle()"
     },
     {
@@ -1861,7 +1881,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "repository_updaterepository",
-      "community": 7,
+      "community": 9,
       "norm_label": "updaterepository.kt"
     },
     {
@@ -1871,7 +1891,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "repository_updaterepository_updaterepository",
-      "community": 7,
+      "community": 9,
       "norm_label": "updaterepository"
     },
     {
@@ -1881,7 +1901,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "repository_updaterepository_updaterepository_fetchreleases",
-      "community": 7,
+      "community": 9,
       "norm_label": ".fetchreleases()"
     },
     {
@@ -1891,7 +1911,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_repository_updaterepository_kt_list",
-      "community": 7,
+      "community": 9,
       "norm_label": "list"
     },
     {
@@ -1901,7 +1921,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_repository_updaterepository_kt_githubrelease",
-      "community": 7,
+      "community": 9,
       "norm_label": "githubrelease"
     },
     {
@@ -1911,7 +1931,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "repository_updaterepository_updaterepository_enqueuedownload",
-      "community": 7,
+      "community": 9,
       "norm_label": ".enqueuedownload()"
     },
     {
@@ -1921,7 +1941,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_repository_updaterepository_kt_githubasset",
-      "community": 7,
+      "community": 9,
       "norm_label": "githubasset"
     },
     {
@@ -1931,7 +1951,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_repository_updaterepository_kt_long",
-      "community": 7,
+      "community": 9,
       "norm_label": "long"
     },
     {
@@ -1941,7 +1961,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "repository_updaterepository_updaterepository_querydownload",
-      "community": 7,
+      "community": 9,
       "norm_label": ".querydownload()"
     },
     {
@@ -1951,7 +1971,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "downloadstatus",
-      "community": 7,
+      "community": 9,
       "norm_label": "downloadstatus"
     },
     {
@@ -1961,7 +1981,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "repository_updaterepository_updaterepository_getinstalluri",
-      "community": 7,
+      "community": 9,
       "norm_label": ".getinstalluri()"
     },
     {
@@ -1971,7 +1991,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_repository_updaterepository_kt_uri",
-      "community": 7,
+      "community": 9,
       "norm_label": "uri"
     },
     {
@@ -1981,7 +2001,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "repository_updaterepository_updaterepository_deleteapkfile",
-      "community": 7,
+      "community": 9,
       "norm_label": ".deleteapkfile()"
     },
     {
@@ -1991,7 +2011,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "repository_updaterepository_updaterepository_downloadmanager",
-      "community": 7,
+      "community": 9,
       "norm_label": ".downloadmanager()"
     },
     {
@@ -2001,7 +2021,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "repository_updaterepository_updaterepository_parsereleases",
-      "community": 7,
+      "community": 9,
       "norm_label": ".parsereleases()"
     },
     {
@@ -2011,7 +2031,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_repository_updaterepository_kt_string",
-      "community": 7,
+      "community": 9,
       "norm_label": "string"
     },
     {
@@ -2021,7 +2041,7 @@
       "source_location": "L103",
       "_origin": "ast",
       "id": "repository_updaterepository_downloadstatus",
-      "community": 7,
+      "community": 9,
       "norm_label": "downloadstatus"
     },
     {
@@ -2031,7 +2051,7 @@
       "source_location": "L104",
       "_origin": "ast",
       "id": "repository_updaterepository_unknown",
-      "community": 7,
+      "community": 9,
       "norm_label": "unknown"
     },
     {
@@ -2041,7 +2061,7 @@
       "source_location": "L105",
       "_origin": "ast",
       "id": "repository_updaterepository_progress",
-      "community": 7,
+      "community": 9,
       "norm_label": "progress"
     },
     {
@@ -2051,7 +2071,7 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "repository_updaterepository_complete",
-      "community": 7,
+      "community": 9,
       "norm_label": "complete"
     },
     {
@@ -2061,7 +2081,7 @@
       "source_location": "L107",
       "_origin": "ast",
       "id": "repository_updaterepository_failed",
-      "community": 7,
+      "community": 9,
       "norm_label": "failed"
     },
     {
@@ -2071,7 +2091,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "settings_applockrepository",
-      "community": 36,
+      "community": 35,
       "norm_label": "applockrepository.kt"
     },
     {
@@ -2081,7 +2101,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "settings_applockrepository_applockrepository",
-      "community": 36,
+      "community": 35,
       "norm_label": "applockrepository"
     },
     {
@@ -2091,7 +2111,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_settings_applockrepository_kt_flow",
-      "community": 36,
+      "community": 35,
       "norm_label": "flow"
     },
     {
@@ -2101,7 +2121,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_data_settings_applockrepository_kt_boolean",
-      "community": 36,
+      "community": 35,
       "norm_label": "boolean"
     },
     {
@@ -2111,7 +2131,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "settings_applockrepository_applockrepository_setapplockenabled",
-      "community": 36,
+      "community": 35,
       "norm_label": ".setapplockenabled()"
     },
     {
@@ -2121,7 +2141,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "settings_appsettings",
-      "community": 49,
+      "community": 48,
       "norm_label": "appsettings.kt"
     },
     {
@@ -2131,7 +2151,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "settings_appsettings_appsettings",
-      "community": 49,
+      "community": 48,
       "norm_label": "appsettings"
     },
     {
@@ -2281,7 +2301,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "settings_thememode",
-      "community": 50,
+      "community": 49,
       "norm_label": "thememode.kt"
     },
     {
@@ -2291,7 +2311,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "settings_thememode_thememode",
-      "community": 50,
+      "community": 49,
       "norm_label": "thememode"
     },
     {
@@ -2301,7 +2321,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "di_databasemodule",
-      "community": 25,
+      "community": 24,
       "norm_label": "databasemodule.kt"
     },
     {
@@ -2311,7 +2331,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "di_databasemodule_databasemodule",
-      "community": 25,
+      "community": 24,
       "norm_label": "databasemodule"
     },
     {
@@ -2321,7 +2341,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "di_databasemodule_databasemodule_providewardovedatabase",
-      "community": 25,
+      "community": 24,
       "norm_label": ".providewardovedatabase()"
     },
     {
@@ -2331,7 +2351,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_di_databasemodule_kt_context",
-      "community": 25,
+      "community": 24,
       "norm_label": "context"
     },
     {
@@ -2341,7 +2361,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "wardovedatabase",
-      "community": 25,
+      "community": 24,
       "norm_label": "wardovedatabase"
     },
     {
@@ -2351,7 +2371,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "di_databasemodule_databasemodule_provideclothingdao",
-      "community": 25,
+      "community": 24,
       "norm_label": ".provideclothingdao()"
     },
     {
@@ -2361,7 +2381,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_di_databasemodule_kt_clothingdao",
-      "community": 25,
+      "community": 24,
       "norm_label": "clothingdao"
     },
     {
@@ -2371,7 +2391,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "di_databasemodule_databasemodule_providewearlogdao",
-      "community": 25,
+      "community": 24,
       "norm_label": ".providewearlogdao()"
     },
     {
@@ -2381,7 +2401,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_di_databasemodule_kt_wearlogdao",
-      "community": 25,
+      "community": 24,
       "norm_label": "wearlogdao"
     },
     {
@@ -2391,7 +2411,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "di_databasemodule_databasemodule_providelaundrydao",
-      "community": 25,
+      "community": 24,
       "norm_label": ".providelaundrydao()"
     },
     {
@@ -2401,7 +2421,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_di_databasemodule_kt_laundrydao",
-      "community": 25,
+      "community": 24,
       "norm_label": "laundrydao"
     },
     {
@@ -2411,7 +2431,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "di_repositorymodule",
-      "community": 43,
+      "community": 42,
       "norm_label": "repositorymodule.kt"
     },
     {
@@ -2421,7 +2441,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "di_repositorymodule_repositorymodule",
-      "community": 43,
+      "community": 42,
       "norm_label": "repositorymodule"
     },
     {
@@ -2501,7 +2521,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "additem_additemscreen",
-      "community": 9,
+      "community": 11,
       "norm_label": "additemscreen.kt"
     },
     {
@@ -2511,7 +2531,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "additem_additemscreen_additemscreen",
-      "community": 9,
+      "community": 11,
       "norm_label": "additemscreen()"
     },
     {
@@ -2521,7 +2541,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "additemviewmodel",
-      "community": 9,
+      "community": 11,
       "norm_label": "additemviewmodel"
     },
     {
@@ -2531,7 +2551,7 @@
       "source_location": "L222",
       "_origin": "ast",
       "id": "additem_additemscreen_imagepicker",
-      "community": 9,
+      "community": 11,
       "norm_label": "imagepicker()"
     },
     {
@@ -2541,7 +2561,7 @@
       "source_location": "L222",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_additem_additemscreen_kt_string",
-      "community": 9,
+      "community": 11,
       "norm_label": "string"
     },
     {
@@ -2551,7 +2571,7 @@
       "source_location": "L273",
       "_origin": "ast",
       "id": "additem_additemscreen_categorydropdown",
-      "community": 9,
+      "community": 11,
       "norm_label": "categorydropdown()"
     },
     {
@@ -2561,7 +2581,7 @@
       "source_location": "L331",
       "_origin": "ast",
       "id": "additem_additemscreen_colorgrid",
-      "community": 9,
+      "community": 11,
       "norm_label": "colorgrid()"
     },
     {
@@ -2571,7 +2591,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "additem_additemviewmodel",
-      "community": 4,
+      "community": 6,
       "norm_label": "additemviewmodel.kt"
     },
     {
@@ -2581,7 +2601,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "additem_additemviewmodel_additemuistate",
-      "community": 4,
+      "community": 6,
       "norm_label": "additemuistate"
     },
     {
@@ -2591,7 +2611,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_additem_additemviewmodel_kt_boolean",
-      "community": 4,
+      "community": 6,
       "norm_label": "boolean"
     },
     {
@@ -2601,7 +2621,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "additem_additemviewmodel_additemviewmodel",
-      "community": 4,
+      "community": 6,
       "norm_label": "additemviewmodel"
     },
     {
@@ -2611,7 +2631,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "viewmodel",
-      "community": 3,
+      "community": 2,
       "norm_label": "viewmodel"
     },
     {
@@ -2621,7 +2641,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_additem_additemviewmodel_kt_long",
-      "community": 4,
+      "community": 6,
       "norm_label": "long"
     },
     {
@@ -2631,7 +2651,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_additem_additemviewmodel_kt_stateflow",
-      "community": 4,
+      "community": 6,
       "norm_label": "stateflow"
     },
     {
@@ -2641,7 +2661,7 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "additem_additemviewmodel_additemviewmodel_preparecameracapture",
-      "community": 4,
+      "community": 6,
       "norm_label": ".preparecameracapture()"
     },
     {
@@ -2651,7 +2671,7 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_additem_additemviewmodel_kt_uri",
-      "community": 4,
+      "community": 6,
       "norm_label": "uri"
     },
     {
@@ -2661,7 +2681,7 @@
       "source_location": "L85",
       "_origin": "ast",
       "id": "additem_additemviewmodel_additemviewmodel_oncameraresult",
-      "community": 4,
+      "community": 6,
       "norm_label": ".oncameraresult()"
     },
     {
@@ -2671,7 +2691,7 @@
       "source_location": "L96",
       "_origin": "ast",
       "id": "additem_additemviewmodel_additemviewmodel_ongalleryuri",
-      "community": 4,
+      "community": 6,
       "norm_label": ".ongalleryuri()"
     },
     {
@@ -2681,7 +2701,7 @@
       "source_location": "L103",
       "_origin": "ast",
       "id": "additem_additemviewmodel_additemviewmodel_replaceimagepath",
-      "community": 4,
+      "community": 6,
       "norm_label": ".replaceimagepath()"
     },
     {
@@ -2691,7 +2711,7 @@
       "source_location": "L103",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_additem_additemviewmodel_kt_string",
-      "community": 4,
+      "community": 6,
       "norm_label": "string"
     },
     {
@@ -2701,7 +2721,7 @@
       "source_location": "L117",
       "_origin": "ast",
       "id": "additem_additemviewmodel_additemviewmodel_setname",
-      "community": 4,
+      "community": 6,
       "norm_label": ".setname()"
     },
     {
@@ -2711,7 +2731,7 @@
       "source_location": "L118",
       "_origin": "ast",
       "id": "additem_additemviewmodel_additemviewmodel_setcategory",
-      "community": 4,
+      "community": 6,
       "norm_label": ".setcategory()"
     },
     {
@@ -2721,7 +2741,7 @@
       "source_location": "L119",
       "_origin": "ast",
       "id": "additem_additemviewmodel_additemviewmodel_setcolor",
-      "community": 4,
+      "community": 6,
       "norm_label": ".setcolor()"
     },
     {
@@ -2731,7 +2751,7 @@
       "source_location": "L120",
       "_origin": "ast",
       "id": "additem_additemviewmodel_additemviewmodel_setnotes",
-      "community": 4,
+      "community": 6,
       "norm_label": ".setnotes()"
     },
     {
@@ -2741,7 +2761,7 @@
       "source_location": "L121",
       "_origin": "ast",
       "id": "additem_additemviewmodel_additemviewmodel_setprice",
-      "community": 4,
+      "community": 6,
       "norm_label": ".setprice()"
     },
     {
@@ -2751,7 +2771,7 @@
       "source_location": "L127",
       "_origin": "ast",
       "id": "additem_additemviewmodel_additemviewmodel_parseprice",
-      "community": 4,
+      "community": 6,
       "norm_label": ".parseprice()"
     },
     {
@@ -2761,7 +2781,7 @@
       "source_location": "L127",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_additem_additemviewmodel_kt_double",
-      "community": 4,
+      "community": 6,
       "norm_label": "double"
     },
     {
@@ -2771,7 +2791,7 @@
       "source_location": "L130",
       "_origin": "ast",
       "id": "additem_additemviewmodel_additemviewmodel_formatprice",
-      "community": 4,
+      "community": 6,
       "norm_label": ".formatprice()"
     },
     {
@@ -2781,7 +2801,7 @@
       "source_location": "L133",
       "_origin": "ast",
       "id": "additem_additemviewmodel_additemviewmodel_save",
-      "community": 4,
+      "community": 6,
       "norm_label": ".save()"
     },
     {
@@ -2791,7 +2811,7 @@
       "source_location": "L178",
       "_origin": "ast",
       "id": "additem_additemviewmodel_additemviewmodel_oncleared",
-      "community": 4,
+      "community": 6,
       "norm_label": ".oncleared()"
     },
     {
@@ -2801,7 +2821,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "calendar_calendarscreen",
-      "community": 16,
+      "community": 17,
       "norm_label": "calendarscreen.kt"
     },
     {
@@ -2811,7 +2831,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "calendar_calendarscreen_calendarscreen",
-      "community": 16,
+      "community": 17,
       "norm_label": "calendarscreen()"
     },
     {
@@ -2821,7 +2841,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "calendarviewmodel",
-      "community": 16,
+      "community": 17,
       "norm_label": "calendarviewmodel"
     },
     {
@@ -2831,7 +2851,7 @@
       "source_location": "L164",
       "_origin": "ast",
       "id": "calendar_calendarscreen_weekdayheader",
-      "community": 16,
+      "community": 17,
       "norm_label": "weekdayheader()"
     },
     {
@@ -2841,7 +2861,7 @@
       "source_location": "L195",
       "_origin": "ast",
       "id": "calendar_calendarscreen_monthgrid",
-      "community": 16,
+      "community": 17,
       "norm_label": "monthgrid()"
     },
     {
@@ -2851,7 +2871,7 @@
       "source_location": "L195",
       "_origin": "ast",
       "id": "yearmonth",
-      "community": 16,
+      "community": 17,
       "norm_label": "yearmonth"
     },
     {
@@ -2861,7 +2881,7 @@
       "source_location": "L195",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_localdate",
-      "community": 16,
+      "community": 17,
       "norm_label": "localdate"
     },
     {
@@ -2871,7 +2891,7 @@
       "source_location": "L195",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_set",
-      "community": 16,
+      "community": 17,
       "norm_label": "set"
     },
     {
@@ -2881,7 +2901,7 @@
       "source_location": "L237",
       "_origin": "ast",
       "id": "calendar_calendarscreen_daycell",
-      "community": 16,
+      "community": 17,
       "norm_label": "daycell()"
     },
     {
@@ -2891,7 +2911,7 @@
       "source_location": "L237",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_boolean",
-      "community": 16,
+      "community": 17,
       "norm_label": "boolean"
     },
     {
@@ -2901,7 +2921,7 @@
       "source_location": "L283",
       "_origin": "ast",
       "id": "calendar_calendarscreen_selecteddaylabel",
-      "community": 16,
+      "community": 17,
       "norm_label": "selecteddaylabel()"
     },
     {
@@ -2911,7 +2931,7 @@
       "source_location": "L295",
       "_origin": "ast",
       "id": "calendar_calendarscreen_wornitemcard",
-      "community": 16,
+      "community": 17,
       "norm_label": "wornitemcard()"
     },
     {
@@ -2921,7 +2941,7 @@
       "source_location": "L295",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_clothingitem",
-      "community": 16,
+      "community": 17,
       "norm_label": "clothingitem"
     },
     {
@@ -2931,7 +2951,7 @@
       "source_location": "L331",
       "_origin": "ast",
       "id": "calendar_calendarscreen_sundaybasedindex",
-      "community": 16,
+      "community": 17,
       "norm_label": "sundaybasedindex()"
     },
     {
@@ -2941,7 +2961,7 @@
       "source_location": "L331",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_int",
-      "community": 16,
+      "community": 17,
       "norm_label": "int"
     },
     {
@@ -2951,7 +2971,7 @@
       "source_location": "L341",
       "_origin": "ast",
       "id": "calendar_calendarscreen_adjustselection",
-      "community": 16,
+      "community": 17,
       "norm_label": "adjustselection()"
     },
     {
@@ -2961,7 +2981,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "calendar_calendarviewmodel",
-      "community": 26,
+      "community": 25,
       "norm_label": "calendarviewmodel.kt"
     },
     {
@@ -2971,7 +2991,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "calendar_calendarviewmodel_calendarviewmodel",
-      "community": 26,
+      "community": 25,
       "norm_label": "calendarviewmodel"
     },
     {
@@ -2981,7 +3001,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "zoneid",
-      "community": 26,
+      "community": 25,
       "norm_label": "zoneid"
     },
     {
@@ -2991,7 +3011,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarviewmodel_kt_stateflow",
-      "community": 26,
+      "community": 25,
       "norm_label": "stateflow"
     },
     {
@@ -3001,7 +3021,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarviewmodel_kt_list",
-      "community": 26,
+      "community": 25,
       "norm_label": "list"
     },
     {
@@ -3011,7 +3031,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarviewmodel_kt_wearlogwithitem",
-      "community": 26,
+      "community": 25,
       "norm_label": "wearlogwithitem"
     },
     {
@@ -3021,7 +3041,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarviewmodel_kt_localdate",
-      "community": 26,
+      "community": 25,
       "norm_label": "localdate"
     },
     {
@@ -3031,7 +3051,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarviewmodel_kt_set",
-      "community": 26,
+      "community": 25,
       "norm_label": "set"
     },
     {
@@ -3041,7 +3061,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarviewmodel_kt_clothingitem",
-      "community": 26,
+      "community": 25,
       "norm_label": "clothingitem"
     },
     {
@@ -3051,7 +3071,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "calendar_calendarviewmodel_calendarviewmodel_selectdate",
-      "community": 26,
+      "community": 25,
       "norm_label": ".selectdate()"
     },
     {
@@ -3061,7 +3081,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "calendar_calendarviewmodel_calendarviewmodel_tolocaldate",
-      "community": 26,
+      "community": 25,
       "norm_label": ".tolocaldate()"
     },
     {
@@ -3071,7 +3091,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_appheaders",
-      "community": 14,
+      "community": 15,
       "norm_label": "appheaders.kt"
     },
     {
@@ -3081,7 +3101,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "components_appheaders_largetitleheader",
-      "community": 14,
+      "community": 15,
       "norm_label": "largetitleheader()"
     },
     {
@@ -3091,7 +3111,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_components_appheaders_kt_string",
-      "community": 14,
+      "community": 15,
       "norm_label": "string"
     },
     {
@@ -3101,7 +3121,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_components_appheaders_kt_modifier",
-      "community": 14,
+      "community": 15,
       "norm_label": "modifier"
     },
     {
@@ -3111,7 +3131,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "history_historyscreen",
-      "community": 27,
+      "community": 26,
       "norm_label": "historyscreen.kt"
     },
     {
@@ -3121,7 +3141,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "history_historyscreen_historyscreen",
-      "community": 27,
+      "community": 26,
       "norm_label": "historyscreen()"
     },
     {
@@ -3131,7 +3151,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "historyviewmodel",
-      "community": 27,
+      "community": 26,
       "norm_label": "historyviewmodel"
     },
     {
@@ -3141,7 +3161,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "history_historyscreen_cyclerow",
-      "community": 27,
+      "community": 26,
       "norm_label": "cyclerow()"
     },
     {
@@ -3151,7 +3171,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyscreen_kt_laundrycycle",
-      "community": 27,
+      "community": 26,
       "norm_label": "laundrycycle"
     },
     {
@@ -3161,7 +3181,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyscreen_kt_boolean",
-      "community": 27,
+      "community": 26,
       "norm_label": "boolean"
     },
     {
@@ -3171,7 +3191,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyscreen_kt_list",
-      "community": 27,
+      "community": 26,
       "norm_label": "list"
     },
     {
@@ -3181,7 +3201,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyscreen_kt_clothingitem",
-      "community": 27,
+      "community": 26,
       "norm_label": "clothingitem"
     },
     {
@@ -3191,7 +3211,7 @@
       "source_location": "L228",
       "_origin": "ast",
       "id": "history_historyscreen_formatdate",
-      "community": 27,
+      "community": 26,
       "norm_label": "formatdate()"
     },
     {
@@ -3201,7 +3221,7 @@
       "source_location": "L228",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyscreen_kt_long",
-      "community": 27,
+      "community": 26,
       "norm_label": "long"
     },
     {
@@ -3211,7 +3231,7 @@
       "source_location": "L228",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyscreen_kt_string",
-      "community": 27,
+      "community": 26,
       "norm_label": "string"
     },
     {
@@ -3221,7 +3241,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "history_historyviewmodel",
-      "community": 3,
+      "community": 2,
       "norm_label": "historyviewmodel.kt"
     },
     {
@@ -3231,7 +3251,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "history_historyviewmodel_historyviewmodel",
-      "community": 3,
+      "community": 2,
       "norm_label": "historyviewmodel"
     },
     {
@@ -3241,7 +3261,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyviewmodel_kt_stateflow",
-      "community": 3,
+      "community": 2,
       "norm_label": "stateflow"
     },
     {
@@ -3251,7 +3271,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyviewmodel_kt_list",
-      "community": 3,
+      "community": 2,
       "norm_label": "list"
     },
     {
@@ -3261,7 +3281,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyviewmodel_kt_laundrycycle",
-      "community": 3,
+      "community": 2,
       "norm_label": "laundrycycle"
     },
     {
@@ -3271,7 +3291,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyviewmodel_kt_long",
-      "community": 3,
+      "community": 2,
       "norm_label": "long"
     },
     {
@@ -3281,7 +3301,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyviewmodel_kt_clothingitem",
-      "community": 3,
+      "community": 2,
       "norm_label": "clothingitem"
     },
     {
@@ -3291,7 +3311,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "history_historyviewmodel_historyviewmodel_toggleexpand",
-      "community": 3,
+      "community": 2,
       "norm_label": ".toggleexpand()"
     },
     {
@@ -3301,7 +3321,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "itemdetail_itemdetailscreen",
-      "community": 17,
+      "community": 18,
       "norm_label": "itemdetailscreen.kt"
     },
     {
@@ -3311,7 +3331,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "itemdetail_itemdetailscreen_itemdetailscreen",
-      "community": 17,
+      "community": 18,
       "norm_label": "itemdetailscreen()"
     },
     {
@@ -3321,7 +3341,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_long",
-      "community": 17,
+      "community": 18,
       "norm_label": "long"
     },
     {
@@ -3331,7 +3351,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "itemdetailviewmodel",
-      "community": 17,
+      "community": 18,
       "norm_label": "itemdetailviewmodel"
     },
     {
@@ -3341,7 +3361,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "itemdetail_itemdetailscreen_itemdetailbody",
-      "community": 17,
+      "community": 18,
       "norm_label": "itemdetailbody()"
     },
     {
@@ -3351,7 +3371,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_clothingitem",
-      "community": 17,
+      "community": 18,
       "norm_label": "clothingitem"
     },
     {
@@ -3361,7 +3381,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_list",
-      "community": 17,
+      "community": 18,
       "norm_label": "list"
     },
     {
@@ -3371,7 +3391,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_wearlog",
-      "community": 17,
+      "community": 18,
       "norm_label": "wearlog"
     },
     {
@@ -3381,7 +3401,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_boolean",
-      "community": 17,
+      "community": 18,
       "norm_label": "boolean"
     },
     {
@@ -3391,7 +3411,7 @@
       "source_location": "L153",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_modifier",
-      "community": 17,
+      "community": 18,
       "norm_label": "modifier"
     },
     {
@@ -3401,7 +3421,7 @@
       "source_location": "L274",
       "_origin": "ast",
       "id": "itemdetail_itemdetailscreen_tagsrow",
-      "community": 17,
+      "community": 18,
       "norm_label": "tagsrow()"
     },
     {
@@ -3411,7 +3431,7 @@
       "source_location": "L294",
       "_origin": "ast",
       "id": "itemdetail_itemdetailscreen_tagpill",
-      "community": 17,
+      "community": 18,
       "norm_label": "tagpill()"
     },
     {
@@ -3421,7 +3441,7 @@
       "source_location": "L294",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_string",
-      "community": 17,
+      "community": 18,
       "norm_label": "string"
     },
     {
@@ -3431,7 +3451,7 @@
       "source_location": "L294",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_color",
-      "community": 17,
+      "community": 18,
       "norm_label": "color"
     },
     {
@@ -3441,7 +3461,7 @@
       "source_location": "L310",
       "_origin": "ast",
       "id": "itemdetail_itemdetailscreen_statbox",
-      "community": 17,
+      "community": 18,
       "norm_label": "statbox()"
     },
     {
@@ -3451,7 +3471,7 @@
       "source_location": "L332",
       "_origin": "ast",
       "id": "itemdetail_itemdetailscreen_wearhistorysection",
-      "community": 17,
+      "community": 18,
       "norm_label": "wearhistorysection()"
     },
     {
@@ -3461,7 +3481,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "itemdetail_itemdetailviewmodel",
-      "community": 23,
+      "community": 22,
       "norm_label": "itemdetailviewmodel.kt"
     },
     {
@@ -3471,7 +3491,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "itemdetail_itemdetailviewmodel_itemdetailviewmodel",
-      "community": 23,
+      "community": 22,
       "norm_label": "itemdetailviewmodel"
     },
     {
@@ -3481,7 +3501,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailviewmodel_kt_long",
-      "community": 23,
+      "community": 22,
       "norm_label": "long"
     },
     {
@@ -3491,7 +3511,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailviewmodel_kt_stateflow",
-      "community": 23,
+      "community": 22,
       "norm_label": "stateflow"
     },
     {
@@ -3501,7 +3521,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailviewmodel_kt_clothingitem",
-      "community": 23,
+      "community": 22,
       "norm_label": "clothingitem"
     },
     {
@@ -3511,7 +3531,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailviewmodel_kt_list",
-      "community": 23,
+      "community": 22,
       "norm_label": "list"
     },
     {
@@ -3521,7 +3541,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailviewmodel_kt_wearlog",
-      "community": 23,
+      "community": 22,
       "norm_label": "wearlog"
     },
     {
@@ -3531,7 +3551,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailviewmodel_kt_boolean",
-      "community": 23,
+      "community": 22,
       "norm_label": "boolean"
     },
     {
@@ -3541,7 +3561,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "itemdetail_itemdetailviewmodel_itemdetailviewmodel_weartoday",
-      "community": 23,
+      "community": 22,
       "norm_label": ".weartoday()"
     },
     {
@@ -3551,7 +3571,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "itemdetail_itemdetailviewmodel_itemdetailviewmodel_unweartoday",
-      "community": 23,
+      "community": 22,
       "norm_label": ".unweartoday()"
     },
     {
@@ -3561,7 +3581,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "itemdetail_itemdetailviewmodel_itemdetailviewmodel_delete",
-      "community": 23,
+      "community": 22,
       "norm_label": ".delete()"
     },
     {
@@ -3571,7 +3591,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "itemdetail_itemdetailviewmodel_itemdetailviewmodel_issameday",
-      "community": 23,
+      "community": 22,
       "norm_label": ".issameday()"
     },
     {
@@ -3581,7 +3601,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "laundry_laundryscreen",
-      "community": 8,
+      "community": 10,
       "norm_label": "laundryscreen.kt"
     },
     {
@@ -3591,7 +3611,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "laundry_laundryscreen_laundryscreen",
-      "community": 8,
+      "community": 10,
       "norm_label": "laundryscreen()"
     },
     {
@@ -3601,7 +3621,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "laundryviewmodel",
-      "community": 8,
+      "community": 10,
       "norm_label": "laundryviewmodel"
     },
     {
@@ -3611,7 +3631,7 @@
       "source_location": "L166",
       "_origin": "ast",
       "id": "laundry_laundryscreen_pilltabrow",
-      "community": 8,
+      "community": 10,
       "norm_label": "pilltabrow()"
     },
     {
@@ -3621,7 +3641,7 @@
       "source_location": "L166",
       "_origin": "ast",
       "id": "laundrytab",
-      "community": 8,
+      "community": 10,
       "norm_label": "laundrytab"
     },
     {
@@ -3631,7 +3651,7 @@
       "source_location": "L202",
       "_origin": "ast",
       "id": "laundry_laundryscreen_piletab",
-      "community": 8,
+      "community": 10,
       "norm_label": "piletab()"
     },
     {
@@ -3641,7 +3661,7 @@
       "source_location": "L202",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_laundry_laundryscreen_kt_list",
-      "community": 8,
+      "community": 10,
       "norm_label": "list"
     },
     {
@@ -3651,7 +3671,7 @@
       "source_location": "L202",
       "_origin": "ast",
       "id": "pileentry",
-      "community": 8,
+      "community": 10,
       "norm_label": "pileentry"
     },
     {
@@ -3661,7 +3681,7 @@
       "source_location": "L202",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_laundry_laundryscreen_kt_set",
-      "community": 8,
+      "community": 10,
       "norm_label": "set"
     },
     {
@@ -3671,7 +3691,7 @@
       "source_location": "L202",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_laundry_laundryscreen_kt_long",
-      "community": 8,
+      "community": 10,
       "norm_label": "long"
     },
     {
@@ -3681,7 +3701,7 @@
       "source_location": "L202",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_laundry_laundryscreen_kt_int",
-      "community": 8,
+      "community": 10,
       "norm_label": "int"
     },
     {
@@ -3691,7 +3711,7 @@
       "source_location": "L202",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_laundry_laundryscreen_kt_modifier",
-      "community": 8,
+      "community": 10,
       "norm_label": "modifier"
     },
     {
@@ -3701,7 +3721,7 @@
       "source_location": "L281",
       "_origin": "ast",
       "id": "laundry_laundryscreen_thresholdcontrol",
-      "community": 8,
+      "community": 10,
       "norm_label": "thresholdcontrol()"
     },
     {
@@ -3711,7 +3731,7 @@
       "source_location": "L315",
       "_origin": "ast",
       "id": "laundry_laundryscreen_laundryitemrow",
-      "community": 8,
+      "community": 10,
       "norm_label": "laundryitemrow()"
     },
     {
@@ -3721,7 +3741,7 @@
       "source_location": "L315",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_laundry_laundryscreen_kt_boolean",
-      "community": 8,
+      "community": 10,
       "norm_label": "boolean"
     },
     {
@@ -3731,7 +3751,7 @@
       "source_location": "L383",
       "_origin": "ast",
       "id": "laundry_laundryscreen_washingtab",
-      "community": 8,
+      "community": 10,
       "norm_label": "washingtab()"
     },
     {
@@ -3741,7 +3761,7 @@
       "source_location": "L383",
       "_origin": "ast",
       "id": "cyclewithitems",
-      "community": 8,
+      "community": 10,
       "norm_label": "cyclewithitems"
     },
     {
@@ -3751,7 +3771,7 @@
       "source_location": "L410",
       "_origin": "ast",
       "id": "laundry_laundryscreen_cyclecard",
-      "community": 8,
+      "community": 10,
       "norm_label": "cyclecard()"
     },
     {
@@ -3761,7 +3781,7 @@
       "source_location": "L486",
       "_origin": "ast",
       "id": "laundry_laundryscreen_emptymessage",
-      "community": 8,
+      "community": 10,
       "norm_label": "emptymessage()"
     },
     {
@@ -3771,7 +3791,7 @@
       "source_location": "L486",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_laundry_laundryscreen_kt_string",
-      "community": 8,
+      "community": 10,
       "norm_label": "string"
     },
     {
@@ -3781,7 +3801,7 @@
       "source_location": "L493",
       "_origin": "ast",
       "id": "laundry_laundryscreen_loadingbox",
-      "community": 8,
+      "community": 10,
       "norm_label": "loadingbox()"
     },
     {
@@ -3791,7 +3811,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "laundry_laundryviewmodel",
-      "community": 11,
+      "community": 13,
       "norm_label": "laundryviewmodel.kt"
     },
     {
@@ -3801,7 +3821,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "laundry_laundryviewmodel_laundrytab",
-      "community": 11,
+      "community": 13,
       "norm_label": "laundrytab"
     },
     {
@@ -3811,7 +3831,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "laundry_laundryviewmodel_cyclewithitems",
-      "community": 11,
+      "community": 13,
       "norm_label": "cyclewithitems"
     },
     {
@@ -3821,7 +3841,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "laundry_laundryviewmodel_pileentry",
-      "community": 11,
+      "community": 13,
       "norm_label": "pileentry"
     },
     {
@@ -3831,7 +3851,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "laundry_laundryviewmodel_laundryviewmodel",
-      "community": 11,
+      "community": 13,
       "norm_label": "laundryviewmodel"
     },
     {
@@ -3841,7 +3861,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_laundry_laundryviewmodel_kt_stateflow",
-      "community": 11,
+      "community": 13,
       "norm_label": "stateflow"
     },
     {
@@ -3851,7 +3871,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_laundry_laundryviewmodel_kt_set",
-      "community": 11,
+      "community": 13,
       "norm_label": "set"
     },
     {
@@ -3861,7 +3881,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_laundry_laundryviewmodel_kt_long",
-      "community": 11,
+      "community": 13,
       "norm_label": "long"
     },
     {
@@ -3871,7 +3891,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_laundry_laundryviewmodel_kt_int",
-      "community": 11,
+      "community": 13,
       "norm_label": "int"
     },
     {
@@ -3881,7 +3901,7 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_laundry_laundryviewmodel_kt_list",
-      "community": 11,
+      "community": 13,
       "norm_label": "list"
     },
     {
@@ -3891,7 +3911,7 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_laundry_laundryviewmodel_kt_clothingitem",
-      "community": 11,
+      "community": 13,
       "norm_label": "clothingitem"
     },
     {
@@ -3901,7 +3921,7 @@
       "source_location": "L113",
       "_origin": "ast",
       "id": "sharedflow",
-      "community": 11,
+      "community": 13,
       "norm_label": "sharedflow"
     },
     {
@@ -3911,7 +3931,7 @@
       "source_location": "L113",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_laundry_laundryviewmodel_kt_string",
-      "community": 11,
+      "community": 13,
       "norm_label": "string"
     },
     {
@@ -3921,7 +3941,7 @@
       "source_location": "L115",
       "_origin": "ast",
       "id": "laundry_laundryviewmodel_laundryviewmodel_settab",
-      "community": 11,
+      "community": 13,
       "norm_label": ".settab()"
     },
     {
@@ -3931,7 +3951,7 @@
       "source_location": "L119",
       "_origin": "ast",
       "id": "laundry_laundryviewmodel_laundryviewmodel_togglepileselection",
-      "community": 11,
+      "community": 13,
       "norm_label": ".togglepileselection()"
     },
     {
@@ -3941,7 +3961,7 @@
       "source_location": "L125",
       "_origin": "ast",
       "id": "laundry_laundryviewmodel_laundryviewmodel_clearpileselection",
-      "community": 11,
+      "community": 13,
       "norm_label": ".clearpileselection()"
     },
     {
@@ -3951,7 +3971,7 @@
       "source_location": "L129",
       "_origin": "ast",
       "id": "laundry_laundryviewmodel_laundryviewmodel_sendtolaundry",
-      "community": 11,
+      "community": 13,
       "norm_label": ".sendtolaundry()"
     },
     {
@@ -3961,7 +3981,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "laundry_laundryviewmodel_laundryviewmodel_completecycle",
-      "community": 11,
+      "community": 13,
       "norm_label": ".completecycle()"
     },
     {
@@ -3971,7 +3991,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "laundry_laundryviewmodel_laundryviewmodel_incrementthreshold",
-      "community": 11,
+      "community": 13,
       "norm_label": ".incrementthreshold()"
     },
     {
@@ -3981,7 +4001,7 @@
       "source_location": "L156",
       "_origin": "ast",
       "id": "laundry_laundryviewmodel_laundryviewmodel_decrementthreshold",
-      "community": 11,
+      "community": 13,
       "norm_label": ".decrementthreshold()"
     },
     {
@@ -3991,7 +4011,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lock_lockscreen",
-      "community": 13,
+      "community": 5,
       "norm_label": "lockscreen.kt"
     },
     {
@@ -4001,7 +4021,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "lock_lockscreen_lockscreen",
-      "community": 13,
+      "community": 5,
       "norm_label": "lockscreen()"
     },
     {
@@ -4011,7 +4031,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "lock_lockviewmodel",
-      "community": 3,
+      "community": 2,
       "norm_label": "lockviewmodel.kt"
     },
     {
@@ -4021,7 +4041,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "lock_lockviewmodel_lockviewmodel",
-      "community": 3,
+      "community": 2,
       "norm_label": "lockviewmodel"
     },
     {
@@ -4031,7 +4051,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_lock_lockviewmodel_kt_stateflow",
-      "community": 3,
+      "community": 2,
       "norm_label": "stateflow"
     },
     {
@@ -4041,7 +4061,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_lock_lockviewmodel_kt_boolean",
-      "community": 3,
+      "community": 2,
       "norm_label": "boolean"
     },
     {
@@ -4051,7 +4071,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "lock_lockviewmodel_lockviewmodel_lock",
-      "community": 3,
+      "community": 2,
       "norm_label": ".lock()"
     },
     {
@@ -4061,7 +4081,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "lock_lockviewmodel_lockviewmodel_lockifenabled",
-      "community": 3,
+      "community": 2,
       "norm_label": ".lockifenabled()"
     },
     {
@@ -4071,7 +4091,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "lock_lockviewmodel_lockviewmodel_onbiometricsuccess",
-      "community": 3,
+      "community": 2,
       "norm_label": ".onbiometricsuccess()"
     },
     {
@@ -4081,7 +4101,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "lock_lockviewmodel_lockviewmodel_requestbiometric",
-      "community": 3,
+      "community": 2,
       "norm_label": ".requestbiometric()"
     },
     {
@@ -4091,7 +4111,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "lock_lockviewmodel_lockviewmodel_onbiometricrequestconsumed",
-      "community": 3,
+      "community": 2,
       "norm_label": ".onbiometricrequestconsumed()"
     },
     {
@@ -4101,7 +4121,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "navigation_navtransitions",
-      "community": 64,
+      "community": 63,
       "norm_label": "navtransitions.kt"
     },
     {
@@ -4111,7 +4131,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "navigation_wardovedestinations",
-      "community": 33,
+      "community": 29,
       "norm_label": "wardovedestinations.kt"
     },
     {
@@ -4121,7 +4141,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "navigation_wardovedestinations_wardovedestinations",
-      "community": 33,
+      "community": 29,
       "norm_label": "wardovedestinations"
     },
     {
@@ -4131,7 +4151,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_navigation_wardovedestinations_kt_long",
-      "community": 33,
+      "community": 29,
       "norm_label": "long"
     },
     {
@@ -4141,7 +4161,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "navigation_wardovedestinations_wardovedestinations_additem",
-      "community": 33,
+      "community": 29,
       "norm_label": ".additem()"
     },
     {
@@ -4151,7 +4171,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_navigation_wardovedestinations_kt_string",
-      "community": 33,
+      "community": 29,
       "norm_label": "string"
     },
     {
@@ -4161,7 +4181,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "navigation_wardovedestinations_wardovedestinations_itemdetail",
-      "community": 33,
+      "community": 29,
       "norm_label": ".itemdetail()"
     },
     {
@@ -4171,8 +4191,38 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "navigation_wardovedestinations_wardovedestinations_licensedetail",
-      "community": 33,
+      "community": 29,
       "norm_label": ".licensedetail()"
+    },
+    {
+      "label": "ShortcutActions",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveDestinations.kt",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "navigation_wardovedestinations_shortcutactions",
+      "community": 29,
+      "norm_label": "shortcutactions"
+    },
+    {
+      "label": ".routeForAction()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveDestinations.kt",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "navigation_wardovedestinations_shortcutactions_routeforaction",
+      "community": 29,
+      "norm_label": ".routeforaction()"
+    },
+    {
+      "label": ".shortcutIdForAction()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveDestinations.kt",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "navigation_wardovedestinations_shortcutactions_shortcutidforaction",
+      "community": 29,
+      "norm_label": ".shortcutidforaction()"
     },
     {
       "label": "WardoveDrawerContent.kt",
@@ -4181,7 +4231,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "navigation_wardovedrawercontent",
-      "community": 2,
+      "community": 1,
       "norm_label": "wardovedrawercontent.kt"
     },
     {
@@ -4191,7 +4241,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "navigation_wardovedrawercontent_draweritem",
-      "community": 2,
+      "community": 1,
       "norm_label": "draweritem"
     },
     {
@@ -4201,7 +4251,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "navigation_wardovedrawercontent_wardovedrawercontent",
-      "community": 2,
+      "community": 1,
       "norm_label": "wardovedrawercontent()"
     },
     {
@@ -4211,7 +4261,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_navigation_wardovedrawercontent_kt_string",
-      "community": 2,
+      "community": 1,
       "norm_label": "string"
     },
     {
@@ -4221,37 +4271,37 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "navigation_wardovenavhost",
-      "community": 2,
+      "community": 1,
       "norm_label": "wardovenavhost.kt"
     },
     {
       "label": "WardoveNavHost()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L43",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "navigation_wardovenavhost_wardovenavhost",
-      "community": 2,
+      "community": 1,
       "norm_label": "wardovenavhost()"
     },
     {
       "label": "NavHostController",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L43",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "navhostcontroller",
-      "community": 2,
+      "community": 1,
       "norm_label": "navhostcontroller"
     },
     {
       "label": "String",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L43",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_navigation_wardovenavhost_kt_string",
-      "community": 2,
+      "community": 1,
       "norm_label": "string"
     },
     {
@@ -4261,7 +4311,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "settings_aboutsettingsscreen",
-      "community": 19,
+      "community": 1,
       "norm_label": "aboutsettingsscreen.kt"
     },
     {
@@ -4271,7 +4321,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "settings_aboutsettingsscreen_aboutsettingsscreen",
-      "community": 19,
+      "community": 1,
       "norm_label": "aboutsettingsscreen()"
     },
     {
@@ -4281,7 +4331,7 @@
       "source_location": "L158",
       "_origin": "ast",
       "id": "settings_aboutsettingsscreen_inforow",
-      "community": 19,
+      "community": 1,
       "norm_label": "inforow()"
     },
     {
@@ -4291,7 +4341,7 @@
       "source_location": "L158",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_aboutsettingsscreen_kt_string",
-      "community": 19,
+      "community": 1,
       "norm_label": "string"
     },
     {
@@ -4301,7 +4351,7 @@
       "source_location": "L180",
       "_origin": "ast",
       "id": "settings_aboutsettingsscreen_linkrow",
-      "community": 19,
+      "community": 1,
       "norm_label": "linkrow()"
     },
     {
@@ -4311,7 +4361,7 @@
       "source_location": "L203",
       "_origin": "ast",
       "id": "settings_aboutsettingsscreen_chevronrow",
-      "community": 19,
+      "community": 1,
       "norm_label": "chevronrow()"
     },
     {
@@ -4321,7 +4371,7 @@
       "source_location": "L203",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_aboutsettingsscreen_kt_imagevector",
-      "community": 19,
+      "community": 1,
       "norm_label": "imagevector"
     },
     {
@@ -4331,7 +4381,7 @@
       "source_location": "L233",
       "_origin": "ast",
       "id": "settings_aboutsettingsscreen_externalrow",
-      "community": 19,
+      "community": 1,
       "norm_label": "externalrow()"
     },
     {
@@ -4341,7 +4391,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "settings_applocksettingsscreen",
-      "community": 2,
+      "community": 5,
       "norm_label": "applocksettingsscreen.kt"
     },
     {
@@ -4351,7 +4401,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "settings_applocksettingsscreen_applocksettingsviewmodel",
-      "community": 2,
+      "community": 5,
       "norm_label": "applocksettingsviewmodel"
     },
     {
@@ -4361,7 +4411,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_applocksettingsscreen_kt_stateflow",
-      "community": 2,
+      "community": 5,
       "norm_label": "stateflow"
     },
     {
@@ -4371,7 +4421,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_applocksettingsscreen_kt_boolean",
-      "community": 2,
+      "community": 5,
       "norm_label": "boolean"
     },
     {
@@ -4381,7 +4431,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "settings_applocksettingsscreen_applocksettingsviewmodel_setapplockenabled",
-      "community": 2,
+      "community": 5,
       "norm_label": ".setapplockenabled()"
     },
     {
@@ -4391,7 +4441,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "settings_applocksettingsscreen_applocksettingsscreen",
-      "community": 2,
+      "community": 5,
       "norm_label": "applocksettingsscreen()"
     },
     {
@@ -4401,7 +4451,7 @@
       "source_location": "L147",
       "_origin": "ast",
       "id": "settings_applocksettingsscreen_applockswitchrow",
-      "community": 2,
+      "community": 5,
       "norm_label": "applockswitchrow()"
     },
     {
@@ -4411,7 +4461,7 @@
       "source_location": "L147",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_applocksettingsscreen_kt_string",
-      "community": 2,
+      "community": 5,
       "norm_label": "string"
     },
     {
@@ -4421,7 +4471,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "settings_appearancesettingsscreen",
-      "community": 2,
+      "community": 1,
       "norm_label": "appearancesettingsscreen.kt"
     },
     {
@@ -4431,7 +4481,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "settings_appearancesettingsscreen_appearancesettingsscreen",
-      "community": 2,
+      "community": 1,
       "norm_label": "appearancesettingsscreen()"
     },
     {
@@ -4441,7 +4491,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_appearancesettingsscreen_kt_settingsviewmodel",
-      "community": 2,
+      "community": 1,
       "norm_label": "settingsviewmodel"
     },
     {
@@ -4451,7 +4501,7 @@
       "source_location": "L115",
       "_origin": "ast",
       "id": "settings_appearancesettingsscreen_sectionlabel",
-      "community": 2,
+      "community": 1,
       "norm_label": "sectionlabel()"
     },
     {
@@ -4461,7 +4511,7 @@
       "source_location": "L115",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_appearancesettingsscreen_kt_string",
-      "community": 2,
+      "community": 1,
       "norm_label": "string"
     },
     {
@@ -4471,7 +4521,7 @@
       "source_location": "L126",
       "_origin": "ast",
       "id": "settings_appearancesettingsscreen_radiorow",
-      "community": 2,
+      "community": 1,
       "norm_label": "radiorow()"
     },
     {
@@ -4481,7 +4531,7 @@
       "source_location": "L126",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_appearancesettingsscreen_kt_boolean",
-      "community": 2,
+      "community": 1,
       "norm_label": "boolean"
     },
     {
@@ -4491,7 +4541,7 @@
       "source_location": "L151",
       "_origin": "ast",
       "id": "settings_appearancesettingsscreen_switchrow",
-      "community": 2,
+      "community": 1,
       "norm_label": "switchrow()"
     },
     {
@@ -4501,7 +4551,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "settings_diagnosticssettingsscreen",
-      "community": 2,
+      "community": 1,
       "norm_label": "diagnosticssettingsscreen.kt"
     },
     {
@@ -4511,7 +4561,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "settings_diagnosticssettingsscreen_diagnosticssettingsscreen",
-      "community": 2,
+      "community": 1,
       "norm_label": "diagnosticssettingsscreen()"
     },
     {
@@ -4521,7 +4571,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "diagnosticsviewmodel",
-      "community": 2,
+      "community": 1,
       "norm_label": "diagnosticsviewmodel"
     },
     {
@@ -4531,7 +4581,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "settings_diagnosticsviewmodel",
-      "community": 3,
+      "community": 2,
       "norm_label": "diagnosticsviewmodel.kt"
     },
     {
@@ -4541,7 +4591,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "settings_diagnosticsviewmodel_diagnosticsviewmodel",
-      "community": 3,
+      "community": 2,
       "norm_label": "diagnosticsviewmodel"
     },
     {
@@ -4551,7 +4601,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_diagnosticsviewmodel_kt_stateflow",
-      "community": 3,
+      "community": 2,
       "norm_label": "stateflow"
     },
     {
@@ -4561,7 +4611,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_diagnosticsviewmodel_kt_string",
-      "community": 3,
+      "community": 2,
       "norm_label": "string"
     },
     {
@@ -4571,7 +4621,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "settings_diagnosticsviewmodel_diagnosticsviewmodel_refresh",
-      "community": 3,
+      "community": 2,
       "norm_label": ".refresh()"
     },
     {
@@ -4581,7 +4631,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "settings_diagnosticsviewmodel_diagnosticsviewmodel_export",
-      "community": 3,
+      "community": 2,
       "norm_label": ".export()"
     },
     {
@@ -4591,7 +4641,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_diagnosticsviewmodel_kt_uri",
-      "community": 3,
+      "community": 2,
       "norm_label": "uri"
     },
     {
@@ -4601,7 +4651,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "settings_diagnosticsviewmodel_diagnosticsviewmodel_clear",
-      "community": 3,
+      "community": 2,
       "norm_label": ".clear()"
     },
     {
@@ -4611,7 +4661,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "settings_diagnosticsviewmodel_diagnosticsviewmodel_onmessageshown",
-      "community": 3,
+      "community": 2,
       "norm_label": ".onmessageshown()"
     },
     {
@@ -4621,7 +4671,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "settings_licensedetailscreen",
-      "community": 19,
+      "community": 1,
       "norm_label": "licensedetailscreen.kt"
     },
     {
@@ -4631,7 +4681,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "settings_licensedetailscreen_licensedetailscreen",
-      "community": 19,
+      "community": 1,
       "norm_label": "licensedetailscreen()"
     },
     {
@@ -4641,7 +4691,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_licensedetailscreen_kt_string",
-      "community": 19,
+      "community": 1,
       "norm_label": "string"
     },
     {
@@ -4651,7 +4701,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "settings_licensessettingsscreen",
-      "community": 2,
+      "community": 1,
       "norm_label": "licensessettingsscreen.kt"
     },
     {
@@ -4661,7 +4711,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "settings_licensessettingsscreen_licensessettingsscreen",
-      "community": 2,
+      "community": 1,
       "norm_label": "licensessettingsscreen()"
     },
     {
@@ -4671,7 +4721,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "settings_notificationsettingsscreen",
-      "community": 2,
+      "community": 1,
       "norm_label": "notificationsettingsscreen.kt"
     },
     {
@@ -4681,7 +4731,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "settings_notificationsettingsscreen_notificationsettingsscreen",
-      "community": 2,
+      "community": 1,
       "norm_label": "notificationsettingsscreen()"
     },
     {
@@ -4691,7 +4741,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_notificationsettingsscreen_kt_settingsviewmodel",
-      "community": 2,
+      "community": 1,
       "norm_label": "settingsviewmodel"
     },
     {
@@ -4701,7 +4751,7 @@
       "source_location": "L86",
       "_origin": "ast",
       "id": "settings_notificationsettingsscreen_notificationsectionlabel",
-      "community": 2,
+      "community": 1,
       "norm_label": "notificationsectionlabel()"
     },
     {
@@ -4711,7 +4761,7 @@
       "source_location": "L86",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_notificationsettingsscreen_kt_string",
-      "community": 2,
+      "community": 1,
       "norm_label": "string"
     },
     {
@@ -4721,7 +4771,7 @@
       "source_location": "L97",
       "_origin": "ast",
       "id": "settings_notificationsettingsscreen_notificationswitchrow",
-      "community": 2,
+      "community": 1,
       "norm_label": "notificationswitchrow()"
     },
     {
@@ -4731,7 +4781,7 @@
       "source_location": "L97",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_notificationsettingsscreen_kt_boolean",
-      "community": 2,
+      "community": 1,
       "norm_label": "boolean"
     },
     {
@@ -4741,7 +4791,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "settings_settingscomponents",
-      "community": 2,
+      "community": 1,
       "norm_label": "settingscomponents.kt"
     },
     {
@@ -4751,7 +4801,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "settings_settingscomponents_settingscard",
-      "community": 2,
+      "community": 1,
       "norm_label": "settingscard()"
     },
     {
@@ -4761,7 +4811,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_settingscomponents_kt_modifier",
-      "community": 2,
+      "community": 1,
       "norm_label": "modifier"
     },
     {
@@ -4771,7 +4821,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "settings_settingsscreen",
-      "community": 2,
+      "community": 1,
       "norm_label": "settingsscreen.kt"
     },
     {
@@ -4781,7 +4831,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "settings_settingsscreen_settingsscreen",
-      "community": 2,
+      "community": 1,
       "norm_label": "settingsscreen()"
     },
     {
@@ -4791,7 +4841,7 @@
       "source_location": "L135",
       "_origin": "ast",
       "id": "settings_settingsscreen_chevronrow",
-      "community": 2,
+      "community": 1,
       "norm_label": "chevronrow()"
     },
     {
@@ -4801,7 +4851,7 @@
       "source_location": "L135",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_settingsscreen_kt_imagevector",
-      "community": 2,
+      "community": 1,
       "norm_label": "imagevector"
     },
     {
@@ -4811,7 +4861,7 @@
       "source_location": "L135",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_settingsscreen_kt_string",
-      "community": 2,
+      "community": 1,
       "norm_label": "string"
     },
     {
@@ -4821,7 +4871,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "settings_settingsviewmodel",
-      "community": 3,
+      "community": 2,
       "norm_label": "settingsviewmodel.kt"
     },
     {
@@ -4831,7 +4881,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "settings_settingsviewmodel_settingsviewmodel",
-      "community": 3,
+      "community": 2,
       "norm_label": "settingsviewmodel"
     },
     {
@@ -4841,7 +4891,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_settingsviewmodel_kt_stateflow",
-      "community": 3,
+      "community": 2,
       "norm_label": "stateflow"
     },
     {
@@ -4851,7 +4901,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_settingsviewmodel_kt_appsettings",
-      "community": 3,
+      "community": 2,
       "norm_label": "appsettings"
     },
     {
@@ -4861,7 +4911,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "settings_settingsviewmodel_settingsviewmodel_setthememode",
-      "community": 3,
+      "community": 2,
       "norm_label": ".setthememode()"
     },
     {
@@ -4871,7 +4921,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_settingsviewmodel_kt_thememode",
-      "community": 3,
+      "community": 2,
       "norm_label": "thememode"
     },
     {
@@ -4881,7 +4931,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "settings_settingsviewmodel_settingsviewmodel_setdynamiccolor",
-      "community": 3,
+      "community": 2,
       "norm_label": ".setdynamiccolor()"
     },
     {
@@ -4891,7 +4941,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_settings_settingsviewmodel_kt_boolean",
-      "community": 3,
+      "community": 2,
       "norm_label": "boolean"
     },
     {
@@ -4901,7 +4951,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "settings_settingsviewmodel_settingsviewmodel_setupdatenotificationsenabled",
-      "community": 3,
+      "community": 2,
       "norm_label": ".setupdatenotificationsenabled()"
     },
     {
@@ -4911,7 +4961,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "stats_statsscreen",
-      "community": 5,
+      "community": 7,
       "norm_label": "statsscreen.kt"
     },
     {
@@ -4921,7 +4971,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "stats_statsscreen_statsscreen",
-      "community": 5,
+      "community": 7,
       "norm_label": "statsscreen()"
     },
     {
@@ -4931,7 +4981,7 @@
       "source_location": "L50",
       "_origin": "ast",
       "id": "statsviewmodel",
-      "community": 5,
+      "community": 7,
       "norm_label": "statsviewmodel"
     },
     {
@@ -4941,7 +4991,7 @@
       "source_location": "L123",
       "_origin": "ast",
       "id": "stats_statsscreen_summarygrid",
-      "community": 5,
+      "community": 7,
       "norm_label": "summarygrid()"
     },
     {
@@ -4951,7 +5001,7 @@
       "source_location": "L123",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_stats_statsscreen_kt_int",
-      "community": 5,
+      "community": 7,
       "norm_label": "int"
     },
     {
@@ -4961,7 +5011,7 @@
       "source_location": "L123",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_stats_statsscreen_kt_double",
-      "community": 5,
+      "community": 7,
       "norm_label": "double"
     },
     {
@@ -4971,7 +5021,7 @@
       "source_location": "L147",
       "_origin": "ast",
       "id": "stats_statsscreen_statbox",
-      "community": 5,
+      "community": 7,
       "norm_label": "statbox()"
     },
     {
@@ -4981,7 +5031,7 @@
       "source_location": "L147",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_stats_statsscreen_kt_string",
-      "community": 5,
+      "community": 7,
       "norm_label": "string"
     },
     {
@@ -4991,7 +5041,7 @@
       "source_location": "L147",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_stats_statsscreen_kt_modifier",
-      "community": 5,
+      "community": 7,
       "norm_label": "modifier"
     },
     {
@@ -5001,7 +5051,7 @@
       "source_location": "L165",
       "_origin": "ast",
       "id": "stats_statsscreen_sectionheader",
-      "community": 5,
+      "community": 7,
       "norm_label": "sectionheader()"
     },
     {
@@ -5011,7 +5061,7 @@
       "source_location": "L176",
       "_origin": "ast",
       "id": "stats_statsscreen_highlightsblock",
-      "community": 5,
+      "community": 7,
       "norm_label": "highlightsblock()"
     },
     {
@@ -5021,7 +5071,7 @@
       "source_location": "L176",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_stats_statsscreen_kt_clothingitem",
-      "community": 5,
+      "community": 7,
       "norm_label": "clothingitem"
     },
     {
@@ -5031,7 +5081,7 @@
       "source_location": "L176",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_stats_statsscreen_kt_long",
-      "community": 5,
+      "community": 7,
       "norm_label": "long"
     },
     {
@@ -5041,7 +5091,7 @@
       "source_location": "L219",
       "_origin": "ast",
       "id": "stats_statsscreen_highlightcard",
-      "community": 5,
+      "community": 7,
       "norm_label": "highlightcard()"
     },
     {
@@ -5051,7 +5101,7 @@
       "source_location": "L288",
       "_origin": "ast",
       "id": "stats_statsscreen_categorybreakdown",
-      "community": 5,
+      "community": 7,
       "norm_label": "categorybreakdown()"
     },
     {
@@ -5061,7 +5111,7 @@
       "source_location": "L288",
       "_origin": "ast",
       "id": "map",
-      "community": 5,
+      "community": 7,
       "norm_label": "map"
     },
     {
@@ -5071,7 +5121,7 @@
       "source_location": "L318",
       "_origin": "ast",
       "id": "stats_statsscreen_categorybar",
-      "community": 5,
+      "community": 7,
       "norm_label": "categorybar()"
     },
     {
@@ -5081,7 +5131,7 @@
       "source_location": "L354",
       "_origin": "ast",
       "id": "stats_statsscreen_costperwearrow",
-      "community": 5,
+      "community": 7,
       "norm_label": "costperwearrow()"
     },
     {
@@ -5091,7 +5141,7 @@
       "source_location": "L354",
       "_origin": "ast",
       "id": "costperwearitem",
-      "community": 5,
+      "community": 7,
       "norm_label": "costperwearitem"
     },
     {
@@ -5101,7 +5151,7 @@
       "source_location": "L399",
       "_origin": "ast",
       "id": "stats_statsscreen_formataverage",
-      "community": 5,
+      "community": 7,
       "norm_label": "formataverage()"
     },
     {
@@ -5111,7 +5161,7 @@
       "source_location": "L402",
       "_origin": "ast",
       "id": "stats_statsscreen_dayssince",
-      "community": 5,
+      "community": 7,
       "norm_label": "dayssince()"
     },
     {
@@ -5121,7 +5171,7 @@
       "source_location": "L405",
       "_origin": "ast",
       "id": "stats_statsscreen_fmtdate",
-      "community": 5,
+      "community": 7,
       "norm_label": "fmtdate()"
     },
     {
@@ -5131,7 +5181,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "stats_statsviewmodel",
-      "community": 3,
+      "community": 2,
       "norm_label": "statsviewmodel.kt"
     },
     {
@@ -5141,7 +5191,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "stats_statsviewmodel_costperwearitem",
-      "community": 3,
+      "community": 2,
       "norm_label": "costperwearitem"
     },
     {
@@ -5151,7 +5201,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "stats_statsviewmodel_statsuistate",
-      "community": 3,
+      "community": 2,
       "norm_label": "statsuistate"
     },
     {
@@ -5161,7 +5211,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "stats_statsviewmodel_statsviewmodel",
-      "community": 3,
+      "community": 2,
       "norm_label": "statsviewmodel"
     },
     {
@@ -5171,7 +5221,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_stats_statsviewmodel_kt_stateflow",
-      "community": 3,
+      "community": 2,
       "norm_label": "stateflow"
     },
     {
@@ -5181,7 +5231,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "theme_color",
-      "community": 67,
+      "community": 66,
       "norm_label": "color.kt"
     },
     {
@@ -5191,7 +5241,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "theme_theme",
-      "community": 13,
+      "community": 5,
       "norm_label": "theme.kt"
     },
     {
@@ -5201,7 +5251,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "theme_theme_wardovetheme",
-      "community": 13,
+      "community": 5,
       "norm_label": "wardovetheme()"
     },
     {
@@ -5211,7 +5261,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_theme_theme_kt_thememode",
-      "community": 13,
+      "community": 5,
       "norm_label": "thememode"
     },
     {
@@ -5221,7 +5271,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_theme_theme_kt_boolean",
-      "community": 13,
+      "community": 5,
       "norm_label": "boolean"
     },
     {
@@ -5231,7 +5281,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "theme_type",
-      "community": 68,
+      "community": 67,
       "norm_label": "type.kt"
     },
     {
@@ -5241,7 +5291,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "update_updatescreen",
-      "community": 22,
+      "community": 3,
       "norm_label": "updatescreen.kt"
     },
     {
@@ -5251,7 +5301,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "update_updatescreen_updatescreen",
-      "community": 22,
+      "community": 3,
       "norm_label": "updatescreen()"
     },
     {
@@ -5261,7 +5311,7 @@
       "source_location": "L60",
       "_origin": "ast",
       "id": "updateviewmodel",
-      "community": 22,
+      "community": 3,
       "norm_label": "updateviewmodel"
     },
     {
@@ -5271,7 +5321,7 @@
       "source_location": "L193",
       "_origin": "ast",
       "id": "update_updatescreen_currentversioncard",
-      "community": 22,
+      "community": 3,
       "norm_label": "currentversioncard()"
     },
     {
@@ -5281,7 +5331,7 @@
       "source_location": "L221",
       "_origin": "ast",
       "id": "update_updatescreen_latestreleasecard",
-      "community": 22,
+      "community": 3,
       "norm_label": "latestreleasecard()"
     },
     {
@@ -5291,7 +5341,7 @@
       "source_location": "L221",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_githubrelease",
-      "community": 22,
+      "community": 3,
       "norm_label": "githubrelease"
     },
     {
@@ -5301,7 +5351,7 @@
       "source_location": "L221",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_boolean",
-      "community": 22,
+      "community": 3,
       "norm_label": "boolean"
     },
     {
@@ -5311,7 +5361,7 @@
       "source_location": "L221",
       "_origin": "ast",
       "id": "installstate",
-      "community": 22,
+      "community": 3,
       "norm_label": "installstate"
     },
     {
@@ -5321,7 +5371,7 @@
       "source_location": "L362",
       "_origin": "ast",
       "id": "update_updatescreen_feedbackcard",
-      "community": 22,
+      "community": 3,
       "norm_label": "feedbackcard()"
     },
     {
@@ -5331,7 +5381,7 @@
       "source_location": "L405",
       "_origin": "ast",
       "id": "update_updatescreen_releasehistoryitem",
-      "community": 22,
+      "community": 3,
       "norm_label": "releasehistoryitem()"
     },
     {
@@ -5341,7 +5391,7 @@
       "source_location": "L440",
       "_origin": "ast",
       "id": "update_updatescreen_formatbytes",
-      "community": 22,
+      "community": 3,
       "norm_label": "formatbytes()"
     },
     {
@@ -5351,7 +5401,7 @@
       "source_location": "L440",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_long",
-      "community": 22,
+      "community": 3,
       "norm_label": "long"
     },
     {
@@ -5361,7 +5411,7 @@
       "source_location": "L440",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_string",
-      "community": 22,
+      "community": 3,
       "norm_label": "string"
     },
     {
@@ -5371,7 +5421,7 @@
       "source_location": "L445",
       "_origin": "ast",
       "id": "update_updatescreen_formatdate",
-      "community": 22,
+      "community": 3,
       "norm_label": "formatdate()"
     },
     {
@@ -5381,7 +5431,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "update_updateviewmodel",
-      "community": 1,
+      "community": 4,
       "norm_label": "updateviewmodel.kt"
     },
     {
@@ -5391,7 +5441,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "update_updateviewmodel_releasesstate",
-      "community": 1,
+      "community": 4,
       "norm_label": "releasesstate"
     },
     {
@@ -5401,7 +5451,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "update_updateviewmodel_loading",
-      "community": 1,
+      "community": 4,
       "norm_label": "loading"
     },
     {
@@ -5411,7 +5461,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "update_updateviewmodel_success",
-      "community": 1,
+      "community": 4,
       "norm_label": "success"
     },
     {
@@ -5421,7 +5471,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "update_updateviewmodel_error",
-      "community": 1,
+      "community": 4,
       "norm_label": "error"
     },
     {
@@ -5431,7 +5481,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "update_updateviewmodel_installstate",
-      "community": 1,
+      "community": 4,
       "norm_label": "installstate"
     },
     {
@@ -5441,7 +5491,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "update_updateviewmodel_idle",
-      "community": 1,
+      "community": 4,
       "norm_label": "idle"
     },
     {
@@ -5451,7 +5501,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "update_updateviewmodel_downloading",
-      "community": 1,
+      "community": 4,
       "norm_label": "downloading"
     },
     {
@@ -5461,7 +5511,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "update_updateviewmodel_readytoinstall",
-      "community": 1,
+      "community": 4,
       "norm_label": "readytoinstall"
     },
     {
@@ -5471,7 +5521,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "update_updateviewmodel_failed",
-      "community": 1,
+      "community": 4,
       "norm_label": "failed"
     },
     {
@@ -5481,7 +5531,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "update_updateviewmodel_updateviewmodel",
-      "community": 1,
+      "community": 4,
       "norm_label": "updateviewmodel"
     },
     {
@@ -5491,7 +5541,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "job",
-      "community": 1,
+      "community": 4,
       "norm_label": "job"
     },
     {
@@ -5501,7 +5551,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_long",
-      "community": 1,
+      "community": 4,
       "norm_label": "long"
     },
     {
@@ -5511,7 +5561,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "update_updateviewmodel_updateviewmodel_load",
-      "community": 1,
+      "community": 4,
       "norm_label": ".load()"
     },
     {
@@ -5521,7 +5571,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "update_updateviewmodel_updateviewmodel_isupdateavailable",
-      "community": 1,
+      "community": 3,
       "norm_label": ".isupdateavailable()"
     },
     {
@@ -5531,7 +5581,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_string",
-      "community": 1,
+      "community": 3,
       "norm_label": "string"
     },
     {
@@ -5541,7 +5591,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_boolean",
-      "community": 1,
+      "community": 3,
       "norm_label": "boolean"
     },
     {
@@ -5551,7 +5601,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "update_updateviewmodel_updateviewmodel_startdownload",
-      "community": 1,
+      "community": 4,
       "norm_label": ".startdownload()"
     },
     {
@@ -5561,7 +5611,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_githubasset",
-      "community": 1,
+      "community": 4,
       "norm_label": "githubasset"
     },
     {
@@ -5571,7 +5621,7 @@
       "source_location": "L92",
       "_origin": "ast",
       "id": "update_updateviewmodel_updateviewmodel_buildinstallintent",
-      "community": 1,
+      "community": 4,
       "norm_label": ".buildinstallintent()"
     },
     {
@@ -5581,7 +5631,7 @@
       "source_location": "L92",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_intent",
-      "community": 1,
+      "community": 4,
       "norm_label": "intent"
     },
     {
@@ -5591,7 +5641,7 @@
       "source_location": "L102",
       "_origin": "ast",
       "id": "update_updateviewmodel_updateviewmodel_deleteapk",
-      "community": 1,
+      "community": 4,
       "norm_label": ".deleteapk()"
     },
     {
@@ -5601,7 +5651,7 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "update_updateviewmodel_updateviewmodel_resetinstall",
-      "community": 1,
+      "community": 4,
       "norm_label": ".resetinstall()"
     },
     {
@@ -5611,7 +5661,7 @@
       "source_location": "L111",
       "_origin": "ast",
       "id": "update_updateviewmodel_updateviewmodel_openfeedback",
-      "community": 1,
+      "community": 4,
       "norm_label": ".openfeedback()"
     },
     {
@@ -5621,7 +5671,7 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "update_updateviewmodel_lateststablerelease",
-      "community": 1,
+      "community": 3,
       "norm_label": "lateststablerelease()"
     },
     {
@@ -5631,7 +5681,7 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_list",
-      "community": 1,
+      "community": 3,
       "norm_label": "list"
     },
     {
@@ -5641,7 +5691,7 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "com",
-      "community": 1,
+      "community": 3,
       "norm_label": "com"
     },
     {
@@ -5651,7 +5701,7 @@
       "source_location": "L134",
       "_origin": "ast",
       "id": "update_updateviewmodel_compareversions",
-      "community": 1,
+      "community": 3,
       "norm_label": "compareversions()"
     },
     {
@@ -5661,7 +5711,7 @@
       "source_location": "L134",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_int",
-      "community": 1,
+      "community": 3,
       "norm_label": "int"
     },
     {
@@ -5671,7 +5721,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "util_clothingoptions",
-      "community": 9,
+      "community": 11,
       "norm_label": "clothingoptions.kt"
     },
     {
@@ -5681,7 +5731,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "util_clothingoptions_clothingoptions",
-      "community": 9,
+      "community": 11,
       "norm_label": "clothingoptions"
     },
     {
@@ -5691,7 +5741,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_util_clothingoptions_kt_list",
-      "community": 9,
+      "community": 11,
       "norm_label": "list"
     },
     {
@@ -5701,7 +5751,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_util_clothingoptions_kt_string",
-      "community": 9,
+      "community": 11,
       "norm_label": "string"
     },
     {
@@ -5711,7 +5761,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "util_clothingoptions_clothingoptions_categoryresid",
-      "community": 9,
+      "community": 11,
       "norm_label": ".categoryresid()"
     },
     {
@@ -5721,7 +5771,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_util_clothingoptions_kt_int",
-      "community": 9,
+      "community": 11,
       "norm_label": "int"
     },
     {
@@ -5731,7 +5781,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "util_clothingoptions_namedcolor",
-      "community": 9,
+      "community": 11,
       "norm_label": "namedcolor"
     },
     {
@@ -5741,7 +5791,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "util_clothingoptions_clothingoptions_colornameresid",
-      "community": 9,
+      "community": 11,
       "norm_label": ".colornameresid()"
     },
     {
@@ -5751,7 +5801,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "util_clothingoptions_clothingoptions_colornamefor",
-      "community": 9,
+      "community": 11,
       "norm_label": ".colornamefor()"
     },
     {
@@ -5761,7 +5811,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "util_clothingoptions_parsehexcolor",
-      "community": 9,
+      "community": 11,
       "norm_label": "parsehexcolor()"
     },
     {
@@ -5771,7 +5821,7 @@
       "source_location": "L55",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_util_clothingoptions_kt_color",
-      "community": 9,
+      "community": 11,
       "norm_label": "color"
     },
     {
@@ -5781,7 +5831,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "util_clothingoptions_statusdisplayname",
-      "community": 9,
+      "community": 11,
       "norm_label": "statusdisplayname()"
     },
     {
@@ -5791,7 +5841,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "util_clothingoptions_statuscolor",
-      "community": 9,
+      "community": 11,
       "norm_label": "statuscolor()"
     },
     {
@@ -5801,7 +5851,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "util_customtabs",
-      "community": 19,
+      "community": 1,
       "norm_label": "customtabs.kt"
     },
     {
@@ -5811,7 +5861,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "util_customtabs_opencustomtab",
-      "community": 19,
+      "community": 1,
       "norm_label": "opencustomtab()"
     },
     {
@@ -5821,7 +5871,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_util_customtabs_kt_context",
-      "community": 19,
+      "community": 1,
       "norm_label": "context"
     },
     {
@@ -5831,7 +5881,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_util_customtabs_kt_string",
-      "community": 19,
+      "community": 1,
       "norm_label": "string"
     },
     {
@@ -5841,7 +5891,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "util_dateformat",
-      "community": 37,
+      "community": 36,
       "norm_label": "dateformat.kt"
     },
     {
@@ -5851,7 +5901,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "util_dateformat_formatdateonly",
-      "community": 37,
+      "community": 36,
       "norm_label": "formatdateonly()"
     },
     {
@@ -5861,7 +5911,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_util_dateformat_kt_string",
-      "community": 37,
+      "community": 36,
       "norm_label": "string"
     },
     {
@@ -5871,7 +5921,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "util_dateformat_formatdateshort",
-      "community": 37,
+      "community": 36,
       "norm_label": "formatdateshort()"
     },
     {
@@ -5881,7 +5931,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen",
-      "community": 14,
+      "community": 15,
       "norm_label": "wardrobescreen.kt"
     },
     {
@@ -5891,7 +5941,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_wardrobescreen",
-      "community": 14,
+      "community": 15,
       "norm_label": "wardrobescreen()"
     },
     {
@@ -5901,7 +5951,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_string",
-      "community": 14,
+      "community": 15,
       "norm_label": "string"
     },
     {
@@ -5911,7 +5961,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "wardrobeviewmodel",
-      "community": 14,
+      "community": 15,
       "norm_label": "wardrobeviewmodel"
     },
     {
@@ -5921,7 +5971,7 @@
       "source_location": "L196",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_searchbar",
-      "community": 14,
+      "community": 15,
       "norm_label": "searchbar()"
     },
     {
@@ -5931,7 +5981,7 @@
       "source_location": "L196",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_modifier",
-      "community": 14,
+      "community": 15,
       "norm_label": "modifier"
     },
     {
@@ -5941,7 +5991,7 @@
       "source_location": "L248",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_filterrow",
-      "community": 14,
+      "community": 15,
       "norm_label": "filterrow()"
     },
     {
@@ -5951,7 +6001,7 @@
       "source_location": "L248",
       "_origin": "ast",
       "id": "wardrobefilter",
-      "community": 14,
+      "community": 15,
       "norm_label": "wardrobefilter"
     },
     {
@@ -5961,7 +6011,7 @@
       "source_location": "L284",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_sortsheet",
-      "community": 14,
+      "community": 15,
       "norm_label": "sortsheet()"
     },
     {
@@ -5971,7 +6021,7 @@
       "source_location": "L284",
       "_origin": "ast",
       "id": "wardrobesort",
-      "community": 14,
+      "community": 15,
       "norm_label": "wardrobesort"
     },
     {
@@ -5981,7 +6031,7 @@
       "source_location": "L350",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_clothingcard",
-      "community": 14,
+      "community": 15,
       "norm_label": "clothingcard()"
     },
     {
@@ -5991,7 +6041,7 @@
       "source_location": "L350",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_clothingitem",
-      "community": 14,
+      "community": 15,
       "norm_label": "clothingitem"
     },
     {
@@ -6001,7 +6051,7 @@
       "source_location": "L411",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_emptystate",
-      "community": 14,
+      "community": 15,
       "norm_label": "emptystate()"
     },
     {
@@ -6011,7 +6061,7 @@
       "source_location": "L411",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_boolean",
-      "community": 14,
+      "community": 15,
       "norm_label": "boolean"
     },
     {
@@ -6021,7 +6071,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "wardrobe_wardrobeviewmodel",
-      "community": 28,
+      "community": 27,
       "norm_label": "wardrobeviewmodel.kt"
     },
     {
@@ -6031,7 +6081,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "wardrobe_wardrobeviewmodel_wardrobefilter",
-      "community": 28,
+      "community": 27,
       "norm_label": "wardrobefilter"
     },
     {
@@ -6041,7 +6091,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "wardrobe_wardrobeviewmodel_wardrobesort",
-      "community": 28,
+      "community": 27,
       "norm_label": "wardrobesort"
     },
     {
@@ -6051,7 +6101,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "wardrobe_wardrobeviewmodel_wardrobeviewmodel",
-      "community": 28,
+      "community": 27,
       "norm_label": "wardrobeviewmodel"
     },
     {
@@ -6061,7 +6111,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobeviewmodel_kt_stateflow",
-      "community": 28,
+      "community": 27,
       "norm_label": "stateflow"
     },
     {
@@ -6071,7 +6121,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobeviewmodel_kt_string",
-      "community": 28,
+      "community": 27,
       "norm_label": "string"
     },
     {
@@ -6081,7 +6131,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobeviewmodel_kt_list",
-      "community": 28,
+      "community": 27,
       "norm_label": "list"
     },
     {
@@ -6091,7 +6141,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobeviewmodel_kt_clothingitem",
-      "community": 28,
+      "community": 27,
       "norm_label": "clothingitem"
     },
     {
@@ -6101,7 +6151,7 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "wardrobe_wardrobeviewmodel_wardrobeviewmodel_setfilter",
-      "community": 28,
+      "community": 27,
       "norm_label": ".setfilter()"
     },
     {
@@ -6111,7 +6161,7 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "wardrobe_wardrobeviewmodel_wardrobeviewmodel_setsearchquery",
-      "community": 28,
+      "community": 27,
       "norm_label": ".setsearchquery()"
     },
     {
@@ -6121,7 +6171,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "wardrobe_wardrobeviewmodel_wardrobeviewmodel_setsort",
-      "community": 28,
+      "community": 27,
       "norm_label": ".setsort()"
     },
     {
@@ -6131,7 +6181,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "work_updatecheckworker",
-      "community": 1,
+      "community": 3,
       "norm_label": "updatecheckworker.kt"
     },
     {
@@ -6141,7 +6191,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "work_updatecheckworker_updatecheckworker",
-      "community": 1,
+      "community": 3,
       "norm_label": "updatecheckworker"
     },
     {
@@ -6151,7 +6201,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "coroutineworker",
-      "community": 1,
+      "community": 3,
       "norm_label": "coroutineworker"
     },
     {
@@ -6161,7 +6211,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "work_updatecheckworker_updatecheckworker_dowork",
-      "community": 1,
+      "community": 3,
       "norm_label": ".dowork()"
     },
     {
@@ -6171,7 +6221,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "result",
-      "community": 1,
+      "community": 3,
       "norm_label": "result"
     },
     {
@@ -6181,7 +6231,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "work_updatecheckworker_updatecheckworker_postnotification",
-      "community": 1,
+      "community": 3,
       "norm_label": ".postnotification()"
     },
     {
@@ -6191,7 +6241,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_work_updatecheckworker_kt_string",
-      "community": 1,
+      "community": 3,
       "norm_label": "string"
     },
     {
@@ -6201,7 +6251,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "wardove_exampleunittest",
-      "community": 41,
+      "community": 40,
       "norm_label": "exampleunittest.kt"
     },
     {
@@ -6211,7 +6261,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "wardove_exampleunittest_exampleunittest",
-      "community": 41,
+      "community": 40,
       "norm_label": "exampleunittest"
     },
     {
@@ -6221,7 +6271,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "wardove_exampleunittest_exampleunittest_addition_iscorrect",
-      "community": 41,
+      "community": 40,
       "norm_label": ".addition_iscorrect()"
     },
     {
@@ -6231,7 +6281,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "update_compareversionstest",
-      "community": 1,
+      "community": 3,
       "norm_label": "compareversionstest.kt"
     },
     {
@@ -6241,7 +6291,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "update_compareversionstest_compareversionstest",
-      "community": 1,
+      "community": 3,
       "norm_label": "compareversionstest"
     },
     {
@@ -6251,7 +6301,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "update_compareversionstest_compareversionstest_newerpatchisgreater",
-      "community": 1,
+      "community": 3,
       "norm_label": ".newerpatchisgreater()"
     },
     {
@@ -6261,7 +6311,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "update_compareversionstest_compareversionstest_newermajorbeatsolderhigherpatch",
-      "community": 1,
+      "community": 3,
       "norm_label": ".newermajorbeatsolderhigherpatch()"
     },
     {
@@ -6271,7 +6321,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "update_compareversionstest_compareversionstest_equalversionsreturnzero",
-      "community": 1,
+      "community": 3,
       "norm_label": ".equalversionsreturnzero()"
     },
     {
@@ -6281,7 +6331,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "update_compareversionstest_compareversionstest_leadingvanddifferinglengthstolerated",
-      "community": 1,
+      "community": 3,
       "norm_label": ".leadingvanddifferinglengthstolerated()"
     },
     {
@@ -6291,7 +6341,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "update_compareversionstest_compareversionstest_olderversionisless",
-      "community": 1,
+      "community": 3,
       "norm_label": ".olderversionisless()"
     },
     {
@@ -6301,7 +6351,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "build_gradle",
-      "community": 52,
+      "community": 51,
       "norm_label": "build.gradle.kts"
     },
     {
@@ -6401,7 +6451,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "settings_gradle",
-      "community": 66,
+      "community": 65,
       "norm_label": "settings.gradle.kts"
     },
     {
@@ -6427,21 +6477,8 @@
       "author": null,
       "contributor": null,
       "id": "workflows_docs_deploy_docs_workflow",
-      "community": 44,
+      "community": 43,
       "norm_label": "deploy docs github actions workflow"
-    },
-    {
-      "label": "Wardove Android App",
-      "file_type": "concept",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "wardove_wardove_app",
-      "community": 0,
-      "norm_label": "wardove android app"
     },
     {
       "label": "MVVM Architecture Pattern",
@@ -6773,6 +6810,99 @@
       "norm_label": "release signing strategy (stable keystore)"
     },
     {
+      "label": "No Retrofit: HttpURLConnection Used Directly",
+      "file_type": "rationale",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "UpdateRepository uses java.net.HttpURLConnection directly for the GitHub API call instead of Retrofit, keeping the dependency footprint minimal for a single API endpoint.",
+      "id": "wardove_no_retrofit_rationale",
+      "community": 0,
+      "norm_label": "no retrofit: httpurlconnection used directly"
+    },
+    {
+      "label": "Core Library Desugaring (java.time APIs on minSdk 24)",
+      "file_type": "rationale",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "coreLibraryDesugaringEnabled = true enables java.time APIs on Android 7.0 (minSdk 24) which natively only supports them from API 26+.",
+      "id": "wardove_desugaring_rationale",
+      "community": 68,
+      "norm_label": "core library desugaring (java.time apis on minsdk 24)"
+    },
+    {
+      "label": "Calendar Screen (top-level drawer nav screen)",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "wardove_calendar_screen",
+      "community": 0,
+      "norm_label": "calendar screen (top-level drawer nav screen)"
+    },
+    {
+      "label": "Settings Screen (top-level drawer nav screen)",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "wardove_settings_screen",
+      "community": 0,
+      "norm_label": "settings screen (top-level drawer nav screen)"
+    },
+    {
+      "label": "Stats Screen (top-level drawer nav screen)",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "wardove_stats_screen",
+      "community": 0,
+      "norm_label": "stats screen (top-level drawer nav screen)"
+    },
+    {
+      "label": "appVersionBase in gradle.properties",
+      "file_type": "concept",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "wardove_grade_properties_version_base",
+      "community": 0,
+      "norm_label": "appversionbase in gradle.properties"
+    },
+    {
+      "label": "Wardove Android App",
+      "file_type": "concept",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "wardove_wardove_app",
+      "community": 0,
+      "norm_label": "wardove android app"
+    },
+    {
       "label": "Wardove Design System",
       "file_type": "concept",
       "source_file": "app/src/main/java/com/app/wardove/WARDOVE_DESIGN_SPEC.md",
@@ -6782,7 +6912,7 @@
       "author": null,
       "contributor": null,
       "id": "wardove_design_system",
-      "community": 35,
+      "community": 34,
       "norm_label": "wardove design system"
     },
     {
@@ -6795,7 +6925,7 @@
       "author": null,
       "contributor": null,
       "id": "wardove_dm_serif_display_font",
-      "community": 35,
+      "community": 34,
       "norm_label": "dm serif display font"
     },
     {
@@ -6808,7 +6938,7 @@
       "author": null,
       "contributor": null,
       "id": "wardove_dm_sans_font",
-      "community": 35,
+      "community": 34,
       "norm_label": "dm sans font"
     },
     {
@@ -6821,7 +6951,7 @@
       "author": null,
       "contributor": null,
       "id": "wardove_wardove_typography",
-      "community": 35,
+      "community": 34,
       "norm_label": "wardovetypography (material 3 typography)"
     },
     {
@@ -6834,7 +6964,7 @@
       "author": null,
       "contributor": null,
       "id": "wardove_wardove_light_colors",
-      "community": 35,
+      "community": 34,
       "norm_label": "wardovelightcolors (material 3 colorscheme)"
     },
     {
@@ -6847,7 +6977,7 @@
       "author": null,
       "contributor": null,
       "id": "wardove_wardove_theme",
-      "community": 35,
+      "community": 34,
       "norm_label": "wardovetheme (compose material 3 theme wrapper)"
     },
     {
@@ -7159,7 +7289,7 @@
       "author": null,
       "contributor": null,
       "id": "docs_index_docs_home",
-      "community": 44,
+      "community": 43,
       "norm_label": "wardove docs home (vitepress)"
     },
     {
@@ -7228,86 +7358,6 @@
       "norm_label": "terms of service"
     },
     {
-      "label": "No Retrofit: HttpURLConnection Used Directly",
-      "file_type": "rationale",
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "UpdateRepository uses java.net.HttpURLConnection directly for the GitHub API call instead of Retrofit, keeping the dependency footprint minimal for a single API endpoint.",
-      "id": "wardove_no_retrofit_rationale",
-      "community": 0,
-      "norm_label": "no retrofit: httpurlconnection used directly"
-    },
-    {
-      "label": "Core Library Desugaring (java.time APIs on minSdk 24)",
-      "file_type": "rationale",
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "rationale": "coreLibraryDesugaringEnabled = true enables java.time APIs on Android 7.0 (minSdk 24) which natively only supports them from API 26+.",
-      "id": "wardove_desugaring_rationale",
-      "community": 69,
-      "norm_label": "core library desugaring (java.time apis on minsdk 24)"
-    },
-    {
-      "label": "Calendar Screen (top-level drawer nav screen)",
-      "file_type": "concept",
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "wardove_calendar_screen",
-      "community": 0,
-      "norm_label": "calendar screen (top-level drawer nav screen)"
-    },
-    {
-      "label": "Settings Screen (top-level drawer nav screen)",
-      "file_type": "concept",
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "wardove_settings_screen",
-      "community": 0,
-      "norm_label": "settings screen (top-level drawer nav screen)"
-    },
-    {
-      "label": "Stats Screen (top-level drawer nav screen)",
-      "file_type": "concept",
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "wardove_stats_screen",
-      "community": 0,
-      "norm_label": "stats screen (top-level drawer nav screen)"
-    },
-    {
-      "label": "appVersionBase in gradle.properties",
-      "file_type": "concept",
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "wardove_grade_properties_version_base",
-      "community": 0,
-      "norm_label": "appversionbase in gradle.properties"
-    },
-    {
       "label": "Wardove App Launcher Icon (nodpi)",
       "file_type": "image",
       "source_file": "app/src/main/res/drawable-nodpi/ic_launcher_wardove.png",
@@ -7317,7 +7367,7 @@
       "author": null,
       "contributor": null,
       "id": "drawable_nodpi_ic_launcher_wardove",
-      "community": 53,
+      "community": 52,
       "norm_label": "wardove app launcher icon (nodpi)"
     },
     {
@@ -7330,7 +7380,7 @@
       "author": null,
       "contributor": null,
       "id": "drawable_ic_splash",
-      "community": 45,
+      "community": 44,
       "norm_label": "splash screen / app icon (ic_splash)"
     },
     {
@@ -7343,7 +7393,7 @@
       "author": null,
       "contributor": null,
       "id": "drawable_ic_splash_wardrobe_concept",
-      "community": 45,
+      "community": 44,
       "norm_label": "wardrobe drawer illustration concept"
     },
     {
@@ -7356,7 +7406,7 @@
       "author": null,
       "contributor": null,
       "id": "mipmap_hdpi_ic_launcher",
-      "community": 54,
+      "community": 53,
       "norm_label": "app launcher icon (hdpi)"
     },
     {
@@ -7369,7 +7419,7 @@
       "author": null,
       "contributor": null,
       "id": "mipmap_hdpi_ic_launcher_round",
-      "community": 55,
+      "community": 54,
       "norm_label": "app launcher round icon (hdpi)"
     },
     {
@@ -7382,7 +7432,7 @@
       "author": null,
       "contributor": null,
       "id": "mipmap_mdpi_ic_launcher",
-      "community": 56,
+      "community": 55,
       "norm_label": "app launcher icon (mdpi)"
     },
     {
@@ -7395,7 +7445,7 @@
       "author": null,
       "contributor": null,
       "id": "mipmap_mdpi_ic_launcher_round",
-      "community": 57,
+      "community": 56,
       "norm_label": "round app launcher icon (mdpi)"
     },
     {
@@ -7408,7 +7458,7 @@
       "author": null,
       "contributor": null,
       "id": "mipmap_xhdpi_ic_launcher",
-      "community": 58,
+      "community": 57,
       "norm_label": "app launcher icon (xhdpi)"
     },
     {
@@ -7421,7 +7471,7 @@
       "author": null,
       "contributor": null,
       "id": "mipmap_xhdpi_ic_launcher_round",
-      "community": 59,
+      "community": 58,
       "norm_label": "app launcher round icon (xhdpi)"
     },
     {
@@ -7434,7 +7484,7 @@
       "author": null,
       "contributor": null,
       "id": "mipmap_xxhdpi_ic_launcher",
-      "community": 60,
+      "community": 59,
       "norm_label": "app launcher icon (xxhdpi)"
     },
     {
@@ -7447,7 +7497,7 @@
       "author": null,
       "contributor": null,
       "id": "mipmap_xxhdpi_ic_launcher_round",
-      "community": 61,
+      "community": 60,
       "norm_label": "app launcher round icon (xxhdpi)"
     },
     {
@@ -7460,7 +7510,7 @@
       "author": null,
       "contributor": null,
       "id": "mipmap_xxxhdpi_ic_launcher",
-      "community": 62,
+      "community": 61,
       "norm_label": "app launcher icon (xxxhdpi)"
     },
     {
@@ -7473,7 +7523,7 @@
       "author": null,
       "contributor": null,
       "id": "mipmap_xxxhdpi_ic_launcher_round",
-      "community": 63,
+      "community": 62,
       "norm_label": "app launcher round icon (xxxhdpi)"
     },
     {
@@ -7486,7 +7536,7 @@
       "author": null,
       "contributor": null,
       "id": "public_logo",
-      "community": 65,
+      "community": 64,
       "norm_label": "wardove app logo"
     }
   ],
@@ -7515,7 +7565,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L37",
+      "source_location": "L39",
       "weight": 1.0,
       "source": "wardove_mainactivity",
       "target": "wardove_mainactivity_mainactivity",
@@ -7525,7 +7575,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L48",
+      "source_location": "L50",
       "weight": 1.0,
       "context": "field",
       "source": "wardove_mainactivity_mainactivity",
@@ -7536,7 +7586,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L37",
+      "source_location": "L39",
       "weight": 1.0,
       "source": "wardove_mainactivity_mainactivity",
       "target": "fragmentactivity",
@@ -7546,7 +7596,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L43",
+      "source_location": "L45",
       "weight": 1.0,
       "context": "field",
       "source": "wardove_mainactivity_mainactivity",
@@ -7557,7 +7607,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L40",
+      "source_location": "L42",
       "weight": 1.0,
       "context": "field",
       "source": "wardove_mainactivity_mainactivity",
@@ -7568,7 +7618,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L58",
+      "source_location": "L60",
       "weight": 1.0,
       "source": "wardove_mainactivity_mainactivity",
       "target": "wardove_mainactivity_mainactivity_oncreate",
@@ -7578,7 +7628,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L123",
+      "source_location": "L125",
       "weight": 1.0,
       "source": "wardove_mainactivity_mainactivity",
       "target": "wardove_mainactivity_mainactivity_onnewintent",
@@ -7588,7 +7638,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L129",
+      "source_location": "L131",
       "weight": 1.0,
       "source": "wardove_mainactivity_mainactivity",
       "target": "wardove_mainactivity_mainactivity_onstart",
@@ -7598,7 +7648,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L136",
+      "source_location": "L138",
       "weight": 1.0,
       "source": "wardove_mainactivity_mainactivity",
       "target": "wardove_mainactivity_mainactivity_onstop",
@@ -7608,7 +7658,17 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L143",
+      "source_location": "L150",
+      "weight": 1.0,
+      "source": "wardove_mainactivity_mainactivity",
+      "target": "wardove_mainactivity_mainactivity_resolvenavroute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L161",
       "weight": 1.0,
       "source": "wardove_mainactivity_mainactivity",
       "target": "wardove_mainactivity_mainactivity_showbiometricprompt",
@@ -7630,7 +7690,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L74",
+      "source_location": "L76",
       "weight": 1.0,
       "source": "wardove_mainactivity_mainactivity_oncreate",
       "target": "biometricprompt",
@@ -7640,7 +7700,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L58",
+      "source_location": "L60",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "wardove_mainactivity_mainactivity_oncreate",
@@ -7653,7 +7713,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L116",
+      "source_location": "L118",
       "weight": 1.0,
       "source": "wardove_mainactivity_mainactivity_oncreate",
       "target": "lock_lockscreen_lockscreen"
@@ -7664,7 +7724,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L111",
+      "source_location": "L113",
       "weight": 1.0,
       "source": "wardove_mainactivity_mainactivity_oncreate",
       "target": "navigation_wardovenavhost_wardovenavhost"
@@ -7675,7 +7735,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L106",
+      "source_location": "L108",
       "weight": 1.0,
       "source": "wardove_mainactivity_mainactivity_oncreate",
       "target": "theme_theme_wardovetheme"
@@ -7685,7 +7745,18 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L101",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "wardove_mainactivity_mainactivity_oncreate",
+      "target": "wardove_mainactivity_mainactivity_resolvenavroute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L103",
       "weight": 1.0,
       "source": "wardove_mainactivity_mainactivity_oncreate",
       "target": "wardove_mainactivity_mainactivity_showbiometricprompt",
@@ -7695,11 +7766,44 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L123",
+      "source_location": "L125",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "wardove_mainactivity_mainactivity_onnewintent",
       "target": "app_src_main_java_com_app_wardove_mainactivity_kt_intent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L128",
+      "weight": 1.0,
+      "source": "wardove_mainactivity_mainactivity_onnewintent",
+      "target": "wardove_mainactivity_mainactivity_resolvenavroute",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L150",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "wardove_mainactivity_mainactivity_resolvenavroute",
+      "target": "app_src_main_java_com_app_wardove_mainactivity_kt_intent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L150",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "wardove_mainactivity_mainactivity_resolvenavroute",
+      "target": "app_src_main_java_com_app_wardove_mainactivity_kt_string",
       "confidence_score": 1.0
     },
     {
@@ -11358,7 +11462,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L132",
+      "source_location": "L145",
       "weight": 1.0,
       "source": "navigation_wardovenavhost_wardovenavhost",
       "target": "additem_additemscreen_additemscreen"
@@ -12082,7 +12186,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L188",
+      "source_location": "L201",
       "weight": 1.0,
       "source": "navigation_wardovenavhost_wardovenavhost",
       "target": "calendar_calendarscreen_calendarscreen"
@@ -12482,7 +12586,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L184",
+      "source_location": "L197",
       "weight": 1.0,
       "source": "navigation_wardovenavhost_wardovenavhost",
       "target": "history_historyscreen_historyscreen"
@@ -12749,7 +12853,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L155",
+      "source_location": "L168",
       "weight": 1.0,
       "source": "navigation_wardovenavhost_wardovenavhost",
       "target": "itemdetail_itemdetailscreen_itemdetailscreen"
@@ -13208,7 +13312,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L171",
+      "source_location": "L184",
       "weight": 1.0,
       "source": "navigation_wardovenavhost_wardovenavhost",
       "target": "laundry_laundryscreen_laundryscreen"
@@ -13837,6 +13941,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveDestinations.kt",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "navigation_wardovedestinations",
+      "target": "navigation_wardovedestinations_shortcutactions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveDestinations.kt",
       "source_location": "L5",
       "weight": 1.0,
       "source": "navigation_wardovedestinations",
@@ -13907,6 +14021,17 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveDestinations.kt",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "navigation_wardovedestinations_shortcutactions_routeforaction",
+      "target": "navigation_wardovedestinations_wardovedestinations_additem",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveDestinations.kt",
@@ -13921,11 +14046,53 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveDestinations.kt",
+      "source_location": "L43",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "navigation_wardovedestinations_shortcutactions_routeforaction",
+      "target": "app_src_main_java_com_app_wardove_ui_navigation_wardovedestinations_kt_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveDestinations.kt",
+      "source_location": "L52",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "navigation_wardovedestinations_shortcutactions_shortcutidforaction",
+      "target": "app_src_main_java_com_app_wardove_ui_navigation_wardovedestinations_kt_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveDestinations.kt",
       "source_location": "L32",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "navigation_wardovedestinations_wardovedestinations_licensedetail",
       "target": "app_src_main_java_com_app_wardove_ui_navigation_wardovedestinations_kt_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveDestinations.kt",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "navigation_wardovedestinations_shortcutactions",
+      "target": "navigation_wardovedestinations_shortcutactions_routeforaction",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveDestinations.kt",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "navigation_wardovedestinations_shortcutactions",
+      "target": "navigation_wardovedestinations_shortcutactions_shortcutidforaction",
       "confidence_score": 1.0
     },
     {
@@ -13965,7 +14132,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L75",
+      "source_location": "L88",
       "weight": 1.0,
       "source": "navigation_wardovenavhost_wardovenavhost",
       "target": "navigation_wardovedrawercontent_wardovedrawercontent"
@@ -13974,7 +14141,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L43",
+      "source_location": "L42",
       "weight": 1.0,
       "source": "navigation_wardovenavhost",
       "target": "navigation_wardovenavhost_wardovenavhost",
@@ -13984,7 +14151,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L43",
+      "source_location": "L42",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "navigation_wardovenavhost_wardovenavhost",
@@ -13995,7 +14162,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L43",
+      "source_location": "L42",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "navigation_wardovenavhost_wardovenavhost",
@@ -14008,7 +14175,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L237",
+      "source_location": "L250",
       "weight": 1.0,
       "source": "navigation_wardovenavhost_wardovenavhost",
       "target": "settings_aboutsettingsscreen_aboutsettingsscreen"
@@ -14019,7 +14186,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L227",
+      "source_location": "L240",
       "weight": 1.0,
       "source": "navigation_wardovenavhost_wardovenavhost",
       "target": "settings_appearancesettingsscreen_appearancesettingsscreen"
@@ -14030,7 +14197,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L217",
+      "source_location": "L230",
       "weight": 1.0,
       "source": "navigation_wardovenavhost_wardovenavhost",
       "target": "settings_applocksettingsscreen_applocksettingsscreen"
@@ -14041,7 +14208,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L295",
+      "source_location": "L308",
       "weight": 1.0,
       "source": "navigation_wardovenavhost_wardovenavhost",
       "target": "settings_diagnosticssettingsscreen_diagnosticssettingsscreen"
@@ -14052,7 +14219,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L272",
+      "source_location": "L285",
       "weight": 1.0,
       "source": "navigation_wardovenavhost_wardovenavhost",
       "target": "settings_licensedetailscreen_licensedetailscreen"
@@ -14063,7 +14230,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L251",
+      "source_location": "L264",
       "weight": 1.0,
       "source": "navigation_wardovenavhost_wardovenavhost",
       "target": "settings_licensessettingsscreen_licensessettingsscreen"
@@ -14074,7 +14241,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L285",
+      "source_location": "L298",
       "weight": 1.0,
       "source": "navigation_wardovenavhost_wardovenavhost",
       "target": "settings_notificationsettingsscreen_notificationsettingsscreen"
@@ -14085,7 +14252,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L200",
+      "source_location": "L213",
       "weight": 1.0,
       "source": "navigation_wardovenavhost_wardovenavhost",
       "target": "settings_settingsscreen_settingsscreen"
@@ -14096,7 +14263,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L194",
+      "source_location": "L207",
       "weight": 1.0,
       "source": "navigation_wardovenavhost_wardovenavhost",
       "target": "stats_statsscreen_statsscreen"
@@ -14107,7 +14274,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L305",
+      "source_location": "L318",
       "weight": 1.0,
       "source": "navigation_wardovenavhost_wardovenavhost",
       "target": "update_updatescreen_updatescreen"
@@ -14118,7 +14285,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L107",
+      "source_location": "L120",
       "weight": 1.0,
       "source": "navigation_wardovenavhost_wardovenavhost",
       "target": "wardrobe_wardrobescreen_wardrobescreen"
@@ -17313,26 +17480,6 @@
       "source_location": null,
       "weight": 1.0,
       "source": "wardove_wardove_app",
-      "target": "wardove_hilt_di"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "wardove_wardove_app",
-      "target": "wardove_local_only_persistence"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "wardove_wardove_app",
       "target": "wardove_mvvm_architecture"
     },
     {
@@ -17353,6 +17500,16 @@
       "source_location": null,
       "weight": 1.0,
       "source": "docs_terms_terms_of_service",
+      "target": "wardove_local_only_persistence"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "wardove_wardove_app",
       "target": "wardove_local_only_persistence"
     },
     {
@@ -17816,6 +17973,16 @@
       "target": "wardove_settings_module"
     },
     {
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "wardove_wardove_app",
+      "target": "wardove_hilt_di"
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -18036,6 +18203,26 @@
       "target": "wardove_release_signing"
     },
     {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "docs/features/calendar.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "features_calendar_calendar_screen",
+      "target": "wardove_calendar_screen"
+    },
+    {
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "docs/features/stats.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "features_stats_stats_screen",
+      "target": "wardove_stats_screen"
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -18236,16 +18423,6 @@
       "target": "docs_changelog_biometric_app_lock_feature"
     },
     {
-      "relation": "semantically_similar_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "docs/features/calendar.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "features_calendar_calendar_screen",
-      "target": "wardove_calendar_screen"
-    },
-    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -18254,16 +18431,6 @@
       "weight": 1.0,
       "source": "features_stats_stats_screen",
       "target": "features_stats_cost_per_wear"
-    },
-    {
-      "relation": "semantically_similar_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.95,
-      "source_file": "docs/features/stats.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "features_stats_stats_screen",
-      "target": "wardove_stats_screen"
     },
     {
       "relation": "references",
@@ -18336,5 +18503,5 @@
       "source_file": "/Users/zkonte/Documents/GitHub/wardove/CLAUDE.md"
     }
   ],
-  "built_at_commit": "2a3abe0c50a3912221567ed8c2b75295445c362c"
+  "built_at_commit": "fd038ab2b36aa7cc57cbe7949fb6ad5e407ec583"
 }
