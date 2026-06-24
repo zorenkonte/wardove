@@ -303,6 +303,9 @@
     <string name="shortcut_stats_short">Stats</string>
     <string name="shortcut_stats_long">View statistics</string>
 
+    <!-- ── Home-screen widget ── -->
+    <string name="widget_stats_description">Wardove wardrobe stats</string>
+
     <!-- ── Quick Settings tiles ── -->
     <string name="tile_laundry_label">Laundry</string>
     <string name="tile_add_label">Add item</string>

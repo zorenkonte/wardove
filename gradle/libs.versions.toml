@@ -25,6 +25,7 @@ aboutlibraries = "14.2.1"
 work = "2.10.1"
 hiltWork = "1.2.0"
 timber = "5.0.1"
+glance = "1.1.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -97,6 +98,10 @@ androidx-hilt-compiler = { group = "androidx.hilt", name = "hilt-compiler", vers
 
 # Timber logging
 timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
+
+# Glance app widgets
+androidx-glance-appwidget = { group = "androidx.glance", name = "glance-appwidget", version.ref = "glance" }
+androidx-glance-material3 = { group = "androidx.glance", name = "glance-material3", version.ref = "glance" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
