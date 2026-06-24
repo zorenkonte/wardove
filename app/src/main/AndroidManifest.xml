@@ -47,6 +47,40 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
+        <!-- ── Quick Settings tiles ── -->
+        <service
+            android:name=".tile.LaundryTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_shortcut_laundry"
+            android:label="@string/tile_laundry_label"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".tile.QuickAddTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_shortcut_add"
+            android:label="@string/tile_add_label"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".tile.StatsTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_shortcut_stats"
+            android:label="@string/tile_stats_label"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+        </service>
+
         <!-- Remove the default WorkManager initializer so WardoveApplication
              can supply a custom Configuration with HiltWorkerFactory. -->
         <provider

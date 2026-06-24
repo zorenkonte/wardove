@@ -50,4 +50,7 @@ interface ClothingDao {
 
     @Query("UPDATE clothing_items SET totalWearCount = 0, status = :status WHERE id IN (:ids)")
     suspend fun markCleanAndReset(ids: List<Long>, status: String)
+
+    @Query("SELECT COUNT(*) FROM clothing_items WHERE status = :status")
+    suspend fun countByStatus(status: String): Int
 }

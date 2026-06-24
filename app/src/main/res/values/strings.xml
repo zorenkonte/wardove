@@ -302,4 +302,11 @@
     <string name="shortcut_update_long">Check for updates</string>
     <string name="shortcut_stats_short">Stats</string>
     <string name="shortcut_stats_long">View statistics</string>
+
+    <!-- ── Quick Settings tiles ── -->
+    <string name="tile_laundry_label">Laundry</string>
+    <string name="tile_add_label">Add item</string>
+    <string name="tile_stats_label">Stats</string>
+    <!-- %d = number of WORN items waiting for laundry -->
+    <string name="tile_laundry_subtitle">%d waiting</string>
 </resources>

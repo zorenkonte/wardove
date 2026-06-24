@@ -61,6 +61,8 @@ class ClothingRepository @Inject constructor(
         return start to end
     }
 
+    suspend fun countByStatus(status: String): Int = clothingDao.countByStatus(status)
+
     fun observeWearLogs(itemId: Long): Flow<List<WearLog>> =
         wearLogDao.observeForItem(itemId)
 }
