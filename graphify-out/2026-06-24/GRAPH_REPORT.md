@@ -1,18 +1,13 @@
-# Graph Report - wardove  (2026-06-24)
+# Graph Report - .  (2026-06-23)
 
 ## Corpus Check
-- 99 files · ~55,405 words
+- 110 files · ~55,131 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 743 nodes · 1059 edges · 74 communities (48 shown, 26 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 63 edges (avg confidence: 0.83)
+- 723 nodes · 1034 edges · 69 communities (43 shown, 26 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 60 edges (avg confidence: 0.83)
 - Token cost: 0 input · 0 output
-
-## Graph Freshness
-- Built from commit: `aaf2f28d`
-- Run `git rev-parse HEAD` and compare to check if the graph is stale.
-- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_Documentation & Feature Docs|Documentation & Feature Docs]]
@@ -78,19 +73,14 @@
 - [[_COMMUNITY_Launcher Round Icon xxxhdpi|Launcher Round Icon xxxhdpi]]
 - [[_COMMUNITY_Docs Logo Asset|Docs Logo Asset]]
 - [[_COMMUNITY_Desugaring Rationale|Desugaring Rationale]]
-- [[_COMMUNITY_Community 69|Community 69]]
-- [[_COMMUNITY_Community 70|Community 70]]
-- [[_COMMUNITY_Community 71|Community 71]]
-- [[_COMMUNITY_Community 72|Community 72]]
-- [[_COMMUNITY_Community 73|Community 73]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `WardoveNavHost()` - 21 edges
 2. `AddItemViewModel` - 20 edges
 3. `LaundryViewModel` - 20 edges
-4. `ClothingDao` - 15 edges
-5. `ClothingRepository` - 13 edges
-6. `LaundryDao` - 12 edges
+4. `ClothingDao` - 14 edges
+5. `LaundryDao` - 12 edges
+6. `ClothingRepository` - 12 edges
 7. `ItemDetailViewModel` - 12 edges
 8. `PileTab()` - 12 edges
 9. `MainActivity` - 11 edges
@@ -116,7 +106,7 @@
 - **Hilt DI Module Triad (Database + Repository + Settings)** — wardove_hilt_di, wardove_database_module, wardove_repository_module, wardove_settings_module [EXTRACTED 1.00]
 - **Top-Level Navigation Drawer Screens** — wardove_wardrobe_screen, wardove_laundry_screen, wardove_calendar_screen, wardove_stats_screen, wardove_settings_screen, wardove_wardove_nav_host [EXTRACTED 1.00]
 
-## Communities (74 total, 26 thin omitted)
+## Communities (69 total, 26 thin omitted)
 
 ### Community 0 - "Documentation & Feature Docs"
 Cohesion: 0.05
@@ -127,16 +117,16 @@ Cohesion: 0.06
 Nodes (40): String, String, ImageVector, String, Boolean, SettingsViewModel, String, String (+32 more)
 
 ### Community 2 - "ViewModel State Management"
-Cohesion: 0.22
-Nodes (6): AppSettings, Boolean, StateFlow, ThemeMode, SettingsViewModel, ViewModel
+Cohesion: 0.05
+Nodes (23): ClothingItem, LaundryCycle, List, Long, StateFlow, Boolean, StateFlow, StateFlow (+15 more)
 
 ### Community 3 - "App Update Screen"
-Cohesion: 0.24
-Nodes (13): Boolean, GithubRelease, Long, String, InstallState, CurrentVersionCard(), FeedbackCard(), formatBytes() (+5 more)
+Cohesion: 0.08
+Nodes (25): Boolean, GithubRelease, Long, String, Boolean, Int, List, String (+17 more)
 
 ### Community 4 - "Diagnostics & Update Delivery"
-Cohesion: 0.06
-Nodes (29): String, Uri, Boolean, GithubAsset, Int, Intent, List, Long (+21 more)
+Cohesion: 0.10
+Nodes (17): String, Uri, GithubAsset, Intent, Long, Job, DiagnosticsRepository, Downloading (+9 more)
 
 ### Community 5 - "App Entry & Theme"
 Cohesion: 0.09
@@ -151,7 +141,7 @@ Cohesion: 0.19
 Nodes (21): ClothingItem, Double, Int, Long, Modifier, String, CostPerWearItem, Map (+13 more)
 
 ### Community 8 - "Clothing Data Access"
-Cohesion: 0.21
+Cohesion: 0.22
 Nodes (7): ClothingItem, Flow, Int, List, Long, String, ClothingDao
 
 ### Community 9 - "Update Repository & GitHub API"
@@ -167,8 +157,8 @@ Cohesion: 0.17
 Nodes (15): AddItemScreen(), CategoryDropdown(), ColorGrid(), ImagePicker(), AddItemViewModel, String, Color, Int (+7 more)
 
 ### Community 12 - "Clothing Repository"
-Cohesion: 0.18
-Nodes (9): ClothingItem, Flow, Int, List, Long, String, Pair, ClothingRepository (+1 more)
+Cohesion: 0.21
+Nodes (8): ClothingItem, Flow, List, Long, String, WearLog, Pair, ClothingRepository
 
 ### Community 13 - "Laundry ViewModel"
 Cohesion: 0.13
@@ -266,28 +256,8 @@ Nodes (3): Boolean, Flow, AppLockRepository
 Cohesion: 0.67
 Nodes (3): String, formatDateOnly(), formatDateShort()
 
-### Community 69 - "Community 69"
-Cohesion: 0.14
-Nodes (8): String, ClothingRepository, CoroutineScope, LaundryTileService, QuickAddTileService, StatsTileService, launchMainActivity(), TileService
-
-### Community 70 - "Community 70"
-Cohesion: 0.22
-Nodes (3): Boolean, StateFlow, LockViewModel
-
-### Community 71 - "Community 71"
-Cohesion: 0.22
-Nodes (4): StateFlow, String, Uri, DiagnosticsViewModel
-
-### Community 72 - "Community 72"
-Cohesion: 0.29
-Nodes (6): ClothingItem, LaundryCycle, List, Long, StateFlow, HistoryViewModel
-
-### Community 73 - "Community 73"
-Cohesion: 0.50
-Nodes (4): StateFlow, CostPerWearItem, StatsUiState, StatsViewModel
-
 ## Knowledge Gaps
-- **185 isolated node(s):** `Pair`, `Int`, `ClothingRepository`, `String`, `SettingsRepository` (+180 more)
+- **184 isolated node(s):** `SettingsRepository`, `LockViewModel`, `Bundle`, `String`, `HiltWorkerFactory` (+179 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -295,15 +265,15 @@ Nodes (4): StateFlow, CostPerWearItem, StatsUiState, StatsViewModel
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `WardoveNavHost()` connect `Settings UI & Navigation` to `App Update Screen`, `App Entry & Theme`, `Stats & Analytics UI`, `Laundry Screen UI`, `Add Item Screen`, `Wardrobe Screen UI`, `Calendar Screen`, `Item Detail Screen`, `History Screen`?**
-  _High betweenness centrality (0.185) - this node is a cross-community bridge._
+  _High betweenness centrality (0.196) - this node is a cross-community bridge._
 - **Why does `AppLockSettingsScreen()` connect `App Entry & Theme` to `Settings UI & Navigation`?**
-  _High betweenness centrality (0.098) - this node is a cross-community bridge._
+  _High betweenness centrality (0.103) - this node is a cross-community bridge._
 - **Why does `AppLockSettingsViewModel` connect `App Entry & Theme` to `ViewModel State Management`?**
-  _High betweenness centrality (0.096) - this node is a cross-community bridge._
+  _High betweenness centrality (0.101) - this node is a cross-community bridge._
 - **Are the 18 inferred relationships involving `WardoveNavHost()` (e.g. with `AddItemScreen()` and `CalendarScreen()`) actually correct?**
   _`WardoveNavHost()` has 18 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `Pair`, `Int`, `ClothingRepository` to the rest of the system?**
-  _188 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `SettingsRepository`, `LockViewModel`, `Bundle` to the rest of the system?**
+  _187 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Documentation & Feature Docs` be split into smaller, more focused modules?**
   _Cohesion score 0.05254237288135593 - nodes in this community are weakly interconnected._
 - **Should `Settings UI & Navigation` be split into smaller, more focused modules?**
