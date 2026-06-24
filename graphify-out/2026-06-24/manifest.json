@@ -1,552 +1,572 @@
 {
-  "/Users/zkonte/Documents/GitHub/wardove/.claude/settings.local.json": {
+  ".claude/settings.local.json": {
     "mtime": 1781977681.5457168,
     "ast_hash": "34945cca2b7f586ee2ceda37d2f6e28d",
     "semantic_hash": "34945cca2b7f586ee2ceda37d2f6e28d"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/build.gradle.kts": {
+  "app/build.gradle.kts": {
     "mtime": 1781974962.5300744,
     "ast_hash": "f577e3d8f79008041f093d9a1b52a69d",
     "semantic_hash": "f577e3d8f79008041f093d9a1b52a69d"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/androidTest/java/com/app/wardove/ExampleInstrumentedTest.kt": {
+  "app/src/androidTest/java/com/app/wardove/ExampleInstrumentedTest.kt": {
     "mtime": 1781430005.858652,
     "ast_hash": "3df251ecdf9f918d9aaac5c785ab507e",
     "semantic_hash": "3df251ecdf9f918d9aaac5c785ab507e"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/MainActivity.kt": {
+  "app/src/main/java/com/app/wardove/MainActivity.kt": {
     "mtime": 1782221952.9271655,
     "ast_hash": "871017cd86be63c3eceae7a9710953e8",
     "semantic_hash": "871017cd86be63c3eceae7a9710953e8"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/WardoveApplication.kt": {
+  "app/src/main/java/com/app/wardove/WardoveApplication.kt": {
     "mtime": 1781976230.1124053,
     "ast_hash": "f10da22ede6df732ad3b6f4da9821526",
     "semantic_hash": "f10da22ede6df732ad3b6f4da9821526"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/image/ImageStorage.kt": {
+  "app/src/main/java/com/app/wardove/data/image/ImageStorage.kt": {
     "mtime": 1781430005.8598497,
     "ast_hash": "3fe7f8c3a440d7c871587643ffc27f29",
     "semantic_hash": "3fe7f8c3a440d7c871587643ffc27f29"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/local/WardoveDatabase.kt": {
+  "app/src/main/java/com/app/wardove/data/local/WardoveDatabase.kt": {
     "mtime": 1781430005.8599823,
     "ast_hash": "f57476f1d4cca6900a87e7cf7c21958d",
     "semantic_hash": "f57476f1d4cca6900a87e7cf7c21958d"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/local/dao/ClothingDao.kt": {
-    "mtime": 1781430005.8601396,
-    "ast_hash": "33b002b639523fbcadb584be325c3ac4",
-    "semantic_hash": "33b002b639523fbcadb584be325c3ac4"
+  "app/src/main/java/com/app/wardove/data/local/dao/ClothingDao.kt": {
+    "mtime": 1782308570.512765,
+    "ast_hash": "54c27558f1c6582cfea09c8063f14982",
+    "semantic_hash": ""
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/local/dao/LaundryDao.kt": {
+  "app/src/main/java/com/app/wardove/data/local/dao/LaundryDao.kt": {
     "mtime": 1781430005.860235,
     "ast_hash": "659e5edf1e7965a783b885093575e213",
     "semantic_hash": "659e5edf1e7965a783b885093575e213"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/local/dao/WearLogDao.kt": {
+  "app/src/main/java/com/app/wardove/data/local/dao/WearLogDao.kt": {
     "mtime": 1781430005.860335,
     "ast_hash": "b8ad1af634081fee131c3f024044d699",
     "semantic_hash": "b8ad1af634081fee131c3f024044d699"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/local/dao/WearLogWithItem.kt": {
+  "app/src/main/java/com/app/wardove/data/local/dao/WearLogWithItem.kt": {
     "mtime": 1781430005.8604271,
     "ast_hash": "8ed5f30dd0bcdef22a75432a1f104ea7",
     "semantic_hash": "8ed5f30dd0bcdef22a75432a1f104ea7"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/local/entity/ClothingItem.kt": {
+  "app/src/main/java/com/app/wardove/data/local/entity/ClothingItem.kt": {
     "mtime": 1781430005.8605974,
     "ast_hash": "37e2f8ab8a39a54703057788daabd71c",
     "semantic_hash": "37e2f8ab8a39a54703057788daabd71c"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/local/entity/LaundryCycle.kt": {
+  "app/src/main/java/com/app/wardove/data/local/entity/LaundryCycle.kt": {
     "mtime": 1781430005.8607008,
     "ast_hash": "460e5b955a4f61f6a8662dd577f194f4",
     "semantic_hash": "460e5b955a4f61f6a8662dd577f194f4"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/local/entity/LaundryCycleItem.kt": {
+  "app/src/main/java/com/app/wardove/data/local/entity/LaundryCycleItem.kt": {
     "mtime": 1781430005.8608003,
     "ast_hash": "664c5d89fce9d6940127b444bc5cd4d6",
     "semantic_hash": "664c5d89fce9d6940127b444bc5cd4d6"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/local/entity/WearLog.kt": {
+  "app/src/main/java/com/app/wardove/data/local/entity/WearLog.kt": {
     "mtime": 1781430005.8609006,
     "ast_hash": "fb555b23d58ac11cbbdd8572258b9d30",
     "semantic_hash": "fb555b23d58ac11cbbdd8572258b9d30"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/log/CrashHandler.kt": {
+  "app/src/main/java/com/app/wardove/data/log/CrashHandler.kt": {
     "mtime": 1781972329.1595924,
     "ast_hash": "8761e9b92acc9afeaaaebe492b26e815",
     "semantic_hash": "8761e9b92acc9afeaaaebe492b26e815"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/log/DiagnosticsRepository.kt": {
+  "app/src/main/java/com/app/wardove/data/log/DiagnosticsRepository.kt": {
     "mtime": 1781972342.3349853,
     "ast_hash": "6f8f236e73f7b62b8d8122376577564e",
     "semantic_hash": "6f8f236e73f7b62b8d8122376577564e"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/log/FileLoggingTree.kt": {
+  "app/src/main/java/com/app/wardove/data/log/FileLoggingTree.kt": {
     "mtime": 1781972321.4897034,
     "ast_hash": "ea1513e444ff89b4d4fd6fcd0e19846a",
     "semantic_hash": "ea1513e444ff89b4d4fd6fcd0e19846a"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/model/GithubRelease.kt": {
+  "app/src/main/java/com/app/wardove/data/model/GithubRelease.kt": {
     "mtime": 1781431692.0724998,
     "ast_hash": "c6d3088e86c653978e45c8595f4d2d00",
     "semantic_hash": "c6d3088e86c653978e45c8595f4d2d00"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/repository/CalendarRepository.kt": {
+  "app/src/main/java/com/app/wardove/data/repository/CalendarRepository.kt": {
     "mtime": 1781430005.861062,
     "ast_hash": "497df537b5d0513c9a3c85da28fa9e32",
     "semantic_hash": "497df537b5d0513c9a3c85da28fa9e32"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/repository/ClothingRepository.kt": {
-    "mtime": 1781430005.8611684,
-    "ast_hash": "9ce35b93cc6bb8543eb80bfac606d735",
-    "semantic_hash": "9ce35b93cc6bb8543eb80bfac606d735"
+  "app/src/main/java/com/app/wardove/data/repository/ClothingRepository.kt": {
+    "mtime": 1782308572.3927152,
+    "ast_hash": "da4a938e7bc0e77362d65544c9e8c790",
+    "semantic_hash": ""
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/repository/LaundryRepository.kt": {
+  "app/src/main/java/com/app/wardove/data/repository/LaundryRepository.kt": {
     "mtime": 1781430005.861263,
     "ast_hash": "80071483234750e03f61c0614661b905",
     "semantic_hash": "80071483234750e03f61c0614661b905"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/repository/UpdateRepository.kt": {
+  "app/src/main/java/com/app/wardove/data/repository/UpdateRepository.kt": {
     "mtime": 1781976243.1080768,
     "ast_hash": "1b1f822a6f42aab355fba69f63f0461a",
     "semantic_hash": "1b1f822a6f42aab355fba69f63f0461a"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/settings/AppLockRepository.kt": {
+  "app/src/main/java/com/app/wardove/data/settings/AppLockRepository.kt": {
     "mtime": 1781789993.7752533,
     "ast_hash": "c8b1b094e446e9ab36d0d5b214fd98b6",
     "semantic_hash": "c8b1b094e446e9ab36d0d5b214fd98b6"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/settings/AppSettings.kt": {
+  "app/src/main/java/com/app/wardove/data/settings/AppSettings.kt": {
     "mtime": 1781974006.7289999,
     "ast_hash": "959ebea79bf91e16cfa45ebfddbb00af",
     "semantic_hash": "959ebea79bf91e16cfa45ebfddbb00af"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt": {
+  "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt": {
     "mtime": 1781974020.7530487,
     "ast_hash": "677bdf274c2043371a31bd598156aaee",
     "semantic_hash": "677bdf274c2043371a31bd598156aaee"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/data/settings/ThemeMode.kt": {
+  "app/src/main/java/com/app/wardove/data/settings/ThemeMode.kt": {
     "mtime": 1781430005.861603,
     "ast_hash": "e6c8acab94e78d01c14b4db7bf75781f",
     "semantic_hash": "e6c8acab94e78d01c14b4db7bf75781f"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/di/DatabaseModule.kt": {
+  "app/src/main/java/com/app/wardove/di/DatabaseModule.kt": {
     "mtime": 1781430005.8617566,
     "ast_hash": "298add99d61bd39f38f84ab7fe3f6133",
     "semantic_hash": "298add99d61bd39f38f84ab7fe3f6133"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/di/RepositoryModule.kt": {
+  "app/src/main/java/com/app/wardove/di/RepositoryModule.kt": {
     "mtime": 1781430005.8618588,
     "ast_hash": "f67e7d042baf0f36a35790eb2f8219c3",
     "semantic_hash": "f67e7d042baf0f36a35790eb2f8219c3"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/di/SettingsModule.kt": {
+  "app/src/main/java/com/app/wardove/di/SettingsModule.kt": {
     "mtime": 1781789993.7754178,
     "ast_hash": "9e150294a750a87a1bf9cb2793482989",
     "semantic_hash": "9e150294a750a87a1bf9cb2793482989"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/additem/AddItemScreen.kt": {
+  "app/src/main/java/com/app/wardove/ui/additem/AddItemScreen.kt": {
     "mtime": 1781976418.3678362,
     "ast_hash": "7551259ea8668b122019921b2376cac3",
     "semantic_hash": "7551259ea8668b122019921b2376cac3"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/additem/AddItemViewModel.kt": {
+  "app/src/main/java/com/app/wardove/ui/additem/AddItemViewModel.kt": {
     "mtime": 1781430005.8624787,
     "ast_hash": "526e4f30612598d9c048440a3c07f048",
     "semantic_hash": "526e4f30612598d9c048440a3c07f048"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt": {
+  "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt": {
     "mtime": 1781976508.9702256,
     "ast_hash": "815eaf7f642f2e914e629652413b9907",
     "semantic_hash": "815eaf7f642f2e914e629652413b9907"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/calendar/CalendarViewModel.kt": {
+  "app/src/main/java/com/app/wardove/ui/calendar/CalendarViewModel.kt": {
     "mtime": 1781430005.862847,
     "ast_hash": "4ff5631006ba61e0360a264b8a4f34ef",
     "semantic_hash": "4ff5631006ba61e0360a264b8a4f34ef"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/components/AppHeaders.kt": {
+  "app/src/main/java/com/app/wardove/ui/components/AppHeaders.kt": {
     "mtime": 1781976897.0039964,
     "ast_hash": "f78bfe2ce89fbbcdca0ffb62f7c455de",
     "semantic_hash": "f78bfe2ce89fbbcdca0ffb62f7c455de"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt": {
+  "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt": {
     "mtime": 1781976474.2431316,
     "ast_hash": "8249f92ca4dbdc5964bbd1fb9a752f10",
     "semantic_hash": "8249f92ca4dbdc5964bbd1fb9a752f10"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/history/HistoryViewModel.kt": {
+  "app/src/main/java/com/app/wardove/ui/history/HistoryViewModel.kt": {
     "mtime": 1781430005.8631656,
     "ast_hash": "78b5b1237743efd42a15f0800047c6aa",
     "semantic_hash": "78b5b1237743efd42a15f0800047c6aa"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt": {
+  "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt": {
     "mtime": 1781976451.7163339,
     "ast_hash": "14f30ec4e216a5ec44f5b14039f980d3",
     "semantic_hash": "14f30ec4e216a5ec44f5b14039f980d3"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailViewModel.kt": {
+  "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailViewModel.kt": {
     "mtime": 1781430005.8635182,
     "ast_hash": "736eafb2fc31d7ac550330658caf1d05",
     "semantic_hash": "736eafb2fc31d7ac550330658caf1d05"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/laundry/LaundryScreen.kt": {
+  "app/src/main/java/com/app/wardove/ui/laundry/LaundryScreen.kt": {
     "mtime": 1781976343.899121,
     "ast_hash": "cb907134522d79e40ba07a813a046a7c",
     "semantic_hash": "cb907134522d79e40ba07a813a046a7c"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/laundry/LaundryViewModel.kt": {
+  "app/src/main/java/com/app/wardove/ui/laundry/LaundryViewModel.kt": {
     "mtime": 1781976214.2348516,
     "ast_hash": "32d7f9d7e695fffcf647472b1d14842a",
     "semantic_hash": "32d7f9d7e695fffcf647472b1d14842a"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/lock/LockScreen.kt": {
+  "app/src/main/java/com/app/wardove/ui/lock/LockScreen.kt": {
     "mtime": 1781976690.7465622,
     "ast_hash": "7fbc2203e64aa9f8c717dc1ea9f76c02",
     "semantic_hash": "7fbc2203e64aa9f8c717dc1ea9f76c02"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/lock/LockViewModel.kt": {
+  "app/src/main/java/com/app/wardove/ui/lock/LockViewModel.kt": {
     "mtime": 1781791145.081281,
     "ast_hash": "dd7f9ed66dcc574e799deb138703226d",
     "semantic_hash": "dd7f9ed66dcc574e799deb138703226d"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/navigation/NavTransitions.kt": {
+  "app/src/main/java/com/app/wardove/ui/navigation/NavTransitions.kt": {
     "mtime": 1781430870.5097034,
     "ast_hash": "cd8db504652ba207b5863784545f8a0e",
     "semantic_hash": "cd8db504652ba207b5863784545f8a0e"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/navigation/WardoveDestinations.kt": {
+  "app/src/main/java/com/app/wardove/ui/navigation/WardoveDestinations.kt": {
     "mtime": 1782221892.1655183,
     "ast_hash": "7eafbb4057a8a6c9c7afa939d4b7cd2f",
     "semantic_hash": "7eafbb4057a8a6c9c7afa939d4b7cd2f"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/navigation/WardoveDrawerContent.kt": {
+  "app/src/main/java/com/app/wardove/ui/navigation/WardoveDrawerContent.kt": {
     "mtime": 1781976257.3552883,
     "ast_hash": "9ceb1aeccb1e8a19bc7f30fd87df051f",
     "semantic_hash": "9ceb1aeccb1e8a19bc7f30fd87df051f"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt": {
+  "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt": {
     "mtime": 1782221958.5470796,
     "ast_hash": "d4ebe1bd2d01112b73f93a66e9b801fa",
     "semantic_hash": "d4ebe1bd2d01112b73f93a66e9b801fa"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/settings/AboutSettingsScreen.kt": {
+  "app/src/main/java/com/app/wardove/ui/settings/AboutSettingsScreen.kt": {
     "mtime": 1781976845.649496,
     "ast_hash": "e9b6b8c2999bd886dd5aeaea395a3fb7",
     "semantic_hash": "e9b6b8c2999bd886dd5aeaea395a3fb7"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt": {
+  "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt": {
     "mtime": 1781976782.323225,
     "ast_hash": "dd5e53a2c8d99f5ca34178ebdda86cae",
     "semantic_hash": "dd5e53a2c8d99f5ca34178ebdda86cae"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/settings/AppearanceSettingsScreen.kt": {
+  "app/src/main/java/com/app/wardove/ui/settings/AppearanceSettingsScreen.kt": {
     "mtime": 1781976763.238679,
     "ast_hash": "d8d7545a09b83760bdc751282d402f79",
     "semantic_hash": "d8d7545a09b83760bdc751282d402f79"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/settings/DiagnosticsSettingsScreen.kt": {
+  "app/src/main/java/com/app/wardove/ui/settings/DiagnosticsSettingsScreen.kt": {
     "mtime": 1781976822.9538827,
     "ast_hash": "23a19acc1669cf30af59bb70d2a890bf",
     "semantic_hash": "23a19acc1669cf30af59bb70d2a890bf"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/settings/DiagnosticsViewModel.kt": {
+  "app/src/main/java/com/app/wardove/ui/settings/DiagnosticsViewModel.kt": {
     "mtime": 1781976221.2011273,
     "ast_hash": "62fd95305111b6c8f193f2a6a959b434",
     "semantic_hash": "62fd95305111b6c8f193f2a6a959b434"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/settings/LicenseDetailScreen.kt": {
+  "app/src/main/java/com/app/wardove/ui/settings/LicenseDetailScreen.kt": {
     "mtime": 1781977696.3680909,
     "ast_hash": "eadceced0e83eaf1d10c9bcb80d86282",
     "semantic_hash": "eadceced0e83eaf1d10c9bcb80d86282"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/settings/LicensesSettingsScreen.kt": {
+  "app/src/main/java/com/app/wardove/ui/settings/LicensesSettingsScreen.kt": {
     "mtime": 1781977612.453209,
     "ast_hash": "a38310a858585c802b63c8e228844b0b",
     "semantic_hash": "a38310a858585c802b63c8e228844b0b"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/settings/NotificationSettingsScreen.kt": {
+  "app/src/main/java/com/app/wardove/ui/settings/NotificationSettingsScreen.kt": {
     "mtime": 1781976795.4324603,
     "ast_hash": "56b56a4c313ff8ae27fc0532737265b8",
     "semantic_hash": "56b56a4c313ff8ae27fc0532737265b8"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/settings/SettingsComponents.kt": {
+  "app/src/main/java/com/app/wardove/ui/settings/SettingsComponents.kt": {
     "mtime": 1781961432.5219638,
     "ast_hash": "815078488b8215187884a0ca1742afdc",
     "semantic_hash": "815078488b8215187884a0ca1742afdc"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt": {
+  "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt": {
     "mtime": 1781976746.1879807,
     "ast_hash": "4b9c92f01e8535ed37e307a564659815",
     "semantic_hash": "4b9c92f01e8535ed37e307a564659815"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt": {
+  "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt": {
     "mtime": 1781974024.280534,
     "ast_hash": "aff4c214172b2c5ca438e7a66f1869dd",
     "semantic_hash": "aff4c214172b2c5ca438e7a66f1869dd"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/stats/StatsScreen.kt": {
+  "app/src/main/java/com/app/wardove/ui/stats/StatsScreen.kt": {
     "mtime": 1781976383.2503974,
     "ast_hash": "73c5a46e74984ccdd31f79febd9aecf2",
     "semantic_hash": "73c5a46e74984ccdd31f79febd9aecf2"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/stats/StatsViewModel.kt": {
+  "app/src/main/java/com/app/wardove/ui/stats/StatsViewModel.kt": {
     "mtime": 1781430005.8648853,
     "ast_hash": "9b29c4d327c31d6a8937d4d7445ead40",
     "semantic_hash": "9b29c4d327c31d6a8937d4d7445ead40"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/theme/Color.kt": {
+  "app/src/main/java/com/app/wardove/ui/theme/Color.kt": {
     "mtime": 1781430005.865016,
     "ast_hash": "a2c0741d4af1718dd24b682d6c099603",
     "semantic_hash": "a2c0741d4af1718dd24b682d6c099603"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/theme/Theme.kt": {
+  "app/src/main/java/com/app/wardove/ui/theme/Theme.kt": {
     "mtime": 1781430005.8650913,
     "ast_hash": "3f5c87bcbea5c46a0dfb3df4e03e1c20",
     "semantic_hash": "3f5c87bcbea5c46a0dfb3df4e03e1c20"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/theme/Type.kt": {
+  "app/src/main/java/com/app/wardove/ui/theme/Type.kt": {
     "mtime": 1781430005.8651655,
     "ast_hash": "b9f1886d16397b7292db7016f8af0f1b",
     "semantic_hash": "b9f1886d16397b7292db7016f8af0f1b"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt": {
+  "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt": {
     "mtime": 1781976552.1263072,
     "ast_hash": "6327e74d494d37f370cb7d273109d58e",
     "semantic_hash": "6327e74d494d37f370cb7d273109d58e"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt": {
+  "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt": {
     "mtime": 1781966802.1623962,
     "ast_hash": "4c98f1a9a036aba736271577d00de724",
     "semantic_hash": "4c98f1a9a036aba736271577d00de724"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/util/ClothingOptions.kt": {
+  "app/src/main/java/com/app/wardove/ui/util/ClothingOptions.kt": {
     "mtime": 1781976179.3106534,
     "ast_hash": "0c89b32e42744b78655aad996950073d",
     "semantic_hash": "0c89b32e42744b78655aad996950073d"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/util/CustomTabs.kt": {
+  "app/src/main/java/com/app/wardove/ui/util/CustomTabs.kt": {
     "mtime": 1781965472.2451596,
     "ast_hash": "1e4e234158c46484adbe26bd210c0178",
     "semantic_hash": "1e4e234158c46484adbe26bd210c0178"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/util/DateFormat.kt": {
+  "app/src/main/java/com/app/wardove/ui/util/DateFormat.kt": {
     "mtime": 1781430005.8653595,
     "ast_hash": "a99e27560de4cee210a72a37bb1065f1",
     "semantic_hash": "a99e27560de4cee210a72a37bb1065f1"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt": {
+  "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt": {
     "mtime": 1781976298.4226003,
     "ast_hash": "3d5ef8f92b7913d7022b898e32712414",
     "semantic_hash": "3d5ef8f92b7913d7022b898e32712414"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt": {
+  "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt": {
     "mtime": 1781976188.536253,
     "ast_hash": "67dd9db2294d55d46a1ed6ff330fc6b0",
     "semantic_hash": "67dd9db2294d55d46a1ed6ff330fc6b0"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/work/UpdateCheckWorker.kt": {
+  "app/src/main/java/com/app/wardove/work/UpdateCheckWorker.kt": {
     "mtime": 1781976235.9450758,
     "ast_hash": "e34f5c1dfa2a12db8189f50913bfc1b0",
     "semantic_hash": "e34f5c1dfa2a12db8189f50913bfc1b0"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/test/java/com/app/wardove/ExampleUnitTest.kt": {
+  "app/src/test/java/com/app/wardove/ExampleUnitTest.kt": {
     "mtime": 1781430005.8681064,
     "ast_hash": "62f1e8f31d3e6fd90bc22a1df5506857",
     "semantic_hash": "62f1e8f31d3e6fd90bc22a1df5506857"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/test/java/com/app/wardove/update/CompareVersionsTest.kt": {
+  "app/src/test/java/com/app/wardove/update/CompareVersionsTest.kt": {
     "mtime": 1781953313.9719796,
     "ast_hash": "73a1251ca5f676a54299df2d18c7a2b4",
     "semantic_hash": "73a1251ca5f676a54299df2d18c7a2b4"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/build.gradle.kts": {
+  "build.gradle.kts": {
     "mtime": 1781974959.9586995,
     "ast_hash": "79fad85ced8953dbd9408f010eb4bf58",
     "semantic_hash": "79fad85ced8953dbd9408f010eb4bf58"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/docs/package.json": {
+  "docs/package.json": {
     "mtime": 1781953865.2583716,
     "ast_hash": "df7207c75acebb9f2863e1695ba341a5",
     "semantic_hash": "df7207c75acebb9f2863e1695ba341a5"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/gradlew": {
+  "gradlew": {
     "mtime": 1781430005.8689253,
     "ast_hash": "266606e78242737ef3da02a80ea0564d",
     "semantic_hash": "266606e78242737ef3da02a80ea0564d"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/settings.gradle.kts": {
+  "settings.gradle.kts": {
     "mtime": 1781430005.8690624,
     "ast_hash": "6bbfb70d94dd9871b05ed4cddd6a27d0",
     "semantic_hash": "6bbfb70d94dd9871b05ed4cddd6a27d0"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/.github/workflows/build.yml": {
+  ".github/workflows/build.yml": {
     "mtime": 1781953313.9679263,
     "ast_hash": "d16549a36db0a7d6e604a88d5cb6d81a",
     "semantic_hash": "d16549a36db0a7d6e604a88d5cb6d81a"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/.github/workflows/docs.yml": {
+  ".github/workflows/docs.yml": {
     "mtime": 1781954011.060439,
     "ast_hash": "5a06cbcda16b752ff35ccd4e94fab367",
     "semantic_hash": "5a06cbcda16b752ff35ccd4e94fab367"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/CLAUDE.md": {
+  "CLAUDE.md": {
     "mtime": 1782222348.8498068,
     "ast_hash": "fa699b21c5c1715083181b13e23f3686",
     "semantic_hash": "fa699b21c5c1715083181b13e23f3686"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/README.md": {
+  "README.md": {
     "mtime": 1781430005.8580542,
     "ast_hash": "f7d97a0f2475af4437d3f8508cb070b0",
     "semantic_hash": "f7d97a0f2475af4437d3f8508cb070b0"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/WARDOVE_DESIGN_SPEC.md": {
+  "app/src/main/java/com/app/wardove/WARDOVE_DESIGN_SPEC.md": {
     "mtime": 1781430005.859336,
     "ast_hash": "03ba13aa54cd5ea95e2bc6913f9b7580",
     "semantic_hash": "03ba13aa54cd5ea95e2bc6913f9b7580"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/java/com/app/wardove/WARDOVE_MVP_PLAN.md": {
+  "app/src/main/java/com/app/wardove/WARDOVE_MVP_PLAN.md": {
     "mtime": 1781430005.8595161,
     "ast_hash": "0e9b14fe12c25b732bd4d3e3f03d9a60",
     "semantic_hash": "0e9b14fe12c25b732bd4d3e3f03d9a60"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/docs/changelog.md": {
+  "docs/changelog.md": {
     "mtime": 1781954004.9006495,
     "ast_hash": "c4760fbb83c7f3e7ef547d300e6d6bdd",
     "semantic_hash": "c4760fbb83c7f3e7ef547d300e6d6bdd"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/docs/features/calendar.md": {
+  "docs/features/calendar.md": {
     "mtime": 1781953927.7525883,
     "ast_hash": "bf153d6fc4e5c15092b9f3944b7fdc22",
     "semantic_hash": "bf153d6fc4e5c15092b9f3944b7fdc22"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/docs/features/item-detail.md": {
+  "docs/features/item-detail.md": {
     "mtime": 1781953917.8950453,
     "ast_hash": "ddbec6f76a40e04c889b21f1da84608e",
     "semantic_hash": "ddbec6f76a40e04c889b21f1da84608e"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/docs/features/laundry.md": {
+  "docs/features/laundry.md": {
     "mtime": 1781953924.5039077,
     "ast_hash": "daa663b2fe68fe3d4c17e23f3aa56e61",
     "semantic_hash": "daa663b2fe68fe3d4c17e23f3aa56e61"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/docs/features/settings.md": {
+  "docs/features/settings.md": {
     "mtime": 1781953942.9422877,
     "ast_hash": "af3ac641c60d46f9664bcdb6566db61d",
     "semantic_hash": "af3ac641c60d46f9664bcdb6566db61d"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/docs/features/stats.md": {
+  "docs/features/stats.md": {
     "mtime": 1781953935.0270822,
     "ast_hash": "b0a0a00d5ae7f747b04b0e49874f124b",
     "semantic_hash": "b0a0a00d5ae7f747b04b0e49874f124b"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/docs/features/wardrobe.md": {
+  "docs/features/wardrobe.md": {
     "mtime": 1781953908.2259617,
     "ast_hash": "894a93b9839f3505bb309d3551851435",
     "semantic_hash": "894a93b9839f3505bb309d3551851435"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/docs/guide/build.md": {
+  "docs/guide/build.md": {
     "mtime": 1781953901.6460788,
     "ast_hash": "831314a234f2bae5ad19c2bbd98d969b",
     "semantic_hash": "831314a234f2bae5ad19c2bbd98d969b"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/docs/guide/getting-started.md": {
+  "docs/guide/getting-started.md": {
     "mtime": 1781953888.5056746,
     "ast_hash": "785a2cfbb94801f84dd20db667e06f5f",
     "semantic_hash": "785a2cfbb94801f84dd20db667e06f5f"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/docs/index.md": {
+  "docs/index.md": {
     "mtime": 1781953879.59305,
     "ast_hash": "2d613357265743f7989a61235614ff7d",
     "semantic_hash": "2d613357265743f7989a61235614ff7d"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/docs/privacy.md": {
+  "docs/privacy.md": {
     "mtime": 1781965426.5023725,
     "ast_hash": "ef46079a04b7bb9598df37065cb09cd3",
     "semantic_hash": "ef46079a04b7bb9598df37065cb09cd3"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/docs/reference/architecture.md": {
+  "docs/reference/architecture.md": {
     "mtime": 1781953988.5015013,
     "ast_hash": "a690357d07bb8c013edf5275cff90fb6",
     "semantic_hash": "a690357d07bb8c013edf5275cff90fb6"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/docs/reference/data-model.md": {
+  "docs/reference/data-model.md": {
     "mtime": 1781953958.3096325,
     "ast_hash": "814075aece770d90fcdb73a0b354cc9c",
     "semantic_hash": "814075aece770d90fcdb73a0b354cc9c"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/docs/terms.md": {
+  "docs/terms.md": {
     "mtime": 1781965432.0430784,
     "ast_hash": "6eef11c68d08d2d6fdfbd639b5684733",
     "semantic_hash": "6eef11c68d08d2d6fdfbd639b5684733"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/res/drawable-nodpi/ic_launcher_wardove.png": {
+  "app/src/main/res/drawable-nodpi/ic_launcher_wardove.png": {
     "mtime": 1781793603.6593122,
     "ast_hash": "eafdaf57a3bc34e82eda8e864017e887",
     "semantic_hash": "eafdaf57a3bc34e82eda8e864017e887"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/res/drawable/ic_splash.png": {
+  "app/src/main/res/drawable/ic_splash.png": {
     "mtime": 1781793490.3129067,
     "ast_hash": "e187538944646391eaf6d49a3a96eee6",
     "semantic_hash": "e187538944646391eaf6d49a3a96eee6"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/res/mipmap-hdpi/ic_launcher.png": {
+  "app/src/main/res/mipmap-hdpi/ic_launcher.png": {
     "mtime": 1781793603.5107405,
     "ast_hash": "15ddde7068e78cef3efed4c4a46573a2",
     "semantic_hash": "15ddde7068e78cef3efed4c4a46573a2"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/res/mipmap-hdpi/ic_launcher_round.png": {
+  "app/src/main/res/mipmap-hdpi/ic_launcher_round.png": {
     "mtime": 1781793603.5146065,
     "ast_hash": "15ddde7068e78cef3efed4c4a46573a2",
     "semantic_hash": "15ddde7068e78cef3efed4c4a46573a2"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/res/mipmap-mdpi/ic_launcher.png": {
+  "app/src/main/res/mipmap-mdpi/ic_launcher.png": {
     "mtime": 1781793603.4709804,
     "ast_hash": "17448114a72c06f6b60199162d5445c4",
     "semantic_hash": "17448114a72c06f6b60199162d5445c4"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/res/mipmap-mdpi/ic_launcher_round.png": {
+  "app/src/main/res/mipmap-mdpi/ic_launcher_round.png": {
     "mtime": 1781793603.4743996,
     "ast_hash": "17448114a72c06f6b60199162d5445c4",
     "semantic_hash": "17448114a72c06f6b60199162d5445c4"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/res/mipmap-xhdpi/ic_launcher.png": {
+  "app/src/main/res/mipmap-xhdpi/ic_launcher.png": {
     "mtime": 1781793603.5470674,
     "ast_hash": "c2cd540351c393f4a14e363a2940ae6a",
     "semantic_hash": "c2cd540351c393f4a14e363a2940ae6a"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png": {
+  "app/src/main/res/mipmap-xhdpi/ic_launcher_round.png": {
     "mtime": 1781793603.5500464,
     "ast_hash": "c2cd540351c393f4a14e363a2940ae6a",
     "semantic_hash": "c2cd540351c393f4a14e363a2940ae6a"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/res/mipmap-xxhdpi/ic_launcher.png": {
+  "app/src/main/res/mipmap-xxhdpi/ic_launcher.png": {
     "mtime": 1781793603.5811348,
     "ast_hash": "8197618cb70b0da7d9eefe539d1aa55e",
     "semantic_hash": "8197618cb70b0da7d9eefe539d1aa55e"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png": {
+  "app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png": {
     "mtime": 1781793603.5842302,
     "ast_hash": "8197618cb70b0da7d9eefe539d1aa55e",
     "semantic_hash": "8197618cb70b0da7d9eefe539d1aa55e"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png": {
+  "app/src/main/res/mipmap-xxxhdpi/ic_launcher.png": {
     "mtime": 1781793603.6155515,
     "ast_hash": "dfe54b80bd1a00ff15f96d8443425479",
     "semantic_hash": "dfe54b80bd1a00ff15f96d8443425479"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png": {
+  "app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png": {
     "mtime": 1781793603.6185808,
     "ast_hash": "dfe54b80bd1a00ff15f96d8443425479",
     "semantic_hash": "dfe54b80bd1a00ff15f96d8443425479"
   },
-  "/Users/zkonte/Documents/GitHub/wardove/docs/public/logo.png": {
+  "docs/public/logo.png": {
     "mtime": 1781954766.3995883,
     "ast_hash": "eafdaf57a3bc34e82eda8e864017e887",
     "semantic_hash": "eafdaf57a3bc34e82eda8e864017e887"
+  },
+  "app/src/main/java/com/app/wardove/tile/LaundryTileService.kt": {
+    "mtime": 1782308591.6309261,
+    "ast_hash": "624f0bf5f2452a5d657681ee3d434afd",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/app/wardove/tile/QuickAddTileService.kt": {
+    "mtime": 1782308585.5349696,
+    "ast_hash": "1f65c242f7bc6c9815b061f7bb3f6163",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/app/wardove/tile/StatsTileService.kt": {
+    "mtime": 1782308586.2797117,
+    "ast_hash": "06db71301245fef12cadb0bdc0fde68d",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/app/wardove/tile/TileUtils.kt": {
+    "mtime": 1782308583.0515633,
+    "ast_hash": "279238df10871fab52490f21297edb6f",
+    "semantic_hash": ""
   }
 }

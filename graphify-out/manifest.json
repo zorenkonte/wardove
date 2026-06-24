@@ -5,9 +5,9 @@
     "semantic_hash": "34945cca2b7f586ee2ceda37d2f6e28d"
   },
   "app/build.gradle.kts": {
-    "mtime": 1781974962.5300744,
-    "ast_hash": "f577e3d8f79008041f093d9a1b52a69d",
-    "semantic_hash": "f577e3d8f79008041f093d9a1b52a69d"
+    "mtime": 1782311454.573636,
+    "ast_hash": "04933b8105f57d6c73cdd0b2d607122f",
+    "semantic_hash": ""
   },
   "app/src/androidTest/java/com/app/wardove/ExampleInstrumentedTest.kt": {
     "mtime": 1781430005.858652,
@@ -100,8 +100,8 @@
     "semantic_hash": "497df537b5d0513c9a3c85da28fa9e32"
   },
   "app/src/main/java/com/app/wardove/data/repository/ClothingRepository.kt": {
-    "mtime": 1782308572.3927152,
-    "ast_hash": "da4a938e7bc0e77362d65544c9e8c790",
+    "mtime": 1782311613.3660004,
+    "ast_hash": "977cd9ea9793795c98ada4d9a8b21181",
     "semantic_hash": ""
   },
   "app/src/main/java/com/app/wardove/data/repository/LaundryRepository.kt": {
@@ -567,6 +567,21 @@
   "app/src/main/java/com/app/wardove/tile/TileUtils.kt": {
     "mtime": 1782308583.0515633,
     "ast_hash": "279238df10871fab52490f21297edb6f",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/app/wardove/widget/StatsWidget.kt": {
+    "mtime": 1782311487.0478086,
+    "ast_hash": "8edbeae7fafabca1c09155e70afb95c4",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/app/wardove/widget/StatsWidgetReceiver.kt": {
+    "mtime": 1782311460.7574768,
+    "ast_hash": "56f5c20cdc4a7a7b56b13180624f3069",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/app/wardove/widget/WidgetEntryPoint.kt": {
+    "mtime": 1782311458.963971,
+    "ast_hash": "792ceca9e7fc2c0f75cbff962c3d4662",
     "semantic_hash": ""
   }
 }
