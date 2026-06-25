@@ -24,6 +24,7 @@ class SettingsRepository @Inject constructor(
         val LAUNDRY_THRESHOLD = intPreferencesKey("laundry_threshold")
         val LAST_NOTIFIED_UPDATE_TAG = stringPreferencesKey("last_notified_update_tag")
         val UPDATE_NOTIFICATIONS = booleanPreferencesKey("update_notifications")
+        val SHAKE_TO_REPORT = booleanPreferencesKey("shake_to_report")
     }
 
     val settings: Flow<AppSettings> = dataStore.data
@@ -38,7 +39,8 @@ class SettingsRepository @Inject constructor(
                 dynamicColor = prefs[Keys.DYNAMIC_COLOR] ?: false,
                 laundryThreshold = prefs[Keys.LAUNDRY_THRESHOLD]
                     ?: AppSettings.DEFAULT_LAUNDRY_THRESHOLD,
-                updateNotificationsEnabled = prefs[Keys.UPDATE_NOTIFICATIONS] ?: true
+                updateNotificationsEnabled = prefs[Keys.UPDATE_NOTIFICATIONS] ?: true,
+                shakeToReportEnabled = prefs[Keys.SHAKE_TO_REPORT] ?: false
             )
         }
 
@@ -60,6 +62,10 @@ class SettingsRepository @Inject constructor(
 
     suspend fun setUpdateNotificationsEnabled(enabled: Boolean) {
         dataStore.edit { it[Keys.UPDATE_NOTIFICATIONS] = enabled }
+    }
+
+    suspend fun setShakeToReportEnabled(enabled: Boolean) {
+        dataStore.edit { it[Keys.SHAKE_TO_REPORT] = enabled }
     }
 
     val lastNotifiedUpdateTag: Flow<String?> = dataStore.data

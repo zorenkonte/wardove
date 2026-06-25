@@ -36,7 +36,6 @@ import com.composables.icons.lucide.Download
 import com.composables.icons.lucide.ExternalLink
 import com.composables.icons.lucide.FileText
 import com.composables.icons.lucide.Lucide
-import com.composables.icons.lucide.MessageSquare
 import com.composables.icons.lucide.RefreshCw
 import com.composables.icons.lucide.ScrollText
 import com.composables.icons.lucide.Shield
@@ -99,19 +98,6 @@ fun AboutSettingsScreen(
                     label = stringResource(R.string.about_updates_label),
                     subtitle = stringResource(R.string.about_updates_subtitle),
                     onClick = onOpenUpdates
-                )
-                HorizontalDivider(
-                    color = MaterialTheme.colorScheme.outline,
-                    thickness = 0.5.dp,
-                    modifier = Modifier.padding(horizontal = 16.dp)
-                )
-                ExternalRow(
-                    icon = Lucide.MessageSquare,
-                    label = stringResource(R.string.about_feedback_label),
-                    subtitle = stringResource(R.string.about_feedback_subtitle),
-                    onClick = {
-                        openCustomTab(context, "https://github.com/zorenkonte/wardove/issues")
-                    }
                 )
                 HorizontalDivider(
                     color = MaterialTheme.colorScheme.outline,

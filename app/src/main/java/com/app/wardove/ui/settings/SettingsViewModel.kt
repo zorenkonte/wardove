@@ -34,4 +34,8 @@ class SettingsViewModel @Inject constructor(
     fun setUpdateNotificationsEnabled(enabled: Boolean) {
         viewModelScope.launch { repo.setUpdateNotificationsEnabled(enabled) }
     }
+
+    fun setShakeToReportEnabled(enabled: Boolean) {
+        viewModelScope.launch { repo.setShakeToReportEnabled(enabled) }
+    }
 }

@@ -7,6 +7,8 @@ import androidx.browser.customtabs.CustomTabColorSchemeParams
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.net.toUri
 
+const val ISSUES_URL = "https://github.com/zorenkonte/wardove/issues"
+
 /**
  * Opens [url] in a Chrome Custom Tab themed to the app's primary color (#1A1A1A toolbar).
  * Falls back to a plain ACTION_VIEW intent if no Custom Tabs-compatible browser is installed.

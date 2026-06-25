@@ -2,8 +2,13 @@ package com.app.wardove
 
 import android.Manifest
 import android.content.Intent
+import android.hardware.Sensor
+import android.hardware.SensorManager
 import android.os.Build
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.Vibrator
+import android.os.VibratorManager
 import androidx.activity.compose.setContent
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.fragment.app.FragmentActivity
@@ -21,12 +26,17 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.repeatOnLifecycle
 import com.app.wardove.data.settings.SettingsRepository
 import com.app.wardove.ui.lock.LockScreen
 import com.app.wardove.ui.lock.LockViewModel
 import com.app.wardove.ui.navigation.WardoveNavHost
 import com.app.wardove.ui.theme.WardoveTheme
 import com.app.wardove.ui.navigation.ShortcutActions
+import com.app.wardove.ui.util.ISSUES_URL
+import com.app.wardove.ui.util.openCustomTab
+import com.app.wardove.util.ShakeDetector
 import com.app.wardove.work.UpdateCheckWorker
 import androidx.core.content.pm.ShortcutManagerCompat
 import androidx.lifecycle.lifecycleScope
@@ -52,6 +62,12 @@ class MainActivity : FragmentActivity() {
     // Route to navigate to when opened from a notification; updated on new Intent as well.
     private var notificationNavRoute by mutableStateOf<String?>(null)
 
+    // Shake-to-report
+    private lateinit var sensorManager: SensorManager
+    private var accelerometer: Sensor? = null
+    @Volatile private var shakeEnabled = false
+    private val shakeDetector = ShakeDetector(onShake = ::onShakeDetected)
+
     private val requestNotificationPermission =
         registerForActivityResult(ActivityResultContracts.RequestPermission()) {
             // Permission result — no-op; worker silently skips notify() if denied.
@@ -64,6 +80,17 @@ class MainActivity : FragmentActivity() {
 
         // Capture deep-link route from the launching intent (cold start via notification or shortcut).
         notificationNavRoute = resolveNavRoute(intent)
+
+        // Set up shake detection sensor
+        sensorManager = getSystemService(SensorManager::class.java)
+        accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
+
+        // Track shake-to-report toggle from DataStore
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                settingsRepository.settings.collect { shakeEnabled = it.shakeToReportEnabled }
+            }
+        }
 
         // Request POST_NOTIFICATIONS on Android 13+ the first time the app launches.
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
@@ -135,6 +162,18 @@ class MainActivity : FragmentActivity() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        accelerometer?.let {
+            sensorManager.registerListener(shakeDetector, it, SensorManager.SENSOR_DELAY_UI)
+        }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        sensorManager.unregisterListener(shakeDetector)
+    }
+
     override fun onStop() {
         super.onStop()
         if (!isChangingConfigurations) {
@@ -156,6 +195,31 @@ class MainActivity : FragmentActivity() {
             return shortcutRoute
         }
         return intent.getStringExtra(UpdateCheckWorker.EXTRA_NAVIGATE_TO)
+    }
+
+    private fun onShakeDetected() {
+        if (!shakeEnabled) return
+        vibrate()
+        openCustomTab(this, ISSUES_URL)
+    }
+
+    @Suppress("DEPRECATION")
+    private fun vibrate() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            val vm = getSystemService(VibratorManager::class.java)
+            vm?.defaultVibrator?.vibrate(
+                VibrationEffect.createOneShot(50, VibrationEffect.DEFAULT_AMPLITUDE)
+            )
+        } else {
+            val vibrator = getSystemService(Vibrator::class.java)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                vibrator?.vibrate(
+                    VibrationEffect.createOneShot(50, VibrationEffect.DEFAULT_AMPLITUDE)
+                )
+            } else {
+                vibrator?.vibrate(50)
+            }
+        }
     }
 
     private fun showBiometricPrompt() {

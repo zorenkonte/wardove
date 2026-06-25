@@ -205,6 +205,10 @@
     <string name="settings_notifications_subtitle">App updates</string>
     <string name="settings_diagnostics_title">Diagnostics</string>
     <string name="settings_diagnostics_subtitle">Share app logs with developers</string>
+    <string name="settings_submit_issue_label">Submit Issue</string>
+    <string name="settings_submit_issue_subtitle">Report bugs or request features on GitHub</string>
+    <string name="settings_shake_report_label">Shake to Report</string>
+    <string name="settings_shake_report_subtitle">Shake phone to open issue reporter</string>
 
     <!-- ── Appearance settings ── -->
     <string name="appearance_theme_label">Theme</string>
@@ -249,8 +253,6 @@
     <string name="about_source_code">Source code</string>
     <string name="about_updates_label">Updates</string>
     <string name="about_updates_subtitle">Check for new versions</string>
-    <string name="about_feedback_label">Send Feedback</string>
-    <string name="about_feedback_subtitle">Report bugs or request features</string>
     <string name="about_privacy_label">Privacy Policy</string>
     <string name="about_privacy_subtitle">How your data is handled</string>
     <string name="about_terms_label">Terms of Service</string>
