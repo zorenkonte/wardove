@@ -15,9 +15,9 @@
     "semantic_hash": "3df251ecdf9f918d9aaac5c785ab507e"
   },
   "app/src/main/java/com/app/wardove/MainActivity.kt": {
-    "mtime": 1782395712.2549126,
-    "ast_hash": "7c661cc2a5f88c2e204e2281fe7742d0",
-    "semantic_hash": ""
+    "mtime": 1782221952.9271655,
+    "ast_hash": "871017cd86be63c3eceae7a9710953e8",
+    "semantic_hash": "871017cd86be63c3eceae7a9710953e8"
   },
   "app/src/main/java/com/app/wardove/WardoveApplication.kt": {
     "mtime": 1781976230.1124053,
@@ -120,14 +120,14 @@
     "semantic_hash": "c8b1b094e446e9ab36d0d5b214fd98b6"
   },
   "app/src/main/java/com/app/wardove/data/settings/AppSettings.kt": {
-    "mtime": 1782395588.4644463,
-    "ast_hash": "06953b8daf24ec69e609dd8d8024860d",
-    "semantic_hash": ""
+    "mtime": 1781974006.7289999,
+    "ast_hash": "959ebea79bf91e16cfa45ebfddbb00af",
+    "semantic_hash": "959ebea79bf91e16cfa45ebfddbb00af"
   },
   "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt": {
-    "mtime": 1782395598.7056658,
-    "ast_hash": "91422aafdec183cbab39bbfdc67af3e2",
-    "semantic_hash": ""
+    "mtime": 1781974020.7530487,
+    "ast_hash": "677bdf274c2043371a31bd598156aaee",
+    "semantic_hash": "677bdf274c2043371a31bd598156aaee"
   },
   "app/src/main/java/com/app/wardove/data/settings/ThemeMode.kt": {
     "mtime": 1781430005.861603,
@@ -235,9 +235,9 @@
     "semantic_hash": "d4ebe1bd2d01112b73f93a66e9b801fa"
   },
   "app/src/main/java/com/app/wardove/ui/settings/AboutSettingsScreen.kt": {
-    "mtime": 1782395618.8461037,
-    "ast_hash": "a97ee30863f1057c90a692be5fe8ea4c",
-    "semantic_hash": ""
+    "mtime": 1781976845.649496,
+    "ast_hash": "e9b6b8c2999bd886dd5aeaea395a3fb7",
+    "semantic_hash": "e9b6b8c2999bd886dd5aeaea395a3fb7"
   },
   "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt": {
     "mtime": 1781976782.323225,
@@ -280,14 +280,14 @@
     "semantic_hash": "815078488b8215187884a0ca1742afdc"
   },
   "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt": {
-    "mtime": 1782395648.5760117,
-    "ast_hash": "306086236df5efb7bb022fae0e849ff1",
-    "semantic_hash": ""
+    "mtime": 1781976746.1879807,
+    "ast_hash": "4b9c92f01e8535ed37e307a564659815",
+    "semantic_hash": "4b9c92f01e8535ed37e307a564659815"
   },
   "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt": {
-    "mtime": 1782395600.174868,
-    "ast_hash": "1120b3f992a80cb19255774fc4ee567c",
-    "semantic_hash": ""
+    "mtime": 1781974024.280534,
+    "ast_hash": "aff4c214172b2c5ca438e7a66f1869dd",
+    "semantic_hash": "aff4c214172b2c5ca438e7a66f1869dd"
   },
   "app/src/main/java/com/app/wardove/ui/stats/StatsScreen.kt": {
     "mtime": 1781976383.2503974,
@@ -330,9 +330,9 @@
     "semantic_hash": "0c89b32e42744b78655aad996950073d"
   },
   "app/src/main/java/com/app/wardove/ui/util/CustomTabs.kt": {
-    "mtime": 1782395609.4016817,
-    "ast_hash": "38f43c2e3f027e27ad6b431cf9954f4d",
-    "semantic_hash": ""
+    "mtime": 1781965472.2451596,
+    "ast_hash": "1e4e234158c46484adbe26bd210c0178",
+    "semantic_hash": "1e4e234158c46484adbe26bd210c0178"
   },
   "app/src/main/java/com/app/wardove/ui/util/DateFormat.kt": {
     "mtime": 1781430005.8653595,
@@ -582,11 +582,6 @@
   "app/src/main/java/com/app/wardove/widget/WidgetEntryPoint.kt": {
     "mtime": 1782311458.963971,
     "ast_hash": "792ceca9e7fc2c0f75cbff962c3d4662",
-    "semantic_hash": ""
-  },
-  "app/src/main/java/com/app/wardove/util/ShakeDetector.kt": {
-    "mtime": 1782395665.240201,
-    "ast_hash": "8073dcd58d0e48a12f301c89e704da45",
     "semantic_hash": ""
   }
 }
