@@ -1,16 +1,16 @@
-# Graph Report - wardove  (2026-06-27)
+# Graph Report - wardove  (2026-06-25)
 
 ## Corpus Check
-- 103 files · ~56,607 words
+- 103 files · ~56,550 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 780 nodes · 1119 edges · 71 communities (45 shown, 26 thin omitted)
+- 780 nodes · 1119 edges · 76 communities (50 shown, 26 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 67 edges (avg confidence: 0.83)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a75487e4`
+- Built from commit: `9315303c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -41,6 +41,7 @@
 - [[_COMMUNITY_Room Database Schema|Room Database Schema]]
 - [[_COMMUNITY_Database DI Module|Database DI Module]]
 - [[_COMMUNITY_Calendar ViewModel|Calendar ViewModel]]
+- [[_COMMUNITY_History Screen|History Screen]]
 - [[_COMMUNITY_Wardrobe ViewModel|Wardrobe ViewModel]]
 - [[_COMMUNITY_File Logging|File Logging]]
 - [[_COMMUNITY_Navigation Destinations|Navigation Destinations]]
@@ -79,7 +80,11 @@
 - [[_COMMUNITY_Desugaring Rationale|Desugaring Rationale]]
 - [[_COMMUNITY_Community 69|Community 69]]
 - [[_COMMUNITY_Community 70|Community 70]]
+- [[_COMMUNITY_Community 71|Community 71]]
+- [[_COMMUNITY_Community 72|Community 72]]
+- [[_COMMUNITY_Community 73|Community 73]]
 - [[_COMMUNITY_Community 74|Community 74]]
+- [[_COMMUNITY_Community 75|Community 75]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `WardoveNavHost()` - 21 edges
@@ -113,31 +118,31 @@
 - **Hilt DI Module Triad (Database + Repository + Settings)** — wardove_hilt_di, wardove_database_module, wardove_repository_module, wardove_settings_module [EXTRACTED 1.00]
 - **Top-Level Navigation Drawer Screens** — wardove_wardrobe_screen, wardove_laundry_screen, wardove_calendar_screen, wardove_stats_screen, wardove_settings_screen, wardove_wardove_nav_host [EXTRACTED 1.00]
 
-## Communities (71 total, 26 thin omitted)
+## Communities (76 total, 26 thin omitted)
 
 ### Community 0 - "Documentation & Feature Docs"
 Cohesion: 0.05
 Nodes (60): Auto-Update System via GitHub Releases (v1.0.10), Biometric App Lock Feature (v1.0.13), Wardove Changelog, Privacy Policy, Terms of Service, Calendar Screen (monthly wear history view), Wear Today / Un-wear Today Action, Laundry Cycle Lifecycle (startCycle → completeCycle) (+52 more)
 
 ### Community 1 - "Settings UI & Navigation"
-Cohesion: 0.05
-Nodes (42): Boolean, ClothingItem, LaundryCycle, List, Long, String, String, String (+34 more)
+Cohesion: 0.07
+Nodes (39): String, String, ImageVector, String, Boolean, SettingsViewModel, String, Boolean (+31 more)
 
 ### Community 2 - "ViewModel State Management"
-Cohesion: 0.36
-Nodes (4): File, String, Uri, ImageStorage
+Cohesion: 0.22
+Nodes (3): Boolean, StateFlow, LockViewModel
 
 ### Community 3 - "App Update Screen"
-Cohesion: 0.24
-Nodes (13): Boolean, GithubRelease, Long, String, InstallState, CurrentVersionCard(), FeedbackCard(), formatBytes() (+5 more)
+Cohesion: 0.08
+Nodes (25): Boolean, GithubRelease, Long, String, Boolean, Int, List, String (+17 more)
 
 ### Community 4 - "Diagnostics & Update Delivery"
-Cohesion: 0.06
-Nodes (29): String, Uri, Boolean, GithubAsset, Int, Intent, List, Long (+21 more)
+Cohesion: 0.08
+Nodes (21): File, String, Uri, String, Uri, GithubAsset, Intent, Long (+13 more)
 
 ### Community 5 - "App Entry & Theme"
-Cohesion: 0.06
-Nodes (31): Sensor, String, ImageVector, String, Boolean, ImageVector, String, Boolean (+23 more)
+Cohesion: 0.07
+Nodes (18): Sensor, String, String, Boolean, ThemeMode, String, BiometricPrompt, Bundle (+10 more)
 
 ### Community 6 - "Add Item ViewModel"
 Cohesion: 0.16
@@ -219,6 +224,10 @@ Nodes (6): ClothingDao, Context, LaundryDao, WearLogDao, DatabaseModule, Wardove
 Cohesion: 0.22
 Nodes (8): ClothingItem, List, LocalDate, Set, StateFlow, WearLogWithItem, CalendarViewModel, ZoneId
 
+### Community 26 - "History Screen"
+Cohesion: 0.22
+Nodes (10): Boolean, ClothingItem, LaundryCycle, List, Long, String, CycleRow(), formatDate() (+2 more)
+
 ### Community 27 - "Wardrobe ViewModel"
 Cohesion: 0.27
 Nodes (7): ClothingItem, List, StateFlow, String, WardrobeFilter, WardrobeSort, WardrobeViewModel
@@ -232,8 +241,8 @@ Cohesion: 0.33
 Nodes (4): Long, String, ShortcutActions, WardoveDestinations
 
 ### Community 30 - "Image Storage"
-Cohesion: 0.05
-Nodes (23): ClothingItem, LaundryCycle, List, Long, StateFlow, Boolean, StateFlow, StateFlow (+15 more)
+Cohesion: 0.24
+Nodes (5): AppSettings, Boolean, ThemeMode, SettingsViewModel, StateFlow
 
 ### Community 31 - "Docs Build Config"
 Cohesion: 0.22
@@ -267,29 +276,45 @@ Nodes (9): String, ClothingRepository, CoroutineScope, LaundryTileService, Quick
 Cohesion: 0.18
 Nodes (12): Int, String, GlanceAppWidget, Color, Context, GlanceAppWidgetReceiver, GlanceId, GlanceModifier (+4 more)
 
+### Community 71 - "Community 71"
+Cohesion: 0.22
+Nodes (4): StateFlow, String, Uri, DiagnosticsViewModel
+
+### Community 72 - "Community 72"
+Cohesion: 0.29
+Nodes (6): ClothingItem, LaundryCycle, List, Long, StateFlow, HistoryViewModel
+
+### Community 73 - "Community 73"
+Cohesion: 0.43
+Nodes (6): Boolean, StateFlow, String, AppLockSettingsScreen(), AppLockSettingsViewModel, AppLockSwitchRow()
+
 ### Community 74 - "Community 74"
 Cohesion: 0.25
 Nodes (5): Int, Sensor, SensorEvent, SensorEventListener, ShakeDetector
 
+### Community 75 - "Community 75"
+Cohesion: 0.40
+Nodes (5): StateFlow, CostPerWearItem, StatsUiState, StatsViewModel, ViewModel
+
 ## Knowledge Gaps
-- **190 isolated node(s):** `SensorEvent`, `Sensor`, `Int`, `SettingsRepository`, `LockViewModel` (+185 more)
+- **190 isolated node(s):** `SettingsRepository`, `LockViewModel`, `SensorManager`, `Sensor`, `Bundle` (+185 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `WardoveNavHost()` connect `Settings UI & Navigation` to `App Update Screen`, `App Entry & Theme`, `Stats & Analytics UI`, `Laundry Screen UI`, `Add Item Screen`, `Wardrobe Screen UI`, `Calendar Screen`, `Item Detail Screen`?**
+- **Why does `WardoveNavHost()` connect `Settings UI & Navigation` to `App Update Screen`, `App Entry & Theme`, `Stats & Analytics UI`, `Community 73`, `Laundry Screen UI`, `Add Item Screen`, `Wardrobe Screen UI`, `Calendar Screen`, `Item Detail Screen`, `History Screen`?**
   _High betweenness centrality (0.226) - this node is a cross-community bridge._
-- **Why does `AppLockSettingsScreen()` connect `Settings UI & Navigation` to `App Entry & Theme`?**
+- **Why does `AppLockSettingsScreen()` connect `Community 73` to `Settings UI & Navigation`, `App Entry & Theme`?**
   _High betweenness centrality (0.116) - this node is a cross-community bridge._
-- **Why does `AppLockSettingsViewModel` connect `Settings UI & Navigation` to `Image Storage`?**
+- **Why does `AppLockSettingsViewModel` connect `Community 73` to `Community 75`?**
   _High betweenness centrality (0.113) - this node is a cross-community bridge._
 - **Are the 18 inferred relationships involving `WardoveNavHost()` (e.g. with `AddItemScreen()` and `CalendarScreen()`) actually correct?**
   _`WardoveNavHost()` has 18 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `SensorEvent`, `Sensor`, `Int` to the rest of the system?**
+- **What connects `SettingsRepository`, `LockViewModel`, `SensorManager` to the rest of the system?**
   _193 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Documentation & Feature Docs` be split into smaller, more focused modules?**
   _Cohesion score 0.05254237288135593 - nodes in this community are weakly interconnected._
 - **Should `Settings UI & Navigation` be split into smaller, more focused modules?**
-  _Cohesion score 0.05152394775036284 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06648936170212766 - nodes in this community are weakly interconnected._
