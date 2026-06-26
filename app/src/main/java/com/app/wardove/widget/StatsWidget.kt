@@ -21,6 +21,7 @@ import androidx.glance.layout.Box
 import androidx.glance.layout.Column
 import androidx.glance.layout.Row
 import androidx.glance.layout.Spacer
+import androidx.glance.layout.fillMaxHeight
 import androidx.glance.layout.fillMaxSize
 import androidx.glance.layout.fillMaxWidth
 import androidx.glance.layout.height
@@ -85,8 +86,8 @@ private fun StatsWidgetContent(
         modifier = GlanceModifier
             .fillMaxSize()
             .background(ColorProvider(Color(0xFFF7F5F2)))
-            .cornerRadius(16.dp)
-            .padding(12.dp)
+            .cornerRadius(24.dp)
+            .padding(horizontal = 12.dp, vertical = 10.dp)
             .clickable(actionStartActivity(intent)),
     ) {
         Column(
@@ -115,7 +116,7 @@ private fun StatsWidgetContent(
                     ),
                 )
             }
-            Spacer(GlanceModifier.height(8.dp))
+            Spacer(GlanceModifier.height(6.dp))
             // Status count cells
             Row(
                 modifier = GlanceModifier.fillMaxWidth().defaultWeight(),
@@ -126,7 +127,7 @@ private fun StatsWidgetContent(
                     label = "Clean",
                     textColor = Color(0xFF5DCAA5),
                     bgColor = Color(0x265DCAA5),
-                    modifier = GlanceModifier.defaultWeight(),
+                    modifier = GlanceModifier.defaultWeight().fillMaxHeight(),
                 )
                 Spacer(GlanceModifier.width(6.dp))
                 StatusCell(
@@ -134,7 +135,7 @@ private fun StatsWidgetContent(
                     label = "Worn",
                     textColor = Color(0xFFEF9F27),
                     bgColor = Color(0x26EF9F27),
-                    modifier = GlanceModifier.defaultWeight(),
+                    modifier = GlanceModifier.defaultWeight().fillMaxHeight(),
                 )
                 Spacer(GlanceModifier.width(6.dp))
                 StatusCell(
@@ -142,7 +143,7 @@ private fun StatsWidgetContent(
                     label = "Laundry",
                     textColor = Color(0xFF7F77DD),
                     bgColor = Color(0x267F77DD),
-                    modifier = GlanceModifier.defaultWeight(),
+                    modifier = GlanceModifier.defaultWeight().fillMaxHeight(),
                 )
             }
         }
@@ -160,8 +161,8 @@ private fun StatusCell(
     Box(
         modifier = modifier
             .background(ColorProvider(bgColor))
-            .cornerRadius(8.dp)
-            .padding(vertical = 6.dp, horizontal = 4.dp),
+            .cornerRadius(14.dp)
+            .padding(vertical = 10.dp, horizontal = 6.dp),
         contentAlignment = Alignment.Center,
     ) {
         Column(
@@ -171,7 +172,7 @@ private fun StatusCell(
                 text = count.toString(),
                 style = TextStyle(
                     color = ColorProvider(textColor),
-                    fontSize = 22.sp,
+                    fontSize = 26.sp,
                     fontWeight = FontWeight.Bold,
                 ),
             )
@@ -179,7 +180,7 @@ private fun StatusCell(
                 text = label,
                 style = TextStyle(
                     color = ColorProvider(textColor),
-                    fontSize = 10.sp,
+                    fontSize = 11.sp,
                 ),
             )
         }
