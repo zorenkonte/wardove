@@ -55,706 +55,6 @@
   },
   "nodes": [
     {
-      "label": "MainActivity.kt",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "wardove_mainactivity",
-      "community": 5,
-      "norm_label": "mainactivity.kt"
-    },
-    {
-      "label": "MainActivity",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L49",
-      "_origin": "ast",
-      "id": "wardove_mainactivity_mainactivity",
-      "community": 5,
-      "norm_label": "mainactivity"
-    },
-    {
-      "label": "FragmentActivity",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "fragmentactivity",
-      "community": 5,
-      "norm_label": "fragmentactivity"
-    },
-    {
-      "label": "SettingsRepository",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L52",
-      "_origin": "ast",
-      "id": "settingsrepository",
-      "community": 5,
-      "norm_label": "settingsrepository"
-    },
-    {
-      "label": "LockViewModel",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L55",
-      "_origin": "ast",
-      "id": "lockviewmodel",
-      "community": 5,
-      "norm_label": "lockviewmodel"
-    },
-    {
-      "label": "BiometricPrompt",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L60",
-      "_origin": "ast",
-      "id": "biometricprompt",
-      "community": 5,
-      "norm_label": "biometricprompt"
-    },
-    {
-      "label": "SensorManager",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L66",
-      "_origin": "ast",
-      "id": "sensormanager",
-      "community": 5,
-      "norm_label": "sensormanager"
-    },
-    {
-      "label": "Sensor",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L67",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_mainactivity_kt_sensor",
-      "community": 5,
-      "norm_label": "sensor"
-    },
-    {
-      "label": ".onCreate()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L76",
-      "_origin": "ast",
-      "id": "wardove_mainactivity_mainactivity_oncreate",
-      "community": 5,
-      "norm_label": ".oncreate()"
-    },
-    {
-      "label": "Bundle",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L76",
-      "_origin": "ast",
-      "id": "bundle",
-      "community": 5,
-      "norm_label": "bundle"
-    },
-    {
-      "label": ".onNewIntent()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L152",
-      "_origin": "ast",
-      "id": "wardove_mainactivity_mainactivity_onnewintent",
-      "community": 5,
-      "norm_label": ".onnewintent()"
-    },
-    {
-      "label": "Intent",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L152",
-      "_origin": "ast",
-      "id": "intent",
-      "community": 5,
-      "norm_label": "intent"
-    },
-    {
-      "label": ".onStart()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L158",
-      "_origin": "ast",
-      "id": "wardove_mainactivity_mainactivity_onstart",
-      "community": 5,
-      "norm_label": ".onstart()"
-    },
-    {
-      "label": ".onResume()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L165",
-      "_origin": "ast",
-      "id": "wardove_mainactivity_mainactivity_onresume",
-      "community": 5,
-      "norm_label": ".onresume()"
-    },
-    {
-      "label": ".onPause()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L172",
-      "_origin": "ast",
-      "id": "wardove_mainactivity_mainactivity_onpause",
-      "community": 5,
-      "norm_label": ".onpause()"
-    },
-    {
-      "label": ".onStop()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L177",
-      "_origin": "ast",
-      "id": "wardove_mainactivity_mainactivity_onstop",
-      "community": 5,
-      "norm_label": ".onstop()"
-    },
-    {
-      "label": ".resolveNavRoute()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L189",
-      "_origin": "ast",
-      "id": "wardove_mainactivity_mainactivity_resolvenavroute",
-      "community": 5,
-      "norm_label": ".resolvenavroute()"
-    },
-    {
-      "label": "String",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L189",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_mainactivity_kt_string",
-      "community": 5,
-      "norm_label": "string"
-    },
-    {
-      "label": ".onShakeDetected()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L200",
-      "_origin": "ast",
-      "id": "wardove_mainactivity_mainactivity_onshakedetected",
-      "community": 5,
-      "norm_label": ".onshakedetected()"
-    },
-    {
-      "label": ".vibrate()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L206",
-      "_origin": "ast",
-      "id": "wardove_mainactivity_mainactivity_vibrate",
-      "community": 5,
-      "norm_label": ".vibrate()"
-    },
-    {
-      "label": ".showBiometricPrompt()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
-      "source_location": "L225",
-      "_origin": "ast",
-      "id": "wardove_mainactivity_mainactivity_showbiometricprompt",
-      "community": 5,
-      "norm_label": ".showbiometricprompt()"
-    },
-    {
-      "label": "AppSettings.kt",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/AppSettings.kt",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "settings_appsettings",
-      "community": 48,
-      "norm_label": "appsettings.kt"
-    },
-    {
-      "label": "AppSettings",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/AppSettings.kt",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "settings_appsettings_appsettings",
-      "community": 48,
-      "norm_label": "appsettings"
-    },
-    {
-      "label": "SettingsRepository.kt",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "settings_settingsrepository",
-      "community": 21,
-      "norm_label": "settingsrepository.kt"
-    },
-    {
-      "label": "SettingsRepository",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L17",
-      "_origin": "ast",
-      "id": "settings_settingsrepository_settingsrepository",
-      "community": 21,
-      "norm_label": "settingsrepository"
-    },
-    {
-      "label": "Keys",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L21",
-      "_origin": "ast",
-      "id": "settings_settingsrepository_keys",
-      "community": 21,
-      "norm_label": "keys"
-    },
-    {
-      "label": "Flow",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L30",
-      "_origin": "ast",
-      "id": "flow",
-      "community": 12,
-      "norm_label": "flow"
-    },
-    {
-      "label": "AppSettings",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L30",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_appsettings",
-      "community": 21,
-      "norm_label": "appsettings"
-    },
-    {
-      "label": ".setThemeMode()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L47",
-      "_origin": "ast",
-      "id": "settings_settingsrepository_settingsrepository_setthememode",
-      "community": 21,
-      "norm_label": ".setthememode()"
-    },
-    {
-      "label": "ThemeMode",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L47",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_thememode",
-      "community": 21,
-      "norm_label": "thememode"
-    },
-    {
-      "label": ".setDynamicColor()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L51",
-      "_origin": "ast",
-      "id": "settings_settingsrepository_settingsrepository_setdynamiccolor",
-      "community": 21,
-      "norm_label": ".setdynamiccolor()"
-    },
-    {
-      "label": "Boolean",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L51",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_boolean",
-      "community": 21,
-      "norm_label": "boolean"
-    },
-    {
-      "label": ".setLaundryThreshold()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L55",
-      "_origin": "ast",
-      "id": "settings_settingsrepository_settingsrepository_setlaundrythreshold",
-      "community": 21,
-      "norm_label": ".setlaundrythreshold()"
-    },
-    {
-      "label": "Int",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L55",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_int",
-      "community": 21,
-      "norm_label": "int"
-    },
-    {
-      "label": ".setUpdateNotificationsEnabled()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L63",
-      "_origin": "ast",
-      "id": "settings_settingsrepository_settingsrepository_setupdatenotificationsenabled",
-      "community": 21,
-      "norm_label": ".setupdatenotificationsenabled()"
-    },
-    {
-      "label": ".setShakeToReportEnabled()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L67",
-      "_origin": "ast",
-      "id": "settings_settingsrepository_settingsrepository_setshaketoreportenabled",
-      "community": 21,
-      "norm_label": ".setshaketoreportenabled()"
-    },
-    {
-      "label": "String",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L71",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_string",
-      "community": 21,
-      "norm_label": "string"
-    },
-    {
-      "label": ".setLastNotifiedUpdateTag()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L75",
-      "_origin": "ast",
-      "id": "settings_settingsrepository_settingsrepository_setlastnotifiedupdatetag",
-      "community": 21,
-      "norm_label": ".setlastnotifiedupdatetag()"
-    },
-    {
-      "label": "AboutSettingsScreen.kt",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/AboutSettingsScreen.kt",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "settings_aboutsettingsscreen",
-      "community": 1,
-      "norm_label": "aboutsettingsscreen.kt"
-    },
-    {
-      "label": "AboutSettingsScreen()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/AboutSettingsScreen.kt",
-      "source_location": "L43",
-      "_origin": "ast",
-      "id": "settings_aboutsettingsscreen_aboutsettingsscreen",
-      "community": 1,
-      "norm_label": "aboutsettingsscreen()"
-    },
-    {
-      "label": "InfoRow()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/AboutSettingsScreen.kt",
-      "source_location": "L144",
-      "_origin": "ast",
-      "id": "settings_aboutsettingsscreen_inforow",
-      "community": 1,
-      "norm_label": "inforow()"
-    },
-    {
-      "label": "String",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/AboutSettingsScreen.kt",
-      "source_location": "L144",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_ui_settings_aboutsettingsscreen_kt_string",
-      "community": 1,
-      "norm_label": "string"
-    },
-    {
-      "label": "LinkRow()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/AboutSettingsScreen.kt",
-      "source_location": "L166",
-      "_origin": "ast",
-      "id": "settings_aboutsettingsscreen_linkrow",
-      "community": 1,
-      "norm_label": "linkrow()"
-    },
-    {
-      "label": "ChevronRow()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/AboutSettingsScreen.kt",
-      "source_location": "L189",
-      "_origin": "ast",
-      "id": "settings_aboutsettingsscreen_chevronrow",
-      "community": 1,
-      "norm_label": "chevronrow()"
-    },
-    {
-      "label": "ImageVector",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/AboutSettingsScreen.kt",
-      "source_location": "L189",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_ui_settings_aboutsettingsscreen_kt_imagevector",
-      "community": 1,
-      "norm_label": "imagevector"
-    },
-    {
-      "label": "ExternalRow()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/AboutSettingsScreen.kt",
-      "source_location": "L219",
-      "_origin": "ast",
-      "id": "settings_aboutsettingsscreen_externalrow",
-      "community": 1,
-      "norm_label": "externalrow()"
-    },
-    {
-      "label": "SettingsScreen.kt",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "settings_settingsscreen",
-      "community": 1,
-      "norm_label": "settingsscreen.kt"
-    },
-    {
-      "label": "SettingsScreen()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
-      "source_location": "L48",
-      "_origin": "ast",
-      "id": "settings_settingsscreen_settingsscreen",
-      "community": 1,
-      "norm_label": "settingsscreen()"
-    },
-    {
-      "label": "SettingsViewModel",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
-      "source_location": "L48",
-      "_origin": "ast",
-      "id": "settingsviewmodel",
-      "community": 1,
-      "norm_label": "settingsviewmodel"
-    },
-    {
-      "label": "ChevronRow()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
-      "source_location": "L170",
-      "_origin": "ast",
-      "id": "settings_settingsscreen_chevronrow",
-      "community": 1,
-      "norm_label": "chevronrow()"
-    },
-    {
-      "label": "ImageVector",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
-      "source_location": "L170",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_ui_settings_settingsscreen_kt_imagevector",
-      "community": 1,
-      "norm_label": "imagevector"
-    },
-    {
-      "label": "String",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
-      "source_location": "L170",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_ui_settings_settingsscreen_kt_string",
-      "community": 1,
-      "norm_label": "string"
-    },
-    {
-      "label": "ExternalRow()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
-      "source_location": "L205",
-      "_origin": "ast",
-      "id": "settings_settingsscreen_externalrow",
-      "community": 1,
-      "norm_label": "externalrow()"
-    },
-    {
-      "label": "SwitchRow()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
-      "source_location": "L240",
-      "_origin": "ast",
-      "id": "settings_settingsscreen_switchrow",
-      "community": 1,
-      "norm_label": "switchrow()"
-    },
-    {
-      "label": "Boolean",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
-      "source_location": "L240",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_ui_settings_settingsscreen_kt_boolean",
-      "community": 1,
-      "norm_label": "boolean"
-    },
-    {
-      "label": "SettingsViewModel.kt",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "settings_settingsviewmodel",
-      "community": 30,
-      "norm_label": "settingsviewmodel.kt"
-    },
-    {
-      "label": "SettingsViewModel",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "settings_settingsviewmodel_settingsviewmodel",
-      "community": 30,
-      "norm_label": "settingsviewmodel"
-    },
-    {
-      "label": "ViewModel",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "id": "viewmodel",
-      "community": 75,
-      "norm_label": "viewmodel"
-    },
-    {
-      "label": "StateFlow",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "stateflow",
-      "community": 30,
-      "norm_label": "stateflow"
-    },
-    {
-      "label": "AppSettings",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
-      "source_location": "L20",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_ui_settings_settingsviewmodel_kt_appsettings",
-      "community": 30,
-      "norm_label": "appsettings"
-    },
-    {
-      "label": ".setThemeMode()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
-      "source_location": "L26",
-      "_origin": "ast",
-      "id": "settings_settingsviewmodel_settingsviewmodel_setthememode",
-      "community": 30,
-      "norm_label": ".setthememode()"
-    },
-    {
-      "label": "ThemeMode",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
-      "source_location": "L26",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_ui_settings_settingsviewmodel_kt_thememode",
-      "community": 30,
-      "norm_label": "thememode"
-    },
-    {
-      "label": ".setDynamicColor()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
-      "source_location": "L30",
-      "_origin": "ast",
-      "id": "settings_settingsviewmodel_settingsviewmodel_setdynamiccolor",
-      "community": 30,
-      "norm_label": ".setdynamiccolor()"
-    },
-    {
-      "label": "Boolean",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
-      "source_location": "L30",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_ui_settings_settingsviewmodel_kt_boolean",
-      "community": 30,
-      "norm_label": "boolean"
-    },
-    {
-      "label": ".setUpdateNotificationsEnabled()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
-      "source_location": "L34",
-      "_origin": "ast",
-      "id": "settings_settingsviewmodel_settingsviewmodel_setupdatenotificationsenabled",
-      "community": 30,
-      "norm_label": ".setupdatenotificationsenabled()"
-    },
-    {
-      "label": ".setShakeToReportEnabled()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
-      "source_location": "L38",
-      "_origin": "ast",
-      "id": "settings_settingsviewmodel_settingsviewmodel_setshaketoreportenabled",
-      "community": 30,
-      "norm_label": ".setshaketoreportenabled()"
-    },
-    {
-      "label": "CustomTabs.kt",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/util/CustomTabs.kt",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "util_customtabs",
-      "community": 5,
-      "norm_label": "customtabs.kt"
-    },
-    {
-      "label": "openCustomTab()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/util/CustomTabs.kt",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "util_customtabs_opencustomtab",
-      "community": 5,
-      "norm_label": "opencustomtab()"
-    },
-    {
-      "label": "Context",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/util/CustomTabs.kt",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "context",
-      "community": 70,
-      "norm_label": "context"
-    },
-    {
-      "label": "String",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/util/CustomTabs.kt",
-      "source_location": "L16",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_ui_util_customtabs_kt_string",
-      "community": 5,
-      "norm_label": "string"
-    },
-    {
       "label": "ShakeDetector.kt",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/util/ShakeDetector.kt",
@@ -788,7 +88,7 @@
       "label": ".onSensorChanged()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/util/ShakeDetector.kt",
-      "source_location": "L24",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "util_shakedetector_shakedetector_onsensorchanged",
       "community": 74,
@@ -798,7 +98,7 @@
       "label": "SensorEvent",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/util/ShakeDetector.kt",
-      "source_location": "L24",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "sensorevent",
       "community": 74,
@@ -808,7 +108,7 @@
       "label": ".onAccuracyChanged()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/util/ShakeDetector.kt",
-      "source_location": "L46",
+      "source_location": "L61",
       "_origin": "ast",
       "id": "util_shakedetector_shakedetector_onaccuracychanged",
       "community": 74,
@@ -818,9 +118,9 @@
       "label": "Sensor",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/util/ShakeDetector.kt",
-      "source_location": "L46",
+      "source_location": "L61",
       "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_util_shakedetector_kt_sensor",
+      "id": "sensor",
       "community": 74,
       "norm_label": "sensor"
     },
@@ -828,11 +128,711 @@
       "label": "Int",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/util/ShakeDetector.kt",
-      "source_location": "L46",
+      "source_location": "L61",
       "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_util_shakedetector_kt_int",
+      "id": "int",
       "community": 74,
       "norm_label": "int"
+    },
+    {
+      "label": "MainActivity.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "mainactivity.kt",
+      "id": "wardove_mainactivity"
+    },
+    {
+      "label": "MainActivity",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L49",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "mainactivity",
+      "id": "wardove_mainactivity_mainactivity"
+    },
+    {
+      "label": "FragmentActivity",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "fragmentactivity",
+      "id": "fragmentactivity"
+    },
+    {
+      "label": "SettingsRepository",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L52",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "settingsrepository",
+      "id": "settingsrepository"
+    },
+    {
+      "label": "LockViewModel",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L55",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "lockviewmodel",
+      "id": "lockviewmodel"
+    },
+    {
+      "label": "BiometricPrompt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L60",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "biometricprompt",
+      "id": "biometricprompt"
+    },
+    {
+      "label": "SensorManager",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L66",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "sensormanager",
+      "id": "sensormanager"
+    },
+    {
+      "label": "Sensor",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L67",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "sensor",
+      "id": "app_src_main_java_com_app_wardove_mainactivity_kt_sensor"
+    },
+    {
+      "label": ".onCreate()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L76",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": ".oncreate()",
+      "id": "wardove_mainactivity_mainactivity_oncreate"
+    },
+    {
+      "label": "Bundle",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L76",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "bundle",
+      "id": "bundle"
+    },
+    {
+      "label": ".onNewIntent()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L152",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": ".onnewintent()",
+      "id": "wardove_mainactivity_mainactivity_onnewintent"
+    },
+    {
+      "label": "Intent",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L152",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "intent",
+      "id": "intent"
+    },
+    {
+      "label": ".onStart()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L158",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": ".onstart()",
+      "id": "wardove_mainactivity_mainactivity_onstart"
+    },
+    {
+      "label": ".onResume()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L165",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": ".onresume()",
+      "id": "wardove_mainactivity_mainactivity_onresume"
+    },
+    {
+      "label": ".onPause()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L172",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": ".onpause()",
+      "id": "wardove_mainactivity_mainactivity_onpause"
+    },
+    {
+      "label": ".onStop()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L177",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": ".onstop()",
+      "id": "wardove_mainactivity_mainactivity_onstop"
+    },
+    {
+      "label": ".resolveNavRoute()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L189",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": ".resolvenavroute()",
+      "id": "wardove_mainactivity_mainactivity_resolvenavroute"
+    },
+    {
+      "label": "String",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L189",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "string",
+      "id": "app_src_main_java_com_app_wardove_mainactivity_kt_string"
+    },
+    {
+      "label": ".onShakeDetected()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L200",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": ".onshakedetected()",
+      "id": "wardove_mainactivity_mainactivity_onshakedetected"
+    },
+    {
+      "label": ".vibrate()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L206",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": ".vibrate()",
+      "id": "wardove_mainactivity_mainactivity_vibrate"
+    },
+    {
+      "label": ".showBiometricPrompt()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
+      "source_location": "L225",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": ".showbiometricprompt()",
+      "id": "wardove_mainactivity_mainactivity_showbiometricprompt"
+    },
+    {
+      "label": "AppSettings.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/AppSettings.kt",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 48,
+      "norm_label": "appsettings.kt",
+      "id": "settings_appsettings"
+    },
+    {
+      "label": "AppSettings",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/AppSettings.kt",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 48,
+      "norm_label": "appsettings",
+      "id": "settings_appsettings_appsettings"
+    },
+    {
+      "label": "SettingsRepository.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "settingsrepository.kt",
+      "id": "settings_settingsrepository"
+    },
+    {
+      "label": "SettingsRepository",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L17",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "settingsrepository",
+      "id": "settings_settingsrepository_settingsrepository"
+    },
+    {
+      "label": "Keys",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L21",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "keys",
+      "id": "settings_settingsrepository_keys"
+    },
+    {
+      "label": "Flow",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 12,
+      "norm_label": "flow",
+      "id": "flow"
+    },
+    {
+      "label": "AppSettings",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "appsettings",
+      "id": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_appsettings"
+    },
+    {
+      "label": ".setThemeMode()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L47",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": ".setthememode()",
+      "id": "settings_settingsrepository_settingsrepository_setthememode"
+    },
+    {
+      "label": "ThemeMode",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L47",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "thememode",
+      "id": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_thememode"
+    },
+    {
+      "label": ".setDynamicColor()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L51",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": ".setdynamiccolor()",
+      "id": "settings_settingsrepository_settingsrepository_setdynamiccolor"
+    },
+    {
+      "label": "Boolean",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L51",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "boolean",
+      "id": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_boolean"
+    },
+    {
+      "label": ".setLaundryThreshold()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L55",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": ".setlaundrythreshold()",
+      "id": "settings_settingsrepository_settingsrepository_setlaundrythreshold"
+    },
+    {
+      "label": "Int",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L55",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "int",
+      "id": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_int"
+    },
+    {
+      "label": ".setUpdateNotificationsEnabled()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L63",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": ".setupdatenotificationsenabled()",
+      "id": "settings_settingsrepository_settingsrepository_setupdatenotificationsenabled"
+    },
+    {
+      "label": ".setShakeToReportEnabled()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L67",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": ".setshaketoreportenabled()",
+      "id": "settings_settingsrepository_settingsrepository_setshaketoreportenabled"
+    },
+    {
+      "label": "String",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L71",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "string",
+      "id": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_string"
+    },
+    {
+      "label": ".setLastNotifiedUpdateTag()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L75",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": ".setlastnotifiedupdatetag()",
+      "id": "settings_settingsrepository_settingsrepository_setlastnotifiedupdatetag"
+    },
+    {
+      "label": "AboutSettingsScreen.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/AboutSettingsScreen.kt",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "aboutsettingsscreen.kt",
+      "id": "settings_aboutsettingsscreen"
+    },
+    {
+      "label": "AboutSettingsScreen()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/AboutSettingsScreen.kt",
+      "source_location": "L43",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "aboutsettingsscreen()",
+      "id": "settings_aboutsettingsscreen_aboutsettingsscreen"
+    },
+    {
+      "label": "InfoRow()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/AboutSettingsScreen.kt",
+      "source_location": "L144",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "inforow()",
+      "id": "settings_aboutsettingsscreen_inforow"
+    },
+    {
+      "label": "String",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/AboutSettingsScreen.kt",
+      "source_location": "L144",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "string",
+      "id": "app_src_main_java_com_app_wardove_ui_settings_aboutsettingsscreen_kt_string"
+    },
+    {
+      "label": "LinkRow()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/AboutSettingsScreen.kt",
+      "source_location": "L166",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "linkrow()",
+      "id": "settings_aboutsettingsscreen_linkrow"
+    },
+    {
+      "label": "ChevronRow()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/AboutSettingsScreen.kt",
+      "source_location": "L189",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "chevronrow()",
+      "id": "settings_aboutsettingsscreen_chevronrow"
+    },
+    {
+      "label": "ImageVector",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/AboutSettingsScreen.kt",
+      "source_location": "L189",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "imagevector",
+      "id": "app_src_main_java_com_app_wardove_ui_settings_aboutsettingsscreen_kt_imagevector"
+    },
+    {
+      "label": "ExternalRow()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/AboutSettingsScreen.kt",
+      "source_location": "L219",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "externalrow()",
+      "id": "settings_aboutsettingsscreen_externalrow"
+    },
+    {
+      "label": "SettingsScreen.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "settingsscreen.kt",
+      "id": "settings_settingsscreen"
+    },
+    {
+      "label": "SettingsScreen()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
+      "source_location": "L48",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "settingsscreen()",
+      "id": "settings_settingsscreen_settingsscreen"
+    },
+    {
+      "label": "SettingsViewModel",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
+      "source_location": "L48",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "settingsviewmodel",
+      "id": "settingsviewmodel"
+    },
+    {
+      "label": "ChevronRow()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
+      "source_location": "L170",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "chevronrow()",
+      "id": "settings_settingsscreen_chevronrow"
+    },
+    {
+      "label": "ImageVector",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
+      "source_location": "L170",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "imagevector",
+      "id": "app_src_main_java_com_app_wardove_ui_settings_settingsscreen_kt_imagevector"
+    },
+    {
+      "label": "String",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
+      "source_location": "L170",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "string",
+      "id": "app_src_main_java_com_app_wardove_ui_settings_settingsscreen_kt_string"
+    },
+    {
+      "label": "ExternalRow()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
+      "source_location": "L205",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "externalrow()",
+      "id": "settings_settingsscreen_externalrow"
+    },
+    {
+      "label": "SwitchRow()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
+      "source_location": "L240",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "switchrow()",
+      "id": "settings_settingsscreen_switchrow"
+    },
+    {
+      "label": "Boolean",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
+      "source_location": "L240",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "boolean",
+      "id": "app_src_main_java_com_app_wardove_ui_settings_settingsscreen_kt_boolean"
+    },
+    {
+      "label": "SettingsViewModel.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 30,
+      "norm_label": "settingsviewmodel.kt",
+      "id": "settings_settingsviewmodel"
+    },
+    {
+      "label": "SettingsViewModel",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 30,
+      "norm_label": "settingsviewmodel",
+      "id": "settings_settingsviewmodel_settingsviewmodel"
+    },
+    {
+      "label": "ViewModel",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "community": 30,
+      "norm_label": "viewmodel",
+      "id": "viewmodel"
+    },
+    {
+      "label": "StateFlow",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 30,
+      "norm_label": "stateflow",
+      "id": "stateflow"
+    },
+    {
+      "label": "AppSettings",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
+      "source_location": "L20",
+      "_origin": "ast",
+      "community": 30,
+      "norm_label": "appsettings",
+      "id": "app_src_main_java_com_app_wardove_ui_settings_settingsviewmodel_kt_appsettings"
+    },
+    {
+      "label": ".setThemeMode()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
+      "source_location": "L26",
+      "_origin": "ast",
+      "community": 30,
+      "norm_label": ".setthememode()",
+      "id": "settings_settingsviewmodel_settingsviewmodel_setthememode"
+    },
+    {
+      "label": "ThemeMode",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
+      "source_location": "L26",
+      "_origin": "ast",
+      "community": 30,
+      "norm_label": "thememode",
+      "id": "app_src_main_java_com_app_wardove_ui_settings_settingsviewmodel_kt_thememode"
+    },
+    {
+      "label": ".setDynamicColor()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 30,
+      "norm_label": ".setdynamiccolor()",
+      "id": "settings_settingsviewmodel_settingsviewmodel_setdynamiccolor"
+    },
+    {
+      "label": "Boolean",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 30,
+      "norm_label": "boolean",
+      "id": "app_src_main_java_com_app_wardove_ui_settings_settingsviewmodel_kt_boolean"
+    },
+    {
+      "label": ".setUpdateNotificationsEnabled()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
+      "source_location": "L34",
+      "_origin": "ast",
+      "community": 30,
+      "norm_label": ".setupdatenotificationsenabled()",
+      "id": "settings_settingsviewmodel_settingsviewmodel_setupdatenotificationsenabled"
+    },
+    {
+      "label": ".setShakeToReportEnabled()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
+      "source_location": "L38",
+      "_origin": "ast",
+      "community": 30,
+      "norm_label": ".setshaketoreportenabled()",
+      "id": "settings_settingsviewmodel_settingsviewmodel_setshaketoreportenabled"
+    },
+    {
+      "label": "CustomTabs.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/util/CustomTabs.kt",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "customtabs.kt",
+      "id": "util_customtabs"
+    },
+    {
+      "label": "openCustomTab()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/util/CustomTabs.kt",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "opencustomtab()",
+      "id": "util_customtabs_opencustomtab"
+    },
+    {
+      "label": "Context",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/util/CustomTabs.kt",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 70,
+      "norm_label": "context",
+      "id": "context"
+    },
+    {
+      "label": "String",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/util/CustomTabs.kt",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 5,
+      "norm_label": "string",
+      "id": "app_src_main_java_com_app_wardove_ui_util_customtabs_kt_string"
     },
     {
       "label": "build.gradle.kts",
@@ -1760,7 +1760,7 @@
       "source_file": "app/src/main/java/com/app/wardove/data/image/ImageStorage.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 4,
+      "community": 2,
       "norm_label": "imagestorage.kt",
       "id": "image_imagestorage"
     },
@@ -1770,7 +1770,7 @@
       "source_file": "app/src/main/java/com/app/wardove/data/image/ImageStorage.kt",
       "source_location": "L14",
       "_origin": "ast",
-      "community": 4,
+      "community": 2,
       "norm_label": "imagestorage",
       "id": "image_imagestorage_imagestorage"
     },
@@ -1780,7 +1780,7 @@
       "source_file": "app/src/main/java/com/app/wardove/data/image/ImageStorage.kt",
       "source_location": "L18",
       "_origin": "ast",
-      "community": 4,
+      "community": 2,
       "norm_label": "file",
       "id": "app_src_main_java_com_app_wardove_data_image_imagestorage_kt_file"
     },
@@ -1790,7 +1790,7 @@
       "source_file": "app/src/main/java/com/app/wardove/data/image/ImageStorage.kt",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 4,
+      "community": 2,
       "norm_label": ".createtempimagefile()",
       "id": "image_imagestorage_imagestorage_createtempimagefile"
     },
@@ -1800,7 +1800,7 @@
       "source_file": "app/src/main/java/com/app/wardove/data/image/ImageStorage.kt",
       "source_location": "L24",
       "_origin": "ast",
-      "community": 4,
+      "community": 2,
       "norm_label": ".geturiforfile()",
       "id": "image_imagestorage_imagestorage_geturiforfile"
     },
@@ -1810,7 +1810,7 @@
       "source_file": "app/src/main/java/com/app/wardove/data/image/ImageStorage.kt",
       "source_location": "L24",
       "_origin": "ast",
-      "community": 4,
+      "community": 2,
       "norm_label": "uri",
       "id": "app_src_main_java_com_app_wardove_data_image_imagestorage_kt_uri"
     },
@@ -1820,7 +1820,7 @@
       "source_file": "app/src/main/java/com/app/wardove/data/image/ImageStorage.kt",
       "source_location": "L31",
       "_origin": "ast",
-      "community": 4,
+      "community": 2,
       "norm_label": ".saveimagefromuri()",
       "id": "image_imagestorage_imagestorage_saveimagefromuri"
     },
@@ -1830,7 +1830,7 @@
       "source_file": "app/src/main/java/com/app/wardove/data/image/ImageStorage.kt",
       "source_location": "L31",
       "_origin": "ast",
-      "community": 4,
+      "community": 2,
       "norm_label": "string",
       "id": "app_src_main_java_com_app_wardove_data_image_imagestorage_kt_string"
     },
@@ -1840,7 +1840,7 @@
       "source_file": "app/src/main/java/com/app/wardove/data/image/ImageStorage.kt",
       "source_location": "L41",
       "_origin": "ast",
-      "community": 4,
+      "community": 2,
       "norm_label": ".delete()",
       "id": "image_imagestorage_imagestorage_delete"
     },
@@ -3960,7 +3960,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 26,
+      "community": 1,
       "norm_label": "historyscreen.kt",
       "id": "history_historyscreen"
     },
@@ -3970,7 +3970,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L57",
       "_origin": "ast",
-      "community": 26,
+      "community": 1,
       "norm_label": "historyscreen()",
       "id": "history_historyscreen_historyscreen"
     },
@@ -3980,7 +3980,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L57",
       "_origin": "ast",
-      "community": 26,
+      "community": 1,
       "norm_label": "historyviewmodel",
       "id": "historyviewmodel"
     },
@@ -3990,7 +3990,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L141",
       "_origin": "ast",
-      "community": 26,
+      "community": 1,
       "norm_label": "cyclerow()",
       "id": "history_historyscreen_cyclerow"
     },
@@ -4000,7 +4000,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L141",
       "_origin": "ast",
-      "community": 26,
+      "community": 1,
       "norm_label": "laundrycycle",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyscreen_kt_laundrycycle"
     },
@@ -4010,7 +4010,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L141",
       "_origin": "ast",
-      "community": 26,
+      "community": 1,
       "norm_label": "boolean",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyscreen_kt_boolean"
     },
@@ -4020,7 +4020,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L141",
       "_origin": "ast",
-      "community": 26,
+      "community": 1,
       "norm_label": "list",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyscreen_kt_list"
     },
@@ -4030,7 +4030,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L141",
       "_origin": "ast",
-      "community": 26,
+      "community": 1,
       "norm_label": "clothingitem",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyscreen_kt_clothingitem"
     },
@@ -4040,7 +4040,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L228",
       "_origin": "ast",
-      "community": 26,
+      "community": 1,
       "norm_label": "formatdate()",
       "id": "history_historyscreen_formatdate"
     },
@@ -4050,7 +4050,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L228",
       "_origin": "ast",
-      "community": 26,
+      "community": 1,
       "norm_label": "long",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyscreen_kt_long"
     },
@@ -4060,7 +4060,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L228",
       "_origin": "ast",
-      "community": 26,
+      "community": 1,
       "norm_label": "string",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyscreen_kt_string"
     },
@@ -4070,7 +4070,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryViewModel.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 72,
+      "community": 30,
       "norm_label": "historyviewmodel.kt",
       "id": "history_historyviewmodel"
     },
@@ -4080,7 +4080,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryViewModel.kt",
       "source_location": "L20",
       "_origin": "ast",
-      "community": 72,
+      "community": 30,
       "norm_label": "historyviewmodel",
       "id": "history_historyviewmodel_historyviewmodel"
     },
@@ -4090,7 +4090,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryViewModel.kt",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 72,
+      "community": 30,
       "norm_label": "stateflow",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyviewmodel_kt_stateflow"
     },
@@ -4100,7 +4100,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryViewModel.kt",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 72,
+      "community": 30,
       "norm_label": "list",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyviewmodel_kt_list"
     },
@@ -4110,7 +4110,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryViewModel.kt",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 72,
+      "community": 30,
       "norm_label": "laundrycycle",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyviewmodel_kt_laundrycycle"
     },
@@ -4120,7 +4120,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryViewModel.kt",
       "source_location": "L34",
       "_origin": "ast",
-      "community": 72,
+      "community": 30,
       "norm_label": "long",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyviewmodel_kt_long"
     },
@@ -4130,7 +4130,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryViewModel.kt",
       "source_location": "L36",
       "_origin": "ast",
-      "community": 72,
+      "community": 30,
       "norm_label": "clothingitem",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyviewmodel_kt_clothingitem"
     },
@@ -4140,7 +4140,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryViewModel.kt",
       "source_location": "L47",
       "_origin": "ast",
-      "community": 72,
+      "community": 30,
       "norm_label": ".toggleexpand()",
       "id": "history_historyviewmodel_historyviewmodel_toggleexpand"
     },
@@ -4860,7 +4860,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/lock/LockViewModel.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 2,
+      "community": 30,
       "norm_label": "lockviewmodel.kt",
       "id": "lock_lockviewmodel"
     },
@@ -4870,7 +4870,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/lock/LockViewModel.kt",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 2,
+      "community": 30,
       "norm_label": "lockviewmodel",
       "id": "lock_lockviewmodel_lockviewmodel"
     },
@@ -4880,7 +4880,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/lock/LockViewModel.kt",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 2,
+      "community": 30,
       "norm_label": "stateflow",
       "id": "app_src_main_java_com_app_wardove_ui_lock_lockviewmodel_kt_stateflow"
     },
@@ -4890,7 +4890,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/lock/LockViewModel.kt",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 2,
+      "community": 30,
       "norm_label": "boolean",
       "id": "app_src_main_java_com_app_wardove_ui_lock_lockviewmodel_kt_boolean"
     },
@@ -4900,7 +4900,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/lock/LockViewModel.kt",
       "source_location": "L32",
       "_origin": "ast",
-      "community": 2,
+      "community": 30,
       "norm_label": ".lock()",
       "id": "lock_lockviewmodel_lockviewmodel_lock"
     },
@@ -4910,7 +4910,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/lock/LockViewModel.kt",
       "source_location": "L39",
       "_origin": "ast",
-      "community": 2,
+      "community": 30,
       "norm_label": ".lockifenabled()",
       "id": "lock_lockviewmodel_lockviewmodel_lockifenabled"
     },
@@ -4920,7 +4920,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/lock/LockViewModel.kt",
       "source_location": "L46",
       "_origin": "ast",
-      "community": 2,
+      "community": 30,
       "norm_label": ".onbiometricsuccess()",
       "id": "lock_lockviewmodel_lockviewmodel_onbiometricsuccess"
     },
@@ -4930,7 +4930,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/lock/LockViewModel.kt",
       "source_location": "L51",
       "_origin": "ast",
-      "community": 2,
+      "community": 30,
       "norm_label": ".requestbiometric()",
       "id": "lock_lockviewmodel_lockviewmodel_requestbiometric"
     },
@@ -4940,7 +4940,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/lock/LockViewModel.kt",
       "source_location": "L55",
       "_origin": "ast",
-      "community": 2,
+      "community": 30,
       "norm_label": ".onbiometricrequestconsumed()",
       "id": "lock_lockviewmodel_lockviewmodel_onbiometricrequestconsumed"
     },
@@ -5140,7 +5140,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 73,
+      "community": 1,
       "norm_label": "applocksettingsscreen.kt",
       "id": "settings_applocksettingsscreen"
     },
@@ -5150,7 +5150,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L46",
       "_origin": "ast",
-      "community": 73,
+      "community": 1,
       "norm_label": "applocksettingsviewmodel",
       "id": "settings_applocksettingsscreen_applocksettingsviewmodel"
     },
@@ -5160,7 +5160,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L51",
       "_origin": "ast",
-      "community": 73,
+      "community": 1,
       "norm_label": "stateflow",
       "id": "app_src_main_java_com_app_wardove_ui_settings_applocksettingsscreen_kt_stateflow"
     },
@@ -5170,7 +5170,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L51",
       "_origin": "ast",
-      "community": 73,
+      "community": 1,
       "norm_label": "boolean",
       "id": "app_src_main_java_com_app_wardove_ui_settings_applocksettingsscreen_kt_boolean"
     },
@@ -5180,7 +5180,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L57",
       "_origin": "ast",
-      "community": 73,
+      "community": 1,
       "norm_label": ".setapplockenabled()",
       "id": "settings_applocksettingsscreen_applocksettingsviewmodel_setapplockenabled"
     },
@@ -5190,7 +5190,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L62",
       "_origin": "ast",
-      "community": 73,
+      "community": 1,
       "norm_label": "applocksettingsscreen()",
       "id": "settings_applocksettingsscreen_applocksettingsscreen"
     },
@@ -5200,7 +5200,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L147",
       "_origin": "ast",
-      "community": 73,
+      "community": 1,
       "norm_label": "applockswitchrow()",
       "id": "settings_applocksettingsscreen_applockswitchrow"
     },
@@ -5210,7 +5210,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L147",
       "_origin": "ast",
-      "community": 73,
+      "community": 1,
       "norm_label": "string",
       "id": "app_src_main_java_com_app_wardove_ui_settings_applocksettingsscreen_kt_string"
     },
@@ -5330,7 +5330,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/DiagnosticsViewModel.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 71,
+      "community": 30,
       "norm_label": "diagnosticsviewmodel.kt",
       "id": "settings_diagnosticsviewmodel"
     },
@@ -5340,7 +5340,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/DiagnosticsViewModel.kt",
       "source_location": "L17",
       "_origin": "ast",
-      "community": 71,
+      "community": 30,
       "norm_label": "diagnosticsviewmodel",
       "id": "settings_diagnosticsviewmodel_diagnosticsviewmodel"
     },
@@ -5350,7 +5350,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/DiagnosticsViewModel.kt",
       "source_location": "L24",
       "_origin": "ast",
-      "community": 71,
+      "community": 30,
       "norm_label": "stateflow",
       "id": "app_src_main_java_com_app_wardove_ui_settings_diagnosticsviewmodel_kt_stateflow"
     },
@@ -5360,7 +5360,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/DiagnosticsViewModel.kt",
       "source_location": "L24",
       "_origin": "ast",
-      "community": 71,
+      "community": 30,
       "norm_label": "string",
       "id": "app_src_main_java_com_app_wardove_ui_settings_diagnosticsviewmodel_kt_string"
     },
@@ -5370,7 +5370,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/DiagnosticsViewModel.kt",
       "source_location": "L33",
       "_origin": "ast",
-      "community": 71,
+      "community": 30,
       "norm_label": ".refresh()",
       "id": "settings_diagnosticsviewmodel_diagnosticsviewmodel_refresh"
     },
@@ -5380,7 +5380,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/DiagnosticsViewModel.kt",
       "source_location": "L39",
       "_origin": "ast",
-      "community": 71,
+      "community": 30,
       "norm_label": ".export()",
       "id": "settings_diagnosticsviewmodel_diagnosticsviewmodel_export"
     },
@@ -5390,7 +5390,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/DiagnosticsViewModel.kt",
       "source_location": "L39",
       "_origin": "ast",
-      "community": 71,
+      "community": 30,
       "norm_label": "uri",
       "id": "app_src_main_java_com_app_wardove_ui_settings_diagnosticsviewmodel_kt_uri"
     },
@@ -5400,7 +5400,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/DiagnosticsViewModel.kt",
       "source_location": "L47",
       "_origin": "ast",
-      "community": 71,
+      "community": 30,
       "norm_label": ".clear()",
       "id": "settings_diagnosticsviewmodel_diagnosticsviewmodel_clear"
     },
@@ -5410,7 +5410,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/DiagnosticsViewModel.kt",
       "source_location": "L55",
       "_origin": "ast",
-      "community": 71,
+      "community": 30,
       "norm_label": ".onmessageshown()",
       "id": "settings_diagnosticsviewmodel_diagnosticsviewmodel_onmessageshown"
     },
@@ -5420,7 +5420,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/LicenseDetailScreen.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 5,
+      "community": 1,
       "norm_label": "licensedetailscreen.kt",
       "id": "settings_licensedetailscreen"
     },
@@ -5430,7 +5430,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/LicenseDetailScreen.kt",
       "source_location": "L28",
       "_origin": "ast",
-      "community": 5,
+      "community": 1,
       "norm_label": "licensedetailscreen()",
       "id": "settings_licensedetailscreen_licensedetailscreen"
     },
@@ -5440,7 +5440,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/LicenseDetailScreen.kt",
       "source_location": "L28",
       "_origin": "ast",
-      "community": 5,
+      "community": 1,
       "norm_label": "string",
       "id": "app_src_main_java_com_app_wardove_ui_settings_licensedetailscreen_kt_string"
     },
@@ -5790,7 +5790,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/stats/StatsViewModel.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 75,
+      "community": 30,
       "norm_label": "statsviewmodel.kt",
       "id": "stats_statsviewmodel"
     },
@@ -5800,7 +5800,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/stats/StatsViewModel.kt",
       "source_location": "L16",
       "_origin": "ast",
-      "community": 75,
+      "community": 30,
       "norm_label": "costperwearitem",
       "id": "stats_statsviewmodel_costperwearitem"
     },
@@ -5810,7 +5810,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/stats/StatsViewModel.kt",
       "source_location": "L21",
       "_origin": "ast",
-      "community": 75,
+      "community": 30,
       "norm_label": "statsuistate",
       "id": "stats_statsviewmodel_statsuistate"
     },
@@ -5820,7 +5820,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/stats/StatsViewModel.kt",
       "source_location": "L32",
       "_origin": "ast",
-      "community": 75,
+      "community": 30,
       "norm_label": "statsviewmodel",
       "id": "stats_statsviewmodel_statsviewmodel"
     },
@@ -5830,7 +5830,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/stats/StatsViewModel.kt",
       "source_location": "L38",
       "_origin": "ast",
-      "community": 75,
+      "community": 30,
       "norm_label": "stateflow",
       "id": "app_src_main_java_com_app_wardove_ui_stats_statsviewmodel_kt_stateflow"
     },
@@ -6180,7 +6180,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": ".isupdateavailable()",
       "id": "update_updateviewmodel_updateviewmodel_isupdateavailable"
     },
@@ -6190,7 +6190,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "string",
       "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_string"
     },
@@ -6200,7 +6200,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L66",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "boolean",
       "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_boolean"
     },
@@ -6280,7 +6280,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L124",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "lateststablerelease()",
       "id": "update_updateviewmodel_lateststablerelease"
     },
@@ -6290,7 +6290,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L124",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "list",
       "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_list"
     },
@@ -6300,7 +6300,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L124",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "com",
       "id": "com"
     },
@@ -6310,7 +6310,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L134",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "compareversions()",
       "id": "update_updateviewmodel_compareversions"
     },
@@ -6320,7 +6320,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L134",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "int",
       "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_int"
     },
@@ -6750,7 +6750,7 @@
       "source_file": "app/src/main/java/com/app/wardove/work/UpdateCheckWorker.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "updatecheckworker.kt",
       "id": "work_updatecheckworker"
     },
@@ -6760,7 +6760,7 @@
       "source_file": "app/src/main/java/com/app/wardove/work/UpdateCheckWorker.kt",
       "source_location": "L26",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "updatecheckworker",
       "id": "work_updatecheckworker_updatecheckworker"
     },
@@ -6770,7 +6770,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "coroutineworker",
       "id": "coroutineworker"
     },
@@ -6780,7 +6780,7 @@
       "source_file": "app/src/main/java/com/app/wardove/work/UpdateCheckWorker.kt",
       "source_location": "L34",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": ".dowork()",
       "id": "work_updatecheckworker_updatecheckworker_dowork"
     },
@@ -6790,7 +6790,7 @@
       "source_file": "app/src/main/java/com/app/wardove/work/UpdateCheckWorker.kt",
       "source_location": "L34",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "result",
       "id": "result"
     },
@@ -6800,7 +6800,7 @@
       "source_file": "app/src/main/java/com/app/wardove/work/UpdateCheckWorker.kt",
       "source_location": "L63",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": ".postnotification()",
       "id": "work_updatecheckworker_updatecheckworker_postnotification"
     },
@@ -6810,7 +6810,7 @@
       "source_file": "app/src/main/java/com/app/wardove/work/UpdateCheckWorker.kt",
       "source_location": "L63",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "string",
       "id": "app_src_main_java_com_app_wardove_work_updatecheckworker_kt_string"
     },
@@ -6850,7 +6850,7 @@
       "source_file": "app/src/test/java/com/app/wardove/update/CompareVersionsTest.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "compareversionstest.kt",
       "id": "update_compareversionstest"
     },
@@ -6860,7 +6860,7 @@
       "source_file": "app/src/test/java/com/app/wardove/update/CompareVersionsTest.kt",
       "source_location": "L8",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": "compareversionstest",
       "id": "update_compareversionstest_compareversionstest"
     },
@@ -6870,7 +6870,7 @@
       "source_file": "app/src/test/java/com/app/wardove/update/CompareVersionsTest.kt",
       "source_location": "L10",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": ".newerpatchisgreater()",
       "id": "update_compareversionstest_compareversionstest_newerpatchisgreater"
     },
@@ -6880,7 +6880,7 @@
       "source_file": "app/src/test/java/com/app/wardove/update/CompareVersionsTest.kt",
       "source_location": "L15",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": ".newermajorbeatsolderhigherpatch()",
       "id": "update_compareversionstest_compareversionstest_newermajorbeatsolderhigherpatch"
     },
@@ -6890,7 +6890,7 @@
       "source_file": "app/src/test/java/com/app/wardove/update/CompareVersionsTest.kt",
       "source_location": "L20",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": ".equalversionsreturnzero()",
       "id": "update_compareversionstest_compareversionstest_equalversionsreturnzero"
     },
@@ -6900,7 +6900,7 @@
       "source_file": "app/src/test/java/com/app/wardove/update/CompareVersionsTest.kt",
       "source_location": "L25",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": ".leadingvanddifferinglengthstolerated()",
       "id": "update_compareversionstest_compareversionstest_leadingvanddifferinglengthstolerated"
     },
@@ -6910,7 +6910,7 @@
       "source_file": "app/src/test/java/com/app/wardove/update/CompareVersionsTest.kt",
       "source_location": "L31",
       "_origin": "ast",
-      "community": 3,
+      "community": 4,
       "norm_label": ".olderversionisless()",
       "id": "update_compareversionstest_compareversionstest_olderversionisless"
     },
@@ -8114,6 +8114,79 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/util/ShakeDetector.kt",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "util_shakedetector",
+      "target": "util_shakedetector_shakedetector"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/util/ShakeDetector.kt",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "util_shakedetector_shakedetector",
+      "target": "sensoreventlistener"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/util/ShakeDetector.kt",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "util_shakedetector_shakedetector",
+      "target": "util_shakedetector_shakedetector_onaccuracychanged"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/util/ShakeDetector.kt",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "util_shakedetector_shakedetector",
+      "target": "util_shakedetector_shakedetector_onsensorchanged"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/util/ShakeDetector.kt",
+      "source_location": "L24",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "util_shakedetector_shakedetector_onsensorchanged",
+      "target": "sensorevent"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/util/ShakeDetector.kt",
+      "source_location": "L61",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "util_shakedetector_shakedetector_onaccuracychanged",
+      "target": "int",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/util/ShakeDetector.kt",
+      "source_location": "L61",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "util_shakedetector_shakedetector_onaccuracychanged",
+      "target": "sensor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
       "source_location": "L39",
       "weight": 1.0,
@@ -8128,9 +8201,9 @@
       "source_location": "L67",
       "weight": 1.0,
       "context": "field",
+      "confidence_score": 1.0,
       "source": "wardove_mainactivity_mainactivity",
-      "target": "app_src_main_java_com_app_wardove_mainactivity_kt_sensor",
-      "confidence_score": 1.0
+      "target": "app_src_main_java_com_app_wardove_mainactivity_kt_sensor"
     },
     {
       "relation": "references",
@@ -8171,9 +8244,9 @@
       "source_location": "L66",
       "weight": 1.0,
       "context": "field",
+      "confidence_score": 1.0,
       "source": "wardove_mainactivity_mainactivity",
-      "target": "sensormanager",
-      "confidence_score": 1.0
+      "target": "sensormanager"
     },
     {
       "relation": "references",
@@ -8212,9 +8285,9 @@
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
       "source_location": "L172",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wardove_mainactivity_mainactivity",
-      "target": "wardove_mainactivity_mainactivity_onpause",
-      "confidence_score": 1.0
+      "target": "wardove_mainactivity_mainactivity_onpause"
     },
     {
       "relation": "method",
@@ -8222,9 +8295,9 @@
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
       "source_location": "L165",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wardove_mainactivity_mainactivity",
-      "target": "wardove_mainactivity_mainactivity_onresume",
-      "confidence_score": 1.0
+      "target": "wardove_mainactivity_mainactivity_onresume"
     },
     {
       "relation": "method",
@@ -8232,9 +8305,9 @@
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
       "source_location": "L200",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wardove_mainactivity_mainactivity",
-      "target": "wardove_mainactivity_mainactivity_onshakedetected",
-      "confidence_score": 1.0
+      "target": "wardove_mainactivity_mainactivity_onshakedetected"
     },
     {
       "relation": "method",
@@ -8282,9 +8355,9 @@
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
       "source_location": "L206",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wardove_mainactivity_mainactivity",
-      "target": "wardove_mainactivity_mainactivity_vibrate",
-      "confidence_score": 1.0
+      "target": "wardove_mainactivity_mainactivity_vibrate"
     },
     {
       "relation": "calls",
@@ -8381,9 +8454,9 @@
       "source_location": "L152",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "wardove_mainactivity_mainactivity_onnewintent",
-      "target": "intent",
-      "confidence_score": 1.0
+      "target": "intent"
     },
     {
       "relation": "calls",
@@ -8414,9 +8487,9 @@
       "source_location": "L189",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "wardove_mainactivity_mainactivity_resolvenavroute",
-      "target": "intent",
-      "confidence_score": 1.0
+      "target": "intent"
     },
     {
       "relation": "references",
@@ -8447,9 +8520,9 @@
       "source_file": "app/src/main/java/com/app/wardove/MainActivity.kt",
       "source_location": "L202",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "wardove_mainactivity_mainactivity_onshakedetected",
-      "target": "wardove_mainactivity_mainactivity_vibrate",
-      "confidence_score": 1.0
+      "target": "wardove_mainactivity_mainactivity_vibrate"
     },
     {
       "relation": "contains",
@@ -8510,9 +8583,9 @@
       "source_location": "L71",
       "weight": 1.0,
       "context": "field",
+      "confidence_score": 1.0,
       "source": "settings_settingsrepository_settingsrepository",
-      "target": "flow",
-      "confidence_score": 1.0
+      "target": "flow"
     },
     {
       "relation": "method",
@@ -8550,9 +8623,9 @@
       "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
       "source_location": "L67",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "settings_settingsrepository_settingsrepository",
-      "target": "settings_settingsrepository_settingsrepository_setshaketoreportenabled",
-      "confidence_score": 1.0
+      "target": "settings_settingsrepository_settingsrepository_setshaketoreportenabled"
     },
     {
       "relation": "method",
@@ -8647,9 +8720,9 @@
       "source_location": "L67",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "settings_settingsrepository_settingsrepository_setshaketoreportenabled",
-      "target": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_boolean",
-      "confidence_score": 1.0
+      "target": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_boolean"
     },
     {
       "relation": "references",
@@ -8893,9 +8966,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
       "source_location": "L205",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "settings_settingsscreen",
-      "target": "settings_settingsscreen_externalrow",
-      "confidence_score": 1.0
+      "target": "settings_settingsscreen_externalrow"
     },
     {
       "relation": "contains",
@@ -8913,9 +8986,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
       "source_location": "L240",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "settings_settingsscreen",
-      "target": "settings_settingsscreen_switchrow",
-      "confidence_score": 1.0
+      "target": "settings_settingsscreen_switchrow"
     },
     {
       "relation": "calls",
@@ -8957,9 +9030,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
       "source_location": "L147",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "settings_settingsscreen_settingsscreen",
-      "target": "settings_settingsscreen_externalrow",
-      "confidence_score": 1.0
+      "target": "settings_settingsscreen_externalrow"
     },
     {
       "relation": "calls",
@@ -8968,9 +9041,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsScreen.kt",
       "source_location": "L158",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "settings_settingsscreen_settingsscreen",
-      "target": "settings_settingsscreen_switchrow",
-      "confidence_score": 1.0
+      "target": "settings_settingsscreen_switchrow"
     },
     {
       "relation": "references",
@@ -8979,9 +9052,9 @@
       "source_location": "L48",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "settings_settingsscreen_settingsscreen",
-      "target": "settingsviewmodel",
-      "confidence_score": 1.0
+      "target": "settingsviewmodel"
     },
     {
       "relation": "calls",
@@ -9023,9 +9096,9 @@
       "source_location": "L205",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "settings_settingsscreen_externalrow",
-      "target": "app_src_main_java_com_app_wardove_ui_settings_settingsscreen_kt_imagevector",
-      "confidence_score": 1.0
+      "target": "app_src_main_java_com_app_wardove_ui_settings_settingsscreen_kt_imagevector"
     },
     {
       "relation": "references",
@@ -9034,9 +9107,9 @@
       "source_location": "L240",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "settings_settingsscreen_switchrow",
-      "target": "app_src_main_java_com_app_wardove_ui_settings_settingsscreen_kt_imagevector",
-      "confidence_score": 1.0
+      "target": "app_src_main_java_com_app_wardove_ui_settings_settingsscreen_kt_imagevector"
     },
     {
       "relation": "references",
@@ -9045,9 +9118,9 @@
       "source_location": "L205",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "settings_settingsscreen_externalrow",
-      "target": "app_src_main_java_com_app_wardove_ui_settings_settingsscreen_kt_string",
-      "confidence_score": 1.0
+      "target": "app_src_main_java_com_app_wardove_ui_settings_settingsscreen_kt_string"
     },
     {
       "relation": "references",
@@ -9056,9 +9129,9 @@
       "source_location": "L240",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "settings_settingsscreen_switchrow",
-      "target": "app_src_main_java_com_app_wardove_ui_settings_settingsscreen_kt_string",
-      "confidence_score": 1.0
+      "target": "app_src_main_java_com_app_wardove_ui_settings_settingsscreen_kt_string"
     },
     {
       "relation": "references",
@@ -9067,9 +9140,9 @@
       "source_location": "L240",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "settings_settingsscreen_switchrow",
-      "target": "app_src_main_java_com_app_wardove_ui_settings_settingsscreen_kt_boolean",
-      "confidence_score": 1.0
+      "target": "app_src_main_java_com_app_wardove_ui_settings_settingsscreen_kt_boolean"
     },
     {
       "relation": "contains",
@@ -9108,9 +9181,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
       "source_location": "L38",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "settings_settingsviewmodel_settingsviewmodel",
-      "target": "settings_settingsviewmodel_settingsviewmodel_setshaketoreportenabled",
-      "confidence_score": 1.0
+      "target": "settings_settingsviewmodel_settingsviewmodel_setshaketoreportenabled"
     },
     {
       "relation": "method",
@@ -9139,9 +9212,9 @@
       "source_location": "L20",
       "weight": 1.0,
       "context": "field",
+      "confidence_score": 1.0,
       "source": "settings_settingsviewmodel_settingsviewmodel",
-      "target": "stateflow",
-      "confidence_score": 1.0
+      "target": "stateflow"
     },
     {
       "relation": "inherits",
@@ -9292,9 +9365,9 @@
       "source_location": "L38",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "settings_settingsviewmodel_settingsviewmodel_setshaketoreportenabled",
-      "target": "app_src_main_java_com_app_wardove_ui_settings_settingsviewmodel_kt_boolean",
-      "confidence_score": 1.0
+      "target": "app_src_main_java_com_app_wardove_ui_settings_settingsviewmodel_kt_boolean"
     },
     {
       "relation": "references",
@@ -9346,9 +9419,9 @@
       "source_location": "L16",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "util_customtabs_opencustomtab",
-      "target": "context",
-      "confidence_score": 1.0
+      "target": "context"
     },
     {
       "relation": "references",
@@ -9371,79 +9444,6 @@
       "confidence_score": 1.0,
       "source": "widget_statswidget_statswidgetcontent",
       "target": "context"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/util/ShakeDetector.kt",
-      "source_location": "L15",
-      "weight": 1.0,
-      "source": "util_shakedetector",
-      "target": "util_shakedetector_shakedetector",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/util/ShakeDetector.kt",
-      "source_location": "L15",
-      "weight": 1.0,
-      "source": "util_shakedetector_shakedetector",
-      "target": "sensoreventlistener",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/util/ShakeDetector.kt",
-      "source_location": "L46",
-      "weight": 1.0,
-      "source": "util_shakedetector_shakedetector",
-      "target": "util_shakedetector_shakedetector_onaccuracychanged",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/util/ShakeDetector.kt",
-      "source_location": "L24",
-      "weight": 1.0,
-      "source": "util_shakedetector_shakedetector",
-      "target": "util_shakedetector_shakedetector_onsensorchanged",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/util/ShakeDetector.kt",
-      "source_location": "L24",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "util_shakedetector_shakedetector_onsensorchanged",
-      "target": "sensorevent",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/util/ShakeDetector.kt",
-      "source_location": "L46",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "util_shakedetector_shakedetector_onaccuracychanged",
-      "target": "app_src_main_java_com_app_wardove_util_shakedetector_kt_int",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/util/ShakeDetector.kt",
-      "source_location": "L46",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "util_shakedetector_shakedetector_onaccuracychanged",
-      "target": "app_src_main_java_com_app_wardove_util_shakedetector_kt_sensor",
-      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -19972,5 +19972,5 @@
       "source_file": "CLAUDE.md"
     }
   ],
-  "built_at_commit": "9315303c38afd475af81b44d37f7c87eac624231"
+  "built_at_commit": "a75487e4080ddadea30103c92591acaa5112384c"
 }
