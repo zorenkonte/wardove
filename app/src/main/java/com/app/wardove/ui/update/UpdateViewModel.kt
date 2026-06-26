@@ -107,13 +107,6 @@ class UpdateViewModel @Inject constructor(
         pollJob?.cancel()
         _installState.value = InstallState.Idle
     }
-
-    fun openFeedback() {
-        val intent = Intent(Intent.ACTION_VIEW, "https://github.com/zorenkonte/wardove/issues".toUri()).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK
-        }
-        context.startActivity(intent)
-    }
 }
 
 /**

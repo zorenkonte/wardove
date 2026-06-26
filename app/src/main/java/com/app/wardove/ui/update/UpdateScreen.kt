@@ -20,7 +20,6 @@ import com.composables.icons.lucide.CircleCheck
 import com.composables.icons.lucide.Download
 import com.composables.icons.lucide.ExternalLink
 import com.composables.icons.lucide.Lucide
-import com.composables.icons.lucide.MessageSquare
 import com.composables.icons.lucide.RefreshCw
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -156,12 +155,6 @@ fun UpdateScreen(
                             )
                             Spacer(Modifier.height(12.dp))
                         }
-                    }
-
-                    // Feedback
-                    item {
-                        FeedbackCard(onFeedback = viewModel::openFeedback)
-                        Spacer(Modifier.height(20.dp))
                     }
 
                     // Release history
@@ -355,49 +348,6 @@ private fun LatestReleaseCard(
                     }
                 }
             }
-        }
-    }
-}
-
-@Composable
-private fun FeedbackCard(onFeedback: () -> Unit) {
-    Card(
-        modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant),
-        shape = RoundedCornerShape(12.dp)
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .clickable(onClick = onFeedback)
-                .padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(12.dp)
-        ) {
-            Icon(
-                Lucide.MessageSquare,
-                contentDescription = null,
-                tint = MaterialTheme.colorScheme.primary
-            )
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    stringResource(R.string.update_feedback_label),
-                    fontSize = 15.sp,
-                    fontWeight = FontWeight.Medium,
-                    color = MaterialTheme.colorScheme.onSurface
-                )
-                Text(
-                    stringResource(R.string.update_feedback_subtitle),
-                    fontSize = 12.sp,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-            Icon(
-                Lucide.ExternalLink,
-                contentDescription = null,
-                tint = MaterialTheme.colorScheme.onSurfaceVariant,
-                modifier = Modifier.size(18.dp)
-            )
         }
     }
 }
