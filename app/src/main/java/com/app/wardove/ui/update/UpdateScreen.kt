@@ -39,6 +39,8 @@ import androidx.compose.material3.TopAppBarDefaults
 import android.app.Activity
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -297,30 +299,37 @@ private fun LatestReleaseCard(
                         }
                     }
                     is InstallState.Downloading -> {
-                        val downloadLabel = if (apkSize > 0L) {
-                            val downloaded = formatBytes((installState.progress * apkSize).toLong())
-                            val total = formatBytes(apkSize)
+                        val fraction = installState.fraction
+                        val downloadLabel = if (installState.totalBytes > 0L) {
                             stringResource(
                                 R.string.update_downloading_progress,
-                                downloaded,
-                                total,
-                                (installState.progress * 100).toInt()
+                                formatBytes(installState.downloadedBytes),
+                                formatBytes(installState.totalBytes),
+                                formatSpeed(installState.bytesPerSec),
+                                (fraction * 100).toInt()
                             )
                         } else {
                             stringResource(
                                 R.string.update_downloading_percent,
-                                (installState.progress * 100).toInt()
+                                (fraction * 100).toInt()
                             )
                         }
+                        // Ease the bar between the 250ms polls so it fills
+                        // smoothly instead of stepping.
+                        val animatedProgress by animateFloatAsState(
+                            targetValue = fraction,
+                            animationSpec = tween(durationMillis = 300),
+                            label = "downloadProgress"
+                        )
                         Column {
                             Text(
                                 downloadLabel,
                                 fontSize = 13.sp,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
-                            Spacer(Modifier.height(4.dp))
+                            Spacer(Modifier.height(8.dp))
                             LinearProgressIndicator(
-                                progress = { installState.progress },
+                                progress = { animatedProgress },
                                 modifier = Modifier.fillMaxWidth()
                             )
                         }
@@ -391,6 +400,9 @@ private fun formatBytes(bytes: Long): String {
     val mb = bytes / (1024.0 * 1024.0)
     return if (mb >= 1.0) "%.1f MB".format(mb) else "%d KB".format(bytes / 1024)
 }
+
+private fun formatSpeed(bytesPerSec: Long): String =
+    if (bytesPerSec <= 0L) "—" else "${formatBytes(bytesPerSec)}/s"
 
 private fun formatDate(iso: String): String = try {
     val instant = Instant.parse(iso)

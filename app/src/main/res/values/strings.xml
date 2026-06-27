@@ -283,8 +283,8 @@
     <string name="update_release_history">Release History</string>
     <string name="update_feedback_label">Send Feedback</string>
     <string name="update_feedback_subtitle">Report bugs or request features on GitHub</string>
-    <!-- %1$s = downloaded, %2$s = total, %3$d = percent -->
-    <string name="update_downloading_progress">Downloading… %1$s / %2$s (%3$d%%)</string>
+    <!-- %1$s = downloaded, %2$s = total, %3$s = speed, %4$d = percent -->
+    <string name="update_downloading_progress">Downloading… %1$s / %2$s · %3$s (%4$d%%)</string>
     <!-- %d = percent (when total size is unknown) -->
     <string name="update_downloading_percent">Downloading… %d%%</string>
 
