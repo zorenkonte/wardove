@@ -269,7 +269,7 @@
     <string name="about_licenses_subtitle">Libraries used in this app</string>
 
     <!-- ── Update screen ── -->
-    <string name="update_title">Updates &amp; Feedback</string>
+    <string name="update_title">Updates</string>
     <string name="update_action_refresh">Refresh</string>
     <string name="update_installed_version">Installed version</string>
     <string name="update_available">Update available</string>

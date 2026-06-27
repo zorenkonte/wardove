@@ -33,6 +33,7 @@ import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
@@ -66,6 +67,7 @@ fun UpdateScreen(
 ) {
     val releasesState by viewModel.releasesState.collectAsState()
     val installState by viewModel.installState.collectAsState()
+    val isRefreshing by viewModel.isRefreshing.collectAsState()
 
     val installLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.StartActivityForResult()
@@ -96,10 +98,15 @@ fun UpdateScreen(
             )
         }
     ) { padding ->
+        PullToRefreshBox(
+            isRefreshing = isRefreshing,
+            onRefresh = viewModel::refresh,
+            modifier = Modifier.fillMaxSize().padding(padding)
+        ) {
         when (val state = releasesState) {
             ReleasesState.Loading -> {
                 Box(
-                    modifier = Modifier.fillMaxSize().padding(padding),
+                    modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
                 ) {
                     CircularProgressIndicator()
@@ -108,7 +115,7 @@ fun UpdateScreen(
 
             is ReleasesState.Error -> {
                 Box(
-                    modifier = Modifier.fillMaxSize().padding(padding),
+                    modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center
                 ) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -132,7 +139,7 @@ fun UpdateScreen(
                 val history = releases.filter { it != latest }
 
                 LazyColumn(
-                    modifier = Modifier.fillMaxSize().padding(padding),
+                    modifier = Modifier.fillMaxSize(),
                     contentPadding = androidx.compose.foundation.layout.PaddingValues(bottom = 24.dp)
                 ) {
                     // Current version
@@ -181,6 +188,7 @@ fun UpdateScreen(
                     }
                 }
             }
+        }
         }
     }
 }
