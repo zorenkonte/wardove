@@ -5,7 +5,8 @@ data class AppSettings(
     val dynamicColor: Boolean = false,
     val laundryThreshold: Int = DEFAULT_LAUNDRY_THRESHOLD,
     val updateNotificationsEnabled: Boolean = true,
-    val shakeToReportEnabled: Boolean = false
+    val shakeToReportEnabled: Boolean = false,
+    val wardrobeViewMode: WardrobeViewMode = WardrobeViewMode.CARD
 ) {
     companion object {
         const val DEFAULT_LAUNDRY_THRESHOLD = 3

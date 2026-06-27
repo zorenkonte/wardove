@@ -25,6 +25,7 @@ class SettingsRepository @Inject constructor(
         val LAST_NOTIFIED_UPDATE_TAG = stringPreferencesKey("last_notified_update_tag")
         val UPDATE_NOTIFICATIONS = booleanPreferencesKey("update_notifications")
         val SHAKE_TO_REPORT = booleanPreferencesKey("shake_to_report")
+        val WARDROBE_VIEW_MODE = stringPreferencesKey("wardrobe_view_mode")
     }
 
     val settings: Flow<AppSettings> = dataStore.data
@@ -40,7 +41,10 @@ class SettingsRepository @Inject constructor(
                 laundryThreshold = prefs[Keys.LAUNDRY_THRESHOLD]
                     ?: AppSettings.DEFAULT_LAUNDRY_THRESHOLD,
                 updateNotificationsEnabled = prefs[Keys.UPDATE_NOTIFICATIONS] ?: true,
-                shakeToReportEnabled = prefs[Keys.SHAKE_TO_REPORT] ?: false
+                shakeToReportEnabled = prefs[Keys.SHAKE_TO_REPORT] ?: false,
+                wardrobeViewMode = prefs[Keys.WARDROBE_VIEW_MODE]
+                    ?.let { runCatching { WardrobeViewMode.valueOf(it) }.getOrNull() }
+                    ?: WardrobeViewMode.CARD
             )
         }
 
@@ -66,6 +70,10 @@ class SettingsRepository @Inject constructor(
 
     suspend fun setShakeToReportEnabled(enabled: Boolean) {
         dataStore.edit { it[Keys.SHAKE_TO_REPORT] = enabled }
+    }
+
+    suspend fun setWardrobeViewMode(mode: WardrobeViewMode) {
+        dataStore.edit { it[Keys.WARDROBE_VIEW_MODE] = mode.name }
     }
 
     val lastNotifiedUpdateTag: Flow<String?> = dataStore.data

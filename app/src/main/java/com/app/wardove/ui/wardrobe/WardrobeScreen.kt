@@ -12,14 +12,17 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import com.app.wardove.ui.components.LargeTitleHeader
 import com.composables.icons.lucide.ArrowUpDown
+import com.composables.icons.lucide.LayoutGrid
 import com.composables.icons.lucide.Lucide
 import com.composables.icons.lucide.Plus
 import com.composables.icons.lucide.Search
@@ -59,6 +62,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.annotation.StringRes
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -70,6 +74,7 @@ import com.app.wardove.ui.components.ClothingImage
 import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.data.local.entity.ClothingStatus
+import com.app.wardove.data.settings.WardrobeViewMode
 import com.app.wardove.ui.theme.StatusClean
 import com.app.wardove.ui.theme.StatusLaundry
 import com.app.wardove.ui.theme.StatusWorn
@@ -92,8 +97,10 @@ fun WardrobeScreen(
     val selectedFilter by viewModel.filter.collectAsState()
     val searchQuery by viewModel.searchQuery.collectAsState()
     val selectedSort by viewModel.sort.collectAsState()
+    val viewMode by viewModel.viewMode.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
     var showSortSheet by remember { mutableStateOf(false) }
+    var showViewSheet by remember { mutableStateOf(false) }
 
     LaunchedEffect(snackbarMessage) {
         if (!snackbarMessage.isNullOrBlank()) {
@@ -126,6 +133,13 @@ fun WardrobeScreen(
                 onOpenDrawer = onOpenDrawer,
                 subtitle = pluralStringResource(R.plurals.wardrobe_item_count, items.size, items.size),
                 actions = {
+                    IconButton(onClick = { showViewSheet = true }) {
+                        Icon(
+                            Lucide.LayoutGrid,
+                            contentDescription = stringResource(R.string.action_view_mode),
+                            tint = MaterialTheme.colorScheme.onBackground
+                        )
+                    }
                     IconButton(onClick = { showSortSheet = true }) {
                         Icon(
                             Lucide.ArrowUpDown,
@@ -158,23 +172,52 @@ fun WardrobeScreen(
                     modifier = Modifier.fillMaxSize()
                 )
             } else {
-                LazyVerticalGrid(
-                    columns = GridCells.Fixed(2),
-                    contentPadding = PaddingValues(
-                        start = 20.dp,
-                        end = 20.dp,
-                        top = 4.dp,
-                        bottom = 24.dp
-                    ),
-                    horizontalArrangement = Arrangement.spacedBy(10.dp),
-                    verticalArrangement = Arrangement.spacedBy(10.dp),
-                    modifier = Modifier.fillMaxSize()
-                ) {
-                    items(items, key = { it.id }) { item ->
-                        ClothingCard(
-                            item = item,
-                            onClick = { onOpenItem(item.id) }
-                        )
+                when (viewMode) {
+                    WardrobeViewMode.CARD -> LazyVerticalGrid(
+                        columns = GridCells.Fixed(2),
+                        contentPadding = PaddingValues(
+                            start = 20.dp,
+                            end = 20.dp,
+                            top = 4.dp,
+                            bottom = 24.dp
+                        ),
+                        horizontalArrangement = Arrangement.spacedBy(10.dp),
+                        verticalArrangement = Arrangement.spacedBy(10.dp),
+                        modifier = Modifier.fillMaxSize()
+                    ) {
+                        items(items, key = { it.id }) { item ->
+                            ClothingCard(item = item, onClick = { onOpenItem(item.id) })
+                        }
+                    }
+                    WardrobeViewMode.LIST -> LazyColumn(
+                        contentPadding = PaddingValues(
+                            start = 20.dp,
+                            end = 20.dp,
+                            top = 4.dp,
+                            bottom = 24.dp
+                        ),
+                        verticalArrangement = Arrangement.spacedBy(8.dp),
+                        modifier = Modifier.fillMaxSize()
+                    ) {
+                        items(items, key = { it.id }) { item ->
+                            ClothingListRow(item = item, onClick = { onOpenItem(item.id) })
+                        }
+                    }
+                    WardrobeViewMode.COMPACT -> LazyVerticalGrid(
+                        columns = GridCells.Fixed(3),
+                        contentPadding = PaddingValues(
+                            start = 20.dp,
+                            end = 20.dp,
+                            top = 4.dp,
+                            bottom = 24.dp
+                        ),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp),
+                        modifier = Modifier.fillMaxSize()
+                    ) {
+                        items(items, key = { it.id }) { item ->
+                            CompactCard(item = item, onClick = { onOpenItem(item.id) })
+                        }
                     }
                 }
             }
@@ -189,6 +232,17 @@ fun WardrobeScreen(
                 showSortSheet = false
             },
             onDismiss = { showSortSheet = false }
+        )
+    }
+
+    if (showViewSheet) {
+        ViewModeSheet(
+            selected = viewMode,
+            onSelect = { mode ->
+                viewModel.setViewMode(mode)
+                showViewSheet = false
+            },
+            onDismiss = { showViewSheet = false }
         )
     }
 }
@@ -403,6 +457,190 @@ private fun ClothingCard(
                             )
                     )
                 }
+            }
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun ViewModeSheet(
+    selected: WardrobeViewMode,
+    onSelect: (WardrobeViewMode) -> Unit,
+    onDismiss: () -> Unit
+) {
+    val sheetState = rememberModalBottomSheetState()
+    val scope = rememberCoroutineScope()
+
+    @StringRes
+    fun WardrobeViewMode.labelResId(): Int = when (this) {
+        WardrobeViewMode.CARD -> R.string.wardrobe_view_card
+        WardrobeViewMode.LIST -> R.string.wardrobe_view_list
+        WardrobeViewMode.COMPACT -> R.string.wardrobe_view_compact
+    }
+
+    ModalBottomSheet(
+        onDismissRequest = onDismiss,
+        sheetState = sheetState,
+        containerColor = MaterialTheme.colorScheme.surface,
+        shape = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp)
+    ) {
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 20.dp, vertical = 8.dp)
+        ) {
+            Text(
+                stringResource(R.string.wardrobe_view_title),
+                style = MaterialTheme.typography.headlineMedium,
+                color = MaterialTheme.colorScheme.onBackground,
+                modifier = Modifier.padding(bottom = 12.dp)
+            )
+            WardrobeViewMode.entries.forEach { mode ->
+                val isSelected = mode == selected
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .selectable(
+                            selected = isSelected,
+                            onClick = {
+                                scope.launch { sheetState.hide() }
+                                    .invokeOnCompletion { onSelect(mode) }
+                            }
+                        )
+                        .padding(vertical = 12.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    RadioButton(
+                        selected = isSelected,
+                        onClick = {
+                            scope.launch { sheetState.hide() }
+                                .invokeOnCompletion { onSelect(mode) }
+                        },
+                        colors = RadioButtonDefaults.colors(
+                            selectedColor = MaterialTheme.colorScheme.primary,
+                            unselectedColor = MaterialTheme.colorScheme.onSurfaceVariant
+                        )
+                    )
+                    Text(
+                        stringResource(mode.labelResId()),
+                        fontSize = 15.sp,
+                        fontWeight = if (isSelected) FontWeight.Medium else FontWeight.Normal,
+                        color = if (isSelected) MaterialTheme.colorScheme.onBackground else MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(start = 8.dp)
+                    )
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun ClothingListRow(
+    item: ClothingItem,
+    onClick: () -> Unit
+) {
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick),
+        shape = RoundedCornerShape(14.dp),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(10.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            ClothingImage(
+                imagePath = item.imagePath,
+                contentDescription = item.name,
+                modifier = Modifier
+                    .size(64.dp)
+            )
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    item.name,
+                    style = MaterialTheme.typography.titleMedium,
+                    maxLines = 1
+                )
+                Text(
+                    ClothingOptions.categoryResId(item.category)
+                        ?.let { stringResource(it) }
+                        ?: item.category,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1
+                )
+            }
+            Box(
+                modifier = Modifier
+                    .size(8.dp)
+                    .background(
+                        color = when (item.status) {
+                            ClothingStatus.CLEAN -> StatusClean
+                            ClothingStatus.WORN -> StatusWorn
+                            ClothingStatus.IN_LAUNDRY -> StatusLaundry
+                            else -> MaterialTheme.colorScheme.textHint
+                        },
+                        shape = CircleShape
+                    )
+            )
+        }
+    }
+}
+
+@Composable
+private fun CompactCard(
+    item: ClothingItem,
+    onClick: () -> Unit
+) {
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable(onClick = onClick),
+        shape = RoundedCornerShape(12.dp),
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
+        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
+    ) {
+        Column {
+            ClothingImage(
+                imagePath = item.imagePath,
+                contentDescription = item.name,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(100.dp)
+            )
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 6.dp, vertical = 5.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Text(
+                    item.name,
+                    style = MaterialTheme.typography.labelMedium,
+                    maxLines = 1,
+                    modifier = Modifier.weight(1f)
+                )
+                Box(
+                    modifier = Modifier
+                        .padding(start = 4.dp)
+                        .size(6.dp)
+                        .background(
+                            color = when (item.status) {
+                                ClothingStatus.CLEAN -> StatusClean
+                                ClothingStatus.WORN -> StatusWorn
+                                ClothingStatus.IN_LAUNDRY -> StatusLaundry
+                                else -> MaterialTheme.colorScheme.textHint
+                            },
+                            shape = CircleShape
+                        )
+                )
             }
         }
     }

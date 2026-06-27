@@ -7,13 +7,17 @@ import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.data.local.entity.ClothingStatus
 import com.app.wardove.data.repository.ClothingRepository
+import com.app.wardove.data.settings.SettingsRepository
+import com.app.wardove.data.settings.WardrobeViewMode
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 enum class WardrobeFilter(@StringRes val labelResId: Int, val status: String?) {
@@ -32,7 +36,8 @@ enum class WardrobeSort(@StringRes val labelResId: Int) {
 
 @HiltViewModel
 class WardrobeViewModel @Inject constructor(
-    repository: ClothingRepository
+    repository: ClothingRepository,
+    private val settingsRepository: SettingsRepository
 ) : ViewModel() {
 
     private val _filter = MutableStateFlow(WardrobeFilter.ALL)
@@ -81,5 +86,13 @@ class WardrobeViewModel @Inject constructor(
 
     fun setSort(sort: WardrobeSort) {
         _sort.value = sort
+    }
+
+    val viewMode: StateFlow<WardrobeViewMode> = settingsRepository.settings
+        .map { it.wardrobeViewMode }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), WardrobeViewMode.CARD)
+
+    fun setViewMode(mode: WardrobeViewMode) {
+        viewModelScope.launch { settingsRepository.setWardrobeViewMode(mode) }
     }
 }

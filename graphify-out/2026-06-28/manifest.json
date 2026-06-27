@@ -150,19 +150,19 @@
     "semantic_hash": "9e150294a750a87a1bf9cb2793482989"
   },
   "app/src/main/java/com/app/wardove/ui/additem/AddItemScreen.kt": {
-    "mtime": 1782573239.5479884,
-    "ast_hash": "85e66255d8f26c61e8bb135cd7ac19d6",
+    "mtime": 1782576200.6932807,
+    "ast_hash": "943c700a61b2058c992767a557d68246",
     "semantic_hash": ""
   },
   "app/src/main/java/com/app/wardove/ui/additem/AddItemViewModel.kt": {
-    "mtime": 1781430005.8624787,
-    "ast_hash": "526e4f30612598d9c048440a3c07f048",
-    "semantic_hash": "526e4f30612598d9c048440a3c07f048"
+    "mtime": 1782576172.3752034,
+    "ast_hash": "453c41cecbedacc0ff4ff4b5cafc5de0",
+    "semantic_hash": ""
   },
   "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt": {
-    "mtime": 1781976508.9702256,
-    "ast_hash": "815eaf7f642f2e914e629652413b9907",
-    "semantic_hash": "815eaf7f642f2e914e629652413b9907"
+    "mtime": 1782576277.316141,
+    "ast_hash": "db02d48f2cc66c67df72af1b30b68588",
+    "semantic_hash": ""
   },
   "app/src/main/java/com/app/wardove/ui/calendar/CalendarViewModel.kt": {
     "mtime": 1781430005.862847,
@@ -175,9 +175,9 @@
     "semantic_hash": "f78bfe2ce89fbbcdca0ffb62f7c455de"
   },
   "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt": {
-    "mtime": 1781976474.2431316,
-    "ast_hash": "8249f92ca4dbdc5964bbd1fb9a752f10",
-    "semantic_hash": "8249f92ca4dbdc5964bbd1fb9a752f10"
+    "mtime": 1782576278.0515714,
+    "ast_hash": "46c9b917bfb1fdca7a3db04bf1bc36e9",
+    "semantic_hash": ""
   },
   "app/src/main/java/com/app/wardove/ui/history/HistoryViewModel.kt": {
     "mtime": 1781430005.8631656,
@@ -185,9 +185,9 @@
     "semantic_hash": "78b5b1237743efd42a15f0800047c6aa"
   },
   "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt": {
-    "mtime": 1781976451.7163339,
-    "ast_hash": "14f30ec4e216a5ec44f5b14039f980d3",
-    "semantic_hash": "14f30ec4e216a5ec44f5b14039f980d3"
+    "mtime": 1782576275.3870192,
+    "ast_hash": "4f016ce2c9288bc67d65cb28082459f1",
+    "semantic_hash": ""
   },
   "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailViewModel.kt": {
     "mtime": 1781430005.8635182,
@@ -195,9 +195,9 @@
     "semantic_hash": "736eafb2fc31d7ac550330658caf1d05"
   },
   "app/src/main/java/com/app/wardove/ui/laundry/LaundryScreen.kt": {
-    "mtime": 1781976343.899121,
-    "ast_hash": "cb907134522d79e40ba07a813a046a7c",
-    "semantic_hash": "cb907134522d79e40ba07a813a046a7c"
+    "mtime": 1782576276.1367574,
+    "ast_hash": "94ecdc7f61dbb896fe25fc8e8ebd32f8",
+    "semantic_hash": ""
   },
   "app/src/main/java/com/app/wardove/ui/laundry/LaundryViewModel.kt": {
     "mtime": 1781976214.2348516,
@@ -290,9 +290,9 @@
     "semantic_hash": ""
   },
   "app/src/main/java/com/app/wardove/ui/stats/StatsScreen.kt": {
-    "mtime": 1781976383.2503974,
-    "ast_hash": "73c5a46e74984ccdd31f79febd9aecf2",
-    "semantic_hash": "73c5a46e74984ccdd31f79febd9aecf2"
+    "mtime": 1782576279.02651,
+    "ast_hash": "62a8d934f4fd93d315dac35e1b2f80ac",
+    "semantic_hash": ""
   },
   "app/src/main/java/com/app/wardove/ui/stats/StatsViewModel.kt": {
     "mtime": 1781430005.8648853,
@@ -340,9 +340,9 @@
     "semantic_hash": "a99e27560de4cee210a72a37bb1065f1"
   },
   "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt": {
-    "mtime": 1781976298.4226003,
-    "ast_hash": "3d5ef8f92b7913d7022b898e32712414",
-    "semantic_hash": "3d5ef8f92b7913d7022b898e32712414"
+    "mtime": 1782576274.2622466,
+    "ast_hash": "5e328a9f08331914c29d035880e155d1",
+    "semantic_hash": ""
   },
   "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt": {
     "mtime": 1781976188.536253,
@@ -595,13 +595,18 @@
     "semantic_hash": ""
   },
   "app/src/main/java/com/app/wardove/ui/additem/ShareItemSheet.kt": {
-    "mtime": 1782573223.1521294,
-    "ast_hash": "8cf84bbf90c89dd225e505b2eb9f2fe4",
+    "mtime": 1782576222.8450806,
+    "ast_hash": "a1a7602f62063b45634cc4fe64f31e48",
     "semantic_hash": ""
   },
   "app/src/main/java/com/app/wardove/ui/additem/ShareItemViewModel.kt": {
-    "mtime": 1782573207.883493,
-    "ast_hash": "186ccd72544d6b32d725b53feffe839c",
+    "mtime": 1782576182.346969,
+    "ast_hash": "46516752a3a302047a49e127ab2d582a",
+    "semantic_hash": ""
+  },
+  "app/src/main/java/com/app/wardove/ui/components/ClothingImage.kt": {
+    "mtime": 1782576575.1560025,
+    "ast_hash": "8c0a849f8dd9f81656c1031e84cf0b4e",
     "semantic_hash": ""
   }
 }
