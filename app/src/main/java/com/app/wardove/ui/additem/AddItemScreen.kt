@@ -271,7 +271,7 @@ private fun ImagePicker(
 }
 
 @Composable
-private fun CategoryDropdown(
+internal fun CategoryDropdown(
     selected: String,
     onSelect: (String) -> Unit
 ) {
@@ -329,7 +329,7 @@ private fun CategoryDropdown(
 }
 
 @Composable
-private fun ColorGrid(
+internal fun ColorGrid(
     selected: String,
     onSelect: (String) -> Unit
 ) {

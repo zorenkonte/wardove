@@ -3,6 +3,11 @@
 
     <style name="Theme.Wardove" parent="android:Theme.Material.Light.NoActionBar" />
 
+    <style name="Theme.Wardove.Transparent" parent="Theme.Wardove">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
     <style name="Theme.Wardove.Splash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">#4B9EF8</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>

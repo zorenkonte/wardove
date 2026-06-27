@@ -308,6 +308,10 @@
     <!-- ── Home-screen widget ── -->
     <string name="widget_stats_description">Wardove wardrobe stats</string>
 
+    <!-- ── Share-to-app ── -->
+    <string name="share_item_title">Add to wardrobe</string>
+    <string name="share_item_saved">Item added to wardrobe</string>
+
     <!-- ── Quick Settings tiles ── -->
     <string name="tile_laundry_label">Laundry</string>
     <string name="tile_add_label">Add item</string>
