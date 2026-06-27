@@ -46,6 +46,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
+import com.app.wardove.ui.components.ClothingImage
 import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.data.local.entity.LaundryCycle
@@ -190,19 +191,12 @@ private fun CycleRow(
                     } else {
                         items.forEach { item ->
                             Row(verticalAlignment = Alignment.CenterVertically) {
-                                Box(
-                                    modifier = Modifier
-                                        .size(48.dp)
-                                        .clip(RoundedCornerShape(8.dp))
-                                        .background(MaterialTheme.colorScheme.surfaceVariant)
-                                ) {
-                                    AsyncImage(
-                                        model = File(item.imagePath),
-                                        contentDescription = item.name,
-                                        contentScale = ContentScale.Crop,
-                                        modifier = Modifier.fillMaxSize()
-                                    )
-                                }
+                                ClothingImage(
+                                    imagePath = item.imagePath,
+                                    contentDescription = item.name,
+                                    modifier = Modifier.size(48.dp),
+                                    shape = RoundedCornerShape(8.dp)
+                                )
                                 Spacer(Modifier.size(12.dp))
                                 Column(modifier = Modifier.weight(1f)) {
                                     Text(

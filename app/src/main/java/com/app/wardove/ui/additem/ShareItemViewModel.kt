@@ -29,10 +29,17 @@ class ShareItemViewModel @Inject constructor(
     fun loadSharedImage(uri: Uri) {
         if (imageLoaded) return
         imageLoaded = true
+        _state.update { it.copy(isImageLoading = true) }
         viewModelScope.launch {
             val path = imageStorage.saveImageFromUri(uri)
-            _state.update { it.copy(imagePath = path) }
+            _state.update { it.copy(imagePath = path, isImageLoading = false) }
         }
+    }
+
+    fun clearImage() {
+        imageStorage.delete(_state.value.imagePath)
+        _state.update { it.copy(imagePath = null) }
+        // imageLoaded stays true — cleared intentionally, do not reload
     }
 
     fun setName(v: String) = _state.update { it.copy(name = v) }

@@ -38,6 +38,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
+import com.app.wardove.ui.components.ClothingImage
 import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.ui.theme.textHint
@@ -235,19 +236,12 @@ private fun HighlightCard(
             verticalAlignment = Alignment.CenterVertically
         ) {
             if (item != null) {
-                Box(
-                    modifier = Modifier
-                        .size(40.dp)
-                        .clip(RoundedCornerShape(10.dp))
-                        .background(MaterialTheme.colorScheme.surfaceVariant)
-                ) {
-                    AsyncImage(
-                        model = File(item.imagePath),
-                        contentDescription = item.name,
-                        contentScale = ContentScale.Crop,
-                        modifier = Modifier.fillMaxSize()
-                    )
-                }
+                ClothingImage(
+                    imagePath = item.imagePath,
+                    contentDescription = item.name,
+                    modifier = Modifier.size(40.dp),
+                    shape = RoundedCornerShape(10.dp)
+                )
                 Spacer(Modifier.width(12.dp))
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
@@ -359,19 +353,12 @@ private fun CostPerWearRow(entry: CostPerWearItem) {
             .padding(horizontal = 20.dp, vertical = 10.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Box(
-            modifier = Modifier
-                .size(40.dp)
-                .clip(RoundedCornerShape(10.dp))
-                .background(MaterialTheme.colorScheme.surfaceVariant)
-        ) {
-            AsyncImage(
-                model = File(entry.item.imagePath),
-                contentDescription = entry.item.name,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxSize()
-            )
-        }
+        ClothingImage(
+            imagePath = entry.item.imagePath,
+            contentDescription = entry.item.name,
+            modifier = Modifier.size(40.dp),
+            shape = RoundedCornerShape(10.dp)
+        )
         Spacer(Modifier.width(12.dp))
         Column(modifier = Modifier.weight(1f)) {
             Text(

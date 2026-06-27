@@ -31,6 +31,7 @@ import com.composables.icons.lucide.Check
 import com.composables.icons.lucide.ChevronDown
 import com.composables.icons.lucide.Images
 import com.composables.icons.lucide.Lucide
+import com.composables.icons.lucide.X
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DropdownMenu
@@ -133,7 +134,8 @@ fun AddItemScreen(
                     galleryLauncher.launch(
                         PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)
                     )
-                }
+                },
+                onRemove = viewModel::clearImage
             )
 
             OutlinedTextField(
@@ -221,7 +223,8 @@ fun AddItemScreen(
 private fun ImagePicker(
     imagePath: String?,
     onCamera: () -> Unit,
-    onGallery: () -> Unit
+    onGallery: () -> Unit,
+    onRemove: () -> Unit
 ) {
     Box(
         modifier = Modifier
@@ -238,6 +241,27 @@ private fun ImagePicker(
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize()
             )
+            IconButton(
+                onClick = onRemove,
+                modifier = Modifier.align(Alignment.TopEnd)
+            ) {
+                Box(
+                    modifier = Modifier
+                        .size(28.dp)
+                        .background(
+                            color = Color.Black.copy(alpha = 0.5f),
+                            shape = CircleShape
+                        ),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Icon(
+                        imageVector = Lucide.X,
+                        contentDescription = stringResource(R.string.action_delete),
+                        tint = Color.White,
+                        modifier = Modifier.size(16.dp)
+                    )
+                }
+            }
         } else {
             Text(
                 stringResource(R.string.add_item_no_photo),

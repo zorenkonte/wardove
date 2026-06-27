@@ -47,6 +47,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
+import com.app.wardove.ui.components.ClothingImage
 import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.ui.theme.StatusClean
@@ -301,14 +302,13 @@ private fun WornItemCard(item: ClothingItem) {
         elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
     ) {
         Column(modifier = Modifier.padding(8.dp)) {
-            AsyncImage(
-                model = File(item.imagePath),
+            ClothingImage(
+                imagePath = item.imagePath,
                 contentDescription = item.name,
-                contentScale = ContentScale.Crop,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(90.dp)
-                    .clip(RoundedCornerShape(8.dp))
+                    .height(90.dp),
+                shape = RoundedCornerShape(8.dp)
             )
             Spacer(Modifier.height(6.dp))
             Text(

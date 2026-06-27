@@ -57,6 +57,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
+import com.app.wardove.ui.components.ClothingImage
 import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.ui.theme.LaundryPurple
@@ -331,13 +332,11 @@ private fun LaundryItemRow(
             modifier = Modifier.padding(12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            AsyncImage(
-                model = File(item.imagePath),
+            ClothingImage(
+                imagePath = item.imagePath,
                 contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .size(44.dp)
-                    .clip(RoundedCornerShape(10.dp))
+                modifier = Modifier.size(44.dp),
+                shape = RoundedCornerShape(10.dp)
             )
             Spacer(Modifier.width(12.dp))
             Column(modifier = Modifier.weight(1f)) {
@@ -445,13 +444,11 @@ private fun CycleCard(
             }
             cwi.items.forEach { item ->
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    AsyncImage(
-                        model = File(item.imagePath),
+                    ClothingImage(
+                        imagePath = item.imagePath,
                         contentDescription = null,
-                        contentScale = ContentScale.Crop,
-                        modifier = Modifier
-                            .size(44.dp)
-                            .clip(RoundedCornerShape(10.dp))
+                        modifier = Modifier.size(44.dp),
+                        shape = RoundedCornerShape(10.dp)
                     )
                     Spacer(Modifier.width(12.dp))
                     Text(

@@ -26,6 +26,7 @@ data class AddItemUiState(
     val pendingCameraPath: String? = null,
     val isEditing: Boolean = false,
     val isSaving: Boolean = false,
+    val isImageLoading: Boolean = false,
     val loaded: Boolean = false
 ) {
     val canSave: Boolean
@@ -90,6 +91,13 @@ class AddItemViewModel @Inject constructor(
             imageStorage.delete(pending)
             _state.update { it.copy(pendingCameraPath = null) }
         }
+    }
+
+    fun clearImage() {
+        val current = _state.value.imagePath ?: return
+        if (isEditing && editingOriginalImagePath == null) editingOriginalImagePath = current
+        if (current != editingOriginalImagePath) imageStorage.delete(current)
+        _state.update { it.copy(imagePath = null) }
     }
 
     fun onGalleryUri(uri: Uri) {
