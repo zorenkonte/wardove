@@ -196,12 +196,10 @@ fun AddItemScreen(
                 }
             }
 
-            val photoLabel    = stringResource(R.string.add_item_required_photo)
             val nameLabel     = stringResource(R.string.add_item_required_name)
             val categoryLabel = stringResource(R.string.add_item_required_category)
             val colorLabel    = stringResource(R.string.add_item_required_color)
             val missing = buildList {
-                if (state.imagePath.isNullOrBlank()) add(photoLabel)
                 if (state.name.isBlank()) add(nameLabel)
                 if (state.category.isBlank()) add(categoryLabel)
                 if (state.color.isBlank()) add(colorLabel)

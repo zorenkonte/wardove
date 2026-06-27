@@ -32,8 +32,7 @@ data class AddItemUiState(
         get() = !isSaving &&
             name.isNotBlank() &&
             category.isNotBlank() &&
-            color.isNotBlank() &&
-            !imagePath.isNullOrBlank()
+            color.isNotBlank()
 }
 
 @HiltViewModel
@@ -161,7 +160,7 @@ class AddItemViewModel @Inject constructor(
                             name = s.name.trim(),
                             category = s.category,
                             color = s.color,
-                            imagePath = s.imagePath!!,
+                            imagePath = s.imagePath.orEmpty(),
                             notes = s.notes.ifBlank { null },
                             price = parsePrice(s.price)
                         )
