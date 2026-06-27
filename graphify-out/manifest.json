@@ -80,9 +80,9 @@
     "semantic_hash": "8761e9b92acc9afeaaaebe492b26e815"
   },
   "app/src/main/java/com/app/wardove/data/log/DiagnosticsRepository.kt": {
-    "mtime": 1781972342.3349853,
-    "ast_hash": "6f8f236e73f7b62b8d8122376577564e",
-    "semantic_hash": "6f8f236e73f7b62b8d8122376577564e"
+    "mtime": 1782528845.9681673,
+    "ast_hash": "aeaa5dd3adb80212f5c2e7fd5b3e6746",
+    "semantic_hash": ""
   },
   "app/src/main/java/com/app/wardove/data/log/FileLoggingTree.kt": {
     "mtime": 1781972321.4897034,
@@ -250,14 +250,14 @@
     "semantic_hash": "d8d7545a09b83760bdc751282d402f79"
   },
   "app/src/main/java/com/app/wardove/ui/settings/DiagnosticsSettingsScreen.kt": {
-    "mtime": 1781976822.9538827,
-    "ast_hash": "23a19acc1669cf30af59bb70d2a890bf",
-    "semantic_hash": "23a19acc1669cf30af59bb70d2a890bf"
+    "mtime": 1782528873.7908041,
+    "ast_hash": "a6165b4182a01c1e6287efec91e4ede4",
+    "semantic_hash": ""
   },
   "app/src/main/java/com/app/wardove/ui/settings/DiagnosticsViewModel.kt": {
-    "mtime": 1781976221.2011273,
-    "ast_hash": "62fd95305111b6c8f193f2a6a959b434",
-    "semantic_hash": "62fd95305111b6c8f193f2a6a959b434"
+    "mtime": 1782528852.2853012,
+    "ast_hash": "9ce6985fdc7a0db6df2dc2c8f512cb4e",
+    "semantic_hash": ""
   },
   "app/src/main/java/com/app/wardove/ui/settings/LicenseDetailScreen.kt": {
     "mtime": 1781977696.3680909,
