@@ -148,7 +148,7 @@ class AddItemViewModel @Inject constructor(
                         _state.update { it.copy(isSaving = false) }
                         return@launch
                     }
-                    val newPath = s.imagePath!!
+                    val newPath = s.imagePath
                     if (existing.imagePath != newPath) {
                         imageStorage.delete(existing.imagePath)
                     }
@@ -159,7 +159,7 @@ class AddItemViewModel @Inject constructor(
                             color = s.color,
                             notes = s.notes.ifBlank { null },
                             price = parsePrice(s.price),
-                            imagePath = newPath
+                            imagePath = newPath.orEmpty()
                         )
                     )
                 } else {
