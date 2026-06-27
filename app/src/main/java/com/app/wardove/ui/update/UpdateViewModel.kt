@@ -27,7 +27,14 @@ sealed interface ReleasesState {
 
 sealed interface InstallState {
     data object Idle : InstallState
-    data class Downloading(val progress: Float) : InstallState
+    data class Downloading(
+        val downloadedBytes: Long,
+        val totalBytes: Long,
+        val bytesPerSec: Long
+    ) : InstallState {
+        val fraction: Float
+            get() = if (totalBytes > 0) (downloadedBytes.toFloat() / totalBytes).coerceIn(0f, 1f) else 0f
+    }
     data object ReadyToInstall : InstallState
     data object Failed : InstallState
 }
@@ -46,6 +53,11 @@ class UpdateViewModel @Inject constructor(
 
     private var pollJob: Job? = null
     private var activeDownloadId: Long = -1L
+
+    // Speed tracking between polls (EMA-smoothed to avoid jitter).
+    private var lastBytes: Long = 0L
+    private var lastTimeMs: Long = 0L
+    private var smoothedBytesPerSec: Double = 0.0
 
     init {
         repository.deleteApkFile()
@@ -68,12 +80,22 @@ class UpdateViewModel @Inject constructor(
 
     fun startDownload(asset: GithubAsset) {
         if (_installState.value is InstallState.Downloading) return
-        _installState.value = InstallState.Downloading(0f)
+        // Use the known asset size as the total from the very first frame so the
+        // bar shows real progress instead of sitting at 0 until DownloadManager
+        // learns the size.
+        val knownTotal = asset.size
+        resetSpeedTracking()
+        _installState.value = InstallState.Downloading(0L, knownTotal, 0L)
         activeDownloadId = repository.enqueueDownload(asset)
         pollJob = viewModelScope.launch {
             while (true) {
                 when (val status = repository.queryDownload(activeDownloadId)) {
-                    is DownloadStatus.Progress -> _installState.value = InstallState.Downloading(status.fraction)
+                    is DownloadStatus.Progress -> {
+                        val total = if (status.totalBytes > 0) status.totalBytes else knownTotal
+                        val speed = updateSpeed(status.downloadedBytes)
+                        _installState.value =
+                            InstallState.Downloading(status.downloadedBytes, total, speed)
+                    }
                     DownloadStatus.Complete -> {
                         _installState.value = InstallState.ReadyToInstall
                         return@launch
@@ -84,9 +106,34 @@ class UpdateViewModel @Inject constructor(
                     }
                     DownloadStatus.Unknown -> {}
                 }
-                delay(500)
+                delay(250)
             }
         }
+    }
+
+    private fun resetSpeedTracking() {
+        lastBytes = 0L
+        lastTimeMs = 0L
+        smoothedBytesPerSec = 0.0
+    }
+
+    /** Updates the EMA-smoothed download speed from the latest byte count. */
+    private fun updateSpeed(downloadedBytes: Long): Long {
+        val now = System.currentTimeMillis()
+        if (lastTimeMs == 0L) {
+            lastBytes = downloadedBytes
+            lastTimeMs = now
+            return 0L
+        }
+        val elapsedMs = now - lastTimeMs
+        if (elapsedMs <= 0L) return smoothedBytesPerSec.toLong()
+        val instant = (downloadedBytes - lastBytes).coerceAtLeast(0L) * 1000.0 / elapsedMs
+        // EMA so the readout doesn't bounce between polls.
+        smoothedBytesPerSec =
+            if (smoothedBytesPerSec == 0.0) instant else 0.6 * smoothedBytesPerSec + 0.4 * instant
+        lastBytes = downloadedBytes
+        lastTimeMs = now
+        return smoothedBytesPerSec.toLong()
     }
 
     fun buildInstallIntent(): Intent {
@@ -105,6 +152,7 @@ class UpdateViewModel @Inject constructor(
 
     fun resetInstall() {
         pollJob?.cancel()
+        resetSpeedTracking()
         _installState.value = InstallState.Idle
     }
 }

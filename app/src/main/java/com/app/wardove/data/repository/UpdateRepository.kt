@@ -56,7 +56,9 @@ class UpdateRepository @Inject constructor(
             return when (status) {
                 DownloadManager.STATUS_SUCCESSFUL -> DownloadStatus.Complete
                 DownloadManager.STATUS_FAILED -> DownloadStatus.Failed
-                else -> if (total > 0) DownloadStatus.Progress(downloaded.toFloat() / total) else DownloadStatus.Progress(0f)
+                // Report raw byte counts; the caller decides the denominator.
+                // total is -1 until DownloadManager receives response headers.
+                else -> DownloadStatus.Progress(downloaded, total)
             }
         }
     }
@@ -102,7 +104,8 @@ class UpdateRepository @Inject constructor(
 
 sealed interface DownloadStatus {
     data object Unknown : DownloadStatus
-    data class Progress(val fraction: Float) : DownloadStatus
+    /** Raw progress from DownloadManager. [totalBytes] is -1 until known. */
+    data class Progress(val downloadedBytes: Long, val totalBytes: Long) : DownloadStatus
     data object Complete : DownloadStatus
     data object Failed : DownloadStatus
 }
