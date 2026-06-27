@@ -18,8 +18,8 @@ import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import com.app.wardove.ui.components.LargeTitleHeader
-import com.composables.icons.lucide.Calendar
 import com.composables.icons.lucide.ChevronLeft
 import com.composables.icons.lucide.ChevronRight
 import com.composables.icons.lucide.Lucide
@@ -41,6 +41,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -72,6 +73,19 @@ fun CalendarScreen(
     val today = remember { LocalDate.now() }
     var visibleMonth by remember { mutableStateOf(YearMonth.from(selectedDate)) }
 
+    val goToPrevMonth = {
+        val target = visibleMonth.minusMonths(1)
+        visibleMonth = target
+        viewModel.selectDate(adjustSelection(selectedDate, target))
+    }
+    val goToNextMonth = {
+        val target = visibleMonth.plusMonths(1)
+        if (!target.isAfter(YearMonth.from(today))) {
+            visibleMonth = target
+            viewModel.selectDate(adjustSelection(selectedDate, target))
+        }
+    }
+
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
     ) { padding ->
@@ -87,39 +101,36 @@ fun CalendarScreen(
                 actions = {
                     val canGoNext = visibleMonth.isBefore(YearMonth.from(today))
                     val isOnToday = visibleMonth == YearMonth.from(today) && selectedDate == today
-                    IconButton(
-                        onClick = {
-                            visibleMonth = YearMonth.from(today)
-                            viewModel.selectDate(today)
-                        },
-                        enabled = !isOnToday
-                    ) {
-                        Icon(
-                            Lucide.Calendar,
-                            contentDescription = stringResource(R.string.calendar_today),
-                            tint = if (!isOnToday) MaterialTheme.colorScheme.onBackground
-                                   else MaterialTheme.colorScheme.textHint
-                        )
-                    }
-                    IconButton(onClick = {
-                        val target = visibleMonth.minusMonths(1)
-                        visibleMonth = target
-                        viewModel.selectDate(adjustSelection(selectedDate, target))
-                    }) {
+                    IconButton(onClick = goToPrevMonth) {
                         Icon(
                             Lucide.ChevronLeft,
                             contentDescription = stringResource(R.string.calendar_prev_month),
                             tint = MaterialTheme.colorScheme.onBackground
                         )
                     }
-                    IconButton(
-                        onClick = {
-                            val target = visibleMonth.plusMonths(1)
-                            if (!target.isAfter(YearMonth.from(today))) {
-                                visibleMonth = target
-                                viewModel.selectDate(adjustSelection(selectedDate, target))
+                    Box(
+                        modifier = Modifier
+                            .clip(RoundedCornerShape(16.dp))
+                            .background(
+                                if (isOnToday) MaterialTheme.colorScheme.surfaceVariant
+                                else MaterialTheme.colorScheme.primary
+                            )
+                            .clickable(enabled = !isOnToday) {
+                                visibleMonth = YearMonth.from(today)
+                                viewModel.selectDate(today)
                             }
-                        },
+                            .padding(horizontal = 14.dp, vertical = 6.dp)
+                    ) {
+                        Text(
+                            text = stringResource(R.string.calendar_today_label),
+                            style = MaterialTheme.typography.labelLarge,
+                            fontWeight = FontWeight.Medium,
+                            color = if (isOnToday) MaterialTheme.colorScheme.textHint
+                                    else MaterialTheme.colorScheme.onPrimary
+                        )
+                    }
+                    IconButton(
+                        onClick = goToNextMonth,
                         enabled = canGoNext
                     ) {
                         Icon(
@@ -139,7 +150,9 @@ fun CalendarScreen(
                 selectedDate = selectedDate,
                 today = today,
                 datesWithWear = datesWithWear,
-                onSelect = viewModel::selectDate
+                onSelect = viewModel::selectDate,
+                onSwipePrev = goToPrevMonth,
+                onSwipeNext = goToNextMonth
             )
 
             HorizontalDivider(
@@ -216,7 +229,9 @@ private fun MonthGrid(
     selectedDate: LocalDate,
     today: LocalDate,
     datesWithWear: Set<LocalDate>,
-    onSelect: (LocalDate) -> Unit
+    onSelect: (LocalDate) -> Unit,
+    onSwipePrev: () -> Unit,
+    onSwipeNext: () -> Unit
 ) {
     val firstOfMonth = month.atDay(1)
     val leadingBlanks = (firstOfMonth.dayOfWeek.sundayBasedIndex())
@@ -226,6 +241,17 @@ private fun MonthGrid(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 20.dp)
+            .pointerInput(month) {
+                val swipeThreshold = 48.dp.toPx()
+                var totalDrag = 0f
+                detectHorizontalDragGestures(
+                    onDragStart = { totalDrag = 0f },
+                    onDragEnd = {
+                        if (totalDrag > swipeThreshold) onSwipePrev()
+                        else if (totalDrag < -swipeThreshold) onSwipeNext()
+                    }
+                ) { _, dragAmount -> totalDrag += dragAmount }
+            }
     ) {
         repeat(6) { weekIndex ->
             Row(modifier = Modifier.fillMaxWidth()) {
