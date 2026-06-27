@@ -51,6 +51,9 @@ class UpdateViewModel @Inject constructor(
     private val _installState = MutableStateFlow<InstallState>(InstallState.Idle)
     val installState = _installState.asStateFlow()
 
+    private val _isRefreshing = MutableStateFlow(false)
+    val isRefreshing = _isRefreshing.asStateFlow()
+
     private var pollJob: Job? = null
     private var activeDownloadId: Long = -1L
 
@@ -71,6 +74,25 @@ class UpdateViewModel @Inject constructor(
                 ReleasesState.Success(repository.fetchReleases())
             } catch (e: Exception) {
                 ReleasesState.Error(e.message ?: "Failed to fetch releases")
+            }
+        }
+    }
+
+    /**
+     * Pull-to-refresh re-fetch. Unlike [load] this keeps the current list visible
+     * (no [ReleasesState.Loading]) and drives the swipe indicator via [isRefreshing].
+     */
+    fun refresh() {
+        viewModelScope.launch {
+            _isRefreshing.value = true
+            try {
+                _releasesState.value = try {
+                    ReleasesState.Success(repository.fetchReleases())
+                } catch (e: Exception) {
+                    ReleasesState.Error(e.message ?: "Failed to fetch releases")
+                }
+            } finally {
+                _isRefreshing.value = false
             }
         }
     }
