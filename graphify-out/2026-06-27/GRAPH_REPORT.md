@@ -1,16 +1,16 @@
 # Graph Report - wardove  (2026-06-27)
 
 ## Corpus Check
-- 103 files · ~56,505 words
+- 103 files · ~56,562 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
 - 780 nodes · 1120 edges · 71 communities (45 shown, 26 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 67 edges (avg confidence: 0.83)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 66 edges (avg confidence: 0.83)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2ac88023`
+- Built from commit: `305c2bde`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -124,8 +124,8 @@ Cohesion: 0.05
 Nodes (49): String, String, String, Boolean, SettingsViewModel, String, Boolean, StateFlow (+41 more)
 
 ### Community 2 - "ViewModel State Management"
-Cohesion: 0.36
-Nodes (4): File, String, Uri, ImageStorage
+Cohesion: 0.39
+Nodes (3): String, Uri, DiagnosticsRepository
 
 ### Community 3 - "App Update Screen"
 Cohesion: 0.24
@@ -133,7 +133,7 @@ Nodes (13): Boolean, GithubRelease, Long, String, InstallState, CurrentVersionCa
 
 ### Community 4 - "Diagnostics & Update Delivery"
 Cohesion: 0.06
-Nodes (29): String, Uri, Boolean, GithubAsset, Int, Intent, List, Long (+21 more)
+Nodes (30): File, String, Uri, Boolean, GithubAsset, Int, Intent, List (+22 more)
 
 ### Community 5 - "App Entry & Theme"
 Cohesion: 0.09
@@ -237,7 +237,7 @@ Nodes (4): Long, String, ShortcutActions, WardoveDestinations
 
 ### Community 30 - "Image Storage"
 Cohesion: 0.05
-Nodes (23): ClothingItem, LaundryCycle, List, Long, StateFlow, Boolean, StateFlow, StateFlow (+15 more)
+Nodes (22): ClothingItem, LaundryCycle, List, Long, StateFlow, Boolean, StateFlow, String (+14 more)
 
 ### Community 31 - "Docs Build Config"
 Cohesion: 0.22
@@ -272,7 +272,7 @@ Cohesion: 0.11
 Nodes (17): String, GlanceAppWidget, Color, Context, GlanceAppWidget, GlanceAppWidgetReceiver, GlanceId, GlanceModifier (+9 more)
 
 ## Knowledge Gaps
-- **189 isolated node(s):** `GlanceId`, `String`, `GlanceModifier`, `SensorEvent`, `Sensor` (+184 more)
+- **187 isolated node(s):** `Uri`, `DiagnosticsViewModel`, `String`, `Uri`, `GlanceId` (+182 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **26 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -280,15 +280,15 @@ Nodes (17): String, GlanceAppWidget, Color, Context, GlanceAppWidget, GlanceAppW
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `WardoveNavHost()` connect `Settings UI & Navigation` to `App Update Screen`, `App Entry & Theme`, `Stats & Analytics UI`, `Laundry Screen UI`, `Add Item Screen`, `Wardrobe Screen UI`, `Calendar Screen`, `Item Detail Screen`, `Community 26`?**
-  _High betweenness centrality (0.234) - this node is a cross-community bridge._
+  _High betweenness centrality (0.227) - this node is a cross-community bridge._
 - **Why does `AppLockSettingsScreen()` connect `Settings UI & Navigation` to `App Entry & Theme`?**
   _High betweenness centrality (0.119) - this node is a cross-community bridge._
 - **Why does `AppLockSettingsViewModel` connect `Settings UI & Navigation` to `Image Storage`?**
   _High betweenness centrality (0.116) - this node is a cross-community bridge._
 - **Are the 18 inferred relationships involving `WardoveNavHost()` (e.g. with `AddItemScreen()` and `CalendarScreen()`) actually correct?**
   _`WardoveNavHost()` has 18 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `GlanceId`, `String`, `GlanceModifier` to the rest of the system?**
-  _192 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `Uri`, `DiagnosticsViewModel`, `String` to the rest of the system?**
+  _190 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Documentation & Feature Docs` be split into smaller, more focused modules?**
   _Cohesion score 0.05254237288135593 - nodes in this community are weakly interconnected._
 - **Should `Settings UI & Navigation` be split into smaller, more focused modules?**
