@@ -1,6 +1,5 @@
 package com.app.wardove.ui.wardrobe
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -17,17 +16,8 @@ import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.selection.selectable
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import com.app.wardove.ui.components.LargeTitleHeader
-import com.composables.icons.lucide.ArrowUpDown
-import com.composables.icons.lucide.LayoutGrid
-import com.composables.icons.lucide.Lucide
-import com.composables.icons.lucide.Plus
-import com.composables.icons.lucide.Search
-import com.composables.icons.lucide.Shirt
-import com.composables.icons.lucide.X
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -37,51 +27,58 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.ModalBottomSheet
-import androidx.compose.material3.NavigationBar
-import androidx.compose.material3.NavigationBarItem
-import androidx.compose.material3.NavigationBarItemDefaults
-import androidx.compose.material3.RadioButton
-import androidx.compose.material3.RadioButtonDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
-import androidx.compose.material3.rememberModalBottomSheetState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
-import androidx.annotation.StringRes
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import coil3.compose.AsyncImage
-import com.app.wardove.ui.components.ClothingImage
 import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.data.local.entity.ClothingStatus
 import com.app.wardove.data.settings.WardrobeViewMode
+import com.app.wardove.ui.components.ClothingImage
+import com.app.wardove.ui.components.Dot
+import com.app.wardove.ui.components.LargeTitleHeader
+import com.app.wardove.ui.components.SingleSelectSheet
 import com.app.wardove.ui.theme.StatusClean
 import com.app.wardove.ui.theme.StatusLaundry
 import com.app.wardove.ui.theme.StatusWorn
 import com.app.wardove.ui.theme.textHint
 import com.app.wardove.ui.util.ClothingOptions
-import kotlinx.coroutines.launch
-import java.io.File
+import com.composables.icons.lucide.ArrowUpDown
+import com.composables.icons.lucide.LayoutGrid
+import com.composables.icons.lucide.Lucide
+import com.composables.icons.lucide.Plus
+import com.composables.icons.lucide.Search
+import com.composables.icons.lucide.Shirt
+import com.composables.icons.lucide.X
+
+private val itemContentPadding = PaddingValues(start = 20.dp, end = 20.dp, top = 4.dp, bottom = 24.dp)
+
+@Composable
+private fun statusDotColor(status: String): Color = when (status) {
+    ClothingStatus.CLEAN -> StatusClean
+    ClothingStatus.WORN -> StatusWorn
+    ClothingStatus.IN_LAUNDRY -> StatusLaundry
+    else -> MaterialTheme.colorScheme.textHint
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -175,12 +172,7 @@ fun WardrobeScreen(
                 when (viewMode) {
                     WardrobeViewMode.CARD -> LazyVerticalGrid(
                         columns = GridCells.Fixed(2),
-                        contentPadding = PaddingValues(
-                            start = 20.dp,
-                            end = 20.dp,
-                            top = 4.dp,
-                            bottom = 24.dp
-                        ),
+                        contentPadding = itemContentPadding,
                         horizontalArrangement = Arrangement.spacedBy(10.dp),
                         verticalArrangement = Arrangement.spacedBy(10.dp),
                         modifier = Modifier.fillMaxSize()
@@ -190,12 +182,7 @@ fun WardrobeScreen(
                         }
                     }
                     WardrobeViewMode.LIST -> LazyColumn(
-                        contentPadding = PaddingValues(
-                            start = 20.dp,
-                            end = 20.dp,
-                            top = 4.dp,
-                            bottom = 24.dp
-                        ),
+                        contentPadding = itemContentPadding,
                         verticalArrangement = Arrangement.spacedBy(8.dp),
                         modifier = Modifier.fillMaxSize()
                     ) {
@@ -205,12 +192,7 @@ fun WardrobeScreen(
                     }
                     WardrobeViewMode.COMPACT -> LazyVerticalGrid(
                         columns = GridCells.Fixed(3),
-                        contentPadding = PaddingValues(
-                            start = 20.dp,
-                            end = 20.dp,
-                            top = 4.dp,
-                            bottom = 24.dp
-                        ),
+                        contentPadding = itemContentPadding,
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
                         verticalArrangement = Arrangement.spacedBy(8.dp),
                         modifier = Modifier.fillMaxSize()
@@ -225,8 +207,11 @@ fun WardrobeScreen(
     }
 
     if (showSortSheet) {
-        SortSheet(
+        SingleSelectSheet(
+            title = stringResource(R.string.wardrobe_sort_title),
+            options = WardrobeSort.entries,
             selected = selectedSort,
+            labelOf = { it.labelResId },
             onSelect = { sort ->
                 viewModel.setSort(sort)
                 showSortSheet = false
@@ -236,8 +221,11 @@ fun WardrobeScreen(
     }
 
     if (showViewSheet) {
-        ViewModeSheet(
+        SingleSelectSheet(
+            title = stringResource(R.string.wardrobe_view_title),
+            options = WardrobeViewMode.entries,
             selected = viewMode,
+            labelOf = { it.labelResId },
             onSelect = { mode ->
                 viewModel.setViewMode(mode)
                 showViewSheet = false
@@ -336,72 +324,6 @@ private fun FilterRow(
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun SortSheet(
-    selected: WardrobeSort,
-    onSelect: (WardrobeSort) -> Unit,
-    onDismiss: () -> Unit
-) {
-    val sheetState = rememberModalBottomSheetState()
-    val scope = rememberCoroutineScope()
-
-    ModalBottomSheet(
-        onDismissRequest = onDismiss,
-        sheetState = sheetState,
-        containerColor = MaterialTheme.colorScheme.surface,
-        shape = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp)
-    ) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 20.dp, vertical = 8.dp)
-        ) {
-            Text(
-                stringResource(R.string.wardrobe_sort_title),
-                style = MaterialTheme.typography.headlineMedium,
-                color = MaterialTheme.colorScheme.onBackground,
-                modifier = Modifier.padding(bottom = 12.dp)
-            )
-            WardrobeSort.entries.forEach { sort ->
-                val isSelected = sort == selected
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .selectable(
-                            selected = isSelected,
-                            onClick = {
-                                scope.launch { sheetState.hide() }
-                                    .invokeOnCompletion { onSelect(sort) }
-                            }
-                        )
-                        .padding(vertical = 12.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    RadioButton(
-                        selected = isSelected,
-                        onClick = {
-                            scope.launch { sheetState.hide() }
-                                .invokeOnCompletion { onSelect(sort) }
-                        },
-                        colors = RadioButtonDefaults.colors(
-                            selectedColor = MaterialTheme.colorScheme.primary,
-                            unselectedColor = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    )
-                    Text(
-                        stringResource(sort.labelResId),
-                        fontSize = 15.sp,
-                        fontWeight = if (isSelected) FontWeight.Medium else FontWeight.Normal,
-                        color = if (isSelected) MaterialTheme.colorScheme.onBackground else MaterialTheme.colorScheme.onSurfaceVariant,
-                        modifier = Modifier.padding(start = 8.dp)
-                    )
-                }
-            }
-        }
-    }
-}
-
 @Composable
 private fun ClothingCard(
     item: ClothingItem,
@@ -443,92 +365,7 @@ private fun ClothingCard(
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
-                    Box(
-                        modifier = Modifier
-                            .size(8.dp)
-                            .background(
-                                color = when (item.status) {
-                                    ClothingStatus.CLEAN -> StatusClean
-                                    ClothingStatus.WORN -> StatusWorn
-                                    ClothingStatus.IN_LAUNDRY -> StatusLaundry
-                                    else -> MaterialTheme.colorScheme.textHint
-                                },
-                                shape = CircleShape
-                            )
-                    )
-                }
-            }
-        }
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-private fun ViewModeSheet(
-    selected: WardrobeViewMode,
-    onSelect: (WardrobeViewMode) -> Unit,
-    onDismiss: () -> Unit
-) {
-    val sheetState = rememberModalBottomSheetState()
-    val scope = rememberCoroutineScope()
-
-    @StringRes
-    fun WardrobeViewMode.labelResId(): Int = when (this) {
-        WardrobeViewMode.CARD -> R.string.wardrobe_view_card
-        WardrobeViewMode.LIST -> R.string.wardrobe_view_list
-        WardrobeViewMode.COMPACT -> R.string.wardrobe_view_compact
-    }
-
-    ModalBottomSheet(
-        onDismissRequest = onDismiss,
-        sheetState = sheetState,
-        containerColor = MaterialTheme.colorScheme.surface,
-        shape = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp)
-    ) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 20.dp, vertical = 8.dp)
-        ) {
-            Text(
-                stringResource(R.string.wardrobe_view_title),
-                style = MaterialTheme.typography.headlineMedium,
-                color = MaterialTheme.colorScheme.onBackground,
-                modifier = Modifier.padding(bottom = 12.dp)
-            )
-            WardrobeViewMode.entries.forEach { mode ->
-                val isSelected = mode == selected
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .selectable(
-                            selected = isSelected,
-                            onClick = {
-                                scope.launch { sheetState.hide() }
-                                    .invokeOnCompletion { onSelect(mode) }
-                            }
-                        )
-                        .padding(vertical = 12.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    RadioButton(
-                        selected = isSelected,
-                        onClick = {
-                            scope.launch { sheetState.hide() }
-                                .invokeOnCompletion { onSelect(mode) }
-                        },
-                        colors = RadioButtonDefaults.colors(
-                            selectedColor = MaterialTheme.colorScheme.primary,
-                            unselectedColor = MaterialTheme.colorScheme.onSurfaceVariant
-                        )
-                    )
-                    Text(
-                        stringResource(mode.labelResId()),
-                        fontSize = 15.sp,
-                        fontWeight = if (isSelected) FontWeight.Medium else FontWeight.Normal,
-                        color = if (isSelected) MaterialTheme.colorScheme.onBackground else MaterialTheme.colorScheme.onSurfaceVariant,
-                        modifier = Modifier.padding(start = 8.dp)
-                    )
+                    Dot(color = statusDotColor(item.status))
                 }
             }
         }
@@ -558,8 +395,7 @@ private fun ClothingListRow(
             ClothingImage(
                 imagePath = item.imagePath,
                 contentDescription = item.name,
-                modifier = Modifier
-                    .size(64.dp)
+                modifier = Modifier.size(64.dp)
             )
             Column(modifier = Modifier.weight(1f)) {
                 Text(
@@ -576,19 +412,7 @@ private fun ClothingListRow(
                     maxLines = 1
                 )
             }
-            Box(
-                modifier = Modifier
-                    .size(8.dp)
-                    .background(
-                        color = when (item.status) {
-                            ClothingStatus.CLEAN -> StatusClean
-                            ClothingStatus.WORN -> StatusWorn
-                            ClothingStatus.IN_LAUNDRY -> StatusLaundry
-                            else -> MaterialTheme.colorScheme.textHint
-                        },
-                        shape = CircleShape
-                    )
-            )
+            Dot(color = statusDotColor(item.status))
         }
     }
 }
@@ -627,20 +451,7 @@ private fun CompactCard(
                     maxLines = 1,
                     modifier = Modifier.weight(1f)
                 )
-                Box(
-                    modifier = Modifier
-                        .padding(start = 4.dp)
-                        .size(6.dp)
-                        .background(
-                            color = when (item.status) {
-                                ClothingStatus.CLEAN -> StatusClean
-                                ClothingStatus.WORN -> StatusWorn
-                                ClothingStatus.IN_LAUNDRY -> StatusLaundry
-                                else -> MaterialTheme.colorScheme.textHint
-                            },
-                            shape = CircleShape
-                        )
-                )
+                Dot(color = statusDotColor(item.status), size = 6.dp, modifier = Modifier.padding(start = 4.dp))
             }
         }
     }

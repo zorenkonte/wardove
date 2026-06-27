@@ -12,10 +12,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import com.composables.icons.lucide.ArrowLeft
@@ -57,6 +55,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
 import com.app.wardove.ui.components.ClothingImage
+import com.app.wardove.ui.components.Dot
 import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.data.local.entity.WearLog
@@ -348,11 +347,7 @@ private fun WearHistorySection(logs: List<WearLog>) {
                         .padding(vertical = 8.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    Box(
-                        modifier = Modifier
-                            .size(8.dp)
-                            .background(StatusClean, CircleShape)
-                    )
+                    Dot(color = StatusClean)
                     Spacer(Modifier.width(10.dp))
                     Text(
                         text = log.wornDate.formatDateOnly(),

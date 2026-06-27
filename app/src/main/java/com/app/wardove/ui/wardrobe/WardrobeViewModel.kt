@@ -34,6 +34,14 @@ enum class WardrobeSort(@StringRes val labelResId: Int) {
     RECENTLY_ADDED(R.string.sort_recently_added)
 }
 
+@get:StringRes
+val WardrobeViewMode.labelResId: Int
+    get() = when (this) {
+        WardrobeViewMode.CARD -> R.string.wardrobe_view_card
+        WardrobeViewMode.LIST -> R.string.wardrobe_view_list
+        WardrobeViewMode.COMPACT -> R.string.wardrobe_view_compact
+    }
+
 @HiltViewModel
 class WardrobeViewModel @Inject constructor(
     repository: ClothingRepository,
@@ -48,6 +56,10 @@ class WardrobeViewModel @Inject constructor(
 
     private val _sort = MutableStateFlow(WardrobeSort.RECENTLY_WORN)
     val sort: StateFlow<WardrobeSort> = _sort.asStateFlow()
+
+    val viewMode: StateFlow<WardrobeViewMode> = settingsRepository.settings
+        .map { it.wardrobeViewMode }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), WardrobeViewMode.CARD)
 
     val filteredAndSortedItems: StateFlow<List<ClothingItem>> = combine(
         repository.observeAll(),
@@ -87,10 +99,6 @@ class WardrobeViewModel @Inject constructor(
     fun setSort(sort: WardrobeSort) {
         _sort.value = sort
     }
-
-    val viewMode: StateFlow<WardrobeViewMode> = settingsRepository.settings
-        .map { it.wardrobeViewMode }
-        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), WardrobeViewMode.CARD)
 
     fun setViewMode(mode: WardrobeViewMode) {
         viewModelScope.launch { settingsRepository.setWardrobeViewMode(mode) }

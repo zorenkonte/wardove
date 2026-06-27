@@ -48,6 +48,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
 import com.app.wardove.ui.components.ClothingImage
+import com.app.wardove.ui.components.Dot
 import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.ui.theme.StatusClean
@@ -271,11 +272,7 @@ private fun DayCell(
             )
             if (hasWear) {
                 Spacer(Modifier.height(2.dp))
-                Box(
-                    modifier = Modifier
-                        .size(6.dp)
-                        .background(StatusClean, CircleShape)
-                )
+                Dot(color = StatusClean, size = 6.dp)
             }
         }
     }
