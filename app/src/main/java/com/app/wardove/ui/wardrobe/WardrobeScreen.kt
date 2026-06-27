@@ -43,6 +43,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -63,7 +64,9 @@ import com.app.wardove.ui.theme.StatusWorn
 import com.app.wardove.ui.theme.textHint
 import com.app.wardove.ui.util.ClothingOptions
 import com.composables.icons.lucide.ArrowUpDown
+import com.composables.icons.lucide.Grid3x3
 import com.composables.icons.lucide.LayoutGrid
+import com.composables.icons.lucide.List
 import com.composables.icons.lucide.Lucide
 import com.composables.icons.lucide.Plus
 import com.composables.icons.lucide.Search
@@ -71,6 +74,13 @@ import com.composables.icons.lucide.Shirt
 import com.composables.icons.lucide.X
 
 private val itemContentPadding = PaddingValues(start = 20.dp, end = 20.dp, top = 4.dp, bottom = 24.dp)
+
+private val WardrobeViewMode.icon: ImageVector
+    get() = when (this) {
+        WardrobeViewMode.CARD -> Lucide.LayoutGrid
+        WardrobeViewMode.LIST -> Lucide.List
+        WardrobeViewMode.COMPACT -> Lucide.Grid3x3
+    }
 
 @Composable
 private fun statusDotColor(status: String): Color = when (status) {
@@ -132,7 +142,7 @@ fun WardrobeScreen(
                 actions = {
                     IconButton(onClick = { showViewSheet = true }) {
                         Icon(
-                            Lucide.LayoutGrid,
+                            viewMode.icon,
                             contentDescription = stringResource(R.string.action_view_mode),
                             tint = MaterialTheme.colorScheme.onBackground
                         )
