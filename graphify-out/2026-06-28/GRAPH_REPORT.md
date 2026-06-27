@@ -1,16 +1,16 @@
 # Graph Report - wardove  (2026-06-28)
 
 ## Corpus Check
-- 110 files · ~58,127 words
+- 110 files · ~58,152 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1012 nodes · 1364 edges · 91 communities (63 shown, 28 thin omitted)
+- 1012 nodes · 1364 edges · 90 communities (62 shown, 28 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 86 edges (avg confidence: 0.82)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `fa6e0874`
+- Built from commit: `cbd85215`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -32,7 +32,6 @@
 - [[_COMMUNITY_Laundry Data Access|Laundry Data Access]]
 - [[_COMMUNITY_Wardrobe Screen UI|Wardrobe Screen UI]]
 - [[_COMMUNITY_Laundry Repository|Laundry Repository]]
-- [[_COMMUNITY_Calendar Screen|Calendar Screen]]
 - [[_COMMUNITY_Item Detail Screen|Item Detail Screen]]
 - [[_COMMUNITY_Wear Log Data Access|Wear Log Data Access]]
 - [[_COMMUNITY_App Initialization & Logging|App Initialization & Logging]]
@@ -132,31 +131,31 @@
 - **Hilt DI Module Triad (Database + Repository + Settings)** — wardove_hilt_di, wardove_database_module, wardove_repository_module, wardove_settings_module [EXTRACTED 1.00]
 - **Top-Level Navigation Drawer Screens** — wardove_wardrobe_screen, wardove_laundry_screen, wardove_calendar_screen, wardove_stats_screen, wardove_settings_screen, wardove_wardove_nav_host [EXTRACTED 1.00]
 
-## Communities (91 total, 28 thin omitted)
+## Communities (90 total, 28 thin omitted)
 
 ### Community 0 - "Documentation & Feature Docs"
 Cohesion: 0.06
-Nodes (50): Calendar Screen (monthly wear history view), Wear Today / Un-wear Today Action, Laundry Cycle Lifecycle (startCycle → completeCycle), Wear Threshold (laundry reminder, range 1-30), Appearance Settings (theme mode, Material You dynamic color), Category breakdown, Cost per wear, Stats (+42 more)
+Nodes (52): Auto-Update System via GitHub Releases (v1.0.10), Biometric App Lock Feature (v1.0.13), Wardove Changelog, Calendar Screen (monthly wear history view), Wear Today / Un-wear Today Action, Laundry Cycle Lifecycle (startCycle → completeCycle), Wear Threshold (laundry reminder, range 1-30), Appearance Settings (theme mode, Material You dynamic color) (+44 more)
 
 ### Community 1 - "Settings UI & Navigation"
-Cohesion: 0.11
-Nodes (27): Modifier, String, Color, Modifier, List, String, Boolean, ClothingItem (+19 more)
+Cohesion: 0.07
+Nodes (44): Boolean, ClothingItem, Modifier, String, Modifier, String, Color, Modifier (+36 more)
 
 ### Community 2 - "ViewModel State Management"
 Cohesion: 0.39
 Nodes (3): String, Uri, DiagnosticsRepository
 
 ### Community 3 - "App Update Screen"
-Cohesion: 0.07
-Nodes (26): Boolean, GithubAsset, Int, Intent, List, Long, String, String (+18 more)
+Cohesion: 0.08
+Nodes (24): Boolean, GithubRelease, Long, String, Boolean, Int, List, String (+16 more)
 
 ### Community 4 - "Diagnostics & Update Delivery"
-Cohesion: 0.36
-Nodes (4): File, String, Uri, ImageStorage
+Cohesion: 0.10
+Nodes (18): File, String, Uri, GithubAsset, Intent, Long, ImageStorage, Job (+10 more)
 
 ### Community 5 - "App Entry & Theme"
-Cohesion: 0.08
-Nodes (17): Bundle, Intent, Sensor, SettingsRepository, String, Bundle, SettingsRepository, Boolean (+9 more)
+Cohesion: 0.07
+Nodes (23): Bundle, Intent, Sensor, SettingsRepository, String, Bundle, SettingsRepository, Boolean (+15 more)
 
 ### Community 6 - "Add Item ViewModel"
 Cohesion: 0.15
@@ -175,8 +174,8 @@ Cohesion: 0.15
 Nodes (13): GithubAsset, GithubRelease, List, Long, String, Uri, DownloadStatus, Complete (+5 more)
 
 ### Community 10 - "Laundry Screen UI"
-Cohesion: 0.14
-Nodes (23): Modifier, String, Boolean, Int, List, Long, Modifier, Set (+15 more)
+Cohesion: 0.18
+Nodes (20): Boolean, Int, List, Long, Modifier, Set, String, CycleWithItems (+12 more)
 
 ### Community 11 - "Add Item Screen"
 Cohesion: 0.14
@@ -195,16 +194,12 @@ Cohesion: 0.22
 Nodes (7): ClothingItem, Flow, LaundryCycle, List, Long, LaundryDao, LaundryCycleItem
 
 ### Community 15 - "Wardrobe Screen UI"
-Cohesion: 0.05
-Nodes (50): String, String, ImageVector, String, Boolean, SettingsViewModel, String, Boolean (+42 more)
+Cohesion: 0.06
+Nodes (44): String, String, ImageVector, String, Boolean, SettingsViewModel, String, String (+36 more)
 
 ### Community 16 - "Laundry Repository"
 Cohesion: 0.29
 Nodes (6): ClothingItem, Flow, LaundryCycle, List, Long, LaundryRepository
-
-### Community 17 - "Calendar Screen"
-Cohesion: 0.26
-Nodes (12): Boolean, GithubRelease, Long, String, InstallState, CurrentVersionCard(), formatBytes(), formatDate() (+4 more)
 
 ### Community 18 - "Item Detail Screen"
 Cohesion: 0.21
@@ -219,8 +214,8 @@ Cohesion: 0.16
 Nodes (9): FileLoggingTree, String, FileLoggingTree, Application, Configuration, DiagnosticsRepository, HiltWorkerFactory, installCrashHandler() (+1 more)
 
 ### Community 21 - "Settings Repository"
-Cohesion: 0.09
-Nodes (23): Boolean, String, WardrobeViewMode, Boolean, ClothingItem, AppSettings, adjustSelection(), CalendarScreen() (+15 more)
+Cohesion: 0.14
+Nodes (9): Boolean, String, WardrobeViewMode, AppSettings, Flow, Int, Keys, SettingsRepository (+1 more)
 
 ### Community 22 - "Item Detail ViewModel"
 Cohesion: 0.20
@@ -240,7 +235,7 @@ Nodes (8): ClothingItem, List, LocalDate, Set, StateFlow, WearLogWithItem, Calen
 
 ### Community 26 - "Community 26"
 Cohesion: 0.07
-Nodes (33): Auto-Update System via GitHub Releases (v1.0.10), Biometric App Lock Feature (v1.0.13), Wardove Changelog, Changes to this policy, Children's privacy, Contact, Data storage, Network activity (+25 more)
+Nodes (31): Changes to this policy, Children's privacy, Contact, Data storage, Network activity, Permissions, Privacy Policy, Third-party libraries (+23 more)
 
 ### Community 27 - "Wardrobe ViewModel"
 Cohesion: 0.23
@@ -255,8 +250,8 @@ Cohesion: 0.33
 Nodes (4): Long, String, ShortcutActions, WardoveDestinations
 
 ### Community 30 - "Image Storage"
-Cohesion: 0.22
-Nodes (6): AppSettings, Boolean, StateFlow, ThemeMode, SettingsViewModel, ViewModel
+Cohesion: 0.24
+Nodes (5): AppSettings, Boolean, StateFlow, ThemeMode, SettingsViewModel
 
 ### Community 31 - "Docs Build Config"
 Cohesion: 0.22
@@ -311,8 +306,8 @@ Cohesion: 0.29
 Nodes (6): ClothingItem, LaundryCycle, List, Long, StateFlow, HistoryViewModel
 
 ### Community 76 - "Community 76"
-Cohesion: 0.50
-Nodes (4): StateFlow, CostPerWearItem, StatsUiState, StatsViewModel
+Cohesion: 0.40
+Nodes (5): StateFlow, CostPerWearItem, StatsUiState, StatsViewModel, ViewModel
 
 ### Community 77 - "Community 77"
 Cohesion: 0.08
@@ -359,24 +354,24 @@ Cohesion: 0.22
 Nodes (10): Boolean, ClothingItem, LaundryCycle, List, Long, String, CycleRow(), formatDate() (+2 more)
 
 ## Knowledge Gaps
-- **340 isolated node(s):** `CalendarViewModel`, `Set`, `Boolean`, `ClothingItem`, `Color` (+335 more)
+- **340 isolated node(s):** `Color`, `WardrobeViewModel`, `WardrobeFilter`, `Boolean`, `CalendarViewModel` (+335 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **28 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `WardoveNavHost()` connect `Wardrobe Screen UI` to `Settings UI & Navigation`, `App Entry & Theme`, `Stats & Analytics UI`, `Laundry Screen UI`, `Add Item Screen`, `Calendar Screen`, `Item Detail Screen`, `Settings Repository`, `Community 90`?**
-  _High betweenness centrality (0.127) - this node is a cross-community bridge._
-- **Why does `AppLockSettingsScreen()` connect `Wardrobe Screen UI` to `App Entry & Theme`?**
+- **Why does `WardoveNavHost()` connect `Wardrobe Screen UI` to `Settings UI & Navigation`, `App Update Screen`, `App Entry & Theme`, `Stats & Analytics UI`, `Laundry Screen UI`, `Add Item Screen`, `Item Detail Screen`, `Community 90`?**
+  _High betweenness centrality (0.126) - this node is a cross-community bridge._
+- **Why does `AppLockSettingsScreen()` connect `App Entry & Theme` to `Wardrobe Screen UI`?**
   _High betweenness centrality (0.070) - this node is a cross-community bridge._
-- **Why does `AppLockSettingsViewModel` connect `Wardrobe Screen UI` to `Image Storage`?**
+- **Why does `AppLockSettingsViewModel` connect `App Entry & Theme` to `Community 76`?**
   _High betweenness centrality (0.068) - this node is a cross-community bridge._
 - **Are the 18 inferred relationships involving `WardoveNavHost()` (e.g. with `AddItemScreen()` and `CalendarScreen()`) actually correct?**
   _`WardoveNavHost()` has 18 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `CalendarViewModel`, `Set`, `Boolean` to the rest of the system?**
+- **What connects `Color`, `WardrobeViewModel`, `WardrobeFilter` to the rest of the system?**
   _343 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Documentation & Feature Docs` be split into smaller, more focused modules?**
-  _Cohesion score 0.06196078431372549 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.05878084179970972 - nodes in this community are weakly interconnected._
 - **Should `Settings UI & Navigation` be split into smaller, more focused modules?**
-  _Cohesion score 0.1053763440860215 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06693877551020408 - nodes in this community are weakly interconnected._
