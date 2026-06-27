@@ -55,214 +55,424 @@
   },
   "nodes": [
     {
-      "label": "AppSettings.kt",
+      "label": "CalendarScreen.kt",
       "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/AppSettings.kt",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "settings_appsettings",
-      "community": 48,
-      "norm_label": "appsettings.kt"
-    },
-    {
-      "label": "AppSettings",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/AppSettings.kt",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "settings_appsettings_appsettings",
-      "community": 48,
-      "norm_label": "appsettings"
-    },
-    {
-      "label": "SettingsRepository.kt",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "settings_settingsrepository",
+      "id": "calendar_calendarscreen",
       "community": 21,
-      "norm_label": "settingsrepository.kt"
+      "norm_label": "calendarscreen.kt"
     },
     {
-      "label": "SettingsRepository",
+      "label": "CalendarScreen()",
       "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L17",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L63",
       "_origin": "ast",
-      "id": "settings_settingsrepository_settingsrepository",
+      "id": "calendar_calendarscreen_calendarscreen",
       "community": 21,
-      "norm_label": "settingsrepository"
+      "norm_label": "calendarscreen()"
     },
     {
-      "label": "Keys",
+      "label": "CalendarViewModel",
       "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L21",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L63",
       "_origin": "ast",
-      "id": "settings_settingsrepository_keys",
+      "id": "calendarviewmodel",
       "community": 21,
-      "norm_label": "keys"
+      "norm_label": "calendarviewmodel"
     },
     {
-      "label": "Flow",
+      "label": "WeekdayHeader()",
       "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L31",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L166",
       "_origin": "ast",
-      "id": "flow",
+      "id": "calendar_calendarscreen_weekdayheader",
       "community": 21,
-      "norm_label": "flow"
+      "norm_label": "weekdayheader()"
     },
     {
-      "label": "AppSettings",
+      "label": "MonthGrid()",
       "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L31",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L197",
       "_origin": "ast",
-      "id": "appsettings",
+      "id": "calendar_calendarscreen_monthgrid",
       "community": 21,
-      "norm_label": "appsettings"
+      "norm_label": "monthgrid()"
     },
     {
-      "label": ".setThemeMode()",
+      "label": "YearMonth",
       "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L51",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L197",
       "_origin": "ast",
-      "id": "settings_settingsrepository_settingsrepository_setthememode",
+      "id": "yearmonth",
       "community": 21,
-      "norm_label": ".setthememode()"
+      "norm_label": "yearmonth"
     },
     {
-      "label": "ThemeMode",
+      "label": "LocalDate",
       "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L51",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L197",
       "_origin": "ast",
-      "id": "thememode",
+      "id": "localdate",
       "community": 21,
-      "norm_label": "thememode"
+      "norm_label": "localdate"
     },
     {
-      "label": ".setDynamicColor()",
+      "label": "Set",
       "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L55",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L197",
       "_origin": "ast",
-      "id": "settings_settingsrepository_settingsrepository_setdynamiccolor",
+      "id": "set",
       "community": 21,
-      "norm_label": ".setdynamiccolor()"
+      "norm_label": "set"
+    },
+    {
+      "label": "DayCell()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L239",
+      "_origin": "ast",
+      "id": "calendar_calendarscreen_daycell",
+      "community": 21,
+      "norm_label": "daycell()"
     },
     {
       "label": "Boolean",
       "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L55",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L239",
       "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_boolean",
+      "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_boolean",
       "community": 21,
       "norm_label": "boolean"
     },
     {
-      "label": ".setLaundryThreshold()",
+      "label": "SelectedDayLabel()",
       "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L59",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L281",
       "_origin": "ast",
-      "id": "settings_settingsrepository_settingsrepository_setlaundrythreshold",
+      "id": "calendar_calendarscreen_selecteddaylabel",
       "community": 21,
-      "norm_label": ".setlaundrythreshold()"
+      "norm_label": "selecteddaylabel()"
+    },
+    {
+      "label": "WornItemCard()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L293",
+      "_origin": "ast",
+      "id": "calendar_calendarscreen_wornitemcard",
+      "community": 21,
+      "norm_label": "wornitemcard()"
+    },
+    {
+      "label": "ClothingItem",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L293",
+      "_origin": "ast",
+      "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_clothingitem",
+      "community": 21,
+      "norm_label": "clothingitem"
+    },
+    {
+      "label": "sundayBasedIndex()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L328",
+      "_origin": "ast",
+      "id": "calendar_calendarscreen_sundaybasedindex",
+      "community": 21,
+      "norm_label": "sundaybasedindex()"
     },
     {
       "label": "Int",
       "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L59",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L328",
       "_origin": "ast",
       "id": "int",
       "community": 21,
       "norm_label": "int"
     },
     {
-      "label": ".setUpdateNotificationsEnabled()",
+      "label": "adjustSelection()",
       "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L67",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L338",
       "_origin": "ast",
-      "id": "settings_settingsrepository_settingsrepository_setupdatenotificationsenabled",
+      "id": "calendar_calendarscreen_adjustselection",
       "community": 21,
-      "norm_label": ".setupdatenotificationsenabled()"
+      "norm_label": "adjustselection()"
     },
     {
-      "label": ".setShakeToReportEnabled()",
+      "label": "Dot.kt",
       "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L71",
+      "source_file": "app/src/main/java/com/app/wardove/ui/components/Dot.kt",
+      "source_location": "L1",
       "_origin": "ast",
-      "id": "settings_settingsrepository_settingsrepository_setshaketoreportenabled",
-      "community": 21,
-      "norm_label": ".setshaketoreportenabled()"
+      "id": "components_dot",
+      "community": 1,
+      "norm_label": "dot.kt"
     },
     {
-      "label": ".setWardrobeViewMode()",
+      "label": "Dot()",
       "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L75",
+      "source_file": "app/src/main/java/com/app/wardove/ui/components/Dot.kt",
+      "source_location": "L13",
       "_origin": "ast",
-      "id": "settings_settingsrepository_settingsrepository_setwardrobeviewmode",
-      "community": 21,
-      "norm_label": ".setwardrobeviewmode()"
+      "id": "components_dot_dot",
+      "community": 1,
+      "norm_label": "dot()"
     },
     {
-      "label": "WardrobeViewMode",
+      "label": "Color",
       "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L75",
+      "source_file": "app/src/main/java/com/app/wardove/ui/components/Dot.kt",
+      "source_location": "L13",
       "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_wardrobeviewmode",
-      "community": 21,
-      "norm_label": "wardrobeviewmode"
+      "id": "app_src_main_java_com_app_wardove_ui_components_dot_kt_color",
+      "community": 1,
+      "norm_label": "color"
+    },
+    {
+      "label": "Dp",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/components/Dot.kt",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "dp",
+      "community": 1,
+      "norm_label": "dp"
+    },
+    {
+      "label": "Modifier",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/components/Dot.kt",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "app_src_main_java_com_app_wardove_ui_components_dot_kt_modifier",
+      "community": 1,
+      "norm_label": "modifier"
+    },
+    {
+      "label": "SingleSelectSheet.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/components/SingleSelectSheet.kt",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "components_singleselectsheet",
+      "community": 1,
+      "norm_label": "singleselectsheet.kt"
+    },
+    {
+      "label": "SingleSelectSheet()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/components/SingleSelectSheet.kt",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "components_singleselectsheet_singleselectsheet",
+      "community": 1,
+      "norm_label": "singleselectsheet()"
     },
     {
       "label": "String",
       "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L79",
+      "source_file": "app/src/main/java/com/app/wardove/ui/components/SingleSelectSheet.kt",
+      "source_location": "L27",
       "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_string",
-      "community": 21,
+      "id": "app_src_main_java_com_app_wardove_ui_components_singleselectsheet_kt_string",
+      "community": 1,
       "norm_label": "string"
     },
     {
-      "label": ".setLastNotifiedUpdateTag()",
+      "label": "List",
       "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L83",
+      "source_file": "app/src/main/java/com/app/wardove/ui/components/SingleSelectSheet.kt",
+      "source_location": "L27",
       "_origin": "ast",
-      "id": "settings_settingsrepository_settingsrepository_setlastnotifiedupdatetag",
-      "community": 21,
-      "norm_label": ".setlastnotifiedupdatetag()"
+      "id": "app_src_main_java_com_app_wardove_ui_components_singleselectsheet_kt_list",
+      "community": 1,
+      "norm_label": "list"
     },
     {
-      "label": "WardrobeViewMode.kt",
+      "label": "T",
       "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/WardrobeViewMode.kt",
+      "source_file": "app/src/main/java/com/app/wardove/ui/components/SingleSelectSheet.kt",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "t",
+      "community": 1,
+      "norm_label": "t"
+    },
+    {
+      "label": "ItemDetailScreen.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "settings_wardrobeviewmode",
-      "community": 88,
-      "norm_label": "wardrobeviewmode.kt"
+      "id": "itemdetail_itemdetailscreen",
+      "community": 18,
+      "norm_label": "itemdetailscreen.kt"
     },
     {
-      "label": "WardrobeViewMode",
+      "label": "ItemDetailScreen()",
       "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/WardrobeViewMode.kt",
-      "source_location": "L3",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L67",
       "_origin": "ast",
-      "id": "settings_wardrobeviewmode_wardrobeviewmode",
-      "community": 88,
-      "norm_label": "wardrobeviewmode"
+      "id": "itemdetail_itemdetailscreen_itemdetailscreen",
+      "community": 18,
+      "norm_label": "itemdetailscreen()"
+    },
+    {
+      "label": "Long",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "long",
+      "community": 18,
+      "norm_label": "long"
+    },
+    {
+      "label": "ItemDetailViewModel",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "itemdetailviewmodel",
+      "community": 18,
+      "norm_label": "itemdetailviewmodel"
+    },
+    {
+      "label": "ItemDetailBody()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L153",
+      "_origin": "ast",
+      "id": "itemdetail_itemdetailscreen_itemdetailbody",
+      "community": 18,
+      "norm_label": "itemdetailbody()"
+    },
+    {
+      "label": "ClothingItem",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L153",
+      "_origin": "ast",
+      "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_clothingitem",
+      "community": 18,
+      "norm_label": "clothingitem"
+    },
+    {
+      "label": "List",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L153",
+      "_origin": "ast",
+      "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_list",
+      "community": 18,
+      "norm_label": "list"
+    },
+    {
+      "label": "WearLog",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L153",
+      "_origin": "ast",
+      "id": "wearlog",
+      "community": 18,
+      "norm_label": "wearlog"
+    },
+    {
+      "label": "Boolean",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L153",
+      "_origin": "ast",
+      "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_boolean",
+      "community": 18,
+      "norm_label": "boolean"
+    },
+    {
+      "label": "Modifier",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L153",
+      "_origin": "ast",
+      "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_modifier",
+      "community": 18,
+      "norm_label": "modifier"
+    },
+    {
+      "label": "TagsRow()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L268",
+      "_origin": "ast",
+      "id": "itemdetail_itemdetailscreen_tagsrow",
+      "community": 18,
+      "norm_label": "tagsrow()"
+    },
+    {
+      "label": "TagPill()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L288",
+      "_origin": "ast",
+      "id": "itemdetail_itemdetailscreen_tagpill",
+      "community": 18,
+      "norm_label": "tagpill()"
+    },
+    {
+      "label": "String",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L288",
+      "_origin": "ast",
+      "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_string",
+      "community": 18,
+      "norm_label": "string"
+    },
+    {
+      "label": "Color",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L288",
+      "_origin": "ast",
+      "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_color",
+      "community": 18,
+      "norm_label": "color"
+    },
+    {
+      "label": "StatBox()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L304",
+      "_origin": "ast",
+      "id": "itemdetail_itemdetailscreen_statbox",
+      "community": 18,
+      "norm_label": "statbox()"
+    },
+    {
+      "label": "WearHistorySection()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L326",
+      "_origin": "ast",
+      "id": "itemdetail_itemdetailscreen_wearhistorysection",
+      "community": 18,
+      "norm_label": "wearhistorysection()"
     },
     {
       "label": "WardrobeScreen.kt",
@@ -275,30 +485,50 @@
       "norm_label": "wardrobescreen.kt"
     },
     {
-      "label": "WardrobeScreen()",
+      "label": "statusDotColor()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L86",
+      "source_location": "L75",
       "_origin": "ast",
-      "id": "wardrobe_wardrobescreen_wardrobescreen",
+      "id": "wardrobe_wardrobescreen_statusdotcolor",
       "community": 1,
-      "norm_label": "wardrobescreen()"
+      "norm_label": "statusdotcolor()"
     },
     {
       "label": "String",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L86",
+      "source_location": "L75",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_string",
       "community": 1,
       "norm_label": "string"
     },
     {
+      "label": "Color",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
+      "source_location": "L75",
+      "_origin": "ast",
+      "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_color",
+      "community": 1,
+      "norm_label": "color"
+    },
+    {
+      "label": "WardrobeScreen()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "wardrobe_wardrobescreen_wardrobescreen",
+      "community": 1,
+      "norm_label": "wardrobescreen()"
+    },
+    {
       "label": "WardrobeViewModel",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L86",
+      "source_location": "L83",
       "_origin": "ast",
       "id": "wardrobeviewmodel",
       "community": 1,
@@ -308,7 +538,7 @@
       "label": "SearchBar()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L251",
+      "source_location": "L239",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_searchbar",
       "community": 1,
@@ -318,9 +548,9 @@
       "label": "Modifier",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L251",
+      "source_location": "L239",
       "_origin": "ast",
-      "id": "modifier",
+      "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_modifier",
       "community": 1,
       "norm_label": "modifier"
     },
@@ -328,7 +558,7 @@
       "label": "FilterRow()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L303",
+      "source_location": "L291",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_filterrow",
       "community": 1,
@@ -338,37 +568,17 @@
       "label": "WardrobeFilter",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L303",
+      "source_location": "L291",
       "_origin": "ast",
       "id": "wardrobefilter",
       "community": 1,
       "norm_label": "wardrobefilter"
     },
     {
-      "label": "SortSheet()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L339",
-      "_origin": "ast",
-      "id": "wardrobe_wardrobescreen_sortsheet",
-      "community": 1,
-      "norm_label": "sortsheet()"
-    },
-    {
-      "label": "WardrobeSort",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L339",
-      "_origin": "ast",
-      "id": "wardrobesort",
-      "community": 1,
-      "norm_label": "wardrobesort"
-    },
-    {
       "label": "ClothingCard()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L405",
+      "source_location": "L327",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_clothingcard",
       "community": 1,
@@ -378,37 +588,17 @@
       "label": "ClothingItem",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L405",
+      "source_location": "L327",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_clothingitem",
       "community": 1,
       "norm_label": "clothingitem"
     },
     {
-      "label": "ViewModeSheet()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L465",
-      "_origin": "ast",
-      "id": "wardrobe_wardrobescreen_viewmodesheet",
-      "community": 1,
-      "norm_label": "viewmodesheet()"
-    },
-    {
-      "label": "WardrobeViewMode",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L465",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_wardrobeviewmode",
-      "community": 1,
-      "norm_label": "wardrobeviewmode"
-    },
-    {
       "label": "ClothingListRow()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L538",
+      "source_location": "L375",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_clothinglistrow",
       "community": 1,
@@ -418,7 +608,7 @@
       "label": "CompactCard()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L596",
+      "source_location": "L420",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_compactcard",
       "community": 1,
@@ -428,7 +618,7 @@
       "label": "EmptyState()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L649",
+      "source_location": "L460",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_emptystate",
       "community": 1,
@@ -438,7 +628,7 @@
       "label": "Boolean",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L649",
+      "source_location": "L460",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_boolean",
       "community": 1,
@@ -478,7 +668,7 @@
       "label": "WardrobeViewModel",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
-      "source_location": "L37",
+      "source_location": "L45",
       "_origin": "ast",
       "id": "wardrobe_wardrobeviewmodel_wardrobeviewmodel",
       "community": 27,
@@ -491,14 +681,14 @@
       "source_location": "",
       "_origin": "ast",
       "id": "viewmodel",
-      "community": 76,
+      "community": 30,
       "norm_label": "viewmodel"
     },
     {
       "label": "StateFlow",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
-      "source_location": "L44",
+      "source_location": "L52",
       "_origin": "ast",
       "id": "stateflow",
       "community": 27,
@@ -508,19 +698,29 @@
       "label": "String",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
-      "source_location": "L47",
+      "source_location": "L55",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobeviewmodel_kt_string",
       "community": 27,
       "norm_label": "string"
     },
     {
+      "label": "WardrobeViewMode",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
+      "source_location": "L60",
+      "_origin": "ast",
+      "id": "wardrobeviewmode",
+      "community": 27,
+      "norm_label": "wardrobeviewmode"
+    },
+    {
       "label": "List",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
-      "source_location": "L52",
+      "source_location": "L64",
       "_origin": "ast",
-      "id": "list",
+      "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobeviewmodel_kt_list",
       "community": 27,
       "norm_label": "list"
     },
@@ -528,7 +728,7 @@
       "label": "ClothingItem",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
-      "source_location": "L52",
+      "source_location": "L64",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobeviewmodel_kt_clothingitem",
       "community": 27,
@@ -538,7 +738,7 @@
       "label": ".setFilter()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
-      "source_location": "L79",
+      "source_location": "L91",
       "_origin": "ast",
       "id": "wardrobe_wardrobeviewmodel_wardrobeviewmodel_setfilter",
       "community": 27,
@@ -548,7 +748,7 @@
       "label": ".setSearchQuery()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
-      "source_location": "L83",
+      "source_location": "L95",
       "_origin": "ast",
       "id": "wardrobe_wardrobeviewmodel_wardrobeviewmodel_setsearchquery",
       "community": 27,
@@ -558,31 +758,221 @@
       "label": ".setSort()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
-      "source_location": "L87",
+      "source_location": "L99",
       "_origin": "ast",
       "id": "wardrobe_wardrobeviewmodel_wardrobeviewmodel_setsort",
       "community": 27,
       "norm_label": ".setsort()"
     },
     {
-      "label": "WardrobeViewMode",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
-      "source_location": "L91",
-      "_origin": "ast",
-      "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobeviewmodel_kt_wardrobeviewmode",
-      "community": 27,
-      "norm_label": "wardrobeviewmode"
-    },
-    {
       "label": ".setViewMode()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
-      "source_location": "L95",
+      "source_location": "L103",
       "_origin": "ast",
       "id": "wardrobe_wardrobeviewmodel_wardrobeviewmodel_setviewmode",
       "community": 27,
       "norm_label": ".setviewmode()"
+    },
+    {
+      "label": "AppSettings.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/AppSettings.kt",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 48,
+      "norm_label": "appsettings.kt",
+      "id": "settings_appsettings"
+    },
+    {
+      "label": "AppSettings",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/AppSettings.kt",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 48,
+      "norm_label": "appsettings",
+      "id": "settings_appsettings_appsettings"
+    },
+    {
+      "label": "SettingsRepository.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "settingsrepository.kt",
+      "id": "settings_settingsrepository"
+    },
+    {
+      "label": "SettingsRepository",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L17",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "settingsrepository",
+      "id": "settings_settingsrepository_settingsrepository"
+    },
+    {
+      "label": "Keys",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L21",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "keys",
+      "id": "settings_settingsrepository_keys"
+    },
+    {
+      "label": "Flow",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L31",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "flow",
+      "id": "flow"
+    },
+    {
+      "label": "AppSettings",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L31",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "appsettings",
+      "id": "appsettings"
+    },
+    {
+      "label": ".setThemeMode()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L51",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": ".setthememode()",
+      "id": "settings_settingsrepository_settingsrepository_setthememode"
+    },
+    {
+      "label": "ThemeMode",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L51",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "thememode",
+      "id": "thememode"
+    },
+    {
+      "label": ".setDynamicColor()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L55",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": ".setdynamiccolor()",
+      "id": "settings_settingsrepository_settingsrepository_setdynamiccolor"
+    },
+    {
+      "label": "Boolean",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L55",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "boolean",
+      "id": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_boolean"
+    },
+    {
+      "label": ".setLaundryThreshold()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L59",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": ".setlaundrythreshold()",
+      "id": "settings_settingsrepository_settingsrepository_setlaundrythreshold"
+    },
+    {
+      "label": ".setUpdateNotificationsEnabled()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L67",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": ".setupdatenotificationsenabled()",
+      "id": "settings_settingsrepository_settingsrepository_setupdatenotificationsenabled"
+    },
+    {
+      "label": ".setShakeToReportEnabled()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L71",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": ".setshaketoreportenabled()",
+      "id": "settings_settingsrepository_settingsrepository_setshaketoreportenabled"
+    },
+    {
+      "label": ".setWardrobeViewMode()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L75",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": ".setwardrobeviewmode()",
+      "id": "settings_settingsrepository_settingsrepository_setwardrobeviewmode"
+    },
+    {
+      "label": "WardrobeViewMode",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L75",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "wardrobeviewmode",
+      "id": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_wardrobeviewmode"
+    },
+    {
+      "label": "String",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L79",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": "string",
+      "id": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_string"
+    },
+    {
+      "label": ".setLastNotifiedUpdateTag()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L83",
+      "_origin": "ast",
+      "community": 21,
+      "norm_label": ".setlastnotifiedupdatetag()",
+      "id": "settings_settingsrepository_settingsrepository_setlastnotifiedupdatetag"
+    },
+    {
+      "label": "WardrobeViewMode.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/WardrobeViewMode.kt",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 88,
+      "norm_label": "wardrobeviewmode.kt",
+      "id": "settings_wardrobeviewmode"
+    },
+    {
+      "label": "WardrobeViewMode",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/WardrobeViewMode.kt",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 88,
+      "norm_label": "wardrobeviewmode",
+      "id": "settings_wardrobeviewmode_wardrobeviewmode"
     },
     {
       "label": "build.gradle.kts",
@@ -3715,166 +4105,6 @@
       "id": "additem_shareitemviewmodel_shareitemviewmodel_oncleared"
     },
     {
-      "label": "CalendarScreen.kt",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 17,
-      "norm_label": "calendarscreen.kt",
-      "id": "calendar_calendarscreen"
-    },
-    {
-      "label": "CalendarScreen()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L62",
-      "_origin": "ast",
-      "community": 17,
-      "norm_label": "calendarscreen()",
-      "id": "calendar_calendarscreen_calendarscreen"
-    },
-    {
-      "label": "CalendarViewModel",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L62",
-      "_origin": "ast",
-      "community": 17,
-      "norm_label": "calendarviewmodel",
-      "id": "calendarviewmodel"
-    },
-    {
-      "label": "WeekdayHeader()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L165",
-      "_origin": "ast",
-      "community": 17,
-      "norm_label": "weekdayheader()",
-      "id": "calendar_calendarscreen_weekdayheader"
-    },
-    {
-      "label": "MonthGrid()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L196",
-      "_origin": "ast",
-      "community": 17,
-      "norm_label": "monthgrid()",
-      "id": "calendar_calendarscreen_monthgrid"
-    },
-    {
-      "label": "YearMonth",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L196",
-      "_origin": "ast",
-      "community": 17,
-      "norm_label": "yearmonth",
-      "id": "yearmonth"
-    },
-    {
-      "label": "LocalDate",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L196",
-      "_origin": "ast",
-      "community": 17,
-      "norm_label": "localdate",
-      "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_localdate"
-    },
-    {
-      "label": "Set",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L196",
-      "_origin": "ast",
-      "community": 17,
-      "norm_label": "set",
-      "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_set"
-    },
-    {
-      "label": "DayCell()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L238",
-      "_origin": "ast",
-      "community": 17,
-      "norm_label": "daycell()",
-      "id": "calendar_calendarscreen_daycell"
-    },
-    {
-      "label": "Boolean",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L238",
-      "_origin": "ast",
-      "community": 17,
-      "norm_label": "boolean",
-      "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_boolean"
-    },
-    {
-      "label": "SelectedDayLabel()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L284",
-      "_origin": "ast",
-      "community": 17,
-      "norm_label": "selecteddaylabel()",
-      "id": "calendar_calendarscreen_selecteddaylabel"
-    },
-    {
-      "label": "WornItemCard()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L296",
-      "_origin": "ast",
-      "community": 17,
-      "norm_label": "wornitemcard()",
-      "id": "calendar_calendarscreen_wornitemcard"
-    },
-    {
-      "label": "ClothingItem",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L296",
-      "_origin": "ast",
-      "community": 17,
-      "norm_label": "clothingitem",
-      "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_clothingitem"
-    },
-    {
-      "label": "sundayBasedIndex()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L331",
-      "_origin": "ast",
-      "community": 17,
-      "norm_label": "sundaybasedindex()",
-      "id": "calendar_calendarscreen_sundaybasedindex"
-    },
-    {
-      "label": "Int",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L331",
-      "_origin": "ast",
-      "community": 17,
-      "norm_label": "int",
-      "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_int"
-    },
-    {
-      "label": "adjustSelection()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L341",
-      "_origin": "ast",
-      "community": 17,
-      "norm_label": "adjustselection()",
-      "id": "calendar_calendarscreen_adjustselection"
-    },
-    {
       "label": "CalendarViewModel.kt",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarViewModel.kt",
@@ -3990,7 +4220,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/components/AppHeaders.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 17,
+      "community": 10,
       "norm_label": "appheaders.kt",
       "id": "components_appheaders"
     },
@@ -4000,7 +4230,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/components/AppHeaders.kt",
       "source_location": "L30",
       "_origin": "ast",
-      "community": 17,
+      "community": 10,
       "norm_label": "largetitleheader()",
       "id": "components_appheaders_largetitleheader"
     },
@@ -4010,7 +4240,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/components/AppHeaders.kt",
       "source_location": "L30",
       "_origin": "ast",
-      "community": 17,
+      "community": 10,
       "norm_label": "string",
       "id": "app_src_main_java_com_app_wardove_ui_components_appheaders_kt_string"
     },
@@ -4020,7 +4250,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/components/AppHeaders.kt",
       "source_location": "L30",
       "_origin": "ast",
-      "community": 17,
+      "community": 10,
       "norm_label": "modifier",
       "id": "app_src_main_java_com_app_wardove_ui_components_appheaders_kt_modifier"
     },
@@ -4080,7 +4310,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 90,
       "norm_label": "historyscreen.kt",
       "id": "history_historyscreen"
     },
@@ -4090,7 +4320,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L58",
       "_origin": "ast",
-      "community": 1,
+      "community": 90,
       "norm_label": "historyscreen()",
       "id": "history_historyscreen_historyscreen"
     },
@@ -4100,7 +4330,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L58",
       "_origin": "ast",
-      "community": 1,
+      "community": 90,
       "norm_label": "historyviewmodel",
       "id": "historyviewmodel"
     },
@@ -4110,7 +4340,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L142",
       "_origin": "ast",
-      "community": 1,
+      "community": 90,
       "norm_label": "cyclerow()",
       "id": "history_historyscreen_cyclerow"
     },
@@ -4120,7 +4350,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L142",
       "_origin": "ast",
-      "community": 1,
+      "community": 90,
       "norm_label": "laundrycycle",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyscreen_kt_laundrycycle"
     },
@@ -4130,7 +4360,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L142",
       "_origin": "ast",
-      "community": 1,
+      "community": 90,
       "norm_label": "boolean",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyscreen_kt_boolean"
     },
@@ -4140,7 +4370,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L142",
       "_origin": "ast",
-      "community": 1,
+      "community": 90,
       "norm_label": "list",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyscreen_kt_list"
     },
@@ -4150,7 +4380,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L142",
       "_origin": "ast",
-      "community": 1,
+      "community": 90,
       "norm_label": "clothingitem",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyscreen_kt_clothingitem"
     },
@@ -4160,7 +4390,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L222",
       "_origin": "ast",
-      "community": 1,
+      "community": 90,
       "norm_label": "formatdate()",
       "id": "history_historyscreen_formatdate"
     },
@@ -4170,7 +4400,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L222",
       "_origin": "ast",
-      "community": 1,
+      "community": 90,
       "norm_label": "long",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyscreen_kt_long"
     },
@@ -4180,7 +4410,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryScreen.kt",
       "source_location": "L222",
       "_origin": "ast",
-      "community": 1,
+      "community": 90,
       "norm_label": "string",
       "id": "app_src_main_java_com_app_wardove_ui_history_historyscreen_kt_string"
     },
@@ -4263,166 +4493,6 @@
       "community": 75,
       "norm_label": ".toggleexpand()",
       "id": "history_historyviewmodel_historyviewmodel_toggleexpand"
-    },
-    {
-      "label": "ItemDetailScreen.kt",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "itemdetailscreen.kt",
-      "id": "itemdetail_itemdetailscreen"
-    },
-    {
-      "label": "ItemDetailScreen()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L68",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "itemdetailscreen()",
-      "id": "itemdetail_itemdetailscreen_itemdetailscreen"
-    },
-    {
-      "label": "Long",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L68",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "long",
-      "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_long"
-    },
-    {
-      "label": "ItemDetailViewModel",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L68",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "itemdetailviewmodel",
-      "id": "itemdetailviewmodel"
-    },
-    {
-      "label": "ItemDetailBody()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L154",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "itemdetailbody()",
-      "id": "itemdetail_itemdetailscreen_itemdetailbody"
-    },
-    {
-      "label": "ClothingItem",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L154",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "clothingitem",
-      "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_clothingitem"
-    },
-    {
-      "label": "List",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L154",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "list",
-      "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_list"
-    },
-    {
-      "label": "WearLog",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L154",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "wearlog",
-      "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_wearlog"
-    },
-    {
-      "label": "Boolean",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L154",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "boolean",
-      "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_boolean"
-    },
-    {
-      "label": "Modifier",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L154",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "modifier",
-      "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_modifier"
-    },
-    {
-      "label": "TagsRow()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L269",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "tagsrow()",
-      "id": "itemdetail_itemdetailscreen_tagsrow"
-    },
-    {
-      "label": "TagPill()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L289",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "tagpill()",
-      "id": "itemdetail_itemdetailscreen_tagpill"
-    },
-    {
-      "label": "String",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L289",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "string",
-      "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_string"
-    },
-    {
-      "label": "Color",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L289",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "color",
-      "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_color"
-    },
-    {
-      "label": "StatBox()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L305",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "statbox()",
-      "id": "itemdetail_itemdetailscreen_statbox"
-    },
-    {
-      "label": "WearHistorySection()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L327",
-      "_origin": "ast",
-      "community": 18,
-      "norm_label": "wearhistorysection()",
-      "id": "itemdetail_itemdetailscreen_wearhistorysection"
     },
     {
       "label": "ItemDetailViewModel.kt",
@@ -5340,7 +5410,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 5,
+      "community": 15,
       "norm_label": "applocksettingsscreen.kt",
       "id": "settings_applocksettingsscreen"
     },
@@ -5350,7 +5420,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L46",
       "_origin": "ast",
-      "community": 5,
+      "community": 15,
       "norm_label": "applocksettingsviewmodel",
       "id": "settings_applocksettingsscreen_applocksettingsviewmodel"
     },
@@ -5360,7 +5430,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L51",
       "_origin": "ast",
-      "community": 5,
+      "community": 15,
       "norm_label": "stateflow",
       "id": "app_src_main_java_com_app_wardove_ui_settings_applocksettingsscreen_kt_stateflow"
     },
@@ -5370,7 +5440,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L51",
       "_origin": "ast",
-      "community": 5,
+      "community": 15,
       "norm_label": "boolean",
       "id": "app_src_main_java_com_app_wardove_ui_settings_applocksettingsscreen_kt_boolean"
     },
@@ -5380,7 +5450,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L57",
       "_origin": "ast",
-      "community": 5,
+      "community": 15,
       "norm_label": ".setapplockenabled()",
       "id": "settings_applocksettingsscreen_applocksettingsviewmodel_setapplockenabled"
     },
@@ -5390,7 +5460,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L62",
       "_origin": "ast",
-      "community": 5,
+      "community": 15,
       "norm_label": "applocksettingsscreen()",
       "id": "settings_applocksettingsscreen_applocksettingsscreen"
     },
@@ -5400,7 +5470,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L147",
       "_origin": "ast",
-      "community": 5,
+      "community": 15,
       "norm_label": "applockswitchrow()",
       "id": "settings_applocksettingsscreen_applockswitchrow"
     },
@@ -5410,7 +5480,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L147",
       "_origin": "ast",
-      "community": 5,
+      "community": 15,
       "norm_label": "string",
       "id": "app_src_main_java_com_app_wardove_ui_settings_applocksettingsscreen_kt_string"
     },
@@ -6300,7 +6370,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 3,
+      "community": 17,
       "norm_label": "updatescreen.kt",
       "id": "update_updatescreen"
     },
@@ -6310,7 +6380,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
       "source_location": "L59",
       "_origin": "ast",
-      "community": 3,
+      "community": 17,
       "norm_label": "updatescreen()",
       "id": "update_updatescreen_updatescreen"
     },
@@ -6320,7 +6390,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
       "source_location": "L59",
       "_origin": "ast",
-      "community": 3,
+      "community": 17,
       "norm_label": "updateviewmodel",
       "id": "updateviewmodel"
     },
@@ -6330,7 +6400,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
       "source_location": "L186",
       "_origin": "ast",
-      "community": 3,
+      "community": 17,
       "norm_label": "currentversioncard()",
       "id": "update_updatescreen_currentversioncard"
     },
@@ -6340,7 +6410,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
       "source_location": "L214",
       "_origin": "ast",
-      "community": 3,
+      "community": 17,
       "norm_label": "latestreleasecard()",
       "id": "update_updatescreen_latestreleasecard"
     },
@@ -6350,7 +6420,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
       "source_location": "L214",
       "_origin": "ast",
-      "community": 3,
+      "community": 17,
       "norm_label": "githubrelease",
       "id": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_githubrelease"
     },
@@ -6360,7 +6430,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
       "source_location": "L214",
       "_origin": "ast",
-      "community": 3,
+      "community": 17,
       "norm_label": "boolean",
       "id": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_boolean"
     },
@@ -6370,7 +6440,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
       "source_location": "L214",
       "_origin": "ast",
-      "community": 3,
+      "community": 17,
       "norm_label": "installstate",
       "id": "installstate"
     },
@@ -6380,7 +6450,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
       "source_location": "L355",
       "_origin": "ast",
-      "community": 3,
+      "community": 17,
       "norm_label": "releasehistoryitem()",
       "id": "update_updatescreen_releasehistoryitem"
     },
@@ -6390,7 +6460,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
       "source_location": "L390",
       "_origin": "ast",
-      "community": 3,
+      "community": 17,
       "norm_label": "formatbytes()",
       "id": "update_updatescreen_formatbytes"
     },
@@ -6400,7 +6470,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
       "source_location": "L390",
       "_origin": "ast",
-      "community": 3,
+      "community": 17,
       "norm_label": "long",
       "id": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_long"
     },
@@ -6410,7 +6480,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
       "source_location": "L390",
       "_origin": "ast",
-      "community": 3,
+      "community": 17,
       "norm_label": "string",
       "id": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_string"
     },
@@ -6420,7 +6490,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
       "source_location": "L395",
       "_origin": "ast",
-      "community": 3,
+      "community": 17,
       "norm_label": "formatdate()",
       "id": "update_updatescreen_formatdate"
     },
@@ -6430,7 +6500,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": "updateviewmodel.kt",
       "id": "update_updateviewmodel"
     },
@@ -6440,7 +6510,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L22",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": "releasesstate",
       "id": "update_updateviewmodel_releasesstate"
     },
@@ -6450,7 +6520,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L23",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": "loading",
       "id": "update_updateviewmodel_loading"
     },
@@ -6460,7 +6530,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L24",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": "success",
       "id": "update_updateviewmodel_success"
     },
@@ -6470,7 +6540,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L25",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": "error",
       "id": "update_updateviewmodel_error"
     },
@@ -6480,7 +6550,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L28",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": "installstate",
       "id": "update_updateviewmodel_installstate"
     },
@@ -6490,7 +6560,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L29",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": "idle",
       "id": "update_updateviewmodel_idle"
     },
@@ -6500,7 +6570,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L30",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": "downloading",
       "id": "update_updateviewmodel_downloading"
     },
@@ -6510,7 +6580,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L31",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": "readytoinstall",
       "id": "update_updateviewmodel_readytoinstall"
     },
@@ -6520,7 +6590,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L32",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": "failed",
       "id": "update_updateviewmodel_failed"
     },
@@ -6530,7 +6600,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L35",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": "updateviewmodel",
       "id": "update_updateviewmodel_updateviewmodel"
     },
@@ -6540,7 +6610,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L47",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": "job",
       "id": "job"
     },
@@ -6550,7 +6620,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L48",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": "long",
       "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_long"
     },
@@ -6560,7 +6630,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L55",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": ".load()",
       "id": "update_updateviewmodel_updateviewmodel_load"
     },
@@ -6600,7 +6670,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L69",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": ".startdownload()",
       "id": "update_updateviewmodel_updateviewmodel_startdownload"
     },
@@ -6610,7 +6680,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L69",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": "githubasset",
       "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_githubasset"
     },
@@ -6620,7 +6690,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L92",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": ".buildinstallintent()",
       "id": "update_updateviewmodel_updateviewmodel_buildinstallintent"
     },
@@ -6630,7 +6700,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L92",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": "intent",
       "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_intent"
     },
@@ -6640,7 +6710,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L102",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": ".deleteapk()",
       "id": "update_updateviewmodel_updateviewmodel_deleteapk"
     },
@@ -6650,7 +6720,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
       "source_location": "L106",
       "_origin": "ast",
-      "community": 4,
+      "community": 3,
       "norm_label": ".resetinstall()",
       "id": "update_updateviewmodel_updateviewmodel_resetinstall"
     },
@@ -9494,7 +9564,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 26,
+      "community": 0,
       "norm_label": "appsettings datastore",
       "id": "wardove_app_settings_datastore"
     },
@@ -9533,7 +9603,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 26,
+      "community": 0,
       "norm_label": "hilt dependency injection (singletoncomponent)",
       "id": "wardove_hilt_di"
     },
@@ -9559,7 +9629,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 26,
+      "community": 0,
       "norm_label": "repositorymodule (hilt)",
       "id": "wardove_repository_module"
     },
@@ -9572,7 +9642,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 26,
+      "community": 0,
       "norm_label": "settingsmodule (hilt)",
       "id": "wardove_settings_module"
     },
@@ -10057,7 +10127,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 26,
+      "community": 0,
       "norm_label": "appearance settings (theme mode, material you dynamic color)",
       "id": "features_settings_appearance_settings"
     },
@@ -10352,179 +10422,335 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/AppSettings.kt",
-      "source_location": "L3",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L341",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "settings_appsettings",
-      "target": "settings_appsettings_appsettings"
+      "source": "calendar_calendarscreen",
+      "target": "calendar_calendarscreen_adjustselection"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L21",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L61",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "settings_settingsrepository",
-      "target": "settings_settingsrepository_keys"
+      "source": "calendar_calendarscreen",
+      "target": "calendar_calendarscreen_calendarscreen"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L17",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L237",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "settings_settingsrepository",
-      "target": "settings_settingsrepository_settingsrepository"
+      "source": "calendar_calendarscreen",
+      "target": "calendar_calendarscreen_daycell"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L195",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "calendar_calendarscreen",
+      "target": "calendar_calendarscreen_monthgrid"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L283",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "calendar_calendarscreen",
+      "target": "calendar_calendarscreen_selecteddaylabel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L331",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "calendar_calendarscreen",
+      "target": "calendar_calendarscreen_sundaybasedindex"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L164",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "calendar_calendarscreen",
+      "target": "calendar_calendarscreen_weekdayheader"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L295",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "calendar_calendarscreen",
+      "target": "calendar_calendarscreen_wornitemcard"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L89",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "calendar_calendarscreen_calendarscreen",
+      "target": "calendar_calendarscreen_adjustselection"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L119",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "calendar_calendarscreen_calendarscreen",
+      "target": "calendar_calendarscreen_monthgrid"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L133",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "calendar_calendarscreen_calendarscreen",
+      "target": "calendar_calendarscreen_selecteddaylabel"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L117",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "calendar_calendarscreen_calendarscreen",
+      "target": "calendar_calendarscreen_weekdayheader"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L156",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "calendar_calendarscreen_calendarscreen",
+      "target": "calendar_calendarscreen_wornitemcard"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L65",
-      "weight": 1.0,
-      "context": "generic_arg",
-      "confidence_score": 1.0,
-      "source": "settings_settingsrepository_settingsrepository",
-      "target": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_string"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L31",
-      "weight": 1.0,
-      "context": "generic_arg",
-      "source": "settings_settingsrepository_settingsrepository",
-      "target": "appsettings",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L79",
-      "weight": 1.0,
-      "context": "field",
-      "source": "settings_settingsrepository_settingsrepository",
-      "target": "flow",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L49",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "settings_settingsrepository_settingsrepository",
-      "target": "settings_settingsrepository_settingsrepository_setdynamiccolor"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L69",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "settings_settingsrepository_settingsrepository",
-      "target": "settings_settingsrepository_settingsrepository_setlastnotifiedupdatetag"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L53",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "settings_settingsrepository_settingsrepository",
-      "target": "settings_settingsrepository_settingsrepository_setlaundrythreshold"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L67",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "settings_settingsrepository_settingsrepository",
-      "target": "settings_settingsrepository_settingsrepository_setshaketoreportenabled"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L45",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "settings_settingsrepository_settingsrepository",
-      "target": "settings_settingsrepository_settingsrepository_setthememode"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L61",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "settings_settingsrepository_settingsrepository",
-      "target": "settings_settingsrepository_settingsrepository_setupdatenotificationsenabled"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L75",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "settings_settingsrepository_settingsrepository",
-      "target": "settings_settingsrepository_settingsrepository_setwardrobeviewmode"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L51",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "source": "settings_settingsrepository_settingsrepository_setthememode",
-      "target": "thememode",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L49",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "settings_settingsrepository_settingsrepository_setdynamiccolor",
-      "target": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_boolean"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L67",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "settings_settingsrepository_settingsrepository_setshaketoreportenabled",
-      "target": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_boolean"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L61",
       "weight": 1.0,
       "context": "parameter_type",
       "confidence_score": 1.0,
-      "source": "settings_settingsrepository_settingsrepository_setupdatenotificationsenabled",
-      "target": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_boolean"
+      "source": "calendar_calendarscreen_calendarscreen",
+      "target": "calendarviewmodel"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L80",
+      "weight": 1.0,
+      "source": "calendar_calendarscreen_calendarscreen",
+      "target": "components_appheaders_largetitleheader"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
+      "source_location": "L201",
+      "weight": 1.0,
+      "source": "navigation_wardovenavhost_wardovenavhost",
+      "target": "calendar_calendarscreen_calendarscreen"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L222",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "calendar_calendarscreen_monthgrid",
+      "target": "calendar_calendarscreen_daycell"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L204",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "calendar_calendarscreen_monthgrid",
+      "target": "calendar_calendarscreen_sundaybasedindex"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L197",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "calendar_calendarscreen_monthgrid",
+      "target": "localdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L197",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "calendar_calendarscreen_monthgrid",
+      "target": "set",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L195",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "calendar_calendarscreen_monthgrid",
+      "target": "yearmonth"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L341",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "calendar_calendarscreen_adjustselection",
+      "target": "yearmonth"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L237",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "calendar_calendarscreen_daycell",
+      "target": "yearmonth"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L338",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "calendar_calendarscreen_adjustselection",
+      "target": "localdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L239",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "calendar_calendarscreen_daycell",
+      "target": "localdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L281",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "calendar_calendarscreen_selecteddaylabel",
+      "target": "localdate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L237",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "calendar_calendarscreen_daycell",
+      "target": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_boolean"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L275",
+      "weight": 1.0,
+      "source": "calendar_calendarscreen_daycell",
+      "target": "components_dot_dot"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L295",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "calendar_calendarscreen_wornitemcard",
+      "target": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_clothingitem"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L305",
+      "weight": 1.0,
+      "source": "calendar_calendarscreen_wornitemcard",
+      "target": "components_clothingimage_clothingimage"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L328",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "calendar_calendarscreen_sundaybasedindex",
+      "target": "int",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -10533,41 +10759,441 @@
       "source_location": "L59",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "settings_settingsrepository_settingsrepository_setlaundrythreshold",
-      "target": "int",
+      "target": "int"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/components/Dot.kt",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "components_dot",
+      "target": "components_dot_dot",
       "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L75",
+      "source_file": "app/src/main/java/com/app/wardove/ui/components/Dot.kt",
+      "source_location": "L13",
       "weight": 1.0,
       "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "settings_settingsrepository_settingsrepository_setwardrobeviewmode",
-      "target": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_wardrobeviewmode"
+      "source": "components_dot_dot",
+      "target": "app_src_main_java_com_app_wardove_ui_components_dot_kt_color",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L69",
+      "source_file": "app/src/main/java/com/app/wardove/ui/components/Dot.kt",
+      "source_location": "L13",
       "weight": 1.0,
       "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "settings_settingsrepository_settingsrepository_setlastnotifiedupdatetag",
-      "target": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_string"
+      "source": "components_dot_dot",
+      "target": "app_src_main_java_com_app_wardove_ui_components_dot_kt_modifier",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/components/Dot.kt",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "components_dot_dot",
+      "target": "dp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L350",
+      "weight": 1.0,
+      "source": "itemdetail_itemdetailscreen_wearhistorysection",
+      "target": "components_dot_dot"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
+      "source_location": "L368",
+      "weight": 1.0,
+      "source": "wardrobe_wardrobescreen_clothingcard",
+      "target": "components_dot_dot"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
+      "source_location": "L415",
+      "weight": 1.0,
+      "source": "wardrobe_wardrobescreen_clothinglistrow",
+      "target": "components_dot_dot"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
+      "source_location": "L454",
+      "weight": 1.0,
+      "source": "wardrobe_wardrobescreen_compactcard",
+      "target": "components_dot_dot"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/WardrobeViewMode.kt",
-      "source_location": "L3",
+      "source_file": "app/src/main/java/com/app/wardove/ui/components/SingleSelectSheet.kt",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "components_singleselectsheet",
+      "target": "components_singleselectsheet_singleselectsheet",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/components/SingleSelectSheet.kt",
+      "source_location": "L27",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "components_singleselectsheet_singleselectsheet",
+      "target": "app_src_main_java_com_app_wardove_ui_components_singleselectsheet_kt_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/components/SingleSelectSheet.kt",
+      "source_location": "L27",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "components_singleselectsheet_singleselectsheet",
+      "target": "app_src_main_java_com_app_wardove_ui_components_singleselectsheet_kt_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/components/SingleSelectSheet.kt",
+      "source_location": "L27",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "components_singleselectsheet_singleselectsheet",
+      "target": "t",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
+      "source_location": "L210",
+      "weight": 1.0,
+      "source": "wardrobe_wardrobescreen_wardrobescreen",
+      "target": "components_singleselectsheet_singleselectsheet"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L153",
       "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "settings_wardrobeviewmode",
-      "target": "settings_wardrobeviewmode_wardrobeviewmode"
+      "source": "itemdetail_itemdetailscreen",
+      "target": "itemdetail_itemdetailscreen_itemdetailbody"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen",
+      "target": "itemdetail_itemdetailscreen_itemdetailscreen"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L310",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen",
+      "target": "itemdetail_itemdetailscreen_statbox"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L294",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen",
+      "target": "itemdetail_itemdetailscreen_tagpill"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L274",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen",
+      "target": "itemdetail_itemdetailscreen_tagsrow"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L332",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen",
+      "target": "itemdetail_itemdetailscreen_wearhistorysection"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L118",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen_itemdetailscreen",
+      "target": "itemdetail_itemdetailscreen_itemdetailbody"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L67",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen_itemdetailscreen",
+      "target": "itemdetailviewmodel"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L67",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "itemdetail_itemdetailscreen_itemdetailscreen",
+      "target": "long",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "navigation_wardovenavhost_wardovenavhost",
+      "target": "itemdetail_itemdetailscreen_itemdetailscreen"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L153",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen_itemdetailbody",
+      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_boolean"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L153",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen_itemdetailbody",
+      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_clothingitem"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L153",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen_itemdetailbody",
+      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_list"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L153",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen_itemdetailbody",
+      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_modifier"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L169",
+      "weight": 1.0,
+      "source": "itemdetail_itemdetailscreen_itemdetailbody",
+      "target": "components_clothingimage_clothingimage"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L193",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen_itemdetailbody",
+      "target": "itemdetail_itemdetailscreen_statbox"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L190",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen_itemdetailbody",
+      "target": "itemdetail_itemdetailscreen_tagsrow"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L268",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen_itemdetailbody",
+      "target": "itemdetail_itemdetailscreen_wearhistorysection"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L153",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "itemdetail_itemdetailscreen_itemdetailbody",
+      "target": "wearlog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L274",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen_tagsrow",
+      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_clothingitem"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L332",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen_wearhistorysection",
+      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_list"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L326",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "itemdetail_itemdetailscreen_wearhistorysection",
+      "target": "wearlog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L310",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen_statbox",
+      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_modifier"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L277",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen_tagsrow",
+      "target": "itemdetail_itemdetailscreen_tagpill"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L289",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen_tagpill",
+      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_color"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L294",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen_tagpill",
+      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_string"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
+      "source_location": "L310",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailscreen_statbox",
+      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_string"
     },
     {
       "relation": "contains",
@@ -10633,21 +11259,11 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L284",
+      "source_location": "L75",
       "weight": 1.0,
-      "confidence_score": 1.0,
       "source": "wardrobe_wardrobescreen",
-      "target": "wardrobe_wardrobescreen_sortsheet"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L465",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "wardrobe_wardrobescreen",
-      "target": "wardrobe_wardrobescreen_viewmodesheet"
+      "target": "wardrobe_wardrobescreen_statusdotcolor",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -10662,13 +11278,68 @@
     {
       "relation": "calls",
       "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L120",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
+      "source_location": "L368",
       "weight": 1.0,
-      "source": "navigation_wardovenavhost_wardovenavhost",
-      "target": "wardrobe_wardrobescreen_wardrobescreen"
+      "source": "wardrobe_wardrobescreen_clothingcard",
+      "target": "wardrobe_wardrobescreen_statusdotcolor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
+      "source_location": "L415",
+      "weight": 1.0,
+      "source": "wardrobe_wardrobescreen_clothinglistrow",
+      "target": "wardrobe_wardrobescreen_statusdotcolor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
+      "source_location": "L454",
+      "weight": 1.0,
+      "source": "wardrobe_wardrobescreen_compactcard",
+      "target": "wardrobe_wardrobescreen_statusdotcolor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
+      "source_location": "L75",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "wardrobe_wardrobescreen_statusdotcolor",
+      "target": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_color",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
+      "source_location": "L75",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "wardrobe_wardrobescreen_statusdotcolor",
+      "target": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
+      "source_location": "L196",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "wardrobe_wardrobescreen_searchbar",
+      "target": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_string"
     },
     {
       "relation": "references",
@@ -10680,6 +11351,17 @@
       "confidence_score": 1.0,
       "source": "wardrobe_wardrobescreen_wardrobescreen",
       "target": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_string"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "navigation_wardovenavhost_wardovenavhost",
+      "target": "wardrobe_wardrobescreen_wardrobescreen"
     },
     {
       "relation": "calls",
@@ -10759,28 +11441,6 @@
       "target": "wardrobe_wardrobescreen_searchbar"
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L184",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "wardrobe_wardrobescreen_wardrobescreen",
-      "target": "wardrobe_wardrobescreen_sortsheet"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L239",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "wardrobe_wardrobescreen_wardrobescreen",
-      "target": "wardrobe_wardrobescreen_viewmodesheet"
-    },
-    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
@@ -10795,44 +11455,33 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L196",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "wardrobe_wardrobescreen_searchbar",
-      "target": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_string"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L251",
+      "source_location": "L239",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "wardrobe_wardrobescreen_searchbar",
-      "target": "modifier",
+      "target": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_modifier",
       "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L649",
+      "source_location": "L460",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "wardrobe_wardrobescreen_emptystate",
-      "target": "modifier",
+      "target": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_modifier",
       "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L303",
+      "source_location": "L291",
       "weight": 1.0,
       "context": "parameter_type",
       "source": "wardrobe_wardrobescreen_filterrow",
-      "target": "modifier",
+      "target": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_modifier",
       "confidence_score": 1.0
     },
     {
@@ -10845,17 +11494,6 @@
       "confidence_score": 1.0,
       "source": "wardrobe_wardrobescreen_filterrow",
       "target": "wardrobefilter"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L284",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "wardrobe_wardrobescreen_sortsheet",
-      "target": "wardrobesort"
     },
     {
       "relation": "references",
@@ -10900,17 +11538,6 @@
       "confidence_score": 1.0,
       "source": "wardrobe_wardrobescreen_compactcard",
       "target": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_clothingitem"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L465",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "wardrobe_wardrobescreen_viewmodesheet",
-      "target": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_wardrobeviewmode"
     },
     {
       "relation": "calls",
@@ -11034,6 +11661,17 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
+      "source_location": "L64",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "wardrobe_wardrobeviewmodel_wardrobeviewmodel",
+      "target": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobeviewmodel_kt_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
       "source_location": "L42",
       "weight": 1.0,
       "context": "generic_arg",
@@ -11047,32 +11685,10 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
       "source_location": "L91",
       "weight": 1.0,
-      "context": "generic_arg",
+      "context": "field",
       "confidence_score": 1.0,
       "source": "wardrobe_wardrobeviewmodel_wardrobeviewmodel",
-      "target": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobeviewmodel_kt_wardrobeviewmode"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
-      "source_location": "L52",
-      "weight": 1.0,
-      "context": "generic_arg",
-      "source": "wardrobe_wardrobeviewmodel_wardrobeviewmodel",
-      "target": "list",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
-      "source_location": "L91",
-      "weight": 1.0,
-      "context": "field",
-      "source": "wardrobe_wardrobeviewmodel_wardrobeviewmodel",
-      "target": "stateflow",
-      "confidence_score": 1.0
+      "target": "stateflow"
     },
     {
       "relation": "inherits",
@@ -11123,6 +11739,17 @@
       "confidence_score": 1.0,
       "source": "wardrobe_wardrobeviewmodel_wardrobeviewmodel",
       "target": "wardrobe_wardrobeviewmodel_wardrobeviewmodel_setviewmode"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
+      "source_location": "L60",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "source": "wardrobe_wardrobeviewmodel_wardrobeviewmodel",
+      "target": "wardrobeviewmode",
+      "confidence_score": 1.0
     },
     {
       "relation": "inherits",
@@ -11259,12 +11886,221 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
-      "source_location": "L95",
+      "source_location": "L103",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "wardrobe_wardrobeviewmodel_wardrobeviewmodel_setviewmode",
+      "target": "wardrobeviewmode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/AppSettings.kt",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "settings_appsettings",
+      "target": "settings_appsettings_appsettings"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "settings_settingsrepository",
+      "target": "settings_settingsrepository_keys"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "settings_settingsrepository",
+      "target": "settings_settingsrepository_settingsrepository"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L65",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "confidence_score": 1.0,
+      "source": "settings_settingsrepository_settingsrepository",
+      "target": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_string"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L31",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "confidence_score": 1.0,
+      "source": "settings_settingsrepository_settingsrepository",
+      "target": "appsettings"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L79",
+      "weight": 1.0,
+      "context": "field",
+      "confidence_score": 1.0,
+      "source": "settings_settingsrepository_settingsrepository",
+      "target": "flow"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "settings_settingsrepository_settingsrepository",
+      "target": "settings_settingsrepository_settingsrepository_setdynamiccolor"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L69",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "settings_settingsrepository_settingsrepository",
+      "target": "settings_settingsrepository_settingsrepository_setlastnotifiedupdatetag"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L53",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "settings_settingsrepository_settingsrepository",
+      "target": "settings_settingsrepository_settingsrepository_setlaundrythreshold"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "settings_settingsrepository_settingsrepository",
+      "target": "settings_settingsrepository_settingsrepository_setshaketoreportenabled"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L45",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "settings_settingsrepository_settingsrepository",
+      "target": "settings_settingsrepository_settingsrepository_setthememode"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L61",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "settings_settingsrepository_settingsrepository",
+      "target": "settings_settingsrepository_settingsrepository_setupdatenotificationsenabled"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L75",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "settings_settingsrepository_settingsrepository",
+      "target": "settings_settingsrepository_settingsrepository_setwardrobeviewmode"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L51",
       "weight": 1.0,
       "context": "parameter_type",
       "confidence_score": 1.0,
-      "source": "wardrobe_wardrobeviewmodel_wardrobeviewmodel_setviewmode",
-      "target": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobeviewmodel_kt_wardrobeviewmode"
+      "source": "settings_settingsrepository_settingsrepository_setthememode",
+      "target": "thememode"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L49",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "settings_settingsrepository_settingsrepository_setdynamiccolor",
+      "target": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_boolean"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L67",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "settings_settingsrepository_settingsrepository_setshaketoreportenabled",
+      "target": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_boolean"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L61",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "settings_settingsrepository_settingsrepository_setupdatenotificationsenabled",
+      "target": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_boolean"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L75",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "settings_settingsrepository_settingsrepository_setwardrobeviewmode",
+      "target": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_wardrobeviewmode"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L69",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "settings_settingsrepository_settingsrepository_setlastnotifiedupdatetag",
+      "target": "app_src_main_java_com_app_wardove_data_settings_settingsrepository_kt_string"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/WardrobeViewMode.kt",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "settings_wardrobeviewmode",
+      "target": "settings_wardrobeviewmode_wardrobeviewmode"
     },
     {
       "relation": "contains",
@@ -16253,328 +17089,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L341",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen",
-      "target": "calendar_calendarscreen_adjustselection"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L61",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen",
-      "target": "calendar_calendarscreen_calendarscreen"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L237",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen",
-      "target": "calendar_calendarscreen_daycell"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L195",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen",
-      "target": "calendar_calendarscreen_monthgrid"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L283",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen",
-      "target": "calendar_calendarscreen_selecteddaylabel"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L331",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen",
-      "target": "calendar_calendarscreen_sundaybasedindex"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L164",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen",
-      "target": "calendar_calendarscreen_weekdayheader"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L295",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen",
-      "target": "calendar_calendarscreen_wornitemcard"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L89",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen_calendarscreen",
-      "target": "calendar_calendarscreen_adjustselection"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L119",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen_calendarscreen",
-      "target": "calendar_calendarscreen_monthgrid"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L133",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen_calendarscreen",
-      "target": "calendar_calendarscreen_selecteddaylabel"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L117",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen_calendarscreen",
-      "target": "calendar_calendarscreen_weekdayheader"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L156",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen_calendarscreen",
-      "target": "calendar_calendarscreen_wornitemcard"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L61",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen_calendarscreen",
-      "target": "calendarviewmodel"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L80",
-      "weight": 1.0,
-      "source": "calendar_calendarscreen_calendarscreen",
-      "target": "components_appheaders_largetitleheader"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L201",
-      "weight": 1.0,
-      "source": "navigation_wardovenavhost_wardovenavhost",
-      "target": "calendar_calendarscreen_calendarscreen"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L196",
-      "weight": 1.0,
-      "context": "generic_arg",
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen_monthgrid",
-      "target": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_localdate"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L195",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen_monthgrid",
-      "target": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_set"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L222",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen_monthgrid",
-      "target": "calendar_calendarscreen_daycell"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L204",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen_monthgrid",
-      "target": "calendar_calendarscreen_sundaybasedindex"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L195",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen_monthgrid",
-      "target": "yearmonth"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L341",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen_adjustselection",
-      "target": "yearmonth"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L237",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen_daycell",
-      "target": "yearmonth"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L341",
-      "weight": 1.0,
-      "context": "return_type",
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen_adjustselection",
-      "target": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_localdate"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L238",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen_daycell",
-      "target": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_localdate"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L284",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen_selecteddaylabel",
-      "target": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_localdate"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L237",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen_daycell",
-      "target": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_boolean"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L295",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen_wornitemcard",
-      "target": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_clothingitem"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L305",
-      "weight": 1.0,
-      "source": "calendar_calendarscreen_wornitemcard",
-      "target": "components_clothingimage_clothingimage"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L331",
-      "weight": 1.0,
-      "context": "return_type",
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen_sundaybasedindex",
-      "target": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_int"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarViewModel.kt",
       "source_location": "L21",
       "weight": 1.0,
@@ -16807,17 +17321,6 @@
       "source_location": "L194",
       "weight": 1.0,
       "source": "history_historyscreen_cyclerow",
-      "target": "components_clothingimage_clothingimage"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L169",
-      "weight": 1.0,
-      "source": "itemdetail_itemdetailscreen_itemdetailbody",
       "target": "components_clothingimage_clothingimage"
     },
     {
@@ -17089,286 +17592,6 @@
       "confidence_score": 1.0,
       "source": "history_historyviewmodel_historyviewmodel_toggleexpand",
       "target": "app_src_main_java_com_app_wardove_ui_history_historyviewmodel_kt_long"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L153",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen",
-      "target": "itemdetail_itemdetailscreen_itemdetailbody"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L67",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen",
-      "target": "itemdetail_itemdetailscreen_itemdetailscreen"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L310",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen",
-      "target": "itemdetail_itemdetailscreen_statbox"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L294",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen",
-      "target": "itemdetail_itemdetailscreen_tagpill"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L274",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen",
-      "target": "itemdetail_itemdetailscreen_tagsrow"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L332",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen",
-      "target": "itemdetail_itemdetailscreen_wearhistorysection"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L67",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen_itemdetailscreen",
-      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_long"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L118",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen_itemdetailscreen",
-      "target": "itemdetail_itemdetailscreen_itemdetailbody"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L67",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen_itemdetailscreen",
-      "target": "itemdetailviewmodel"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L168",
-      "weight": 1.0,
-      "source": "navigation_wardovenavhost_wardovenavhost",
-      "target": "itemdetail_itemdetailscreen_itemdetailscreen"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L153",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen_itemdetailbody",
-      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_boolean"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L153",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen_itemdetailbody",
-      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_clothingitem"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L153",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen_itemdetailbody",
-      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_list"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L153",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen_itemdetailbody",
-      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_modifier"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L154",
-      "weight": 1.0,
-      "context": "generic_arg",
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen_itemdetailbody",
-      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_wearlog"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L193",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen_itemdetailbody",
-      "target": "itemdetail_itemdetailscreen_statbox"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L190",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen_itemdetailbody",
-      "target": "itemdetail_itemdetailscreen_tagsrow"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L268",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen_itemdetailbody",
-      "target": "itemdetail_itemdetailscreen_wearhistorysection"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L274",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen_tagsrow",
-      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_clothingitem"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L332",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen_wearhistorysection",
-      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_list"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L327",
-      "weight": 1.0,
-      "context": "generic_arg",
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen_wearhistorysection",
-      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_wearlog"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L310",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen_statbox",
-      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_modifier"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L277",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen_tagsrow",
-      "target": "itemdetail_itemdetailscreen_tagpill"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L289",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen_tagpill",
-      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_color"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L294",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen_tagpill",
-      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_string"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L310",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailscreen_statbox",
-      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_string"
     },
     {
       "relation": "contains",
@@ -24558,5 +24781,5 @@
       "source_file": "CLAUDE.md"
     }
   ],
-  "built_at_commit": "ff23f40a3a3a288254d0f18cdac3bdbe32e8d908"
+  "built_at_commit": "fa6e08740b417ef81534247de2c4af73f7e09e9e"
 }
