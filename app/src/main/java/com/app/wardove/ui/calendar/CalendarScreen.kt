@@ -16,9 +16,10 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import com.app.wardove.ui.components.LargeTitleHeader
 import com.composables.icons.lucide.ChevronLeft
 import com.composables.icons.lucide.ChevronRight
@@ -32,16 +33,16 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -60,7 +61,9 @@ import java.time.DayOfWeek
 import java.time.LocalDate
 import java.time.YearMonth
 import java.time.format.TextStyle
+import java.time.temporal.ChronoUnit
 import java.util.Locale
+import kotlinx.coroutines.launch
 
 @Composable
 fun CalendarScreen(
@@ -71,19 +74,43 @@ fun CalendarScreen(
     val datesWithWear by viewModel.datesWithWear.collectAsState()
     val itemsForDay by viewModel.itemsForSelectedDate.collectAsState()
     val today = remember { LocalDate.now() }
-    var visibleMonth by remember { mutableStateOf(YearMonth.from(selectedDate)) }
+    val currentMonth = remember(today) { YearMonth.from(today) }
+
+    // The current month is the LAST page, so the user can never page into the
+    // future. ~100 years of history back is effectively unbounded.
+    val pageCount = remember { MONTHS_BACK + 1 }
+    fun pageToMonth(page: Int): YearMonth =
+        currentMonth.minusMonths((pageCount - 1 - page).toLong())
+    fun monthToPage(month: YearMonth): Int =
+        pageCount - 1 - ChronoUnit.MONTHS.between(month, currentMonth).toInt()
+
+    val pagerState = rememberPagerState(
+        initialPage = monthToPage(YearMonth.from(selectedDate)),
+        pageCount = { pageCount }
+    )
+    val scope = rememberCoroutineScope()
+    val visibleMonth = pageToMonth(pagerState.currentPage)
+
+    // When a swipe settles on a new month, move the selection into it (mirrors
+    // the old chevron behaviour). Guard so tapping a day within the month — which
+    // doesn't change the page — doesn't get its selection overwritten.
+    LaunchedEffect(pagerState) {
+        snapshotFlow { pagerState.settledPage }.collect { page ->
+            val settledMonth = pageToMonth(page)
+            val current = viewModel.selectedDate.value
+            if (YearMonth.from(current) != settledMonth) {
+                viewModel.selectDate(adjustSelection(current, settledMonth))
+            }
+        }
+    }
 
     val goToPrevMonth = {
-        val target = visibleMonth.minusMonths(1)
-        visibleMonth = target
-        viewModel.selectDate(adjustSelection(selectedDate, target))
+        scope.launch { pagerState.animateScrollToPage((pagerState.currentPage - 1).coerceAtLeast(0)) }
+        Unit
     }
     val goToNextMonth = {
-        val target = visibleMonth.plusMonths(1)
-        if (!target.isAfter(YearMonth.from(today))) {
-            visibleMonth = target
-            viewModel.selectDate(adjustSelection(selectedDate, target))
-        }
+        scope.launch { pagerState.animateScrollToPage((pagerState.currentPage + 1).coerceAtMost(pageCount - 1)) }
+        Unit
     }
 
     Scaffold(
@@ -116,8 +143,8 @@ fun CalendarScreen(
                                 else MaterialTheme.colorScheme.primary
                             )
                             .clickable(enabled = !isOnToday) {
-                                visibleMonth = YearMonth.from(today)
                                 viewModel.selectDate(today)
+                                scope.launch { pagerState.animateScrollToPage(pageCount - 1) }
                             }
                             .padding(horizontal = 14.dp, vertical = 6.dp)
                     ) {
@@ -145,15 +172,18 @@ fun CalendarScreen(
 
             WeekdayHeader()
 
-            MonthGrid(
-                month = visibleMonth,
-                selectedDate = selectedDate,
-                today = today,
-                datesWithWear = datesWithWear,
-                onSelect = viewModel::selectDate,
-                onSwipePrev = goToPrevMonth,
-                onSwipeNext = goToNextMonth
-            )
+            HorizontalPager(
+                state = pagerState,
+                modifier = Modifier.height(MONTH_GRID_HEIGHT)
+            ) { page ->
+                MonthGrid(
+                    month = pageToMonth(page),
+                    selectedDate = selectedDate,
+                    today = today,
+                    datesWithWear = datesWithWear,
+                    onSelect = viewModel::selectDate
+                )
+            }
 
             HorizontalDivider(
                 color = MaterialTheme.colorScheme.outline,
@@ -229,9 +259,7 @@ private fun MonthGrid(
     selectedDate: LocalDate,
     today: LocalDate,
     datesWithWear: Set<LocalDate>,
-    onSelect: (LocalDate) -> Unit,
-    onSwipePrev: () -> Unit,
-    onSwipeNext: () -> Unit
+    onSelect: (LocalDate) -> Unit
 ) {
     val firstOfMonth = month.atDay(1)
     val leadingBlanks = (firstOfMonth.dayOfWeek.sundayBasedIndex())
@@ -241,17 +269,6 @@ private fun MonthGrid(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 20.dp)
-            .pointerInput(month) {
-                val swipeThreshold = 48.dp.toPx()
-                var totalDrag = 0f
-                detectHorizontalDragGestures(
-                    onDragStart = { totalDrag = 0f },
-                    onDragEnd = {
-                        if (totalDrag > swipeThreshold) onSwipePrev()
-                        else if (totalDrag < -swipeThreshold) onSwipeNext()
-                    }
-                ) { _, dragAmount -> totalDrag += dragAmount }
-            }
     ) {
         repeat(6) { weekIndex ->
             Row(modifier = Modifier.fillMaxWidth()) {
@@ -366,6 +383,12 @@ private fun WornItemCard(item: ClothingItem) {
         }
     }
 }
+
+// ~100 years of history is effectively unbounded for a wardrobe log.
+private const val MONTHS_BACK = 1200
+
+// 6 week-rows × 48dp row height — keeps every paged month a fixed size.
+private val MONTH_GRID_HEIGHT = 288.dp
 
 private fun DayOfWeek.sundayBasedIndex(): Int = when (this) {
     DayOfWeek.SUNDAY -> 0
