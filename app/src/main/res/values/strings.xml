@@ -237,14 +237,14 @@
     <string name="diagnostics_log_lines">%d lines</string>
     <string name="diagnostics_log_empty">No log entries yet.</string>
     <string name="diagnostics_action_clear">Clear</string>
-    <string name="diagnostics_action_export">Export</string>
+    <string name="diagnostics_action_share">Share</string>
     <string name="diagnostics_action_refresh">Refresh logs</string>
-    <string name="diagnostics_help_text">Export saves the log file to a location you choose. Share it with the developer to help diagnose issues.</string>
+    <string name="diagnostics_help_text">Share the log directly with the developer to help diagnose issues.</string>
+    <string name="diagnostics_share_chooser_title">Share diagnostic log</string>
     <string name="diagnostics_clear_dialog_title">Clear logs?</string>
     <string name="diagnostics_clear_dialog_body">All stored diagnostic log entries will be permanently deleted.</string>
-    <string name="diagnostics_message_exported">Log exported successfully</string>
     <!-- %s = exception message -->
-    <string name="diagnostics_message_export_failed">Export failed: %s</string>
+    <string name="diagnostics_message_share_failed">Share failed: %s</string>
     <string name="diagnostics_message_cleared">Logs cleared</string>
 
     <!-- ── About settings ── -->

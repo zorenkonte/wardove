@@ -3,10 +3,14 @@ package com.app.wardove.data.log
 import android.content.Context
 import android.net.Uri
 import android.os.Build
+import androidx.core.content.FileProvider
 import com.app.wardove.BuildConfig
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import java.io.File
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -42,14 +46,18 @@ class DiagnosticsRepository @Inject constructor(
     }
 
     /**
-     * Writes the full log to the user-supplied Uri (from Storage Access Framework).
+     * Writes the full log to a FileProvider-served cache file and returns its Uri.
+     * The file lives under cacheDir/logs/ — the OS reclaims it automatically.
      * Throws on I/O failure — caller catches.
      */
-    suspend fun exportTo(uri: Uri) = withContext(Dispatchers.IO) {
+    suspend fun writeShareFile(): Uri = withContext(Dispatchers.IO) {
         val text = readLog().ifEmpty { header() + "\n(no log entries yet)\n" }
-        context.contentResolver.openOutputStream(uri)?.use { out ->
-            out.write(text.toByteArray())
-        } ?: error("Cannot open output stream for $uri")
+        val dir = File(context.cacheDir, "logs").apply { mkdirs() }
+        val ts = LocalDateTime.now()
+            .format(DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss"))
+        val file = File(dir, "wardove-log-$ts.txt")
+        file.writeText(text)
+        FileProvider.getUriForFile(context, "${context.packageName}.fileprovider", file)
     }
 
     /** Deletes current and backup log files. */

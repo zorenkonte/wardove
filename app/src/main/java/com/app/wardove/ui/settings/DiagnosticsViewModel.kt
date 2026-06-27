@@ -26,6 +26,9 @@ class DiagnosticsViewModel @Inject constructor(
     private val _message = MutableStateFlow<String?>(null)
     val message: StateFlow<String?> = _message.asStateFlow()
 
+    private val _shareUri = MutableStateFlow<Uri?>(null)
+    val shareUri: StateFlow<Uri?> = _shareUri.asStateFlow()
+
     init {
         refresh()
     }
@@ -36,12 +39,16 @@ class DiagnosticsViewModel @Inject constructor(
         }
     }
 
-    fun export(uri: Uri) {
+    fun share() {
         viewModelScope.launch {
-            runCatching { repository.exportTo(uri) }
-                .onSuccess { _message.value = context.getString(R.string.diagnostics_message_exported) }
-                .onFailure { _message.value = context.getString(R.string.diagnostics_message_export_failed, it.message) }
+            runCatching { repository.writeShareFile() }
+                .onSuccess { _shareUri.value = it }
+                .onFailure { _message.value = context.getString(R.string.diagnostics_message_share_failed, it.message) }
         }
+    }
+
+    fun onShareHandled() {
+        _shareUri.value = null
     }
 
     fun clear() {

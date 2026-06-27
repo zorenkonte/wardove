@@ -1,7 +1,6 @@
 package com.app.wardove.ui.settings
 
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
+import android.content.Intent
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -40,6 +39,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
@@ -47,12 +47,10 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.app.wardove.R
 import com.composables.icons.lucide.ArrowLeft
-import com.composables.icons.lucide.Download
 import com.composables.icons.lucide.Lucide
 import com.composables.icons.lucide.RefreshCw
+import com.composables.icons.lucide.Share2
 import com.composables.icons.lucide.Trash2
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -60,21 +58,32 @@ fun DiagnosticsSettingsScreen(
     onBack: () -> Unit,
     viewModel: DiagnosticsViewModel = hiltViewModel()
 ) {
+    val context = LocalContext.current
     val logText by viewModel.logText.collectAsState()
     val message by viewModel.message.collectAsState()
+    val shareUri by viewModel.shareUri.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
     var showClearDialog by remember { mutableStateOf(false) }
-
-    val exportLauncher = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.CreateDocument("text/plain")
-    ) { uri ->
-        if (uri != null) viewModel.export(uri)
-    }
 
     LaunchedEffect(message) {
         if (message != null) {
             snackbarHostState.showSnackbar(message!!)
             viewModel.onMessageShown()
+        }
+    }
+
+    LaunchedEffect(shareUri) {
+        shareUri?.let { uri ->
+            val send = Intent(Intent.ACTION_SEND).apply {
+                type = "text/plain"
+                putExtra(Intent.EXTRA_STREAM, uri)
+                putExtra(Intent.EXTRA_SUBJECT, "Wardove diagnostic log")
+                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            }
+            context.startActivity(
+                Intent.createChooser(send, context.getString(R.string.diagnostics_share_chooser_title))
+            )
+            viewModel.onShareHandled()
         }
     }
 
@@ -180,16 +189,12 @@ fun DiagnosticsSettingsScreen(
                         Text(stringResource(R.string.diagnostics_action_clear))
                     }
                     Button(
-                        onClick = {
-                            val timestamp = LocalDateTime.now()
-                                .format(DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss"))
-                            exportLauncher.launch("wardove-log-$timestamp.txt")
-                        },
+                        onClick = { viewModel.share() },
                         modifier = Modifier.weight(1f)
                     ) {
-                        Icon(Lucide.Download, contentDescription = null)
+                        Icon(Lucide.Share2, contentDescription = null)
                         Spacer(Modifier.width(6.dp))
-                        Text(stringResource(R.string.diagnostics_action_export))
+                        Text(stringResource(R.string.diagnostics_action_share))
                     }
                 }
             }
