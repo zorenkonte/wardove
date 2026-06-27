@@ -19,6 +19,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import com.app.wardove.ui.components.LargeTitleHeader
+import com.composables.icons.lucide.Calendar
 import com.composables.icons.lucide.ChevronLeft
 import com.composables.icons.lucide.ChevronRight
 import com.composables.icons.lucide.Lucide
@@ -85,6 +86,21 @@ fun CalendarScreen(
                 subtitle = "${visibleMonth.month.getDisplayName(TextStyle.FULL, Locale.getDefault())} ${visibleMonth.year}",
                 actions = {
                     val canGoNext = visibleMonth.isBefore(YearMonth.from(today))
+                    val isOnToday = visibleMonth == YearMonth.from(today) && selectedDate == today
+                    IconButton(
+                        onClick = {
+                            visibleMonth = YearMonth.from(today)
+                            viewModel.selectDate(today)
+                        },
+                        enabled = !isOnToday
+                    ) {
+                        Icon(
+                            Lucide.Calendar,
+                            contentDescription = stringResource(R.string.calendar_today),
+                            tint = if (!isOnToday) MaterialTheme.colorScheme.onBackground
+                                   else MaterialTheme.colorScheme.textHint
+                        )
+                    }
                     IconButton(onClick = {
                         val target = visibleMonth.minusMonths(1)
                         visibleMonth = target

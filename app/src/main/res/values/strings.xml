@@ -104,6 +104,7 @@
 
     <!-- ── Calendar screen ── -->
     <string name="calendar_nothing_worn">Nothing worn on this day</string>
+    <string name="calendar_today">Jump to today</string>
     <string name="calendar_prev_month">Previous month</string>
     <string name="calendar_next_month">Next month</string>
     <!-- Abbreviated weekday headers -->
