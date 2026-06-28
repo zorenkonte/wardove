@@ -55,14 +55,494 @@
   },
   "nodes": [
     {
+      "label": "UpdateScreen.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "update_updatescreen",
+      "community": 3,
+      "norm_label": "updatescreen.kt"
+    },
+    {
+      "label": "UpdateScreen()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L65",
+      "_origin": "ast",
+      "id": "update_updatescreen_updatescreen",
+      "community": 3,
+      "norm_label": "updatescreen()"
+    },
+    {
+      "label": "UpdateViewModel",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L65",
+      "_origin": "ast",
+      "id": "updateviewmodel",
+      "community": 3,
+      "norm_label": "updateviewmodel"
+    },
+    {
+      "label": "CurrentVersionCard()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L209",
+      "_origin": "ast",
+      "id": "update_updatescreen_currentversioncard",
+      "community": 3,
+      "norm_label": "currentversioncard()"
+    },
+    {
+      "label": "LatestReleaseCard()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L237",
+      "_origin": "ast",
+      "id": "update_updatescreen_latestreleasecard",
+      "community": 3,
+      "norm_label": "latestreleasecard()"
+    },
+    {
+      "label": "GithubRelease",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L237",
+      "_origin": "ast",
+      "id": "githubrelease",
+      "community": 3,
+      "norm_label": "githubrelease"
+    },
+    {
+      "label": "Boolean",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L237",
+      "_origin": "ast",
+      "id": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_boolean",
+      "community": 3,
+      "norm_label": "boolean"
+    },
+    {
+      "label": "InstallState",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L237",
+      "_origin": "ast",
+      "id": "installstate",
+      "community": 3,
+      "norm_label": "installstate"
+    },
+    {
+      "label": "ReleaseHistoryItem()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L385",
+      "_origin": "ast",
+      "id": "update_updatescreen_releasehistoryitem",
+      "community": 3,
+      "norm_label": "releasehistoryitem()"
+    },
+    {
+      "label": "formatBytes()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L420",
+      "_origin": "ast",
+      "id": "update_updatescreen_formatbytes",
+      "community": 3,
+      "norm_label": "formatbytes()"
+    },
+    {
+      "label": "Long",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L420",
+      "_origin": "ast",
+      "id": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_long",
+      "community": 3,
+      "norm_label": "long"
+    },
+    {
+      "label": "String",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L420",
+      "_origin": "ast",
+      "id": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_string",
+      "community": 3,
+      "norm_label": "string"
+    },
+    {
+      "label": "formatSpeed()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L425",
+      "_origin": "ast",
+      "id": "update_updatescreen_formatspeed",
+      "community": 3,
+      "norm_label": "formatspeed()"
+    },
+    {
+      "label": "formatDate()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L428",
+      "_origin": "ast",
+      "id": "update_updatescreen_formatdate",
+      "community": 3,
+      "norm_label": "formatdate()"
+    },
+    {
+      "label": "UpdateViewModel.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "update_updateviewmodel",
+      "community": 4,
+      "norm_label": "updateviewmodel.kt"
+    },
+    {
+      "label": "ReleasesState",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_releasesstate",
+      "community": 4,
+      "norm_label": "releasesstate"
+    },
+    {
+      "label": "Loading",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_loading",
+      "community": 4,
+      "norm_label": "loading"
+    },
+    {
+      "label": "Success",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_success",
+      "community": 4,
+      "norm_label": "success"
+    },
+    {
+      "label": "Error",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L25",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_error",
+      "community": 4,
+      "norm_label": "error"
+    },
+    {
+      "label": "InstallState",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_installstate",
+      "community": 4,
+      "norm_label": "installstate"
+    },
+    {
+      "label": "Idle",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_idle",
+      "community": 4,
+      "norm_label": "idle"
+    },
+    {
+      "label": "Downloading",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_downloading",
+      "community": 4,
+      "norm_label": "downloading"
+    },
+    {
+      "label": "Float",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "float",
+      "community": 4,
+      "norm_label": "float"
+    },
+    {
+      "label": "ReadyToInstall",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L38",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_readytoinstall",
+      "community": 4,
+      "norm_label": "readytoinstall"
+    },
+    {
+      "label": "Failed",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_failed",
+      "community": 4,
+      "norm_label": "failed"
+    },
+    {
+      "label": "UpdateViewModel",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_updateviewmodel",
+      "community": 4,
+      "norm_label": "updateviewmodel"
+    },
+    {
+      "label": "ViewModel",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "viewmodel",
+      "community": 30,
+      "norm_label": "viewmodel"
+    },
+    {
+      "label": "Job",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L57",
+      "_origin": "ast",
+      "id": "job",
+      "community": 4,
+      "norm_label": "job"
+    },
+    {
+      "label": "Long",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L58",
+      "_origin": "ast",
+      "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_long",
+      "community": 4,
+      "norm_label": "long"
+    },
+    {
+      "label": "Double",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L63",
+      "_origin": "ast",
+      "id": "double",
+      "community": 4,
+      "norm_label": "double"
+    },
+    {
+      "label": ".load()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_updateviewmodel_load",
+      "community": 4,
+      "norm_label": ".load()"
+    },
+    {
+      "label": ".refresh()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L85",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_updateviewmodel_refresh",
+      "community": 4,
+      "norm_label": ".refresh()"
+    },
+    {
+      "label": ".isUpdateAvailable()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L103",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_updateviewmodel_isupdateavailable",
+      "community": 3,
+      "norm_label": ".isupdateavailable()"
+    },
+    {
+      "label": "String",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L103",
+      "_origin": "ast",
+      "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_string",
+      "community": 3,
+      "norm_label": "string"
+    },
+    {
+      "label": "Boolean",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L103",
+      "_origin": "ast",
+      "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_boolean",
+      "community": 3,
+      "norm_label": "boolean"
+    },
+    {
+      "label": ".startDownload()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L106",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_updateviewmodel_startdownload",
+      "community": 4,
+      "norm_label": ".startdownload()"
+    },
+    {
+      "label": "GithubAsset",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L106",
+      "_origin": "ast",
+      "id": "githubasset",
+      "community": 4,
+      "norm_label": "githubasset"
+    },
+    {
+      "label": ".resetSpeedTracking()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L139",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_updateviewmodel_resetspeedtracking",
+      "community": 4,
+      "norm_label": ".resetspeedtracking()"
+    },
+    {
+      "label": ".updateSpeed()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L146",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_updateviewmodel_updatespeed",
+      "community": 4,
+      "norm_label": ".updatespeed()"
+    },
+    {
+      "label": ".buildInstallIntent()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L164",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_updateviewmodel_buildinstallintent",
+      "community": 4,
+      "norm_label": ".buildinstallintent()"
+    },
+    {
+      "label": "Intent",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L164",
+      "_origin": "ast",
+      "id": "intent",
+      "community": 4,
+      "norm_label": "intent"
+    },
+    {
+      "label": ".deleteApk()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L174",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_updateviewmodel_deleteapk",
+      "community": 4,
+      "norm_label": ".deleteapk()"
+    },
+    {
+      "label": ".resetInstall()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L178",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_updateviewmodel_resetinstall",
+      "community": 4,
+      "norm_label": ".resetinstall()"
+    },
+    {
+      "label": "latestStableRelease()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L190",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_lateststablerelease",
+      "community": 3,
+      "norm_label": "lateststablerelease()"
+    },
+    {
+      "label": "List",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L190",
+      "_origin": "ast",
+      "id": "list",
+      "community": 3,
+      "norm_label": "list"
+    },
+    {
+      "label": "com",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L190",
+      "_origin": "ast",
+      "id": "com",
+      "community": 3,
+      "norm_label": "com"
+    },
+    {
+      "label": "compareVersions()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L200",
+      "_origin": "ast",
+      "id": "update_updateviewmodel_compareversions",
+      "community": 3,
+      "norm_label": "compareversions()"
+    },
+    {
+      "label": "Int",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L200",
+      "_origin": "ast",
+      "id": "int",
+      "community": 1,
+      "norm_label": "int"
+    },
+    {
       "label": "CalendarScreen.kt",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "calendar_calendarscreen",
       "community": 1,
-      "norm_label": "calendarscreen.kt"
+      "norm_label": "calendarscreen.kt",
+      "id": "calendar_calendarscreen"
     },
     {
       "label": "CalendarScreen()",
@@ -70,9 +550,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L64",
       "_origin": "ast",
-      "id": "calendar_calendarscreen_calendarscreen",
       "community": 1,
-      "norm_label": "calendarscreen()"
+      "norm_label": "calendarscreen()",
+      "id": "calendar_calendarscreen_calendarscreen"
     },
     {
       "label": "CalendarViewModel",
@@ -80,9 +560,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L64",
       "_origin": "ast",
-      "id": "calendarviewmodel",
       "community": 1,
-      "norm_label": "calendarviewmodel"
+      "norm_label": "calendarviewmodel",
+      "id": "calendarviewmodel"
     },
     {
       "label": "WeekdayHeader()",
@@ -90,9 +570,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L182",
       "_origin": "ast",
-      "id": "calendar_calendarscreen_weekdayheader",
       "community": 1,
-      "norm_label": "weekdayheader()"
+      "norm_label": "weekdayheader()",
+      "id": "calendar_calendarscreen_weekdayheader"
     },
     {
       "label": "MonthGrid()",
@@ -100,9 +580,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L213",
       "_origin": "ast",
-      "id": "calendar_calendarscreen_monthgrid",
       "community": 1,
-      "norm_label": "monthgrid()"
+      "norm_label": "monthgrid()",
+      "id": "calendar_calendarscreen_monthgrid"
     },
     {
       "label": "YearMonth",
@@ -110,9 +590,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L213",
       "_origin": "ast",
-      "id": "yearmonth",
       "community": 1,
-      "norm_label": "yearmonth"
+      "norm_label": "yearmonth",
+      "id": "yearmonth"
     },
     {
       "label": "LocalDate",
@@ -120,9 +600,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L213",
       "_origin": "ast",
-      "id": "localdate",
       "community": 1,
-      "norm_label": "localdate"
+      "norm_label": "localdate",
+      "id": "localdate"
     },
     {
       "label": "Set",
@@ -130,9 +610,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L213",
       "_origin": "ast",
-      "id": "set",
       "community": 1,
-      "norm_label": "set"
+      "norm_label": "set",
+      "id": "set"
     },
     {
       "label": "DayCell()",
@@ -140,9 +620,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L255",
       "_origin": "ast",
-      "id": "calendar_calendarscreen_daycell",
       "community": 1,
-      "norm_label": "daycell()"
+      "norm_label": "daycell()",
+      "id": "calendar_calendarscreen_daycell"
     },
     {
       "label": "Boolean",
@@ -150,9 +630,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L255",
       "_origin": "ast",
-      "id": "boolean",
       "community": 1,
-      "norm_label": "boolean"
+      "norm_label": "boolean",
+      "id": "boolean"
     },
     {
       "label": "SelectedDayLabel()",
@@ -160,9 +640,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L297",
       "_origin": "ast",
-      "id": "calendar_calendarscreen_selecteddaylabel",
       "community": 1,
-      "norm_label": "selecteddaylabel()"
+      "norm_label": "selecteddaylabel()",
+      "id": "calendar_calendarscreen_selecteddaylabel"
     },
     {
       "label": "WornItemCard()",
@@ -170,9 +650,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L309",
       "_origin": "ast",
-      "id": "calendar_calendarscreen_wornitemcard",
       "community": 1,
-      "norm_label": "wornitemcard()"
+      "norm_label": "wornitemcard()",
+      "id": "calendar_calendarscreen_wornitemcard"
     },
     {
       "label": "ClothingItem",
@@ -180,9 +660,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L309",
       "_origin": "ast",
-      "id": "clothingitem",
       "community": 1,
-      "norm_label": "clothingitem"
+      "norm_label": "clothingitem",
+      "id": "clothingitem"
     },
     {
       "label": "sundayBasedIndex()",
@@ -190,19 +670,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L344",
       "_origin": "ast",
-      "id": "calendar_calendarscreen_sundaybasedindex",
       "community": 1,
-      "norm_label": "sundaybasedindex()"
-    },
-    {
-      "label": "Int",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L344",
-      "_origin": "ast",
-      "id": "int",
-      "community": 21,
-      "norm_label": "int"
+      "norm_label": "sundaybasedindex()",
+      "id": "calendar_calendarscreen_sundaybasedindex"
     },
     {
       "label": "adjustSelection()",
@@ -210,9 +680,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L354",
       "_origin": "ast",
-      "id": "calendar_calendarscreen_adjustselection",
       "community": 1,
-      "norm_label": "adjustselection()"
+      "norm_label": "adjustselection()",
+      "id": "calendar_calendarscreen_adjustselection"
     },
     {
       "label": "WardrobeScreen.kt",
@@ -655,16 +1125,6 @@
       "id": "wardrobe_wardrobeviewmodel_wardrobeviewmodel"
     },
     {
-      "label": "ViewModel",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast",
-      "community": 76,
-      "norm_label": "viewmodel",
-      "id": "viewmodel"
-    },
-    {
       "label": "StateFlow",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
@@ -870,7 +1330,7 @@
       "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
       "source_location": "L59",
       "_origin": "ast",
-      "community": 21,
+      "community": 1,
       "norm_label": ".setlaundrythreshold()",
       "id": "settings_settingsrepository_settingsrepository_setlaundrythreshold"
     },
@@ -6345,416 +6805,6 @@
       "id": "theme_type"
     },
     {
-      "label": "UpdateScreen.kt",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "updatescreen.kt",
-      "id": "update_updatescreen"
-    },
-    {
-      "label": "UpdateScreen()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L59",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "updatescreen()",
-      "id": "update_updatescreen_updatescreen"
-    },
-    {
-      "label": "UpdateViewModel",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L59",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "updateviewmodel",
-      "id": "updateviewmodel"
-    },
-    {
-      "label": "CurrentVersionCard()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L186",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "currentversioncard()",
-      "id": "update_updatescreen_currentversioncard"
-    },
-    {
-      "label": "LatestReleaseCard()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L214",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "latestreleasecard()",
-      "id": "update_updatescreen_latestreleasecard"
-    },
-    {
-      "label": "GithubRelease",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L214",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "githubrelease",
-      "id": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_githubrelease"
-    },
-    {
-      "label": "Boolean",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L214",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "boolean",
-      "id": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_boolean"
-    },
-    {
-      "label": "InstallState",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L214",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "installstate",
-      "id": "installstate"
-    },
-    {
-      "label": "ReleaseHistoryItem()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L355",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "releasehistoryitem()",
-      "id": "update_updatescreen_releasehistoryitem"
-    },
-    {
-      "label": "formatBytes()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L390",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "formatbytes()",
-      "id": "update_updatescreen_formatbytes"
-    },
-    {
-      "label": "Long",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L390",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "long",
-      "id": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_long"
-    },
-    {
-      "label": "String",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L390",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "string",
-      "id": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_string"
-    },
-    {
-      "label": "formatDate()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L395",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "formatdate()",
-      "id": "update_updatescreen_formatdate"
-    },
-    {
-      "label": "UpdateViewModel.kt",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "updateviewmodel.kt",
-      "id": "update_updateviewmodel"
-    },
-    {
-      "label": "ReleasesState",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L22",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "releasesstate",
-      "id": "update_updateviewmodel_releasesstate"
-    },
-    {
-      "label": "Loading",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L23",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "loading",
-      "id": "update_updateviewmodel_loading"
-    },
-    {
-      "label": "Success",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L24",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "success",
-      "id": "update_updateviewmodel_success"
-    },
-    {
-      "label": "Error",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L25",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "error",
-      "id": "update_updateviewmodel_error"
-    },
-    {
-      "label": "InstallState",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L28",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "installstate",
-      "id": "update_updateviewmodel_installstate"
-    },
-    {
-      "label": "Idle",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L29",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "idle",
-      "id": "update_updateviewmodel_idle"
-    },
-    {
-      "label": "Downloading",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L30",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "downloading",
-      "id": "update_updateviewmodel_downloading"
-    },
-    {
-      "label": "ReadyToInstall",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L31",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "readytoinstall",
-      "id": "update_updateviewmodel_readytoinstall"
-    },
-    {
-      "label": "Failed",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L32",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "failed",
-      "id": "update_updateviewmodel_failed"
-    },
-    {
-      "label": "UpdateViewModel",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L35",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "updateviewmodel",
-      "id": "update_updateviewmodel_updateviewmodel"
-    },
-    {
-      "label": "Job",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L47",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "job",
-      "id": "job"
-    },
-    {
-      "label": "Long",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L48",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "long",
-      "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_long"
-    },
-    {
-      "label": ".load()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L55",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": ".load()",
-      "id": "update_updateviewmodel_updateviewmodel_load"
-    },
-    {
-      "label": ".isUpdateAvailable()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L66",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": ".isupdateavailable()",
-      "id": "update_updateviewmodel_updateviewmodel_isupdateavailable"
-    },
-    {
-      "label": "String",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L66",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "string",
-      "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_string"
-    },
-    {
-      "label": "Boolean",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L66",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "boolean",
-      "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_boolean"
-    },
-    {
-      "label": ".startDownload()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L69",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": ".startdownload()",
-      "id": "update_updateviewmodel_updateviewmodel_startdownload"
-    },
-    {
-      "label": "GithubAsset",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L69",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "githubasset",
-      "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_githubasset"
-    },
-    {
-      "label": ".buildInstallIntent()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L92",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": ".buildinstallintent()",
-      "id": "update_updateviewmodel_updateviewmodel_buildinstallintent"
-    },
-    {
-      "label": "Intent",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L92",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": "intent",
-      "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_intent"
-    },
-    {
-      "label": ".deleteApk()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L102",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": ".deleteapk()",
-      "id": "update_updateviewmodel_updateviewmodel_deleteapk"
-    },
-    {
-      "label": ".resetInstall()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L106",
-      "_origin": "ast",
-      "community": 4,
-      "norm_label": ".resetinstall()",
-      "id": "update_updateviewmodel_updateviewmodel_resetinstall"
-    },
-    {
-      "label": "latestStableRelease()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L117",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "lateststablerelease()",
-      "id": "update_updateviewmodel_lateststablerelease"
-    },
-    {
-      "label": "List",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L117",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "list",
-      "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_list"
-    },
-    {
-      "label": "com",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L117",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "com",
-      "id": "com"
-    },
-    {
-      "label": "compareVersions()",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L127",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "compareversions()",
-      "id": "update_updateviewmodel_compareversions"
-    },
-    {
-      "label": "Int",
-      "file_type": "code",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L127",
-      "_origin": "ast",
-      "community": 3,
-      "norm_label": "int",
-      "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_int"
-    },
-    {
       "label": "ClothingOptions.kt",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/util/ClothingOptions.kt",
@@ -10402,6 +10452,1047 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L193",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updatescreen",
+      "target": "update_updatescreen_currentversioncard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L440",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updatescreen",
+      "target": "update_updatescreen_formatbytes"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L445",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updatescreen",
+      "target": "update_updatescreen_formatdate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L425",
+      "weight": 1.0,
+      "source": "update_updatescreen",
+      "target": "update_updatescreen_formatspeed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L221",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updatescreen",
+      "target": "update_updatescreen_latestreleasecard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L405",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updatescreen",
+      "target": "update_updatescreen_releasehistoryitem"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L60",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updatescreen",
+      "target": "update_updatescreen_updatescreen"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
+      "source_location": "L318",
+      "weight": 1.0,
+      "source": "navigation_wardovenavhost_wardovenavhost",
+      "target": "update_updatescreen_updatescreen"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L139",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updatescreen_updatescreen",
+      "target": "update_updatescreen_currentversioncard"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L146",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updatescreen_updatescreen",
+      "target": "update_updatescreen_latestreleasecard"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L179",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updatescreen_updatescreen",
+      "target": "update_updatescreen_releasehistoryitem"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L130",
+      "weight": 1.0,
+      "source": "update_updatescreen_updatescreen",
+      "target": "update_updateviewmodel_lateststablerelease"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L60",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "update_updatescreen_updatescreen",
+      "target": "updateviewmodel"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L221",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "update_updatescreen_latestreleasecard",
+      "target": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_boolean"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L237",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "update_updatescreen_latestreleasecard",
+      "target": "githubrelease",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L221",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "update_updatescreen_latestreleasecard",
+      "target": "installstate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L290",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updatescreen_latestreleasecard",
+      "target": "update_updatescreen_formatbytes"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L260",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updatescreen_latestreleasecard",
+      "target": "update_updatescreen_formatdate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L329",
+      "weight": 1.0,
+      "source": "update_updatescreen_latestreleasecard",
+      "target": "update_updatescreen_formatspeed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L385",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "update_updatescreen_releasehistoryitem",
+      "target": "githubrelease",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L424",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updatescreen_releasehistoryitem",
+      "target": "update_updatescreen_formatdate"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L440",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "update_updatescreen_formatbytes",
+      "target": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_long"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L440",
+      "weight": 1.0,
+      "context": "return_type",
+      "confidence_score": 1.0,
+      "source": "update_updatescreen_formatbytes",
+      "target": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_string"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L426",
+      "weight": 1.0,
+      "source": "update_updatescreen_formatspeed",
+      "target": "update_updatescreen_formatbytes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L425",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "update_updatescreen_formatspeed",
+      "target": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_long",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L445",
+      "weight": 1.0,
+      "context": "return_type",
+      "confidence_score": 1.0,
+      "source": "update_updatescreen_formatdate",
+      "target": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_string"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
+      "source_location": "L425",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "update_updatescreen_formatspeed",
+      "target": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_string",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L134",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel",
+      "target": "update_updateviewmodel_compareversions"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel",
+      "target": "update_updateviewmodel_downloading"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel",
+      "target": "update_updateviewmodel_error"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel",
+      "target": "update_updateviewmodel_failed"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel",
+      "target": "update_updateviewmodel_idle"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel",
+      "target": "update_updateviewmodel_installstate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L124",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel",
+      "target": "update_updateviewmodel_lateststablerelease"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel",
+      "target": "update_updateviewmodel_loading"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel",
+      "target": "update_updateviewmodel_readytoinstall"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L22",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel",
+      "target": "update_updateviewmodel_releasesstate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel",
+      "target": "update_updateviewmodel_success"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel",
+      "target": "update_updateviewmodel_updateviewmodel"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L25",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_error",
+      "target": "update_updateviewmodel_releasesstate"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_loading",
+      "target": "update_updateviewmodel_releasesstate"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L24",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_success",
+      "target": "update_updateviewmodel_releasesstate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L59",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel_load",
+      "target": "update_updateviewmodel_success"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel_refresh",
+      "target": "update_updateviewmodel_success",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/app/wardove/data/image/ImageStorage.kt",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "image_imagestorage_imagestorage_saveimagefromuri",
+      "target": "update_updateviewmodel_error"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L30",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_downloading",
+      "target": "update_updateviewmodel_installstate"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_failed",
+      "target": "update_updateviewmodel_installstate"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L29",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_idle",
+      "target": "update_updateviewmodel_installstate"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L31",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_readytoinstall",
+      "target": "update_updateviewmodel_installstate"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L35",
+      "weight": 1.0,
+      "context": "field",
+      "source": "update_updateviewmodel_downloading",
+      "target": "float",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel_startdownload",
+      "target": "update_updateviewmodel_downloading"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L48",
+      "weight": 1.0,
+      "context": "field",
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel",
+      "target": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_long"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L63",
+      "weight": 1.0,
+      "context": "field",
+      "source": "update_updateviewmodel_updateviewmodel",
+      "target": "double",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L47",
+      "weight": 1.0,
+      "context": "field",
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel",
+      "target": "job"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L92",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel",
+      "target": "update_updateviewmodel_updateviewmodel_buildinstallintent"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L102",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel",
+      "target": "update_updateviewmodel_updateviewmodel_deleteapk"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L66",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel",
+      "target": "update_updateviewmodel_updateviewmodel_isupdateavailable"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L55",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel",
+      "target": "update_updateviewmodel_updateviewmodel_load"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel",
+      "target": "update_updateviewmodel_updateviewmodel_refresh",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L106",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel",
+      "target": "update_updateviewmodel_updateviewmodel_resetinstall"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel",
+      "target": "update_updateviewmodel_updateviewmodel_resetspeedtracking",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L69",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel",
+      "target": "update_updateviewmodel_updateviewmodel_startdownload"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L146",
+      "weight": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel",
+      "target": "update_updateviewmodel_updateviewmodel_updatespeed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L35",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel",
+      "target": "viewmodel"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/additem/AddItemViewModel.kt",
+      "source_location": "L39",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "additem_additemviewmodel_additemviewmodel",
+      "target": "viewmodel"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/additem/ShareItemViewModel.kt",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "additem_shareitemviewmodel_shareitemviewmodel",
+      "target": "viewmodel"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarViewModel.kt",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "calendar_calendarviewmodel_calendarviewmodel",
+      "target": "viewmodel"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryViewModel.kt",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "history_historyviewmodel_historyviewmodel",
+      "target": "viewmodel"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailViewModel.kt",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "itemdetail_itemdetailviewmodel_itemdetailviewmodel",
+      "target": "viewmodel"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/laundry/LaundryViewModel.kt",
+      "source_location": "L49",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "laundry_laundryviewmodel_laundryviewmodel",
+      "target": "viewmodel"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/lock/LockViewModel.kt",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "lock_lockviewmodel_lockviewmodel",
+      "target": "viewmodel"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "settings_applocksettingsscreen_applocksettingsviewmodel",
+      "target": "viewmodel"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/DiagnosticsViewModel.kt",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "settings_diagnosticsviewmodel_diagnosticsviewmodel",
+      "target": "viewmodel"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "settings_settingsviewmodel_settingsviewmodel",
+      "target": "viewmodel"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/stats/StatsViewModel.kt",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "stats_statsviewmodel_statsviewmodel",
+      "target": "viewmodel"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
+      "source_location": "L33",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "wardrobe_wardrobeviewmodel_wardrobeviewmodel",
+      "target": "viewmodel"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L146",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "update_updateviewmodel_updateviewmodel_updatespeed",
+      "target": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_long",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L66",
+      "weight": 1.0,
+      "context": "return_type",
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel_isupdateavailable",
+      "target": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_boolean"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L66",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel_isupdateavailable",
+      "target": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_string"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel_isupdateavailable",
+      "target": "update_updateviewmodel_compareversions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L134",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_compareversions",
+      "target": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_string"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L106",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "update_updateviewmodel_updateviewmodel_startdownload",
+      "target": "githubasset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L112",
+      "weight": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel_startdownload",
+      "target": "update_updateviewmodel_updateviewmodel_resetspeedtracking",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel_startdownload",
+      "target": "update_updateviewmodel_updateviewmodel_updatespeed",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L180",
+      "weight": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel_resetinstall",
+      "target": "update_updateviewmodel_updateviewmodel_resetspeedtracking",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "context": "return_type",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L164",
+      "weight": 1.0,
+      "source": "update_updateviewmodel_updateviewmodel_buildinstallintent",
+      "target": "intent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L124",
+      "weight": 1.0,
+      "context": "return_type",
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_lateststablerelease",
+      "target": "com"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L190",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "update_updateviewmodel_lateststablerelease",
+      "target": "list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L127",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "update_updateviewmodel_lateststablerelease",
+      "target": "update_updateviewmodel_compareversions"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/app/wardove/work/UpdateCheckWorker.kt",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "work_updatecheckworker_updatecheckworker_dowork",
+      "target": "update_updateviewmodel_lateststablerelease"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/test/java/com/app/wardove/update/CompareVersionsTest.kt",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "update_compareversionstest_compareversionstest_equalversionsreturnzero",
+      "target": "update_updateviewmodel_compareversions"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/test/java/com/app/wardove/update/CompareVersionsTest.kt",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "update_compareversionstest_compareversionstest_leadingvanddifferinglengthstolerated",
+      "target": "update_updateviewmodel_compareversions"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/test/java/com/app/wardove/update/CompareVersionsTest.kt",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "update_compareversionstest_compareversionstest_newermajorbeatsolderhigherpatch",
+      "target": "update_updateviewmodel_compareversions"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/test/java/com/app/wardove/update/CompareVersionsTest.kt",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "update_compareversionstest_compareversionstest_newerpatchisgreater",
+      "target": "update_updateviewmodel_compareversions"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/test/java/com/app/wardove/update/CompareVersionsTest.kt",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "update_compareversionstest_compareversionstest_olderversionisless",
+      "target": "update_updateviewmodel_compareversions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
+      "source_location": "L200",
+      "weight": 1.0,
+      "context": "return_type",
+      "source": "update_updateviewmodel_compareversions",
+      "target": "int",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/app/wardove/work/UpdateCheckWorker.kt",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "work_updatecheckworker_updatecheckworker_dowork",
+      "target": "update_updateviewmodel_compareversions"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
+      "source_location": "L328",
+      "weight": 1.0,
+      "context": "return_type",
+      "confidence_score": 1.0,
+      "source": "calendar_calendarscreen_sundaybasedindex",
+      "target": "int"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
+      "source_location": "L59",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "settings_settingsrepository_settingsrepository_setlaundrythreshold",
+      "target": "int"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L341",
       "weight": 1.0,
@@ -10684,9 +11775,9 @@
       "source_location": "L255",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "calendar_calendarscreen_daycell",
-      "target": "boolean",
-      "confidence_score": 1.0
+      "target": "boolean"
     },
     {
       "relation": "calls",
@@ -10717,9 +11808,9 @@
       "source_location": "L309",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "calendar_calendarscreen_wornitemcard",
-      "target": "clothingitem",
-      "confidence_score": 1.0
+      "target": "clothingitem"
     },
     {
       "relation": "calls",
@@ -10764,28 +11855,6 @@
       "confidence_score": 1.0,
       "source": "wardrobe_wardrobescreen_compactcard",
       "target": "clothingitem"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
-      "source_location": "L328",
-      "weight": 1.0,
-      "context": "return_type",
-      "confidence_score": 1.0,
-      "source": "calendar_calendarscreen_sundaybasedindex",
-      "target": "int"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/data/settings/SettingsRepository.kt",
-      "source_location": "L59",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "settings_settingsrepository_settingsrepository_setlaundrythreshold",
-      "target": "int"
     },
     {
       "relation": "contains",
@@ -11671,16 +12740,6 @@
       "target": "stateflow"
     },
     {
-      "relation": "inherits",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
-      "source_location": "L33",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "wardrobe_wardrobeviewmodel_wardrobeviewmodel",
-      "target": "viewmodel"
-    },
-    {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeViewModel.kt",
@@ -11730,126 +12789,6 @@
       "confidence_score": 1.0,
       "source": "wardrobe_wardrobeviewmodel_wardrobeviewmodel",
       "target": "wardrobeviewmode"
-    },
-    {
-      "relation": "inherits",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/additem/AddItemViewModel.kt",
-      "source_location": "L39",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "additem_additemviewmodel_additemviewmodel",
-      "target": "viewmodel"
-    },
-    {
-      "relation": "inherits",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/additem/ShareItemViewModel.kt",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "additem_shareitemviewmodel_shareitemviewmodel",
-      "target": "viewmodel"
-    },
-    {
-      "relation": "inherits",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarViewModel.kt",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "calendar_calendarviewmodel_calendarviewmodel",
-      "target": "viewmodel"
-    },
-    {
-      "relation": "inherits",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/history/HistoryViewModel.kt",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "history_historyviewmodel_historyviewmodel",
-      "target": "viewmodel"
-    },
-    {
-      "relation": "inherits",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailViewModel.kt",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "itemdetail_itemdetailviewmodel_itemdetailviewmodel",
-      "target": "viewmodel"
-    },
-    {
-      "relation": "inherits",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/laundry/LaundryViewModel.kt",
-      "source_location": "L49",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "laundry_laundryviewmodel_laundryviewmodel",
-      "target": "viewmodel"
-    },
-    {
-      "relation": "inherits",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/lock/LockViewModel.kt",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "lock_lockviewmodel_lockviewmodel",
-      "target": "viewmodel"
-    },
-    {
-      "relation": "inherits",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
-      "source_location": "L46",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "settings_applocksettingsscreen_applocksettingsviewmodel",
-      "target": "viewmodel"
-    },
-    {
-      "relation": "inherits",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/DiagnosticsViewModel.kt",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "settings_diagnosticsviewmodel_diagnosticsviewmodel",
-      "target": "viewmodel"
-    },
-    {
-      "relation": "inherits",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/settings/SettingsViewModel.kt",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "settings_settingsviewmodel_settingsviewmodel",
-      "target": "viewmodel"
-    },
-    {
-      "relation": "inherits",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/stats/StatsViewModel.kt",
-      "source_location": "L32",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "stats_statsviewmodel_statsviewmodel",
-      "target": "viewmodel"
-    },
-    {
-      "relation": "inherits",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L35",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_updateviewmodel",
-      "target": "viewmodel"
     },
     {
       "relation": "references",
@@ -12758,17 +13697,6 @@
       "confidence_score": 1.0,
       "source": "image_imagestorage_imagestorage_saveimagefromuri",
       "target": "app_src_main_java_com_app_wardove_data_image_imagestorage_kt_string"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "app/src/main/java/com/app/wardove/data/image/ImageStorage.kt",
-      "source_location": "L37",
-      "weight": 1.0,
-      "source": "image_imagestorage_imagestorage_saveimagefromuri",
-      "target": "update_updateviewmodel_error"
     },
     {
       "relation": "references",
@@ -18808,17 +19736,6 @@
       "target": "stats_statsscreen_statsscreen"
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L318",
-      "weight": 1.0,
-      "source": "navigation_wardovenavhost_wardovenavhost",
-      "target": "update_updatescreen_updatescreen"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AboutSettingsScreen.kt",
@@ -20427,712 +21344,6 @@
       "confidence_score": 1.0,
       "source": "theme_theme_wardovetheme",
       "target": "app_src_main_java_com_app_wardove_ui_theme_theme_kt_thememode"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L193",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updatescreen",
-      "target": "update_updatescreen_currentversioncard"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L440",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updatescreen",
-      "target": "update_updatescreen_formatbytes"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L445",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updatescreen",
-      "target": "update_updatescreen_formatdate"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L221",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updatescreen",
-      "target": "update_updatescreen_latestreleasecard"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L405",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updatescreen",
-      "target": "update_updatescreen_releasehistoryitem"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L60",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updatescreen",
-      "target": "update_updatescreen_updatescreen"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L139",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updatescreen_updatescreen",
-      "target": "update_updatescreen_currentversioncard"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L146",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updatescreen_updatescreen",
-      "target": "update_updatescreen_latestreleasecard"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L179",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updatescreen_updatescreen",
-      "target": "update_updatescreen_releasehistoryitem"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L130",
-      "weight": 1.0,
-      "source": "update_updatescreen_updatescreen",
-      "target": "update_updateviewmodel_lateststablerelease"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L60",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "update_updatescreen_updatescreen",
-      "target": "updateviewmodel"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L221",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "update_updatescreen_latestreleasecard",
-      "target": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_boolean"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L221",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "update_updatescreen_latestreleasecard",
-      "target": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_githubrelease"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L221",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "update_updatescreen_latestreleasecard",
-      "target": "installstate"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L290",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updatescreen_latestreleasecard",
-      "target": "update_updatescreen_formatbytes"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L260",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updatescreen_latestreleasecard",
-      "target": "update_updatescreen_formatdate"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L405",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "update_updatescreen_releasehistoryitem",
-      "target": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_githubrelease"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L424",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updatescreen_releasehistoryitem",
-      "target": "update_updatescreen_formatdate"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L440",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "update_updatescreen_formatbytes",
-      "target": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_long"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L440",
-      "weight": 1.0,
-      "context": "return_type",
-      "confidence_score": 1.0,
-      "source": "update_updatescreen_formatbytes",
-      "target": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_string"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
-      "source_location": "L445",
-      "weight": 1.0,
-      "context": "return_type",
-      "confidence_score": 1.0,
-      "source": "update_updatescreen_formatdate",
-      "target": "app_src_main_java_com_app_wardove_ui_update_updatescreen_kt_string"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L134",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel",
-      "target": "update_updateviewmodel_compareversions"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L30",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel",
-      "target": "update_updateviewmodel_downloading"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel",
-      "target": "update_updateviewmodel_error"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L32",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel",
-      "target": "update_updateviewmodel_failed"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L29",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel",
-      "target": "update_updateviewmodel_idle"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L28",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel",
-      "target": "update_updateviewmodel_installstate"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L124",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel",
-      "target": "update_updateviewmodel_lateststablerelease"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L23",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel",
-      "target": "update_updateviewmodel_loading"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L31",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel",
-      "target": "update_updateviewmodel_readytoinstall"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L22",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel",
-      "target": "update_updateviewmodel_releasesstate"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel",
-      "target": "update_updateviewmodel_success"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L35",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel",
-      "target": "update_updateviewmodel_updateviewmodel"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L25",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_error",
-      "target": "update_updateviewmodel_releasesstate"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L23",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_loading",
-      "target": "update_updateviewmodel_releasesstate"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L24",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_success",
-      "target": "update_updateviewmodel_releasesstate"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L59",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_updateviewmodel_load",
-      "target": "update_updateviewmodel_success"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L30",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_downloading",
-      "target": "update_updateviewmodel_installstate"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L32",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_failed",
-      "target": "update_updateviewmodel_installstate"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L29",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_idle",
-      "target": "update_updateviewmodel_installstate"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L31",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_readytoinstall",
-      "target": "update_updateviewmodel_installstate"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L71",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_updateviewmodel_startdownload",
-      "target": "update_updateviewmodel_downloading"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L48",
-      "weight": 1.0,
-      "context": "field",
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_updateviewmodel",
-      "target": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_long"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L47",
-      "weight": 1.0,
-      "context": "field",
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_updateviewmodel",
-      "target": "job"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L92",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_updateviewmodel",
-      "target": "update_updateviewmodel_updateviewmodel_buildinstallintent"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L102",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_updateviewmodel",
-      "target": "update_updateviewmodel_updateviewmodel_deleteapk"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L66",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_updateviewmodel",
-      "target": "update_updateviewmodel_updateviewmodel_isupdateavailable"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L55",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_updateviewmodel",
-      "target": "update_updateviewmodel_updateviewmodel_load"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L106",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_updateviewmodel",
-      "target": "update_updateviewmodel_updateviewmodel_resetinstall"
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L69",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_updateviewmodel",
-      "target": "update_updateviewmodel_updateviewmodel_startdownload"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L66",
-      "weight": 1.0,
-      "context": "return_type",
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_updateviewmodel_isupdateavailable",
-      "target": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_boolean"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L66",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_updateviewmodel_isupdateavailable",
-      "target": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_string"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L67",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_updateviewmodel_isupdateavailable",
-      "target": "update_updateviewmodel_compareversions"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L134",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_compareversions",
-      "target": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_string"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L69",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_updateviewmodel_startdownload",
-      "target": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_githubasset"
-    },
-    {
-      "relation": "references",
-      "context": "return_type",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L92",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_updateviewmodel_buildinstallintent",
-      "target": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_intent"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L124",
-      "weight": 1.0,
-      "context": "parameter_type",
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_lateststablerelease",
-      "target": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_list"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L124",
-      "weight": 1.0,
-      "context": "return_type",
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_lateststablerelease",
-      "target": "com"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L127",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_lateststablerelease",
-      "target": "update_updateviewmodel_compareversions"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "app/src/main/java/com/app/wardove/work/UpdateCheckWorker.kt",
-      "source_location": "L42",
-      "weight": 1.0,
-      "source": "work_updatecheckworker_updatecheckworker_dowork",
-      "target": "update_updateviewmodel_lateststablerelease"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "app/src/test/java/com/app/wardove/update/CompareVersionsTest.kt",
-      "source_location": "L22",
-      "weight": 1.0,
-      "source": "update_compareversionstest_compareversionstest_equalversionsreturnzero",
-      "target": "update_updateviewmodel_compareversions"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "app/src/test/java/com/app/wardove/update/CompareVersionsTest.kt",
-      "source_location": "L27",
-      "weight": 1.0,
-      "source": "update_compareversionstest_compareversionstest_leadingvanddifferinglengthstolerated",
-      "target": "update_updateviewmodel_compareversions"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "app/src/test/java/com/app/wardove/update/CompareVersionsTest.kt",
-      "source_location": "L17",
-      "weight": 1.0,
-      "source": "update_compareversionstest_compareversionstest_newermajorbeatsolderhigherpatch",
-      "target": "update_updateviewmodel_compareversions"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "app/src/test/java/com/app/wardove/update/CompareVersionsTest.kt",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "update_compareversionstest_compareversionstest_newerpatchisgreater",
-      "target": "update_updateviewmodel_compareversions"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "app/src/test/java/com/app/wardove/update/CompareVersionsTest.kt",
-      "source_location": "L33",
-      "weight": 1.0,
-      "source": "update_compareversionstest_compareversionstest_olderversionisless",
-      "target": "update_updateviewmodel_compareversions"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt",
-      "source_location": "L134",
-      "weight": 1.0,
-      "context": "return_type",
-      "confidence_score": 1.0,
-      "source": "update_updateviewmodel_compareversions",
-      "target": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_int"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "app/src/main/java/com/app/wardove/work/UpdateCheckWorker.kt",
-      "source_location": "L45",
-      "weight": 1.0,
-      "source": "work_updatecheckworker_updatecheckworker_dowork",
-      "target": "update_updateviewmodel_compareversions"
     },
     {
       "relation": "contains",
@@ -24761,5 +24972,5 @@
       "source_file": "CLAUDE.md"
     }
   ],
-  "built_at_commit": "dc0c8cdae3eae4985aff788b4ba5431d04b02dee"
+  "built_at_commit": "80785525dc654c656462a30e9ff37454d061d60a"
 }

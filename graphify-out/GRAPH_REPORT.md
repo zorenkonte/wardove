@@ -1,16 +1,16 @@
 # Graph Report - wardove  (2026-06-28)
 
 ## Corpus Check
-- 110 files · ~58,192 words
+- 110 files · ~58,840 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1010 nodes · 1364 edges · 90 communities (62 shown, 28 thin omitted)
+- 1015 nodes · 1379 edges · 90 communities (62 shown, 28 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 86 edges (avg confidence: 0.82)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `dc0c8cda`
+- Built from commit: `80785525`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -107,9 +107,9 @@
 5. `MainActivity` - 17 edges
 6. `ClothingDao` - 15 edges
 7. `ClothingImage()` - 15 edges
-8. `ClothingRepository` - 14 edges
-9. `ShareItemViewModel` - 14 edges
-10. `WardrobeViewModel` - 13 edges
+8. `UpdateViewModel` - 14 edges
+9. `ClothingRepository` - 14 edges
+10. `ShareItemViewModel` - 14 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Auto-Update System via GitHub Releases (v1.0.10)` --semantically_similar_to--> `UpdateRepository (GitHub Releases API client)`  [INFERRED] [semantically similar]
@@ -139,19 +139,19 @@ Nodes (50): Calendar Screen (monthly wear history view), Wear Today / Un-wear To
 
 ### Community 1 - "Settings UI & Navigation"
 Cohesion: 0.07
-Nodes (42): Modifier, String, Modifier, String, Color, Modifier, List, String (+34 more)
+Nodes (43): Modifier, String, Modifier, String, Color, Modifier, List, String (+35 more)
 
 ### Community 2 - "ViewModel State Management"
 Cohesion: 0.39
 Nodes (3): String, Uri, DiagnosticsRepository
 
 ### Community 3 - "App Update Screen"
-Cohesion: 0.08
-Nodes (24): Boolean, GithubRelease, Long, String, Boolean, Int, List, String (+16 more)
+Cohesion: 0.09
+Nodes (24): Boolean, Long, String, Boolean, String, String, com, CoroutineWorker (+16 more)
 
 ### Community 4 - "Diagnostics & Update Delivery"
-Cohesion: 0.10
-Nodes (18): File, String, Uri, GithubAsset, Intent, Long, ImageStorage, Job (+10 more)
+Cohesion: 0.09
+Nodes (20): File, String, Uri, Long, Double, Float, GithubAsset, ImageStorage (+12 more)
 
 ### Community 5 - "App Entry & Theme"
 Cohesion: 0.07
@@ -214,8 +214,8 @@ Cohesion: 0.16
 Nodes (9): FileLoggingTree, String, FileLoggingTree, Application, Configuration, DiagnosticsRepository, HiltWorkerFactory, installCrashHandler() (+1 more)
 
 ### Community 21 - "Settings Repository"
-Cohesion: 0.14
-Nodes (9): Boolean, String, WardrobeViewMode, AppSettings, Flow, Int, Keys, SettingsRepository (+1 more)
+Cohesion: 0.16
+Nodes (8): Boolean, String, WardrobeViewMode, AppSettings, Flow, Keys, SettingsRepository, ThemeMode
 
 ### Community 22 - "Item Detail ViewModel"
 Cohesion: 0.20
@@ -250,8 +250,8 @@ Cohesion: 0.33
 Nodes (4): Long, String, ShortcutActions, WardoveDestinations
 
 ### Community 30 - "Image Storage"
-Cohesion: 0.24
-Nodes (5): AppSettings, Boolean, StateFlow, ThemeMode, SettingsViewModel
+Cohesion: 0.22
+Nodes (6): AppSettings, Boolean, StateFlow, ThemeMode, SettingsViewModel, ViewModel
 
 ### Community 31 - "Docs Build Config"
 Cohesion: 0.22
@@ -306,8 +306,8 @@ Cohesion: 0.29
 Nodes (6): ClothingItem, LaundryCycle, List, Long, StateFlow, HistoryViewModel
 
 ### Community 76 - "Community 76"
-Cohesion: 0.40
-Nodes (5): StateFlow, CostPerWearItem, StatsUiState, StatsViewModel, ViewModel
+Cohesion: 0.50
+Nodes (4): StateFlow, CostPerWearItem, StatsUiState, StatsViewModel
 
 ### Community 77 - "Community 77"
 Cohesion: 0.08
@@ -354,7 +354,7 @@ Cohesion: 0.22
 Nodes (10): Boolean, ClothingItem, LaundryCycle, List, Long, String, CycleRow(), formatDate() (+2 more)
 
 ## Knowledge Gaps
-- **337 isolated node(s):** `CalendarViewModel`, `Set`, `Color`, `WardrobeViewModel`, `WardrobeFilter` (+332 more)
+- **336 isolated node(s):** `UpdateViewModel`, `Boolean`, `InstallState`, `Float`, `Job` (+331 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **28 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -362,16 +362,16 @@ Nodes (10): Boolean, ClothingItem, LaundryCycle, List, Long, String, CycleRow(),
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `WardoveNavHost()` connect `Wardrobe Screen UI` to `Settings UI & Navigation`, `App Update Screen`, `App Entry & Theme`, `Stats & Analytics UI`, `Laundry Screen UI`, `Add Item Screen`, `Item Detail Screen`, `Community 90`?**
-  _High betweenness centrality (0.132) - this node is a cross-community bridge._
+  _High betweenness centrality (0.109) - this node is a cross-community bridge._
 - **Why does `AppLockSettingsScreen()` connect `App Entry & Theme` to `Wardrobe Screen UI`?**
-  _High betweenness centrality (0.074) - this node is a cross-community bridge._
-- **Why does `AppLockSettingsViewModel` connect `App Entry & Theme` to `Community 76`?**
-  _High betweenness centrality (0.070) - this node is a cross-community bridge._
+  _High betweenness centrality (0.063) - this node is a cross-community bridge._
+- **Why does `AppLockSettingsViewModel` connect `App Entry & Theme` to `Image Storage`?**
+  _High betweenness centrality (0.062) - this node is a cross-community bridge._
 - **Are the 18 inferred relationships involving `WardoveNavHost()` (e.g. with `AddItemScreen()` and `CalendarScreen()`) actually correct?**
   _`WardoveNavHost()` has 18 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `CalendarViewModel`, `Set`, `Color` to the rest of the system?**
-  _340 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `UpdateViewModel`, `Boolean`, `InstallState` to the rest of the system?**
+  _339 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Documentation & Feature Docs` be split into smaller, more focused modules?**
   _Cohesion score 0.06196078431372549 - nodes in this community are weakly interconnected._
 - **Should `Settings UI & Navigation` be split into smaller, more focused modules?**
-  _Cohesion score 0.0726950354609929 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06857142857142857 - nodes in this community are weakly interconnected._

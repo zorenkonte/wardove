@@ -1,16 +1,16 @@
 # Graph Report - wardove  (2026-06-28)
 
 ## Corpus Check
-- 110 files · ~58,152 words
+- 110 files · ~58,192 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1012 nodes · 1364 edges · 90 communities (62 shown, 28 thin omitted)
+- 1010 nodes · 1364 edges · 90 communities (62 shown, 28 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 86 edges (avg confidence: 0.82)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `cbd85215`
+- Built from commit: `dc0c8cda`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -135,11 +135,11 @@
 
 ### Community 0 - "Documentation & Feature Docs"
 Cohesion: 0.06
-Nodes (52): Auto-Update System via GitHub Releases (v1.0.10), Biometric App Lock Feature (v1.0.13), Wardove Changelog, Calendar Screen (monthly wear history view), Wear Today / Un-wear Today Action, Laundry Cycle Lifecycle (startCycle → completeCycle), Wear Threshold (laundry reminder, range 1-30), Appearance Settings (theme mode, Material You dynamic color) (+44 more)
+Nodes (50): Calendar Screen (monthly wear history view), Wear Today / Un-wear Today Action, Laundry Cycle Lifecycle (startCycle → completeCycle), Wear Threshold (laundry reminder, range 1-30), Appearance Settings (theme mode, Material You dynamic color), Category breakdown, Cost per wear, Stats (+42 more)
 
 ### Community 1 - "Settings UI & Navigation"
 Cohesion: 0.07
-Nodes (44): Boolean, ClothingItem, Modifier, String, Modifier, String, Color, Modifier (+36 more)
+Nodes (42): Modifier, String, Modifier, String, Color, Modifier, List, String (+34 more)
 
 ### Community 2 - "ViewModel State Management"
 Cohesion: 0.39
@@ -235,7 +235,7 @@ Nodes (8): ClothingItem, List, LocalDate, Set, StateFlow, WearLogWithItem, Calen
 
 ### Community 26 - "Community 26"
 Cohesion: 0.07
-Nodes (31): Changes to this policy, Children's privacy, Contact, Data storage, Network activity, Permissions, Privacy Policy, Third-party libraries (+23 more)
+Nodes (33): Auto-Update System via GitHub Releases (v1.0.10), Biometric App Lock Feature (v1.0.13), Wardove Changelog, Changes to this policy, Children's privacy, Contact, Data storage, Network activity (+25 more)
 
 ### Community 27 - "Wardrobe ViewModel"
 Cohesion: 0.23
@@ -354,7 +354,7 @@ Cohesion: 0.22
 Nodes (10): Boolean, ClothingItem, LaundryCycle, List, Long, String, CycleRow(), formatDate() (+2 more)
 
 ## Knowledge Gaps
-- **340 isolated node(s):** `Color`, `WardrobeViewModel`, `WardrobeFilter`, `Boolean`, `CalendarViewModel` (+335 more)
+- **337 isolated node(s):** `CalendarViewModel`, `Set`, `Color`, `WardrobeViewModel`, `WardrobeFilter` (+332 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **28 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -362,16 +362,16 @@ Nodes (10): Boolean, ClothingItem, LaundryCycle, List, Long, String, CycleRow(),
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `WardoveNavHost()` connect `Wardrobe Screen UI` to `Settings UI & Navigation`, `App Update Screen`, `App Entry & Theme`, `Stats & Analytics UI`, `Laundry Screen UI`, `Add Item Screen`, `Item Detail Screen`, `Community 90`?**
-  _High betweenness centrality (0.126) - this node is a cross-community bridge._
+  _High betweenness centrality (0.132) - this node is a cross-community bridge._
 - **Why does `AppLockSettingsScreen()` connect `App Entry & Theme` to `Wardrobe Screen UI`?**
-  _High betweenness centrality (0.070) - this node is a cross-community bridge._
+  _High betweenness centrality (0.074) - this node is a cross-community bridge._
 - **Why does `AppLockSettingsViewModel` connect `App Entry & Theme` to `Community 76`?**
-  _High betweenness centrality (0.068) - this node is a cross-community bridge._
+  _High betweenness centrality (0.070) - this node is a cross-community bridge._
 - **Are the 18 inferred relationships involving `WardoveNavHost()` (e.g. with `AddItemScreen()` and `CalendarScreen()`) actually correct?**
   _`WardoveNavHost()` has 18 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `Color`, `WardrobeViewModel`, `WardrobeFilter` to the rest of the system?**
-  _343 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `CalendarViewModel`, `Set`, `Color` to the rest of the system?**
+  _340 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Documentation & Feature Docs` be split into smaller, more focused modules?**
-  _Cohesion score 0.05878084179970972 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06196078431372549 - nodes in this community are weakly interconnected._
 - **Should `Settings UI & Navigation` be split into smaller, more focused modules?**
-  _Cohesion score 0.06693877551020408 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.0726950354609929 - nodes in this community are weakly interconnected._
