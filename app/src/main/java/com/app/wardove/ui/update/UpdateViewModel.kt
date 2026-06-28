@@ -85,6 +85,7 @@ class UpdateViewModel @Inject constructor(
     fun refresh() {
         viewModelScope.launch {
             _isRefreshing.value = true
+            val started = System.currentTimeMillis()
             try {
                 _releasesState.value = try {
                     ReleasesState.Success(repository.fetchReleases())
@@ -92,6 +93,8 @@ class UpdateViewModel @Inject constructor(
                     ReleasesState.Error(e.message ?: "Failed to fetch releases")
                 }
             } finally {
+                val elapsed = System.currentTimeMillis() - started
+                if (elapsed < 800L) delay(800L - elapsed)
                 _isRefreshing.value = false
             }
         }

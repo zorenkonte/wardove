@@ -34,6 +34,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
+import androidx.compose.material3.pulltorefresh.PullToRefreshDefaults
+import androidx.compose.material3.pulltorefresh.rememberPullToRefreshState
+import androidx.compose.ui.graphics.Color
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
@@ -68,6 +71,7 @@ fun UpdateScreen(
     val releasesState by viewModel.releasesState.collectAsState()
     val installState by viewModel.installState.collectAsState()
     val isRefreshing by viewModel.isRefreshing.collectAsState()
+    val pullState = rememberPullToRefreshState()
 
     val installLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.StartActivityForResult()
@@ -101,7 +105,16 @@ fun UpdateScreen(
         PullToRefreshBox(
             isRefreshing = isRefreshing,
             onRefresh = viewModel::refresh,
-            modifier = Modifier.fillMaxSize().padding(padding)
+            state = pullState,
+            modifier = Modifier.fillMaxSize().padding(padding),
+            indicator = {
+                PullToRefreshDefaults.Indicator(
+                    state = pullState,
+                    isRefreshing = isRefreshing,
+                    color = Color(0xFF1A1A1A),
+                    modifier = Modifier.align(Alignment.TopCenter)
+                )
+            }
         ) {
         when (val state = releasesState) {
             ReleasesState.Loading -> {
