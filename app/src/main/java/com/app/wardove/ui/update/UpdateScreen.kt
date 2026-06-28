@@ -112,6 +112,7 @@ fun UpdateScreen(
                     state = pullState,
                     isRefreshing = isRefreshing,
                     color = Color(0xFF1A1A1A),
+                    containerColor = MaterialTheme.colorScheme.surfaceVariant,
                     modifier = Modifier.align(Alignment.TopCenter)
                 )
             }
