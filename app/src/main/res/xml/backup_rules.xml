@@ -7,5 +7,4 @@
     <include domain="database" path="." />
     <include domain="file" path="images/" />
     <include domain="sharedpref" path="." />
-    <exclude domain="file" path="logs/" />
 </full-backup-content>

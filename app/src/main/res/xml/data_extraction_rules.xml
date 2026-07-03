@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?><!--
    Wardove's data is entirely local (Room DB + item photos + DataStore prefs — see
    CLAUDE.md). Back up all of it so a cloud restore or device transfer brings a user's
-   wardrobe with it; exclude the transient diagnostic log and cache files.
+   wardrobe with it. Diagnostic logs live in cacheDir, which is excluded from backup
+   by default, so no explicit exclude rule is needed.
    See https://developer.android.com/about/versions/12/backup-restore#xml-changes
    for details.
 -->
@@ -10,12 +11,10 @@
         <include domain="database" path="." />
         <include domain="file" path="images/" />
         <include domain="sharedpref" path="." />
-        <exclude domain="file" path="logs/" />
     </cloud-backup>
     <device-transfer>
         <include domain="database" path="." />
         <include domain="file" path="images/" />
         <include domain="sharedpref" path="." />
-        <exclude domain="file" path="logs/" />
     </device-transfer>
 </data-extraction-rules>
