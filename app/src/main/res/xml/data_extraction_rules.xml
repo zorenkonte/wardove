@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?><!--
-   Sample data extraction rules file; uncomment and customize as necessary.
+   Wardove's data is entirely local (Room DB + item photos + DataStore prefs — see
+   CLAUDE.md). Back up all of it so a cloud restore or device transfer brings a user's
+   wardrobe with it. Diagnostic logs live in cacheDir, which is excluded from backup
+   by default, so no explicit exclude rule is needed.
    See https://developer.android.com/about/versions/12/backup-restore#xml-changes
    for details.
 -->
 <data-extraction-rules>
     <cloud-backup>
-        <!-- TODO: Use <include> and <exclude> to control what is backed up.
-        <include .../>
-        <exclude .../>
-        -->
+        <include domain="database" path="." />
+        <include domain="file" path="images/" />
+        <include domain="sharedpref" path="." />
     </cloud-backup>
-    <!--
     <device-transfer>
-        <include .../>
-        <exclude .../>
+        <include domain="database" path="." />
+        <include domain="file" path="images/" />
+        <include domain="sharedpref" path="." />
     </device-transfer>
-    -->
 </data-extraction-rules>

@@ -56,4 +56,22 @@ interface LaundryDao {
         """
     )
     suspend fun getItemsInCycle(cycleId: Long): List<ClothingItem>
+
+    /** One-shot reads of every cycle / cycle-item row, used for backup export. */
+    @Query("SELECT * FROM laundry_cycles ORDER BY id ASC")
+    suspend fun getAllCycles(): List<LaundryCycle>
+
+    @Query("SELECT * FROM laundry_cycle_items")
+    suspend fun getAllCycleItems(): List<LaundryCycleItem>
+
+    /** Inserts rows with explicit ids (backup restore) rather than autogenerating them. */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertCyclesAll(cycles: List<LaundryCycle>)
+
+    /** Wipes both tables — only used by backup restore, inside a transaction. */
+    @Query("DELETE FROM laundry_cycles")
+    suspend fun deleteAllCycles()
+
+    @Query("DELETE FROM laundry_cycle_items")
+    suspend fun deleteAllCycleItems()
 }

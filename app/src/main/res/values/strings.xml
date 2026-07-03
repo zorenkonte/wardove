@@ -213,6 +213,8 @@
     <string name="settings_notifications_subtitle">App updates</string>
     <string name="settings_diagnostics_title">Diagnostics</string>
     <string name="settings_diagnostics_subtitle">Share app logs with developers</string>
+    <string name="settings_backup_title">Backup &amp; Restore</string>
+    <string name="settings_backup_subtitle">Export or import your wardrobe data</string>
     <string name="settings_submit_issue_label">Submit Issue</string>
     <string name="settings_submit_issue_subtitle">Report bugs or request features on GitHub</string>
     <string name="settings_shake_report_label">Shake to Report</string>
@@ -238,6 +240,21 @@
     <string name="notification_section_header">Notifications</string>
     <string name="notification_updates_label">App updates</string>
     <string name="notification_updates_subtitle">Notify when a new version is available</string>
+
+    <!-- ── Backup & restore settings ── -->
+    <string name="backup_export_label">Export data</string>
+    <string name="backup_export_subtitle">Save your items, wear history, and laundry cycles to a file</string>
+    <string name="backup_import_label">Import data</string>
+    <string name="backup_import_subtitle">Restore from a previously exported backup file</string>
+    <string name="backup_help_text">Backups are local-only and are never uploaded anywhere. Keep the exported file somewhere safe — it\'s the only way to recover your wardrobe if you uninstall the app or switch devices.</string>
+    <string name="backup_import_dialog_title">Replace all data?</string>
+    <string name="backup_import_dialog_body">Importing a backup replaces every item, wear log, and laundry cycle currently in the app. This cannot be undone.</string>
+    <!-- %d = number of items -->
+    <string name="backup_message_export_success">Exported %d items</string>
+    <!-- %d = number of items -->
+    <string name="backup_message_import_success">Imported %d items</string>
+    <!-- %s = error message -->
+    <string name="backup_message_failed">Failed: %s</string>
 
     <!-- ── Diagnostics settings ── -->
     <string name="diagnostics_log_preview_header">Log Preview</string>

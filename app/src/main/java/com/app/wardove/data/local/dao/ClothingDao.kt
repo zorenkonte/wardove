@@ -53,4 +53,16 @@ interface ClothingDao {
 
     @Query("SELECT COUNT(*) FROM clothing_items WHERE status = :status")
     suspend fun countByStatus(status: String): Int
+
+    /** One-shot read of every item, used for backup export. */
+    @Query("SELECT * FROM clothing_items ORDER BY id ASC")
+    suspend fun getAll(): List<ClothingItem>
+
+    /** Inserts a row with an explicit id (backup restore) rather than autogenerating one. */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(items: List<ClothingItem>)
+
+    /** Wipes the table — only used by backup restore, inside a transaction. */
+    @Query("DELETE FROM clothing_items")
+    suspend fun deleteAll()
 }

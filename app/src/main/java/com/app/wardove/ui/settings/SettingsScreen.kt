@@ -35,6 +35,7 @@ import com.app.wardove.ui.util.ISSUES_URL
 import com.app.wardove.ui.util.openCustomTab
 import com.composables.icons.lucide.Bell
 import com.composables.icons.lucide.ChevronRight
+import com.composables.icons.lucide.DatabaseBackup
 import com.composables.icons.lucide.ExternalLink
 import com.composables.icons.lucide.Info
 import com.composables.icons.lucide.Lock
@@ -54,6 +55,7 @@ fun SettingsScreen(
     onOpenNotifications: () -> Unit,
     onOpenAbout: () -> Unit,
     onOpenDiagnostics: () -> Unit,
+    onOpenBackup: () -> Unit,
     viewModel: SettingsViewModel = hiltViewModel()
 ) {
     val context = LocalContext.current
@@ -140,6 +142,17 @@ fun SettingsScreen(
                     label = stringResource(R.string.settings_diagnostics_title),
                     subtitle = stringResource(R.string.settings_diagnostics_subtitle),
                     onClick = onOpenDiagnostics
+                )
+                HorizontalDivider(
+                    color = MaterialTheme.colorScheme.outline,
+                    thickness = 0.5.dp,
+                    modifier = Modifier.padding(start = 56.dp)
+                )
+                ChevronRow(
+                    icon = Lucide.DatabaseBackup,
+                    label = stringResource(R.string.settings_backup_title),
+                    subtitle = stringResource(R.string.settings_backup_subtitle),
+                    onClick = onOpenBackup
                 )
             }
 

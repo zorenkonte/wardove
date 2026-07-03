@@ -37,4 +37,16 @@ interface WearLogDao {
         """
     )
     fun observeAllWithItems(): Flow<List<WearLogWithItem>>
+
+    /** One-shot read of every wear log, used for backup export. */
+    @Query("SELECT * FROM wear_logs ORDER BY id ASC")
+    suspend fun getAll(): List<WearLog>
+
+    /** Inserts rows with explicit ids (backup restore) rather than autogenerating them. */
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(logs: List<WearLog>)
+
+    /** Wipes the table — only used by backup restore, inside a transaction. */
+    @Query("DELETE FROM wear_logs")
+    suspend fun deleteAll()
 }
