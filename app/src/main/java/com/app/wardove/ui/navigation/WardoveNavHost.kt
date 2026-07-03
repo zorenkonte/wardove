@@ -27,6 +27,7 @@ import com.app.wardove.ui.laundry.LaundryScreen
 import com.app.wardove.ui.settings.AboutSettingsScreen
 import com.app.wardove.ui.settings.AppLockSettingsScreen
 import com.app.wardove.ui.settings.AppearanceSettingsScreen
+import com.app.wardove.ui.settings.BackupSettingsScreen
 import com.app.wardove.ui.settings.DiagnosticsSettingsScreen
 import com.app.wardove.ui.settings.LicenseDetailScreen
 import com.app.wardove.ui.settings.LicensesSettingsScreen
@@ -216,7 +217,8 @@ fun WardoveNavHost(
                     onOpenAppLock = { navController.navigate(WardoveDestinations.SETTINGS_APP_LOCK) },
                     onOpenNotifications = { navController.navigate(WardoveDestinations.SETTINGS_NOTIFICATIONS) },
                     onOpenAbout = { navController.navigate(WardoveDestinations.SETTINGS_ABOUT) },
-                    onOpenDiagnostics = { navController.navigate(WardoveDestinations.SETTINGS_DIAGNOSTICS) }
+                    onOpenDiagnostics = { navController.navigate(WardoveDestinations.SETTINGS_DIAGNOSTICS) },
+                    onOpenBackup = { navController.navigate(WardoveDestinations.SETTINGS_BACKUP) }
                 )
             }
 
@@ -306,6 +308,16 @@ fun WardoveNavHost(
                 popExitTransition = popExitSlide
             ) {
                 DiagnosticsSettingsScreen(onBack = { navController.popBackStack() })
+            }
+
+            composable(
+                route = WardoveDestinations.SETTINGS_BACKUP,
+                enterTransition = enterSlide,
+                exitTransition = exitSlide,
+                popEnterTransition = popEnterSlide,
+                popExitTransition = popExitSlide
+            ) {
+                BackupSettingsScreen(onBack = { navController.popBackStack() })
             }
 
             composable(

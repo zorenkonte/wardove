@@ -15,6 +15,7 @@ object WardoveDestinations {
     const val SETTINGS_LICENSES = "settings_licenses"
     const val SETTINGS_DIAGNOSTICS = "settings_diagnostics"
     const val SETTINGS_NOTIFICATIONS = "settings_notifications"
+    const val SETTINGS_BACKUP = "settings_backup"
     const val UPDATE = "update"
 
     const val ADD_ITEM_ROUTE = "add_item?itemId={itemId}"
