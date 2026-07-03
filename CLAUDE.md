@@ -32,6 +32,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **ImageStorage** — saves item photos to `context.filesDir/images/` via FileProvider (`{packageName}.fileprovider`). Always use `ImageStorage` for photo I/O; never write to external storage directly.
 - **DataStore** (`AppSettings`) — persists theme mode, dynamic color, app-lock state.
 - **Repositories** wrap DAOs/DataStore. `UpdateRepository` calls the GitHub Releases API to check for app updates. Update detection uses `compareVersions` (numeric semver, top-level in `UpdateViewModel.kt`), not string equality; the "latest" release is chosen by highest version, not most recent publish date.
+- **`BackupRepository`** — exports `ClothingItem`/`WearLog`/`LaundryCycle` rows plus item photos into a single zip (via the system file picker), and restores them back in one Room transaction. This is the only way users carry data across a reinstall or device change, since storage is local-only (see below). Screen: `BackupSettingsScreen` + `BackupViewModel`.
 
 > **Storage scope**: all persistence (Room DB, images in `filesDir`, DataStore) is **local to the app sandbox** and is wiped on uninstall. There is no server/cloud backend. See "Data persistence" under Key Conventions before changing this.
 
@@ -72,4 +73,4 @@ All screens set `Scaffold(containerColor = Color(0xFFF7F5F2))`. See `WARDOVE_DES
 - `coreLibraryDesugaringEnabled = true` — `java.time` APIs are available via desugaring (min SDK 24).
 - Version catalog is `gradle/libs.versions.toml` — add all new dependencies there, not inline.
 - No Retrofit — `UpdateRepository` uses `java.net.HttpURLConnection` directly for the GitHub API call.
-- **Data persistence is local-only**: Room, `ImageStorage` (files), and DataStore all live in the app sandbox and are deleted on uninstall. There is no remote/cloud sync. Moving to server-side persistence is a backend project, not a config flag (see the user-facing answer in PR/chat history).
+- **Data persistence is local-only**: Room, `ImageStorage` (files), and DataStore all live in the app sandbox and are deleted on uninstall. There is no remote/cloud sync. Moving to server-side persistence is a backend project, not a config flag (see the user-facing answer in PR/chat history). The manual zip export/import via `BackupRepository` is the sanctioned way to preserve data across reinstalls — don't reintroduce cloud sync to solve that problem.

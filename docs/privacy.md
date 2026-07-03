@@ -12,7 +12,7 @@ All data you enter — clothing items, wear logs, laundry cycles, and item photo
 - **Item photos** — image files saved to the app's private `filesDir` directory.
 - **Preferences** — theme mode, dynamic color, and app-lock state stored via DataStore.
 
-None of this data ever leaves your device. There is no server, no cloud sync, and no backup outside of Android's standard system backup (which you control in system settings). **All data is permanently deleted when you uninstall the app.**
+None of this data ever leaves your device. There is no server and no cloud sync. You can manually export a backup (a zip file containing your items, wear logs, laundry cycles, and photos) to a location you choose via Android's system file picker, and restore from it later — this backup file is entirely under your control and is not transmitted anywhere. Android's standard system backup also applies as usual (controlled in system settings). **All data is permanently deleted when you uninstall the app**, unless you've saved a manual backup beforehand.
 
 ## Permissions
 
