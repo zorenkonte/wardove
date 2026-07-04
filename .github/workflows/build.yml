@@ -66,6 +66,15 @@ jobs:
           path: artifacts/*.apk
           retention-days: 30
 
+      - name: Create release tag
+        # changelogithub resolves from/to tags from the local clone, so the tag
+        # must exist locally and on GitHub before it runs. Created after the
+        # build so a failed build never leaves a stray tag.
+        if: github.event_name == 'push'
+        run: |
+          git tag "v${{ steps.ver.outputs.version }}"
+          git push origin "v${{ steps.ver.outputs.version }}"
+
       - name: Publish release
         # Only publish a release for pushes to the main repo, not for PRs.
         if: github.event_name == 'push'
@@ -74,12 +83,21 @@ jobs:
         with:
           tag_name: v${{ steps.ver.outputs.version }}
           name: Wardove v${{ steps.ver.outputs.version }}
-          # Auto-generate the "What's Changed" changelog from merged PRs/commits
-          # since the previous release, the same way open-source repos do.
-          generate_release_notes: true
           files: artifacts/*.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate release notes (changelogithub)
+        # Rewrites the release body from Conventional Commits since the previous
+        # tag (config in changelogithub.config.json). --name is required or the
+        # PATCH would rename the release to the bare tag name.
+        if: github.event_name == 'push'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: >
+          npx changelogithub@14
+          --to "v${{ steps.ver.outputs.version }}"
+          --name "Wardove v${{ steps.ver.outputs.version }}"
 
       - name: Fetch release notes
         if: github.event_name == 'push'
