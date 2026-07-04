@@ -4,6 +4,15 @@ All notable changes are documented here. Format follows [Keep a Changelog](https
 
 ## [Unreleased]
 
+## [2.0.88] — 2026-07-04
+
+### &nbsp;&nbsp;&nbsp;🚀 Features
+
+- Show category placeholder when item has no photo &nbsp;-&nbsp; by @zorenkonte [<samp>(ea19f)</samp>](https://github.com/zorenkonte/wardove/commit/ea19f3c)
+- Match color picker swatches to item view pill style &nbsp;-&nbsp; by @zorenkonte [<samp>(a19b4)</samp>](https://github.com/zorenkonte/wardove/commit/a19b487)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/zorenkonte/wardove/compare/v2.0.85...v2.0.88)
+
 ## [2.0.85] — 2026-07-04
 
 *No significant changes*
