@@ -395,9 +395,9 @@
     "semantic_hash": "5a06cbcda16b752ff35ccd4e94fab367"
   },
   "CLAUDE.md": {
-    "mtime": 1783107377.6324732,
-    "ast_hash": "1d22cfd067c209e7e5d782b67d913019",
-    "semantic_hash": ""
+    "mtime": 1782222348.8498068,
+    "ast_hash": "fa699b21c5c1715083181b13e23f3686",
+    "semantic_hash": "fa699b21c5c1715083181b13e23f3686"
   },
   "README.md": {
     "mtime": 1781430005.8580542,
@@ -465,9 +465,9 @@
     "semantic_hash": "2d613357265743f7989a61235614ff7d"
   },
   "docs/privacy.md": {
-    "mtime": 1783107510.8977988,
-    "ast_hash": "d3928ebbb534c1069b5d030cd1e715ee",
-    "semantic_hash": ""
+    "mtime": 1781965426.5023725,
+    "ast_hash": "ef46079a04b7bb9598df37065cb09cd3",
+    "semantic_hash": "ef46079a04b7bb9598df37065cb09cd3"
   },
   "docs/reference/architecture.md": {
     "mtime": 1781953988.5015013,
