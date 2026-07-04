@@ -57,17 +57,16 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import coil3.compose.AsyncImage
 import com.app.wardove.R
+import com.app.wardove.ui.components.ClothingImage
 import com.app.wardove.ui.util.ClothingOptions
 import com.app.wardove.ui.util.parseHexColor
-import java.io.File
+import com.app.wardove.ui.util.softBadgeColors
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -126,6 +125,7 @@ fun AddItemScreen(
         ) {
             ImagePicker(
                 imagePath = state.imagePath,
+                category = state.category,
                 onCamera = {
                     val uri = viewModel.prepareCameraCapture()
                     cameraLauncher.launch(uri)
@@ -230,6 +230,7 @@ fun AddItemScreen(
 @Composable
 private fun ImagePicker(
     imagePath: String?,
+    category: String,
     onCamera: () -> Unit,
     onGallery: () -> Unit,
     onRemove: () -> Unit
@@ -238,17 +239,16 @@ private fun ImagePicker(
         modifier = Modifier
             .fillMaxWidth()
             .aspectRatio(1f)
-            .clip(RoundedCornerShape(12.dp))
-            .background(MaterialTheme.colorScheme.surfaceVariant),
+            .clip(RoundedCornerShape(12.dp)),
         contentAlignment = Alignment.Center
     ) {
+        ClothingImage(
+            imagePath = imagePath.orEmpty(),
+            contentDescription = null,
+            category = category,
+            modifier = Modifier.fillMaxSize()
+        )
         if (imagePath != null) {
-            AsyncImage(
-                model = File(imagePath),
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier.fillMaxSize()
-            )
             IconButton(
                 onClick = onRemove,
                 modifier = Modifier.align(Alignment.TopEnd)
@@ -270,11 +270,6 @@ private fun ImagePicker(
                     )
                 }
             }
-        } else {
-            Text(
-                stringResource(R.string.add_item_no_photo),
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
         }
     }
     Row(
@@ -373,14 +368,15 @@ internal fun ColorGrid(
     ) {
         items(ClothingOptions.colors) { c ->
             val isSelected = c.hex.equals(selected, ignoreCase = true)
+            val (bg, fg) = softBadgeColors(parseHexColor(c.hex))
             Box(
                 modifier = Modifier
                     .aspectRatio(1f)
                     .clip(CircleShape)
-                    .background(parseHexColor(c.hex))
+                    .background(bg)
                     .border(
                         width = if (isSelected) 3.dp else 1.dp,
-                        color = if (isSelected) MaterialTheme.colorScheme.primary else Color.LightGray,
+                        color = if (isSelected) fg else fg.copy(alpha = 0.25f),
                         shape = CircleShape
                     )
                     .clickable { onSelect(c.hex) }

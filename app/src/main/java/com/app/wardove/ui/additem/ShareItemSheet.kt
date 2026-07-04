@@ -100,7 +100,8 @@ fun ShareItemSheet(
                         imagePath = state.imagePath.orEmpty(),
                         contentDescription = null,
                         modifier = Modifier.fillMaxSize(),
-                        shape = RoundedCornerShape(12.dp)
+                        shape = RoundedCornerShape(12.dp),
+                        category = state.category
                     )
                     if (state.imagePath != null) {
                         IconButton(
