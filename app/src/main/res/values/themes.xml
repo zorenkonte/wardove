@@ -9,8 +9,8 @@
     </style>
 
     <style name="Theme.Wardove.Splash" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">#4B9EF8</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
+        <item name="windowSplashScreenBackground">#F7F5F2</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_dove</item>
         <item name="postSplashScreenTheme">@style/Theme.Wardove</item>
     </style>
 </resources>
