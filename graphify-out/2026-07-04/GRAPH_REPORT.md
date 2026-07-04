@@ -1,16 +1,16 @@
 # Graph Report - wardove  (2026-07-04)
 
 ## Corpus Check
-- 115 files · ~61,680 words
+- 115 files · ~55,557 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1083 nodes · 1485 edges · 108 communities (80 shown, 28 thin omitted)
+- 1082 nodes · 1485 edges · 107 communities (80 shown, 27 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 91 edges (avg confidence: 0.82)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `90d038c2`
+- Built from commit: `bf14a03c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -76,7 +76,6 @@
 - [[_COMMUNITY_Launcher Round Icon xxhdpi|Launcher Round Icon xxhdpi]]
 - [[_COMMUNITY_Launcher Icon xxxhdpi|Launcher Icon xxxhdpi]]
 - [[_COMMUNITY_Launcher Round Icon xxxhdpi|Launcher Round Icon xxxhdpi]]
-- [[_COMMUNITY_Docs Logo Asset|Docs Logo Asset]]
 - [[_COMMUNITY_Desugaring Rationale|Desugaring Rationale]]
 - [[_COMMUNITY_Community 69|Community 69]]
 - [[_COMMUNITY_Community 70|Community 70]]
@@ -148,7 +147,7 @@
 - **Hilt DI Module Triad (Database + Repository + Settings)** — wardove_hilt_di, wardove_database_module, wardove_repository_module, wardove_settings_module [EXTRACTED 1.00]
 - **Top-Level Navigation Drawer Screens** — wardove_wardrobe_screen, wardove_laundry_screen, wardove_calendar_screen, wardove_stats_screen, wardove_settings_screen, wardove_wardove_nav_host [EXTRACTED 1.00]
 
-## Communities (108 total, 28 thin omitted)
+## Communities (107 total, 27 thin omitted)
 
 ### Community 0 - "Documentation & Feature Docs"
 Cohesion: 0.31
@@ -439,9 +438,9 @@ Cohesion: 0.40
 Nodes (5): Auto-Update System via GitHub Releases (v1.0.10), Biometric App Lock Feature (v1.0.13), Wardove Changelog, LockViewModel, MainActivity (extends FragmentActivity)
 
 ## Knowledge Gaps
-- **352 isolated node(s):** `CalendarViewModel`, `Set`, `Boolean`, `ClothingItem`, `Int` (+347 more)
+- **351 isolated node(s):** `CalendarViewModel`, `Set`, `Boolean`, `ClothingItem`, `Int` (+346 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **28 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **27 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -455,7 +454,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 19 inferred relationships involving `WardoveNavHost()` (e.g. with `AddItemScreen()` and `CalendarScreen()`) actually correct?**
   _`WardoveNavHost()` has 19 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `CalendarViewModel`, `Set`, `Boolean` to the rest of the system?**
-  _356 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _355 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Settings UI & Navigation` be split into smaller, more focused modules?**
   _Cohesion score 0.06313497822931785 - nodes in this community are weakly interconnected._
 - **Should `App Update Screen` be split into smaller, more focused modules?**
