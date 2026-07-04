@@ -8,8 +8,10 @@ on:
   workflow_dispatch:
 
 # Needed to create tags and publish releases from the workflow.
+# actions: write is needed to dispatch docs.yml after the changelog commit.
 permissions:
   contents: write
+  actions: write
 
 jobs:
   build:
