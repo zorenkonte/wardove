@@ -66,6 +66,7 @@ import com.app.wardove.R
 import com.app.wardove.ui.components.ClothingImage
 import com.app.wardove.ui.util.ClothingOptions
 import com.app.wardove.ui.util.parseHexColor
+import com.app.wardove.ui.util.softBadgeColors
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -367,14 +368,15 @@ internal fun ColorGrid(
     ) {
         items(ClothingOptions.colors) { c ->
             val isSelected = c.hex.equals(selected, ignoreCase = true)
+            val (bg, fg) = softBadgeColors(parseHexColor(c.hex))
             Box(
                 modifier = Modifier
                     .aspectRatio(1f)
                     .clip(CircleShape)
-                    .background(parseHexColor(c.hex))
+                    .background(bg)
                     .border(
                         width = if (isSelected) 3.dp else 1.dp,
-                        color = if (isSelected) MaterialTheme.colorScheme.primary else Color.LightGray,
+                        color = if (isSelected) fg else fg.copy(alpha = 0.25f),
                         shape = CircleShape
                     )
                     .clickable { onSelect(c.hex) }
