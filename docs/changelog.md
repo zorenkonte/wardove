@@ -4,6 +4,12 @@ All notable changes are documented here. Format follows [Keep a Changelog](https
 
 ## [Unreleased]
 
+## [2.0.92] — 2026-07-04
+
+*No significant changes*
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/zorenkonte/wardove/compare/v2.0.90...v2.0.92)
+
 ## [2.0.90] — 2026-07-04
 
 ### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes
