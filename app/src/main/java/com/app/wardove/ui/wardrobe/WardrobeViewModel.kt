@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.data.local.entity.ClothingStatus
+import com.app.wardove.data.local.entity.tagList
 import com.app.wardove.data.repository.ClothingRepository
 import com.app.wardove.data.settings.SettingsRepository
 import com.app.wardove.data.settings.WardrobeViewMode
@@ -71,7 +72,8 @@ class WardrobeViewModel @Inject constructor(
         val searched = if (query.isBlank()) statusFiltered
         else statusFiltered.filter {
             it.name.contains(query, ignoreCase = true) ||
-                it.category.contains(query, ignoreCase = true)
+                it.category.contains(query, ignoreCase = true) ||
+                it.tagList().any { tag -> tag.contains(query, ignoreCase = true) }
         }
         when (sort) {
             WardrobeSort.RECENTLY_WORN -> searched.sortedWith(

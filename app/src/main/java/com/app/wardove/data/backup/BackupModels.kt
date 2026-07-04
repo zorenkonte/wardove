@@ -69,6 +69,7 @@ private fun ClothingItem.toJson(): JSONObject = JSONObject().apply {
     put("createdAt", createdAt)
     put("notes", notes ?: JSONObject.NULL)
     put("price", price ?: JSONObject.NULL)
+    put("tags", tags)
 }
 
 private fun JSONObject.toClothingItem(): ClothingItem = ClothingItem(
@@ -82,7 +83,8 @@ private fun JSONObject.toClothingItem(): ClothingItem = ClothingItem(
     totalWearCount = optInt("totalWearCount", 0),
     createdAt = optLong("createdAt", 0L),
     notes = if (isNull("notes")) null else optString("notes"),
-    price = if (isNull("price")) null else optDouble("price")
+    price = if (isNull("price")) null else optDouble("price"),
+    tags = optString("tags", "")
 )
 
 private fun WearLog.toJson(): JSONObject = JSONObject().apply {

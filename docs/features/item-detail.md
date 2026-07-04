@@ -13,7 +13,7 @@ Required fields:
 | Category | Top, Bottom, Shoes, Outerwear, or Accessory |
 | Color | One of 12 preset colors |
 
-Optional fields: **Notes**, **Price** (used for cost-per-wear in Stats).
+Optional fields: **Notes**, **Price** (used for cost-per-wear in Stats), **Tags** (comma-separated free-text labels, e.g. "work, summer").
 
 Tap **Save** when all required fields are filled. The item is created with status **Clean**.
 
@@ -26,7 +26,7 @@ Open an item's detail screen and tap **Edit**. All fields (including the photo) 
 The detail screen shows:
 
 - Full photo
-- Category, color, notes, price
+- Category, color, notes, price, tags
 - Current status badge
 - Full wear-log history (dated list of every wear)
 

@@ -19,7 +19,7 @@ import com.app.wardove.data.local.entity.WearLog
         LaundryCycle::class,
         LaundryCycleItem::class
     ],
-    version = 2,
+    version = 3,
     exportSchema = false
 )
 abstract class WardoveDatabase : RoomDatabase() {
@@ -33,6 +33,12 @@ abstract class WardoveDatabase : RoomDatabase() {
         val MIGRATION_1_2: Migration = object : Migration(1, 2) {
             override fun migrate(db: SupportSQLiteDatabase) {
                 db.execSQL("ALTER TABLE clothing_items ADD COLUMN price REAL DEFAULT NULL")
+            }
+        }
+
+        val MIGRATION_2_3: Migration = object : Migration(2, 3) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("ALTER TABLE clothing_items ADD COLUMN tags TEXT NOT NULL DEFAULT ''")
             }
         }
     }

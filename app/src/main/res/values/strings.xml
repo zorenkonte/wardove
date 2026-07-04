@@ -151,6 +151,7 @@
     <string name="add_item_field_color">Color</string>
     <string name="add_item_field_price">Price (optional)</string>
     <string name="add_item_field_notes">Notes (optional)</string>
+    <string name="add_item_field_tags">Tags (optional, comma separated)</string>
     <string name="add_item_select_category">Select category</string>
     <string name="add_item_no_photo">No photo selected</string>
     <string name="add_item_action_camera">Camera</string>

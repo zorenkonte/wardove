@@ -6,6 +6,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.app.wardove.data.image.ImageStorage
 import com.app.wardove.data.local.entity.ClothingItem
+import com.app.wardove.data.local.entity.tagList
+import com.app.wardove.data.local.entity.toTagList
+import com.app.wardove.data.local.entity.toTagsString
 import com.app.wardove.data.repository.ClothingRepository
 import com.app.wardove.ui.navigation.WardoveDestinations
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -22,6 +25,7 @@ data class AddItemUiState(
     val color: String = "",
     val notes: String = "",
     val price: String = "",
+    val tagsInput: String = "",
     val imagePath: String? = null,
     val pendingCameraPath: String? = null,
     val isEditing: Boolean = false,
@@ -64,6 +68,7 @@ class AddItemViewModel @Inject constructor(
                             color = item.color,
                             notes = item.notes.orEmpty(),
                             price = item.price?.let { p -> formatPrice(p) }.orEmpty(),
+                            tagsInput = item.tagList().joinToString(", "),
                             imagePath = item.imagePath,
                             isEditing = true,
                             loaded = true
@@ -125,6 +130,7 @@ class AddItemViewModel @Inject constructor(
     fun setCategory(v: String) = _state.update { it.copy(category = v) }
     fun setColor(v: String) = _state.update { it.copy(color = v) }
     fun setNotes(v: String) = _state.update { it.copy(notes = v) }
+    fun setTagsInput(v: String) = _state.update { it.copy(tagsInput = v) }
     fun setPrice(v: String) {
         val filtered = v.filter { it.isDigit() || it == '.' }
             .let { s -> if (s.count { c -> c == '.' } > 1) s.substringBeforeLast('.') else s }
@@ -141,6 +147,7 @@ class AddItemViewModel @Inject constructor(
         val s = _state.value
         if (!s.canSave) return
         _state.update { it.copy(isSaving = true) }
+        val tags = s.tagsInput.toTagList().toTagsString()
         viewModelScope.launch {
             try {
                 if (isEditing) {
@@ -159,7 +166,8 @@ class AddItemViewModel @Inject constructor(
                             color = s.color,
                             notes = s.notes.ifBlank { null },
                             price = parsePrice(s.price),
-                            imagePath = newPath.orEmpty()
+                            imagePath = newPath.orEmpty(),
+                            tags = tags
                         )
                     )
                 } else {
@@ -170,7 +178,8 @@ class AddItemViewModel @Inject constructor(
                             color = s.color,
                             imagePath = s.imagePath.orEmpty(),
                             notes = s.notes.ifBlank { null },
-                            price = parsePrice(s.price)
+                            price = parsePrice(s.price),
+                            tags = tags
                         )
                     )
                 }

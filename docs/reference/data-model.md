@@ -1,6 +1,6 @@
 # Data Model
 
-Wardove uses a **Room** (SQLite) database (schema version 2). All data is local to the app sandbox.
+Wardove uses a **Room** (SQLite) database (schema version 3). All data is local to the app sandbox.
 
 ## Entities
 
@@ -21,6 +21,7 @@ Table: `clothing_items`
 | `createdAt` | `Long` | Epoch millis; defaults to now at insert time |
 | `notes` | `String?` | Free-text notes |
 | `price` | `Double?` | Purchase price; used for cost-per-wear stat |
+| `tags` | `String` | Comma-separated free-text labels (default `""`); use `tagList()`/`toTagsString()` in `ClothingItem.kt` to convert to/from `List<String>` |
 
 **Status constants** (`ClothingStatus` object): `CLEAN`, `WORN`, `IN_LAUNDRY`.
 
@@ -88,4 +89,7 @@ Served externally via `FileProvider` (`{packageName}.fileprovider`). Photos are 
 
 ## Migrations
 
-Database version: **2**. Migrations live in `WardoveDatabase.MIGRATION_X_Y` companion objects. Always add a migration — do not rely on fallback-to-destructive.
+Database version: **3**. Migrations live in `WardoveDatabase.MIGRATION_X_Y` companion objects. Always add a migration — do not rely on fallback-to-destructive.
+
+- `MIGRATION_1_2` — adds `price` to `clothing_items`.
+- `MIGRATION_2_3` — adds `tags` to `clothing_items`.

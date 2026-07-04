@@ -10,7 +10,7 @@ Tap the **+** FAB to [add a new item](./item-detail#adding-an-item).
 
 ## Search
 
-The search bar filters items by **name** or **category** in real time.
+The search bar filters items by **name**, **category**, or **tag** in real time.
 
 ## Status filter
 

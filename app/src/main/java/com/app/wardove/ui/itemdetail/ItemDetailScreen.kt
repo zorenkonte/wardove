@@ -2,6 +2,7 @@ package com.app.wardove.ui.itemdetail
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,6 +14,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -59,6 +62,7 @@ import com.app.wardove.ui.components.Dot
 import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.data.local.entity.WearLog
+import com.app.wardove.data.local.entity.tagList
 import com.app.wardove.ui.theme.StatusClean
 import com.app.wardove.ui.util.ClothingOptions
 import com.app.wardove.ui.util.formatDateOnly
@@ -183,6 +187,10 @@ private fun ItemDetailBody(
 
         TagsRow(item = item)
 
+        if (item.tagList().isNotEmpty()) {
+            UserTagsRow(tags = item.tagList())
+        }
+
         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
             StatBox(
                 label = stringResource(R.string.item_detail_stat_times_worn),
@@ -282,6 +290,26 @@ private fun TagsRow(item: ClothingItem) {
             backgroundColor = MaterialTheme.colorScheme.primary,
             textColor = MaterialTheme.colorScheme.onPrimary
         )
+    }
+}
+
+@Composable
+private fun UserTagsRow(tags: List<String>) {
+    LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+        items(tags) { tag ->
+            Box(
+                modifier = Modifier
+                    .border(BorderStroke(1.dp, MaterialTheme.colorScheme.outline), RoundedCornerShape(20.dp))
+                    .padding(horizontal = 12.dp, vertical = 4.dp)
+            ) {
+                Text(
+                    "#$tag",
+                    fontSize = 12.sp,
+                    fontWeight = FontWeight.Medium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+        }
     }
 }
 

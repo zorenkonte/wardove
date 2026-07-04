@@ -21,5 +21,13 @@ data class ClothingItem(
     val totalWearCount: Int = 0,
     val createdAt: Long = System.currentTimeMillis(),
     val notes: String? = null,
-    val price: Double? = null
+    val price: Double? = null,
+    val tags: String = ""
 )
+
+fun ClothingItem.tagList(): List<String> = tags.toTagList()
+
+fun String.toTagList(): List<String> =
+    split(",").map { it.trim() }.filter { it.isNotEmpty() }.distinct()
+
+fun List<String>.toTagsString(): String = joinToString(",") { it.trim() }

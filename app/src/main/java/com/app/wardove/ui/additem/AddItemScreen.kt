@@ -183,6 +183,14 @@ fun AddItemScreen(
                     .height(120.dp)
             )
 
+            OutlinedTextField(
+                value = state.tagsInput,
+                onValueChange = viewModel::setTagsInput,
+                label = { Text(stringResource(R.string.add_item_field_tags)) },
+                singleLine = true,
+                modifier = Modifier.fillMaxWidth()
+            )
+
             Button(
                 onClick = { viewModel.save(onSaved) },
                 enabled = state.canSave,

@@ -26,7 +26,7 @@ object DatabaseModule {
         WardoveDatabase::class.java,
         WardoveDatabase.DATABASE_NAME
     )
-        .addMigrations(WardoveDatabase.MIGRATION_1_2)
+        .addMigrations(WardoveDatabase.MIGRATION_1_2, WardoveDatabase.MIGRATION_2_3)
         .fallbackToDestructiveMigration(dropAllTables = true)
         .build()
 
