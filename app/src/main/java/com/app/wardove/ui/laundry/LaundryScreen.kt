@@ -335,6 +335,7 @@ private fun LaundryItemRow(
             ClothingImage(
                 imagePath = item.imagePath,
                 contentDescription = null,
+                category = item.category,
                 modifier = Modifier.size(44.dp),
                 shape = RoundedCornerShape(10.dp)
             )
@@ -447,6 +448,7 @@ private fun CycleCard(
                     ClothingImage(
                         imagePath = item.imagePath,
                         contentDescription = null,
+                        category = item.category,
                         modifier = Modifier.size(44.dp),
                         shape = RoundedCornerShape(10.dp)
                     )

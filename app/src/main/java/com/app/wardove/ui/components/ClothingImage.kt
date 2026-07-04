@@ -2,25 +2,30 @@ package com.app.wardove.ui.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
+import com.app.wardove.ui.util.ClothingOptions
 import com.composables.icons.lucide.Lucide
 import com.composables.icons.lucide.Shirt
 import java.io.File
 
 /**
  * Renders a clothing item photo from [imagePath]. When the path is blank,
- * shows a shirt icon placeholder on a [MaterialTheme.colorScheme.surfaceVariant]
- * background instead of an empty space.
+ * shows a category emoji placeholder on a category-tinted background (falls
+ * back to a generic shirt icon on [MaterialTheme.colorScheme.surfaceVariant]
+ * when [category] is blank).
  */
 @Composable
 fun ClothingImage(
@@ -28,11 +33,17 @@ fun ClothingImage(
     contentDescription: String?,
     modifier: Modifier = Modifier,
     shape: Shape = RectangleShape,
+    category: String = "",
 ) {
-    Box(
+    val placeholderBg = if (category.isNotBlank()) {
+        ClothingOptions.categoryBackgroundColor(category)
+    } else {
+        MaterialTheme.colorScheme.surfaceVariant
+    }
+    BoxWithConstraints(
         modifier = modifier
             .clip(shape)
-            .background(MaterialTheme.colorScheme.surfaceVariant),
+            .background(placeholderBg),
         contentAlignment = Alignment.Center
     ) {
         if (imagePath.isNotBlank()) {
@@ -41,6 +52,11 @@ fun ClothingImage(
                 contentDescription = contentDescription,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.fillMaxSize()
+            )
+        } else if (category.isNotBlank()) {
+            Text(
+                text = ClothingOptions.categoryEmoji(category),
+                fontSize = (minOf(maxWidth, maxHeight).value * 0.42f).sp
             )
         } else {
             Icon(

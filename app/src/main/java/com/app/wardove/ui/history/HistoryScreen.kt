@@ -194,6 +194,7 @@ private fun CycleRow(
                                 ClothingImage(
                                     imagePath = item.imagePath,
                                     contentDescription = item.name,
+                                    category = item.category,
                                     modifier = Modifier.size(48.dp),
                                     shape = RoundedCornerShape(8.dp)
                                 )

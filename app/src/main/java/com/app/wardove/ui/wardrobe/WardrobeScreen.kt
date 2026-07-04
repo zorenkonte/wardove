@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
+import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
@@ -179,6 +180,13 @@ fun WardrobeScreen(
                     modifier = Modifier.fillMaxSize()
                 )
             } else {
+                val grouped = remember(items) {
+                    items.groupBy { it.category }
+                        .entries.sortedBy { entry ->
+                            ClothingOptions.categories.indexOf(entry.key)
+                                .let { i -> if (i < 0) Int.MAX_VALUE else i }
+                        }
+                }
                 when (viewMode) {
                     WardrobeViewMode.CARD -> LazyVerticalGrid(
                         columns = GridCells.Fixed(2),
@@ -187,8 +195,13 @@ fun WardrobeScreen(
                         verticalArrangement = Arrangement.spacedBy(10.dp),
                         modifier = Modifier.fillMaxSize()
                     ) {
-                        items(items, key = { it.id }) { item ->
-                            ClothingCard(item = item, onClick = { onOpenItem(item.id) })
+                        grouped.forEach { (category, groupItems) ->
+                            item(span = { GridItemSpan(maxLineSpan) }, key = "header_$category") {
+                                CategorySectionHeader(category = category, count = groupItems.size)
+                            }
+                            items(groupItems, key = { it.id }) { item ->
+                                ClothingCard(item = item, onClick = { onOpenItem(item.id) })
+                            }
                         }
                     }
                     WardrobeViewMode.LIST -> LazyColumn(
@@ -196,8 +209,13 @@ fun WardrobeScreen(
                         verticalArrangement = Arrangement.spacedBy(8.dp),
                         modifier = Modifier.fillMaxSize()
                     ) {
-                        items(items, key = { it.id }) { item ->
-                            ClothingListRow(item = item, onClick = { onOpenItem(item.id) })
+                        grouped.forEach { (category, groupItems) ->
+                            item(key = "header_$category") {
+                                CategorySectionHeader(category = category, count = groupItems.size)
+                            }
+                            items(groupItems, key = { it.id }) { item ->
+                                ClothingListRow(item = item, onClick = { onOpenItem(item.id) })
+                            }
                         }
                     }
                     WardrobeViewMode.COMPACT -> LazyVerticalGrid(
@@ -207,8 +225,13 @@ fun WardrobeScreen(
                         verticalArrangement = Arrangement.spacedBy(8.dp),
                         modifier = Modifier.fillMaxSize()
                     ) {
-                        items(items, key = { it.id }) { item ->
-                            CompactCard(item = item, onClick = { onOpenItem(item.id) })
+                        grouped.forEach { (category, groupItems) ->
+                            item(span = { GridItemSpan(maxLineSpan) }, key = "header_$category") {
+                                CategorySectionHeader(category = category, count = groupItems.size)
+                            }
+                            items(groupItems, key = { it.id }) { item ->
+                                CompactCard(item = item, onClick = { onOpenItem(item.id) })
+                            }
                         }
                     }
                 }
@@ -335,6 +358,28 @@ private fun FilterRow(
 }
 
 @Composable
+private fun CategorySectionHeader(category: String, count: Int) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(top = 12.dp, bottom = 4.dp),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(
+            ClothingOptions.categoryResId(category)?.let { stringResource(it) } ?: category,
+            style = MaterialTheme.typography.titleMedium,
+            color = MaterialTheme.colorScheme.onBackground
+        )
+        Text(
+            count.toString(),
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
+    }
+}
+
+@Composable
 private fun ClothingCard(
     item: ClothingItem,
     onClick: () -> Unit
@@ -351,6 +396,7 @@ private fun ClothingCard(
             ClothingImage(
                 imagePath = item.imagePath,
                 contentDescription = item.name,
+                category = item.category,
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(130.dp)
@@ -405,6 +451,7 @@ private fun ClothingListRow(
             ClothingImage(
                 imagePath = item.imagePath,
                 contentDescription = item.name,
+                category = item.category,
                 modifier = Modifier.size(64.dp)
             )
             Column(modifier = Modifier.weight(1f)) {
@@ -444,6 +491,7 @@ private fun CompactCard(
             ClothingImage(
                 imagePath = item.imagePath,
                 contentDescription = item.name,
+                category = item.category,
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(100.dp)

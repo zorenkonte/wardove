@@ -2,6 +2,7 @@ package com.app.wardove.ui.util
 
 import androidx.annotation.StringRes
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.luminance
 import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingStatus
 
@@ -50,11 +51,35 @@ object ClothingOptions {
     /** Fallback: returns the English display name for [hex] without using resources. */
     fun colorNameFor(hex: String?): String =
         colors.firstOrNull { it.hex.equals(hex, ignoreCase = true) }?.name ?: (hex ?: "")
+
+    /** Emoji placeholder shown when an item has no photo. */
+    fun categoryEmoji(category: String): String = when (category) {
+        "Top" -> "👕" // 👕
+        "Bottom" -> "👖" // 👖
+        "Shoes" -> "👟" // 👟
+        "Outerwear" -> "🧥" // 🧥
+        "Accessory" -> "👜" // 👜
+        else -> "👕"
+    }
+
+    /** Soft background behind a category's placeholder / image area. */
+    fun categoryBackgroundColor(category: String): Color = when (category) {
+        "Top" -> Color(0xFFDCE7F5) // light blue
+        "Bottom" -> Color(0xFFF7E6D9) // peach
+        "Shoes" -> Color(0xFFE9E3F5) // light purple
+        "Outerwear" -> Color(0xFFE1EFE1) // light green
+        "Accessory" -> Color(0xFFF6E9D5) // light tan
+        else -> Color(0xFFEDEDED)
+    }
 }
 
 fun parseHexColor(hex: String): Color =
     runCatching { Color(android.graphics.Color.parseColor(hex)) }
         .getOrDefault(Color.Gray)
+
+/** Black or white text, whichever is readable on [bg]. */
+fun contrastTextColor(bg: Color): Color =
+    if (bg.luminance() > 0.6f) Color(0xFF1A1A1A) else Color.White
 
 fun statusDisplayName(status: String): String = when (status) {
     ClothingStatus.CLEAN -> "Clean"

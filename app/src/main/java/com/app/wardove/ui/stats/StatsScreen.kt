@@ -239,6 +239,7 @@ private fun HighlightCard(
                 ClothingImage(
                     imagePath = item.imagePath,
                     contentDescription = item.name,
+                    category = item.category,
                     modifier = Modifier.size(40.dp),
                     shape = RoundedCornerShape(10.dp)
                 )
@@ -356,6 +357,7 @@ private fun CostPerWearRow(entry: CostPerWearItem) {
         ClothingImage(
             imagePath = entry.item.imagePath,
             contentDescription = entry.item.name,
+            category = entry.item.category,
             modifier = Modifier.size(40.dp),
             shape = RoundedCornerShape(10.dp)
         )

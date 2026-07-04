@@ -65,7 +65,9 @@ import com.app.wardove.data.local.entity.WearLog
 import com.app.wardove.data.local.entity.tagList
 import com.app.wardove.ui.theme.StatusClean
 import com.app.wardove.ui.util.ClothingOptions
+import com.app.wardove.ui.util.contrastTextColor
 import com.app.wardove.ui.util.formatDateOnly
+import com.app.wardove.ui.util.parseHexColor
 import java.io.File
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -172,6 +174,7 @@ private fun ItemDetailBody(
         ClothingImage(
             imagePath = item.imagePath,
             contentDescription = item.name,
+            category = item.category,
             modifier = Modifier
                 .fillMaxWidth()
                 .aspectRatio(1f),
@@ -283,12 +286,14 @@ private fun TagsRow(item: ClothingItem) {
             backgroundColor = MaterialTheme.colorScheme.surfaceVariant,
             textColor = MaterialTheme.colorScheme.onSurfaceVariant
         )
+        val colorBg = parseHexColor(item.color)
         TagPill(
             label = ClothingOptions.colorNameResId(item.color)
                 ?.let { stringResource(it) }
                 ?: ClothingOptions.colorNameFor(item.color),
-            backgroundColor = MaterialTheme.colorScheme.primary,
-            textColor = MaterialTheme.colorScheme.onPrimary
+            backgroundColor = colorBg,
+            textColor = contrastTextColor(colorBg),
+            borderColor = MaterialTheme.colorScheme.outline
         )
     }
 }
@@ -314,10 +319,22 @@ private fun UserTagsRow(tags: List<String>) {
 }
 
 @Composable
-private fun TagPill(label: String, backgroundColor: Color, textColor: Color) {
+private fun TagPill(
+    label: String,
+    backgroundColor: Color,
+    textColor: Color,
+    borderColor: Color? = null
+) {
     Box(
         modifier = Modifier
             .background(backgroundColor, RoundedCornerShape(20.dp))
+            .let {
+                if (borderColor != null) {
+                    it.border(BorderStroke(1.dp, borderColor), RoundedCornerShape(20.dp))
+                } else {
+                    it
+                }
+            }
             .padding(horizontal = 12.dp, vertical = 4.dp)
     ) {
         Text(

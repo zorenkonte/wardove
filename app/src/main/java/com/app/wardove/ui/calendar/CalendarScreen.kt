@@ -361,6 +361,7 @@ private fun WornItemCard(item: ClothingItem) {
             ClothingImage(
                 imagePath = item.imagePath,
                 contentDescription = item.name,
+                category = item.category,
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(90.dp),
