@@ -385,9 +385,9 @@
     "semantic_hash": "6bbfb70d94dd9871b05ed4cddd6a27d0"
   },
   ".github/workflows/build.yml": {
-    "mtime": 1781953313.9679263,
-    "ast_hash": "d16549a36db0a7d6e604a88d5cb6d81a",
-    "semantic_hash": "d16549a36db0a7d6e604a88d5cb6d81a"
+    "mtime": 1783176059.8100402,
+    "ast_hash": "b2478b6c1376e0341ccbfb0ea20165b2",
+    "semantic_hash": ""
   },
   ".github/workflows/docs.yml": {
     "mtime": 1781954011.060439,
@@ -415,7 +415,7 @@
     "semantic_hash": "0e9b14fe12c25b732bd4d3e3f03d9a60"
   },
   "docs/changelog.md": {
-    "mtime": 1781954004.9006495,
+    "mtime": 1783176080.5098248,
     "ast_hash": "c4760fbb83c7f3e7ef547d300e6d6bdd",
     "semantic_hash": "c4760fbb83c7f3e7ef547d300e6d6bdd"
   },
@@ -642,6 +642,11 @@
   "app/src/main/java/com/app/wardove/ui/settings/BackupViewModel.kt": {
     "mtime": 1783058181.290867,
     "ast_hash": "8cff6c93870d771df48ea123bbabaadc",
+    "semantic_hash": ""
+  },
+  ".github/scripts/update_changelog.py": {
+    "mtime": 1783176051.3938208,
+    "ast_hash": "76a68e7eec182d55ec91960fde605c68",
     "semantic_hash": ""
   }
 }

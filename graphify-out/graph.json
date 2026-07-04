@@ -60,9 +60,9 @@
       "source_file": ".github/scripts/update_changelog.py",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "scripts_update_changelog",
       "community": 106,
-      "norm_label": "update_changelog.py"
+      "norm_label": "update_changelog.py",
+      "id": "scripts_update_changelog"
     },
     {
       "label": "main()",
@@ -70,9 +70,9 @@
       "source_file": ".github/scripts/update_changelog.py",
       "source_location": "L17",
       "_origin": "ast",
-      "id": "scripts_update_changelog_main",
       "community": 106,
-      "norm_label": "main()"
+      "norm_label": "main()",
+      "id": "scripts_update_changelog_main"
     },
     {
       "label": "CalendarScreen.kt",
@@ -11101,19 +11101,6 @@
       "community": 62,
       "norm_label": "app launcher round icon (xxxhdpi)",
       "id": "mipmap_xxxhdpi_ic_launcher_round"
-    },
-    {
-      "label": "Wardove App Logo",
-      "file_type": "image",
-      "source_file": "docs/public/logo.png",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 64,
-      "norm_label": "wardove app logo",
-      "id": "public_logo"
     }
   ],
   "links": [
@@ -11123,9 +11110,9 @@
       "source_file": ".github/scripts/update_changelog.py",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_update_changelog",
-      "target": "scripts_update_changelog_main",
-      "confidence_score": 1.0
+      "target": "scripts_update_changelog_main"
     },
     {
       "relation": "contains",
@@ -26772,5 +26759,5 @@
       "source_file": "CLAUDE.md"
     }
   ],
-  "built_at_commit": "90d038c2c3b0d42289d6607703de2a20437f7ca4"
+  "built_at_commit": "bf14a03ca901c6b63b9bdac6664e321ab5d9c0e2"
 }

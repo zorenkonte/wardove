@@ -1,7 +1,7 @@
 {
   ".claude/settings.local.json": {
-    "mtime": 1782659476.7587533,
-    "ast_hash": "7b6cd57a2f641876999a452c60b3ed6b",
+    "mtime": 1783176353.4902117,
+    "ast_hash": "01a42c8061ae06b7f38ee85802d85013",
     "semantic_hash": ""
   },
   "app/build.gradle.kts": {
@@ -545,9 +545,9 @@
     "semantic_hash": "dfe54b80bd1a00ff15f96d8443425479"
   },
   "docs/public/logo.png": {
-    "mtime": 1781954766.3995883,
-    "ast_hash": "eafdaf57a3bc34e82eda8e864017e887",
-    "semantic_hash": "eafdaf57a3bc34e82eda8e864017e887"
+    "mtime": 1783176373.983276,
+    "ast_hash": "7879fe27a217ff421127618732f878c6",
+    "semantic_hash": ""
   },
   "app/src/main/java/com/app/wardove/tile/LaundryTileService.kt": {
     "mtime": 1782308591.6309261,
