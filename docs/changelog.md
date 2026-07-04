@@ -4,6 +4,14 @@ All notable changes are documented here. Format follows [Keep a Changelog](https
 
 ## [Unreleased]
 
+## [2.0.90] — 2026-07-04
+
+### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes
+
+- Render release notes as markdown on update screen &nbsp;-&nbsp; by @zorenkonte [<samp>(83558)</samp>](https://github.com/zorenkonte/wardove/commit/8355821)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/zorenkonte/wardove/compare/v2.0.88...v2.0.90)
+
 ## [2.0.88] — 2026-07-04
 
 ### &nbsp;&nbsp;&nbsp;🚀 Features
