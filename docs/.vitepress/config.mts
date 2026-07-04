@@ -6,6 +6,10 @@ export default defineConfig({
   base: '/wardove/',
   lastUpdated: true,
 
+  head: [
+    ['link', { rel: 'icon', type: 'image/png', href: '/wardove/logo.png' }]
+  ],
+
   themeConfig: {
     logo: '/logo.png',
 

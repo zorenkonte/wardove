@@ -104,3 +104,12 @@ jobs:
           fi
           git commit -m "docs: update changelog for v${{ steps.ver.outputs.version }} [skip ci]"
           git push origin HEAD:${{ github.ref_name }}
+
+      - name: Deploy updated docs
+        # The changelog commit above uses [skip ci] and is pushed via GITHUB_TOKEN,
+        # so it never triggers docs.yml on its own. workflow_dispatch is exempt
+        # from GITHUB_TOKEN's loop-prevention, so trigger the docs deploy explicitly.
+        if: github.event_name == 'push'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run docs.yml --ref ${{ github.ref_name }}
