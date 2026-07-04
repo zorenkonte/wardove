@@ -51,6 +51,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -58,6 +59,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.app.wardove.BuildConfig
 import com.app.wardove.R
 import com.app.wardove.data.model.GithubRelease
+import dev.jeziellago.compose.markdowntext.MarkdownText
 import java.time.Instant
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
@@ -291,10 +293,12 @@ private fun LatestReleaseCard(
 
             if (release.body.isNotBlank()) {
                 Spacer(Modifier.height(8.dp))
-                Text(
-                    release.body.take(300) + if (release.body.length > 300) "…" else "",
-                    fontSize = 13.sp,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                MarkdownText(
+                    markdown = release.body,
+                    style = TextStyle(
+                        fontSize = 13.sp,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
                 )
             }
 
@@ -410,12 +414,38 @@ private fun ReleaseHistoryItem(release: GithubRelease) {
         if (release.body.isNotBlank()) {
             Spacer(Modifier.height(4.dp))
             Text(
-                release.body.lines().firstOrNull()?.take(80) ?: "",
+                firstNotesLine(release.body),
                 fontSize = 12.sp,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
     }
+}
+
+// Matches HTML tags (e.g. "<samp>", "</samp>") embedded in release notes.
+private val HTML_TAG_REGEX = Regex("</?[a-zA-Z][^>]*>")
+
+// Matches a leading markdown heading ("#### ") or list marker ("- ", "* ") on a line.
+private val LEADING_MARKDOWN_REGEX = Regex("^\\s*(#{1,6}\\s*|[-*+]\\s+)")
+
+/**
+ * First non-blank line of a release body, stripped of HTML tags, leading
+ * markdown syntax, and common HTML entities — used for the compact one-line
+ * preview in the release history list (too small to warrant full markdown
+ * rendering).
+ */
+private fun firstNotesLine(body: String): String {
+    val rawLine = body.lines().firstOrNull { it.isNotBlank() } ?: return ""
+    val plain = rawLine
+        .replace(HTML_TAG_REGEX, "")
+        .replace(LEADING_MARKDOWN_REGEX, "")
+        .replace("&nbsp;", " ")
+        .replace("&amp;", "&")
+        .replace("&lt;", "<")
+        .replace("&gt;", ">")
+        .replace("&quot;", "\"")
+        .replace("&#39;", "'")
+    return plain.trim().take(80)
 }
 
 private fun formatBytes(bytes: Long): String {
