@@ -26,6 +26,7 @@ class SettingsRepository @Inject constructor(
         val UPDATE_NOTIFICATIONS = booleanPreferencesKey("update_notifications")
         val SHAKE_TO_REPORT = booleanPreferencesKey("shake_to_report")
         val WARDROBE_VIEW_MODE = stringPreferencesKey("wardrobe_view_mode")
+        val GROUP_WARDROBE_BY_CATEGORY = booleanPreferencesKey("group_wardrobe_by_category")
     }
 
     val settings: Flow<AppSettings> = dataStore.data
@@ -44,7 +45,8 @@ class SettingsRepository @Inject constructor(
                 shakeToReportEnabled = prefs[Keys.SHAKE_TO_REPORT] ?: false,
                 wardrobeViewMode = prefs[Keys.WARDROBE_VIEW_MODE]
                     ?.let { runCatching { WardrobeViewMode.valueOf(it) }.getOrNull() }
-                    ?: WardrobeViewMode.CARD
+                    ?: WardrobeViewMode.CARD,
+                groupByCategory = prefs[Keys.GROUP_WARDROBE_BY_CATEGORY] ?: false
             )
         }
 
@@ -74,6 +76,10 @@ class SettingsRepository @Inject constructor(
 
     suspend fun setWardrobeViewMode(mode: WardrobeViewMode) {
         dataStore.edit { it[Keys.WARDROBE_VIEW_MODE] = mode.name }
+    }
+
+    suspend fun setGroupByCategory(enabled: Boolean) {
+        dataStore.edit { it[Keys.GROUP_WARDROBE_BY_CATEGORY] = enabled }
     }
 
     val lastNotifiedUpdateTag: Flow<String?> = dataStore.data

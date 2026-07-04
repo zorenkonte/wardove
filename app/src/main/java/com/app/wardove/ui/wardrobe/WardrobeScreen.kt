@@ -66,12 +66,14 @@ import com.app.wardove.ui.theme.textHint
 import com.app.wardove.ui.util.ClothingOptions
 import com.composables.icons.lucide.ArrowUpDown
 import com.composables.icons.lucide.Grid3x3
+import com.composables.icons.lucide.Group
 import com.composables.icons.lucide.LayoutGrid
 import com.composables.icons.lucide.List
 import com.composables.icons.lucide.Lucide
 import com.composables.icons.lucide.Plus
 import com.composables.icons.lucide.Search
 import com.composables.icons.lucide.Shirt
+import com.composables.icons.lucide.Ungroup
 import com.composables.icons.lucide.X
 
 private val itemContentPadding = PaddingValues(start = 20.dp, end = 20.dp, top = 4.dp, bottom = 24.dp)
@@ -106,6 +108,7 @@ fun WardrobeScreen(
     val searchQuery by viewModel.searchQuery.collectAsState()
     val selectedSort by viewModel.sort.collectAsState()
     val viewMode by viewModel.viewMode.collectAsState()
+    val groupByCategory by viewModel.groupByCategory.collectAsState()
     val snackbarHostState = remember { SnackbarHostState() }
     var showSortSheet by remember { mutableStateOf(false) }
     var showViewSheet by remember { mutableStateOf(false) }
@@ -141,6 +144,17 @@ fun WardrobeScreen(
                 onOpenDrawer = onOpenDrawer,
                 subtitle = pluralStringResource(R.plurals.wardrobe_item_count, items.size, items.size),
                 actions = {
+                    IconButton(onClick = { viewModel.setGroupByCategory(!groupByCategory) }) {
+                        Icon(
+                            if (groupByCategory) Lucide.Ungroup else Lucide.Group,
+                            contentDescription = stringResource(R.string.action_group_by_category),
+                            tint = if (groupByCategory) {
+                                MaterialTheme.colorScheme.primary
+                            } else {
+                                MaterialTheme.colorScheme.onBackground
+                            }
+                        )
+                    }
                     IconButton(onClick = { showViewSheet = true }) {
                         Icon(
                             viewMode.icon,
@@ -180,7 +194,8 @@ fun WardrobeScreen(
                     modifier = Modifier.fillMaxSize()
                 )
             } else {
-                val grouped = remember(items) {
+                val grouped = remember(items, groupByCategory) {
+                    if (!groupByCategory) return@remember emptyList()
                     items.groupBy { it.category }
                         .entries.sortedBy { entry ->
                             ClothingOptions.categories.indexOf(entry.key)
@@ -195,11 +210,17 @@ fun WardrobeScreen(
                         verticalArrangement = Arrangement.spacedBy(10.dp),
                         modifier = Modifier.fillMaxSize()
                     ) {
-                        grouped.forEach { (category, groupItems) ->
-                            item(span = { GridItemSpan(maxLineSpan) }, key = "header_$category") {
-                                CategorySectionHeader(category = category, count = groupItems.size)
+                        if (groupByCategory) {
+                            grouped.forEach { (category, groupItems) ->
+                                item(span = { GridItemSpan(maxLineSpan) }, key = "header_$category") {
+                                    CategorySectionHeader(category = category, count = groupItems.size)
+                                }
+                                items(groupItems, key = { it.id }) { item ->
+                                    ClothingCard(item = item, onClick = { onOpenItem(item.id) })
+                                }
                             }
-                            items(groupItems, key = { it.id }) { item ->
+                        } else {
+                            items(items, key = { it.id }) { item ->
                                 ClothingCard(item = item, onClick = { onOpenItem(item.id) })
                             }
                         }
@@ -209,11 +230,17 @@ fun WardrobeScreen(
                         verticalArrangement = Arrangement.spacedBy(8.dp),
                         modifier = Modifier.fillMaxSize()
                     ) {
-                        grouped.forEach { (category, groupItems) ->
-                            item(key = "header_$category") {
-                                CategorySectionHeader(category = category, count = groupItems.size)
+                        if (groupByCategory) {
+                            grouped.forEach { (category, groupItems) ->
+                                item(key = "header_$category") {
+                                    CategorySectionHeader(category = category, count = groupItems.size)
+                                }
+                                items(groupItems, key = { it.id }) { item ->
+                                    ClothingListRow(item = item, onClick = { onOpenItem(item.id) })
+                                }
                             }
-                            items(groupItems, key = { it.id }) { item ->
+                        } else {
+                            items(items, key = { it.id }) { item ->
                                 ClothingListRow(item = item, onClick = { onOpenItem(item.id) })
                             }
                         }
@@ -225,11 +252,17 @@ fun WardrobeScreen(
                         verticalArrangement = Arrangement.spacedBy(8.dp),
                         modifier = Modifier.fillMaxSize()
                     ) {
-                        grouped.forEach { (category, groupItems) ->
-                            item(span = { GridItemSpan(maxLineSpan) }, key = "header_$category") {
-                                CategorySectionHeader(category = category, count = groupItems.size)
+                        if (groupByCategory) {
+                            grouped.forEach { (category, groupItems) ->
+                                item(span = { GridItemSpan(maxLineSpan) }, key = "header_$category") {
+                                    CategorySectionHeader(category = category, count = groupItems.size)
+                                }
+                                items(groupItems, key = { it.id }) { item ->
+                                    CompactCard(item = item, onClick = { onOpenItem(item.id) })
+                                }
                             }
-                            items(groupItems, key = { it.id }) { item ->
+                        } else {
+                            items(items, key = { it.id }) { item ->
                                 CompactCard(item = item, onClick = { onOpenItem(item.id) })
                             }
                         }

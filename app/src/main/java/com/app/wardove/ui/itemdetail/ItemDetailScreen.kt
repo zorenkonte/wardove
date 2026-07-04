@@ -65,9 +65,9 @@ import com.app.wardove.data.local.entity.WearLog
 import com.app.wardove.data.local.entity.tagList
 import com.app.wardove.ui.theme.StatusClean
 import com.app.wardove.ui.util.ClothingOptions
-import com.app.wardove.ui.util.contrastTextColor
 import com.app.wardove.ui.util.formatDateOnly
 import com.app.wardove.ui.util.parseHexColor
+import com.app.wardove.ui.util.softBadgeColors
 import java.io.File
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -286,14 +286,14 @@ private fun TagsRow(item: ClothingItem) {
             backgroundColor = MaterialTheme.colorScheme.surfaceVariant,
             textColor = MaterialTheme.colorScheme.onSurfaceVariant
         )
-        val colorBg = parseHexColor(item.color)
+        val (colorBg, colorFg) = softBadgeColors(parseHexColor(item.color))
         TagPill(
             label = ClothingOptions.colorNameResId(item.color)
                 ?.let { stringResource(it) }
                 ?: ClothingOptions.colorNameFor(item.color),
             backgroundColor = colorBg,
-            textColor = contrastTextColor(colorBg),
-            borderColor = MaterialTheme.colorScheme.outline
+            textColor = colorFg,
+            borderColor = colorFg.copy(alpha = 0.25f)
         )
     }
 }

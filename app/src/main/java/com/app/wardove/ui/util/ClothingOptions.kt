@@ -2,6 +2,7 @@ package com.app.wardove.ui.util
 
 import androidx.annotation.StringRes
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.graphics.luminance
 import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingStatus
@@ -77,9 +78,12 @@ fun parseHexColor(hex: String): Color =
     runCatching { Color(android.graphics.Color.parseColor(hex)) }
         .getOrDefault(Color.Gray)
 
-/** Black or white text, whichever is readable on [bg]. */
-fun contrastTextColor(bg: Color): Color =
-    if (bg.luminance() > 0.6f) Color(0xFF1A1A1A) else Color.White
+/** Soft-pill (background, foreground) pair for a base color: pale tint bg + readable same-hue text. */
+fun softBadgeColors(base: Color): Pair<Color, Color> {
+    val fg = if (base.luminance() > 0.6f) lerp(base, Color.Black, 0.45f) else base
+    val bg = base.copy(alpha = 0.15f)
+    return bg to fg
+}
 
 fun statusDisplayName(status: String): String = when (status) {
     ClothingStatus.CLEAN -> "Clean"

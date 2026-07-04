@@ -27,6 +27,7 @@
     <string name="action_about">About</string>
     <string name="action_sort">Sort</string>
     <string name="action_view_mode">Change view</string>
+    <string name="action_group_by_category">Group by category</string>
 
     <!-- ── Wardrobe screen ── -->
     <string name="wardrobe_search_hint">Search clothes…</string>

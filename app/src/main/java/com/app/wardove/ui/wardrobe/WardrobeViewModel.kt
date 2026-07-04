@@ -62,6 +62,10 @@ class WardrobeViewModel @Inject constructor(
         .map { it.wardrobeViewMode }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), WardrobeViewMode.CARD)
 
+    val groupByCategory: StateFlow<Boolean> = settingsRepository.settings
+        .map { it.groupByCategory }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), false)
+
     val filteredAndSortedItems: StateFlow<List<ClothingItem>> = combine(
         repository.observeAll(),
         _filter,
@@ -104,5 +108,9 @@ class WardrobeViewModel @Inject constructor(
 
     fun setViewMode(mode: WardrobeViewMode) {
         viewModelScope.launch { settingsRepository.setWardrobeViewMode(mode) }
+    }
+
+    fun setGroupByCategory(enabled: Boolean) {
+        viewModelScope.launch { settingsRepository.setGroupByCategory(enabled) }
     }
 }
