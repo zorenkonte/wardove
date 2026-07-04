@@ -19,6 +19,13 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        // JitPack: only used for compose-markdown (not published to Maven Central).
+        maven {
+            url = uri("https://jitpack.io")
+            content {
+                includeGroup("com.github.jeziellago")
+            }
+        }
     }
 }
 

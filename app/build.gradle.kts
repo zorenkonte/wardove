@@ -101,6 +101,9 @@ dependencies {
     // Coil (image loading)
     implementation(libs.coil.compose)
 
+    // Markdown rendering (release notes on the Update screen)
+    implementation(libs.compose.markdown)
+
     // DataStore (preferences)
     implementation(libs.androidx.datastore.preferences)
 
