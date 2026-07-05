@@ -3341,67 +3341,67 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "additem_additemscreen",
-      "community": 18,
+      "community": 1,
       "norm_label": "additemscreen.kt"
     },
     {
       "label": "AddItemScreen()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/additem/AddItemScreen.kt",
-      "source_location": "L70",
+      "source_location": "L71",
       "_origin": "ast",
       "id": "additem_additemscreen_additemscreen",
-      "community": 18,
+      "community": 1,
       "norm_label": "additemscreen()"
     },
     {
       "label": "AddItemViewModel",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/additem/AddItemScreen.kt",
-      "source_location": "L70",
+      "source_location": "L71",
       "_origin": "ast",
       "id": "additemviewmodel",
-      "community": 18,
+      "community": 1,
       "norm_label": "additemviewmodel"
     },
     {
       "label": "ImagePicker()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/additem/AddItemScreen.kt",
-      "source_location": "L229",
+      "source_location": "L230",
       "_origin": "ast",
       "id": "additem_additemscreen_imagepicker",
-      "community": 18,
+      "community": 1,
       "norm_label": "imagepicker()"
     },
     {
       "label": "String",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/additem/AddItemScreen.kt",
-      "source_location": "L229",
+      "source_location": "L230",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_additem_additemscreen_kt_string",
-      "community": 18,
+      "community": 1,
       "norm_label": "string"
     },
     {
       "label": "CategoryDropdown()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/additem/AddItemScreen.kt",
-      "source_location": "L297",
+      "source_location": "L298",
       "_origin": "ast",
       "id": "additem_additemscreen_categorydropdown",
-      "community": 18,
+      "community": 1,
       "norm_label": "categorydropdown()"
     },
     {
       "label": "ColorGrid()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/additem/AddItemScreen.kt",
-      "source_location": "L355",
+      "source_location": "L356",
       "_origin": "ast",
       "id": "additem_additemscreen_colorgrid",
-      "community": 18,
+      "community": 1,
       "norm_label": "colorgrid()"
     },
     {
@@ -3661,7 +3661,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "additem_shareitemsheet",
-      "community": 18,
+      "community": 1,
       "norm_label": "shareitemsheet.kt"
     },
     {
@@ -3671,7 +3671,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "additem_shareitemsheet_shareitemsheet",
-      "community": 18,
+      "community": 1,
       "norm_label": "shareitemsheet()"
     },
     {
@@ -3681,7 +3681,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_additem_shareitemsheet_kt_uri",
-      "community": 18,
+      "community": 1,
       "norm_label": "uri"
     },
     {
@@ -3691,7 +3691,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "shareitemviewmodel",
-      "community": 18,
+      "community": 1,
       "norm_label": "shareitemviewmodel"
     },
     {
@@ -3871,7 +3871,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "calendar_calendarscreen",
-      "community": 1,
+      "community": 64,
       "norm_label": "calendarscreen.kt"
     },
     {
@@ -3881,7 +3881,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "calendar_calendarscreen_calendarscreen",
-      "community": 1,
+      "community": 64,
       "norm_label": "calendarscreen()"
     },
     {
@@ -3891,7 +3891,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "calendarviewmodel",
-      "community": 1,
+      "community": 64,
       "norm_label": "calendarviewmodel"
     },
     {
@@ -3901,7 +3901,7 @@
       "source_location": "L225",
       "_origin": "ast",
       "id": "calendar_calendarscreen_weekdayheader",
-      "community": 1,
+      "community": 64,
       "norm_label": "weekdayheader()"
     },
     {
@@ -3911,7 +3911,7 @@
       "source_location": "L256",
       "_origin": "ast",
       "id": "calendar_calendarscreen_monthgrid",
-      "community": 1,
+      "community": 64,
       "norm_label": "monthgrid()"
     },
     {
@@ -3921,7 +3921,7 @@
       "source_location": "L256",
       "_origin": "ast",
       "id": "yearmonth",
-      "community": 1,
+      "community": 64,
       "norm_label": "yearmonth"
     },
     {
@@ -3931,7 +3931,7 @@
       "source_location": "L256",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_localdate",
-      "community": 1,
+      "community": 64,
       "norm_label": "localdate"
     },
     {
@@ -3941,7 +3941,7 @@
       "source_location": "L256",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_set",
-      "community": 1,
+      "community": 64,
       "norm_label": "set"
     },
     {
@@ -3951,7 +3951,7 @@
       "source_location": "L298",
       "_origin": "ast",
       "id": "calendar_calendarscreen_daycell",
-      "community": 1,
+      "community": 64,
       "norm_label": "daycell()"
     },
     {
@@ -3961,7 +3961,7 @@
       "source_location": "L298",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_boolean",
-      "community": 1,
+      "community": 64,
       "norm_label": "boolean"
     },
     {
@@ -3971,7 +3971,7 @@
       "source_location": "L340",
       "_origin": "ast",
       "id": "calendar_calendarscreen_selecteddaylabel",
-      "community": 1,
+      "community": 64,
       "norm_label": "selecteddaylabel()"
     },
     {
@@ -3981,7 +3981,7 @@
       "source_location": "L352",
       "_origin": "ast",
       "id": "calendar_calendarscreen_wornitemcard",
-      "community": 1,
+      "community": 64,
       "norm_label": "wornitemcard()"
     },
     {
@@ -3991,7 +3991,7 @@
       "source_location": "L352",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_clothingitem",
-      "community": 1,
+      "community": 64,
       "norm_label": "clothingitem"
     },
     {
@@ -4001,7 +4001,7 @@
       "source_location": "L394",
       "_origin": "ast",
       "id": "calendar_calendarscreen_sundaybasedindex",
-      "community": 1,
+      "community": 64,
       "norm_label": "sundaybasedindex()"
     },
     {
@@ -4011,7 +4011,7 @@
       "source_location": "L394",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_int",
-      "community": 1,
+      "community": 64,
       "norm_label": "int"
     },
     {
@@ -4021,7 +4021,7 @@
       "source_location": "L404",
       "_origin": "ast",
       "id": "calendar_calendarscreen_adjustselection",
-      "community": 1,
+      "community": 64,
       "norm_label": "adjustselection()"
     },
     {
@@ -4141,7 +4141,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_appheaders",
-      "community": 1,
+      "community": 64,
       "norm_label": "appheaders.kt"
     },
     {
@@ -4151,7 +4151,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "components_appheaders_largetitleheader",
-      "community": 1,
+      "community": 64,
       "norm_label": "largetitleheader()"
     },
     {
@@ -4161,7 +4161,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_components_appheaders_kt_string",
-      "community": 1,
+      "community": 64,
       "norm_label": "string"
     },
     {
@@ -4171,7 +4171,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_components_appheaders_kt_modifier",
-      "community": 1,
+      "community": 64,
       "norm_label": "modifier"
     },
     {
@@ -4220,7 +4220,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/components/ClothingImage.kt",
       "source_location": "L30",
       "_origin": "ast",
-      "id": "shape",
+      "id": "app_src_main_java_com_app_wardove_ui_components_clothingimage_kt_shape",
       "community": 1,
       "norm_label": "shape"
     },
@@ -4521,167 +4521,167 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "itemdetail_itemdetailscreen",
-      "community": 64,
+      "community": 18,
       "norm_label": "itemdetailscreen.kt"
     },
     {
       "label": "ItemDetailScreen()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L73",
+      "source_location": "L74",
       "_origin": "ast",
       "id": "itemdetail_itemdetailscreen_itemdetailscreen",
-      "community": 64,
+      "community": 18,
       "norm_label": "itemdetailscreen()"
     },
     {
       "label": "Long",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L73",
+      "source_location": "L74",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_long",
-      "community": 64,
+      "community": 18,
       "norm_label": "long"
     },
     {
       "label": "ItemDetailViewModel",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L73",
+      "source_location": "L74",
       "_origin": "ast",
       "id": "itemdetailviewmodel",
-      "community": 64,
+      "community": 18,
       "norm_label": "itemdetailviewmodel"
     },
     {
       "label": "ItemDetailBody()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L159",
+      "source_location": "L160",
       "_origin": "ast",
       "id": "itemdetail_itemdetailscreen_itemdetailbody",
-      "community": 64,
+      "community": 18,
       "norm_label": "itemdetailbody()"
     },
     {
       "label": "ClothingItem",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L159",
+      "source_location": "L160",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_clothingitem",
-      "community": 64,
+      "community": 18,
       "norm_label": "clothingitem"
     },
     {
       "label": "List",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L159",
+      "source_location": "L160",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_list",
-      "community": 64,
+      "community": 18,
       "norm_label": "list"
     },
     {
       "label": "WearLog",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L159",
+      "source_location": "L160",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_wearlog",
-      "community": 64,
+      "community": 18,
       "norm_label": "wearlog"
     },
     {
       "label": "Boolean",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L159",
+      "source_location": "L160",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_boolean",
-      "community": 64,
+      "community": 18,
       "norm_label": "boolean"
     },
     {
       "label": "Modifier",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L159",
+      "source_location": "L160",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_modifier",
-      "community": 64,
+      "community": 18,
       "norm_label": "modifier"
     },
     {
       "label": "TagsRow()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L279",
+      "source_location": "L281",
       "_origin": "ast",
       "id": "itemdetail_itemdetailscreen_tagsrow",
-      "community": 64,
+      "community": 18,
       "norm_label": "tagsrow()"
     },
     {
       "label": "UserTagsRow()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L301",
+      "source_location": "L303",
       "_origin": "ast",
       "id": "itemdetail_itemdetailscreen_usertagsrow",
-      "community": 64,
+      "community": 18,
       "norm_label": "usertagsrow()"
     },
     {
       "label": "String",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L301",
+      "source_location": "L303",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_string",
-      "community": 64,
+      "community": 18,
       "norm_label": "string"
     },
     {
       "label": "TagPill()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L321",
+      "source_location": "L323",
       "_origin": "ast",
       "id": "itemdetail_itemdetailscreen_tagpill",
-      "community": 64,
+      "community": 18,
       "norm_label": "tagpill()"
     },
     {
       "label": "Color",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L321",
+      "source_location": "L323",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_color",
-      "community": 64,
+      "community": 18,
       "norm_label": "color"
     },
     {
       "label": "StatBox()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L349",
+      "source_location": "L351",
       "_origin": "ast",
       "id": "itemdetail_itemdetailscreen_statbox",
-      "community": 64,
+      "community": 18,
       "norm_label": "statbox()"
     },
     {
       "label": "WearHistorySection()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L371",
+      "source_location": "L373",
       "_origin": "ast",
       "id": "itemdetail_itemdetailscreen_wearhistorysection",
-      "community": 64,
+      "community": 18,
       "norm_label": "wearhistorysection()"
     },
     {
@@ -5335,6 +5335,56 @@
       "norm_label": "navtransitions.kt"
     },
     {
+      "label": "SharedElementTransition.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/SharedElementTransition.kt",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "navigation_sharedelementtransition",
+      "community": 109,
+      "norm_label": "sharedelementtransition.kt"
+    },
+    {
+      "label": "clothingSharedImage()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/SharedElementTransition.kt",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "navigation_sharedelementtransition_clothingsharedimage",
+      "community": 109,
+      "norm_label": "clothingsharedimage()"
+    },
+    {
+      "label": "Long",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/SharedElementTransition.kt",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "app_src_main_java_com_app_wardove_ui_navigation_sharedelementtransition_kt_long",
+      "community": 109,
+      "norm_label": "long"
+    },
+    {
+      "label": "Shape",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/SharedElementTransition.kt",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "app_src_main_java_com_app_wardove_ui_navigation_sharedelementtransition_kt_shape",
+      "community": 109,
+      "norm_label": "shape"
+    },
+    {
+      "label": "Modifier",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/SharedElementTransition.kt",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "app_src_main_java_com_app_wardove_ui_navigation_sharedelementtransition_kt_modifier",
+      "community": 109,
+      "norm_label": "modifier"
+    },
+    {
       "label": "WardoveDestinations.kt",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveDestinations.kt",
@@ -5488,7 +5538,7 @@
       "label": "WardoveNavHost()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L43",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "navigation_wardovenavhost_wardovenavhost",
       "community": 15,
@@ -5498,7 +5548,7 @@
       "label": "NavHostController",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L43",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "navhostcontroller",
       "community": 15,
@@ -5508,7 +5558,7 @@
       "label": "String",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt",
-      "source_location": "L43",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_navigation_wardovenavhost_kt_string",
       "community": 15,
@@ -7061,7 +7111,7 @@
       "source_location": "L103",
       "_origin": "ast",
       "id": "update_updateviewmodel_updateviewmodel_isupdateavailable",
-      "community": 4,
+      "community": 3,
       "norm_label": ".isupdateavailable()"
     },
     {
@@ -7071,7 +7121,7 @@
       "source_location": "L103",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_string",
-      "community": 4,
+      "community": 3,
       "norm_label": "string"
     },
     {
@@ -7081,7 +7131,7 @@
       "source_location": "L103",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_boolean",
-      "community": 4,
+      "community": 3,
       "norm_label": "boolean"
     },
     {
@@ -7171,7 +7221,7 @@
       "source_location": "L190",
       "_origin": "ast",
       "id": "update_updateviewmodel_lateststablerelease",
-      "community": 4,
+      "community": 3,
       "norm_label": "lateststablerelease()"
     },
     {
@@ -7181,7 +7231,7 @@
       "source_location": "L190",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_list",
-      "community": 4,
+      "community": 3,
       "norm_label": "list"
     },
     {
@@ -7191,7 +7241,7 @@
       "source_location": "L190",
       "_origin": "ast",
       "id": "com",
-      "community": 4,
+      "community": 3,
       "norm_label": "com"
     },
     {
@@ -7201,7 +7251,7 @@
       "source_location": "L200",
       "_origin": "ast",
       "id": "update_updateviewmodel_compareversions",
-      "community": 4,
+      "community": 3,
       "norm_label": "compareversions()"
     },
     {
@@ -7211,7 +7261,7 @@
       "source_location": "L200",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_update_updateviewmodel_kt_int",
-      "community": 4,
+      "community": 3,
       "norm_label": "int"
     },
     {
@@ -7478,7 +7528,7 @@
       "label": "statusDotColor()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L88",
+      "source_location": "L89",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_statusdotcolor",
       "community": 1,
@@ -7488,7 +7538,7 @@
       "label": "String",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L88",
+      "source_location": "L89",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_string",
       "community": 1,
@@ -7498,7 +7548,7 @@
       "label": "Color",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L88",
+      "source_location": "L89",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_color",
       "community": 1,
@@ -7508,7 +7558,7 @@
       "label": "WardrobeScreen()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L96",
+      "source_location": "L97",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_wardrobescreen",
       "community": 1,
@@ -7518,7 +7568,7 @@
       "label": "WardrobeViewModel",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L96",
+      "source_location": "L97",
       "_origin": "ast",
       "id": "wardrobeviewmodel",
       "community": 1,
@@ -7528,7 +7578,7 @@
       "label": "SearchBar()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L305",
+      "source_location": "L306",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_searchbar",
       "community": 1,
@@ -7538,7 +7588,7 @@
       "label": "Modifier",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L305",
+      "source_location": "L306",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_modifier",
       "community": 1,
@@ -7548,7 +7598,7 @@
       "label": "FilterRow()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L357",
+      "source_location": "L358",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_filterrow",
       "community": 1,
@@ -7558,7 +7608,7 @@
       "label": "WardrobeFilter",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L357",
+      "source_location": "L358",
       "_origin": "ast",
       "id": "wardrobefilter",
       "community": 1,
@@ -7568,7 +7618,7 @@
       "label": "CategorySectionHeader()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L393",
+      "source_location": "L394",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_categorysectionheader",
       "community": 1,
@@ -7578,7 +7628,7 @@
       "label": "Int",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L393",
+      "source_location": "L394",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_int",
       "community": 1,
@@ -7588,7 +7638,7 @@
       "label": "ClothingCard()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L415",
+      "source_location": "L416",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_clothingcard",
       "community": 1,
@@ -7598,7 +7648,7 @@
       "label": "ClothingItem",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L415",
+      "source_location": "L416",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_clothingitem",
       "community": 1,
@@ -7608,7 +7658,7 @@
       "label": "ClothingListRow()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L464",
+      "source_location": "L466",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_clothinglistrow",
       "community": 1,
@@ -7618,7 +7668,7 @@
       "label": "CompactCard()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L510",
+      "source_location": "L514",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_compactcard",
       "community": 1,
@@ -7628,7 +7678,7 @@
       "label": "EmptyState()",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L551",
+      "source_location": "L556",
       "_origin": "ast",
       "id": "wardrobe_wardrobescreen_emptystate",
       "community": 1,
@@ -7638,7 +7688,7 @@
       "label": "Boolean",
       "file_type": "code",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L551",
+      "source_location": "L556",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_boolean",
       "community": 1,
@@ -8071,7 +8121,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "work_updatecheckworker",
-      "community": 4,
+      "community": 3,
       "norm_label": "updatecheckworker.kt"
     },
     {
@@ -8081,7 +8131,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "work_updatecheckworker_updatecheckworker",
-      "community": 4,
+      "community": 3,
       "norm_label": "updatecheckworker"
     },
     {
@@ -8091,7 +8141,7 @@
       "source_location": "",
       "_origin": "ast",
       "id": "coroutineworker",
-      "community": 4,
+      "community": 3,
       "norm_label": "coroutineworker"
     },
     {
@@ -8101,7 +8151,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "work_updatecheckworker_updatecheckworker_dowork",
-      "community": 4,
+      "community": 3,
       "norm_label": ".dowork()"
     },
     {
@@ -8111,7 +8161,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "result",
-      "community": 4,
+      "community": 3,
       "norm_label": "result"
     },
     {
@@ -8121,7 +8171,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "work_updatecheckworker_updatecheckworker_postnotification",
-      "community": 4,
+      "community": 3,
       "norm_label": ".postnotification()"
     },
     {
@@ -8131,7 +8181,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "app_src_main_java_com_app_wardove_work_updatecheckworker_kt_string",
-      "community": 4,
+      "community": 3,
       "norm_label": "string"
     },
     {
@@ -8171,7 +8221,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "update_compareversionstest",
-      "community": 4,
+      "community": 3,
       "norm_label": "compareversionstest.kt"
     },
     {
@@ -8181,7 +8231,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "update_compareversionstest_compareversionstest",
-      "community": 4,
+      "community": 3,
       "norm_label": "compareversionstest"
     },
     {
@@ -8191,7 +8241,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "update_compareversionstest_compareversionstest_newerpatchisgreater",
-      "community": 4,
+      "community": 3,
       "norm_label": ".newerpatchisgreater()"
     },
     {
@@ -8201,7 +8251,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "update_compareversionstest_compareversionstest_newermajorbeatsolderhigherpatch",
-      "community": 4,
+      "community": 3,
       "norm_label": ".newermajorbeatsolderhigherpatch()"
     },
     {
@@ -8211,7 +8261,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "update_compareversionstest_compareversionstest_equalversionsreturnzero",
-      "community": 4,
+      "community": 3,
       "norm_label": ".equalversionsreturnzero()"
     },
     {
@@ -8221,7 +8271,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "update_compareversionstest_compareversionstest_leadingvanddifferinglengthstolerated",
-      "community": 4,
+      "community": 3,
       "norm_label": ".leadingvanddifferinglengthstolerated()"
     },
     {
@@ -8231,7 +8281,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "update_compareversionstest_compareversionstest_olderversionisless",
-      "community": 4,
+      "community": 3,
       "norm_label": ".olderversionisless()"
     },
     {
@@ -9025,10 +9075,40 @@
       "norm_label": "[unreleased]"
     },
     {
-      "label": "[2.0.85] \u2014 2026-07-04",
+      "label": "[2.0.88] \u2014 2026-07-04",
       "file_type": "document",
       "source_file": "docs/changelog.md",
       "source_location": "L7",
+      "_origin": "ast",
+      "id": "docs_changelog_2_0_88_2026_07_04",
+      "community": 34,
+      "norm_label": "[2.0.88] \u2014 2026-07-04"
+    },
+    {
+      "label": "&nbsp;&nbsp;&nbsp;\ud83d\ude80 Features",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "docs_changelog_nbsp_nbsp_nbsp_features",
+      "community": 34,
+      "norm_label": "&nbsp;&nbsp;&nbsp;\ud83d\ude80 features"
+    },
+    {
+      "label": "&nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/zorenkonte/wardove/compare/v2.0.85...v2.0.88)",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "docs_changelog_nbsp_nbsp_nbsp_nbsp_view_changes_on_github_https_github_com_zorenkonte_wardove_compare_v2_0_85_v2_0_88",
+      "community": 34,
+      "norm_label": "&nbsp;&nbsp;&nbsp;&nbsp;[view changes on github](https://github.com/zorenkonte/wardove/compare/v2.0.85...v2.0.88)"
+    },
+    {
+      "label": "[2.0.85] \u2014 2026-07-04",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "docs_changelog_2_0_85_2026_07_04",
       "community": 34,
@@ -9038,7 +9118,7 @@
       "label": "&nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/zorenkonte/wardove/compare/v2.0.84...v2.0.85)",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L11",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "docs_changelog_nbsp_nbsp_nbsp_nbsp_view_changes_on_github_https_github_com_zorenkonte_wardove_compare_v2_0_84_v2_0_85",
       "community": 34,
@@ -9048,7 +9128,7 @@
       "label": "[2.0.84] \u2014 2026-07-04",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L13",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "docs_changelog_2_0_84_2026_07_04",
       "community": 34,
@@ -9058,7 +9138,7 @@
       "label": "[2.0.83] \u2014 2026-07-04",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L17",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "docs_changelog_2_0_83_2026_07_04",
       "community": 34,
@@ -9068,7 +9148,7 @@
       "label": "[2.0.82] \u2014 2026-07-04",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L21",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "docs_changelog_2_0_82_2026_07_04",
       "community": 34,
@@ -9078,7 +9158,7 @@
       "label": "[2.0.81] \u2014 2026-07-04",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L25",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "docs_changelog_2_0_81_2026_07_04",
       "community": 34,
@@ -9088,7 +9168,7 @@
       "label": "[2.0.79] \u2014 2026-07-04",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L29",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "docs_changelog_2_0_79_2026_07_04",
       "community": 34,
@@ -9098,7 +9178,7 @@
       "label": "[2.0.25] \u2014 2026-06-20",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L33",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "docs_changelog_2_0_25_2026_06_20",
       "community": 34,
@@ -9108,7 +9188,7 @@
       "label": "Fixed",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L35",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "docs_changelog_fixed",
       "community": 34,
@@ -9118,7 +9198,7 @@
       "label": "Changed",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L39",
+      "source_location": "L48",
       "_origin": "ast",
       "id": "docs_changelog_changed",
       "community": 34,
@@ -9128,7 +9208,7 @@
       "label": "[2.0.0] \u2014 2026-06-18",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L42",
+      "source_location": "L51",
       "_origin": "ast",
       "id": "docs_changelog_2_0_0_2026_06_18",
       "community": 34,
@@ -9138,7 +9218,7 @@
       "label": "Added",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L44",
+      "source_location": "L53",
       "_origin": "ast",
       "id": "docs_changelog_added",
       "community": 34,
@@ -9148,9 +9228,9 @@
       "label": "Fixed",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L48",
+      "source_location": "L57",
       "_origin": "ast",
-      "id": "docs_changelog_fixed_48",
+      "id": "docs_changelog_fixed_57",
       "community": 34,
       "norm_label": "fixed"
     },
@@ -9158,7 +9238,7 @@
       "label": "[1.0.23] \u2014 2026-06-19",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L54",
+      "source_location": "L63",
       "_origin": "ast",
       "id": "docs_changelog_1_0_23_2026_06_19",
       "community": 34,
@@ -9168,9 +9248,9 @@
       "label": "Fixed",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L56",
+      "source_location": "L65",
       "_origin": "ast",
-      "id": "docs_changelog_fixed_56",
+      "id": "docs_changelog_fixed_65",
       "community": 34,
       "norm_label": "fixed"
     },
@@ -9178,7 +9258,7 @@
       "label": "[1.0.21] \u2014 2026-06-18",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L60",
+      "source_location": "L69",
       "_origin": "ast",
       "id": "docs_changelog_1_0_21_2026_06_18",
       "community": 34,
@@ -9188,7 +9268,7 @@
       "label": "[1.0.20] \u2014 2026-06-18",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L64",
+      "source_location": "L73",
       "_origin": "ast",
       "id": "docs_changelog_1_0_20_2026_06_18",
       "community": 34,
@@ -9198,7 +9278,7 @@
       "label": "[1.0.19] \u2014 2026-06-18",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L68",
+      "source_location": "L77",
       "_origin": "ast",
       "id": "docs_changelog_1_0_19_2026_06_18",
       "community": 34,
@@ -9208,7 +9288,7 @@
       "label": "[1.0.18] \u2014 2026-06-18",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L72",
+      "source_location": "L81",
       "_origin": "ast",
       "id": "docs_changelog_1_0_18_2026_06_18",
       "community": 34,
@@ -9218,7 +9298,7 @@
       "label": "[1.0.17] \u2014 2026-06-18",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L76",
+      "source_location": "L85",
       "_origin": "ast",
       "id": "docs_changelog_1_0_17_2026_06_18",
       "community": 34,
@@ -9228,7 +9308,7 @@
       "label": "[1.0.16] \u2014 2026-06-18",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L80",
+      "source_location": "L89",
       "_origin": "ast",
       "id": "docs_changelog_1_0_16_2026_06_18",
       "community": 34,
@@ -9238,7 +9318,7 @@
       "label": "[1.0.15] \u2014 2026-06-18",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L84",
+      "source_location": "L93",
       "_origin": "ast",
       "id": "docs_changelog_1_0_15_2026_06_18",
       "community": 34,
@@ -9248,7 +9328,7 @@
       "label": "[1.0.14] \u2014 2026-06-15",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L88",
+      "source_location": "L97",
       "_origin": "ast",
       "id": "docs_changelog_1_0_14_2026_06_15",
       "community": 34,
@@ -9258,7 +9338,7 @@
       "label": "[1.0.13] \u2014 2026-06-15",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L92",
+      "source_location": "L101",
       "_origin": "ast",
       "id": "docs_changelog_1_0_13_2026_06_15",
       "community": 34,
@@ -9268,9 +9348,9 @@
       "label": "Added",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L94",
+      "source_location": "L103",
       "_origin": "ast",
-      "id": "docs_changelog_added_94",
+      "id": "docs_changelog_added_103",
       "community": 34,
       "norm_label": "added"
     },
@@ -9278,7 +9358,7 @@
       "label": "[1.0.10] \u2014 2026-06-14",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L97",
+      "source_location": "L106",
       "_origin": "ast",
       "id": "docs_changelog_1_0_10_2026_06_14",
       "community": 34,
@@ -9288,9 +9368,9 @@
       "label": "Added",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L99",
+      "source_location": "L108",
       "_origin": "ast",
-      "id": "docs_changelog_added_99",
+      "id": "docs_changelog_added_108",
       "community": 34,
       "norm_label": "added"
     },
@@ -9298,7 +9378,7 @@
       "label": "[1.0.8] \u2014 2026-06-14",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L103",
+      "source_location": "L112",
       "_origin": "ast",
       "id": "docs_changelog_1_0_8_2026_06_14",
       "community": 34,
@@ -9308,7 +9388,7 @@
       "label": "[1.0.7] \u2014 2026-06-14",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L107",
+      "source_location": "L116",
       "_origin": "ast",
       "id": "docs_changelog_1_0_7_2026_06_14",
       "community": 34,
@@ -9318,9 +9398,9 @@
       "label": "Added",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L109",
+      "source_location": "L118",
       "_origin": "ast",
-      "id": "docs_changelog_added_109",
+      "id": "docs_changelog_added_118",
       "community": 34,
       "norm_label": "added"
     },
@@ -9328,7 +9408,7 @@
       "label": "[1.0.4] \u2014 2026-06-13",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L116",
+      "source_location": "L125",
       "_origin": "ast",
       "id": "docs_changelog_1_0_4_2026_06_13",
       "community": 34,
@@ -9338,9 +9418,9 @@
       "label": "Added",
       "file_type": "document",
       "source_file": "docs/changelog.md",
-      "source_location": "L118",
+      "source_location": "L127",
       "_origin": "ast",
-      "id": "docs_changelog_added_118",
+      "id": "docs_changelog_added_127",
       "community": 34,
       "norm_label": "added"
     },
@@ -17588,12 +17668,12 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/components/ClothingImage.kt",
-      "source_location": "L25",
+      "source_location": "L30",
       "weight": 1.0,
       "context": "parameter_type",
-      "confidence_score": 1.0,
       "source": "components_clothingimage_clothingimage",
-      "target": "app_src_main_java_com_app_wardove_ui_components_clothingimage_kt_string"
+      "target": "app_src_main_java_com_app_wardove_ui_components_clothingimage_kt_shape",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -17604,7 +17684,7 @@
       "context": "parameter_type",
       "confidence_score": 1.0,
       "source": "components_clothingimage_clothingimage",
-      "target": "shape"
+      "target": "app_src_main_java_com_app_wardove_ui_components_clothingimage_kt_string"
     },
     {
       "relation": "calls",
@@ -18212,12 +18292,12 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L153",
+      "source_location": "L160",
       "weight": 1.0,
       "context": "parameter_type",
-      "confidence_score": 1.0,
       "source": "itemdetail_itemdetailscreen_itemdetailbody",
-      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_list"
+      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_list",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -18234,12 +18314,12 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L159",
+      "source_location": "L160",
       "weight": 1.0,
       "context": "generic_arg",
-      "confidence_score": 1.0,
       "source": "itemdetail_itemdetailscreen_itemdetailbody",
-      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_wearlog"
+      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_wearlog",
+      "confidence_score": 1.0
     },
     {
       "relation": "calls",
@@ -18300,34 +18380,34 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L296",
+      "source_location": "L303",
       "weight": 1.0,
       "context": "parameter_type",
-      "confidence_score": 1.0,
       "source": "itemdetail_itemdetailscreen_usertagsrow",
-      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_list"
+      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_list",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L332",
+      "source_location": "L373",
       "weight": 1.0,
       "context": "parameter_type",
-      "confidence_score": 1.0,
       "source": "itemdetail_itemdetailscreen_wearhistorysection",
-      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_list"
+      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_list",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
-      "source_location": "L371",
+      "source_location": "L373",
       "weight": 1.0,
       "context": "generic_arg",
-      "confidence_score": 1.0,
       "source": "itemdetail_itemdetailscreen_wearhistorysection",
-      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_wearlog"
+      "target": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_wearlog",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -19319,6 +19399,49 @@
       "confidence_score": 1.0,
       "source": "lock_lockviewmodel_lockviewmodel",
       "target": "lock_lockviewmodel_lockviewmodel_requestbiometric"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/SharedElementTransition.kt",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "navigation_sharedelementtransition",
+      "target": "navigation_sharedelementtransition_clothingsharedimage"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/SharedElementTransition.kt",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "confidence_score": 1.0,
+      "source": "navigation_sharedelementtransition_clothingsharedimage",
+      "target": "app_src_main_java_com_app_wardove_ui_navigation_sharedelementtransition_kt_long"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/SharedElementTransition.kt",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "return_type",
+      "confidence_score": 1.0,
+      "source": "navigation_sharedelementtransition_clothingsharedimage",
+      "target": "app_src_main_java_com_app_wardove_ui_navigation_sharedelementtransition_kt_modifier"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/app/wardove/ui/navigation/SharedElementTransition.kt",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "source": "navigation_sharedelementtransition_clothingsharedimage",
+      "target": "app_src_main_java_com_app_wardove_ui_navigation_sharedelementtransition_kt_shape",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -23112,12 +23235,12 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "app/src/main/java/com/app/wardove/ui/wardrobe/WardrobeScreen.kt",
-      "source_location": "L360",
+      "source_location": "L394",
       "weight": 1.0,
       "context": "parameter_type",
-      "confidence_score": 1.0,
       "source": "wardrobe_wardrobescreen_categorysectionheader",
-      "target": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_int"
+      "target": "app_src_main_java_com_app_wardove_ui_wardrobe_wardrobescreen_kt_int",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -24761,9 +24884,19 @@
       "source_file": "docs/changelog.md",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_changelog_changelog",
-      "target": "docs_changelog_2_0_85_2026_07_04",
-      "confidence_score": 1.0
+      "target": "docs_changelog_2_0_85_2026_07_04"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_2_0_88_2026_07_04"
     },
     {
       "relation": "contains",
@@ -24779,11 +24912,31 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/changelog.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_2_0_88_2026_07_04",
+      "target": "docs_changelog_nbsp_nbsp_nbsp_features"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_nbsp_nbsp_nbsp_features",
+      "target": "docs_changelog_nbsp_nbsp_nbsp_nbsp_view_changes_on_github_https_github_com_zorenkonte_wardove_compare_v2_0_85_v2_0_88"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_changelog_2_0_85_2026_07_04",
-      "target": "docs_changelog_nbsp_nbsp_nbsp_nbsp_view_changes_on_github_https_github_com_zorenkonte_wardove_compare_v2_0_84_v2_0_85",
-      "confidence_score": 1.0
+      "target": "docs_changelog_nbsp_nbsp_nbsp_nbsp_view_changes_on_github_https_github_com_zorenkonte_wardove_compare_v2_0_84_v2_0_85"
     },
     {
       "relation": "contains",
@@ -24819,51 +24972,41 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/changelog.md",
-      "source_location": "L48",
+      "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_changelog_2_0_0_2026_06_18",
-      "target": "docs_changelog_fixed_48",
-      "confidence_score": 1.0
+      "target": "docs_changelog_fixed_57"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/changelog.md",
-      "source_location": "L56",
+      "source_location": "L65",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_changelog_1_0_23_2026_06_19",
-      "target": "docs_changelog_fixed_56",
-      "confidence_score": 1.0
+      "target": "docs_changelog_fixed_65"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/changelog.md",
-      "source_location": "L94",
+      "source_location": "L103",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_changelog_1_0_13_2026_06_15",
-      "target": "docs_changelog_added_94",
-      "confidence_score": 1.0
+      "target": "docs_changelog_added_103"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "docs/changelog.md",
-      "source_location": "L99",
+      "source_location": "L108",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_changelog_1_0_10_2026_06_14",
-      "target": "docs_changelog_added_99",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L109",
-      "weight": 1.0,
-      "source": "docs_changelog_1_0_7_2026_06_14",
-      "target": "docs_changelog_added_109",
-      "confidence_score": 1.0
+      "target": "docs_changelog_added_108"
     },
     {
       "relation": "contains",
@@ -24871,9 +25014,29 @@
       "source_file": "docs/changelog.md",
       "source_location": "L118",
       "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_1_0_7_2026_06_14",
+      "target": "docs_changelog_added_118"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L118",
+      "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_changelog_1_0_4_2026_06_13",
-      "target": "docs_changelog_added_118",
-      "confidence_score": 1.0
+      "target": "docs_changelog_added_118"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L127",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_1_0_4_2026_06_13",
+      "target": "docs_changelog_added_127"
     },
     {
       "relation": "contains",
@@ -25996,5 +26159,5 @@
       "source_file": "CLAUDE.md"
     }
   ],
-  "built_at_commit": "ea19f3c3d8b61c3f2fa2eb8b594ef987694a7d06"
+  "built_at_commit": "86248df38aaf6b09561d4f8109405088b0ab52eb"
 }
