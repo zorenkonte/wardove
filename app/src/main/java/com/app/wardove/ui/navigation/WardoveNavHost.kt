@@ -1,10 +1,13 @@
 package com.app.wardove.ui.navigation
 
 import androidx.activity.compose.BackHandler
+import androidx.compose.animation.ExperimentalSharedTransitionApi
+import androidx.compose.animation.SharedTransitionLayout
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -40,6 +43,7 @@ import kotlinx.coroutines.launch
 
 private const val SNACKBAR_KEY = "snackbar_message"
 
+@OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
 fun WardoveNavHost(
     navController: NavHostController = rememberNavController(),
@@ -104,6 +108,10 @@ fun WardoveNavHost(
             )
         }
     ) {
+        SharedTransitionLayout {
+        CompositionLocalProvider(
+            LocalSharedTransitionScope provides this@SharedTransitionLayout
+        ) {
         NavHost(
             navController = navController,
             startDestination = WardoveDestinations.WARDROBE,
@@ -118,15 +126,19 @@ fun WardoveNavHost(
                     .getStateFlow<String?>(SNACKBAR_KEY, null)
                     .collectAsState()
 
-                WardrobeScreen(
-                    onAddItem = { navController.navigate(WardoveDestinations.addItem()) },
-                    onOpenItem = { id ->
-                        navController.navigate(WardoveDestinations.itemDetail(id))
-                    },
-                    onOpenDrawer = openDrawer,
-                    snackbarMessage = message,
-                    onSnackbarShown = { savedHandle[SNACKBAR_KEY] = null }
-                )
+                CompositionLocalProvider(
+                    LocalNavAnimatedVisibilityScope provides this@composable
+                ) {
+                    WardrobeScreen(
+                        onAddItem = { navController.navigate(WardoveDestinations.addItem()) },
+                        onOpenItem = { id ->
+                            navController.navigate(WardoveDestinations.itemDetail(id))
+                        },
+                        onOpenDrawer = openDrawer,
+                        snackbarMessage = message,
+                        onSnackbarShown = { savedHandle[SNACKBAR_KEY] = null }
+                    )
+                }
             }
 
             composable(
@@ -159,26 +171,31 @@ fun WardoveNavHost(
                 arguments = listOf(
                     navArgument(WardoveDestinations.ITEM_DETAIL_ARG) { type = NavType.LongType }
                 ),
-                enterTransition = enterSlide,
-                exitTransition = exitSlide,
-                popEnterTransition = popEnterSlide,
-                popExitTransition = popExitSlide
+                // Fade (not slide) so the shared item photo carries the motion.
+                enterTransition = enterFade,
+                exitTransition = exitFade,
+                popEnterTransition = popEnterFade,
+                popExitTransition = popExitFade
             ) { backStackEntry ->
                 val itemId = backStackEntry.arguments?.getLong(WardoveDestinations.ITEM_DETAIL_ARG) ?: 0L
                 val itemDeletedMsg = stringResource(R.string.item_deleted)
-                ItemDetailScreen(
-                    itemId = itemId,
-                    onBack = { navController.popBackStack() },
-                    onEdit = { id ->
-                        navController.navigate(WardoveDestinations.addItem(id))
-                    },
-                    onDeleted = {
-                        navController.previousBackStackEntry
-                            ?.savedStateHandle
-                            ?.set(SNACKBAR_KEY, itemDeletedMsg)
-                        navController.popBackStack()
-                    }
-                )
+                CompositionLocalProvider(
+                    LocalNavAnimatedVisibilityScope provides this@composable
+                ) {
+                    ItemDetailScreen(
+                        itemId = itemId,
+                        onBack = { navController.popBackStack() },
+                        onEdit = { id ->
+                            navController.navigate(WardoveDestinations.addItem(id))
+                        },
+                        onDeleted = {
+                            navController.previousBackStackEntry
+                                ?.savedStateHandle
+                                ?.set(SNACKBAR_KEY, itemDeletedMsg)
+                            navController.popBackStack()
+                        }
+                    )
+                }
             }
 
             composable(WardoveDestinations.LAUNDRY) {
@@ -329,6 +346,8 @@ fun WardoveNavHost(
             ) {
                 UpdateScreen(onBack = { navController.popBackStack() })
             }
+        }
+        }
         }
     }
 }

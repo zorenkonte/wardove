@@ -63,6 +63,7 @@ import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.data.local.entity.WearLog
 import com.app.wardove.data.local.entity.tagList
+import com.app.wardove.ui.navigation.clothingSharedImage
 import com.app.wardove.ui.theme.StatusClean
 import com.app.wardove.ui.util.ClothingOptions
 import com.app.wardove.ui.util.formatDateOnly
@@ -177,7 +178,8 @@ private fun ItemDetailBody(
             category = item.category,
             modifier = Modifier
                 .fillMaxWidth()
-                .aspectRatio(1f),
+                .aspectRatio(1f)
+                .clothingSharedImage(item.id),
             shape = RoundedCornerShape(16.dp)
         )
 

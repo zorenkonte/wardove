@@ -59,6 +59,7 @@ import com.app.wardove.ui.components.ClothingImage
 import com.app.wardove.ui.components.Dot
 import com.app.wardove.ui.components.LargeTitleHeader
 import com.app.wardove.ui.components.SingleSelectSheet
+import com.app.wardove.ui.navigation.clothingSharedImage
 import com.app.wardove.ui.theme.StatusClean
 import com.app.wardove.ui.theme.StatusLaundry
 import com.app.wardove.ui.theme.StatusWorn
@@ -433,6 +434,7 @@ private fun ClothingCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(130.dp)
+                    .clothingSharedImage(item.id)
             )
             Column(modifier = Modifier.padding(horizontal = 10.dp, vertical = 8.dp)) {
                 Text(
@@ -485,7 +487,9 @@ private fun ClothingListRow(
                 imagePath = item.imagePath,
                 contentDescription = item.name,
                 category = item.category,
-                modifier = Modifier.size(64.dp)
+                modifier = Modifier
+                    .size(64.dp)
+                    .clothingSharedImage(item.id)
             )
             Column(modifier = Modifier.weight(1f)) {
                 Text(
@@ -528,6 +532,7 @@ private fun CompactCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(100.dp)
+                    .clothingSharedImage(item.id)
             )
             Row(
                 modifier = Modifier
