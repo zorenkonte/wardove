@@ -215,6 +215,436 @@
       "norm_label": "formatdate()"
     },
     {
+      "label": "changelog.md",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_changelog",
+      "community": 34,
+      "norm_label": "changelog.md"
+    },
+    {
+      "label": "Changelog",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_changelog_changelog",
+      "community": 34,
+      "norm_label": "changelog"
+    },
+    {
+      "label": "[Unreleased]",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "docs_changelog_unreleased",
+      "community": 34,
+      "norm_label": "[unreleased]"
+    },
+    {
+      "label": "[2.0.92] \u2014 2026-07-04",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "docs_changelog_2_0_92_2026_07_04",
+      "community": 34,
+      "norm_label": "[2.0.92] \u2014 2026-07-04"
+    },
+    {
+      "label": "&nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/zorenkonte/wardove/compare/v2.0.90...v2.0.92)",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "docs_changelog_nbsp_nbsp_nbsp_nbsp_view_changes_on_github_https_github_com_zorenkonte_wardove_compare_v2_0_90_v2_0_92",
+      "community": 34,
+      "norm_label": "&nbsp;&nbsp;&nbsp;&nbsp;[view changes on github](https://github.com/zorenkonte/wardove/compare/v2.0.90...v2.0.92)"
+    },
+    {
+      "label": "[2.0.90] \u2014 2026-07-04",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "docs_changelog_2_0_90_2026_07_04",
+      "community": 34,
+      "norm_label": "[2.0.90] \u2014 2026-07-04"
+    },
+    {
+      "label": "&nbsp;&nbsp;&nbsp;\ud83d\udc1e Bug Fixes",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "docs_changelog_nbsp_nbsp_nbsp_bug_fixes",
+      "community": 34,
+      "norm_label": "&nbsp;&nbsp;&nbsp;\ud83d\udc1e bug fixes"
+    },
+    {
+      "label": "&nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/zorenkonte/wardove/compare/v2.0.88...v2.0.90)",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "docs_changelog_nbsp_nbsp_nbsp_nbsp_view_changes_on_github_https_github_com_zorenkonte_wardove_compare_v2_0_88_v2_0_90",
+      "community": 34,
+      "norm_label": "&nbsp;&nbsp;&nbsp;&nbsp;[view changes on github](https://github.com/zorenkonte/wardove/compare/v2.0.88...v2.0.90)"
+    },
+    {
+      "label": "[2.0.88] \u2014 2026-07-04",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "docs_changelog_2_0_88_2026_07_04",
+      "community": 34,
+      "norm_label": "[2.0.88] \u2014 2026-07-04"
+    },
+    {
+      "label": "&nbsp;&nbsp;&nbsp;\ud83d\ude80 Features",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L23",
+      "_origin": "ast",
+      "id": "docs_changelog_nbsp_nbsp_nbsp_features",
+      "community": 34,
+      "norm_label": "&nbsp;&nbsp;&nbsp;\ud83d\ude80 features"
+    },
+    {
+      "label": "&nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/zorenkonte/wardove/compare/v2.0.85...v2.0.88)",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "docs_changelog_nbsp_nbsp_nbsp_nbsp_view_changes_on_github_https_github_com_zorenkonte_wardove_compare_v2_0_85_v2_0_88",
+      "community": 34,
+      "norm_label": "&nbsp;&nbsp;&nbsp;&nbsp;[view changes on github](https://github.com/zorenkonte/wardove/compare/v2.0.85...v2.0.88)"
+    },
+    {
+      "label": "[2.0.85] \u2014 2026-07-04",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "docs_changelog_2_0_85_2026_07_04",
+      "community": 34,
+      "norm_label": "[2.0.85] \u2014 2026-07-04"
+    },
+    {
+      "label": "&nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/zorenkonte/wardove/compare/v2.0.84...v2.0.85)",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "docs_changelog_nbsp_nbsp_nbsp_nbsp_view_changes_on_github_https_github_com_zorenkonte_wardove_compare_v2_0_84_v2_0_85",
+      "community": 34,
+      "norm_label": "&nbsp;&nbsp;&nbsp;&nbsp;[view changes on github](https://github.com/zorenkonte/wardove/compare/v2.0.84...v2.0.85)"
+    },
+    {
+      "label": "[2.0.84] \u2014 2026-07-04",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L36",
+      "_origin": "ast",
+      "id": "docs_changelog_2_0_84_2026_07_04",
+      "community": 34,
+      "norm_label": "[2.0.84] \u2014 2026-07-04"
+    },
+    {
+      "label": "[2.0.83] \u2014 2026-07-04",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "docs_changelog_2_0_83_2026_07_04",
+      "community": 34,
+      "norm_label": "[2.0.83] \u2014 2026-07-04"
+    },
+    {
+      "label": "[2.0.82] \u2014 2026-07-04",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L44",
+      "_origin": "ast",
+      "id": "docs_changelog_2_0_82_2026_07_04",
+      "community": 34,
+      "norm_label": "[2.0.82] \u2014 2026-07-04"
+    },
+    {
+      "label": "[2.0.81] \u2014 2026-07-04",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "docs_changelog_2_0_81_2026_07_04",
+      "community": 34,
+      "norm_label": "[2.0.81] \u2014 2026-07-04"
+    },
+    {
+      "label": "[2.0.79] \u2014 2026-07-04",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L52",
+      "_origin": "ast",
+      "id": "docs_changelog_2_0_79_2026_07_04",
+      "community": 34,
+      "norm_label": "[2.0.79] \u2014 2026-07-04"
+    },
+    {
+      "label": "[2.0.25] \u2014 2026-06-20",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L56",
+      "_origin": "ast",
+      "id": "docs_changelog_2_0_25_2026_06_20",
+      "community": 34,
+      "norm_label": "[2.0.25] \u2014 2026-06-20"
+    },
+    {
+      "label": "Fixed",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L58",
+      "_origin": "ast",
+      "id": "docs_changelog_fixed",
+      "community": 34,
+      "norm_label": "fixed"
+    },
+    {
+      "label": "Changed",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "docs_changelog_changed",
+      "community": 34,
+      "norm_label": "changed"
+    },
+    {
+      "label": "[2.0.0] \u2014 2026-06-18",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L65",
+      "_origin": "ast",
+      "id": "docs_changelog_2_0_0_2026_06_18",
+      "community": 34,
+      "norm_label": "[2.0.0] \u2014 2026-06-18"
+    },
+    {
+      "label": "Added",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L67",
+      "_origin": "ast",
+      "id": "docs_changelog_added",
+      "community": 34,
+      "norm_label": "added"
+    },
+    {
+      "label": "Fixed",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L71",
+      "_origin": "ast",
+      "id": "docs_changelog_fixed_71",
+      "community": 34,
+      "norm_label": "fixed"
+    },
+    {
+      "label": "[1.0.23] \u2014 2026-06-19",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L77",
+      "_origin": "ast",
+      "id": "docs_changelog_1_0_23_2026_06_19",
+      "community": 34,
+      "norm_label": "[1.0.23] \u2014 2026-06-19"
+    },
+    {
+      "label": "Fixed",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "docs_changelog_fixed_79",
+      "community": 34,
+      "norm_label": "fixed"
+    },
+    {
+      "label": "[1.0.21] \u2014 2026-06-18",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "docs_changelog_1_0_21_2026_06_18",
+      "community": 34,
+      "norm_label": "[1.0.21] \u2014 2026-06-18"
+    },
+    {
+      "label": "[1.0.20] \u2014 2026-06-18",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "docs_changelog_1_0_20_2026_06_18",
+      "community": 34,
+      "norm_label": "[1.0.20] \u2014 2026-06-18"
+    },
+    {
+      "label": "[1.0.19] \u2014 2026-06-18",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L91",
+      "_origin": "ast",
+      "id": "docs_changelog_1_0_19_2026_06_18",
+      "community": 34,
+      "norm_label": "[1.0.19] \u2014 2026-06-18"
+    },
+    {
+      "label": "[1.0.18] \u2014 2026-06-18",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L95",
+      "_origin": "ast",
+      "id": "docs_changelog_1_0_18_2026_06_18",
+      "community": 34,
+      "norm_label": "[1.0.18] \u2014 2026-06-18"
+    },
+    {
+      "label": "[1.0.17] \u2014 2026-06-18",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L99",
+      "_origin": "ast",
+      "id": "docs_changelog_1_0_17_2026_06_18",
+      "community": 34,
+      "norm_label": "[1.0.17] \u2014 2026-06-18"
+    },
+    {
+      "label": "[1.0.16] \u2014 2026-06-18",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L103",
+      "_origin": "ast",
+      "id": "docs_changelog_1_0_16_2026_06_18",
+      "community": 34,
+      "norm_label": "[1.0.16] \u2014 2026-06-18"
+    },
+    {
+      "label": "[1.0.15] \u2014 2026-06-18",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L107",
+      "_origin": "ast",
+      "id": "docs_changelog_1_0_15_2026_06_18",
+      "community": 34,
+      "norm_label": "[1.0.15] \u2014 2026-06-18"
+    },
+    {
+      "label": "[1.0.14] \u2014 2026-06-15",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L111",
+      "_origin": "ast",
+      "id": "docs_changelog_1_0_14_2026_06_15",
+      "community": 34,
+      "norm_label": "[1.0.14] \u2014 2026-06-15"
+    },
+    {
+      "label": "[1.0.13] \u2014 2026-06-15",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L115",
+      "_origin": "ast",
+      "id": "docs_changelog_1_0_13_2026_06_15",
+      "community": 34,
+      "norm_label": "[1.0.13] \u2014 2026-06-15"
+    },
+    {
+      "label": "Added",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L117",
+      "_origin": "ast",
+      "id": "docs_changelog_added_117",
+      "community": 34,
+      "norm_label": "added"
+    },
+    {
+      "label": "[1.0.10] \u2014 2026-06-14",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L120",
+      "_origin": "ast",
+      "id": "docs_changelog_1_0_10_2026_06_14",
+      "community": 34,
+      "norm_label": "[1.0.10] \u2014 2026-06-14"
+    },
+    {
+      "label": "Added",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L122",
+      "_origin": "ast",
+      "id": "docs_changelog_added_122",
+      "community": 34,
+      "norm_label": "added"
+    },
+    {
+      "label": "[1.0.8] \u2014 2026-06-14",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L126",
+      "_origin": "ast",
+      "id": "docs_changelog_1_0_8_2026_06_14",
+      "community": 34,
+      "norm_label": "[1.0.8] \u2014 2026-06-14"
+    },
+    {
+      "label": "[1.0.7] \u2014 2026-06-14",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L130",
+      "_origin": "ast",
+      "id": "docs_changelog_1_0_7_2026_06_14",
+      "community": 34,
+      "norm_label": "[1.0.7] \u2014 2026-06-14"
+    },
+    {
+      "label": "Added",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L132",
+      "_origin": "ast",
+      "id": "docs_changelog_added_132",
+      "community": 34,
+      "norm_label": "added"
+    },
+    {
+      "label": "[1.0.4] \u2014 2026-06-13",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L139",
+      "_origin": "ast",
+      "id": "docs_changelog_1_0_4_2026_06_13",
+      "community": 34,
+      "norm_label": "[1.0.4] \u2014 2026-06-13"
+    },
+    {
+      "label": "Added",
+      "file_type": "document",
+      "source_file": "docs/changelog.md",
+      "source_location": "L141",
+      "_origin": "ast",
+      "id": "docs_changelog_added_141",
+      "community": 34,
+      "norm_label": "added"
+    },
+    {
       "label": "settings.gradle.kts",
       "file_type": "code",
       "source_file": "settings.gradle.kts",
@@ -3500,7 +3930,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/additem/AddItemScreen.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 18,
+      "community": 1,
       "norm_label": "additemscreen.kt",
       "id": "additem_additemscreen"
     },
@@ -3510,7 +3940,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/additem/AddItemScreen.kt",
       "source_location": "L71",
       "_origin": "ast",
-      "community": 18,
+      "community": 1,
       "norm_label": "additemscreen()",
       "id": "additem_additemscreen_additemscreen"
     },
@@ -3520,7 +3950,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/additem/AddItemScreen.kt",
       "source_location": "L71",
       "_origin": "ast",
-      "community": 18,
+      "community": 1,
       "norm_label": "additemviewmodel",
       "id": "additemviewmodel"
     },
@@ -3530,7 +3960,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/additem/AddItemScreen.kt",
       "source_location": "L230",
       "_origin": "ast",
-      "community": 18,
+      "community": 1,
       "norm_label": "imagepicker()",
       "id": "additem_additemscreen_imagepicker"
     },
@@ -3540,7 +3970,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/additem/AddItemScreen.kt",
       "source_location": "L230",
       "_origin": "ast",
-      "community": 18,
+      "community": 1,
       "norm_label": "string",
       "id": "app_src_main_java_com_app_wardove_ui_additem_additemscreen_kt_string"
     },
@@ -3550,7 +3980,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/additem/AddItemScreen.kt",
       "source_location": "L298",
       "_origin": "ast",
-      "community": 18,
+      "community": 1,
       "norm_label": "categorydropdown()",
       "id": "additem_additemscreen_categorydropdown"
     },
@@ -3560,7 +3990,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/additem/AddItemScreen.kt",
       "source_location": "L356",
       "_origin": "ast",
-      "community": 18,
+      "community": 1,
       "norm_label": "colorgrid()",
       "id": "additem_additemscreen_colorgrid"
     },
@@ -3610,7 +4040,7 @@
       "source_file": "",
       "source_location": "",
       "_origin": "ast",
-      "community": 76,
+      "community": 30,
       "norm_label": "viewmodel",
       "id": "viewmodel"
     },
@@ -3820,7 +4250,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/additem/ShareItemSheet.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 18,
+      "community": 1,
       "norm_label": "shareitemsheet.kt",
       "id": "additem_shareitemsheet"
     },
@@ -3830,7 +4260,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/additem/ShareItemSheet.kt",
       "source_location": "L49",
       "_origin": "ast",
-      "community": 18,
+      "community": 1,
       "norm_label": "shareitemsheet()",
       "id": "additem_shareitemsheet_shareitemsheet"
     },
@@ -3840,7 +4270,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/additem/ShareItemSheet.kt",
       "source_location": "L49",
       "_origin": "ast",
-      "community": 18,
+      "community": 1,
       "norm_label": "uri",
       "id": "app_src_main_java_com_app_wardove_ui_additem_shareitemsheet_kt_uri"
     },
@@ -3850,7 +4280,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/additem/ShareItemSheet.kt",
       "source_location": "L49",
       "_origin": "ast",
-      "community": 18,
+      "community": 1,
       "norm_label": "shareitemviewmodel",
       "id": "shareitemviewmodel"
     },
@@ -4030,7 +4460,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 64,
       "norm_label": "calendarscreen.kt",
       "id": "calendar_calendarscreen"
     },
@@ -4040,7 +4470,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L68",
       "_origin": "ast",
-      "community": 1,
+      "community": 64,
       "norm_label": "calendarscreen()",
       "id": "calendar_calendarscreen_calendarscreen"
     },
@@ -4050,7 +4480,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L68",
       "_origin": "ast",
-      "community": 1,
+      "community": 64,
       "norm_label": "calendarviewmodel",
       "id": "calendarviewmodel"
     },
@@ -4060,7 +4490,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L225",
       "_origin": "ast",
-      "community": 1,
+      "community": 64,
       "norm_label": "weekdayheader()",
       "id": "calendar_calendarscreen_weekdayheader"
     },
@@ -4070,7 +4500,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L256",
       "_origin": "ast",
-      "community": 1,
+      "community": 64,
       "norm_label": "monthgrid()",
       "id": "calendar_calendarscreen_monthgrid"
     },
@@ -4080,7 +4510,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L256",
       "_origin": "ast",
-      "community": 1,
+      "community": 64,
       "norm_label": "yearmonth",
       "id": "yearmonth"
     },
@@ -4090,7 +4520,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L256",
       "_origin": "ast",
-      "community": 1,
+      "community": 64,
       "norm_label": "localdate",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_localdate"
     },
@@ -4100,7 +4530,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L256",
       "_origin": "ast",
-      "community": 1,
+      "community": 64,
       "norm_label": "set",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_set"
     },
@@ -4110,7 +4540,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L298",
       "_origin": "ast",
-      "community": 1,
+      "community": 64,
       "norm_label": "daycell()",
       "id": "calendar_calendarscreen_daycell"
     },
@@ -4120,7 +4550,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L298",
       "_origin": "ast",
-      "community": 1,
+      "community": 64,
       "norm_label": "boolean",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_boolean"
     },
@@ -4130,7 +4560,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L340",
       "_origin": "ast",
-      "community": 1,
+      "community": 64,
       "norm_label": "selecteddaylabel()",
       "id": "calendar_calendarscreen_selecteddaylabel"
     },
@@ -4140,7 +4570,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L352",
       "_origin": "ast",
-      "community": 1,
+      "community": 64,
       "norm_label": "wornitemcard()",
       "id": "calendar_calendarscreen_wornitemcard"
     },
@@ -4150,7 +4580,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L352",
       "_origin": "ast",
-      "community": 1,
+      "community": 64,
       "norm_label": "clothingitem",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_clothingitem"
     },
@@ -4160,7 +4590,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L394",
       "_origin": "ast",
-      "community": 1,
+      "community": 64,
       "norm_label": "sundaybasedindex()",
       "id": "calendar_calendarscreen_sundaybasedindex"
     },
@@ -4170,7 +4600,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L394",
       "_origin": "ast",
-      "community": 1,
+      "community": 64,
       "norm_label": "int",
       "id": "app_src_main_java_com_app_wardove_ui_calendar_calendarscreen_kt_int"
     },
@@ -4180,7 +4610,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt",
       "source_location": "L404",
       "_origin": "ast",
-      "community": 1,
+      "community": 64,
       "norm_label": "adjustselection()",
       "id": "calendar_calendarscreen_adjustselection"
     },
@@ -4300,7 +4730,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/components/AppHeaders.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
+      "community": 64,
       "norm_label": "appheaders.kt",
       "id": "components_appheaders"
     },
@@ -4310,7 +4740,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/components/AppHeaders.kt",
       "source_location": "L30",
       "_origin": "ast",
-      "community": 1,
+      "community": 64,
       "norm_label": "largetitleheader()",
       "id": "components_appheaders_largetitleheader"
     },
@@ -4320,7 +4750,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/components/AppHeaders.kt",
       "source_location": "L30",
       "_origin": "ast",
-      "community": 1,
+      "community": 64,
       "norm_label": "string",
       "id": "app_src_main_java_com_app_wardove_ui_components_appheaders_kt_string"
     },
@@ -4330,7 +4760,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/components/AppHeaders.kt",
       "source_location": "L30",
       "_origin": "ast",
-      "community": 1,
+      "community": 64,
       "norm_label": "modifier",
       "id": "app_src_main_java_com_app_wardove_ui_components_appheaders_kt_modifier"
     },
@@ -4680,7 +5110,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 64,
+      "community": 18,
       "norm_label": "itemdetailscreen.kt",
       "id": "itemdetail_itemdetailscreen"
     },
@@ -4690,7 +5120,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
       "source_location": "L73",
       "_origin": "ast",
-      "community": 64,
+      "community": 18,
       "norm_label": "itemdetailscreen()",
       "id": "itemdetail_itemdetailscreen_itemdetailscreen"
     },
@@ -4700,7 +5130,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
       "source_location": "L73",
       "_origin": "ast",
-      "community": 64,
+      "community": 18,
       "norm_label": "long",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_long"
     },
@@ -4710,7 +5140,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
       "source_location": "L73",
       "_origin": "ast",
-      "community": 64,
+      "community": 18,
       "norm_label": "itemdetailviewmodel",
       "id": "itemdetailviewmodel"
     },
@@ -4720,7 +5150,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
       "source_location": "L159",
       "_origin": "ast",
-      "community": 64,
+      "community": 18,
       "norm_label": "itemdetailbody()",
       "id": "itemdetail_itemdetailscreen_itemdetailbody"
     },
@@ -4730,7 +5160,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
       "source_location": "L159",
       "_origin": "ast",
-      "community": 64,
+      "community": 18,
       "norm_label": "clothingitem",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_clothingitem"
     },
@@ -4740,7 +5170,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
       "source_location": "L159",
       "_origin": "ast",
-      "community": 64,
+      "community": 18,
       "norm_label": "list",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_list"
     },
@@ -4750,7 +5180,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
       "source_location": "L159",
       "_origin": "ast",
-      "community": 64,
+      "community": 18,
       "norm_label": "wearlog",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_wearlog"
     },
@@ -4760,7 +5190,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
       "source_location": "L159",
       "_origin": "ast",
-      "community": 64,
+      "community": 18,
       "norm_label": "boolean",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_boolean"
     },
@@ -4770,7 +5200,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
       "source_location": "L159",
       "_origin": "ast",
-      "community": 64,
+      "community": 18,
       "norm_label": "modifier",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_modifier"
     },
@@ -4780,7 +5210,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
       "source_location": "L279",
       "_origin": "ast",
-      "community": 64,
+      "community": 18,
       "norm_label": "tagsrow()",
       "id": "itemdetail_itemdetailscreen_tagsrow"
     },
@@ -4790,7 +5220,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
       "source_location": "L301",
       "_origin": "ast",
-      "community": 64,
+      "community": 18,
       "norm_label": "usertagsrow()",
       "id": "itemdetail_itemdetailscreen_usertagsrow"
     },
@@ -4800,7 +5230,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
       "source_location": "L301",
       "_origin": "ast",
-      "community": 64,
+      "community": 18,
       "norm_label": "string",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_string"
     },
@@ -4810,7 +5240,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
       "source_location": "L321",
       "_origin": "ast",
-      "community": 64,
+      "community": 18,
       "norm_label": "tagpill()",
       "id": "itemdetail_itemdetailscreen_tagpill"
     },
@@ -4820,7 +5250,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
       "source_location": "L321",
       "_origin": "ast",
-      "community": 64,
+      "community": 18,
       "norm_label": "color",
       "id": "app_src_main_java_com_app_wardove_ui_itemdetail_itemdetailscreen_kt_color"
     },
@@ -4830,7 +5260,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
       "source_location": "L349",
       "_origin": "ast",
-      "community": 64,
+      "community": 18,
       "norm_label": "statbox()",
       "id": "itemdetail_itemdetailscreen_statbox"
     },
@@ -4840,7 +5270,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/itemdetail/ItemDetailScreen.kt",
       "source_location": "L371",
       "_origin": "ast",
-      "community": 64,
+      "community": 18,
       "norm_label": "wearhistorysection()",
       "id": "itemdetail_itemdetailscreen_wearhistorysection"
     },
@@ -5760,7 +6190,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 5,
+      "community": 105,
       "norm_label": "applocksettingsscreen.kt",
       "id": "settings_applocksettingsscreen"
     },
@@ -5770,7 +6200,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L46",
       "_origin": "ast",
-      "community": 5,
+      "community": 105,
       "norm_label": "applocksettingsviewmodel",
       "id": "settings_applocksettingsscreen_applocksettingsviewmodel"
     },
@@ -5780,7 +6210,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L51",
       "_origin": "ast",
-      "community": 5,
+      "community": 105,
       "norm_label": "stateflow",
       "id": "app_src_main_java_com_app_wardove_ui_settings_applocksettingsscreen_kt_stateflow"
     },
@@ -5790,7 +6220,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L51",
       "_origin": "ast",
-      "community": 5,
+      "community": 105,
       "norm_label": "boolean",
       "id": "app_src_main_java_com_app_wardove_ui_settings_applocksettingsscreen_kt_boolean"
     },
@@ -5800,7 +6230,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L57",
       "_origin": "ast",
-      "community": 5,
+      "community": 105,
       "norm_label": ".setapplockenabled()",
       "id": "settings_applocksettingsscreen_applocksettingsviewmodel_setapplockenabled"
     },
@@ -5810,7 +6240,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L62",
       "_origin": "ast",
-      "community": 5,
+      "community": 105,
       "norm_label": "applocksettingsscreen()",
       "id": "settings_applocksettingsscreen_applocksettingsscreen"
     },
@@ -5820,7 +6250,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L147",
       "_origin": "ast",
-      "community": 5,
+      "community": 105,
       "norm_label": "applockswitchrow()",
       "id": "settings_applocksettingsscreen_applockswitchrow"
     },
@@ -5830,7 +6260,7 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt",
       "source_location": "L147",
       "_origin": "ast",
-      "community": 5,
+      "community": 105,
       "norm_label": "string",
       "id": "app_src_main_java_com_app_wardove_ui_settings_applocksettingsscreen_kt_string"
     },
@@ -9005,386 +9435,6 @@
       "id": "wardove_wardove_mvp_plan_9_nice_to_have_polish_if_time_allows_in_mvp"
     },
     {
-      "label": "changelog.md",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "changelog.md",
-      "id": "docs_changelog"
-    },
-    {
-      "label": "Changelog",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "changelog",
-      "id": "docs_changelog_changelog"
-    },
-    {
-      "label": "[Unreleased]",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[unreleased]",
-      "id": "docs_changelog_unreleased"
-    },
-    {
-      "label": "[2.0.88] \u2014 2026-07-04",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L7",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[2.0.88] \u2014 2026-07-04",
-      "id": "docs_changelog_2_0_88_2026_07_04"
-    },
-    {
-      "label": "&nbsp;&nbsp;&nbsp;\ud83d\ude80 Features",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L9",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "&nbsp;&nbsp;&nbsp;\ud83d\ude80 features",
-      "id": "docs_changelog_nbsp_nbsp_nbsp_features"
-    },
-    {
-      "label": "&nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/zorenkonte/wardove/compare/v2.0.85...v2.0.88)",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L14",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "&nbsp;&nbsp;&nbsp;&nbsp;[view changes on github](https://github.com/zorenkonte/wardove/compare/v2.0.85...v2.0.88)",
-      "id": "docs_changelog_nbsp_nbsp_nbsp_nbsp_view_changes_on_github_https_github_com_zorenkonte_wardove_compare_v2_0_85_v2_0_88"
-    },
-    {
-      "label": "[2.0.85] \u2014 2026-07-04",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L16",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[2.0.85] \u2014 2026-07-04",
-      "id": "docs_changelog_2_0_85_2026_07_04"
-    },
-    {
-      "label": "&nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/zorenkonte/wardove/compare/v2.0.84...v2.0.85)",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L20",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "&nbsp;&nbsp;&nbsp;&nbsp;[view changes on github](https://github.com/zorenkonte/wardove/compare/v2.0.84...v2.0.85)",
-      "id": "docs_changelog_nbsp_nbsp_nbsp_nbsp_view_changes_on_github_https_github_com_zorenkonte_wardove_compare_v2_0_84_v2_0_85"
-    },
-    {
-      "label": "[2.0.84] \u2014 2026-07-04",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L22",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[2.0.84] \u2014 2026-07-04",
-      "id": "docs_changelog_2_0_84_2026_07_04"
-    },
-    {
-      "label": "[2.0.83] \u2014 2026-07-04",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L26",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[2.0.83] \u2014 2026-07-04",
-      "id": "docs_changelog_2_0_83_2026_07_04"
-    },
-    {
-      "label": "[2.0.82] \u2014 2026-07-04",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L30",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[2.0.82] \u2014 2026-07-04",
-      "id": "docs_changelog_2_0_82_2026_07_04"
-    },
-    {
-      "label": "[2.0.81] \u2014 2026-07-04",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L34",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[2.0.81] \u2014 2026-07-04",
-      "id": "docs_changelog_2_0_81_2026_07_04"
-    },
-    {
-      "label": "[2.0.79] \u2014 2026-07-04",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L38",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[2.0.79] \u2014 2026-07-04",
-      "id": "docs_changelog_2_0_79_2026_07_04"
-    },
-    {
-      "label": "[2.0.25] \u2014 2026-06-20",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L42",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[2.0.25] \u2014 2026-06-20",
-      "id": "docs_changelog_2_0_25_2026_06_20"
-    },
-    {
-      "label": "Fixed",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L44",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "fixed",
-      "id": "docs_changelog_fixed"
-    },
-    {
-      "label": "Changed",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L48",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "changed",
-      "id": "docs_changelog_changed"
-    },
-    {
-      "label": "[2.0.0] \u2014 2026-06-18",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L51",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[2.0.0] \u2014 2026-06-18",
-      "id": "docs_changelog_2_0_0_2026_06_18"
-    },
-    {
-      "label": "Added",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L53",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "added",
-      "id": "docs_changelog_added"
-    },
-    {
-      "label": "Fixed",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L57",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "fixed",
-      "id": "docs_changelog_fixed_57"
-    },
-    {
-      "label": "[1.0.23] \u2014 2026-06-19",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L63",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[1.0.23] \u2014 2026-06-19",
-      "id": "docs_changelog_1_0_23_2026_06_19"
-    },
-    {
-      "label": "Fixed",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L65",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "fixed",
-      "id": "docs_changelog_fixed_65"
-    },
-    {
-      "label": "[1.0.21] \u2014 2026-06-18",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L69",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[1.0.21] \u2014 2026-06-18",
-      "id": "docs_changelog_1_0_21_2026_06_18"
-    },
-    {
-      "label": "[1.0.20] \u2014 2026-06-18",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L73",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[1.0.20] \u2014 2026-06-18",
-      "id": "docs_changelog_1_0_20_2026_06_18"
-    },
-    {
-      "label": "[1.0.19] \u2014 2026-06-18",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L77",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[1.0.19] \u2014 2026-06-18",
-      "id": "docs_changelog_1_0_19_2026_06_18"
-    },
-    {
-      "label": "[1.0.18] \u2014 2026-06-18",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L81",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[1.0.18] \u2014 2026-06-18",
-      "id": "docs_changelog_1_0_18_2026_06_18"
-    },
-    {
-      "label": "[1.0.17] \u2014 2026-06-18",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L85",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[1.0.17] \u2014 2026-06-18",
-      "id": "docs_changelog_1_0_17_2026_06_18"
-    },
-    {
-      "label": "[1.0.16] \u2014 2026-06-18",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L89",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[1.0.16] \u2014 2026-06-18",
-      "id": "docs_changelog_1_0_16_2026_06_18"
-    },
-    {
-      "label": "[1.0.15] \u2014 2026-06-18",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L93",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[1.0.15] \u2014 2026-06-18",
-      "id": "docs_changelog_1_0_15_2026_06_18"
-    },
-    {
-      "label": "[1.0.14] \u2014 2026-06-15",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L97",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[1.0.14] \u2014 2026-06-15",
-      "id": "docs_changelog_1_0_14_2026_06_15"
-    },
-    {
-      "label": "[1.0.13] \u2014 2026-06-15",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L101",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[1.0.13] \u2014 2026-06-15",
-      "id": "docs_changelog_1_0_13_2026_06_15"
-    },
-    {
-      "label": "Added",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L103",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "added",
-      "id": "docs_changelog_added_103"
-    },
-    {
-      "label": "[1.0.10] \u2014 2026-06-14",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L106",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[1.0.10] \u2014 2026-06-14",
-      "id": "docs_changelog_1_0_10_2026_06_14"
-    },
-    {
-      "label": "Added",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L108",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "added",
-      "id": "docs_changelog_added_108"
-    },
-    {
-      "label": "[1.0.8] \u2014 2026-06-14",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L112",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[1.0.8] \u2014 2026-06-14",
-      "id": "docs_changelog_1_0_8_2026_06_14"
-    },
-    {
-      "label": "[1.0.7] \u2014 2026-06-14",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L116",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[1.0.7] \u2014 2026-06-14",
-      "id": "docs_changelog_1_0_7_2026_06_14"
-    },
-    {
-      "label": "Added",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L118",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "added",
-      "id": "docs_changelog_added_118"
-    },
-    {
-      "label": "[1.0.4] \u2014 2026-06-13",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L125",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "[1.0.4] \u2014 2026-06-13",
-      "id": "docs_changelog_1_0_4_2026_06_13"
-    },
-    {
-      "label": "Added",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": "L127",
-      "_origin": "ast",
-      "community": 34,
-      "norm_label": "added",
-      "id": "docs_changelog_added_127"
-    },
-    {
       "label": "calendar.md",
       "file_type": "document",
       "source_file": "docs/features/calendar.md",
@@ -10315,19 +10365,6 @@
       "id": "docs_terms_contact"
     },
     {
-      "label": "Deploy Docs GitHub Actions Workflow",
-      "file_type": "document",
-      "source_file": ".github/workflows/docs.yml",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 43,
-      "norm_label": "deploy docs github actions workflow",
-      "id": "workflows_docs_deploy_docs_workflow"
-    },
-    {
       "label": "Wardove Android App",
       "file_type": "concept",
       "source_file": "README.md",
@@ -10534,45 +10571,6 @@
       "community": 90,
       "norm_label": "laundry history screen",
       "id": "wardove_laundry_history_screen"
-    },
-    {
-      "label": "Wardove Changelog",
-      "file_type": "document",
-      "source_file": "docs/changelog.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 105,
-      "norm_label": "wardove changelog",
-      "id": "docs_changelog_wardove_changelog"
-    },
-    {
-      "label": "Biometric App Lock Feature (v1.0.13)",
-      "file_type": "concept",
-      "source_file": "docs/changelog.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 105,
-      "norm_label": "biometric app lock feature (v1.0.13)",
-      "id": "docs_changelog_biometric_app_lock_feature"
-    },
-    {
-      "label": "Auto-Update System via GitHub Releases (v1.0.10)",
-      "file_type": "concept",
-      "source_file": "docs/changelog.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "community": 105,
-      "norm_label": "auto-update system via github releases (v1.0.10)",
-      "id": "docs_changelog_auto_update_system"
     },
     {
       "label": "Calendar Screen (monthly wear history view)",
@@ -10891,9 +10889,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
       "source_location": "L437",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "update_updatescreen",
-      "target": "update_updatescreen_firstnotesline",
-      "confidence_score": 1.0
+      "target": "update_updatescreen_firstnotesline"
     },
     {
       "relation": "contains",
@@ -11028,9 +11026,9 @@
       "source_location": "L240",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "update_updatescreen_latestreleasecard",
-      "target": "boolean",
-      "confidence_score": 1.0
+      "target": "boolean"
     },
     {
       "relation": "references",
@@ -11039,9 +11037,9 @@
       "source_location": "L240",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "update_updatescreen_latestreleasecard",
-      "target": "githubrelease",
-      "confidence_score": 1.0
+      "target": "githubrelease"
     },
     {
       "relation": "references",
@@ -11094,9 +11092,9 @@
       "source_location": "L390",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "update_updatescreen_releasehistoryitem",
-      "target": "githubrelease",
-      "confidence_score": 1.0
+      "target": "githubrelease"
     },
     {
       "relation": "calls",
@@ -11105,9 +11103,9 @@
       "source_file": "app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt",
       "source_location": "L417",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "update_updatescreen_releasehistoryitem",
-      "target": "update_updatescreen_firstnotesline",
-      "confidence_score": 1.0
+      "target": "update_updatescreen_firstnotesline"
     },
     {
       "relation": "calls",
@@ -11127,9 +11125,9 @@
       "source_location": "L437",
       "weight": 1.0,
       "context": "return_type",
+      "confidence_score": 1.0,
       "source": "update_updatescreen_firstnotesline",
-      "target": "string",
-      "confidence_score": 1.0
+      "target": "string"
     },
     {
       "relation": "references",
@@ -11138,9 +11136,9 @@
       "source_location": "L451",
       "weight": 1.0,
       "context": "return_type",
+      "confidence_score": 1.0,
       "source": "update_updatescreen_formatbytes",
-      "target": "string",
-      "confidence_score": 1.0
+      "target": "string"
     },
     {
       "relation": "references",
@@ -11149,9 +11147,9 @@
       "source_location": "L459",
       "weight": 1.0,
       "context": "return_type",
+      "confidence_score": 1.0,
       "source": "update_updatescreen_formatdate",
-      "target": "string",
-      "confidence_score": 1.0
+      "target": "string"
     },
     {
       "relation": "references",
@@ -11160,9 +11158,9 @@
       "source_location": "L456",
       "weight": 1.0,
       "context": "return_type",
+      "confidence_score": 1.0,
       "source": "update_updatescreen_formatspeed",
-      "target": "string",
-      "confidence_score": 1.0
+      "target": "string"
     },
     {
       "relation": "references",
@@ -11171,9 +11169,9 @@
       "source_location": "L451",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "update_updatescreen_formatbytes",
-      "target": "long",
-      "confidence_score": 1.0
+      "target": "long"
     },
     {
       "relation": "calls",
@@ -11193,8 +11191,428 @@
       "source_location": "L456",
       "weight": 1.0,
       "context": "parameter_type",
+      "confidence_score": 1.0,
       "source": "update_updatescreen_formatspeed",
-      "target": "long",
+      "target": "long"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog",
+      "target": "docs_changelog_changelog"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_1_0_10_2026_06_14"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L66",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_1_0_13_2026_06_15"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L62",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_1_0_14_2026_06_15"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_1_0_15_2026_06_18"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_1_0_16_2026_06_18"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_1_0_17_2026_06_18"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_1_0_18_2026_06_18"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_1_0_19_2026_06_18"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_1_0_20_2026_06_18"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_1_0_21_2026_06_18"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_1_0_23_2026_06_19"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L90",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_1_0_4_2026_06_13"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L81",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_1_0_7_2026_06_14"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L77",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_1_0_8_2026_06_14"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_2_0_0_2026_06_18"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_2_0_25_2026_06_20"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_2_0_79_2026_07_04"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_2_0_81_2026_07_04"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_2_0_82_2026_07_04"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_2_0_83_2026_07_04"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_2_0_84_2026_07_04"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_2_0_85_2026_07_04"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_2_0_88_2026_07_04"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_2_0_90_2026_07_04",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_2_0_92_2026_07_04",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_changelog",
+      "target": "docs_changelog_unreleased"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "docs_changelog_2_0_92_2026_07_04",
+      "target": "docs_changelog_nbsp_nbsp_nbsp_nbsp_view_changes_on_github_https_github_com_zorenkonte_wardove_compare_v2_0_90_v2_0_92",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "docs_changelog_2_0_90_2026_07_04",
+      "target": "docs_changelog_nbsp_nbsp_nbsp_bug_fixes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "docs_changelog_nbsp_nbsp_nbsp_bug_fixes",
+      "target": "docs_changelog_nbsp_nbsp_nbsp_nbsp_view_changes_on_github_https_github_com_zorenkonte_wardove_compare_v2_0_88_v2_0_90",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_2_0_88_2026_07_04",
+      "target": "docs_changelog_nbsp_nbsp_nbsp_features"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_nbsp_nbsp_nbsp_features",
+      "target": "docs_changelog_nbsp_nbsp_nbsp_nbsp_view_changes_on_github_https_github_com_zorenkonte_wardove_compare_v2_0_85_v2_0_88"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_2_0_85_2026_07_04",
+      "target": "docs_changelog_nbsp_nbsp_nbsp_nbsp_view_changes_on_github_https_github_com_zorenkonte_wardove_compare_v2_0_84_v2_0_85"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_2_0_25_2026_06_20",
+      "target": "docs_changelog_changed"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_2_0_25_2026_06_20",
+      "target": "docs_changelog_fixed"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "docs_changelog_2_0_0_2026_06_18",
+      "target": "docs_changelog_added"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L71",
+      "weight": 1.0,
+      "source": "docs_changelog_2_0_0_2026_06_18",
+      "target": "docs_changelog_fixed_71",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "docs_changelog_1_0_23_2026_06_19",
+      "target": "docs_changelog_fixed_79",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "docs_changelog_1_0_13_2026_06_15",
+      "target": "docs_changelog_added_117",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "docs_changelog_1_0_10_2026_06_14",
+      "target": "docs_changelog_added_122",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L132",
+      "weight": 1.0,
+      "source": "docs_changelog_1_0_7_2026_06_14",
+      "target": "docs_changelog_added_132",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/changelog.md",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "docs_changelog_1_0_4_2026_06_13",
+      "target": "docs_changelog_added_141",
       "confidence_score": 1.0
     },
     {
@@ -24610,386 +25028,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog",
-      "target": "docs_changelog_changelog"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L71",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_1_0_10_2026_06_14"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L66",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_1_0_13_2026_06_15"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L62",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_1_0_14_2026_06_15"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L58",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_1_0_15_2026_06_18"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L54",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_1_0_16_2026_06_18"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L50",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_1_0_17_2026_06_18"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L46",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_1_0_18_2026_06_18"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L42",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_1_0_19_2026_06_18"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L38",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_1_0_20_2026_06_18"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L34",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_1_0_21_2026_06_18"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L28",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_1_0_23_2026_06_19"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L90",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_1_0_4_2026_06_13"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L81",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_1_0_7_2026_06_14"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L77",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_1_0_8_2026_06_14"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_2_0_0_2026_06_18"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_2_0_25_2026_06_20"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_2_0_79_2026_07_04"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_2_0_81_2026_07_04"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_2_0_82_2026_07_04"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_2_0_83_2026_07_04"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_2_0_84_2026_07_04"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_2_0_85_2026_07_04"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_2_0_88_2026_07_04"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_changelog",
-      "target": "docs_changelog_unreleased"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_2_0_88_2026_07_04",
-      "target": "docs_changelog_nbsp_nbsp_nbsp_features"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_nbsp_nbsp_nbsp_features",
-      "target": "docs_changelog_nbsp_nbsp_nbsp_nbsp_view_changes_on_github_https_github_com_zorenkonte_wardove_compare_v2_0_85_v2_0_88"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_2_0_85_2026_07_04",
-      "target": "docs_changelog_nbsp_nbsp_nbsp_nbsp_view_changes_on_github_https_github_com_zorenkonte_wardove_compare_v2_0_84_v2_0_85"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L13",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_2_0_25_2026_06_20",
-      "target": "docs_changelog_changed"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_2_0_25_2026_06_20",
-      "target": "docs_changelog_fixed"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_2_0_0_2026_06_18",
-      "target": "docs_changelog_added"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L57",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_2_0_0_2026_06_18",
-      "target": "docs_changelog_fixed_57"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L65",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_1_0_23_2026_06_19",
-      "target": "docs_changelog_fixed_65"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L103",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_1_0_13_2026_06_15",
-      "target": "docs_changelog_added_103"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L108",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_1_0_10_2026_06_14",
-      "target": "docs_changelog_added_108"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L118",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_1_0_7_2026_06_14",
-      "target": "docs_changelog_added_118"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L118",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_1_0_4_2026_06_13",
-      "target": "docs_changelog_added_118"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "docs/changelog.md",
-      "source_location": "L127",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "docs_changelog_1_0_4_2026_06_13",
-      "target": "docs_changelog_added_127"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "docs/features/calendar.md",
       "source_location": "L1",
       "weight": 1.0,
@@ -25841,16 +25879,6 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": ".github/workflows/docs.yml",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "workflows_docs_deploy_docs_workflow",
-      "target": "docs_index_docs_home"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
       "source_file": "app/src/main/java/com/app/wardove/WARDOVE_DESIGN_SPEC.md",
       "source_location": null,
       "weight": 1.0,
@@ -26028,26 +26056,6 @@
       "target": "wardove_laundry_history_screen"
     },
     {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/changelog.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_changelog_wardove_changelog",
-      "target": "docs_changelog_auto_update_system"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "docs/changelog.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "docs_changelog_wardove_changelog",
-      "target": "docs_changelog_biometric_app_lock_feature"
-    },
-    {
       "relation": "conceptually_related_to",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -26108,5 +26116,5 @@
       "source_file": "CLAUDE.md"
     }
   ],
-  "built_at_commit": "835582134865074d2fe40cd4425afcb78874ba62"
+  "built_at_commit": "047e03ff650fdbba5e525d0e84397ceec24e1731"
 }
