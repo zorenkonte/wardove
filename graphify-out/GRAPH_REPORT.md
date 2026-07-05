@@ -5,12 +5,12 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1070 nodes · 1443 edges · 109 communities (76 shown, 33 thin omitted)
+- 1075 nodes · 1447 edges · 109 communities (76 shown, 33 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 80 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `047e03ff`
+- Built from commit: `25b55a38`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -130,16 +130,16 @@
 10. `ClothingRepository` - 14 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `WardoveNavHost()` --calls--> `UpdateScreen()`  [INFERRED]
-  app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt → app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt
-- `UpdateScreen()` --calls--> `latestStableRelease()`  [INFERRED]
-  app/src/main/java/com/app/wardove/ui/update/UpdateScreen.kt → app/src/main/java/com/app/wardove/ui/update/UpdateViewModel.kt
-- `AppLockSettingsScreen()` --calls--> `BiometricPrompt`  [INFERRED]
-  app/src/main/java/com/app/wardove/ui/settings/AppLockSettingsScreen.kt → app/src/main/java/com/app/wardove/MainActivity.kt
 - `WardoveNavHost()` --calls--> `AddItemScreen()`  [INFERRED]
   app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt → app/src/main/java/com/app/wardove/ui/additem/AddItemScreen.kt
 - `ColorGrid()` --calls--> `parseHexColor()`  [INFERRED]
   app/src/main/java/com/app/wardove/ui/additem/AddItemScreen.kt → app/src/main/java/com/app/wardove/ui/util/ClothingOptions.kt
+- `ColorGrid()` --calls--> `softBadgeColors()`  [INFERRED]
+  app/src/main/java/com/app/wardove/ui/additem/AddItemScreen.kt → app/src/main/java/com/app/wardove/ui/util/ClothingOptions.kt
+- `WardoveNavHost()` --calls--> `CalendarScreen()`  [INFERRED]
+  app/src/main/java/com/app/wardove/ui/navigation/WardoveNavHost.kt → app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt
+- `DayCell()` --calls--> `Dot()`  [INFERRED]
+  app/src/main/java/com/app/wardove/ui/calendar/CalendarScreen.kt → app/src/main/java/com/app/wardove/ui/components/Dot.kt
 
 ## Import Cycles
 - None detected.
@@ -160,16 +160,16 @@ Cohesion: 0.39
 Nodes (3): String, Uri, DiagnosticsRepository
 
 ### Community 3 - "App Update Screen"
-Cohesion: 0.27
-Nodes (14): Boolean, GithubRelease, InstallState, Long, String, CurrentVersionCard(), firstNotesLine(), formatBytes() (+6 more)
+Cohesion: 0.09
+Nodes (26): Boolean, GithubRelease, Long, String, Boolean, Int, List, String (+18 more)
 
 ### Community 4 - "Diagnostics & Update Delivery"
-Cohesion: 0.05
-Nodes (32): File, String, Uri, Boolean, Double, GithubAsset, Int, Intent (+24 more)
+Cohesion: 0.09
+Nodes (20): File, String, Uri, Double, GithubAsset, Intent, Long, Float (+12 more)
 
 ### Community 5 - "App Entry & Theme"
-Cohesion: 0.08
-Nodes (17): Bundle, Intent, Sensor, SettingsRepository, String, Bundle, SettingsRepository, Boolean (+9 more)
+Cohesion: 0.07
+Nodes (23): Bundle, Intent, Sensor, SettingsRepository, String, Bundle, SettingsRepository, Boolean (+15 more)
 
 ### Community 6 - "Add Item ViewModel"
 Cohesion: 0.14
@@ -420,28 +420,28 @@ Cohesion: 0.43
 Nodes (7): Wardove Design System, DM Sans Font, DM Serif Display Font, Status Colors (Clean/Worn/InLaundry teal/amber/purple), WardoveLightColors (Material 3 ColorScheme), WardoveTheme (Compose Material 3 Theme wrapper), WardoveTypography (Material 3 Typography)
 
 ### Community 105 - "Community 105"
-Cohesion: 0.43
-Nodes (6): Boolean, StateFlow, String, AppLockSettingsScreen(), AppLockSettingsViewModel, AppLockSwitchRow()
+Cohesion: 0.40
+Nodes (4): Long, Modifier, Shape, clothingSharedImage()
 
 ## Knowledge Gaps
-- **369 isolated node(s):** `UpdateViewModel`, `Boolean`, `InstallState`, `[Unreleased]`, `&nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/zorenkonte/wardove/compare/v2.0.90...v2.0.92)` (+364 more)
+- **372 isolated node(s):** `SettingsRepository`, `LockViewModel`, `SensorManager`, `Sensor`, `Bundle` (+367 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **33 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `WardoveNavHost()` connect `Wardrobe Screen UI` to `Community 64`, `Settings UI & Navigation`, `Community 96`, `Community 99`, `Community 97`, `Community 98`, `Community 70`, `Stats & Analytics UI`, `App Update Screen`, `Community 105`, `Laundry Screen UI`, `App Entry & Theme`, `Item Detail Screen`, `Community 92`, `Community 93`, `Community 94`?**
-  _High betweenness centrality (0.138) - this node is a cross-community bridge._
-- **Why does `AppLockSettingsScreen()` connect `Community 105` to `Community 99`, `App Entry & Theme`, `Wardrobe Screen UI`?**
-  _High betweenness centrality (0.080) - this node is a cross-community bridge._
-- **Why does `AppLockSettingsViewModel` connect `Community 105` to `Image Storage`?**
+- **Why does `WardoveNavHost()` connect `Wardrobe Screen UI` to `Community 64`, `Settings UI & Navigation`, `Community 96`, `Community 99`, `Community 97`, `App Entry & Theme`, `Community 70`, `Community 98`, `Stats & Analytics UI`, `App Update Screen`, `Laundry Screen UI`, `Item Detail Screen`, `Community 92`, `Community 93`, `Community 94`?**
+  _High betweenness centrality (0.127) - this node is a cross-community bridge._
+- **Why does `AppLockSettingsScreen()` connect `App Entry & Theme` to `Community 99`, `Wardrobe Screen UI`?**
   _High betweenness centrality (0.079) - this node is a cross-community bridge._
+- **Why does `AppLockSettingsViewModel` connect `App Entry & Theme` to `Image Storage`?**
+  _High betweenness centrality (0.077) - this node is a cross-community bridge._
 - **Are the 19 inferred relationships involving `WardoveNavHost()` (e.g. with `AddItemScreen()` and `CalendarScreen()`) actually correct?**
   _`WardoveNavHost()` has 19 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `UpdateViewModel`, `Boolean`, `InstallState` to the rest of the system?**
-  _369 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `SettingsRepository`, `LockViewModel`, `SensorManager` to the rest of the system?**
+  _372 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Settings UI & Navigation` be split into smaller, more focused modules?**
   _Cohesion score 0.07505285412262157 - nodes in this community are weakly interconnected._
-- **Should `Diagnostics & Update Delivery` be split into smaller, more focused modules?**
-  _Cohesion score 0.05389610389610389 - nodes in this community are weakly interconnected._
+- **Should `App Update Screen` be split into smaller, more focused modules?**
+  _Cohesion score 0.08558558558558559 - nodes in this community are weakly interconnected._
