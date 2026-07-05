@@ -4,6 +4,14 @@ All notable changes are documented here. Format follows [Keep a Changelog](https
 
 ## [Unreleased]
 
+## [2.0.94] — 2026-07-05
+
+### &nbsp;&nbsp;&nbsp;🚀 Features
+
+- Shared element transition for wardrobe item photos &nbsp;-&nbsp; by @zorenkonte [<samp>(86248)</samp>](https://github.com/zorenkonte/wardove/commit/86248df)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/zorenkonte/wardove/compare/v2.0.92...v2.0.94)
+
 ## [2.0.92] — 2026-07-04
 
 *No significant changes*
