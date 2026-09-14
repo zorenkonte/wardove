@@ -43,9 +43,13 @@ fun Modifier.clothingSharedImage(
         this@clothingSharedImage.sharedElement(
             rememberSharedContentState(key = "clothing-image-$itemId"),
             animatedVisibilityScope = visibilityScope,
+            // No overshoot: a bouncy spring can drive the animated bounds *below* the
+            // small grid-cell target (or below zero when the cell isn't measured yet),
+            // and the overlay then crashes on negative layout constraints. The
+            // medium-low stiffness keeps the soft, physical settle without the bounce.
             boundsTransform = { _, _ ->
                 spring(
-                    dampingRatio = Spring.DampingRatioLowBouncy,
+                    dampingRatio = Spring.DampingRatioNoBouncy,
                     stiffness = Spring.StiffnessMediumLow
                 )
             },

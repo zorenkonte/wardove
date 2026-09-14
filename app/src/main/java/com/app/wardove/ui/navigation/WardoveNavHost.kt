@@ -12,6 +12,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.lifecycle.Lifecycle
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
@@ -43,6 +44,15 @@ import kotlinx.coroutines.launch
 
 private const val SNACKBAR_KEY = "snackbar_message"
 
+/** Destinations reachable from the drawer; they share drawer gestures and nav options. */
+private val TOP_LEVEL_ROUTES = setOf(
+    WardoveDestinations.WARDROBE,
+    WardoveDestinations.LAUNDRY,
+    WardoveDestinations.CALENDAR,
+    WardoveDestinations.STATS,
+    WardoveDestinations.SETTINGS
+)
+
 @OptIn(ExperimentalSharedTransitionApi::class)
 @Composable
 fun WardoveNavHost(
@@ -57,6 +67,19 @@ fun WardoveNavHost(
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
 
+    // Pop only when the current entry is fully RESUMED and something is underneath it.
+    // A second tap on a back arrow during the exit transition used to pop the screen
+    // *below* as well (emptying the back stack), which shows up as a crash/blank screen.
+    val navigateBack: () -> Unit = {
+        val entry = navController.currentBackStackEntry
+        if (entry != null &&
+            entry.lifecycle.currentState == Lifecycle.State.RESUMED &&
+            navController.previousBackStackEntry != null
+        ) {
+            navController.popBackStack()
+        }
+    }
+
     // When the drawer is open, the back button should close it instead of
     // falling through to the NavHost (which would pop the back stack).
     BackHandler(enabled = drawerState.isOpen) {
@@ -69,13 +92,7 @@ fun WardoveNavHost(
     // so back returns to Wardrobe and tab state is preserved.
     LaunchedEffect(deepLinkRoute) {
         val route = deepLinkRoute ?: return@LaunchedEffect
-        val isTopLevel = route in setOf(
-            WardoveDestinations.WARDROBE,
-            WardoveDestinations.LAUNDRY,
-            WardoveDestinations.CALENDAR,
-            WardoveDestinations.STATS,
-            WardoveDestinations.SETTINGS
-        )
+        val isTopLevel = route in TOP_LEVEL_ROUTES
         navController.navigate(route) {
             if (isTopLevel) {
                 popUpTo(navController.graph.findStartDestination().id) { saveState = true }
@@ -88,7 +105,9 @@ fun WardoveNavHost(
 
     ModalNavigationDrawer(
         drawerState = drawerState,
-        gesturesEnabled = drawerState.isOpen,
+        // Edge swipe opens the drawer on top-level screens; detail screens keep the
+        // gesture off so it can't fight predictive back / the photo swipe-to-dismiss.
+        gesturesEnabled = drawerState.isOpen || currentRoute in TOP_LEVEL_ROUTES,
         drawerContent = {
             WardoveDrawerContent(
                 currentRoute = currentRoute,
@@ -160,9 +179,9 @@ fun WardoveNavHost(
                         navController.previousBackStackEntry
                             ?.savedStateHandle
                             ?.set(SNACKBAR_KEY, itemSavedMsg)
-                        navController.popBackStack()
+                        navigateBack()
                     },
-                    onCancel = { navController.popBackStack() }
+                    onCancel = { navigateBack() }
                 )
             }
 
@@ -184,7 +203,7 @@ fun WardoveNavHost(
                 ) {
                     ItemDetailScreen(
                         itemId = itemId,
-                        onBack = { navController.popBackStack() },
+                        onBack = { navigateBack() },
                         onEdit = { id ->
                             navController.navigate(WardoveDestinations.addItem(id))
                         },
@@ -192,7 +211,7 @@ fun WardoveNavHost(
                             navController.previousBackStackEntry
                                 ?.savedStateHandle
                                 ?.set(SNACKBAR_KEY, itemDeletedMsg)
-                            navController.popBackStack()
+                            navigateBack()
                         }
                     )
                 }
@@ -212,7 +231,7 @@ fun WardoveNavHost(
                 popEnterTransition = popEnterSlide,
                 popExitTransition = popExitSlide
             ) {
-                HistoryScreen(onBack = { navController.popBackStack() })
+                HistoryScreen(onBack = { navigateBack() })
             }
 
             composable(WardoveDestinations.CALENDAR) {
@@ -246,7 +265,7 @@ fun WardoveNavHost(
                 popEnterTransition = popEnterSlide,
                 popExitTransition = popExitSlide
             ) {
-                AppLockSettingsScreen(onBack = { navController.popBackStack() })
+                AppLockSettingsScreen(onBack = { navigateBack() })
             }
 
             composable(
@@ -256,7 +275,7 @@ fun WardoveNavHost(
                 popEnterTransition = popEnterSlide,
                 popExitTransition = popExitSlide
             ) {
-                AppearanceSettingsScreen(onBack = { navController.popBackStack() })
+                AppearanceSettingsScreen(onBack = { navigateBack() })
             }
 
             composable(
@@ -267,7 +286,7 @@ fun WardoveNavHost(
                 popExitTransition = popExitSlide
             ) {
                 AboutSettingsScreen(
-                    onBack = { navController.popBackStack() },
+                    onBack = { navigateBack() },
                     onOpenUpdates = { navController.navigate(WardoveDestinations.UPDATE) },
                     onOpenLicenses = { navController.navigate(WardoveDestinations.SETTINGS_LICENSES) }
                 )
@@ -281,7 +300,7 @@ fun WardoveNavHost(
                 popExitTransition = popExitSlide
             ) {
                 LicensesSettingsScreen(
-                    onBack = { navController.popBackStack() },
+                    onBack = { navigateBack() },
                     onLibraryClick = { id ->
                         navController.navigate(WardoveDestinations.licenseDetail(id))
                     }
@@ -303,7 +322,7 @@ fun WardoveNavHost(
                 )
                 LicenseDetailScreen(
                     libraryId = id,
-                    onBack = { navController.popBackStack() }
+                    onBack = { navigateBack() }
                 )
             }
 
@@ -314,7 +333,7 @@ fun WardoveNavHost(
                 popEnterTransition = popEnterSlide,
                 popExitTransition = popExitSlide
             ) {
-                NotificationSettingsScreen(onBack = { navController.popBackStack() })
+                NotificationSettingsScreen(onBack = { navigateBack() })
             }
 
             composable(
@@ -324,7 +343,7 @@ fun WardoveNavHost(
                 popEnterTransition = popEnterSlide,
                 popExitTransition = popExitSlide
             ) {
-                DiagnosticsSettingsScreen(onBack = { navController.popBackStack() })
+                DiagnosticsSettingsScreen(onBack = { navigateBack() })
             }
 
             composable(
@@ -334,7 +353,7 @@ fun WardoveNavHost(
                 popEnterTransition = popEnterSlide,
                 popExitTransition = popExitSlide
             ) {
-                BackupSettingsScreen(onBack = { navController.popBackStack() })
+                BackupSettingsScreen(onBack = { navigateBack() })
             }
 
             composable(
@@ -344,7 +363,7 @@ fun WardoveNavHost(
                 popEnterTransition = popEnterSlide,
                 popExitTransition = popExitSlide
             ) {
-                UpdateScreen(onBack = { navController.popBackStack() })
+                UpdateScreen(onBack = { navigateBack() })
             }
         }
         }
