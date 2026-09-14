@@ -4,6 +4,19 @@ All notable changes are documented here. Format follows [Keep a Changelog](https
 
 ## [Unreleased]
 
+## [2.0.99] — 2026-09-14
+
+### &nbsp;&nbsp;&nbsp;🚀 Features
+
+- Swipe the item photo down to go back &nbsp;-&nbsp; by @claude [<samp>(5ff6c)</samp>](https://github.com/zorenkonte/wardove/commit/5ff6cb7)
+- Animate wardrobe cells on appear and reorder &nbsp;-&nbsp; by @claude [<samp>(6f2c5)</samp>](https://github.com/zorenkonte/wardove/commit/6f2c557)
+
+### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes
+
+- Stop item view crashing on back and guard against double pops &nbsp;-&nbsp; by @claude [<samp>(d5bb0)</samp>](https://github.com/zorenkonte/wardove/commit/d5bb01e)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/zorenkonte/wardove/compare/v2.0.97...v2.0.99)
+
 ## [2.0.97] — 2026-09-14
 
 ### &nbsp;&nbsp;&nbsp;🚀 Features
