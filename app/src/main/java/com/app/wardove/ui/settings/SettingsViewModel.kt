@@ -38,4 +38,9 @@ class SettingsViewModel @Inject constructor(
     fun setShakeToReportEnabled(enabled: Boolean) {
         viewModelScope.launch { repo.setShakeToReportEnabled(enabled) }
     }
+
+    /** Clears the onboarding flag; MainActivity observes it and re-shows the tour. */
+    fun replayOnboarding() {
+        viewModelScope.launch { repo.setOnboardingCompleted(false) }
+    }
 }

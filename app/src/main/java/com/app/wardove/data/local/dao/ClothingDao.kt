@@ -54,6 +54,9 @@ interface ClothingDao {
     @Query("SELECT COUNT(*) FROM clothing_items WHERE status = :status")
     suspend fun countByStatus(status: String): Int
 
+    @Query("SELECT COUNT(*) FROM clothing_items")
+    suspend fun countAll(): Int
+
     /** One-shot read of every item, used for backup export. */
     @Query("SELECT * FROM clothing_items ORDER BY id ASC")
     suspend fun getAll(): List<ClothingItem>
