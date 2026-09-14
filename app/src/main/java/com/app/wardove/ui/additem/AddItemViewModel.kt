@@ -91,7 +91,13 @@ class AddItemViewModel @Inject constructor(
         val pending = _state.value.pendingCameraPath
         if (success && pending != null) {
             replaceImagePath(pending)
-            _state.update { it.copy(pendingCameraPath = null) }
+            _state.update { it.copy(pendingCameraPath = null, isImageLoading = true) }
+            // Downscale the full-resolution camera capture in the background; Coil
+            // re-reads the file once the state flips back.
+            viewModelScope.launch {
+                imageStorage.optimize(pending)
+                _state.update { it.copy(isImageLoading = false) }
+            }
         } else if (pending != null) {
             imageStorage.delete(pending)
             _state.update { it.copy(pendingCameraPath = null) }
@@ -106,9 +112,14 @@ class AddItemViewModel @Inject constructor(
     }
 
     fun onGalleryUri(uri: Uri) {
+        _state.update { it.copy(isImageLoading = true) }
         viewModelScope.launch {
-            val newPath = imageStorage.saveImageFromUri(uri)
-            replaceImagePath(newPath)
+            try {
+                val newPath = imageStorage.saveImageFromUri(uri)
+                replaceImagePath(newPath)
+            } finally {
+                _state.update { it.copy(isImageLoading = false) }
+            }
         }
     }
 
