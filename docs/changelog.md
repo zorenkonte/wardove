@@ -4,6 +4,22 @@ All notable changes are documented here. Format follows [Keep a Changelog](https
 
 ## [Unreleased]
 
+## [2.0.97] — 2026-09-14
+
+### &nbsp;&nbsp;&nbsp;🚀 Features
+
+- Adopt Material 3 Expressive theme, motion and components &nbsp;-&nbsp; by @claude [<samp>(b3e33)</samp>](https://github.com/zorenkonte/wardove/commit/b3e333d)
+- Add first-run onboarding tour with Lottie animations &nbsp;-&nbsp; by @claude [<samp>(9f7c0)</samp>](https://github.com/zorenkonte/wardove/commit/9f7c00a)
+- Downscale and EXIF-rotate item photos on save &nbsp;-&nbsp; by @claude [<samp>(bd6fb)</samp>](https://github.com/zorenkonte/wardove/commit/bd6fbc5)
+- Add Play Store flavor that disables the APK self-updater &nbsp;-&nbsp; by @claude [<samp>(93e2e)</samp>](https://github.com/zorenkonte/wardove/commit/93e2ecd)
+
+### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes
+
+- Block touches and back presses from bypassing the lock screen &nbsp;-&nbsp; by @claude [<samp>(8e22e)</samp>](https://github.com/zorenkonte/wardove/commit/8e22e95)
+- Make wear and laundry writes transactional with DST-safe day bounds &nbsp;-&nbsp; by @claude [<samp>(e9b0a)</samp>](https://github.com/zorenkonte/wardove/commit/e9b0aae)
+
+##### &nbsp;&nbsp;&nbsp;&nbsp;[View changes on GitHub](https://github.com/zorenkonte/wardove/compare/v2.0.94...v2.0.97)
+
 ## [2.0.94] — 2026-07-05
 
 ### &nbsp;&nbsp;&nbsp;🚀 Features
