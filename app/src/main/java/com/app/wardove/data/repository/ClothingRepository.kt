@@ -1,25 +1,28 @@
 package com.app.wardove.data.repository
 
 import android.content.Context
+import androidx.glance.appwidget.updateAll
+import androidx.room.withTransaction
+import com.app.wardove.data.local.WardoveDatabase
 import com.app.wardove.data.local.dao.ClothingDao
 import com.app.wardove.data.local.dao.WearLogDao
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.data.local.entity.ClothingStatus
 import com.app.wardove.data.local.entity.WearLog
+import com.app.wardove.util.dayBoundsMillis
 import com.app.wardove.widget.StatsWidget
 import dagger.hilt.android.qualifiers.ApplicationContext
-import androidx.glance.appwidget.updateAll
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
-import java.util.Calendar
 import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
 class ClothingRepository @Inject constructor(
+    private val database: WardoveDatabase,
     private val clothingDao: ClothingDao,
     private val wearLogDao: WearLogDao,
     @ApplicationContext private val context: Context,
@@ -35,6 +38,8 @@ class ClothingRepository @Inject constructor(
     fun observeById(id: Long): Flow<ClothingItem?> = clothingDao.observeById(id)
 
     suspend fun getById(id: Long): ClothingItem? = clothingDao.getById(id)
+
+    suspend fun countAll(): Int = clothingDao.countAll()
 
     suspend fun insert(item: ClothingItem): Long {
         val id = clothingDao.insert(item)
@@ -52,37 +57,33 @@ class ClothingRepository @Inject constructor(
         notifyWidget()
     }
 
+    /**
+     * Bumps the wear counter and appends a wear log atomically, so a crash between
+     * the two writes can never leave the count and the history out of sync.
+     */
     suspend fun markWornToday(id: Long, now: Long = System.currentTimeMillis()) {
-        clothingDao.markWorn(id, now, ClothingStatus.WORN)
-        wearLogDao.insert(WearLog(clothingItemId = id, wornDate = now))
+        database.withTransaction {
+            clothingDao.markWorn(id, now, ClothingStatus.WORN)
+            wearLogDao.insert(WearLog(clothingItemId = id, wornDate = now))
+        }
         notifyWidget()
     }
 
     suspend fun unwearToday(id: Long, now: Long = System.currentTimeMillis()) {
-        val (start, end) = dayBounds(now)
-        val deleted = wearLogDao.deleteForItemInRange(id, start, end)
-        if (deleted <= 0) return
-        val latest = wearLogDao.latestForItem(id)
-        clothingDao.markUnworn(
-            id = id,
-            date = latest?.wornDate,
-            decrement = deleted,
-            status = if (latest != null) ClothingStatus.WORN else ClothingStatus.CLEAN
-        )
-        notifyWidget()
-    }
-
-    private fun dayBounds(time: Long): Pair<Long, Long> {
-        val cal = Calendar.getInstance().apply {
-            timeInMillis = time
-            set(Calendar.HOUR_OF_DAY, 0)
-            set(Calendar.MINUTE, 0)
-            set(Calendar.SECOND, 0)
-            set(Calendar.MILLISECOND, 0)
+        val (start, end) = dayBoundsMillis(now)
+        val changed = database.withTransaction {
+            val deleted = wearLogDao.deleteForItemInRange(id, start, end)
+            if (deleted <= 0) return@withTransaction false
+            val latest = wearLogDao.latestForItem(id)
+            clothingDao.markUnworn(
+                id = id,
+                date = latest?.wornDate,
+                decrement = deleted,
+                status = if (latest != null) ClothingStatus.WORN else ClothingStatus.CLEAN
+            )
+            true
         }
-        val start = cal.timeInMillis
-        val end = start + 24L * 60L * 60L * 1000L
-        return start to end
+        if (changed) notifyWidget()
     }
 
     suspend fun countByStatus(status: String): Int = clothingDao.countByStatus(status)
