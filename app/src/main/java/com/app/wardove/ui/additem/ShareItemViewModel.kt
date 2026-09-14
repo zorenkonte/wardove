@@ -31,7 +31,7 @@ class ShareItemViewModel @Inject constructor(
         imageLoaded = true
         _state.update { it.copy(isImageLoading = true) }
         viewModelScope.launch {
-            val path = imageStorage.saveImageFromUri(uri)
+            val path = runCatching { imageStorage.saveImageFromUri(uri) }.getOrNull()
             _state.update { it.copy(imagePath = path, isImageLoading = false) }
         }
     }

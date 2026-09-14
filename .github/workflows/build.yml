@@ -45,8 +45,10 @@ jobs:
         if: github.event_name == 'push'
         run: echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > "$RUNNER_TEMP/release.jks"
 
-      - name: Build release APK
-        run: ./gradlew assembleRelease -PbuildNumber=${{ github.run_number }}
+      - name: Build release APK (GitHub flavor)
+        # The `github` flavor keeps the in-app APK self-updater. `assemblePlayRelease`
+        # produces the Play Store variant (no REQUEST_INSTALL_PACKAGES) — see app/build.gradle.kts.
+        run: ./gradlew assembleGithubRelease -PbuildNumber=${{ github.run_number }}
         env:
           KEYSTORE_PATH: ${{ github.event_name == 'push' && format('{0}/release.jks', runner.temp) || '' }}
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
@@ -56,7 +58,7 @@ jobs:
       - name: Rename APK
         run: |
           mkdir -p artifacts
-          cp app/build/outputs/apk/release/app-release.apk \
+          cp app/build/outputs/apk/github/release/app-github-release.apk \
             "artifacts/wardove-v${{ steps.ver.outputs.version }}.apk"
 
       - name: Upload APK artifact

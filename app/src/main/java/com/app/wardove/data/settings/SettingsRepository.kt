@@ -27,6 +27,7 @@ class SettingsRepository @Inject constructor(
         val SHAKE_TO_REPORT = booleanPreferencesKey("shake_to_report")
         val WARDROBE_VIEW_MODE = stringPreferencesKey("wardrobe_view_mode")
         val GROUP_WARDROBE_BY_CATEGORY = booleanPreferencesKey("group_wardrobe_by_category")
+        val ONBOARDING_COMPLETED = booleanPreferencesKey("onboarding_completed")
     }
 
     val settings: Flow<AppSettings> = dataStore.data
@@ -46,7 +47,8 @@ class SettingsRepository @Inject constructor(
                 wardrobeViewMode = prefs[Keys.WARDROBE_VIEW_MODE]
                     ?.let { runCatching { WardrobeViewMode.valueOf(it) }.getOrNull() }
                     ?: WardrobeViewMode.CARD,
-                groupByCategory = prefs[Keys.GROUP_WARDROBE_BY_CATEGORY] ?: false
+                groupByCategory = prefs[Keys.GROUP_WARDROBE_BY_CATEGORY] ?: false,
+                onboardingCompleted = prefs[Keys.ONBOARDING_COMPLETED] ?: false
             )
         }
 
@@ -80,6 +82,10 @@ class SettingsRepository @Inject constructor(
 
     suspend fun setGroupByCategory(enabled: Boolean) {
         dataStore.edit { it[Keys.GROUP_WARDROBE_BY_CATEGORY] = enabled }
+    }
+
+    suspend fun setOnboardingCompleted(completed: Boolean) {
+        dataStore.edit { it[Keys.ONBOARDING_COMPLETED] = completed }
     }
 
     val lastNotifiedUpdateTag: Flow<String?> = dataStore.data

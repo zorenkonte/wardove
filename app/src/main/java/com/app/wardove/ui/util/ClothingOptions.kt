@@ -1,6 +1,8 @@
 package com.app.wardove.ui.util
 
 import androidx.annotation.StringRes
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.lerp
 import androidx.compose.ui.graphics.luminance
@@ -26,6 +28,11 @@ object ClothingOptions {
         "Accessory" -> R.string.category_accessory
         else -> null
     }
+
+    /** Localized display name for a stored category key; falls back to the raw key. */
+    @Composable
+    fun categoryLabel(category: String): String =
+        categoryResId(category)?.let { stringResource(it) } ?: category
 
     data class NamedColor(val name: String, val hex: String, @StringRes val nameResId: Int)
 

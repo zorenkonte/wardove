@@ -19,7 +19,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
-import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -36,17 +37,18 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.app.wardove.R
+import com.app.wardove.ui.components.ButtonLoadingIndicator
 import com.app.wardove.ui.components.ClothingImage
+import com.app.wardove.ui.components.WardoveLoadingIndicator
 import com.composables.icons.lucide.Lucide
 import com.composables.icons.lucide.X
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 fun ShareItemSheet(
     sharedImageUri: Uri,
@@ -93,7 +95,7 @@ fun ShareItemSheet(
                             .background(MaterialTheme.colorScheme.surfaceVariant),
                         contentAlignment = Alignment.Center
                     ) {
-                        CircularProgressIndicator()
+                        WardoveLoadingIndicator()
                     }
                 } else {
                     ClothingImage(
@@ -180,10 +182,13 @@ fun ShareItemSheet(
             Button(
                 onClick = { viewModel.save(onSaved) },
                 enabled = state.canSave,
-                modifier = Modifier.fillMaxWidth()
+                shapes = ButtonDefaults.shapes(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(52.dp)
             ) {
                 if (state.isSaving) {
-                    CircularProgressIndicator(modifier = Modifier.size(20.dp))
+                    ButtonLoadingIndicator()
                 } else {
                     Text(stringResource(R.string.add_item_action_save))
                 }

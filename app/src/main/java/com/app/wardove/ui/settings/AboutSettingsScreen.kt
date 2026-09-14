@@ -21,6 +21,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -40,13 +41,15 @@ import com.composables.icons.lucide.Lucide
 import com.composables.icons.lucide.RefreshCw
 import com.composables.icons.lucide.ScrollText
 import com.composables.icons.lucide.Shield
+import com.composables.icons.lucide.Sparkles
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AboutSettingsScreen(
     onBack: () -> Unit,
     onOpenUpdates: () -> Unit,
-    onOpenLicenses: () -> Unit
+    onOpenLicenses: () -> Unit,
+    viewModel: SettingsViewModel = hiltViewModel()
 ) {
     val context = LocalContext.current
 
@@ -136,6 +139,20 @@ fun AboutSettingsScreen(
                     label = stringResource(R.string.about_licenses_label),
                     subtitle = stringResource(R.string.about_licenses_subtitle),
                     onClick = onOpenLicenses
+                )
+                HorizontalDivider(
+                    color = MaterialTheme.colorScheme.outline,
+                    thickness = 0.5.dp,
+                    modifier = Modifier.padding(horizontal = 16.dp)
+                )
+                ChevronRow(
+                    icon = Lucide.Sparkles,
+                    label = stringResource(R.string.about_replay_intro_label),
+                    subtitle = stringResource(R.string.about_replay_intro_subtitle),
+                    onClick = {
+                        viewModel.replayOnboarding()
+                        onBack()
+                    }
                 )
             }
         }

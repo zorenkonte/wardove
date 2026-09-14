@@ -1,7 +1,7 @@
 package com.app.wardove
 
-import android.Manifest
 import android.content.Intent
+import android.graphics.Color as AndroidColor
 import android.hardware.Sensor
 import android.hardware.SensorManager
 import android.os.Build
@@ -9,14 +9,17 @@ import android.os.Bundle
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.os.VibratorManager
+import androidx.activity.SystemBarStyle
 import androidx.activity.compose.setContent
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.fragment.app.FragmentActivity
 import androidx.activity.enableEdgeToEdge
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricPrompt
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.LaunchedEffect
@@ -25,21 +28,27 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.core.content.ContextCompat
+import androidx.core.content.pm.ShortcutManagerCompat
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import com.app.wardove.data.repository.ClothingRepository
 import com.app.wardove.data.settings.SettingsRepository
 import com.app.wardove.ui.lock.LockScreen
 import com.app.wardove.ui.lock.LockViewModel
-import com.app.wardove.ui.navigation.WardoveNavHost
-import com.app.wardove.ui.theme.WardoveTheme
 import com.app.wardove.ui.navigation.ShortcutActions
+import com.app.wardove.ui.navigation.WardoveNavHost
+import com.app.wardove.ui.onboarding.OnboardingScreen
+import com.app.wardove.ui.theme.WardoveTheme
+import com.app.wardove.ui.theme.isDarkTheme
 import com.app.wardove.ui.util.ISSUES_URL
 import com.app.wardove.ui.util.openCustomTab
 import com.app.wardove.util.ShakeDetector
 import com.app.wardove.work.UpdateCheckWorker
-import androidx.core.content.pm.ShortcutManagerCompat
-import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
@@ -51,6 +60,9 @@ class MainActivity : FragmentActivity() {
 
     @Inject
     lateinit var settingsRepository: SettingsRepository
+
+    @Inject
+    lateinit var clothingRepository: ClothingRepository
 
     private val lockViewModel: LockViewModel by viewModels()
 
@@ -67,11 +79,6 @@ class MainActivity : FragmentActivity() {
     private var accelerometer: Sensor? = null
     @Volatile private var shakeEnabled = false
     private val shakeDetector = ShakeDetector(onShake = ::onShakeDetected)
-
-    private val requestNotificationPermission =
-        registerForActivityResult(ActivityResultContracts.RequestPermission()) {
-            // Permission result — no-op; worker silently skips notify() if denied.
-        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
@@ -92,14 +99,6 @@ class MainActivity : FragmentActivity() {
             }
         }
 
-        // Request POST_NOTIFICATIONS on Android 13+ the first time the app launches.
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
-            ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS)
-            != android.content.pm.PackageManager.PERMISSION_GRANTED
-        ) {
-            requestNotificationPermission.launch(Manifest.permission.POST_NOTIFICATIONS)
-        }
-
         biometricPrompt = BiometricPrompt(
             this,
             ContextCompat.getMainExecutor(this),
@@ -118,7 +117,19 @@ class MainActivity : FragmentActivity() {
             }
         )
 
-        val initialSettings = runBlocking { settingsRepository.settings.first() }
+        // Read settings synchronously so the first frame already has the right theme and
+        // knows whether to show the welcome tour (avoids a flash of the wrong screen).
+        // Users upgrading from a version without onboarding already have a wardrobe —
+        // don't make them sit through the tour.
+        val initialSettings = runBlocking {
+            val s = settingsRepository.settings.first()
+            if (!s.onboardingCompleted && clothingRepository.countAll() > 0) {
+                settingsRepository.setOnboardingCompleted(true)
+                s.copy(onboardingCompleted = true)
+            } else {
+                s
+            }
+        }
 
         setContent {
             val settings by settingsRepository.settings.collectAsState(initial = initialSettings)
@@ -132,15 +143,47 @@ class MainActivity : FragmentActivity() {
                 }
             }
 
+            // Keep status/navigation bar icon contrast in sync with the *app's* theme
+            // choice, not just the system setting (a forced Dark theme on a light
+            // system would otherwise get dark icons on a dark background).
+            val dark = isDarkTheme(settings.themeMode)
+            LaunchedEffect(dark) {
+                enableEdgeToEdge(
+                    statusBarStyle = SystemBarStyle.auto(
+                        AndroidColor.TRANSPARENT, AndroidColor.TRANSPARENT
+                    ) { dark },
+                    navigationBarStyle = SystemBarStyle.auto(
+                        LIGHT_NAV_SCRIM, DARK_NAV_SCRIM
+                    ) { dark }
+                )
+            }
+
             WardoveTheme(
                 themeMode = settings.themeMode,
                 dynamicColor = settings.dynamicColor
             ) {
                 Box(modifier = Modifier.fillMaxSize()) {
-                    WardoveNavHost(
-                        deepLinkRoute = notificationNavRoute,
-                        onDeepLinkConsumed = { notificationNavRoute = null }
-                    )
+                    AnimatedContent(
+                        targetState = settings.onboardingCompleted,
+                        transitionSpec = {
+                            (fadeIn() + scaleIn(initialScale = 0.96f)) togetherWith fadeOut()
+                        },
+                        label = "onboardingGate",
+                        // Hide the content tree from accessibility services while locked
+                        // so TalkBack can't read the wardrobe through the lock overlay.
+                        modifier = if (isLocked) Modifier.clearAndSetSemantics { } else Modifier
+                    ) { onboarded ->
+                        if (onboarded) {
+                            WardoveNavHost(
+                                deepLinkRoute = notificationNavRoute,
+                                onDeepLinkConsumed = { notificationNavRoute = null }
+                            )
+                        } else {
+                            OnboardingScreen(
+                                updateNotificationsEnabled = settings.updateNotificationsEnabled
+                            )
+                        }
+                    }
                     if (isLocked) {
                         LockScreen(onBiometricRequest = lockViewModel::requestBiometric)
                     }
@@ -222,13 +265,26 @@ class MainActivity : FragmentActivity() {
         }
     }
 
+    /**
+     * Unlock prompt. Accepts weak biometrics *or* the device PIN/pattern/password so a
+     * user who removed their fingerprints (or whose sensor is broken) is never locked
+     * out of their own wardrobe. DEVICE_CREDENTIAL forbids a negative button.
+     */
     private fun showBiometricPrompt() {
         val promptInfo = BiometricPrompt.PromptInfo.Builder()
-            .setTitle("Unlock Wardove")
-            .setSubtitle("Use your biometric credential")
-            .setNegativeButtonText("Cancel")
-            .setAllowedAuthenticators(BiometricManager.Authenticators.BIOMETRIC_WEAK)
+            .setTitle(getString(R.string.lock_prompt_title))
+            .setSubtitle(getString(R.string.lock_prompt_subtitle))
+            .setAllowedAuthenticators(
+                BiometricManager.Authenticators.BIOMETRIC_WEAK or
+                    BiometricManager.Authenticators.DEVICE_CREDENTIAL
+            )
             .build()
         biometricPrompt.authenticate(promptInfo)
+    }
+
+    private companion object {
+        // Same scrims androidx.activity uses for its default three-button nav bar.
+        val LIGHT_NAV_SCRIM = AndroidColor.argb(0xe6, 0xFF, 0xFF, 0xFF)
+        val DARK_NAV_SCRIM = AndroidColor.argb(0x80, 0x1b, 0x1b, 0x1b)
     }
 }

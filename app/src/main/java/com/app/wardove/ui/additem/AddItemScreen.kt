@@ -33,7 +33,8 @@ import com.composables.icons.lucide.Images
 import com.composables.icons.lucide.Lucide
 import com.composables.icons.lucide.X
 import androidx.compose.material3.Button
-import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -63,12 +64,14 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.app.wardove.R
+import com.app.wardove.ui.components.ButtonLoadingIndicator
 import com.app.wardove.ui.components.ClothingImage
+import com.app.wardove.ui.components.WardoveLoadingIndicator
 import com.app.wardove.ui.util.ClothingOptions
 import com.app.wardove.ui.util.parseHexColor
 import com.app.wardove.ui.util.softBadgeColors
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 fun AddItemScreen(
     onSaved: () -> Unit,
@@ -126,6 +129,7 @@ fun AddItemScreen(
             ImagePicker(
                 imagePath = state.imagePath,
                 category = state.category,
+                isLoading = state.isImageLoading,
                 onCamera = {
                     val uri = viewModel.prepareCameraCapture()
                     cameraLauncher.launch(uri)
@@ -194,10 +198,13 @@ fun AddItemScreen(
             Button(
                 onClick = { viewModel.save(onSaved) },
                 enabled = state.canSave,
-                modifier = Modifier.fillMaxWidth()
+                shapes = ButtonDefaults.shapes(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(52.dp)
             ) {
                 if (state.isSaving) {
-                    CircularProgressIndicator(modifier = Modifier.size(20.dp))
+                    ButtonLoadingIndicator()
                 } else {
                     Text(
                         if (state.isEditing) stringResource(R.string.add_item_action_update)
@@ -231,6 +238,7 @@ fun AddItemScreen(
 private fun ImagePicker(
     imagePath: String?,
     category: String,
+    isLoading: Boolean,
     onCamera: () -> Unit,
     onGallery: () -> Unit,
     onRemove: () -> Unit
@@ -239,7 +247,7 @@ private fun ImagePicker(
         modifier = Modifier
             .fillMaxWidth()
             .aspectRatio(1f)
-            .clip(RoundedCornerShape(12.dp)),
+            .clip(MaterialTheme.shapes.large),
         contentAlignment = Alignment.Center
     ) {
         ClothingImage(
@@ -248,7 +256,17 @@ private fun ImagePicker(
             category = category,
             modifier = Modifier.fillMaxSize()
         )
-        if (imagePath != null) {
+        if (isLoading) {
+            Box(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .background(MaterialTheme.colorScheme.scrim.copy(alpha = 0.25f)),
+                contentAlignment = Alignment.Center
+            ) {
+                WardoveLoadingIndicator(color = Color.White)
+            }
+        }
+        if (imagePath != null && !isLoading) {
             IconButton(
                 onClick = onRemove,
                 modifier = Modifier.align(Alignment.TopEnd)

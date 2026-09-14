@@ -7,7 +7,8 @@ data class AppSettings(
     val updateNotificationsEnabled: Boolean = true,
     val shakeToReportEnabled: Boolean = false,
     val wardrobeViewMode: WardrobeViewMode = WardrobeViewMode.CARD,
-    val groupByCategory: Boolean = false
+    val groupByCategory: Boolean = false,
+    val onboardingCompleted: Boolean = false
 ) {
     companion object {
         const val DEFAULT_LAUNDRY_THRESHOLD = 3

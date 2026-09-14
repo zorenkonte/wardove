@@ -21,7 +21,7 @@ None of this data ever leaves your device. There is no server and no cloud sync.
 | `CAMERA` | Capturing photos to attach to clothing items. Photos are stored locally only. |
 | `READ_MEDIA_IMAGES` / `READ_EXTERNAL_STORAGE` | Selecting existing photos from your gallery to attach to items. |
 | `INTERNET` | Checking GitHub Releases for app updates, and loading these documentation pages. |
-| `REQUEST_INSTALL_PACKAGES` | Installing downloaded app updates directly (sideload APK). |
+| `REQUEST_INSTALL_PACKAGES` | Installing downloaded app updates directly (sideload APK). **Only in the GitHub-distributed build** — the Google Play build does not request this permission and is updated through Play. |
 | `USE_BIOMETRIC` / `USE_FINGERPRINT` | App-lock authentication (optional, enabled by you). |
 
 ## Network activity

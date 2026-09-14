@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark window/splash so there is no white flash before Compose draws
+         when the device (or the in-app theme) is in dark mode. -->
+    <style name="Theme.Wardove" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">#121212</item>
+    </style>
+
+    <style name="Theme.Wardove.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#121212</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_dove_light</item>
+        <item name="postSplashScreenTheme">@style/Theme.Wardove</item>
+    </style>
+</resources>
