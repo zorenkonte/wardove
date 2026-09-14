@@ -64,6 +64,10 @@ import com.app.wardove.ui.components.Dot
 import com.app.wardove.ui.components.LargeTitleHeader
 import com.app.wardove.ui.components.SingleSelectSheet
 import com.app.wardove.ui.components.WardoveLottie
+import com.app.wardove.ui.components.animatedWardrobeCell
+import com.app.wardove.ui.components.animatedWardrobeRow
+import androidx.compose.foundation.lazy.grid.itemsIndexed
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.ui.text.style.TextAlign
 import com.app.wardove.ui.navigation.clothingSharedImage
 import com.app.wardove.ui.theme.StatusClean
@@ -241,15 +245,27 @@ fun WardrobeScreen(
                         if (groupByCategory) {
                             grouped.forEach { (category, groupItems) ->
                                 item(span = { GridItemSpan(maxLineSpan) }, key = "header_$category") {
-                                    CategorySectionHeader(category = category, count = groupItems.size)
+                                    CategorySectionHeader(
+                                        category = category,
+                                        count = groupItems.size,
+                                        modifier = Modifier.animateItem()
+                                    )
                                 }
-                                items(groupItems, key = { it.id }) { item ->
-                                    ClothingCard(item = item, onClick = { onOpenItem(item.id) })
+                                itemsIndexed(groupItems, key = { _, it -> it.id }) { index, item ->
+                                    ClothingCard(
+                                        item = item,
+                                        onClick = { onOpenItem(item.id) },
+                                        modifier = animatedWardrobeCell(index, item.id)
+                                    )
                                 }
                             }
                         } else {
-                            items(items, key = { it.id }) { item ->
-                                ClothingCard(item = item, onClick = { onOpenItem(item.id) })
+                            itemsIndexed(items, key = { _, it -> it.id }) { index, item ->
+                                ClothingCard(
+                                    item = item,
+                                    onClick = { onOpenItem(item.id) },
+                                    modifier = animatedWardrobeCell(index, item.id)
+                                )
                             }
                         }
                     }
@@ -262,15 +278,27 @@ fun WardrobeScreen(
                         if (groupByCategory) {
                             grouped.forEach { (category, groupItems) ->
                                 item(key = "header_$category") {
-                                    CategorySectionHeader(category = category, count = groupItems.size)
+                                    CategorySectionHeader(
+                                        category = category,
+                                        count = groupItems.size,
+                                        modifier = Modifier.animateItem()
+                                    )
                                 }
-                                items(groupItems, key = { it.id }) { item ->
-                                    ClothingListRow(item = item, onClick = { onOpenItem(item.id) })
+                                itemsIndexed(groupItems, key = { _, it -> it.id }) { index, item ->
+                                    ClothingListRow(
+                                        item = item,
+                                        onClick = { onOpenItem(item.id) },
+                                        modifier = animatedWardrobeRow(index, item.id)
+                                    )
                                 }
                             }
                         } else {
-                            items(items, key = { it.id }) { item ->
-                                ClothingListRow(item = item, onClick = { onOpenItem(item.id) })
+                            itemsIndexed(items, key = { _, it -> it.id }) { index, item ->
+                                ClothingListRow(
+                                    item = item,
+                                    onClick = { onOpenItem(item.id) },
+                                    modifier = animatedWardrobeRow(index, item.id)
+                                )
                             }
                         }
                     }
@@ -285,15 +313,27 @@ fun WardrobeScreen(
                         if (groupByCategory) {
                             grouped.forEach { (category, groupItems) ->
                                 item(span = { GridItemSpan(maxLineSpan) }, key = "header_$category") {
-                                    CategorySectionHeader(category = category, count = groupItems.size)
+                                    CategorySectionHeader(
+                                        category = category,
+                                        count = groupItems.size,
+                                        modifier = Modifier.animateItem()
+                                    )
                                 }
-                                items(groupItems, key = { it.id }) { item ->
-                                    CompactCard(item = item, onClick = { onOpenItem(item.id) })
+                                itemsIndexed(groupItems, key = { _, it -> it.id }) { index, item ->
+                                    CompactCard(
+                                        item = item,
+                                        onClick = { onOpenItem(item.id) },
+                                        modifier = animatedWardrobeCell(index, item.id)
+                                    )
                                 }
                             }
                         } else {
-                            items(items, key = { it.id }) { item ->
-                                CompactCard(item = item, onClick = { onOpenItem(item.id) })
+                            itemsIndexed(items, key = { _, it -> it.id }) { index, item ->
+                                CompactCard(
+                                    item = item,
+                                    onClick = { onOpenItem(item.id) },
+                                    modifier = animatedWardrobeCell(index, item.id)
+                                )
                             }
                         }
                     }
@@ -421,9 +461,9 @@ private fun FilterRow(
 }
 
 @Composable
-private fun CategorySectionHeader(category: String, count: Int) {
+private fun CategorySectionHeader(category: String, count: Int, modifier: Modifier = Modifier) {
     Row(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .padding(top = 12.dp, bottom = 4.dp),
         horizontalArrangement = Arrangement.SpaceBetween,
@@ -445,10 +485,11 @@ private fun CategorySectionHeader(category: String, count: Int) {
 @Composable
 private fun ClothingCard(
     item: ClothingItem,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
 ) {
     Card(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(14.dp),
@@ -495,10 +536,11 @@ private fun ClothingCard(
 @Composable
 private fun ClothingListRow(
     item: ClothingItem,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
 ) {
     Card(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(14.dp),
@@ -543,10 +585,11 @@ private fun ClothingListRow(
 @Composable
 private fun CompactCard(
     item: ClothingItem,
-    onClick: () -> Unit
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier
 ) {
     Card(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(12.dp),
