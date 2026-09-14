@@ -19,7 +19,10 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import com.app.wardove.ui.components.LargeTitleHeader
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
 import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.LinearWavyProgressIndicator
+import androidx.compose.material3.WavyProgressIndicatorDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -29,20 +32,17 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import coil3.compose.AsyncImage
 import com.app.wardove.ui.components.ClothingImage
 import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.ui.theme.textHint
-import java.io.File
+import com.app.wardove.ui.util.ClothingOptions
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -310,32 +310,26 @@ private fun CategoryBreakdown(breakdown: Map<String, Int>) {
     }
 }
 
+/** Category share rendered as an M3 Expressive wavy progress bar. */
+@OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 private fun CategoryBar(category: String, count: Int, max: Int) {
     Row(verticalAlignment = Alignment.CenterVertically) {
         Text(
-            category,
+            ClothingOptions.categoryLabel(category),
             fontSize = 13.sp,
             color = MaterialTheme.colorScheme.onBackground,
             modifier = Modifier.width(90.dp)
         )
-        Box(modifier = Modifier.weight(1f)) {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(8.dp)
-                    .clip(RoundedCornerShape(4.dp))
-                    .background(MaterialTheme.colorScheme.surfaceVariant)
-            )
-            val fraction = if (max == 0) 0f else count.toFloat() / max
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth(fraction)
-                    .height(8.dp)
-                    .clip(RoundedCornerShape(4.dp))
-                    .background(MaterialTheme.colorScheme.primary)
-            )
-        }
+        val fraction = if (max == 0) 0f else count.toFloat() / max
+        LinearWavyProgressIndicator(
+            progress = { fraction },
+            modifier = Modifier.weight(1f),
+            color = MaterialTheme.colorScheme.primary,
+            trackColor = MaterialTheme.colorScheme.surfaceVariant,
+            amplitude = { 1f },
+            wavelength = WavyProgressIndicatorDefaults.LinearDeterminateWavelength
+        )
         Spacer(Modifier.width(12.dp))
         Text(
             count.toString(),
@@ -371,7 +365,7 @@ private fun CostPerWearRow(entry: CostPerWearItem) {
                 maxLines = 1
             )
             Text(
-                entry.item.category,
+                ClothingOptions.categoryLabel(entry.item.category),
                 fontSize = 12.sp,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )

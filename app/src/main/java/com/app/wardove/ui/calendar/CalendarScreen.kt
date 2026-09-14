@@ -43,20 +43,18 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
-import coil3.compose.AsyncImage
 import com.app.wardove.ui.components.ClothingImage
 import com.app.wardove.ui.components.Dot
 import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.ui.theme.StatusClean
 import com.app.wardove.ui.theme.textHint
-import java.io.File
+import com.app.wardove.ui.util.ClothingOptions
 import java.time.DayOfWeek
 import java.time.LocalDate
 import java.time.YearMonth
@@ -376,7 +374,7 @@ private fun WornItemCard(item: ClothingItem) {
                 maxLines = 1
             )
             Text(
-                item.category,
+                ClothingOptions.categoryLabel(item.category),
                 fontSize = 11.sp,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 maxLines = 1

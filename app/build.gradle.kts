@@ -8,8 +8,11 @@ plugins {
 
 android {
     namespace = "com.app.wardove"
+    // compileSdk 37.1 (Android 17 minor release): required by the Compose 1.13 / material3 1.5 alpha
+    // line that ships the M3 Expressive components. targetSdk stays at 36 until the
+    // Android 17 behaviour changes have been tested.
     compileSdk {
-        version = release(36) {
+        version = release(37) {
             minorApiLevel = 1
         }
     }
@@ -42,6 +45,24 @@ android {
                 keyAlias = System.getenv("KEY_ALIAS")
                 keyPassword = System.getenv("KEY_PASSWORD")
             }
+        }
+    }
+
+    // Distribution channel. `github` is the sideloaded build published on GitHub
+    // Releases and keeps the in-app APK self-updater. `play` targets Google Play,
+    // whose policy forbids apps from updating themselves outside the store, so it
+    // drops REQUEST_INSTALL_PACKAGES (see src/play/AndroidManifest.xml) and turns
+    // the updater into a read-only release-notes view via SELF_UPDATE_ENABLED.
+    flavorDimensions += "distribution"
+    productFlavors {
+        create("github") {
+            dimension = "distribution"
+            isDefault = true
+            buildConfigField("boolean", "SELF_UPDATE_ENABLED", "true")
+        }
+        create("play") {
+            dimension = "distribution"
+            buildConfigField("boolean", "SELF_UPDATE_ENABLED", "false")
         }
     }
 
@@ -103,6 +124,12 @@ dependencies {
 
     // Markdown rendering (release notes on the Update screen)
     implementation(libs.compose.markdown)
+
+    // Lottie animations (onboarding, empty states)
+    implementation(libs.lottie.compose)
+
+    // EXIF orientation when downscaling photos in ImageStorage
+    implementation(libs.androidx.exifinterface)
 
     // DataStore (preferences)
     implementation(libs.androidx.datastore.preferences)

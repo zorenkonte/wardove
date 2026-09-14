@@ -24,7 +24,6 @@ import com.composables.icons.lucide.RefreshCw
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -59,6 +58,9 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.app.wardove.BuildConfig
 import com.app.wardove.R
 import com.app.wardove.data.model.GithubRelease
+import com.app.wardove.ui.components.LoadingBox
+import com.app.wardove.ui.util.openCustomTab
+import androidx.compose.ui.platform.LocalContext
 import dev.jeziellago.compose.markdowntext.MarkdownText
 import java.time.Instant
 import java.time.ZoneId
@@ -120,14 +122,7 @@ fun UpdateScreen(
             }
         ) {
         when (val state = releasesState) {
-            ReleasesState.Loading -> {
-                Box(
-                    modifier = Modifier.fillMaxSize(),
-                    contentAlignment = Alignment.Center
-                ) {
-                    CircularProgressIndicator()
-                }
-            }
+            ReleasesState.Loading -> LoadingBox(modifier = Modifier.fillMaxSize())
 
             is ReleasesState.Error -> {
                 Box(
@@ -302,7 +297,25 @@ private fun LatestReleaseCard(
                 )
             }
 
-            if (isUpdateAvailable && release.assets.isNotEmpty()) {
+            if (isUpdateAvailable && !BuildConfig.SELF_UPDATE_ENABLED) {
+                // Play builds may not sideload updates (Play policy) — link out instead.
+                val context = LocalContext.current
+                Spacer(Modifier.height(12.dp))
+                Text(
+                    stringResource(R.string.update_play_notice),
+                    fontSize = 12.sp,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Spacer(Modifier.height(8.dp))
+                OutlinedButton(
+                    onClick = { openCustomTab(context, release.htmlUrl) },
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Icon(Lucide.ExternalLink, contentDescription = null, modifier = Modifier.size(18.dp))
+                    Spacer(Modifier.width(8.dp))
+                    Text(stringResource(R.string.update_view_on_github))
+                }
+            } else if (isUpdateAvailable && release.assets.isNotEmpty()) {
                 Spacer(Modifier.height(12.dp))
                 when (installState) {
                     InstallState.Idle -> {

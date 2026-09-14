@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -41,6 +40,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.app.wardove.R
 import com.app.wardove.data.backup.ImportResult
+import com.app.wardove.ui.components.WardoveLoadingIndicator
 import com.composables.icons.lucide.ArrowLeft
 import com.composables.icons.lucide.Download
 import com.composables.icons.lucide.Lucide
@@ -145,7 +145,7 @@ fun BackupSettingsScreen(
                     modifier = Modifier.fillMaxWidth(),
                     horizontalArrangement = Arrangement.Center
                 ) {
-                    CircularProgressIndicator(modifier = Modifier.padding(top = 16.dp))
+                    WardoveLoadingIndicator(modifier = Modifier.padding(top = 16.dp))
                 }
             }
         }

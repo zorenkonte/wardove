@@ -12,6 +12,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
@@ -24,7 +26,8 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FilterChipDefaults
-import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
+import androidx.compose.material3.MediumExtendedFloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -37,6 +40,7 @@ import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -59,6 +63,8 @@ import com.app.wardove.ui.components.ClothingImage
 import com.app.wardove.ui.components.Dot
 import com.app.wardove.ui.components.LargeTitleHeader
 import com.app.wardove.ui.components.SingleSelectSheet
+import com.app.wardove.ui.components.WardoveLottie
+import androidx.compose.ui.text.style.TextAlign
 import com.app.wardove.ui.navigation.clothingSharedImage
 import com.app.wardove.ui.theme.StatusClean
 import com.app.wardove.ui.theme.StatusLaundry
@@ -77,7 +83,7 @@ import com.composables.icons.lucide.Shirt
 import com.composables.icons.lucide.Ungroup
 import com.composables.icons.lucide.X
 
-private val itemContentPadding = PaddingValues(start = 20.dp, end = 20.dp, top = 4.dp, bottom = 24.dp)
+private val itemContentPadding = PaddingValues(start = 20.dp, end = 20.dp, top = 4.dp, bottom = 112.dp)
 
 private val WardrobeViewMode.icon: ImageVector
     get() = when (this) {
@@ -94,7 +100,7 @@ private fun statusDotColor(status: String): Color = when (status) {
     else -> MaterialTheme.colorScheme.textHint
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 fun WardrobeScreen(
     onAddItem: () -> Unit,
@@ -114,6 +120,24 @@ fun WardrobeScreen(
     var showSortSheet by remember { mutableStateOf(false) }
     var showViewSheet by remember { mutableStateOf(false) }
 
+    // One scroll state per layout so switching view modes keeps each one's position,
+    // and so the FAB can collapse to an icon once the user scrolls into the list.
+    val cardGridState = rememberLazyGridState()
+    val listState = rememberLazyListState()
+    val compactGridState = rememberLazyGridState()
+    val fabExpanded by remember(viewMode) {
+        derivedStateOf {
+            when (viewMode) {
+                WardrobeViewMode.CARD ->
+                    cardGridState.firstVisibleItemIndex == 0 && cardGridState.firstVisibleItemScrollOffset < 24
+                WardrobeViewMode.LIST ->
+                    listState.firstVisibleItemIndex == 0 && listState.firstVisibleItemScrollOffset < 24
+                WardrobeViewMode.COMPACT ->
+                    compactGridState.firstVisibleItemIndex == 0 && compactGridState.firstVisibleItemScrollOffset < 24
+            }
+        }
+    }
+
     LaunchedEffect(snackbarMessage) {
         if (!snackbarMessage.isNullOrBlank()) {
             snackbarHostState.showSnackbar(snackbarMessage)
@@ -124,14 +148,15 @@ fun WardrobeScreen(
     Scaffold(
         containerColor = MaterialTheme.colorScheme.background,
         floatingActionButton = {
-            FloatingActionButton(
+            // M3 Expressive medium extended FAB: label shows at rest, collapses on scroll.
+            MediumExtendedFloatingActionButton(
+                text = { Text(stringResource(R.string.action_add_item)) },
+                icon = { Icon(Lucide.Plus, contentDescription = null) },
                 onClick = onAddItem,
+                expanded = fabExpanded,
                 containerColor = MaterialTheme.colorScheme.primary,
-                contentColor = MaterialTheme.colorScheme.onPrimary,
-                shape = CircleShape
-            ) {
-                Icon(Lucide.Plus, contentDescription = stringResource(R.string.action_add_item))
-            }
+                contentColor = MaterialTheme.colorScheme.onPrimary
+            )
         },
         snackbarHost = { SnackbarHost(snackbarHostState) }
     ) { padding ->
@@ -192,6 +217,7 @@ fun WardrobeScreen(
             if (items.isEmpty()) {
                 EmptyState(
                     hasQuery = searchQuery.isNotBlank(),
+                    filter = selectedFilter,
                     modifier = Modifier.fillMaxSize()
                 )
             } else {
@@ -206,6 +232,7 @@ fun WardrobeScreen(
                 when (viewMode) {
                     WardrobeViewMode.CARD -> LazyVerticalGrid(
                         columns = GridCells.Fixed(2),
+                        state = cardGridState,
                         contentPadding = itemContentPadding,
                         horizontalArrangement = Arrangement.spacedBy(10.dp),
                         verticalArrangement = Arrangement.spacedBy(10.dp),
@@ -227,6 +254,7 @@ fun WardrobeScreen(
                         }
                     }
                     WardrobeViewMode.LIST -> LazyColumn(
+                        state = listState,
                         contentPadding = itemContentPadding,
                         verticalArrangement = Arrangement.spacedBy(8.dp),
                         modifier = Modifier.fillMaxSize()
@@ -248,6 +276,7 @@ fun WardrobeScreen(
                     }
                     WardrobeViewMode.COMPACT -> LazyVerticalGrid(
                         columns = GridCells.Fixed(3),
+                        state = compactGridState,
                         contentPadding = itemContentPadding,
                         horizontalArrangement = Arrangement.spacedBy(8.dp),
                         verticalArrangement = Arrangement.spacedBy(8.dp),
@@ -553,43 +582,60 @@ private fun CompactCard(
     }
 }
 
+/**
+ * Empty state that explains *why* nothing is showing: a search with no hits, a
+ * status chip that filtered everything out, or a genuinely empty wardrobe (which
+ * gets the animated hanger illustration and the add-item nudge).
+ */
 @Composable
-private fun EmptyState(hasQuery: Boolean, modifier: Modifier = Modifier) {
+private fun EmptyState(
+    hasQuery: Boolean,
+    filter: WardrobeFilter,
+    modifier: Modifier = Modifier
+) {
     Box(modifier = modifier, contentAlignment = Alignment.Center) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(12.dp),
-            modifier = Modifier.padding(32.dp)
+            modifier = Modifier.padding(horizontal = 32.dp, vertical = 16.dp)
         ) {
-            Icon(
-                Lucide.Shirt,
-                contentDescription = null,
-                modifier = Modifier.size(72.dp),
-                tint = MaterialTheme.colorScheme.textHint
-            )
-            if (hasQuery) {
-                Text(
-                    stringResource(R.string.wardrobe_no_matches_title),
-                    style = MaterialTheme.typography.titleMedium,
-                    color = MaterialTheme.colorScheme.onBackground
-                )
-                Text(
-                    stringResource(R.string.wardrobe_no_matches_body),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
+            val (title, body) = when {
+                hasQuery -> stringResource(R.string.wardrobe_no_matches_title) to
+                    stringResource(R.string.wardrobe_no_matches_body)
+                filter == WardrobeFilter.CLEAN -> stringResource(R.string.wardrobe_empty_filter_title) to
+                    stringResource(R.string.wardrobe_empty_filter_clean)
+                filter == WardrobeFilter.WORN -> stringResource(R.string.wardrobe_empty_filter_title) to
+                    stringResource(R.string.wardrobe_empty_filter_worn)
+                filter == WardrobeFilter.IN_LAUNDRY -> stringResource(R.string.wardrobe_empty_filter_title) to
+                    stringResource(R.string.wardrobe_empty_filter_laundry)
+                else -> stringResource(R.string.wardrobe_empty_title) to
+                    stringResource(R.string.wardrobe_empty_body)
+            }
+            if (hasQuery || filter != WardrobeFilter.ALL) {
+                Icon(
+                    Lucide.Shirt,
+                    contentDescription = null,
+                    modifier = Modifier.size(64.dp),
+                    tint = MaterialTheme.colorScheme.textHint
                 )
             } else {
-                Text(
-                    stringResource(R.string.wardrobe_empty_title),
-                    style = MaterialTheme.typography.titleMedium,
-                    color = MaterialTheme.colorScheme.onBackground
-                )
-                Text(
-                    stringResource(R.string.wardrobe_empty_body),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                WardoveLottie(
+                    animation = R.raw.lottie_wardrobe,
+                    modifier = Modifier.size(180.dp)
                 )
             }
+            Text(
+                title,
+                style = MaterialTheme.typography.titleMedium,
+                color = MaterialTheme.colorScheme.onBackground,
+                textAlign = TextAlign.Center
+            )
+            Text(
+                body,
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                textAlign = TextAlign.Center
+            )
         }
     }
 }

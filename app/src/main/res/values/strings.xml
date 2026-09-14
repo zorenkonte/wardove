@@ -202,8 +202,39 @@
     <string name="item_detail_delete_title">Delete this item?</string>
     <string name="item_detail_delete_body">This cannot be undone.</string>
 
+    <!-- Filter-aware empty states (shown when a status chip hides everything) -->
+    <string name="wardrobe_empty_filter_title">Nothing here right now.</string>
+    <string name="wardrobe_empty_filter_clean">No clean items — finish a laundry cycle to see them here.</string>
+    <string name="wardrobe_empty_filter_worn">No worn items. Tap an item and mark it as worn today.</string>
+    <string name="wardrobe_empty_filter_laundry">Nothing in the laundry. Send worn items from the Laundry tab.</string>
+
     <!-- ── Lock screen ── -->
-    <string name="lock_unlock_button">Unlock with Biometrics</string>
+    <string name="lock_unlock_button">Unlock</string>
+    <string name="lock_subtitle">Wardove is locked. Unlock with your fingerprint, face, or device PIN.</string>
+    <string name="lock_prompt_title">Unlock Wardove</string>
+    <string name="lock_prompt_subtitle">Use your biometric credential or device PIN</string>
+
+    <!-- ── Onboarding ── -->
+    <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_get_started">Get started</string>
+    <string name="onboarding_page_wardrobe_title">Your wardrobe,\nin your pocket</string>
+    <string name="onboarding_page_wardrobe_body">Snap a photo of each piece you own, tag it by category and color, and browse everything at a glance.</string>
+    <string name="onboarding_page_wear_title">Log what\nyou wear</string>
+    <string name="onboarding_page_wear_body">Tap “Wear Today” to keep a history of every outfit, see your most-loved pieces, and track cost per wear.</string>
+    <string name="onboarding_page_laundry_title">Never lose track\nof laundry</string>
+    <string name="onboarding_page_laundry_body">Worn items pile up automatically. Send them to the wash together and mark them clean when the cycle ends.</string>
+    <string name="onboarding_page_private_title">Private\nby design</string>
+    <string name="onboarding_page_private_body">Everything stays on your device — no account, no cloud, no tracking. Add a biometric lock and export a backup any time.</string>
+    <string name="onboarding_notifications_label">Notify me about app updates</string>
+    <string name="onboarding_notifications_hint">Optional. You can change this later in Settings.</string>
+    <string name="onboarding_page_indicator">Page %1$d of %2$d</string>
+
+    <!-- ── About: replay intro ── -->
+    <string name="about_replay_intro_label">Show intro again</string>
+    <string name="about_replay_intro_subtitle">Replay the welcome tour</string>
+    <string name="update_view_on_github">View release on GitHub</string>
+    <string name="update_play_notice">This build updates through Google Play. Release notes are shown for reference.</string>
 
     <!-- ── Settings screen ── -->
     <string name="settings_title">Settings</string>

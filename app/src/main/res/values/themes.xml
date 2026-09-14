@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.Wardove" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.Wardove" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">#F7F5F2</item>
+    </style>
 
     <style name="Theme.Wardove.Transparent" parent="Theme.Wardove">
         <item name="android:windowIsTranslucent">true</item>

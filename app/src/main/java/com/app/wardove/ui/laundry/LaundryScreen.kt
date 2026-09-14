@@ -27,7 +27,12 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CheckboxDefaults
-import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ButtonGroupDefaults
+import androidx.compose.material3.ExperimentalMaterial3ExpressiveApi
+import androidx.compose.material3.FilledTonalIconButton
+import androidx.compose.material3.IconButtonDefaults
+import androidx.compose.material3.ToggleButton
+import androidx.compose.material3.ToggleButtonDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -58,6 +63,11 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil3.compose.AsyncImage
 import com.app.wardove.ui.components.ClothingImage
+import com.app.wardove.ui.components.LoadingBox
+import com.app.wardove.ui.components.WardoveLottie
+import com.composables.icons.lucide.Minus
+import com.composables.icons.lucide.Plus
+import androidx.compose.ui.text.style.TextAlign
 import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
 import com.app.wardove.ui.theme.LaundryPurple
@@ -65,7 +75,7 @@ import com.app.wardove.ui.theme.StatusClean
 import com.app.wardove.ui.util.formatDateShort
 import java.io.File
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 fun LaundryScreen(
     onOpenHistory: () -> Unit,
@@ -164,42 +174,47 @@ fun LaundryScreen(
     }
 }
 
+/** M3 Expressive connected button group standing in for the old custom pill tabs. */
+@OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 private fun PillTabRow(
     selected: LaundryTab,
     onSelect: (LaundryTab) -> Unit
 ) {
-    Box(
+    Row(
         modifier = Modifier
             .padding(horizontal = 20.dp)
-            .fillMaxWidth()
-            .background(MaterialTheme.colorScheme.surfaceVariant, RoundedCornerShape(10.dp))
-            .padding(3.dp)
+            .fillMaxWidth(),
+        horizontalArrangement = Arrangement.spacedBy(ButtonGroupDefaults.ConnectedSpaceBetween)
     ) {
-        Row(modifier = Modifier.fillMaxWidth()) {
-            LaundryTab.entries.forEach { entry ->
-                val isSelected = entry == selected
-                Box(
-                    modifier = Modifier
-                        .weight(1f)
-                        .clip(RoundedCornerShape(8.dp))
-                        .background(if (isSelected) MaterialTheme.colorScheme.surface else Color.Transparent)
-                        .clickable { onSelect(entry) }
-                        .padding(vertical = 7.dp),
-                    contentAlignment = Alignment.Center
-                ) {
-                    Text(
-                        stringResource(entry.labelResId),
-                        fontSize = 13.sp,
-                        fontWeight = FontWeight.Medium,
-                        color = if (isSelected) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurfaceVariant
-                    )
-                }
+        LaundryTab.entries.forEachIndexed { index, entry ->
+            val isSelected = entry == selected
+            ToggleButton(
+                checked = isSelected,
+                onCheckedChange = { if (!isSelected) onSelect(entry) },
+                modifier = Modifier.weight(1f),
+                shapes = when (index) {
+                    0 -> ButtonGroupDefaults.connectedLeadingButtonShapes()
+                    LaundryTab.entries.lastIndex -> ButtonGroupDefaults.connectedTrailingButtonShapes()
+                    else -> ButtonGroupDefaults.connectedMiddleButtonShapes()
+                },
+                colors = ToggleButtonDefaults.colors(
+                    containerColor = MaterialTheme.colorScheme.surfaceVariant,
+                    contentColor = MaterialTheme.colorScheme.onSurfaceVariant,
+                    checkedContainerColor = MaterialTheme.colorScheme.primary,
+                    checkedContentColor = MaterialTheme.colorScheme.onPrimary
+                )
+            ) {
+                Text(
+                    stringResource(entry.labelResId),
+                    style = MaterialTheme.typography.labelLarge
+                )
             }
         }
     }
 }
 
+@OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 private fun PileTab(
     entries: List<PileEntry>?,
@@ -253,6 +268,7 @@ private fun PileTab(
                     ) {
                         OutlinedButton(
                             onClick = onClearSelection,
+                            shapes = ButtonDefaults.shapes(),
                             modifier = Modifier.height(52.dp)
                         ) { Text(stringResource(R.string.action_clear)) }
                         Button(
@@ -260,7 +276,7 @@ private fun PileTab(
                             modifier = Modifier
                                 .weight(1f)
                                 .height(52.dp),
-                            shape = RoundedCornerShape(14.dp),
+                            shapes = ButtonDefaults.shapes(),
                             colors = ButtonDefaults.buttonColors(
                                 containerColor = LaundryPurple,
                                 contentColor = Color.White
@@ -279,6 +295,7 @@ private fun PileTab(
     }
 }
 
+@OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 private fun ThresholdControl(
     threshold: Int,
@@ -297,8 +314,12 @@ private fun ThresholdControl(
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.weight(1f)
         )
-        IconButton(onClick = onDecrement, modifier = Modifier.size(32.dp)) {
-            Text("−", fontSize = 18.sp, color = MaterialTheme.colorScheme.onBackground)
+        FilledTonalIconButton(
+            onClick = onDecrement,
+            shapes = IconButtonDefaults.shapes(),
+            modifier = Modifier.size(36.dp)
+        ) {
+            Icon(Lucide.Minus, contentDescription = null, modifier = Modifier.size(16.dp))
         }
         Text(
             pluralStringResource(R.plurals.laundry_wear_threshold, threshold, threshold),
@@ -307,8 +328,12 @@ private fun ThresholdControl(
             color = MaterialTheme.colorScheme.onBackground,
             modifier = Modifier.padding(horizontal = 8.dp)
         )
-        IconButton(onClick = onIncrement, modifier = Modifier.size(32.dp)) {
-            Text("+", fontSize = 18.sp, color = MaterialTheme.colorScheme.onBackground)
+        FilledTonalIconButton(
+            onClick = onIncrement,
+            shapes = IconButtonDefaults.shapes(),
+            modifier = Modifier.size(36.dp)
+        ) {
+            Icon(Lucide.Plus, contentDescription = null, modifier = Modifier.size(16.dp))
         }
     }
 }
@@ -407,6 +432,7 @@ private fun WashingTab(
     }
 }
 
+@OptIn(ExperimentalMaterial3ExpressiveApi::class)
 @Composable
 private fun CycleCard(
     cwi: CycleWithItems,
@@ -466,7 +492,7 @@ private fun CycleCard(
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(52.dp),
-                shape = RoundedCornerShape(14.dp),
+                shapes = ButtonDefaults.shapes(),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = MaterialTheme.colorScheme.primary,
                     contentColor = MaterialTheme.colorScheme.onPrimary
@@ -485,13 +511,21 @@ private fun CycleCard(
 @Composable
 private fun EmptyMessage(text: String, modifier: Modifier = Modifier) {
     Box(modifier = modifier, contentAlignment = Alignment.Center) {
-        Text(text, color = MaterialTheme.colorScheme.onSurfaceVariant, style = MaterialTheme.typography.bodyMedium)
-    }
-}
-
-@Composable
-private fun LoadingBox(modifier: Modifier = Modifier) {
-    Box(modifier = modifier, contentAlignment = Alignment.Center) {
-        CircularProgressIndicator()
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(8.dp),
+            modifier = Modifier.padding(horizontal = 32.dp)
+        ) {
+            WardoveLottie(
+                animation = R.raw.lottie_laundry,
+                modifier = Modifier.size(160.dp)
+            )
+            Text(
+                text,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                style = MaterialTheme.typography.bodyMedium,
+                textAlign = TextAlign.Center
+            )
+        }
     }
 }
