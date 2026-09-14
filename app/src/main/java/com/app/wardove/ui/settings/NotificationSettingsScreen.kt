@@ -30,6 +30,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.app.wardove.BuildConfig
 import com.app.wardove.R
 import com.composables.icons.lucide.ArrowLeft
 import com.composables.icons.lucide.Lucide
@@ -72,8 +73,12 @@ fun NotificationSettingsScreen(
                 NotificationSectionLabel(stringResource(R.string.notification_section_header))
                 NotificationSwitchRow(
                     label = stringResource(R.string.notification_updates_label),
-                    subtitle = stringResource(R.string.notification_updates_subtitle),
-                    checked = settings.updateNotificationsEnabled,
+                    subtitle = if (BuildConfig.SELF_UPDATE_ENABLED)
+                        stringResource(R.string.notification_updates_subtitle)
+                    else
+                        stringResource(R.string.update_play_notice),
+                    checked = settings.updateNotificationsEnabled && BuildConfig.SELF_UPDATE_ENABLED,
+                    enabled = BuildConfig.SELF_UPDATE_ENABLED,
                     onCheckedChange = viewModel::setUpdateNotificationsEnabled
                 )
             }
@@ -99,12 +104,13 @@ private fun NotificationSwitchRow(
     label: String,
     subtitle: String? = null,
     checked: Boolean,
+    enabled: Boolean = true,
     onCheckedChange: (Boolean) -> Unit
 ) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .clickable { onCheckedChange(!checked) }
+            .clickable(enabled = enabled) { onCheckedChange(!checked) }
             .padding(horizontal = 16.dp, vertical = 14.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -119,6 +125,6 @@ private fun NotificationSwitchRow(
                 )
             }
         }
-        Switch(checked = checked, onCheckedChange = onCheckedChange)
+        Switch(checked = checked, onCheckedChange = onCheckedChange, enabled = enabled)
     }
 }

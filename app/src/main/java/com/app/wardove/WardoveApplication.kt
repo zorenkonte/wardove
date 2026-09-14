@@ -43,7 +43,13 @@ class WardoveApplication : Application(), Configuration.Provider {
         installCrashHandler(fileLoggingTree, diagnosticsRepository.header())
         Timber.i("App started — ${diagnosticsRepository.header()}")
         createNotificationChannel()
-        scheduleUpdateCheck()
+        // Play builds are updated by the store; a "new version on GitHub" nudge would
+        // only steer users toward sideloading, which Play policy prohibits.
+        if (BuildConfig.SELF_UPDATE_ENABLED) {
+            scheduleUpdateCheck()
+        } else {
+            WorkManager.getInstance(this).cancelUniqueWork(UPDATE_CHECK_WORK_NAME)
+        }
     }
 
     private fun createNotificationChannel() {
