@@ -56,6 +56,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.app.wardove.ui.components.ClothingImage
 import com.app.wardove.ui.components.LoadingBox
+import com.app.wardove.ui.components.swipeDownToDismiss
 import com.app.wardove.ui.components.Dot
 import com.app.wardove.R
 import com.app.wardove.data.local.entity.ClothingItem
@@ -122,6 +123,7 @@ fun ItemDetailScreen(
                 wornToday = wornToday,
                 onWearToday = viewModel::wearToday,
                 onUnwearToday = viewModel::unwearToday,
+                onDismiss = onBack,
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(padding)
@@ -159,14 +161,18 @@ private fun ItemDetailBody(
     wornToday: Boolean,
     onWearToday: () -> Unit,
     onUnwearToday: () -> Unit,
+    onDismiss: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val scrollState = rememberScrollState()
     Column(
         modifier = modifier
-            .verticalScroll(rememberScrollState())
+            .verticalScroll(scrollState)
             .padding(horizontal = 20.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
+        // Pull the photo down to go back — the shared element then glides into
+        // its grid cell. Only claims the drag when the page is scrolled to the top.
         ClothingImage(
             imagePath = item.imagePath,
             contentDescription = item.name,
@@ -174,6 +180,7 @@ private fun ItemDetailBody(
             modifier = Modifier
                 .fillMaxWidth()
                 .aspectRatio(1f)
+                .swipeDownToDismiss(scrollState = scrollState, onDismiss = onDismiss)
                 .clothingSharedImage(item.id),
             shape = RoundedCornerShape(16.dp)
         )
